@@ -1,5 +1,5 @@
 format-version: 1.0
-date: 09:09:2005 11:54
+date: 15:09:2005 10:49
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -2073,7 +2073,8 @@ related_synonym: "alpha amylase" []
 related_synonym: "endoamylase" []
 related_synonym: "glycogenase" []
 related_synonym: "taka-amylase A" []
-is_a: TO:0000336 ! total amylase activity
+is_a: TO:0000703 ! amylase activity
+relationship: part_of TO:0000336 ! total amylase activity
 
 [Term]
 id: TO:0000289
@@ -2453,7 +2454,7 @@ name: total amylase activity
 def: "A combined activity of both the alpha and beta amylase enzymes." [EC:3.2.1.-, GO:0016160, GR:pj]
 related_synonym: "TAMYASEACT" []
 related_synonym: "amylase activity" []
-is_a: TO:0000599 ! enzyme activity
+is_a: TO:0000703 ! amylase activity
 relationship: part_of TO:0000606 ! diastatic power
 
 [Term]
@@ -2470,7 +2471,8 @@ id: TO:0000338
 name: beta-amylase activity
 def: "Catalysis of the hydrolysis of 1\,4-alpha-glucosidic linkages in polysaccharides to remove successive maltose units from the non-reducing ends of the chains." [EC:3.2.1.2, GO:0016161]
 related_synonym: "BETAAMYASEACT" []
-is_a: TO:0000336 ! total amylase activity
+is_a: TO:0000703 ! amylase activity
+relationship: part_of TO:0000336 ! total amylase activity
 
 [Term]
 id: TO:0000339
@@ -2830,6 +2832,7 @@ is_a: TO:0000148 ! viral disease resistance
 [Term]
 id: TO:0000387
 name: trait ontology
+def: "It is a controlled vocabulary to describe each trait as a distinguishable feature\, characteristic\, quality or phenotypic feature of a developing or mature plant." [GR:pj]
 related_synonym: "TO" []
 
 [Term]
@@ -4617,7 +4620,7 @@ is_a: TO:0000361 ! stem anatomy and morphology trait
 id: TO:0000647
 name: relative acid phosphatase activity
 related_synonym: "RELACIDPASEACT" []
-is_a: TO:0000599 ! enzyme activity
+is_a: TO:0000705 ! acid phosphatase activity
 
 [Term]
 id: TO:0000648
@@ -4972,6 +4975,26 @@ id: TO:0000702
 name: starch concentration
 related_synonym: "STARCHCONC" []
 is_a: TO:0000291 ! carbohydrate content
+
+[Term]
+id: TO:0000703
+name: amylase activity
+def: "Catalysis of the hydrolysis of amylose or an amylose derivative." [GR:pj]
+is_a: TO:0000599 ! enzyme activity
+
+[Term]
+id: TO:0000704
+name: phosphatase activity
+def: "Catalysis of the hydrolysis of phosphoric monoesters\, releasing inorganic phosphate." [GO:GO\:0016791]
+synonym: "phosphoric monoester hydrolase activity" []
+is_a: TO:0000599 ! enzyme activity
+
+[Term]
+id: TO:0000705
+name: acid phosphatase activity
+def: "Catalysis of the reaction\: an orthophosphoric monoester + H2O = an alcohol + phosphate." [EC:3.1.3.2, GO:0003993]
+synonym: "ACIDPASEACT" []
+is_a: TO:0000704 ! phosphatase activity
 
 [Typedef]
 id: part_of
