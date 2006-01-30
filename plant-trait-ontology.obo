@@ -1,5 +1,5 @@
 format-version: 1.0
-date: 25:01:2006 16:43
+date: 30:01:2006 16:41
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -416,6 +416,7 @@ is_a: TO:0000218 ! pollen abortion type
 [Term]
 id: TO:0000061
 name: node shattering
+synonym: "brittle node" []
 is_a: TO:0000051 ! stem strength
 
 [Term]
@@ -466,13 +467,17 @@ is_a: TO:0000168 ! abiotic stress trait
 [Term]
 id: TO:0000069
 name: variegated leaf
+synonym: "albino leaf striping" []
 related_synonym: "leaf stripes" []
 is_a: TO:0000326 ! leaf color
 
 [Term]
 id: TO:0000070
 name: variegated leaf necrosis
+comment: In maize this trait is observed for chlorotic tissue between veins or older leaves\, causing holes and torn appearance
+synonym: "ragged leaf" []
 related_synonym: "leaf necrosis" []
+is_a: TO:0000069 ! variegated leaf
 is_a: TO:0000652 ! leaf necrosis
 
 [Term]
@@ -693,18 +698,23 @@ id: TO:0000098
 name: glutinous endosperm
 def: "Opaque and hard endosperm with low or no amylose content" [GR:pj]
 comment: If the endosperm has high amount of amylose it is called as non-glutinous endosperm
+synonym: "opaque endosperm" []
+synonym: "waxy endosperm" []
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
 id: TO:0000099
 name: sugary endosperm
 def: "Endosperm is wrinkled and glassy when dry." [GR:pj]
+synonym: "sugary kernel" []
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
 id: TO:0000100
 name: shrunken endosperm
-def: "Shrunken and opaque to translucent endosperm. Rich in sugars" [GR:pj]
+def: "Shrunken and opaque to translucent endosperm. Rich in sugars." [GR:pj]
+synonym: "collapsed kernel" []
+synonym: "transluscent kernel" []
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
@@ -740,6 +750,7 @@ is_a: TO:0000587 ! endosperm quality
 id: TO:0000105
 name: dull endosperm
 def: "Glassy and tarnished endosperm\, low amylose content" [GR:pj]
+synonym: "glassy endosperm" []
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
@@ -1371,6 +1382,7 @@ is_a: TO:0000394 ! drought related trait
 id: TO:0000189
 name: embryoless
 def: "Absence of embryo in the developing seed" [GR:pj]
+synonym: "germless" []
 is_a: TO:0000064 ! embryo related trait
 is_a: TO:0000620 ! embryo development trait
 
@@ -1505,6 +1517,7 @@ is_a: TO:0000492 ! leaf shape
 id: TO:0000207
 name: plant height
 def: "actual measurement of plant height from soil surface to the highest point in plant as identified in the study." [ICIS:1006, IRRI:SES]
+synonym: "shoot height" []
 related_synonym: "Ht" []
 related_synonym: "PTHT" []
 is_a: TO:0000077 ! shoot anatomy and morphology trait
@@ -1827,7 +1840,9 @@ is_a: TO:0000480 ! nutrient sensitivity
 id: TO:0000253
 name: seed dormancy
 related_synonym: "SDDOR" []
+is_a: TO:0000166 ! gibberellic acid sensitivity
 is_a: TO:0000345 ! seed viability
+is_a: TO:0000615 ! abscisic acid sensitivity
 
 [Term]
 id: TO:0000254
@@ -2862,7 +2877,7 @@ is_a: TO:0000587 ! endosperm quality
 id: TO:0000391
 name: seed size
 def: "seed size is determined by  its length to width ratio" [GR:pj, ICIS:1302]
-related_synonym: "grain size" []
+synonym: "kernel size" []
 is_a: TO:0000484 ! seed shape
 
 [Term]
@@ -4431,7 +4446,7 @@ def: "Percentage of colored de-hulled grains in a sample of grains with referenc
 related_synonym: "percentage of damaged yellow rice grains" []
 related_synonym: "percentage of green rice grains" []
 related_synonym: "percentage of red rice grains" []
-is_a: TO:0000486 ! seed color
+is_a: TO:0000385 ! grain color
 
 [Term]
 id: TO:0000618
@@ -4444,6 +4459,9 @@ is_a: TO:0000162 ! seed quality
 id: TO:0000619
 name: vivipary
 def: "A phenomenon associated to the seeds that germinate before becoming detached or harvested from the parent plant. Thus the germination occurs before the seed undergoes dormancy." [GR:pj]
+synonym: "preharvest germination" []
+is_a: TO:0000166 ! gibberellic acid sensitivity
+is_a: TO:0000615 ! abscisic acid sensitivity
 is_a: TO:0000620 ! embryo development trait
 
 [Term]
@@ -5011,6 +5029,83 @@ def: "Describes the color of fruit wall (pericarp)." [GR:pj]
 comment: Pericarp is the wall of a fruit\, developed from the ovary or carpel wall.
 synonym: "PERICARPCL" []
 is_a: TO:0000597 ! quality trait
+
+[Term]
+id: TO:0000708
+name: plant color
+is_a: TO:0000077 ! shoot anatomy and morphology trait
+
+[Term]
+id: TO:0000709
+name: leaf gloss
+def: "Appearance of glossiness of the leaf surface. Contributed by change in either the amount or content of cuticle wax. " [GR:pj]
+is_a: TO:0000419 ! leaf anatomy and morphology trait
+
+[Term]
+id: TO:0000710
+name: globulin protein content
+is_a: TO:0000587 ! endosperm quality
+is_a: TO:0000598 ! protein content
+
+[Term]
+id: TO:0000711
+name: imidazolinone sensitivity
+is_a: TO:0000058 ! herbicide sensitivity
+
+[Term]
+id: TO:0000712
+name: sulfonylurea herbicide sensitivity
+is_a: TO:0000058 ! herbicide sensitivity
+
+[Term]
+id: TO:0000713
+name: brittle endosperm
+is_a: TO:0000575 ! endosperm related trait
+is_a: TO:0000587 ! endosperm quality
+
+[Term]
+id: TO:0000714
+name: seminal rootless
+synonym: "absence of seminal roots" []
+is_a: TO:0000198 ! rootless
+
+[Term]
+id: TO:0000715
+name: fascicled ear
+def: "In maize ears\, the floral meristems undergo repeated dichotomous branching\, resulting in fascicled (highly branched and bundled or clustered) ears." [GR:pj]
+is_a: TO:0000267 ! inflorescence type
+
+[Term]
+id: TO:0000716
+name: etched endosperm
+is_a: TO:0000587 ! endosperm quality
+
+[Term]
+id: TO:0000717
+name: rough endosperm
+is_a: TO:0000587 ! endosperm quality
+
+[Term]
+id: TO:0000718
+name: wrinkled seed
+synonym: "wrinkled kernel" []
+is_a: TO:0000162 ! seed quality
+
+[Term]
+id: TO:0000719
+name: leaf vein color
+is_a: TO:0000326 ! leaf color
+
+[Term]
+id: TO:0000720
+name: leaf midrib color
+is_a: TO:0000719 ! leaf vein color
+
+[Term]
+id: TO:0000721
+name: leaf adherence
+def: "A tightly rolled leaf encasing the next emerging leaf." [GR:pj]
+is_a: TO:0000419 ! leaf anatomy and morphology trait
 
 [Typedef]
 id: part_of
