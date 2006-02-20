@@ -1,5 +1,5 @@
 format-version: 1.0
-date: 06:02:2006 16:45
+date: 20:02:2006 14:38
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -1037,6 +1037,7 @@ is_a: TO:0000327 ! biomass yield
 [Term]
 id: TO:0000144
 name: milled rice
+def: "Rice kernels that have been milled to remove the bran\, leaving \"white\" or milled rice." [RiceCAP:http\://www.uark.edu/ua/ricecap/ricecapgloss.htm]
 related_synonym: "MR" []
 related_synonym: "milled rice ratio" []
 is_a: TO:0000162 ! seed quality
@@ -1056,7 +1057,7 @@ def: "Is the average length of the seed or caryopsis fruit in a cereal (with hul
 related_synonym: "GRLG" []
 related_synonym: "SDLG" []
 related_synonym: "grain length" []
-is_a: TO:0000484 ! seed shape
+is_a: TO:0000391 ! seed size
 
 [Term]
 id: TO:0000147
@@ -1082,7 +1083,7 @@ related_synonym: "kernel width" []
 related_synonym: "percentatge of plump kernels" []
 related_synonym: "plump grain" []
 related_synonym: "plump seed" []
-is_a: TO:0000484 ! seed shape
+is_a: TO:0000391 ! seed size
 
 [Term]
 id: TO:0000151
@@ -1628,6 +1629,7 @@ is_a: TO:0000657 ! spikelet anatomy and morphology trait
 [Term]
 id: TO:0000222
 name: head rice
+def: "The 3/4 or longer whole milled kernels separated from the total milled rice." [RiceCAP:http\://www.uark.edu/ua/ricecap/ricecapgloss.htm]
 related_synonym: "HEADR" []
 related_synonym: "head milled rice" []
 related_synonym: "head rice ratio" []
@@ -2210,7 +2212,7 @@ id: TO:0000304
 name: seed thickness
 def: "Thickness of the seed or fruit caryopsis with the hull." [GR:pj]
 related_synonym: "SDTH" []
-is_a: TO:0000484 ! seed shape
+is_a: TO:0000391 ! seed size
 
 [Term]
 id: TO:0000305
@@ -2800,6 +2802,7 @@ is_obsolete: true
 id: TO:0000381
 name: cracked grain percentage
 def: "The percentage of cracked dehulled grain with most of the size still intact." [GR:pj]
+synonym: "fissured grain percentage" []
 related_synonym: "CRKGRPCENT" []
 is_a: TO:0000162 ! seed quality
 
@@ -2878,7 +2881,7 @@ id: TO:0000391
 name: seed size
 def: "seed size is determined by  its length to width ratio" [GR:pj, ICIS:1302]
 synonym: "kernel size" []
-is_a: TO:0000484 ! seed shape
+is_a: TO:0000653 ! seed development trait
 
 [Term]
 id: TO:0000392
@@ -2926,6 +2929,7 @@ def: "Thickness of the dehulled\, milled grain without pericarp." [GR:pj]
 related_synonym: "GRTH" []
 is_a: TO:0000162 ! seed quality
 relationship: part_of TO:0000304 ! seed thickness
+relationship: part_of TO:0000397 ! grain size
 
 [Term]
 id: TO:0000400
@@ -2950,6 +2954,7 @@ def: "Width of the dehulled\, milled grain without pericarp." [GR:pj]
 related_synonym: "GRWD" []
 is_a: TO:0000162 ! seed quality
 relationship: part_of TO:0000149 ! seed width
+relationship: part_of TO:0000397 ! grain size
 
 [Term]
 id: TO:0000403
@@ -4452,6 +4457,7 @@ is_a: TO:0000385 ! grain color
 id: TO:0000618
 name: crushed grain percentage
 def: "The percentage of cracked dehulled grain with at least one fourth of the size still intact." [GR:pj]
+synonym: "percentage brokens" []
 related_synonym: "CRUSHGRPCENT" []
 is_a: TO:0000162 ! seed quality
 
@@ -5167,6 +5173,12 @@ is_a: TO:0000731 ! lignin content
 id: TO:0000733
 name: lignin biosynthesis
 is_a: TO:0000349 ! physiological process related trait
+
+[Term]
+id: TO:0000734
+name: grain length
+relationship: part_of TO:0000146 ! seed length
+relationship: part_of TO:0000397 ! grain size
 
 [Typedef]
 id: part_of
