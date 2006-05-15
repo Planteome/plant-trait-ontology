@@ -1,5 +1,5 @@
 format-version: 1.0
-date: 20:02:2006 14:38
+date: 15:05:2006 14:43
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -172,7 +172,7 @@ name: ligule length
 def: "The actual measurement of ligules measured in millimeters from the base of the collar to the tip. " [IRRI:SES]
 related_synonym: "LIGLG" []
 related_synonym: "LgL" []
-is_a: TO:0000335 ! ligule shape
+is_a: TO:012637 ! leaf size
 
 [Term]
 id: TO:0000025
@@ -591,6 +591,7 @@ is_a: TO:0000168 ! abiotic stress trait
 id: TO:0000085
 name: leaf rolling
 def: "Leaf rolling is a feature observed in response to drought or water stress. It precedes leaf drying stage. " [GR:jcl, GR:pj]
+synonym: "wilting" []
 related_synonym: "LFRL" []
 is_a: TO:0000168 ! abiotic stress trait
 
@@ -884,7 +885,7 @@ id: TO:0000124
 name: flag leaf angle (sensu Poaceae)
 def: "Leaf angle is measured near the collar as the angle of attachment between the flag leaf blade and the main panicle axis" [ICIS:1065, IRRI:SES]
 related_synonym: "FLA" []
-is_a: TO:0000492 ! leaf shape
+is_a: TO:0000206 ! leaf angle
 
 [Term]
 id: TO:0000125
@@ -970,7 +971,7 @@ name: leaf length
 def: "Actual measurements\, in centimeters of the leaf." [IRRI:SES]
 related_synonym: "LFLG" []
 related_synonym: "LL" []
-is_a: TO:0000492 ! leaf shape
+is_a: TO:012637 ! leaf size
 
 [Term]
 id: TO:0000136
@@ -1877,7 +1878,7 @@ is_a: TO:0000168 ! abiotic stress trait
 [Term]
 id: TO:0000258
 name: leaf thickness
-is_a: TO:0000492 ! leaf shape
+is_a: TO:012637 ! leaf size
 
 [Term]
 id: TO:0000259
@@ -2649,7 +2650,7 @@ related_synonym: "FFLW" []
 related_synonym: "Female flower anthesis" []
 related_synonym: "Female flower flowering" []
 related_synonym: "days to silk" []
-is_a: TO:0000344 ! days to flower
+is_a: TO:012616 ! flowering
 
 [Term]
 id: TO:0000360
@@ -2685,7 +2686,7 @@ related_synonym: "MALEFLW" []
 related_synonym: "MFLW" []
 related_synonym: "male flower anthesis" []
 related_synonym: "male flower flowering" []
-is_a: TO:0000344 ! days to flower
+is_a: TO:012616 ! flowering
 
 [Term]
 id: TO:0000366
@@ -2722,7 +2723,7 @@ name: leaf width
 def: "Actual measurements\, in centimeters of the widest portion of the leaf blade." [ICIS:1308, IRRI:SES]
 related_synonym: "LFWD" []
 related_synonym: "LW" []
-is_a: TO:0000492 ! leaf shape
+is_a: TO:012637 ! leaf size
 
 [Term]
 id: TO:0000371
@@ -3910,7 +3911,7 @@ id: TO:0000542
 name: leaf length to width ratio
 def: "A ratio of the leaf length to its width." [GR:pj]
 related_synonym: "LFLGWDRO" []
-is_a: TO:0000492 ! leaf shape
+is_a: TO:012637 ! leaf size
 
 [Term]
 id: TO:0000543
@@ -4533,7 +4534,7 @@ is_a: TO:0000439 ! fungal disease resistance
 [Term]
 id: TO:0000629
 name: days to tassel
-is_a: TO:0000365 ! male flowering
+is_a: TO:0000344 ! days to flower
 
 [Term]
 id: TO:0000630
@@ -4614,7 +4615,7 @@ is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 id: TO:0000642
 name: leaf sheath diameter
 related_synonym: "LFSDIA" []
-is_a: TO:0000492 ! leaf shape
+is_a: TO:012637 ! leaf size
 
 [Term]
 id: TO:0000643
@@ -4638,7 +4639,7 @@ is_a: TO:0000102 ! phosphorus sensitivity
 id: TO:0000646
 name: cauline axillary branch number
 related_synonym: "CAUAXIBRNB" []
-is_a: TO:0000361 ! stem anatomy and morphology trait
+is_a: TO:012639 ! shoot branching
 
 [Term]
 id: TO:0000647
@@ -4703,7 +4704,7 @@ is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 [Term]
 id: TO:0000658
 name: days to silk
-is_a: TO:0000359 ! female flowering
+is_a: TO:0000344 ! days to flower
 
 [Term]
 id: TO:0000659
@@ -5034,7 +5035,7 @@ name: pericarp color
 def: "Describes the color of fruit wall (pericarp)." [GR:pj]
 comment: Pericarp is the wall of a fruit\, developed from the ovary or carpel wall.
 synonym: "PERICARPCL" []
-is_a: TO:0000597 ! quality trait
+is_a: TO:012617 ! fruit color
 
 [Term]
 id: TO:0000708
@@ -5179,6 +5180,233 @@ id: TO:0000734
 name: grain length
 relationship: part_of TO:0000146 ! seed length
 relationship: part_of TO:0000397 ! grain size
+
+[Term]
+id: TO:012600
+name: flower organ size
+is_a: TO:0000499 ! flower anatomy and morphology trait
+
+[Term]
+id: TO:012601
+name: stamen size
+is_a: TO:0000215 ! stamen related trait
+is_a: TO:012600 ! flower organ size
+
+[Term]
+id: TO:012602
+name: pistil size
+is_a: TO:0000223 ! pistil related trait
+is_a: TO:012600 ! flower organ size
+
+[Term]
+id: TO:012603
+name: petal size
+is_a: TO:0000275 ! perianth related trait
+is_a: TO:012600 ! flower organ size
+
+[Term]
+id: TO:012604
+name: sepal size
+is_a: TO:0000275 ! perianth related trait
+is_a: TO:012600 ! flower organ size
+
+[Term]
+id: TO:012605
+name: petal length
+is_a: TO:012603 ! petal size
+is_a: TO:012614 ! floral organ length
+
+[Term]
+id: TO:012606
+name: petal width
+is_a: TO:012603 ! petal size
+is_a: TO:012615 ! floral organ width
+
+[Term]
+id: TO:012607
+name: sepal length
+is_a: TO:012604 ! sepal size
+is_a: TO:012614 ! floral organ length
+
+[Term]
+id: TO:012608
+name: sepal width
+is_a: TO:012604 ! sepal size
+is_a: TO:012615 ! floral organ width
+
+[Term]
+id: TO:012609
+name: stamen length
+is_a: TO:012601 ! stamen size
+is_a: TO:012614 ! floral organ length
+
+[Term]
+id: TO:012610
+name: pistil length
+is_a: TO:012602 ! pistil size
+is_a: TO:012614 ! floral organ length
+
+[Term]
+id: TO:012611
+name: homeotic development trait
+synonym: "homeotic mutation" []
+is_a: TO:0000357 ! growth and development trait
+
+[Term]
+id: TO:012612
+name: vegetative homeotic development trait
+is_a: TO:012611 ! homeotic development trait
+
+[Term]
+id: TO:012613
+name: reproductive homeotic development trait
+is_a: TO:012611 ! homeotic development trait
+
+[Term]
+id: TO:012614
+name: floral organ length
+is_a: TO:012600 ! flower organ size
+
+[Term]
+id: TO:012615
+name: floral organ width
+is_a: TO:012600 ! flower organ size
+
+[Term]
+id: TO:012616
+name: flowering
+synonym: "flowering timing" []
+synonym: "time of flowering" []
+is_a: TO:0000622 ! flower development trait
+
+[Term]
+id: TO:012617
+name: fruit color
+is_a: TO:0000597 ! quality trait
+
+[Term]
+id: TO:012618
+name: endocarp color
+is_a: TO:0000707 ! pericarp color
+
+[Term]
+id: TO:012619
+name: mesocarp color
+is_a: TO:0000707 ! pericarp color
+
+[Term]
+id: TO:012620
+name: epicarp color
+is_a: TO:0000707 ! pericarp color
+
+[Term]
+id: TO:012621
+name: fruit columella color
+is_a: TO:012617 ! fruit color
+
+[Term]
+id: TO:012622
+name: locular tissue trait
+def: "The traits observed for the locular tissue present around the seeds as found in Solanaceae." [SGN:nm]
+comment: The values observed in tomato and pepper fruits may be defined differently.
+is_a: TO:0000597 ! quality trait
+
+[Term]
+id: TO:012623
+name: pericarp texture
+is_a: TO:0000597 ! quality trait
+
+[Term]
+id: TO:012624
+name: epicarp texture
+is_a: TO:012623 ! pericarp texture
+
+[Term]
+id: TO:012625
+name: fruit size
+is_a: TO:0000597 ! quality trait
+is_a: TO:012629 ! fruit anatomy and morphology trait
+
+[Term]
+id: TO:012626
+name: fruit length
+is_a: TO:012625 ! fruit size
+
+[Term]
+id: TO:012627
+name: fruit width
+is_a: TO:012625 ! fruit size
+
+[Term]
+id: TO:012628
+name: fruit shape
+is_a: TO:0000597 ! quality trait
+is_a: TO:012629 ! fruit anatomy and morphology trait
+
+[Term]
+id: TO:012629
+name: fruit anatomy and morphology trait
+synonym: "fruit morphology" []
+is_a: TO:0000017 ! anatomy and morphology related trait
+
+[Term]
+id: TO:012630
+name: fruit distal end shape
+is_a: TO:012628 ! fruit shape
+
+[Term]
+id: TO:012631
+name: fruit proximal end shape
+is_a: TO:012628 ! fruit shape
+
+[Term]
+id: TO:012632
+name: fruit abscission zone size
+synonym: "size stem scar size" []
+is_a: TO:0000597 ! quality trait
+is_a: TO:012629 ! fruit anatomy and morphology trait
+
+[Term]
+id: TO:012633
+name: fruit ripening
+is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000597 ! quality trait
+
+[Term]
+id: TO:012634
+name: fruit firmness
+is_a: TO:0000597 ! quality trait
+
+[Term]
+id: TO:012635
+name: leaf margin trait
+is_a: TO:0000419 ! leaf anatomy and morphology trait
+
+[Term]
+id: TO:012636
+name: leaflet number
+is_a: TO:0000419 ! leaf anatomy and morphology trait
+
+[Term]
+id: TO:012637
+name: leaf size
+is_a: TO:0000419 ! leaf anatomy and morphology trait
+
+[Term]
+id: TO:012638
+name: shoot meristem development
+synonym: "shoot meristem abortion" []
+is_a: TO:0000654 ! shoot development trait
+
+[Term]
+id: TO:012639
+name: shoot branching
+is_a: TO:0000361 ! stem anatomy and morphology trait
+
+[Term]
+id: TO:012640
+name: fruit set trait
+is_a: TO:0000371 ! yield trait
 
 [Typedef]
 id: part_of
