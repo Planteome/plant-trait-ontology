@@ -1,5 +1,5 @@
 format-version: 1.0
-date: 15:05:2006 14:43
+date: 17:07:2006 15:09
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -102,7 +102,7 @@ id: TO:0000014
 name: panicle weight
 def: "Average weight of the panicle from the plants or tillers in a given study." [GR:pj]
 related_synonym: "PNWT" []
-is_a: TO:0000371 ! yield trait
+is_a: TO:0000583 ! inflorescence weight
 
 [Term]
 id: TO:0000015
@@ -193,7 +193,7 @@ id: TO:0000027
 name: culm number
 def: "Actual count of the total number of tillers after full heading\, Specify if per plant\, hill or area " [IRRI:SES]
 related_synonym: "CmN" []
-is_a: TO:0000346 ! tiller number
+is_a: TO:0000654 ! shoot development trait
 
 [Term]
 id: TO:0000028
@@ -1048,7 +1048,7 @@ id: TO:0000145
 name: internode length
 def: "Measurement of length of the internode." [GR:pj]
 related_synonym: "INLG" []
-is_a: TO:0000576 ! stem length
+relationship: part_of TO:0000576 ! stem length
 
 [Term]
 id: TO:0000146
@@ -1215,7 +1215,7 @@ name: panicle exsertion
 def: "Trait monitored by observing the extent of coverage of panicle by the flag leaf sheath." [GR:pj, ICIS:1004, IRRI:SES]
 related_synonym: "Exs" []
 related_synonym: "PNEX" []
-is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+is_a: TO:0001002 ! inflorescence exsertion
 
 [Term]
 id: TO:0000166
@@ -2548,7 +2548,7 @@ id: TO:0000346
 name: tiller number
 def: "Number of tillers per plant\, should represent most plants within a study. " [ICIS:1068, IRRI:SES]
 related_synonym: "TINB" []
-is_a: TO:0000654 ! shoot development trait
+relationship: part_of TO:0000027 ! culm number
 
 [Term]
 id: TO:0000347
@@ -4159,6 +4159,8 @@ id: TO:0000576
 name: stem length
 alt_id: TO:0000309
 def: "Measure from soil surface to highest point on stem." [GR:pj37]
+synonym: "culm height" []
+synonym: "stem height" []
 related_synonym: "CULMLG" []
 related_synonym: "CmL" []
 related_synonym: "culm length" []
@@ -4210,6 +4212,7 @@ is_a: TO:0000621 ! inflorescence development trait
 [Term]
 id: TO:0000583
 name: inflorescence weight
+def: "Average weight of the inflorescence carrying the mature fruits from the plants or tillers in a given study." [GR:pj]
 is_a: TO:0000371 ! yield trait
 
 [Term]
@@ -4241,7 +4244,7 @@ is_a: TO:0000181 ! seed weight
 [Term]
 id: TO:0000590
 name: dehulled grain weight
-def: "Weight of the dehulled grain from rice" [GR:pj]
+def: "Weight of the dehulled grains." [GR:pj]
 related_synonym: "DHULGRWT" []
 relationship: part_of TO:0000589 ! seed weight (sensu Poaceae)
 
@@ -4582,6 +4585,7 @@ is_a: TO:0000552 ! shoot dry weight
 [Term]
 id: TO:0000637
 name: inflorescence width
+synonym: "panicle width" []
 related_synonym: "INFLWD" []
 is_a: TO:0000268 ! inflorescence shape
 
@@ -4674,6 +4678,8 @@ is_a: TO:0000667 ! cooking or brewing quality
 [Term]
 id: TO:0000652
 name: leaf necrosis
+def: "Leaf surface area affected by insecticides as evidenced by chlorotic and/or necrotic tissue" [GR:pj]
+synonym: "leaf scorch" []
 is_a: TO:0000419 ! leaf anatomy and morphology trait
 
 [Term]
@@ -5180,6 +5186,43 @@ id: TO:0000734
 name: grain length
 relationship: part_of TO:0000146 ! seed length
 relationship: part_of TO:0000397 ! grain size
+
+[Term]
+id: TO:0001000
+name: glume cover
+def: "The glume cover over the caryopsis. Often measured as percentage." [GR:pj]
+is_a: TO:0000657 ! spikelet anatomy and morphology trait
+
+[Term]
+id: TO:0001001
+name: glume persistence
+def: "Measured as percentage of kernels or seeds carrying the glume after threshing. In a normal setup the seeds do not have glumes after the threshing process." [GR:pj]
+is_a: TO:0000657 ! spikelet anatomy and morphology trait
+
+[Term]
+id: TO:0001002
+name: inflorescence exsertion
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+
+[Term]
+id: TO:0001003
+name: plant height uniformity
+def: "A visual estimate of the plant height for a group of plants in an experiment." [GR:pj]
+is_a: TO:0000207 ! plant height
+
+[Term]
+id: TO:0001004
+name: basal tiller number
+def: "Number of basal tillers per plant\, should represent most plants within a study. " [GR:pj]
+synonym: "basal axillary shoot number" []
+is_a: TO:0000346 ! tiller number
+
+[Term]
+id: TO:0001005
+name: basal tiller length
+def: "The height of the tallest basal tiller (basal axillary shoot) of a plant." [GR:pj]
+synonym: "basal tiller height" []
+is_a: TO:0000576 ! stem length
 
 [Term]
 id: TO:012600
