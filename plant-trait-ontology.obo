@@ -1,5 +1,5 @@
 format-version: 1.0
-date: 20:09:2006 11:35
+date: 24:10:2006 15:12
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -4887,6 +4887,7 @@ is_a: TO:0000682 ! inflorescence height
 [Term]
 id: TO:0000684
 name: grassy flavor
+def: "An assay to test for aroma and flavor reminiscent of freshly cut grass." [GR:pj]
 related_synonym: "GRASSYFLVOR" []
 related_synonym: "grassy flavour" []
 is_a: TO:0000597 ! quality trait
@@ -4894,12 +4895,15 @@ is_a: TO:0000597 ! quality trait
 [Term]
 id: TO:0000685
 name: tenderness
+def: "An assay for the soft and juicy texture." [GR:pj]
 related_synonym: "TENDER" []
 is_a: TO:0000597 ! quality trait
 
 [Term]
 id: TO:0000686
 name: juiciness
+def: "An assay for a juicy appetizingness." [GR:pj]
+synonym: "succulence" []
 related_synonym: "JUICE" []
 is_a: TO:0000597 ! quality trait
 
@@ -4951,6 +4955,7 @@ relationship: part_of TO:0000691 ! Zea mays northern leaf blight disease resista
 [Term]
 id: TO:0000694
 name: crispness
+def: "An assay of firmness and freshness." [GR:pj]
 related_synonym: "CRISP" []
 is_a: TO:0000597 ! quality trait
 
@@ -4993,6 +4998,7 @@ is_a: TO:0000599 ! enzyme activity
 [Term]
 id: TO:0000700
 name: sweetness
+def: "The quality of having the pleasant taste characteristic of sugar." [GR:pj]
 related_synonym: "SWEET" []
 is_a: TO:0000597 ! quality trait
 
@@ -5333,6 +5339,7 @@ is_a: TO:0000622 ! flower development trait
 [Term]
 id: TO:0002617
 name: fruit color
+def: "An assay for the color of the fruit and its parts." [GR:pj]
 is_a: TO:0000597 ! quality trait
 
 [Term]
@@ -5426,6 +5433,7 @@ is_a: TO:0000597 ! quality trait
 [Term]
 id: TO:0002634
 name: fruit firmness
+def: "In addition to the fruit color\, firmness is the best measurement of ripeness. It is assayed as the force necessary to break the flesh tissues\nand depends on the different growth stages during the ripening process." [BR:pj]
 is_a: TO:0000597 ! quality trait
 
 [Term]
@@ -5458,6 +5466,64 @@ is_a: TO:0000361 ! stem anatomy and morphology trait
 id: TO:0002640
 name: fruit set trait
 is_a: TO:0000371 ! yield trait
+
+[Term]
+id: TO:0002641
+name: acid detergent fiber
+def: "The percentage of highly indigestible or slowly digestible fiber in a feed or forage. Acid detergent fiber contains cellulose as well as silica and lignin which are associated with low digestibility." [GR:pj, GrainGenes_trait:Acid detergent fiber, web:http\://www.foragetesting.org/lab_procedure/sectionB/4/part4.1.htm]
+comment: The method typically uses acidified quaternary detergent solution to dissolve cell solubles\, hemicellulose and soluble minerals leaving a residue of cellulose\, lignin\, and heat damaged protein and a portion of cell wall protein and minerals (ash). Acid detergent fiber is determined gravimetrically as the residue remaining after extraction. The lower the acid detergent fiber\, the more digestible the feed is and the higher the energy value of the feed.
+synonym: "ACIDDETFIBR" []
+is_a: TO:0002642 ! dietary fiber related trait
+
+[Term]
+id: TO:0002642
+name: dietary fiber related trait
+def: "The traits assayed for content and quality of food/forage based on pre or post digestive processes." [GR:pj]
+is_a: TO:0000597 ! quality trait
+
+[Term]
+id: TO:0002643
+name: carbon isotope discrimination
+def: "It is a measure of the C isotopic composition in plant material relative to the value of the same ratio in the air of the environment where the plant is grown." [GR:pj, PMID:11756262, GrainGenes:carbon isotope discrimination]
+synonym: "CBISOTPDISC" []
+is_a: TO:0000466 ! carbon content
+
+[Term]
+id: TO:0002644
+name: dry matter digestibility
+def: "Expressed as a percent\, is a measure of the dry matter content of forage or feed that is retained in the animal body." [GR:pj, GR:iyt, GrainGenes:dry matter digestibility]
+synonym: "DMATTDIGAB" []
+is_a: TO:0000597 ! quality trait
+
+[Term]
+id: TO:0002645
+name: malt tenderness
+def: "Percentage of soft malt\, measured from micro malting 50g of barley." [PMID:12677407]
+synonym: "MALTTENDER" []
+is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0000685 ! tenderness
+
+[Term]
+id: TO:0002646
+name: flour particle size
+def: "Size of flour particles determined after grinding the grains. The size depends on the length and type of grinding." [GR:pj, GrainGenes_trait:particle size]
+comment: It affects the water absorption\, dough handling characteristics and loaf volume while cooking.
+synonym: "FLRPARTSZ" []
+is_a: TO:0000667 ! cooking or brewing quality
+
+[Term]
+id: TO:0002647
+name: starch digestibility
+def: "Expressed as a percent\, is a measure of the starch content of forage or feed that is retained in the animal body." [GR:pj, GrainGenes_trait:starch digestibility]
+synonym: "STARCHDIG" []
+is_a: TO:0000597 ! quality trait
+
+[Term]
+id: TO:0002648
+name: water absorption by seed
+def: "A measure of the relative water absorption after soaking a known amount (weight) of seed." [GR:pj, GrainGenes:water absorption]
+synonym: "WABSORPSD" []
+is_a: TO:0000162 ! seed quality
 
 [Term]
 id: TO:0010001
