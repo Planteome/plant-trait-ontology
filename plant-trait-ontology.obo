@@ -1,5 +1,5 @@
 format-version: 1.0
-date: 24:10:2006 15:12
+date: 02:11:2006 12:31
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -7,7 +7,7 @@ default-namespace: plant_trait_ontology
 [Term]
 id: TO:0000001
 name: carbon sensitivity
-def: "Synthesis of carbohydrates for strengthening and storage" [GR:pj]
+def: "Sensitivity to the carbon content in the growth medium. It plays an important role in the synthesis of various inorganic and organic metabolites such as carbohydrates\, lipids\, aminoacids and peptides and plays a role in various metabolic processes." [GR:pj]
 related_synonym: "CBSN" []
 related_synonym: "carbon deficiency" []
 is_a: TO:0000252 ! non-mineral nutrient sensitivity
@@ -85,7 +85,9 @@ is_a: TO:0000248 ! primary macronutrient sensitivity
 [Term]
 id: TO:0000012
 name: hydrogen sensitivity
-def: "Synthesis of carbohydrates for strengthening and storage\, lipids\, proteins\, energy metabolism\, osmolarity\,  etc." [GR:pj]
+def: "Sensitivity to the molecular hydrogen or hydrogen ion content in the growth medium. It plays an important role in the synthesis of various inorganic and organic metabolites such as carbohydrates\, lipids\, aminoacids and peptides and plays a role in the energy metabolism\, osmolarity\,  etc." [GR:pj]
+synonym: "hydrogen ion sensitivity" []
+synonym: "molecular hydrogen sensitivity" []
 is_a: TO:0000252 ! non-mineral nutrient sensitivity
 
 [Term]
@@ -107,7 +109,7 @@ is_a: TO:0000583 ! inflorescence weight
 [Term]
 id: TO:0000015
 name: oxygen sensitivity
-def: "Synthesis of carbohydrates for strengthening and storage" [GR:pj]
+def: "Sensitivity to the molecular oxygen or reactive oxygen ion content in the growth medium. It plays an important role in the synthesis of various inorganic and organic metabolites such as carbohydrates\, lipids\, aminoacids and peptides and plays a role in the energy metabolism." [GR:pj]
 related_synonym: "oxygen deficiency" []
 is_a: TO:0000252 ! non-mineral nutrient sensitivity
 
@@ -155,6 +157,7 @@ is_a: TO:0000080 ! micronutrient sensitivity
 [Term]
 id: TO:0000022
 name: stink bug resistance
+def: "Causal agent\: Oebalus pugnax" [GR:pj]
 related_synonym: "SBUGRS" []
 is_a: TO:0000261 ! insect damage resistance
 
@@ -370,6 +373,8 @@ is_a: TO:0000437 ! male sterility
 [Term]
 id: TO:0000054
 name: animal damage resistance
+def: "Response by the plant in terms of resistivity or sensitivity to the animals infesting them." [GR:pj]
+synonym: "pest resistance" []
 is_a: TO:0000236 ! crop damage resistance trait
 
 [Term]
@@ -566,6 +571,7 @@ is_a: TO:0000078 ! root dry weight
 [Term]
 id: TO:0000082
 name: zigzag leafhopper resistance
+def: "Causal agent\: Recilia dorsalis (Motschulsky)." [GR:pj]
 related_synonym: "ZLFHRS" []
 is_a: TO:0000261 ! insect damage resistance
 
@@ -1089,6 +1095,7 @@ is_a: TO:0000391 ! seed size
 [Term]
 id: TO:0000151
 name: rice skipper resistance
+def: "causal agent\: Pelopidas mathias (Fabricius) and Parnara guttata" [GR:pj]
 related_synonym: "SKIPRS" []
 is_a: TO:0000261 ! insect damage resistance
 
@@ -1338,7 +1345,7 @@ is_a: TO:0000396 ! grain yield
 id: TO:0000182
 name: insecticide sensitivity
 related_synonym: "insecticide tolerance" []
-is_a: TO:0000482 ! chemical stress sensitivity
+is_a: TO:0002649 ! pesticide sensitivity
 
 [Term]
 id: TO:0000183
@@ -1401,12 +1408,14 @@ relationship: part_of TO:0000486 ! seed color
 [Term]
 id: TO:0000191
 name: rice hispa resistance
+def: "causal agent\: Dicladispa armigera" [GR:pj]
 related_synonym: "HISPRS" []
 is_a: TO:0000261 ! insect damage resistance
 
 [Term]
 id: TO:0000192
 name: leaf-roller resistance
+def: "Causal agent\: Cnaphalocrocis medinalis" [GR:pj]
 related_synonym: "LFRRS" []
 is_a: TO:0000261 ! insect damage resistance
 
@@ -1504,7 +1513,7 @@ name: white-backed planthopper resistance
 def: "Causal agent\: Sagotella furcifera. Symptoms\: partial to pronounced yellowing and increasing severity of stunting. Extreme signs are wilting and death of plants. Infested areas in the field may be patchy. (similar to the symptoms of whitebacked planthopper). " [GR:pj, ICIS:1167, IRRI:SES]
 related_synonym: "WBPH" []
 related_synonym: "WBPHRS" []
-is_a: TO:0000261 ! insect damage resistance
+is_a: TO:0000348 ! sogatodes resistance
 
 [Term]
 id: TO:0000206
@@ -1772,6 +1781,7 @@ is_a: TO:0000419 ! leaf anatomy and morphology trait
 [Term]
 id: TO:0000242
 name: microbial damage resistance
+def: "Response by the plant in terms of resistivity or sensitivity to microbes." [GR:pj]
 is_a: TO:0000236 ! crop damage resistance trait
 
 [Term]
@@ -1837,6 +1847,7 @@ is_a: TO:0000176 ! macronutrient sensitivity
 [Term]
 id: TO:0000252
 name: non-mineral nutrient sensitivity
+def: "Sensitivity response shown by the plant grown in either the excess or deficient amount of the non-mineral nutrients in the growth medium. These nutrients are found in the air and water." [GR:pj]
 is_a: TO:0000480 ! nutrient sensitivity
 
 [Term]
@@ -1899,7 +1910,6 @@ id: TO:0000261
 name: insect damage resistance
 def: "represents the damage done  by the insects to the crop. The damage is a direct measure of resistance to the particular insect variety. The test evaluation is valid if insect population is uniformly distributed at a high level across the screening box or the field. " [GR:pj, IRRI:SES]
 related_synonym: "insect resistance" []
-related_synonym: "pest resistance" []
 is_a: TO:0000054 ! animal damage resistance
 
 [Term]
@@ -1972,7 +1982,7 @@ is_obsolete: true
 [Term]
 id: TO:0000273
 name: armyworm resistance
-def: "Causal agent is Pseudaletia unipuncta\, Spodoptera mauritia and Spodoptera praefica. The swarming caterpillars cause severe damage to rice plants in nursery beds. " [GR:pj, web:http //pne.gsnu.ac.kr/riceipm/spodopte.htm, web:http //www.ipm.ucdavis.edu/PMG/r682300411.html]
+def: "Causal agent\: Pseudaletia unipuncta\, Spodoptera mauritia and Spodoptera praefica. The swarming caterpillars cause severe damage to rice plants in nursery beds. " [GR:pj, web:http //pne.gsnu.ac.kr/riceipm/spodopte.htm, web:http //www.ipm.ucdavis.edu/PMG/r682300411.html]
 comment: The worms appear suddenly in masses and move like an army from field to field so that seedbeds or the direct seeded fields look as if grazed by cattles. Generally\, a transplanted crop is not severely affected. Damage by armyworms is most serious during periods of stem elongation and grain formation. Larvae defoliate plants\, typically by chewing angular pieces off leaves. They may also feed on the panicle near the developing kernels causing these kernels to dry before filling. This feeding causes all or parts of the panicle to  turn white. If the entire panicle is white\, the damage may also be due to stem rot or feeding by rats. The  seriousness of armyworm injury depends on the maturity of the plant and the amount of tissue consumed. Significant yield reduction can occur if defoliation is greater than 25% at 2 to 3 weeks before heading. They migrate from field to field and extensive losses are often caused within a week. Their migration is facilitated by the absence of standing water in the field.
 related_synonym: "AWRRS" []
 is_a: TO:0000261 ! insect damage resistance
@@ -2319,6 +2329,7 @@ is_a: TO:0000349 ! physiological process related trait
 [Term]
 id: TO:0000317
 name: cutworm resistance
+def: "Causal agent\: Spodoptera litura" [GR:pj]
 related_synonym: "CUWRRS" []
 is_a: TO:0000261 ! insect damage resistance
 
@@ -2559,6 +2570,7 @@ is_a: TO:0000236 ! crop damage resistance trait
 [Term]
 id: TO:0000348
 name: sogatodes resistance
+def: "Causal agent\: Sogatodes orizicola (Muir)\, Sagotella furcifera and Sogatodes cubanus. Sogatodes orizicola is also a vector for the Rice black streaked dwarf fijivirus and rice hoja blanca  virus (RHBV)." [GR:pj]
 related_synonym: "SAGRS" []
 is_a: TO:0000261 ! insect damage resistance
 
@@ -4309,6 +4321,9 @@ is_a: TO:0000282 ! enzymatic activity/protein content related trait
 [Term]
 id: TO:0000599
 name: enzyme activity
+def: "Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions\, the reactants are known as substrates\, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates\, and are usually composed wholly or largely of protein\, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic." [GO:GO\:0003824]
+synonym: "enzymatic activity" []
+synonym: "enzyme catalytic activity" []
 is_a: TO:0000282 ! enzymatic activity/protein content related trait
 
 [Term]
@@ -4358,6 +4373,7 @@ is_a: TO:0000281 ! metabolite content related trait
 [Term]
 id: TO:0000605
 name: hydrogen peroxide content
+def: "An assay to determine the content of hydrogen peroxide or the peroxide reactive ions." [GR:pj]
 related_synonym: "H2O2 content" []
 related_synonym: "H2O2CN" []
 is_a: TO:0000277 ! biochemical trait
@@ -4365,7 +4381,7 @@ is_a: TO:0000277 ! biochemical trait
 [Term]
 id: TO:0000606
 name: diastatic power
-def: "An assay to determine the joint action of alpha-amylase\,  beta-amylase and any other carbohydrate-degrading enzymes." [GR_REF:8025]
+def: "An assay to determine the joint action of alpha-amylase\, beta-amylase and any other carbohydrate-degrading enzymes." [GR_REF:8025]
 related_synonym: "DIASPWR" []
 is_a: TO:0000599 ! enzyme activity
 
@@ -4532,7 +4548,7 @@ is_a: TO:0000102 ! phosphorus sensitivity
 [Term]
 id: TO:0000628
 name: Pearl millet downy mildew resistance
-def: "Measure of susceptibility against the pathogen Sclerospora graminicola (Sacc.) Schroet causing the downy mildew disease in Pearl millet." [GR:pj]
+def: "Causal agent\: Sclerospora graminicola (Sacc.) Schroet. It causes the downy mildew disease in Pearl millet." [GR:pj]
 related_synonym: "Pg_DNMDRS" []
 is_a: TO:0000439 ! fungal disease resistance
 
@@ -5525,6 +5541,11 @@ name: water absorption by seed
 def: "A measure of the relative water absorption after soaking a known amount (weight) of seed." [GR:pj, GrainGenes_trait:Water absorption]
 synonym: "WABSORPSD" []
 is_a: TO:0000162 ! seed quality
+
+[Term]
+id: TO:0002649
+name: pesticide sensitivity
+is_a: TO:0000482 ! chemical stress sensitivity
 
 [Term]
 id: TO:0010001
