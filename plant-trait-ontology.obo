@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.26 $
-date: 27:11:2006 15:07
+version: $Revision: 1.27 $
+date: 28:02:2007 11:05
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -522,7 +522,7 @@ is_a: TO:0000439 ! fungal disease resistance
 id: TO:0000075
 name: light sensitivity
 def: "Response shown by the plant in terms of  sensitivity to light stress (quality and quantity of light)." [GR:pj]
-is_a: TO:0000161 ! radiation sensitivity
+is_a: TO:0000161 ! radiation response trait
 
 [Term]
 id: TO:0000076
@@ -1184,7 +1184,9 @@ is_a: TO:0000265 ! light quality sensitivity
 
 [Term]
 id: TO:0000161
-name: radiation sensitivity
+name: radiation response trait
+def: "Response shown by the plant in terms of  sensitivity to one or more types of radiation stress (quality and quantity of light)." [GR:pj]
+synonym: "radiation sensitivity" []
 related_synonym: "RADSN" []
 related_synonym: "response to radiation" []
 is_a: TO:0000168 ! abiotic stress trait
@@ -5547,6 +5549,26 @@ is_a: TO:0000162 ! seed quality
 id: TO:0002649
 name: pesticide sensitivity
 is_a: TO:0000482 ! chemical stress sensitivity
+
+[Term]
+id: TO:0002650
+name: phototropism
+def: "The movement of a plant or plant part in the direction of the light." [GR:pj]
+is_a: TO:0000075 ! light sensitivity
+
+[Term]
+id: TO:0002651
+name: shoot phototropism
+def: "Movement of the shoot part of a plant in the direction of the light." [GR:pj, PMID:15598797]
+narrow_synonym: "coleoptile curvature" []
+narrow_synonym: "coleoptile phototropism" []
+is_a: TO:0002650 ! phototropism
+
+[Term]
+id: TO:0002652
+name: root phototropism
+def: "Movement of the shoot part of a plant in the direction of the light." [GR:pj, PMID:15598797]
+is_a: TO:0002650 ! phototropism
 
 [Term]
 id: TO:0010001
