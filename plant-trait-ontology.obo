@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.27 $
-date: 28:02:2007 11:05
+version: $Revision: 1.28 $
+date: 01:03:2007 12:08
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -612,13 +612,15 @@ is_a: TO:0000439 ! fungal disease resistance
 
 [Term]
 id: TO:0000087
-name: scent
-def: "Represents the aroma of the grains. code 0-2 is assigned for the aroma at flowering or at maturity by cooking test." [GR:pj, ICIS:1252, IRRI:SES]
+name: aroma
+def: "Assay to detrmine the aroma of the cooked/uncooked grains." [GR:pj, ICIS:1252, IRRI:SES]
+comment: It is often associated with the accumulation of the aromatic compound 2-acetyl-1-pyrroline.
 related_synonym: "AROMA" []
 related_synonym: "Sct" []
 related_synonym: "odour" []
-is_a: TO:0000491 ! fat and essential oil composition related trait
-is_a: TO:0000604 ! fat and essential oil content
+exact_synonym: "scent" []
+is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000488 ! seed composition based quality trait
 
 [Term]
 id: TO:0000088
@@ -697,7 +699,7 @@ id: TO:0000097
 name: amylopectin content
 def: "Measures the amylopectin content in a plant or plant part. It is a polysaccharide present in starch. Amylopectin is a polymer of alpha(1\,4)-linked glucose units\, as is amylose (see amylose). Unlike amylose\, amylopectin contains branches of 2430 glucose units connected to the main chain by an alpha(1\,6) linkage." [ISBN:198506732]
 related_synonym: "AMYPCTCN" []
-is_a: TO:0000291 ! carbohydrate content
+is_a: TO:0000333 ! sugar content
 is_a: TO:0000489 ! carbohydrate composition related trait
 is_a: TO:0000667 ! cooking or brewing quality
 
@@ -771,8 +773,8 @@ is_a: TO:0000437 ! male sterility
 [Term]
 id: TO:0000107
 name: endosperm storage protein-1 content
-def: "Decreased amount of 13kD-b seed storage protein in endosperm" [GR:pj]
-is_a: TO:0000490 ! protein composition related trait
+def: "Assay for the amount of 13kDa seed storage protein present in the endosperm." [GR:pj]
+is_a: TO:0002653 ! endosperm storage protein content
 
 [Term]
 id: TO:0000108
@@ -784,8 +786,8 @@ is_a: TO:0000419 ! leaf anatomy and morphology trait
 [Term]
 id: TO:0000109
 name: endosperm storage protein-2 content
-def: "Increased amounts of 57kD seed storage protein in endosperm" [GR:pj]
-is_a: TO:0000490 ! protein composition related trait
+def: "Assay for amount of 57kDa seed storage protein present in the endosperm." [GR:pj]
+is_a: TO:0002653 ! endosperm storage protein content
 
 [Term]
 id: TO:0000110
@@ -1447,7 +1449,7 @@ name: amylose content
 def: "Amylose content in actual percentage. It is a water-dispersible component of starch and is a polymer of alpha(1\,4)-linked glucose units." [ICIS:1251, IRRI:SES, ISBN:198506732]
 related_synonym: "AMYCN" []
 related_synonym: "Amy" []
-is_a: TO:0000291 ! carbohydrate content
+is_a: TO:0000333 ! sugar content
 is_a: TO:0000489 ! carbohydrate composition related trait
 is_a: TO:0000667 ! cooking or brewing quality
 
@@ -2170,7 +2172,7 @@ name: glucosamine content
 def: "Measures the glucosamine content. It is one of the most abundant natural polysaccharide. " [GR:pj, ISBN:198506732]
 related_synonym: "2-amino-2-deoxyglucopyranose content" []
 related_synonym: "GLUCNCN" []
-is_a: TO:0000291 ! carbohydrate content
+is_a: TO:0000333 ! sugar content
 
 [Term]
 id: TO:0000298
@@ -2199,7 +2201,7 @@ def: "Measures the content of glucose in a plant or a plant part. It is a common
 related_synonym: "D-glucose content" []
 related_synonym: "GLUCCN" []
 related_synonym: "dextrose content" []
-is_a: TO:0000291 ! carbohydrate content
+is_a: TO:0000333 ! sugar content
 
 [Term]
 id: TO:0000301
@@ -2251,7 +2253,7 @@ id: TO:0000307
 name: hexose content
 def: "Measures the hexose content in a plant or plant part. Hexose is any aldose having a chain of six carbon atoms in a molecule." [ISBN:198506732]
 related_synonym: "HEXCN" []
-is_a: TO:0000291 ! carbohydrate content
+is_a: TO:0000333 ! sugar content
 
 [Term]
 id: TO:0000308
@@ -2340,7 +2342,7 @@ is_a: TO:0000261 ! insect damage resistance
 id: TO:0000318
 name: reducing sugar content
 related_synonym: "REDSUGCN" []
-is_a: TO:0000291 ! carbohydrate content
+is_a: TO:0000333 ! sugar content
 
 [Term]
 id: TO:0000319
@@ -2416,7 +2418,7 @@ name: sucrose content
 def: "The amount of sucrose present in the plant or the plant part." [GR:pj]
 related_synonym: "SUCROSECN" []
 related_synonym: "saccharose content" []
-is_a: TO:0000291 ! carbohydrate content
+is_a: TO:0000333 ! sugar content
 
 [Term]
 id: TO:0000329
@@ -2520,7 +2522,7 @@ id: TO:0000340
 name: total soluble sugar content
 def: "Total amount of soluble sugar present in the plant or plant part." [GR:pj]
 related_synonym: "TSOLSUGARCN" []
-is_a: TO:0000291 ! carbohydrate content
+is_a: TO:0000333 ! sugar content
 
 [Term]
 id: TO:0000341
@@ -4413,8 +4415,8 @@ def: "The ratio of soluble protein to total protein content is a measure of the 
 comment: As seen in degree of modification of grain to malt in barley.
 related_synonym: "STPROTRO" []
 related_synonym: "Soluble protein to total protein content ratio" []
+is_a: TO:0000325 ! soluble protein content
 is_a: TO:0000490 ! protein composition related trait
-is_a: TO:0000598 ! protein content
 
 [Term]
 id: TO:0000611
@@ -4989,6 +4991,7 @@ relationship: part_of TO:0000326 ! leaf color
 [Term]
 id: TO:0000696
 name: starch content
+def: "Amount of starch present in the source of the sink parts of a plant. For example amount of stored starch in the seed endosperm." [GR:pj]
 related_synonym: "STARCHCN" []
 is_a: TO:0000291 ! carbohydrate content
 is_a: TO:0000489 ! carbohydrate composition related trait
@@ -5084,8 +5087,10 @@ is_a: TO:0000419 ! leaf anatomy and morphology trait
 [Term]
 id: TO:0000710
 name: globulin protein content
+def: "Assay to detrmine the amount of globulin proteins. " [GR:pj]
+comment: Globulin proteins also called globular  proteins\, or spheroproteins are one of the main protein classes. These have a globelike protein structure\, that is more or less soluble in aqueous solutions. The two major sub classes are alpha and beta globulins.
+is_a: TO:0000325 ! soluble protein content
 is_a: TO:0000587 ! endosperm quality
-is_a: TO:0000598 ! protein content
 
 [Term]
 id: TO:0000711
@@ -5569,6 +5574,22 @@ id: TO:0002652
 name: root phototropism
 def: "Movement of the shoot part of a plant in the direction of the light." [GR:pj, PMID:15598797]
 is_a: TO:0002650 ! phototropism
+
+[Term]
+id: TO:0002653
+name: endosperm storage protein content
+def: "Assay for the amount of seed storage protein present in the endosperm." [GR:pj]
+is_a: TO:0000490 ! protein composition related trait
+is_a: TO:0000598 ! protein content
+
+[Term]
+id: TO:0002654
+name: pyruvate orthophosphate dikinase
+def: "Catalysis of the reaction\: ATP + pyruvate + phosphate = AMP + phosphoenolpyruvate + diphosphate" [GR:pj, EC:2.7.9.1, GO:GO\:0050242]
+exact_synonym: "PPDK" []
+exact_synonym: "Pyruvate phosphate dikinase" []
+exact_synonym: "Pyruvate\, phosphate phosphotransferase" []
+is_a: TO:0000599 ! enzyme activity
 
 [Term]
 id: TO:0010001
