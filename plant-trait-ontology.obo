@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.29 $
-date: 01:03:2007 14:14
+version: $Revision: 1.30 $
+date: 06:03:2007 15:20
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -113,6 +113,7 @@ name: oxygen sensitivity
 def: "Sensitivity to the molecular oxygen or reactive oxygen ion content in the growth medium. It plays an important role in the synthesis of various inorganic and organic metabolites such as carbohydrates\, lipids\, aminoacids and peptides and plays a role in the energy metabolism." [GR:pj]
 related_synonym: "oxygen deficiency" []
 is_a: TO:0000252 ! non-mineral nutrient sensitivity
+is_a: TO:0002657 ! oxidative stress
 
 [Term]
 id: TO:0000016
@@ -4382,6 +4383,7 @@ def: "An assay to determine the content of hydrogen peroxide or the peroxide rea
 related_synonym: "H2O2 content" []
 related_synonym: "H2O2CN" []
 is_a: TO:0000277 ! biochemical trait
+is_a: TO:0002657 ! oxidative stress
 
 [Term]
 id: TO:0000606
@@ -4999,8 +5001,10 @@ is_a: TO:0000489 ! carbohydrate composition related trait
 [Term]
 id: TO:0000697
 name: starch yield
+def: "An assay to detrmine the starch yield from a bigger sample such as from a given population or from a plot or field. It is often carried out initially with the smaller sample but later converted to associate with a large sample for example record starch yeild in kilograms per hectare." [GR:pj]
 related_synonym: "STARCHYLD" []
 is_a: TO:0000162 ! seed quality
+is_a: TO:0000291 ! carbohydrate content
 is_a: TO:0000371 ! yield trait
 
 [Term]
@@ -5602,6 +5606,18 @@ id: TO:0002656
 name: starch grain shape
 def: "Assay to determine the shape of the starch grain." [GR:pj]
 is_a: TO:0000162 ! seed quality
+
+[Term]
+id: TO:0002657
+name: oxidative stress
+def: "An assay to determine the stress to the plant associated with the production of reactive oxygen and its ability to readily detoxify the reactive intermediates." [GR:pj]
+is_a: TO:0000482 ! chemical stress sensitivity
+
+[Term]
+id: TO:0002658
+name: starch grain synthesis
+def: "An assay to determine if the starch grains are formed in the plant or plant part. Often associated with the starch biosynthesis and branching of the starch." [GR:pj]
+is_a: TO:0000283 ! biological process related trait
 
 [Term]
 id: TO:0010001
