@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.33 $
-date: 03:04:2007 11:59
+version: $Revision: 1.34 $
+date: 03:04:2007 13:02
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -4354,8 +4354,8 @@ is_a: TO:0000160 ! UV light sensitivity
 
 [Term]
 id: TO:0000602
-name: fat content
-def: "The fat or lipid content of the seed or the fruit caryopsis in cereals." [GR:pj]
+name: total fat content
+def: "The total fat or lipid content of present in the plant or the plant part such as seed." [GR:pj]
 related_synonym: "FATCN" []
 related_synonym: "lipid content" []
 is_a: TO:0000491 ! fat and essential oil composition related trait
@@ -5634,10 +5634,82 @@ is_a: TO:0000476 ! growth hormone content
 id: TO:0002661
 name: seed maturation
 def: "This trait can be derived based on the parameters like\, degree of grain filling\, grain hardness\, hull color\, grain moisture\, etc. It can be determined for (a)synchronously with any of these parameters." [GR:pj]
-synonym: "nonsynchronous seed maturation" []
 synonym: "asynchronous seed maturation" []
+synonym: "nonsynchronous seed maturation" []
 synonym: "synchronous seed maturation" []
 is_a: TO:0000653 ! seed development trait
+
+[Term]
+id: TO:0005001
+name: linoleic acid content
+def: "The linoleic acid content in the essential oils present in or extracted from a plant or the plant part such as seed." [GR:pj]
+comment: According to the Codex Alimentarium\, the FAO international standards for food product specifications\, the normal values may differ depending on the source plant. e.g. for soybean oil the normal values for linoleic acid content are 48% - 59%.
+exact_synonym: "(9Z\,12Z)-Octadecadienoic acid content" []
+exact_synonym: "(Z\,Z)-9\,12-octadecadienoic acid content" []
+exact_synonym: "9-cis\,12-cis-Octadecadienoic acid content" []
+exact_synonym: "9Z\,12Z-octadecadienoic acid content" []
+exact_synonym: "cis\,cis-linoleic acid content" []
+exact_synonym: "linoleic oil content" []
+narrow_synonym: "high linoleic oil content" []
+narrow_synonym: "low linoleic oil content" []
+xref_analog: CAS:60-33-3
+xref_analog: CHEBI:17351
+is_a: TO:0000604 ! fat and essential oil content
+
+[Term]
+id: TO:0005002
+name: oleic acid content
+def: "The oleic acid content in the essential oils present in or extracted from a plant or the plant part such as seed." [GR:pj]
+comment: According to the Codex Alimentarium\, the FAO international standards for food product specifications\, the normal values may differ depending on the source plant. e.g. for soybean oil the normal values for oleic acid content are 17% - 30%.
+synonym: "oleic oil content" []
+exact_synonym: "(9Z)-Octadecenoic acid content" []
+exact_synonym: "(9Z)-octadec-9-enoic acid content" []
+exact_synonym: "(Z)-Octadec-9-enoic acid content" []
+exact_synonym: "cis-9-octadecenoic acid content" []
+narrow_synonym: "high oleic oil content" []
+narrow_synonym: "mid oleic oil content" []
+xref_analog: CAS:112-80-1
+xref_analog: CHEBI:16196
+is_a: TO:0000604 ! fat and essential oil content
+
+[Term]
+id: TO:0005003
+name: stearic acid content
+def: "The stearic acid content in the essential oils present in or extracted from a plant or the plant part such as seed." [GR:pj]
+comment: According to the Codex Alimentarium\, the FAO international standards for food product specifications\, the normal values may differ depending on the source plant. e.g. for soybean oil the normal values for stearic acid content are 2% - 5.4%.
+synonym: "stearic oil content" []
+exact_synonym: "n-octadecanoic acid content" []
+exact_synonym: "octadecanoic acid content" []
+exact_synonym: "octadecoic acid content" []
+narrow_synonym: "high stearic oil content" []
+narrow_synonym: "low stearic oil content" []
+xref_analog: CAS:57-11-4
+xref_analog: CHEBI:28842
+is_a: TO:0000604 ! fat and essential oil content
+
+[Term]
+id: TO:0005004
+name: omega-3 fatty acid content
+def: "The omega-3 fatty acid content in the essential oils present in or extracted from a plant or the plant part such as seed." [GR:pj]
+comment: omega-3 fatty acid (CHEBI\:25681)  is a  polyunsaturated fatty acid (CHEBI\:26208) . There are four subtypes of omega-3 fatty acids\, namely\,  alpha-licanic acid (CHEBI\:28771)\, all-cis-docosa-4\,7\,10\,13\,16\,19-hexaenoic acid (CHEBI\:28125)\, all-cis-icosa-5\,8\,11\,14\,17-pentaenoic acid and alpha-linolenic acid (CHEBI\:27432).
+xref_analog: CHEBI:25681
+is_a: TO:0000604 ! fat and essential oil content
+
+[Term]
+id: TO:0005005
+name: alpha-linolenic acid content
+def: "The alpha-linolenic acid content in the essential oils present in or extracted from a plant or the plant part such as seed." [GR:pj]
+comment: According to the Codex Alimentarium\, the FAO international standards for food product specifications\, the normal values may differ depending on the source plant. e.g. for soybean oil the normal values for alpha-linolenic acid content are 4.5% - 11%.
+exact_synonym: "(9\,12\,15)-linolenic acid content" []
+exact_synonym: "(9Z\,12Z\,15Z)-Octadecatrienoic acid content" []
+exact_synonym: "(Z\,Z\,Z)-9\,12\,15-octadecatrienoic acid content" []
+exact_synonym: "9\,12\,15-Octadecatrienoic acid content" []
+exact_synonym: "9-cis\,12-cis\,15-cis-octadecatrienoic acid content" []
+exact_synonym: "all-cis-9\,12\,15-octadecatrienoic acid content" []
+exact_synonym: "cis\,cis\,cis-9\,12\,15-octadecatrienoic acid content" []
+xref_analog: CAS:463-40-1
+xref_analog: CHEBI:27432
+is_a: TO:0005004 ! omega-3 fatty acid content
 
 [Term]
 id: TO:0010001
