@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.35 $
-date: 03:04:2007 15:13
+version: $Revision: 1.36 $
+date: 09:04:2007 14:08
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -401,9 +401,12 @@ is_a: TO:0000228 ! moisture content related trait
 [Term]
 id: TO:0000058
 name: herbicide sensitivity
+def: "An assay to determine the tolerance exhibited by a plant or a group of plants (population) towards the applied herbicide." [GR:pj]
+comment: It is expected that the herbicide application must not affect the agronomic yield\, if any.
 related_synonym: "herbicide tolerance" []
 related_synonym: "weedicide tolerance" []
-is_a: TO:0002649 ! pesticide sensitivity
+xref_analog: EO:EO\:0007183
+is_a: TO:0000482 ! chemical stress sensitivity
 
 [Term]
 id: TO:0000059
@@ -808,6 +811,7 @@ is_a: TO:0000106 ! male sterility type
 [Term]
 id: TO:0000112
 name: disease resistance trait
+synonym: "disease control" []
 related_synonym: "disease susceptibility" []
 related_synonym: "disease tolerance" []
 is_a: TO:0000242 ! microbial damage resistance
@@ -1315,8 +1319,12 @@ is_a: TO:0000480 ! nutrient sensitivity
 
 [Term]
 id: TO:0000177
-name: 2,4 D sensitivity
+name: 2,4-dichlorophenoxyacetic acid sensitivity
+def: "An assay to determine the tolerance exhibited by a plant or a group of plants (population) towards the applied herbicide 2\,4-dichlorophenoxyacetic acid (2\,4 D)." [GR:pj]
+comment: It is expected that the herbicide application must not affect the agronomic yield\, if any.
+synonym: "2\,4 D sensitivity" []
 related_synonym: "24DSN" []
+xref_analog: EO:EO\:0007180
 is_a: TO:0000058 ! herbicide sensitivity
 
 [Term]
@@ -2006,7 +2014,8 @@ is_a: TO:0000499 ! flower anatomy and morphology trait
 [Term]
 id: TO:0000276
 name: drought tolerance
-def: "Becoming tolerant to drought like conditions of minimal or no water content in environment or high salt stress due to flash flooding in coastal areas" [GR:pj]
+def: "Becoming tolerant to drought like conditions of minimal or no water content in the growth environment." [GR:pj]
+comment: Often  the plants exhibiting high salt tolerance also exhibit drought tolerance.
 related_synonym: "DRTL" []
 related_synonym: "drought resistance" []
 is_a: TO:0000394 ! drought related trait
@@ -5099,11 +5108,16 @@ is_a: TO:0000587 ! endosperm quality
 [Term]
 id: TO:0000711
 name: imidazolinone sensitivity
+def: "An assay to determine the tolerance exhibited by a plant or a group of plants (population) towards the applied herbicide imidazolinone." [GR:pj]
+comment: It is expected that the herbicide application must not affect the agronomic yield\, if any.
+xref_analog: EO:EO\:0007633
 is_a: TO:0000058 ! herbicide sensitivity
 
 [Term]
 id: TO:0000712
 name: sulfonylurea herbicide sensitivity
+def: "An assay to determine the tolerance exhibited by a plant or a group of plants (population) towards the applied herbicide sulfonylurea." [GR:pj]
+comment: It is expected that the herbicide application must not affect the agronomic yield\, if any.
 is_a: TO:0000058 ! herbicide sensitivity
 
 [Term]
@@ -5711,6 +5725,35 @@ exact_synonym: "cis\,cis\,cis-9\,12\,15-octadecatrienoic acid content" []
 xref_analog: CAS:463-40-1
 xref_analog: CHEBI:27432
 is_a: TO:0005004 ! omega-3 fatty acid content
+
+[Term]
+id: TO:0005006
+name: glyphosate sensitivity
+def: "An assay to determine the sensitivity (tolerance or susceptibility) exhibited by a plant or a group of plants (population) towards the applied herbicide glyphosate." [GR:pj]
+comment: It is expected that the herbicide application must not affect the agronomic yield\, if any.
+narrow_synonym: "glyphosate susceptibility" []
+narrow_synonym: "glyphosate tolerance" []
+is_a: TO:0000058 ! herbicide sensitivity
+
+[Term]
+id: TO:0005007
+name: glufosinate sensitivity
+def: "An assay to determine the sensitivity (tolerance or susceptibility) exhibited by a plant or a group of plants (population) towards the applied herbicide glufosinate." [GR:pj]
+comment: It is expected that the herbicide application must not affect the agronomic yield\, if any.
+narrow_synonym: "glufosinate susceptibility" []
+narrow_synonym: "glufosinate tolerance" []
+is_a: TO:0000058 ! herbicide sensitivity
+
+[Term]
+id: TO:0005008
+name: acetolactate synthase inhibitor sensitivity
+def: "An assay to determine the sensitivity (tolerance or susceptibility) exhibited by a plant or a group of plants (population) towards the applied herbicide class of acetolactate synthase inhibitor." [GR:pj]
+comment: It is expected that the herbicide application must not affect the agronomic yield\, if any.
+narrow_synonym: "ALS inhibitor susceptibility" []
+narrow_synonym: "ALS inhibitor tolerance" []
+narrow_synonym: "acetolactate synthase inhibitor susceptibility" []
+narrow_synonym: "acetolactate synthase inhibitor tolerance" []
+is_a: TO:0000058 ! herbicide sensitivity
 
 [Term]
 id: TO:0010001
