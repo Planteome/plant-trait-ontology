@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.36 $
-date: 09:04:2007 14:08
+version: $Revision: 1.37 $
+date: 01:05:2007 15:03
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -94,11 +94,11 @@ is_a: TO:0000252 ! non-mineral nutrient sensitivity
 [Term]
 id: TO:0000013
 name: resistance to disease by mycoplasma-like organism
-def: "the reaction of a certain genotype to infection can be assessed by a skilled worker based on visible symptoms after inoculation under natural conditions (infield) or under controlled conditions (in green house or growth chamber). " [GR:pj, IRRI:SES]
+def: "An assay to determine the resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a mycoplasma-like pathogen infection as compared to the susceptible and/or the reference plants of the same species." [GR:pj, IRRI:SES]
 comment: The factors needed for successful test are the presence of sources and vectors\, inoculation at the susceptible growth stage of the test plants and favorable environmental conditions.
 related_synonym: "MLO" []
 related_synonym: "MLORS" []
-is_a: TO:0000112 ! disease resistance trait
+is_a: TO:0000112 ! disease resistance
 
 [Term]
 id: TO:0000014
@@ -377,7 +377,7 @@ id: TO:0000054
 name: animal damage resistance
 def: "Response by the plant in terms of resistivity or sensitivity to the animals infesting them." [GR:pj]
 synonym: "pest resistance" []
-is_a: TO:0000236 ! crop damage resistance trait
+is_a: TO:0000236 ! crop damage resistance
 
 [Term]
 id: TO:0000055
@@ -440,7 +440,7 @@ name: mimic response
 related_synonym: "MIRP" []
 related_synonym: "disease mimic response" []
 related_synonym: "lesion mimic" []
-is_a: TO:0000236 ! crop damage resistance trait
+is_a: TO:0000236 ! crop damage resistance
 
 [Term]
 id: TO:0000064
@@ -810,10 +810,13 @@ is_a: TO:0000106 ! male sterility type
 
 [Term]
 id: TO:0000112
-name: disease resistance trait
-synonym: "disease control" []
-related_synonym: "disease susceptibility" []
-related_synonym: "disease tolerance" []
+name: disease resistance
+def: "An assay to determine the resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a pathogen infection as compared to the susceptible and/or the reference plants of the same species." [GR:pj]
+comment: It represents the damage done by the diease and/or the pathogen to the plant. The damage is a direct measure of resistance to the particular pathogen variety causing the disease.
+exact_synonym: "disease control" []
+exact_synonym: "disease resistance trait" []
+exact_synonym: "disease tolerance" []
+narrow_synonym: "disease susceptibility" []
 is_a: TO:0000242 ! microbial damage resistance
 
 [Term]
@@ -1085,8 +1088,9 @@ is_a: TO:0000148 ! viral disease resistance
 [Term]
 id: TO:0000148
 name: viral disease resistance
-def: "The assessment of the response to a virus infection based on visible symptoms after inoculation under natural conditions (infield) or under controlled conditions (in green house). " [GR:pj, IRRI:SES]
-is_a: TO:0000112 ! disease resistance trait
+def: "An assay to determine the resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a viral pathogen infection as compared to the susceptible and/or the reference plants of the same species." [GR:pj, IRRI:SES]
+comment: It represents the damage done by the diease and/or the viral pathogen to the plant. The damage is a direct measure of resistance to the particular viral strain causing the diease.
+is_a: TO:0000112 ! disease resistance
 
 [Term]
 id: TO:0000149
@@ -1757,7 +1761,8 @@ is_a: TO:0000655 ! leaf development trait
 
 [Term]
 id: TO:0000236
-name: crop damage resistance trait
+name: crop damage resistance
+exact_synonym: "crop damage resistance trait" []
 is_a: TO:0000179 ! biotic stress trait
 
 [Term]
@@ -1796,7 +1801,7 @@ is_a: TO:0000419 ! leaf anatomy and morphology trait
 id: TO:0000242
 name: microbial damage resistance
 def: "Response by the plant in terms of resistivity or sensitivity to microbes." [GR:pj]
-is_a: TO:0000236 ! crop damage resistance trait
+is_a: TO:0000236 ! crop damage resistance
 
 [Term]
 id: TO:0000243
@@ -1922,8 +1927,9 @@ is_a: TO:0000054 ! animal damage resistance
 [Term]
 id: TO:0000261
 name: insect damage resistance
-def: "represents the damage done  by the insects to the crop. The damage is a direct measure of resistance to the particular insect variety. The test evaluation is valid if insect population is uniformly distributed at a high level across the screening box or the field. " [GR:pj, IRRI:SES]
-related_synonym: "insect resistance" []
+def: "An assay to determine the resistance exhibited by a plant or a group of plants (population) in response to insect infestation as compared to the susceptible and/or the reference plants of the same species." [GR:pj, IRRI:SES]
+comment: It represents the damage done by the insects to the plant. The damage is a direct measure of resistance to the particular insect variety. The test evaluation is valid if insect population is uniformly distributed at a high level across the screening box or the field.
+narrow_synonym: "insect resistance" []
 is_a: TO:0000054 ! animal damage resistance
 
 [Term]
@@ -2017,7 +2023,7 @@ name: drought tolerance
 def: "Becoming tolerant to drought like conditions of minimal or no water content in the growth environment." [GR:pj]
 comment: Often  the plants exhibiting high salt tolerance also exhibit drought tolerance.
 related_synonym: "DRTL" []
-related_synonym: "drought resistance" []
+exact_synonym: "drought resistance" []
 is_a: TO:0000394 ! drought related trait
 
 [Term]
@@ -2333,7 +2339,9 @@ is_a: TO:0000598 ! protein content
 [Term]
 id: TO:0000315
 name: bacterial disease resistance
-is_a: TO:0000112 ! disease resistance trait
+def: "An assay to determine the resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a bacterial pathogen infection as compared to the susceptible and/or the reference plants of the same species." [GR:pj]
+comment: It represents the damage done by the diease and/or the pathogen to the plant. The damage is a direct measure of resistance to the particular bacterial strain causing the disease.
+is_a: TO:0000112 ! disease resistance
 
 [Term]
 id: TO:0000316
@@ -2580,7 +2588,7 @@ relationship: part_of TO:0000027 ! culm number
 id: TO:0000347
 name: weed damage
 def: "Weeds reduce the yield regardless of planting season. They compete for sunlight\, nutrients and water. If any of these is lacking\, the others cannot be used effectively\, even if a lot are present. Thus\, the competition results in poor plant growth and less yield." [GR:pj, ISBN:9712200299]
-is_a: TO:0000236 ! crop damage resistance trait
+is_a: TO:0000236 ! crop damage resistance
 
 [Term]
 id: TO:0000348
@@ -2856,7 +2864,7 @@ is_a: TO:0000587 ! endosperm quality
 [Term]
 id: TO:0000384
 name: nematode damage resistance
-def: "crop damage done by nematode infection" [GR:pj]
+def: "An assay to determine the resistance exhibited by a plant or a group of plants (population) in response to nematode infestation as compared to the susceptible and/or the reference plants of the same species." [GR:pj]
 related_synonym: "NDRS" []
 is_a: TO:0000054 ! animal damage resistance
 
@@ -3250,7 +3258,9 @@ is_a: TO:0000445 ! seed number
 [Term]
 id: TO:0000439
 name: fungal disease resistance
-is_a: TO:0000112 ! disease resistance trait
+def: "An assay to determine the resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a fungal pathogen infection as compared to the susceptible and/or the reference plants of the same species." [GR:pj]
+comment: It represents the damage done by the diease and/or the pathogen to the plant. The damage is a direct measure of resistance to the particular fungal strain causing the disease.
+is_a: TO:0000112 ! disease resistance
 
 [Term]
 id: TO:0000440
@@ -5754,6 +5764,19 @@ narrow_synonym: "ALS inhibitor tolerance" []
 narrow_synonym: "acetolactate synthase inhibitor susceptibility" []
 narrow_synonym: "acetolactate synthase inhibitor tolerance" []
 is_a: TO:0000058 ! herbicide sensitivity
+
+[Term]
+id: TO:0005009
+name: european corn borer resistance
+def: "causal agent\: agent\: Ostrinia nubialis" [GR:pj]
+exact_synonym: "ECB resistance" []
+is_a: TO:0000261 ! insect damage resistance
+
+[Term]
+id: TO:0005010
+name: rootworm resistance
+def: "causal agent\: Diabrotica spp." [GR:pj]
+is_a: TO:0000261 ! insect damage resistance
 
 [Term]
 id: TO:0010001
