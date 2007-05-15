@@ -1,7 +1,7 @@
 format-version: 1.0
-version: $Revision: 1.39 $
-date: 02:05:2007 9:59
-saved-by: pj37
+version: $Revision: 1.40 $
+date: 15:05:2007 17:00
+saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
 
@@ -125,7 +125,9 @@ is_a: TO:0000247 ! other nutrient sensitivity
 [Term]
 id: TO:0000017
 name: anatomy and morphology related trait
-def: "This category belongs to traits  associated with changes in the anatomy or structure of the plant at organ\, tissue or cellular level." [GR:pj]
+def: "This category belongs to traits associated with changes in the anatomy or structure of the plant at organ\, tissue or cellular level." [GR:pj]
+related_synonym: "plant architecture trait" []
+related_synonym: "plant structure trait" []
 is_a: TO:0000387 ! trait ontology
 
 [Term]
@@ -297,6 +299,7 @@ is_a: TO:0000036 ! hybrid incompatibility
 [Term]
 id: TO:0000043
 name: root anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the root and its parts." [GR:pj]
 is_a: TO:0000017 ! anatomy and morphology related trait
 
 [Term]
@@ -413,7 +416,7 @@ id: TO:0000059
 name: node color
 def: "The color on outer surface of the nodes on the culm is recorded." [GR:pj]
 is_a: TO:0000056 ! stem color
-relationship: part_of TO:0000534 ! culm color (sensu Poaceae)
+relationship: part_of TO:0000534 ! culm color
 
 [Term]
 id: TO:0000060
@@ -450,6 +453,7 @@ is_a: TO:0000184 ! seed anatomy and morphology trait
 [Term]
 id: TO:0000065
 name: root color
+def: "The color of the root." [GR:pj]
 related_synonym: "RTCL" []
 is_a: TO:0000043 ! root anatomy and morphology trait
 
@@ -537,12 +541,14 @@ is_obsolete: true
 [Term]
 id: TO:0000077
 name: shoot anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the shoot and its parts." [GR:pj]
+comment: Does not include traits on fruit\, fruit parts and adventitious roots whcih are borne on the shoot.
 is_a: TO:0000017 ! anatomy and morphology related trait
 
 [Term]
 id: TO:0000078
 name: root dry weight
-def: "The average dry weight of the root determined per tiller from a green house study" [GR:jcl, GR:pj]
+def: "The average dry weight of the root determined in a study." [GR:jcl, GR:pj]
 related_synonym: "RTDWT" []
 related_synonym: "rdw" []
 related_synonym: "rdw/t" []
@@ -567,10 +573,11 @@ is_a: TO:0000480 ! nutrient sensitivity
 id: TO:0000081
 name: deep root dry weight
 def: "The average dry weight of the root\, (for the root part 30cm below the soil surface) determined per tiller in a green house study." [GR:jcl, GR:pj]
-related_synonym: "DRTDWT" []
-related_synonym: "deep root dry weight per tiller" []
-related_synonym: "drw" []
-related_synonym: "drw/t" []
+exact_synonym: "DRTDWT" []
+exact_synonym: "deep root dry weight per tiller" []
+exact_synonym: "deep root weight" []
+exact_synonym: "drw" []
+exact_synonym: "drw/t" []
 is_a: TO:0000078 ! root dry weight
 
 [Term]
@@ -658,6 +665,8 @@ is_obsolete: true
 [Term]
 id: TO:0000092
 name: deep root to shoot ratio
+def: "The ratio of deep root root length (for the roots found 30cm below the soil surface) and the shoot length determined in a study." [GR:pj]
+synonym: "deep root length to shoot length ratio" []
 related_synonym: "DRTSHRO" []
 related_synonym: "deep root ratio" []
 related_synonym: "deep root/shoot ratio" []
@@ -833,6 +842,7 @@ is_a: TO:0000237 ! water stress trait
 [Term]
 id: TO:0000115
 name: root mass density
+def: "Determined as the dry mass of roots per unit soil volume at a given soil section." [GR:pj]
 related_synonym: "RTMD" []
 related_synonym: "rmd" []
 is_a: TO:0000043 ! root anatomy and morphology trait
@@ -869,6 +879,7 @@ is_a: TO:0000115 ! root mass density
 [Term]
 id: TO:0000120
 name: percent root mass density
+def: "Calculated as percent of root mass density over the total root mass density. Both parameters scored at the same depth." [GR:pj]
 related_synonym: "PCENTRTMD" []
 related_synonym: "prmd" []
 is_a: TO:0000115 ! root mass density
@@ -899,8 +910,8 @@ is_a: TO:0000120 ! percent root mass density
 
 [Term]
 id: TO:0000124
-name: flag leaf angle (sensu Poaceae)
-def: "Leaf angle is measured near the collar as the angle of attachment between the flag leaf blade and the main panicle axis" [ICIS:1065, IRRI:SES]
+name: flag leaf angle
+def: "Leaf angle is measured near the collar as the angle of attachment between the flag leaf blade and the main inflorescence axis in grass plants." [ICIS:1065, IRRI:SES]
 related_synonym: "FLA" []
 is_a: TO:0000206 ! leaf angle
 
@@ -1150,6 +1161,7 @@ def: "The index is calculated as\, DSI = (1-Yds/Yns)\, where Yds and Yns are mea
 related_synonym: "DRSID" []
 related_synonym: "DRSSID" []
 related_synonym: "DSI" []
+related_synonym: "drought score" []
 related_synonym: "drought sensitivity index" []
 is_a: TO:0000188 ! drought sensitivity
 
@@ -1374,6 +1386,7 @@ is_a: TO:0000387 ! trait ontology
 [Term]
 id: TO:0000184
 name: seed anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the seed and its parts." [GR:pj]
 is_a: TO:0000017 ! anatomy and morphology related trait
 
 [Term]
@@ -1490,7 +1503,8 @@ is_a: TO:0000106 ! male sterility type
 
 [Term]
 id: TO:0000200
-name: brittle culm (sensu Poaceae)
+name: brittle culm
+def: "A measure of brittleness of the stem of a grass plant." [GR:pj]
 is_a: TO:0000051 ! stem strength
 
 [Term]
@@ -1689,7 +1703,10 @@ is_a: TO:0000622 ! flower development trait
 [Term]
 id: TO:0000226
 name: auricleless
+def: "A measure of either the absence of auricle or the length of auricle neing zero." [GR:pj]
 related_synonym: "AUMIN" []
+exact_synonym: "auricle absence" []
+exact_synonym: "auricle absent" []
 is_a: TO:0000419 ! leaf anatomy and morphology trait
 is_a: TO:0000655 ! leaf development trait
 
@@ -1900,6 +1917,7 @@ is_obsolete: true
 [Term]
 id: TO:0000257
 name: root branching
+def: "The extent of the root branching as determined under variable treatments and environments." [GR:pj]
 related_synonym: "RTBR" []
 related_synonym: "rbr" []
 is_a: TO:0000043 ! root anatomy and morphology trait
@@ -2029,20 +2047,23 @@ is_a: TO:0000394 ! drought related trait
 [Term]
 id: TO:0000277
 name: biochemical trait
-def: "The traits associated with assay of either of the effected metabolite profile or enzymatic activity or  biological processes." [GR:pj]
+def: "The traits associated with assay of either of the effected metabolite profile\, enzymatic activity and  biological processes which includes the physiological processes." [GR:pj]
 is_a: TO:0000387 ! trait ontology
 
 [Term]
 id: TO:0000278
 name: root to shoot ratio
-related_synonym: "RTSHRO" []
-related_synonym: "r/s" []
-related_synonym: "root/shoot ratio" []
+def: "The ratio determined from the parameters evaluated for root length and the shoot length in a study." [GR:pj]
+exact_synonym: "RTSHRO" []
+exact_synonym: "r/s" []
+exact_synonym: "root length to shoot length ratio" []
+exact_synonym: "root/shoot ratio" []
 is_a: TO:0000043 ! root anatomy and morphology trait
 
 [Term]
 id: TO:0000279
 name: root weight
+def: "The average dry or fresh weight of the root determined in a study." [GR:pj]
 related_synonym: "RTWT" []
 related_synonym: "TRW" []
 related_synonym: "total root weight" []
@@ -2065,7 +2086,7 @@ is_a: TO:0000277 ! biochemical trait
 
 [Term]
 id: TO:0000282
-name: enzymatic activity/protein content related trait
+name: enzymatic activity and protein content related trait
 def: "The trait associated with an assay to determine the effected enzymatic activity." [GR:pj]
 is_a: TO:0000277 ! biochemical trait
 
@@ -2390,7 +2411,7 @@ name: phenotypic acceptability
 def: "Breeding objectives for each variety and trait varies. The evaluation should reflect the overall acceptability of the variety." [ICIS:1005, IRRI:SES]
 related_synonym: "PAcp" []
 related_synonym: "overall liking" []
-is_a: TO:0000183 ! other miscellaneous trait
+is_a: TO:0000597 ! quality trait
 
 [Term]
 id: TO:0000323
@@ -2569,6 +2590,7 @@ id: TO:0000344
 name: days to flower
 def: "Number of days required to 50 percent blooming or flowering in a field." [GR:pj]
 related_synonym: "DTFL" []
+narrow_synonym: "Delay in flowering time" []
 is_a: TO:0000622 ! flower development trait
 
 [Term]
@@ -2781,6 +2803,8 @@ name: inflorescence anatomy and morphology trait
 alt_id: TO:0000363
 alt_id: TO:0000584
 alt_id: TO:0000585
+def: "Traits associated with changes in the anatomy or structure of the inflorescence and its parts." [GR:pj]
+synonym: "inflorescence structure trait" []
 related_synonym: "ear anatomy and morphology trait" []
 related_synonym: "inflorescence anatomy and morphology trait (sensu Oryza)" []
 related_synonym: "inflorescence anatomy and morphology trait (sensu Zea)" []
@@ -2933,6 +2957,7 @@ is_obsolete: true
 [Term]
 id: TO:0000394
 name: drought related trait
+def: "Response by the plant in terms of  sensitivity to sufficiently prolonged water deficit/scarcity or scanty water content in the soil or growth medium\, that can cause damage to the plant." [GR:pj]
 related_synonym: "dessication related trait" []
 is_a: TO:0000237 ! water stress trait
 
@@ -3116,6 +3141,7 @@ is_a: TO:0000439 ! fungal disease resistance
 [Term]
 id: TO:0000419
 name: leaf anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the leaf and its parts." [GR:pj]
 is_a: TO:0000077 ! shoot anatomy and morphology trait
 
 [Term]
@@ -3169,12 +3195,12 @@ related_synonym: "INCL" []
 related_synonym: "culm internode color" []
 related_synonym: "stem internode color" []
 is_a: TO:0000056 ! stem color
-relationship: part_of TO:0000534 ! culm color (sensu Poaceae)
+relationship: part_of TO:0000534 ! culm color
 
 [Term]
 id: TO:0000427
-name: culm angle (sensu Poaceae)
-def: "The angle of the culm with respect to the ground surface." [IRRI:SES]
+name: culm angle
+def: "The angle of the culm with respect to the ground surface in a grass plant." [IRRI:SES]
 related_synonym: "CULMAG" []
 related_synonym: "CmA" []
 is_a: TO:0000577 ! stem angle
@@ -3249,13 +3275,6 @@ related_synonym: "male sterility measure" []
 is_a: TO:0000485 ! sterility related trait
 
 [Term]
-id: TO:0000438
-name: grain number per panicle (sensu Oryza)
-def: "Number of grains (full grain with hull) present in one rice panicle." [GR:pj37]
-related_synonym: "GRNBPPN" []
-is_a: TO:0000445 ! seed number
-
-[Term]
 id: TO:0000439
 name: fungal disease resistance
 def: "An assay to determine the resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a fungal pathogen infection as compared to the susceptible and/or the reference plants of the same species." [GR:pj]
@@ -3319,9 +3338,13 @@ is_a: TO:0000168 ! abiotic stress trait
 [Term]
 id: TO:0000447
 name: filled grain number
-def: "Determined by counting the number of spikelets filled with grain in one panicle." [GR:pj]
-related_synonym: "FGRNB" []
-related_synonym: "filled grain number per panicle" []
+alt_id: TO:0000438
+def: "Determined by counting the number of spikelets filled with grain in one Inflorescence (panicle)." [GR:pj]
+synonym: "grain number per panicle (sensu Oryza)" []
+related_synonym: "GRNBPPN" []
+exact_synonym: "FGRNB" []
+exact_synonym: "filled grain number per panicle" []
+exact_synonym: "number of grains per panicle" []
 is_a: TO:0000445 ! seed number
 
 [Term]
@@ -3348,8 +3371,8 @@ is_a: TO:0000396 ! grain yield
 
 [Term]
 id: TO:0000451
-name: large vascular bundle number to spikelet number ratio (sensu Poaceae)
-def: "A ratio of number of large vascular bundles present in the spikelets to the number of spikelets in a panicle." [GR:pj]
+name: large vascular bundle number to spikelet number ratio
+def: "A ratio of number of large vascular bundles present in the spikelets to the number of spikelets in a grass inflorescence." [GR:pj]
 related_synonym: "LVBNBSPKNBRO" []
 is_a: TO:0000371 ! yield trait
 is_a: TO:0000456 ! spikelet number
@@ -3357,8 +3380,9 @@ is_a: TO:0000472 ! vascular bundle number
 
 [Term]
 id: TO:0000452
-name: leaf area to spikelet number ratio (sensu Poaceae)
-def: "A ratio of flag leaf area to the number of spikelets in a panicle." [GR:pj]
+name: leaf area to spikelet number ratio
+def: "A ratio of leaf area to the number of spikelets in a grass inflorescence." [GR:pj]
+comment: Often measured using the flag leaf.
 related_synonym: "LFARSPKNBRO" []
 is_a: TO:0000540 ! leaf area
 
@@ -3390,7 +3414,8 @@ is_a: TO:0000445 ! seed number
 [Term]
 id: TO:0000456
 name: spikelet number
-def: "Number of spikelets in an inflorescence (e.g. rice panicle)" [GR:pj]
+def: "Average number of spikelets in one or more inflorescence (e.g. rice panicle) found ina  plant or on all plants of a study." [GR:pj]
+synonym: "number of spikelets per panicle" []
 related_synonym: "SPKNB" []
 is_a: TO:0000371 ! yield trait
 is_a: TO:0000621 ! inflorescence development trait
@@ -3453,8 +3478,8 @@ is_a: TO:0000357 ! growth and development trait
 
 [Term]
 id: TO:0000465
-name: mineral or ion content related trait
-def: "The total mineral or ion content measured in a plant or a plant part." [GR:pj]
+name: mineral and ion content related trait
+def: "The total mineral and/or ion content measured in a plant or a plant part." [GR:pj]
 comment: May be measured in a dry mass or in a fresh tissue.
 is_a: TO:0000277 ! biochemical trait
 
@@ -3463,7 +3488,7 @@ id: TO:0000466
 name: carbon content
 def: "Amount of carbon present in the dry mass." [GR:pj]
 related_synonym: "CBCN" []
-is_a: TO:0000465 ! mineral or ion content related trait
+is_a: TO:0000465 ! mineral and ion content related trait
 
 [Term]
 id: TO:0000467
@@ -3490,6 +3515,7 @@ is_a: TO:0000653 ! seed development trait
 [Term]
 id: TO:0000470
 name: vascular tissue related trait
+def: "Traits associated with changes in the anatomy or structure of the vascular tissue and its parts." [GR:pj]
 is_a: TO:0000017 ! anatomy and morphology related trait
 
 [Term]
@@ -3709,7 +3735,7 @@ is_a: TO:0000429 ! salt sensitivity
 [Term]
 id: TO:0000503
 name: leaf rolling time
-def: "Measure time taken by the leaf to roll completely under drought or water stress." [GR:pj]
+def: "Measureof  time taken by the leaf to roll completely under drought or water stress." [GR:pj]
 related_synonym: "LFRLTM" []
 is_a: TO:0000085 ! leaf rolling
 
@@ -3742,6 +3768,7 @@ is_a: TO:0000349 ! physiological process related trait
 [Term]
 id: TO:0000508
 name: penetrated root length
+def: "Average maximum length of the root of a plant in a study that have penetrated to a predetermined soil depth." [GR:pj]
 related_synonym: "PENRTLG" []
 is_a: TO:0000227 ! root length
 
@@ -3772,7 +3799,7 @@ id: TO:0000513
 name: potassium concentration
 def: "The total potassium ion concentration measured in a plant or a plant part or plant extract." [GR:pj]
 related_synonym: "KCONC" []
-is_a: TO:0000465 ! mineral or ion content related trait
+is_a: TO:0000465 ! mineral and ion content related trait
 
 [Term]
 id: TO:0000514
@@ -3784,6 +3811,7 @@ is_a: TO:0000349 ! physiological process related trait
 [Term]
 id: TO:0000515
 name: relative growth rate
+def: "The relative growth of the plant determined after a given treatment as compared to the one determined under normal conditions." [GR:pj]
 related_synonym: "RELGRATE" []
 is_a: TO:0000168 ! abiotic stress trait
 is_a: TO:0000250 ! vigor related trait
@@ -3791,6 +3819,7 @@ is_a: TO:0000250 ! vigor related trait
 [Term]
 id: TO:0000516
 name: relative root length
+def: "The relative length of the root determined after a given treatment as compared to the one determined under normal conditions." [GR:pj]
 related_synonym: "RELRTLG" []
 is_a: TO:0000227 ! root length
 
@@ -3804,7 +3833,9 @@ is_a: TO:0000114 ! flooding related trait
 [Term]
 id: TO:0000519
 name: rooting depth
+def: "It is calculated from the deepest soil layer where roots were present and the longest root measured in the layer." [GR:pj, PMID:12582650]
 related_synonym: "RTDP" []
+narrow_synonym: "maximum rooting depth" []
 is_a: TO:0000043 ! root anatomy and morphology trait
 is_a: TO:0000168 ! abiotic stress trait
 
@@ -3845,14 +3876,14 @@ def: "The ratio of total sodium to potassium ion content measured in a plant or 
 related_synonym: "NAKRO" []
 related_synonym: "Na/K ratio" []
 related_synonym: "sodium to potassium ratio" []
-is_a: TO:0000465 ! mineral or ion content related trait
+is_a: TO:0000465 ! mineral and ion content related trait
 
 [Term]
 id: TO:0000526
 name: sodium concentration
 def: "The total sodium ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:pj]
 related_synonym: "NACONC" []
-is_a: TO:0000465 ! mineral or ion content related trait
+is_a: TO:0000465 ! mineral and ion content related trait
 
 [Term]
 id: TO:0000527
@@ -3896,7 +3927,7 @@ is_a: TO:0000079 ! lemma and palea related traits
 
 [Term]
 id: TO:0000534
-name: culm color (sensu Poaceae)
+name: culm color
 def: "Variation in the color of the culm of a grass plant." [GR:pj]
 related_synonym: "CULMCL" []
 is_a: TO:0000056 ! stem color
@@ -4089,14 +4120,14 @@ name: space per culm
 def: "Space occupied by each culm or the tiller in a plant." [GR:pj]
 related_synonym: "SPPCULM" []
 related_synonym: "tiller volume" []
-is_a: TO:0000596 ! plant volume (sensu Poaceae)
+is_a: TO:0000559 ! plant volume
 
 [Term]
 id: TO:0000561
 name: space to culm ratio
 def: "A ratio of total space or volume occupied by the whole plant to the total number of culms or tiller in the plant." [GR:pj]
 related_synonym: "SPCULMRO" []
-is_a: TO:0000596 ! plant volume (sensu Poaceae)
+is_a: TO:0000559 ! plant volume
 
 [Term]
 id: TO:0000562
@@ -4122,6 +4153,7 @@ is_a: TO:0000657 ! spikelet anatomy and morphology trait
 id: TO:0000565
 name: spikelets per panicle length
 def: "Number of spikelets present in the rice panicle per unit length." [GR:pj]
+synonym: "spikelet number per panicle length" []
 related_synonym: "SPKPPNLG" []
 related_synonym: "number of spikelets per cm panicle length" []
 is_a: TO:0000456 ! spikelet number
@@ -4216,7 +4248,7 @@ is_a: TO:0000361 ! stem anatomy and morphology trait
 [Term]
 id: TO:0000578
 name: root fresh weight
-def: "The average fresh weight of the root determined per tiller from a green house study" [GR:pj37]
+def: "The average fresh weight of the root determined in a study." [GR:pj37]
 related_synonym: "RTFWT" []
 related_synonym: "total root fresh weight" []
 is_a: TO:0000279 ! root weight
@@ -4327,7 +4359,7 @@ is_a: TO:0000593 ! polished grain weight
 [Term]
 id: TO:0000596
 name: plant volume (sensu Poaceae)
-is_a: TO:0000559 ! plant volume
+is_obsolete: true
 
 [Term]
 id: TO:0000597
@@ -4341,7 +4373,7 @@ name: protein content
 def: "The total protein content measured in a plant or a plant part." [GR:pj37]
 related_synonym: "PROTCN" []
 related_synonym: "total protein content" []
-is_a: TO:0000282 ! enzymatic activity/protein content related trait
+is_a: TO:0000282 ! enzymatic activity and protein content related trait
 
 [Term]
 id: TO:0000599
@@ -4349,7 +4381,7 @@ name: enzyme activity
 def: "Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions\, the reactants are known as substrates\, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates\, and are usually composed wholly or largely of protein\, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic." [GO:GO\:0003824]
 synonym: "enzymatic activity" []
 synonym: "enzyme catalytic activity" []
-is_a: TO:0000282 ! enzymatic activity/protein content related trait
+is_a: TO:0000282 ! enzymatic activity and protein content related trait
 
 [Term]
 id: TO:0000600
@@ -4387,7 +4419,7 @@ def: "The ratio of total magnesium to potassium ion content measured in a plant 
 related_synonym: "MGKCNRO" []
 related_synonym: "Magnesium to potassium ratio" []
 related_synonym: "ratio of magnesium to potassium" []
-is_a: TO:0000465 ! mineral or ion content related trait
+is_a: TO:0000465 ! mineral and ion content related trait
 
 [Term]
 id: TO:0000604
@@ -4415,19 +4447,19 @@ is_a: TO:0000599 ! enzyme activity
 id: TO:0000607
 name: ash content
 def: "The total mineral or ion content measured after drying and burning the plant or a plant part. " [GR:pj]
-is_a: TO:0000465 ! mineral or ion content related trait
+is_a: TO:0000465 ! mineral and ion content related trait
 
 [Term]
 id: TO:0000608
 name: sodium content
 def: "The total sodium ion content measured in a plant or a plant part." [GR:pj]
-is_a: TO:0000465 ! mineral or ion content related trait
+is_a: TO:0000465 ! mineral and ion content related trait
 
 [Term]
 id: TO:0000609
 name: potassium content
 def: "The total potassium ion content measured in a plant or a plant part." [GR:pj]
-is_a: TO:0000465 ! mineral or ion content related trait
+is_a: TO:0000465 ! mineral and ion content related trait
 
 [Term]
 id: TO:0000610
@@ -4527,6 +4559,7 @@ is_a: TO:0000357 ! growth and development trait
 [Term]
 id: TO:0000621
 name: inflorescence development trait
+def: "Traits associated with observing effects on the development of the inflorescence and its parts." [GR:pj]
 is_a: TO:0000357 ! growth and development trait
 
 [Term]
@@ -4563,7 +4596,7 @@ id: TO:0000626
 name: relative phosphorus distribution between shoot and root
 related_synonym: "RELPHOCONCSHRT" []
 is_a: TO:0000102 ! phosphorus sensitivity
-is_a: TO:0000465 ! mineral or ion content related trait
+is_a: TO:0000465 ! mineral and ion content related trait
 
 [Term]
 id: TO:0000627
@@ -4650,6 +4683,7 @@ is_a: TO:0000420 ! fertility related trait
 [Term]
 id: TO:0000640
 name: total root number
+def: "Total sum of number of roots in a plant derived per experiment." [GR:pj]
 related_synonym: "TRTNB" []
 is_a: TO:0000084 ! root number
 
@@ -4673,7 +4707,8 @@ is_a: TO:0000050 ! inflorescence branching
 
 [Term]
 id: TO:0000644
-name: Relative root dry weight
+name: relative root dry weight
+def: "The relative (dry)weight of the root determined after a given treatment as compared to the one determined under normal conditions." [GR:pj]
 related_synonym: "RELRTDWT" []
 is_a: TO:0000078 ! root dry weight
 
@@ -4729,21 +4764,25 @@ is_a: TO:0000419 ! leaf anatomy and morphology trait
 [Term]
 id: TO:0000653
 name: seed development trait
+def: "Traits associated with observing effects on the development of the seed and its parts." [GR:pj]
 is_a: TO:0000357 ! growth and development trait
 
 [Term]
 id: TO:0000654
 name: shoot development trait
+def: "Traits associated with observing effects on the development of the shoot and its parts." [GR:pj]
 is_a: TO:0000357 ! growth and development trait
 
 [Term]
 id: TO:0000655
 name: leaf development trait
+def: "Traits associated with observing effects on the development of the leaf and its parts." [GR:pj]
 is_a: TO:0000654 ! shoot development trait
 
 [Term]
 id: TO:0000656
 name: root development trait
+def: "Traits associated with observing effects on the development of the root and its parts." [GR:pj]
 is_a: TO:0000357 ! growth and development trait
 
 [Term]
@@ -5183,26 +5222,31 @@ is_a: TO:0000419 ! leaf anatomy and morphology trait
 [Term]
 id: TO:0000722
 name: sporocyte development trait
+def: "Traits associated with observing effects on the sporocyte development." [GR:pj]
 is_a: TO:0000357 ! growth and development trait
 
 [Term]
 id: TO:0000723
 name: microsporocyte development trait
+def: "Traits associated with observing effects on the microsporocyte development." [GR:pj]
 is_a: TO:0000722 ! sporocyte development trait
 
 [Term]
 id: TO:0000724
 name: megasporocyte development trait
+def: "Traits associated with observing effects on the megasporocyte development." [GR:pj]
 is_a: TO:0000722 ! sporocyte development trait
 
 [Term]
 id: TO:0000725
 name: megasporocyte number
+def: "A count of the number of megasporocyte that is done to determine any increase or decrease in number." [GR:pj]
 is_a: TO:0000724 ! megasporocyte development trait
 
 [Term]
 id: TO:0000726
 name: microsporocyte number
+def: "A count of the number of microsporocyte that is done to determine any increase or decrease in number." [GR:pj]
 is_a: TO:0000723 ! microsporocyte development trait
 
 [Term]
@@ -5289,6 +5333,100 @@ name: basal tiller length
 def: "The height of the tallest basal tiller (basal axillary shoot) of a plant." [GR:pj]
 synonym: "basal tiller height" []
 is_a: TO:0000576 ! stem length
+
+[Term]
+id: TO:0001006
+name: adventitious root number
+def: "Average sum of number of adventitious roots in a plant derived per experiment." [GR:pj]
+is_a: TO:0000084 ! root number
+
+[Term]
+id: TO:0001007
+name: coleoptile length
+def: "Measurement of the length of the coleoptile in the germinating seed." [GR:pj]
+is_a: TO:0000077 ! shoot anatomy and morphology trait
+
+[Term]
+id: TO:0001008
+name: days to flag leaf emergence
+def: "In grass plants the number of days required for the full emergence of the flag leaf in a field or study. It can be counted from date of seed sowing or the transplant (in case of rice)." [GR:pj]
+is_a: TO:0000655 ! leaf development trait
+
+[Term]
+id: TO:0001009
+name: deep root number
+def: "A count of number of roots present below a giiven depth from the soil surface." [GR:pj]
+is_a: TO:0000084 ! root number
+
+[Term]
+id: TO:0001010
+name: senesced leaf number
+def: "Number of leaves in a plant that have undergone leaf senescence stage or are considered dead." [GR:pj]
+narrow_synonym: "dead leaf number" []
+is_a: TO:0000241 ! leaf number
+
+[Term]
+id: TO:0001011
+name: deep root weight ratio
+def: "A ration of the deep root dry weight to total root dry weight per plant." [GR:pj]
+exact_synonym: "deep root dry weight to total root dry weight ratio" []
+is_a: TO:0000279 ! root weight
+
+[Term]
+id: TO:0001012
+name: lateral root length
+def: "Average maximum length of the lateral root of a plant in a study." [GR:pj]
+is_a: TO:0000227 ! root length
+
+[Term]
+id: TO:0001013
+name: lateral root number
+def: "Average sum of number of lateral roots in a plant derived per experiment." [GR:pj]
+is_a: TO:0000084 ! root number
+
+[Term]
+id: TO:0001014
+name: leaf dry weight
+def: "Measure of the dry weight of leaf." [GR:pj]
+is_a: TO:0000505 ! leaf weight
+
+[Term]
+id: TO:0001015
+name: photosynthetic rate
+related_synonym: "net photosynthetic rate" []
+is_a: TO:0000349 ! physiological process related trait
+
+[Term]
+id: TO:0001016
+name: relative chlorophyll content
+def: "The relative chlorophyll content of the plant determined after a given treatment as compared to the one determined under normal conditions." [GR:pj]
+is_a: TO:0000495 ! chlorophyll content
+
+[Term]
+id: TO:0001017
+name: water use efficiency
+def: "As determined by the ratio of photosynthetic rate to transpiration rate." [GR:pj]
+exact_synonym: "photosynthetic rate to transpiration rate ratio" []
+is_a: TO:0000349 ! physiological process related trait
+
+[Term]
+id: TO:0001018
+name: transpiration rate
+is_a: TO:0000349 ! physiological process related trait
+
+[Term]
+id: TO:0001019
+name: root to total biomass ratio
+def: "A ratio of root dry weight to total plant dry weight." [GR:pj]
+synonym: "root dry weight to total plant dry weight ratio" []
+is_a: TO:0000327 ! biomass yield
+
+[Term]
+id: TO:0001020
+name: exudate sap volume
+def: "Volume of the sap exudate collected from the cut parts of a plant." [GR:pj]
+related_synonym: "Sap per tiller" []
+is_a: TO:0000349 ! physiological process related trait
 
 [Term]
 id: TO:0002600
@@ -5384,7 +5522,7 @@ is_a: TO:0002600 ! flower organ size
 [Term]
 id: TO:0002616
 name: flowering
-synonym: "flowering timing" []
+synonym: "flowering time" []
 synonym: "time of flowering" []
 is_a: TO:0000622 ! flower development trait
 
@@ -5456,6 +5594,7 @@ is_a: TO:0002629 ! fruit anatomy and morphology trait
 [Term]
 id: TO:0002629
 name: fruit anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the fruit and its parts." [GR:pj]
 synonym: "fruit morphology" []
 is_a: TO:0000017 ! anatomy and morphology related trait
 
@@ -5479,6 +5618,7 @@ is_a: TO:0002629 ! fruit anatomy and morphology trait
 [Term]
 id: TO:0002633
 name: fruit ripening
+is_a: TO:0000349 ! physiological process related trait
 is_a: TO:0000357 ! growth and development trait
 is_a: TO:0000597 ! quality trait
 
@@ -5491,6 +5631,8 @@ is_a: TO:0000597 ! quality trait
 [Term]
 id: TO:0002635
 name: leaf margin trait
+def: "Traits associated with changes in the anatomy or structure of the leaf margin. Often associated with leaf margin curvature." [GR:pj]
+synonym: "leaf margin curvature" []
 is_a: TO:0000419 ! leaf anatomy and morphology trait
 
 [Term]
@@ -5763,13 +5905,11 @@ narrow_synonym: "ALS inhibitor susceptibility" []
 narrow_synonym: "ALS inhibitor tolerance" []
 narrow_synonym: "acetolactate synthase inhibitor susceptibility" []
 narrow_synonym: "acetolactate synthase inhibitor tolerance" []
-narrow_synonym: "acetohydroxyacid synthase inhibitor" []
-narrow_synonym: "AHAS inhibitor" []
 is_a: TO:0000058 ! herbicide sensitivity
 
 [Term]
 id: TO:0005009
-name: European corn borer resistance
+name: european corn borer resistance
 def: "causal agent\: agent\: Ostrinia nubialis" [GR:pj]
 exact_synonym: "ECB resistance" []
 is_a: TO:0000261 ! insect damage resistance
@@ -5779,13 +5919,6 @@ id: TO:0005010
 name: rootworm resistance
 def: "causal agent\: Diabrotica spp." [GR:pj]
 is_a: TO:0000261 ! insect damage resistance
-
-[Term]
-id: TO:0005011
-name: enhanced nutrient utilization efficiency
-def: "An assay to determine the enhanced nutreint utilization efficiency of a plant or a group of plants (population) in response to the available macro and micro nutrients\, compared to the less efficient and/or the reference plants of the same species." [GR:pj]
-comment: The efficiency may be associated with the yield and quality of the agronomic product if it is assayed for a crop plant.
-is_a: TO:0000349 ! physiological process related trait
 
 [Term]
 id: TO:0010001
