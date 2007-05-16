@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.40 $
-date: 15:05:2007 17:00
+version: $Revision: 1.41 $
+date: 16:05:2007 14:51
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -1013,11 +1013,11 @@ is_a: TO:0000131 ! leaf water potential
 [Term]
 id: TO:0000137
 name: days to heading
-def: "Number of days required to 50 percent panicles/tassel exsertion from the flag leaf in a field or study." [GR:pj]
-comment: Number of days is calculated from either the day of sowing of seeds or from the day of transplanting the seedlings depending on type of study.
+def: "Number of days required for the inflorescence (head/cob/panicle) to emerge from the flag leaf of a plant or a group of plants in a study." [GR:pj]
+comment: Often determined when the 50% length of the inflorescence has emerged as compared to its full length. Number of days is calculated from either the day of sowing of seeds or from the day of transplanting the seedlings (in case of rice) depending on type of study.
 related_synonym: "DTHD" []
 related_synonym: "heading date" []
-is_a: TO:0000621 ! inflorescence development trait
+is_a: TO:0001021 ! days to inflorescence exsertion
 
 [Term]
 id: TO:0000138
@@ -1569,6 +1569,7 @@ is_a: TO:0000171 ! height related trait
 [Term]
 id: TO:0000208
 name: lemma number
+def: "Number of lemma in the floret." [GR:pj]
 is_a: TO:0000079 ! lemma and palea related traits
 is_a: TO:0000622 ! flower development trait
 
@@ -2588,10 +2589,11 @@ is_a: TO:0000347 ! weed damage
 [Term]
 id: TO:0000344
 name: days to flower
-def: "Number of days required to 50 percent blooming or flowering in a field." [GR:pj]
+def: "Number of days from the seed sowing or the seedling transplant date (in some cases of rice)  to the anthesis (flowering) stage. " [GR:pj]
+comment: Often determinded by either pollen shedding\, exsertion of the anthers or simply opening of the flower.
 related_synonym: "DTFL" []
 narrow_synonym: "Delay in flowering time" []
-is_a: TO:0000622 ! flower development trait
+is_a: TO:0002616 ! flowering time
 
 [Term]
 id: TO:0000345
@@ -2701,13 +2703,15 @@ is_a: TO:0000485 ! sterility related trait
 [Term]
 id: TO:0000359
 name: female flowering
+def: "Traits associated with the timing of the flowering  (anthesis) of female flowers." [GR:pj]
+comment: Ofetn influenced by the environemnt that includes\, day light\, temperature and geographic location.
 related_synonym: "DTSLK" []
 related_synonym: "FEMFLW" []
 related_synonym: "FFLW" []
 related_synonym: "Female flower anthesis" []
 related_synonym: "Female flower flowering" []
 related_synonym: "days to silk" []
-is_a: TO:0002616 ! flowering
+is_a: TO:0002616 ! flowering time
 
 [Term]
 id: TO:0000360
@@ -2739,11 +2743,13 @@ relationship: part_of TO:0000326 ! leaf color
 [Term]
 id: TO:0000365
 name: male flowering
+def: "Traits associated with the timing of the flowering  (anthesis) of male flowers." [GR:pj]
+comment: Ofetn influenced by the environemnt that includes\, day light\, temperature and geographic location.
 related_synonym: "MALEFLW" []
 related_synonym: "MFLW" []
 related_synonym: "male flower anthesis" []
 related_synonym: "male flower flowering" []
-is_a: TO:0002616 ! flowering
+is_a: TO:0002616 ! flowering time
 
 [Term]
 id: TO:0000366
@@ -3465,10 +3471,11 @@ is_a: TO:0000667 ! cooking or brewing quality
 [Term]
 id: TO:0000463
 name: anthesis silking interval
+def: "A difference of the average number of days between the maize tassel flowering and the first visible silk (stigma) on the maize ear." [GR:pj]
 related_synonym: "ANTSKIT" []
 related_synonym: "ASI" []
 related_synonym: "FLWSLKINTER" []
-is_a: TO:0000622 ! flower development trait
+is_a: TO:0002616 ! flowering time
 
 [Term]
 id: TO:0000464
@@ -3993,6 +4000,7 @@ is_a: TO:0000493 ! leaf composition trait
 [Term]
 id: TO:0000544
 name: mesocotyl length
+def: "The length of the mesocotyl." [GR:pj]
 related_synonym: "MCTLG" []
 is_a: TO:0000064 ! embryo related trait
 is_a: TO:0000077 ! shoot anatomy and morphology trait
@@ -4275,6 +4283,7 @@ is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 [Term]
 id: TO:0000582
 name: inflorescence number
+def: "Average number of inflorescence per plant in a study." [GR:pj]
 related_synonym: "INFLONB" []
 is_a: TO:0000371 ! yield trait
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
@@ -4565,6 +4574,7 @@ is_a: TO:0000357 ! growth and development trait
 [Term]
 id: TO:0000622
 name: flower development trait
+def: "Traits associated with observing effects on the development of the flower and its parts." [GR:pj]
 related_synonym: "floret development trait" []
 is_a: TO:0000621 ! inflorescence development trait
 
@@ -4614,7 +4624,11 @@ is_a: TO:0000439 ! fungal disease resistance
 [Term]
 id: TO:0000629
 name: days to tassel
+def: "It is determined as the number of days from the seed sowing to the stage when eiher the pollen shedding or anther exsertion occurs on the maize tassel." [GR:pj]
+comment: Depends on the study type. For a study with multiple plants\, on average 50% of the plants must have sheeding of pollen or anther exsertion.
+exact_synonym: "days to tassel flowering" []
 is_a: TO:0000344 ! days to flower
+is_a: TO:0000365 ! male flowering
 
 [Term]
 id: TO:0000630
@@ -4793,7 +4807,10 @@ is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 [Term]
 id: TO:0000658
 name: days to silk
+def: "It is determined as the number of days from the seed sowing to the first visible silk (stigma) on the maize ear." [GR:pj]
+comment: Depends on the study type. For a study with multiple plants\, on average 50% of the plants must have exposed silks.
 is_a: TO:0000344 ! days to flower
+is_a: TO:0000359 ! female flowering
 
 [Term]
 id: TO:0000659
@@ -4870,6 +4887,7 @@ def: "The number of flowers present on a inflorescence branch or in the inflores
 related_synonym: "FLNB" []
 related_synonym: "floret number" []
 is_a: TO:0000499 ! flower anatomy and morphology trait
+is_a: TO:0000622 ! flower development trait
 
 [Term]
 id: TO:0000671
@@ -5138,6 +5156,7 @@ is_a: TO:0002617 ! fruit color
 [Term]
 id: TO:0000708
 name: plant color
+def: "The color of the plant." [GR:pj]
 is_a: TO:0000077 ! shoot anatomy and morphology trait
 
 [Term]
@@ -5429,8 +5448,31 @@ related_synonym: "Sap per tiller" []
 is_a: TO:0000349 ! physiological process related trait
 
 [Term]
+id: TO:0001021
+name: days to inflorescence exsertion
+def: "Number of days required for the emergence of inflorescence to become visible on the plant. " [GR:pj]
+comment: Often in grasses it emerges from the flag leaf whcih is the top most leaft on the shoot.
+synonym: "days to inflorescence emergence" []
+is_a: TO:0000621 ! inflorescence development trait
+
+[Term]
+id: TO:0001022
+name: days to tassel emergence
+def: "Number of days required for the tassel to emerge from the flag leaf in a maize plant or a group of plants in a study." [GR:pj]
+comment: Often determined when the 50% length of the tassel has emerged as compared to its full length. Number of days is calculated from the day of sowing of the seeds
+is_a: TO:0001021 ! days to inflorescence exsertion
+
+[Term]
+id: TO:0001023
+name: days to ear shoot emergence
+def: "Number of days required for the ear shoot to emerge from the given leaf sheath in a maize plant or a group of plants in a study." [GR:pj]
+comment: Often determined when the 50% length of the ear has emerged as compared to its full length. Number of days is calculated from the day of sowing of the seeds
+is_a: TO:0001021 ! days to inflorescence exsertion
+
+[Term]
 id: TO:0002600
 name: flower organ size
+exact_synonym: "floral organ size" []
 is_a: TO:0000499 ! flower anatomy and morphology trait
 
 [Term]
@@ -5521,8 +5563,9 @@ is_a: TO:0002600 ! flower organ size
 
 [Term]
 id: TO:0002616
-name: flowering
-synonym: "flowering time" []
+name: flowering time
+def: "Traits associated with the timing of the flowering (anthesis)." [GR:pj]
+comment: Ofetn influenced by the environemnt that includes\, day light\, temperature and geographic location.
 synonym: "time of flowering" []
 is_a: TO:0000622 ! flower development trait
 
@@ -5790,6 +5833,7 @@ id: TO:0002659
 name: pistil number
 def: "Variation in the number of pistils in the gynoecium." [GR:pj]
 is_a: TO:0000223 ! pistil related trait
+is_a: TO:0000622 ! flower development trait
 
 [Term]
 id: TO:0002660
