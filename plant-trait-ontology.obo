@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.42 $
-date: 16:05:2007 16:47
+version: $Revision: 1.43 $
+date: 17:05:2007 16:11
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -1294,6 +1294,7 @@ is_a: TO:0000114 ! flooding related trait
 [Term]
 id: TO:0000171
 name: height related trait
+def: "Height related traits" [GR:pj]
 is_a: TO:0000133 ! stature or vigor trait
 
 [Term]
@@ -1559,7 +1560,7 @@ is_a: TO:0000492 ! leaf shape
 [Term]
 id: TO:0000207
 name: plant height
-def: "actual measurement of plant height from soil surface to the highest point in plant as identified in the study." [ICIS:1006, IRRI:SES]
+def: "Actual measurement of plant height from soil surface to the highest point in plant as identified in the study." [ICIS:1006, IRRI:SES]
 synonym: "shoot height" []
 related_synonym: "Ht" []
 related_synonym: "PTHT" []
@@ -3423,6 +3424,7 @@ id: TO:0000456
 name: spikelet number
 def: "Average number of spikelets in one or more inflorescence (e.g. rice panicle) found ina  plant or on all plants of a study." [GR:pj]
 synonym: "number of spikelets per panicle" []
+synonym: "spikelet number per panicle" []
 related_synonym: "SPKNB" []
 is_a: TO:0000371 ! yield trait
 is_a: TO:0000621 ! inflorescence development trait
@@ -3863,12 +3865,15 @@ is_a: TO:0000349 ! physiological process related trait
 [Term]
 id: TO:0000522
 name: stomatal conductance
+def: "It is a numerical measure of the maximum rate of passage of either water vapour or carbon dioxide through the stomata" [GR:pj]
 related_synonym: "STOCOND" []
 is_a: TO:0000349 ! physiological process related trait
 
 [Term]
 id: TO:0000523
 name: stomatal resistance
+def: "Stomatal resistance (or its inverse\, stomatal conductance) can therefore be calculated from the transpiration rate and humidity gradient. (The humidity gradient is the humidity inside the leaf\, determined from leaf temperature based on the assumption that the leaf's air spaces are saturated with vapor\, minus the humidity of the ambient air\, which is measured directly.) " [web:http\://en.wikipedia.org/wiki/Stomata]
+comment: This allows scientists to learn how stomata respond to changes in environmental conditions\, such as light intensity\, humidity\, or carbon dioxide concentration.
 related_synonym: "STORS" []
 is_a: TO:0000349 ! physiological process related trait
 
@@ -4608,7 +4613,7 @@ id: TO:0000626
 name: relative phosphorus distribution between shoot and root
 related_synonym: "RELPHOCONCSHRT" []
 is_a: TO:0000102 ! phosphorus sensitivity
-is_a: TO:0000465 ! mineral and ion content related trait
+is_a: TO:0001024 ! phosphorus content
 
 [Term]
 id: TO:0000627
@@ -4733,6 +4738,7 @@ id: TO:0000645
 name: relative phosphorus concentration
 related_synonym: "RELPHOCONC" []
 is_a: TO:0000102 ! phosphorus sensitivity
+is_a: TO:0001024 ! phosphorus content
 
 [Term]
 id: TO:0000646
@@ -4748,7 +4754,7 @@ is_a: TO:0000705 ! acid phosphatase activity
 
 [Term]
 id: TO:0000648
-name: relative Phosphorus uptake
+name: relative phosphorus uptake
 related_synonym: "RELPHOUP" []
 is_a: TO:0000102 ! phosphorus sensitivity
 
@@ -5414,7 +5420,9 @@ is_a: TO:0000505 ! leaf weight
 [Term]
 id: TO:0001015
 name: photosynthetic rate
-related_synonym: "net photosynthetic rate" []
+def: "The total amount of carbon fixed by the plant per unit time and is measured by determining the changes in CO2 concentration over a plant leaf in a glass enclosure." [GR:pj]
+synonym: "leaf photosynthetic rate" []
+related_synonym: "gross photosynthetic rate" []
 is_a: TO:0000349 ! physiological process related trait
 
 [Term]
@@ -5470,6 +5478,74 @@ name: days to ear shoot emergence
 def: "Number of days required for the ear shoot to emerge from the given leaf sheath in a maize plant or a group of plants in a study." [GR:pj]
 comment: Often determined when the 50% length of the ear has emerged as compared to its full length. Number of days is calculated from the day of sowing of the seeds
 is_a: TO:0001021 ! days to inflorescence exsertion
+
+[Term]
+id: TO:0001024
+name: phosphorus content
+is_a: TO:0000465 ! mineral and ion content related trait
+
+[Term]
+id: TO:0001025
+name: leaf phosphorus content
+def: "Amount of phosphorus in the leaf." [GR:pj]
+comment: Often measured in per unit dry weight.
+is_a: TO:0001024 ! phosphorus content
+
+[Term]
+id: TO:0001026
+name: respiration rate
+def: "The total amount of carbon lost metabolically by the plant per unit time and is measured by determining the increase in CO2 concentration over a plant leaf in a glass enclosure." [GR:pj]
+is_a: TO:0000349 ! physiological process related trait
+
+[Term]
+id: TO:0001027
+name: net photosynthetic rate
+def: "It is measured as the difference between gross photosynthesis (the total amount of carbon fixed by the plant per unit time) and the respiration (the total amount of carbon lost metabolically during that same time)." [GR:pj]
+is_a: TO:0000349 ! physiological process related trait
+
+[Term]
+id: TO:0001028
+name: osmotic adjustment break point
+def: "Break point of leaf water potential in the regression of leaf water potential against leaf relative water content." [CIRAD:Brigitte Courtois]
+synonym: "Break point of osmotic adjustment" []
+is_a: TO:0000349 ! physiological process related trait
+
+[Term]
+id: TO:0001029
+name: relative harvest index
+def: "It is a ratio of harvest index in stress to that of control environment." [GR:pj]
+is_a: TO:0000128 ! harvest index
+
+[Term]
+id: TO:0001030
+name: relative leaf area
+def: "It is a ratio of leaf area determined from a stressed plant to that grown in normal environment." [GR:pj]
+is_a: TO:0000540 ! leaf area
+
+[Term]
+id: TO:0001031
+name: relative leaf dry weight
+def: "It is a ratio of leaf dry weight determined from a stressed plant to that grown in normal environment." [GR:pj]
+is_a: TO:0001014 ! leaf dry weight
+
+[Term]
+id: TO:0001032
+name: relative panicle number
+def: "It is a ratio of panicle number determined from a stressed plant to that grown in normal environment." [GR:pj]
+is_a: TO:0000152 ! panicle number
+
+[Term]
+id: TO:0001033
+name: relative spikelet number
+def: "It is a ratio of spikelet number per panicle/inflorescence determined from a stressed plant to that grown in normal environment." [GR:pj]
+synonym: "relative number of spikelet per panicle" []
+is_a: TO:0000456 ! spikelet number
+
+[Term]
+id: TO:0001034
+name: relative plant height
+def: "It is a ratio of the plant height determined from a stressed plant to that grown in normal environment." [GR:pj]
+is_a: TO:0000207 ! plant height
 
 [Term]
 id: TO:0002600
@@ -5727,7 +5803,7 @@ id: TO:0002643
 name: carbon isotope discrimination
 def: "It is a measure of the C isotopic composition in plant material relative to the value of the same ratio in the air of the environment where the plant is grown." [GR:pj, PMID:11756262, GrainGenes_trait:Carbon isotope discrimination]
 synonym: "CBISOTPDISC" []
-is_a: TO:0000466 ! carbon content
+is_a: TO:0000465 ! mineral and ion content related trait
 
 [Term]
 id: TO:0002644
