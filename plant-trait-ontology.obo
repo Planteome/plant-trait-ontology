@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.43 $
-date: 17:05:2007 16:11
+version: $Revision: 1.44 $
+date: 10:08:2007 14:32
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -488,9 +488,10 @@ is_a: TO:0000326 ! leaf color
 [Term]
 id: TO:0000070
 name: variegated leaf necrosis
+def: "Variegated leaf necrosis or scorching observed in response to stresses like drought\, insecticides and cold temperature as evidenced by chlorotic and/or necrotic tissue." [GR:pj]
 comment: In maize this trait is observed for chlorotic tissue between veins or older leaves\, causing holes and torn appearance
+synonym: "VLFNEC" []
 synonym: "ragged leaf" []
-related_synonym: "leaf necrosis" []
 is_a: TO:0000069 ! variegated leaf
 is_a: TO:0000652 ! leaf necrosis
 
@@ -608,7 +609,7 @@ is_a: TO:0000168 ! abiotic stress trait
 [Term]
 id: TO:0000085
 name: leaf rolling
-def: "Leaf rolling is a feature observed in response to drought or water stress. It precedes leaf drying stage. " [GR:jcl, GR:pj]
+def: "Leaf rolling is a feature observed in response to stresses like drought\, water and temperature. It precedes leaf drying stage. " [GR:jcl, GR:pj]
 synonym: "wilting" []
 related_synonym: "LFRL" []
 is_a: TO:0000168 ! abiotic stress trait
@@ -4779,7 +4780,8 @@ is_a: TO:0000667 ! cooking or brewing quality
 [Term]
 id: TO:0000652
 name: leaf necrosis
-def: "Leaf surface area affected by insecticides as evidenced by chlorotic and/or necrotic tissue" [GR:pj]
+def: "Leaf surface area affected by abiotic stresses like insecticides and cold temperature as evidenced by chlorotic and/or necrotic tissue." [GR:pj]
+synonym: "LFNEC" []
 synonym: "leaf scorch" []
 is_a: TO:0000419 ! leaf anatomy and morphology trait
 
@@ -5928,6 +5930,32 @@ synonym: "asynchronous seed maturation" []
 synonym: "nonsynchronous seed maturation" []
 synonym: "synchronous seed maturation" []
 is_a: TO:0000653 ! seed development trait
+
+[Term]
+id: TO:0002662
+name: leaf rolloing tolerance
+def: "Tolerance for leaf rolling or wilting observed in response to stresses like drought\, water and temperature. It precedes leaf drying stage. " [GR:pj]
+exact_synonym: "LFRLTL" []
+narrow_synonym: "wilting tolerance" []
+broad_synonym: "Cold-induced wilting tolerance" []
+is_a: TO:0000085 ! leaf rolling
+
+[Term]
+id: TO:0002663
+name: leaf necrosis tolerance
+def: "Tolerance for leaf necrosis or scorching observed in response to stresses like drought\, insecticides and cold temperature as evidenced by less number or chlorotic and/or necrotic tissue." [GR:pj]
+synonym: "Cold-induced necrosis tolerance" []
+synonym: "LFNECTL" []
+synonym: "necrosis tolerance" []
+is_a: TO:0000652 ! leaf necrosis
+
+[Term]
+id: TO:0002664
+name: leaf yellowing tolerance
+def: "Tolerance for leaf color yellowing observed in response to stresses like drought\, water and temperature. It may precedes leaf drying stage. " [GR:pj]
+synonym: "LFYTL" []
+broad_synonym: "Cold-induced yellowing tolerance" []
+is_a: TO:0000326 ! leaf color
 
 [Term]
 id: TO:0005001
