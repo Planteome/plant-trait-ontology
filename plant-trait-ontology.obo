@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.46 $
-date: 22:08:2007 09:45
+version: $Revision: 1.47 $
+date: 12:10:2007 16:24
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -522,6 +522,7 @@ is_a: TO:0000080 ! micronutrient sensitivity
 [Term]
 id: TO:0000074
 name: blast disease
+def: "Causal agent\: Magnaporthe grisea" [GR:pj]
 related_synonym: "BLRS" []
 related_synonym: "blast disease resistance" []
 related_synonym: "blast disease susceptibility" []
@@ -1227,10 +1228,12 @@ is_a: TO:0000597 ! quality trait
 id: TO:0000163
 name: auxin sensitivity
 def: "Response with respect to application of auxin." [GR:pj]
+comment: The most important auxin produced by plants is indole-3-acetic acid (IAA)
+synonym: "indole-3-acetic acid response" []
 related_synonym: "AUXSN" []
 related_synonym: "IAA response" []
 related_synonym: "IAA sensitivity" []
-related_synonym: "IAA3 response" []
+related_synonym: "indole-3-acetic acid sensitivity" []
 is_a: TO:0000401 ! plant growth hormone sensitivity
 
 [Term]
@@ -1539,7 +1542,7 @@ def: "Causal agent\: Xanthomonas oryzae pv. oryzae. symptoms\: lesions usually s
 related_synonym: "SDLBTRS" []
 related_synonym: "kresek" []
 related_synonym: "leaf blight" []
-is_a: TO:0000315 ! bacterial disease resistance
+is_a: TO:0000175 ! bacterial blight disease resistance
 
 [Term]
 id: TO:0000205
@@ -1907,9 +1910,10 @@ is_a: TO:0000238 ! growth media composition sensitivity
 [Term]
 id: TO:0000255
 name: sheath blight disease resistance
+def: "Causal agent\: Rhizoctonia solani. Symptom\: Grayish-green lesions may enlarge and coalesce with other lesions\, mostly on lower leaf sheaths\, but occasionally on the leaves." [IRRI:SES]
 related_synonym: "SHBTRS" []
 related_synonym: "ShB" []
-is_a: TO:0000315 ! bacterial disease resistance
+is_a: TO:0000439 ! fungal disease resistance
 
 [Term]
 id: TO:0000256
@@ -3510,7 +3514,7 @@ is_a: TO:0000349 ! physiological process related trait
 [Term]
 id: TO:0000468
 name: leaf blast disease resistance
-def: "Causal agent\: Magnaporthe grisea (Pyricularia oryzae - the imperfect/anamorphic stage name). " [GR:pj, IRRI:SES]
+def: "Causal agent\: Magnaporthe grisea. Symptoms\: Can affect either or both the leaf and panicles." [GR:pj, IRRI:SES]
 related_synonym: "Bl" []
 related_synonym: "LFBLRS" []
 is_a: TO:0000074 ! blast disease
@@ -3570,6 +3574,7 @@ is_a: TO:0000306 ! root thickness
 [Term]
 id: TO:0000476
 name: growth hormone content
+def: "Measures the growth hormone content in a plant or plant part. " [GR:pj]
 is_a: TO:0000281 ! metabolite content related trait
 
 [Term]
@@ -3583,6 +3588,7 @@ is_a: TO:0000074 ! blast disease
 [Term]
 id: TO:0000478
 name: abscisic acid concentration
+def: "Measures the growth hormone concentration in a plant or plant part. " [GR:pj]
 related_synonym: "ABA concentration" []
 related_synonym: "ABACONC" []
 related_synonym: "abscisic acid accumulation" []
@@ -5039,6 +5045,8 @@ is_a: TO:0000685 ! tenderness
 [Term]
 id: TO:0000690
 name: Maysin content
+def: "Measures the maysin content in a plant or plant part. " [GR:pj]
+comment: Maysin is a coagulable globulin protein produced by the maize plant. It has insecticide properties.
 related_synonym: "MAYSINCN" []
 is_a: TO:0000281 ! metabolite content related trait
 
@@ -5302,6 +5310,7 @@ is_a: TO:0000728 ! cell cycle trait
 [Term]
 id: TO:0000731
 name: lignin content
+def: "Measures the lignin content in a plant or plant part. " [GR:pj]
 is_a: TO:0000281 ! metabolite content related trait
 
 [Term]
@@ -5922,6 +5931,7 @@ is_a: TO:0000622 ! flower development trait
 [Term]
 id: TO:0002660
 name: cytokinin content
+def: "Measures the cytokinin content in a plant or plant part. " [GR:pj]
 is_a: TO:0000476 ! growth hormone content
 
 [Term]
@@ -5973,6 +5983,92 @@ name: seed phosphorus content
 def: "Amount of phosphorus in the seed." [GR:pj]
 synonym: "SDPHOCN" []
 is_a: TO:0001024 ! phosphorus content
+
+[Term]
+id: TO:0002667
+name: abscisic acid content
+def: "Measures the abscisic acid content in a plant or plant part. " [GR:pj]
+synonym: "ABA content" []
+synonym: "ABACN" []
+is_a: TO:0000476 ! growth hormone content
+
+[Term]
+id: TO:0002668
+name: jasmonic acid content
+def: "Measures the jasmonic acid content in a plant or plant part. " [GR:pj, PMID:17031029]
+synonym: "JA content" []
+synonym: "jasmonate content" []
+is_a: TO:0000476 ! growth hormone content
+
+[Term]
+id: TO:0002669
+name: diterpenoid phytoalexin content
+def: "Measures the diterpenoid phytoalexin content in a plant or plant part." [GR:pj]
+comment: Diterpenoid phytoalexins are polycyclic diterpenes involved in pathogen response.
+is_a: TO:0000290 ! flavonoid content
+
+[Term]
+id: TO:0002670
+name: momilactone A content
+def: "Measures the momilactone A content in a plant or plant part." [PMID:16569039]
+comment: momilactone A is a instance of diterpenoid phytoalexin.
+synonym: "phytoalexin momilactone A content" []
+is_a: TO:0002669 ! diterpenoid phytoalexin content
+
+[Term]
+id: TO:0002671
+name: momilactone B content
+def: "Measures the momilactone A content in a plant or plant part." [PMID:16569039]
+comment: momilactone B is a instance of diterpenoid phytoalexin.
+synonym: "phytoalexin momilactone B content" []
+is_a: TO:0002669 ! diterpenoid phytoalexin content
+
+[Term]
+id: TO:0002672
+name: auxin content
+def: "Measures the auxin content in a plant or plant part. " [GR:pj, PMID:16908506]
+comment: The most important auxin produced by plants is indole-3-acetic acid (IAA)
+synonym: "AUXCN" []
+synonym: "IAA content" []
+synonym: "indole-3-acetic acid content" []
+is_a: TO:0000476 ! growth hormone content
+
+[Term]
+id: TO:0002673
+name: amino acid content
+def: "Measures the amino acid content in a plant or plant part. " [GR:pj]
+is_a: TO:0000281 ! metabolite content related trait
+
+[Term]
+id: TO:0002674
+name: tryptophan content
+def: "Measures the amino acid tryptophan content in a plant or plant part. " [GR:pj]
+is_a: TO:0002673 ! amino acid content
+
+[Term]
+id: TO:0002675
+name: gibberellic acid content
+def: "Measures the gibberellic acid content in a plant or plant part. " [GR:pj]
+synonym: "GA content" []
+synonym: "GACN" []
+synonym: "gibberellin content" []
+is_a: TO:0000476 ! growth hormone content
+
+[Term]
+id: TO:0002676
+name: brassinosteroid content
+def: "Measures the brassinosteroid content in a plant or plant part. " [GR:pj]
+comment: Brassinosteroids (BR) are a group of steroidal plant hormones.
+synonym: "BRCN" []
+is_a: TO:0000476 ! growth hormone content
+
+[Term]
+id: TO:0002677
+name: brassinosteroid sensitivity
+def: "Response with respect to application of Brassinosteroid." [GR:pj]
+comment: Brassinosteroids (BR) are a group of steroidal plant hormones.
+synonym: "BRSN" []
+is_a: TO:0000401 ! plant growth hormone sensitivity
 
 [Term]
 id: TO:0005001
