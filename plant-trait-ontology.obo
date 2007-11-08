@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.47 $
-date: 12:10:2007 16:24
+version: $Revision: 1.48 $
+date: 08:11:2007 16:43
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -1745,6 +1745,7 @@ name: crown rootless
 def: "Absence of crown roots in the plant" [GR:pj]
 related_synonym: "CWRTMIN" []
 is_a: TO:0000198 ! rootless
+is_a: TO:0002685 ! crown root number
 
 [Term]
 id: TO:0000231
@@ -4724,6 +4725,7 @@ is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 [Term]
 id: TO:0000642
 name: leaf sheath diameter
+def: "Actual measurements\, in centimeters of the leaf sheath diameter." [GR:pj]
 related_synonym: "LFSDIA" []
 is_a: TO:0002637 ! leaf size
 
@@ -5215,6 +5217,7 @@ is_a: TO:0000587 ! endosperm quality
 [Term]
 id: TO:0000714
 name: seminal rootless
+def: "Absence of seminal roots in the plant" [GR:pj]
 synonym: "absence of seminal roots" []
 is_a: TO:0000198 ! rootless
 
@@ -5295,7 +5298,7 @@ is_a: TO:0000283 ! biological process related trait
 id: TO:0000728
 name: cell cycle trait
 is_a: TO:0000283 ! biological process related trait
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0002686 ! cell growth and development trait
 
 [Term]
 id: TO:0000729
@@ -5708,22 +5711,26 @@ is_a: TO:0002623 ! pericarp texture
 [Term]
 id: TO:0002625
 name: fruit size
+def: "An assay to determine the variation in the size of the fruit." [GR:pj]
 is_a: TO:0000597 ! quality trait
 is_a: TO:0002629 ! fruit anatomy and morphology trait
 
 [Term]
 id: TO:0002626
 name: fruit length
+def: "An assay to determine the variation in the length of the fruit." [GR:pj]
 is_a: TO:0002625 ! fruit size
 
 [Term]
 id: TO:0002627
 name: fruit width
+def: "An assay to determine the variation in the width of the fruit." [GR:pj]
 is_a: TO:0002625 ! fruit size
 
 [Term]
 id: TO:0002628
 name: fruit shape
+def: "An assay to determine the variation in the shape of the fruit." [GR:pj]
 is_a: TO:0000597 ! quality trait
 is_a: TO:0002629 ! fruit anatomy and morphology trait
 
@@ -5737,16 +5744,19 @@ is_a: TO:0000017 ! anatomy and morphology related trait
 [Term]
 id: TO:0002630
 name: fruit distal end shape
+def: "An assay to determine the variation in the shape of the fruit's distal end." [GR:pj]
 is_a: TO:0002628 ! fruit shape
 
 [Term]
 id: TO:0002631
 name: fruit proximal end shape
+def: "An assay to determine the variation in the shape of the fruit's proximal end." [GR:pj]
 is_a: TO:0002628 ! fruit shape
 
 [Term]
 id: TO:0002632
 name: fruit abscission zone size
+def: "An assay to determine the variation in the size of the fruit abscission zone." [GR:pj]
 synonym: "size stem scar size" []
 is_a: TO:0000597 ! quality trait
 is_a: TO:0002629 ! fruit anatomy and morphology trait
@@ -5754,6 +5764,7 @@ is_a: TO:0002629 ! fruit anatomy and morphology trait
 [Term]
 id: TO:0002633
 name: fruit ripening
+def: "An assay to determin the variation in the extent of fruit ripening." [GR:pj]
 is_a: TO:0000349 ! physiological process related trait
 is_a: TO:0000357 ! growth and development trait
 is_a: TO:0000597 ! quality trait
@@ -5774,11 +5785,13 @@ is_a: TO:0000419 ! leaf anatomy and morphology trait
 [Term]
 id: TO:0002636
 name: leaflet number
+def: "An assay to detrmine the variation the number of leaves." [GR:pj]
 is_a: TO:0000419 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0002637
 name: leaf size
+def: "Variation in sizes of leaf. " [GR:pj]
 is_a: TO:0000419 ! leaf anatomy and morphology trait
 
 [Term]
@@ -6069,6 +6082,114 @@ def: "Response with respect to application of Brassinosteroid." [GR:pj]
 comment: Brassinosteroids (BR) are a group of steroidal plant hormones.
 synonym: "BRSN" []
 is_a: TO:0000401 ! plant growth hormone sensitivity
+
+[Term]
+id: TO:0002678
+name: panicleless
+def: "The absence of panicle in the plant\, either due to the abortion of the developmental process and/or due to environmental factors." [GR:pj]
+is_a: TO:0000152 ! panicle number
+is_a: TO:0002679 ! inflorescence less
+
+[Term]
+id: TO:0002679
+name: inflorescence less
+def: "The absence of inflorescence in the plant\, either due to the abortion of the inflorescence developmental process and/or due to environmental factors." [GR:pj]
+is_a: TO:0000582 ! inflorescence number
+
+[Term]
+id: TO:0002680
+name: albumin content
+def: "Assay to detrmine the amount of albumin protein. " [GR:pj]
+synonym: "albumen content" []
+is_a: TO:0000325 ! soluble protein content
+
+[Term]
+id: TO:0002681
+name: leaf curling
+def: "An assay to measure the extent of curling of the leaf lamina. " [GR:pj]
+comment: This is due to the changes in the leaf developmental process and is different from the leaf rolling (TO\:0000085) observed due to the water deficient or dorught linke conditions. 
+synonym: "curled leaf trait" []
+synonym: "frizzled leaf trait" []
+is_a: TO:0000655 ! leaf development trait
+
+[Term]
+id: TO:0002682
+name: plant cell shape
+def: "An assay to determine the variation in the shape of the given plant cell type." [GR:pj]
+is_a: TO:0002683 ! plant cell anatomy and morphology trait
+
+[Term]
+id: TO:0002683
+name: plant cell anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the plant cell and its parts." [GR:pj]
+is_a: TO:0000017 ! anatomy and morphology related trait
+
+[Term]
+id: TO:0002684
+name: plant cell size
+def: "An assay to determine the variation in the size of the given plant cell type." [GR:pj]
+is_a: TO:0002683 ! plant cell anatomy and morphology trait
+
+[Term]
+id: TO:0002685
+name: crown root number
+def: "A count of number of crown roots present in the seedling." [GR:pj]
+is_a: TO:0000084 ! root number
+
+[Term]
+id: TO:0002686
+name: cell growth and development trait
+def: "Traits associated with observing effects on the growth and development of the plant cell and its parts." [GR:pj]
+is_a: TO:0000357 ! growth and development trait
+
+[Term]
+id: TO:0002687
+name: cell elongation trait
+def: "An assay to determine the variation in the length of the plant cell due to cell growth and elongation." [GR:pj]
+synonym: "cell length" []
+is_a: TO:0002686 ! cell growth and development trait
+
+[Term]
+id: TO:0002688
+name: leaf lamina joint bending
+def: "An assay to determine the extent of the bending that occurrs to the leaf lamina joint in degrees." [GR:pj, PMID:14615594]
+comment: It may happen due to environmental stress such as upon brassinosteroid treatment.
+is_a: TO:0000492 ! leaf shape
+
+[Term]
+id: TO:0002689
+name: leaf sheath length
+def: "Actual length measurements\, in centimeters of the leaf sheath." [GR:pj]
+is_a: TO:0002637 ! leaf size
+relationship: part_of TO:0000135 ! leaf length
+
+[Term]
+id: TO:0002690
+name: leaf lamina length
+def: "Actual length measurements\, in centimeters of the leaf laimina." [GR:pj]
+is_a: TO:0002637 ! leaf size
+relationship: part_of TO:0000135 ! leaf length
+
+[Term]
+id: TO:0002691
+name: peduncle length
+def: "An assay to determin the variation in the length of the peduncle." [GR:pj]
+comment: Peduncle is the stalk of an inflorescence; that part of the inflorescence below the first flower or inflorescence branch and above the last foliage leaf/pair of foliage leaves.
+exact_synonym: "neck internode length" [PMID:17303594]
+is_a: TO:0000621 ! inflorescence development trait
+
+[Term]
+id: TO:0002692
+name: root meristem development trait
+def: "An assay to determine the variation in the root meristem development." [GR:pj, PMID:17303594]
+comment: The variation may be due to both the genotypic and/or environmental effects.
+is_a: TO:0000656 ! root development trait
+
+[Term]
+id: TO:0002693
+name: gravity response trait
+def: "An assay to determine the variation in the gravitropism under the influence of gravity or zero gravity" [GR:pj]
+is_a: TO:0000168 ! abiotic stress trait
 
 [Term]
 id: TO:0005001
