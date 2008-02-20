@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.51 $
-date: 11:02:2008 15:05
+version: $Revision: 1.52 $
+date: 20:02:2008 11:10
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -6235,7 +6235,7 @@ is_a: TO:0000289 ! carotene content
 id: TO:0002699
 name: lycopene content
 def: "The lycopene content in a plant or plant part. " [GR:pj]
-comment: Lycopene is the most efficient quencher of singlet oxygen free radicals. 
+comment: Lycopene is the most efficient quencher of singlet oxygen free radicals.
 is_a: TO:0002698 ! acyclic carotene content
 
 [Term]
@@ -6315,6 +6315,32 @@ id: TO:0002712
 name: stay green trait
 def: "The color of plant and the photosynthetic organs remain green compared to turning yellow and or brown at the time of senescing. " [GR:pj]
 relationship: part_of TO:0000326 ! leaf color
+
+[Term]
+id: TO:0002713
+name: cell organelle development trait
+def: "Trait(s) associated with phenotypes observed for abnormal development of organelle structure and biogenesis." [GR:pj]
+narrow_synonym: "organelle biogenesis trait" []
+narrow_synonym: "organelle structure trait" []
+is_a: TO:0000017 ! anatomy and morphology related trait
+is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000357 ! growth and development trait
+
+[Term]
+id: TO:0002714
+name: plastid development trait
+def: "Trait(s) associated with phenotypes observed for abnormal development of plastid structure and its biogenesis." [GR:pj]
+narrow_synonym: "plastid biogenesis trait" []
+narrow_synonym: "plastid structure trait" []
+is_a: TO:0002713 ! cell organelle development trait
+
+[Term]
+id: TO:0002715
+name: chloroplast development trait
+def: "Trait(s) associated with phenotypes observed for abnormal development of chloroplast structure and biogenesis." [GR:pj]
+narrow_synonym: "chloroplast biogenesis trait" []
+narrow_synonym: "chloroplast structure trait" []
+is_a: TO:0002714 ! plastid development trait
 
 [Term]
 id: TO:0005001
