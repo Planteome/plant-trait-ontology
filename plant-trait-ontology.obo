@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.52 $
-date: 20:02:2008 11:10
+version: $Revision: 1.53 $
+date: 13:03:2008 10:43
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -309,7 +309,7 @@ def: "Trait is monitored by counting number of flowers or florets that have comp
 comment: Scale\,  (%)\, Stigma exsertion; 1- Above 70\, Well exserted; 3- 41-70\, Moderately well exserted; 5- 21-40\, Just exserted; 7- 11-20\, Partly exserted; 9- 0-10\, Enclosed.  Evaluated at growth stage\:6 and 7 in rice
 related_synonym: "STIEX" []
 related_synonym: "stigma exsertion of male sterile lines" []
-is_a: TO:0000223 ! pistil related trait
+is_a: TO:0000223 ! pistil anatomy and morphology trait
 
 [Term]
 id: TO:0000045
@@ -385,11 +385,11 @@ is_a: TO:0000236 ! crop damage resistance
 [Term]
 id: TO:0000055
 name: leaf lamina pubescence
-def: "Extent of presence  (presence of hairs)  on the leaf blade surface." [IRRI:SES]
+def: "Extent of pubescence  (presence of hairs)  on the leaf blade surface." [IRRI:SES]
 related_synonym: "LBP" []
 related_synonym: "LFLHR" []
 related_synonym: "leaf blade pubescence" []
-is_a: TO:0000419 ! leaf anatomy and morphology trait
+is_a: TO:0002722 ! leaf pubescence
 
 [Term]
 id: TO:0000056
@@ -414,7 +414,7 @@ is_a: TO:0000482 ! chemical stress sensitivity
 [Term]
 id: TO:0000059
 name: node color
-def: "The color on outer surface of the nodes on the culm is recorded." [GR:pj]
+def: "The color on outer surface of the nodes on the stem is recorded." [GR:pj]
 is_a: TO:0000056 ! stem color
 relationship: part_of TO:0000534 ! culm color
 
@@ -511,7 +511,7 @@ def: "Defines the length of awn." [ICIS:1063, IRRI:SES]
 related_synonym: "AWNLG" []
 related_synonym: "An" []
 related_synonym: "awning" []
-is_a: TO:0000079 ! lemma and palea related traits
+is_a: TO:0002718 ! awn anatomy and morphology trait
 
 [Term]
 id: TO:0000073
@@ -562,8 +562,10 @@ relationship: part_of TO:0000352 ! plant dry weight
 
 [Term]
 id: TO:0000079
-name: lemma and palea related traits
-is_a: TO:0000274 ! floret related trait
+name: lemma and palea anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the lemma and palea and their parts." [GR:pj]
+synonym: "lemma and palea related trait" []
+is_a: TO:0000274 ! floret anatomy and morphology trait
 
 [Term]
 id: TO:0000080
@@ -1038,7 +1040,7 @@ name: apiculus color
 def: "Defines the change in color of  apiculus." [IRRI:SES]
 related_synonym: "APICL" []
 related_synonym: "ApC" []
-is_a: TO:0000079 ! lemma and palea related traits
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 relationship: part_of TO:0000536 ! floret color
 
 [Term]
@@ -1046,13 +1048,13 @@ id: TO:0000141
 name: awn color
 def: "Describes the change in color of the awn." [IRRI:SES]
 related_synonym: "AWNCL" []
-is_a: TO:0000079 ! lemma and palea related traits
+is_a: TO:0002718 ! awn anatomy and morphology trait
 relationship: part_of TO:0000536 ! floret color
 
 [Term]
 id: TO:0000142
 name: secondary branching of inflorescence
-def: "The extent of secondary branching usually determines the shape and compactness of the inflorescence (rice panicle)" [GR:pj, IRRI:SES]
+def: "The extent of secondary branching usually determines the shape and compactness of the inflorescence (such as in rice panicle)." [GR:pj, IRRI:SES]
 related_synonym: "PnBr" []
 related_synonym: "secondary branching of panicle" []
 is_a: TO:0000050 ! inflorescence branching
@@ -1401,7 +1403,7 @@ name: stigma color
 def: "Stigma color is determined from blooming flowers or florets. " [IRRI:SES]
 related_synonym: "STICL" []
 related_synonym: "SgC" []
-is_a: TO:0000223 ! pistil related trait
+is_a: TO:0000223 ! pistil anatomy and morphology trait
 
 [Term]
 id: TO:0000186
@@ -1413,7 +1415,7 @@ id: TO:0000187
 name: anther color
 def: "Variation in color of the anther." [GR:pj]
 related_synonym: "ANTCL" []
-is_a: TO:0000215 ! stamen related trait
+is_a: TO:0000215 ! stamenanatomy and morphology trait
 
 [Term]
 id: TO:0000188
@@ -1576,7 +1578,7 @@ is_a: TO:0000171 ! height related trait
 id: TO:0000208
 name: lemma number
 def: "Number of lemma in the floret." [GR:pj]
-is_a: TO:0000079 ! lemma and palea related traits
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 is_a: TO:0000622 ! flower development trait
 
 [Term]
@@ -1584,7 +1586,7 @@ id: TO:0000209
 name: palea number
 def: "Number of palea in the floret." [GR:pj]
 related_synonym: "PALNB" []
-is_a: TO:0000079 ! lemma and palea related traits
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 is_a: TO:0000622 ! flower development trait
 
 [Term]
@@ -1592,7 +1594,7 @@ id: TO:0000210
 name: anther number
 def: "Variation in the number of anthers in androecium." [GR:pj]
 related_synonym: "ANTNB" []
-is_a: TO:0000215 ! stamen related trait
+is_a: TO:0000215 ! stamenanatomy and morphology trait
 
 [Term]
 id: TO:0000211
@@ -1623,12 +1625,14 @@ id: TO:0000214
 name: anther shape
 def: "Variation in the shape of anthers compared to the normal or reference type." [GR:pj]
 related_synonym: "ANTSHP" []
-is_a: TO:0000215 ! stamen related trait
+is_a: TO:0000215 ! stamenanatomy and morphology trait
 
 [Term]
 id: TO:0000215
-name: stamen related trait
-is_a: TO:0000274 ! floret related trait
+name: stamenanatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the stamen and its parts." [GR:pj]
+synonym: "stamen related trait" []
+is_a: TO:0000274 ! floret anatomy and morphology trait
 is_a: TO:0000499 ! flower anatomy and morphology trait
 
 [Term]
@@ -1686,8 +1690,10 @@ is_a: TO:0000162 ! seed quality
 
 [Term]
 id: TO:0000223
-name: pistil related trait
-is_a: TO:0000274 ! floret related trait
+name: pistil anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the pistil and its parts." [GR:pj]
+synonym: "pistil related trait  " []
+is_a: TO:0000274 ! floret anatomy and morphology trait
 is_a: TO:0000499 ! flower anatomy and morphology trait
 
 [Term]
@@ -1704,7 +1710,7 @@ id: TO:0000225
 name: stamen number
 def: "Number of stamens present in the flower." [GR:pj]
 related_synonym: "STANB" []
-is_a: TO:0000215 ! stamen related trait
+is_a: TO:0000215 ! stamenanatomy and morphology trait
 is_a: TO:0000622 ! flower development trait
 
 [Term]
@@ -1714,8 +1720,8 @@ def: "A measure of either the absence of auricle or the length of auricle neing 
 related_synonym: "AUMIN" []
 exact_synonym: "auricle absence" []
 exact_synonym: "auricle absent" []
-is_a: TO:0000419 ! leaf anatomy and morphology trait
 is_a: TO:0000655 ! leaf development trait
+is_a: TO:0002717 ! auricle morphology and anatomy trait
 
 [Term]
 id: TO:0000227
@@ -1813,7 +1819,7 @@ name: sterile lemma length
 def: "Describes the length of the sterile lemma. The measurement is made on each of the two sterile lemmas." [IRRI:SES]
 related_synonym: "SLmL" []
 related_synonym: "STLEMLG" []
-is_a: TO:0000079 ! lemma and palea related traits
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 
 [Term]
 id: TO:0000241
@@ -1967,9 +1973,9 @@ is_a: TO:0000268 ! inflorescence shape
 [Term]
 id: TO:0000264
 name: lemma and palea color
-def: "At growth stage\: 9\, " [IRRI:SES]
+def: "The color of the lemma and the palea." [IRRI:SES, GR:pj]
 related_synonym: "LmPC" []
-is_a: TO:0000079 ! lemma and palea related traits
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 relationship: part_of TO:0000536 ! floret color
 
 [Term]
@@ -2036,12 +2042,16 @@ is_a: TO:0000261 ! insect damage resistance
 
 [Term]
 id: TO:0000274
-name: floret related trait
+name: floret anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the grass floret and its parts." [GR:pj]
+synonym: "floret related trait" []
 is_a: TO:0000499 ! flower anatomy and morphology trait
 
 [Term]
 id: TO:0000275
-name: perianth related trait
+name: perianth anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the perianth and its parts." [GR:pj]
+synonym: "perianth related trait" []
 is_a: TO:0000499 ! flower anatomy and morphology trait
 
 [Term]
@@ -2197,6 +2207,7 @@ name: auricle color
 def: "The changes in the color of auricle" [IRRI:SES]
 related_synonym: "AC" []
 related_synonym: "AUCL" []
+is_a: TO:0002717 ! auricle morphology and anatomy trait
 relationship: part_of TO:0000326 ! leaf color
 
 [Term]
@@ -2777,7 +2788,7 @@ name: basal leaf sheath color
 def: "The changes in the color of basal leaf sheath color. " [ICIS:1306, IRRI:SES]
 related_synonym: "BALFSCL" []
 related_synonym: "BLSC" []
-relationship: part_of TO:0000326 ! leaf color
+is_a: TO:0002724 ! leaf sheath color
 
 [Term]
 id: TO:0000368
@@ -2796,7 +2807,7 @@ is_a: TO:0000357 ! growth and development trait
 [Term]
 id: TO:0000370
 name: leaf width
-def: "Actual measurements\, in centimeters of the widest portion of the leaf blade." [ICIS:1308, IRRI:SES]
+def: "Actual measurements\, in centimeters of the widest portion of the leaf. To be precise use the children terms leaf lamina width (TO\:0002720) or  'leaf sheath width (TO\:0002721)." [ICIS:1308, IRRI:SES]
 related_synonym: "LFWD" []
 related_synonym: "LW" []
 is_a: TO:0002637 ! leaf size
@@ -2842,6 +2853,7 @@ is_a: TO:0000667 ! cooking or brewing quality
 [Term]
 id: TO:0000375
 name: brown rice ratio
+def: "Determined from grain length and grain width on dehulled unpolished grains/seed." [GR:pj]
 related_synonym: "BRWRRO" []
 is_a: TO:0000162 ! seed quality
 
@@ -3017,7 +3029,7 @@ name: sterile lemma color
 def: "Describes color of the sterile lemma" [IRRI:SES]
 related_synonym: "SLmC" []
 related_synonym: "STLEMCL" []
-is_a: TO:0000079 ! lemma and palea related traits
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 relationship: part_of TO:0000536 ! floret color
 
 [Term]
@@ -3147,7 +3159,7 @@ id: TO:0000417
 name: lemma and palea pubescence
 def: "Describes the extent of pubescence (hairs) on the lemma and palea" [IRRI:SES]
 related_synonym: "LmPb" []
-is_a: TO:0000079 ! lemma and palea related traits
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 
 [Term]
 id: TO:0000418
@@ -3208,7 +3220,7 @@ is_a: TO:0000250 ! vigor related trait
 [Term]
 id: TO:0000426
 name: internode color
-def: "The color on outer surface of the internodes on the culm is recorded." [ICIS:1064, IRRI:SES]
+def: "The color on outer surface of the internodes on the stem is recorded." [ICIS:1064, IRRI:SES]
 related_synonym: "CmlC" []
 related_synonym: "INCL" []
 related_synonym: "culm internode color" []
@@ -3569,7 +3581,7 @@ name: glume opening
 def: "Angle of opening of glumes is measured on each floret\, assessment based on mean angle of glume opening. " [GR:pj, IRRI:SES]
 related_synonym: "glume angle" []
 related_synonym: "opening of glume of male sterile lines" []
-is_a: TO:0000079 ! lemma and palea related traits
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 
 [Term]
 id: TO:0000475
@@ -3942,15 +3954,16 @@ is_a: TO:0000566 ! stomatal frequency
 [Term]
 id: TO:0000531
 name: anther length
-def: "Variation in the length of the anther." [GR:pj]
+def: "Variation in the length of anther." [GR:pj]
 related_synonym: "ANTLG" []
-is_a: TO:0000215 ! stamen related trait
+is_a: TO:0000215 ! stamenanatomy and morphology trait
 
 [Term]
 id: TO:0000532
 name: apiculus hair length
+def: "Describes the length of the apiculus hair." [GR:pj]
 related_synonym: "APIHLG" []
-is_a: TO:0000079 ! lemma and palea related traits
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 
 [Term]
 id: TO:0000534
@@ -3964,7 +3977,7 @@ id: TO:0000536
 name: floret color
 def: "The color of the floret." [GR:pj]
 related_synonym: "FLCL" []
-is_a: TO:0000274 ! floret related trait
+is_a: TO:0000274 ! floret anatomy and morphology trait
 is_a: TO:0000537 ! flower color
 
 [Term]
@@ -4233,19 +4246,19 @@ relationship: part_of TO:0000442 ! plant fresh weight
 [Term]
 id: TO:0000572
 name: petal color
-is_a: TO:0000275 ! perianth related trait
+is_a: TO:0000275 ! perianth anatomy and morphology trait
 relationship: part_of TO:0000537 ! flower color
 
 [Term]
 id: TO:0000573
 name: sepal color
-is_a: TO:0000275 ! perianth related trait
+is_a: TO:0000275 ! perianth anatomy and morphology trait
 relationship: part_of TO:0000537 ! flower color
 
 [Term]
 id: TO:0000574
 name: tepal color
-is_a: TO:0000275 ! perianth related trait
+is_a: TO:0000275 ! perianth anatomy and morphology trait
 relationship: part_of TO:0000537 ! flower color
 
 [Term]
@@ -4534,7 +4547,7 @@ is_a: TO:0000396 ! grain yield
 id: TO:0000614
 name: lemma shape
 def: "A measure of shape of the lemma in a floret." [GR:pj]
-is_a: TO:0000079 ! lemma and palea related traits
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 
 [Term]
 id: TO:0000615
@@ -4781,8 +4794,9 @@ is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 [Term]
 id: TO:0000650
 name: lemma length
+def: "Describes the length of the lemma." [GR:pj]
 related_synonym: "LEMLG" []
-is_a: TO:0000079 ! lemma and palea related traits
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 
 [Term]
 id: TO:0000651
@@ -4958,7 +4972,7 @@ related_synonym: "STYCL" []
 related_synonym: "color of silk" []
 related_synonym: "color of style" []
 related_synonym: "silk color" []
-is_a: TO:0000223 ! pistil related trait
+is_a: TO:0000223 ! pistil anatomy and morphology trait
 
 [Term]
 id: TO:0000677
@@ -5578,25 +5592,25 @@ is_a: TO:0000499 ! flower anatomy and morphology trait
 [Term]
 id: TO:0002601
 name: stamen size
-is_a: TO:0000215 ! stamen related trait
+is_a: TO:0000215 ! stamenanatomy and morphology trait
 is_a: TO:0002600 ! flower organ size
 
 [Term]
 id: TO:0002602
 name: pistil size
-is_a: TO:0000223 ! pistil related trait
+is_a: TO:0000223 ! pistil anatomy and morphology trait
 is_a: TO:0002600 ! flower organ size
 
 [Term]
 id: TO:0002603
 name: petal size
-is_a: TO:0000275 ! perianth related trait
+is_a: TO:0000275 ! perianth anatomy and morphology trait
 is_a: TO:0002600 ! flower organ size
 
 [Term]
 id: TO:0002604
 name: sepal size
-is_a: TO:0000275 ! perianth related trait
+is_a: TO:0000275 ! perianth anatomy and morphology trait
 is_a: TO:0002600 ! flower organ size
 
 [Term]
@@ -5943,7 +5957,7 @@ is_a: TO:0000283 ! biological process related trait
 id: TO:0002659
 name: pistil number
 def: "Variation in the number of pistils in the gynoecium." [GR:pj]
-is_a: TO:0000223 ! pistil related trait
+is_a: TO:0000223 ! pistil anatomy and morphology trait
 is_a: TO:0000622 ! flower development trait
 
 [Term]
@@ -6341,6 +6355,77 @@ def: "Trait(s) associated with phenotypes observed for abnormal development of c
 narrow_synonym: "chloroplast biogenesis trait" []
 narrow_synonym: "chloroplast structure trait" []
 is_a: TO:0002714 ! plastid development trait
+
+[Term]
+id: TO:0002716
+name: auricle pubescence
+def: "Extent of pubescence  (presence of hairs)  on the auricle." [GR:pj]
+is_a: TO:0002717 ! auricle morphology and anatomy trait
+
+[Term]
+id: TO:0002717
+name: auricle morphology and anatomy trait
+def: "Traits associated with changes in the anatomy or structure of the auricle." [GR:pj]
+is_a: TO:0000419 ! leaf anatomy and morphology trait
+
+[Term]
+id: TO:0002718
+name: awn anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the awn." [GR:pj]
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
+
+[Term]
+id: TO:0002719
+name: awn thickness
+def: "Thickness of the awn measured at a given distance from the apiculus." [GR:pj]
+is_a: TO:0002718 ! awn anatomy and morphology trait
+
+[Term]
+id: TO:0002720
+name: leaf lamina width
+def: "Actual measurements\, in centimeters of the widest portion of the leaf lamina." [GR:pj]
+is_a: TO:0000370 ! leaf width
+
+[Term]
+id: TO:0002721
+name: leaf sheath width
+def: "Actual measurements\, in centimeters of the widest portion of the leaf sheath in a grass plant." [GR:pj]
+is_a: TO:0000370 ! leaf width
+
+[Term]
+id: TO:0002722
+name: leaf pubescence
+def: "Extent of pubescence  (presence of hairs)  on the leaf surface." [GR:pj]
+is_a: TO:0000419 ! leaf anatomy and morphology trait
+
+[Term]
+id: TO:0002723
+name: leaf lamina margin pubescence
+def: "Extent of pubescence  (presence of hairs)  on the leaf blade margin." [GR:pj]
+is_a: TO:0002722 ! leaf pubescence
+
+[Term]
+id: TO:0002724
+name: leaf sheath color
+def: "Color of the leaf sheath. " [GR:pj]
+is_a: TO:0000326 ! leaf color
+
+[Term]
+id: TO:0002725
+name: complete lifecycle time
+is_a: TO:0000357 ! growth and development trait
+
+[Term]
+id: TO:0002726
+name: sterile lemma shape
+def: "Describes the shape of the sterile lemma." [GR:pj]
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
+
+[Term]
+id: TO:0002727
+name: sterile lemma width
+def: "Describes the width of the sterile lemma. Measured in the widest portion of the sterile lemma." [GR:pj]
+is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 
 [Term]
 id: TO:0005001
