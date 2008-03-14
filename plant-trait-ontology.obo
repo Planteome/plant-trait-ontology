@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.53 $
-date: 13:03:2008 10:43
+version: $Revision: 1.54 $
+date: 14:03:2008 15:47
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -916,7 +916,7 @@ is_a: TO:0000120 ! percent root mass density
 [Term]
 id: TO:0000124
 name: flag leaf angle
-def: "Leaf angle is measured near the collar as the angle of attachment between the flag leaf blade and the main inflorescence axis in grass plants." [ICIS:1065, IRRI:SES]
+def: "In grasses the flag leaf angle is measured near the collar as the angle of attachment between the flag leaf blade and the main inflorescence axis in grass plants." [ICIS:1065, IRRI:SES]
 related_synonym: "FLA" []
 is_a: TO:0000206 ! leaf angle
 
@@ -1223,7 +1223,7 @@ is_a: TO:0000168 ! abiotic stress trait
 id: TO:0000162
 name: seed quality
 alt_id: TO:0000588
-def: "The quality assessment of the seed commonly called as kernel or grain in case of cereals\, as well as those of the dehulled grains.  The quality can be associated with the commercial value either directly or indirectly." [GR:pj]
+def: "The quality assessment of the seed commonly called as kernel or grain in case of cereals\, as well as those of the dehulled grains.  Often associated with the commercial value either directly or indirectly." [GR:pj]
 related_synonym: "grain quality" []
 is_a: TO:0000597 ! quality trait
 
@@ -1377,7 +1377,7 @@ is_a: TO:0000657 ! spikelet anatomy and morphology trait
 id: TO:0000181
 name: seed weight
 def: "Average weight of seeds obtained from a plant\, representing the overall yields or produce from the field." [GR:pj, ICIS:1058]
-is_a: TO:0000396 ! grain yield
+is_a: TO:0000371 ! yield trait
 
 [Term]
 id: TO:0000182
@@ -1441,6 +1441,7 @@ def: "The color of the seed coat" [GR:pj, IRRI:SES]
 related_synonym: "SCC" []
 related_synonym: "SDCCL" []
 related_synonym: "bran color" []
+is_a: TO:0000162 ! seed quality
 is_a: TO:0000184 ! seed anatomy and morphology trait
 relationship: part_of TO:0000486 ! seed color
 
@@ -2150,7 +2151,7 @@ name: brown rice shape
 def: "Shape of the brown rice. Measure after harvesting\, cleaning\, and dehulling." [ICIS:1258, IRRI:SES]
 related_synonym: "BRWSHP" []
 related_synonym: "BrS" []
-is_a: TO:0000484 ! seed shape
+is_a: TO:0002730 ! grain shape
 
 [Term]
 id: TO:0000288
@@ -2815,7 +2816,7 @@ is_a: TO:0002637 ! leaf size
 [Term]
 id: TO:0000371
 name: yield trait
-def: "Traits that contribute directly or indirectly to the yield or the produce from a plant." [GR:pj]
+def: "Traits that contribute directly or indirectly to the yield or the produce from a plant. IT may be determined in terms of weight or the number of grains/seed." [GR:pj]
 related_synonym: "YLD" []
 is_a: TO:0000387 ! trait ontology
 
@@ -2853,9 +2854,10 @@ is_a: TO:0000667 ! cooking or brewing quality
 [Term]
 id: TO:0000375
 name: brown rice ratio
-def: "Determined from grain length and grain width on dehulled unpolished grains/seed." [GR:pj]
+def: "Determined from grain length and grain width on dehulled unpolished rice grain." [GR:pj]
+synonym: "brown rice length to width ratio" []
 related_synonym: "BRWRRO" []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0002731 ! grain length to width ratio
 
 [Term]
 id: TO:0000376
@@ -2928,8 +2930,7 @@ id: TO:0000385
 name: grain color
 def: "Color of the dehulled\, milled grain\, which does not have pericarp." [GR:pj]
 related_synonym: "GRCL" []
-is_a: TO:0000162 ! seed quality
-relationship: part_of TO:0000486 ! seed color
+is_a: TO:0002617 ! fruit color
 
 [Term]
 id: TO:0000386
@@ -2972,6 +2973,7 @@ id: TO:0000391
 name: seed size
 def: "seed size is determined by  its length to width ratio" [GR:pj, ICIS:1302]
 synonym: "kernel size" []
+is_a: TO:0000162 ! seed quality
 is_a: TO:0000653 ! seed development trait
 
 [Term]
@@ -3006,8 +3008,7 @@ id: TO:0000397
 name: grain size
 def: "Size of the dehulled\, milled grain without pericarp." [GR:pj]
 related_synonym: "GRSZ" []
-is_a: TO:0000162 ! seed quality
-relationship: part_of TO:0000391 ! seed size
+is_a: TO:0002625 ! fruit size
 
 [Term]
 id: TO:0000398
@@ -3017,9 +3018,9 @@ is_obsolete: true
 [Term]
 id: TO:0000399
 name: grain thickness
-def: "Thickness of the dehulled\, milled grain without pericarp." [GR:pj]
+def: "Thickness of the dehulled grain with pericarp." [GR:pj]
 related_synonym: "GRTH" []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0002728 ! fruit quality trait
 relationship: part_of TO:0000304 ! seed thickness
 relationship: part_of TO:0000397 ! grain size
 
@@ -3042,9 +3043,9 @@ is_a: TO:0000482 ! chemical stress sensitivity
 [Term]
 id: TO:0000402
 name: grain width
-def: "Width of the dehulled\, milled grain without pericarp." [GR:pj]
+def: "Width of the dehulled grain with pericarp." [GR:pj]
 related_synonym: "GRWD" []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0002627 ! fruit width
 relationship: part_of TO:0000149 ! seed width
 relationship: part_of TO:0000397 ! grain size
 
@@ -3358,7 +3359,7 @@ related_synonym: "GRNB" []
 related_synonym: "SDNB" []
 related_synonym: "grain number" []
 related_synonym: "kernel number" []
-is_a: TO:0000396 ! grain yield
+is_a: TO:0000371 ! yield trait
 
 [Term]
 id: TO:0000446
@@ -3389,8 +3390,9 @@ is_a: TO:0000445 ! seed number
 [Term]
 id: TO:0000449
 name: grain yield per plant
+def: "Average weight of dehulled grains per plant." [GR:pj]
 related_synonym: "GRYLDPPL" []
-is_a: TO:0000396 ! grain yield
+is_a: TO:0000371 ! yield trait
 
 [Term]
 id: TO:0000450
@@ -3398,14 +3400,13 @@ name: grain yield per panicle
 def: "Number of filled spikelets per panicle." [GR:pj]
 synonym: "grains per panicle" []
 related_synonym: "GRYLDPPN" []
-is_a: TO:0000396 ! grain yield
+is_a: TO:0000371 ! yield trait
 
 [Term]
 id: TO:0000451
 name: large vascular bundle number to spikelet number ratio
 def: "A ratio of number of large vascular bundles present in the spikelets to the number of spikelets in a grass inflorescence." [GR:pj]
 related_synonym: "LVBNBSPKNBRO" []
-is_a: TO:0000371 ! yield trait
 is_a: TO:0000456 ! spikelet number
 is_a: TO:0000472 ! vascular bundle number
 
@@ -3569,11 +3570,11 @@ is_a: TO:0000470 ! vascular tissue related trait
 [Term]
 id: TO:0000473
 name: seed shattering
-def: "Measurement of extent of grain shattering\, which depends on development of abscission zone." [GR:pj]
+def: "Measurement of extent of grain shattering\, which depends on development of abscission zone. This trait often refers to shattering or the premature or ease of shedding of the grass fruit called caryopsis from the inflorescence." [GR:pj]
 related_synonym: "GRSH" []
 related_synonym: "SDSH" []
 related_synonym: "grain shattering" []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0002729 ! fruit abscission quality trait
 
 [Term]
 id: TO:0000474
@@ -3646,12 +3647,13 @@ name: germinability at low temperature
 def: "Measure of the seed's germination ability at sub-permissive temperature levels." [GR:pj]
 related_synonym: "GERMABITMP" []
 related_synonym: "germination ability at low temperature" []
+is_a: TO:0000162 ! seed quality
 is_a: TO:0000653 ! seed development trait
 
 [Term]
 id: TO:0000484
 name: seed shape
-def: "Defines shape of the seed or fruit caryopsis." [GR:pj]
+def: "Defines shape of the seed." [GR:pj]
 related_synonym: "SDSHP" []
 is_a: TO:0000162 ! seed quality
 is_a: TO:0000184 ! seed anatomy and morphology trait
@@ -3665,7 +3667,7 @@ is_a: TO:0000392 ! sterility or fertility trait
 [Term]
 id: TO:0000486
 name: seed color
-def: "The color of the seed or the fruit caryopsis in cereals\, which has not been dehulled." [GR:pj]
+def: "The color of the seed." [GR:pj]
 related_synonym: "SDCL" []
 is_a: TO:0000162 ! seed quality
 is_a: TO:0000184 ! seed anatomy and morphology trait
@@ -4006,7 +4008,6 @@ id: TO:0000540
 name: leaf area
 def: "Measurement of the total area of a leaf." [GR:pj]
 related_synonym: "LFAR" []
-is_a: TO:0000371 ! yield trait
 is_a: TO:0000419 ! leaf anatomy and morphology trait
 
 [Term]
@@ -4359,7 +4360,7 @@ id: TO:0000590
 name: dehulled grain weight
 def: "Weight of the dehulled grains." [GR:pj]
 related_synonym: "DHULGRWT" []
-relationship: part_of TO:0000589 ! seed weight (sensu Poaceae)
+is_a: TO:0000371 ! yield trait
 
 [Term]
 id: TO:0000591
@@ -4406,7 +4407,7 @@ is_obsolete: true
 [Term]
 id: TO:0000597
 name: quality trait
-def: "Any trait contributing to the improvement of overall improvement of the product economical and or commercial importance." [GR:pj]
+def: "Any trait contributing to the overall improvement of the product. Often associated to economical and or commercial importance." [GR:pj]
 is_a: TO:0000387 ! trait ontology
 
 [Term]
@@ -4540,8 +4541,8 @@ related_synonym: "GROATPCENT" []
 related_synonym: "caryopsis percentage" []
 related_synonym: "groat proportion" []
 related_synonym: "hull percentage" []
-is_a: TO:0000162 ! seed quality
-is_a: TO:0000396 ! grain yield
+is_a: TO:0000371 ! yield trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0000614
@@ -4896,7 +4897,7 @@ is_a: TO:0000587 ! endosperm quality
 id: TO:0000666
 name: brown rice yield
 related_synonym: "BRWRYLD" []
-is_a: TO:0000396 ! grain yield
+is_a: TO:0000371 ! yield trait
 
 [Term]
 id: TO:0000667
@@ -5026,14 +5027,15 @@ name: grassy flavor
 def: "An assay to test for aroma and flavor reminiscent of freshly cut grass." [GR:pj]
 related_synonym: "GRASSYFLVOR" []
 related_synonym: "grassy flavour" []
-is_a: TO:0000597 ! quality trait
+is_a: TO:0002694 ! flavor trait
 
 [Term]
 id: TO:0000685
-name: tenderness
+name: fruit tenderness
 def: "An assay for the soft and juicy texture." [GR:pj]
+synonym: "FRTENDER" []
 related_synonym: "TENDER" []
-is_a: TO:0000597 ! quality trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0000686
@@ -5041,7 +5043,7 @@ name: juiciness
 def: "An assay for a juicy appetizingness." [GR:pj]
 synonym: "succulence" []
 related_synonym: "JUICE" []
-is_a: TO:0000597 ! quality trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0000687
@@ -5061,7 +5063,7 @@ id: TO:0000689
 name: grain tenderness
 related_synonym: "GRTENDER" []
 related_synonym: "kernel tenderness" []
-is_a: TO:0000685 ! tenderness
+is_a: TO:0000685 ! fruit tenderness
 
 [Term]
 id: TO:0000690
@@ -5095,7 +5097,7 @@ id: TO:0000694
 name: crispness
 def: "An assay of firmness and freshness." [GR:pj]
 related_synonym: "CRISP" []
-is_a: TO:0000597 ! quality trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0000695
@@ -5138,10 +5140,11 @@ is_a: TO:0000599 ! enzyme activity
 
 [Term]
 id: TO:0000700
-name: sweetness
+name: fruit sweetness
 def: "The quality of having the pleasant taste characteristic of sugar." [GR:pj]
+synonym: "FRSWEET" []
 related_synonym: "SWEET" []
-is_a: TO:0000597 ! quality trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0000701
@@ -5348,6 +5351,7 @@ is_a: TO:0000349 ! physiological process related trait
 [Term]
 id: TO:0000734
 name: grain length
+def: "length of the dehulled grain with pericarp." [GR:pj]
 relationship: part_of TO:0000146 ! seed length
 relationship: part_of TO:0000397 ! grain size
 
@@ -5652,17 +5656,20 @@ is_a: TO:0002614 ! floral organ length
 [Term]
 id: TO:0002611
 name: homeotic development trait
+def: "A developmental trait resulting development of increased\, decreased or new organs and organ parts due to a mutation that causes one member of a repetitive series to assume the identity of another member \, for example\, the transformation of sepals into petals." [GR:pj]
 synonym: "homeotic mutation" []
 is_a: TO:0000357 ! growth and development trait
 
 [Term]
 id: TO:0002612
 name: vegetative homeotic development trait
+def: "A developmental trait resulting development of increased\, decreased or new vegetative organs and organ parts due to a mutation that causes one member of a repetitive series to assume the identity of another member \, for example\, the transformation of leaves into scales." [GR:pj]
 is_a: TO:0002611 ! homeotic development trait
 
 [Term]
 id: TO:0002613
 name: reproductive homeotic development trait
+def: "A developmental trait resulting development of increased\, decreased or new reproductive organs and organ parts due to a mutation that causes one member of a repetitive series to assume the identity of another member \, for example\, the transformation of sepals into petals." [GR:pj]
 is_a: TO:0002611 ! homeotic development trait
 
 [Term]
@@ -5688,7 +5695,7 @@ is_a: TO:0000622 ! flower development trait
 id: TO:0002617
 name: fruit color
 def: "An assay for the color of the fruit and its parts." [GR:pj]
-is_a: TO:0000597 ! quality trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0002618
@@ -5715,12 +5722,12 @@ id: TO:0002622
 name: locular tissue trait
 def: "The traits observed for the locular tissue present around the seeds as found in Solanaceae." [SGN:nm]
 comment: The values observed in tomato and pepper fruits may be defined differently.
-is_a: TO:0000597 ! quality trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0002623
 name: pericarp texture
-is_a: TO:0000597 ! quality trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0002624
@@ -5731,27 +5738,29 @@ is_a: TO:0002623 ! pericarp texture
 id: TO:0002625
 name: fruit size
 def: "An assay to determine the variation in the size of the fruit." [GR:pj]
-is_a: TO:0000597 ! quality trait
+synonym: "FRSZ" []
 is_a: TO:0002629 ! fruit anatomy and morphology trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0002626
 name: fruit length
 def: "An assay to determine the variation in the length of the fruit." [GR:pj]
-is_a: TO:0002625 ! fruit size
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0002627
 name: fruit width
 def: "An assay to determine the variation in the width of the fruit." [GR:pj]
-is_a: TO:0002625 ! fruit size
+synonym: "FRWD" []
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0002628
 name: fruit shape
 def: "An assay to determine the variation in the shape of the fruit." [GR:pj]
-is_a: TO:0000597 ! quality trait
 is_a: TO:0002629 ! fruit anatomy and morphology trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0002629
@@ -5777,8 +5786,8 @@ id: TO:0002632
 name: fruit abscission zone size
 def: "An assay to determine the variation in the size of the fruit abscission zone." [GR:pj]
 synonym: "size stem scar size" []
-is_a: TO:0000597 ! quality trait
 is_a: TO:0002629 ! fruit anatomy and morphology trait
+is_a: TO:0002729 ! fruit abscission quality trait
 
 [Term]
 id: TO:0002633
@@ -5786,13 +5795,13 @@ name: fruit ripening
 def: "An assay to determin the variation in the extent of fruit ripening." [GR:pj]
 is_a: TO:0000349 ! physiological process related trait
 is_a: TO:0000357 ! growth and development trait
-is_a: TO:0000597 ! quality trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0002634
 name: fruit firmness
 def: "In addition to the fruit color\, firmness is the best measurement of ripeness. It is assayed as the force necessary to break the flesh tissues\nand depends on the different growth stages during the ripening process." [BR:pj]
-is_a: TO:0000597 ! quality trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0002635
@@ -5864,7 +5873,7 @@ name: malt tenderness
 def: "Percentage of soft malt\, measured from micro malting 50g of barley." [PMID:12677407, GrainGenes_trait:Malt tenderness]
 synonym: "MALTTENDER" []
 is_a: TO:0000667 ! cooking or brewing quality
-is_a: TO:0000685 ! tenderness
+is_a: TO:0000685 ! fruit tenderness
 
 [Term]
 id: TO:0002646
@@ -6215,7 +6224,7 @@ id: TO:0002694
 name: flavor trait
 def: "An assay to detrmine the sensory impression of a food product or other substance by the chemical senses of taste and smell." [GR:pj]
 is_a: TO:0000281 ! metabolite content related trait
-is_a: TO:0000597 ! quality trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0002695
@@ -6412,7 +6421,9 @@ is_a: TO:0000326 ! leaf color
 
 [Term]
 id: TO:0002725
-name: complete lifecycle time
+name: lifecycle habit
+def: "Determined for type of life cycle being annual\, binneal\, perennial etc." [GR:pj]
+synonym: "life cycle habit" []
 is_a: TO:0000357 ! growth and development trait
 
 [Term]
@@ -6426,6 +6437,45 @@ id: TO:0002727
 name: sterile lemma width
 def: "Describes the width of the sterile lemma. Measured in the widest portion of the sterile lemma." [GR:pj]
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
+
+[Term]
+id: TO:0002728
+name: fruit quality trait
+def: "Any trait contributing to overall improvement of the fruit. Often associated to economical and or commercial importance." [GR:pj]
+is_a: TO:0000597 ! quality trait
+
+[Term]
+id: TO:0002729
+name: fruit abscission quality trait
+def: "Traits associated with the fruit abscission zone." [GR:pj]
+is_a: TO:0002728 ! fruit quality trait
+
+[Term]
+id: TO:0002730
+name: grain shape
+def: "An assay to determine the variation in the shape of the dehulled grain." [GR:pj]
+synonym: "GRSHP" []
+is_a: TO:0002628 ! fruit shape
+
+[Term]
+id: TO:0002731
+name: grain length to width ratio
+def: "Determined from grain length and grain width on dehulled grain." [GR:pj]
+is_a: TO:0000397 ! grain size
+
+[Term]
+id: TO:0002732
+name: flag leaf angle: early stage
+def: "In grasses the flag leaf angle is measured near the collar as the angle of attachment between the flag leaf blade and the main inflorescence axis in grass plants. Observed around anthesis stage." [GR:pj]
+synonym: "flag leaf attitude\: early stage" []
+is_a: TO:0000124 ! flag leaf angle
+
+[Term]
+id: TO:0002733
+name: flag leaf angle: late stage
+def: "In grasses the flag leaf angle is measured near the collar as the angle of attachment between the flag leaf blade and the main inflorescence axis in grass plants. Observed at maturity stage." [GR:pj]
+synonym: "flag leaf attitude\: late stage" []
+is_a: TO:0000124 ! flag leaf angle
 
 [Term]
 id: TO:0005001
