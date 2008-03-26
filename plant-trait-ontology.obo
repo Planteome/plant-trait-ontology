@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.54 $
-date: 14:03:2008 15:47
+version: $Revision: 1.55 $
+date: 26:03:2008 14:54
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -309,7 +309,7 @@ def: "Trait is monitored by counting number of flowers or florets that have comp
 comment: Scale\,  (%)\, Stigma exsertion; 1- Above 70\, Well exserted; 3- 41-70\, Moderately well exserted; 5- 21-40\, Just exserted; 7- 11-20\, Partly exserted; 9- 0-10\, Enclosed.  Evaluated at growth stage\:6 and 7 in rice
 related_synonym: "STIEX" []
 related_synonym: "stigma exsertion of male sterile lines" []
-is_a: TO:0000223 ! pistil anatomy and morphology trait
+is_a: TO:0006012 ! carpel anatomy and morphology trait
 
 [Term]
 id: TO:0000045
@@ -347,6 +347,7 @@ is_a: TO:0000310 ! self-incompatibility
 id: TO:0000050
 name: inflorescence branching
 alt_id: TO:0000263
+def: "The extent of branching usually sets the tone for shape and compactness of the inflorescence." [GR:pj]
 related_synonym: "panicle branching" []
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 is_a: TO:0000621 ! inflorescence development trait
@@ -715,11 +716,12 @@ is_a: TO:0000654 ! shoot development trait
 [Term]
 id: TO:0000097
 name: amylopectin content
-def: "Measures the amylopectin content in a plant or plant part. It is a polysaccharide present in starch. Amylopectin is a polymer of alpha(1\,4)-linked glucose units\, as is amylose (see amylose). Unlike amylose\, amylopectin contains branches of 2430 glucose units connected to the main chain by an alpha(1\,6) linkage." [ISBN:198506732]
+def: "Amount of amylopectin present in the plant or plant part. " [ISBN:198506732]
+comment: It is a polysaccharide present in starch. Amylopectin is a polymer of alpha(1\,4)-linked glucose units\, as is amylose (see amylose). Unlike amylose\, amylopectin contains branches of 2430 glucose units connected to the main chain by an alpha(1\,6) linkage.
 related_synonym: "AMYPCTCN" []
-is_a: TO:0000333 ! sugar content
 is_a: TO:0000489 ! carbohydrate composition related trait
 is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0006007 ! polysaccharide content
 
 [Term]
 id: TO:0000098
@@ -1403,7 +1405,7 @@ name: stigma color
 def: "Stigma color is determined from blooming flowers or florets. " [IRRI:SES]
 related_synonym: "STICL" []
 related_synonym: "SgC" []
-is_a: TO:0000223 ! pistil anatomy and morphology trait
+is_a: TO:0006012 ! carpel anatomy and morphology trait
 
 [Term]
 id: TO:0000186
@@ -1481,12 +1483,13 @@ is_a: TO:0000620 ! embryo development trait
 [Term]
 id: TO:0000196
 name: amylose content
-def: "Amylose content in actual percentage. It is a water-dispersible component of starch and is a polymer of alpha(1\,4)-linked glucose units." [ICIS:1251, IRRI:SES, ISBN:198506732]
+def: "Amount of amylose present in the plant or plant part.  " [ICIS:1251, IRRI:SES, ISBN:198506732]
+comment: It is a water-dispersible component of starch and is a polymer of alpha(1\,4)-linked glucose units.
 related_synonym: "AMYCN" []
 related_synonym: "Amy" []
-is_a: TO:0000333 ! sugar content
 is_a: TO:0000489 ! carbohydrate composition related trait
 is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0006007 ! polysaccharide content
 
 [Term]
 id: TO:0000197
@@ -1578,17 +1581,21 @@ is_a: TO:0000171 ! height related trait
 [Term]
 id: TO:0000208
 name: lemma number
-def: "Number of lemma in the floret." [GR:pj]
+def: "Number of lemma in the grass flower (floret)." [GR:pj]
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
-is_a: TO:0000622 ! flower development trait
+is_a: TO:0002613 ! reproductive homeotic development trait
+is_a: TO:0006026 ! floral bract number
+is_a: TO:0006038 ! floral organ number
 
 [Term]
 id: TO:0000209
 name: palea number
-def: "Number of palea in the floret." [GR:pj]
+def: "Number of palea in the grass flower (floret)." [GR:pj]
 related_synonym: "PALNB" []
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
-is_a: TO:0000622 ! flower development trait
+is_a: TO:0002613 ! reproductive homeotic development trait
+is_a: TO:0006026 ! floral bract number
+is_a: TO:0006038 ! floral organ number
 
 [Term]
 id: TO:0000210
@@ -1596,6 +1603,7 @@ name: anther number
 def: "Variation in the number of anthers in androecium." [GR:pj]
 related_synonym: "ANTNB" []
 is_a: TO:0000215 ! stamenanatomy and morphology trait
+is_a: TO:0006038 ! floral organ number
 
 [Term]
 id: TO:0000211
@@ -1633,7 +1641,6 @@ id: TO:0000215
 name: stamenanatomy and morphology trait
 def: "Traits associated with changes in the anatomy or structure of the stamen and its parts." [GR:pj]
 synonym: "stamen related trait" []
-is_a: TO:0000274 ! floret anatomy and morphology trait
 is_a: TO:0000499 ! flower anatomy and morphology trait
 
 [Term]
@@ -1694,7 +1701,6 @@ id: TO:0000223
 name: pistil anatomy and morphology trait
 def: "Traits associated with changes in the anatomy or structure of the pistil and its parts." [GR:pj]
 synonym: "pistil related trait  " []
-is_a: TO:0000274 ! floret anatomy and morphology trait
 is_a: TO:0000499 ! flower anatomy and morphology trait
 
 [Term]
@@ -1712,7 +1718,9 @@ name: stamen number
 def: "Number of stamens present in the flower." [GR:pj]
 related_synonym: "STANB" []
 is_a: TO:0000215 ! stamenanatomy and morphology trait
-is_a: TO:0000622 ! flower development trait
+is_a: TO:0002613 ! reproductive homeotic development trait
+is_a: TO:0006022 ! floral organ development trait
+is_a: TO:0006038 ! floral organ number
 
 [Term]
 id: TO:0000226
@@ -1969,6 +1977,7 @@ is_a: TO:0000054 ! animal damage resistance
 [Term]
 id: TO:0000262
 name: panicle shape
+def: "Shape of the panicle inflorescence" [GR:pj]
 is_a: TO:0000268 ! inflorescence shape
 
 [Term]
@@ -2004,6 +2013,7 @@ is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 [Term]
 id: TO:0000268
 name: inflorescence shape
+def: "Shape of the inflorescence" [GR:pj]
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
 [Term]
@@ -2026,7 +2036,7 @@ is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 [Term]
 id: TO:0000271
 name: inflorescence length
-is_a: TO:0000268 ! inflorescence shape
+is_a: TO:0006031 ! inflorescence size
 
 [Term]
 id: TO:0000272
@@ -2183,7 +2193,7 @@ is_a: TO:0000674 ! phytochemical compound content
 [Term]
 id: TO:0000291
 name: carbohydrate content
-def: "Measures the carbohydrate content in a plant or plant part. " [GR:pj]
+def: "Trait asssociated with the carbohydrate content\, concentration and/or yeild from the plant or plant part.  " [GR:pj]
 related_synonym: "CARBCN" []
 is_a: TO:0000281 ! metabolite content related trait
 
@@ -2229,10 +2239,12 @@ is_a: TO:0000250 ! vigor related trait
 [Term]
 id: TO:0000297
 name: glucosamine content
-def: "Measures the glucosamine content. It is one of the most abundant natural polysaccharide. " [GR:pj, ISBN:198506732]
+def: "Amount of glucosamine present in the plant or plant part. " [GR:pj, ISBN:198506732]
+comment: It is one of the most abundant natural polysaccharide.
 related_synonym: "2-amino-2-deoxyglucopyranose content" []
 related_synonym: "GLUCNCN" []
-is_a: TO:0000333 ! sugar content
+is_a: TO:0006003 ! oligosaccharide content
+is_a: TO:0006008 ! carbohydrate derivative content
 
 [Term]
 id: TO:0000298
@@ -2257,11 +2269,12 @@ relationship: part_of TO:0000326 ! leaf color
 [Term]
 id: TO:0000300
 name: glucose content
-def: "Measures the content of glucose in a plant or a plant part. It is a common monosaccharide that is a component of disaccharides (sucrose\, lactose\, and maltose) and various complex carbohydrates" [GR:pj]
+def: "Amount of glucose present in the plant or plant part." [GR:pj]
+comment: It is a common monosaccharide that is a component of oligo/disaccharides (sucrose\, lactose\, and maltose) and various complex carbohydrates
 related_synonym: "D-glucose content" []
 related_synonym: "GLUCCN" []
 related_synonym: "dextrose content" []
-is_a: TO:0000333 ! sugar content
+is_a: TO:0000307 ! hexose content
 
 [Term]
 id: TO:0000301
@@ -2312,9 +2325,10 @@ is_a: TO:0000043 ! root anatomy and morphology trait
 [Term]
 id: TO:0000307
 name: hexose content
-def: "Measures the hexose content in a plant or plant part. Hexose is any aldose having a chain of six carbon atoms in a molecule." [ISBN:198506732]
+def: "Amount of hexose present in the plant or plant part. " [ISBN:198506732]
+comment: Hexose is any aldose having a chain of six carbon atoms in a molecule.
 related_synonym: "HEXCN" []
-is_a: TO:0000333 ! sugar content
+is_a: TO:0006006 ! monosaccharide content
 
 [Term]
 id: TO:0000308
@@ -2404,6 +2418,8 @@ is_a: TO:0000261 ! insect damage resistance
 [Term]
 id: TO:0000318
 name: reducing sugar content
+def: "Amount of reducing sugar present in the plant or plant part." [GR:pj]
+comment: A reducing sugar is any sugar which in basic solution forms contain aldehyde or ketone groups that are oxidised to carboxylic acids.
 related_synonym: "REDSUGCN" []
 is_a: TO:0000333 ! sugar content
 
@@ -2481,7 +2497,7 @@ name: sucrose content
 def: "The amount of sucrose present in the plant or the plant part." [GR:pj]
 related_synonym: "SUCROSECN" []
 related_synonym: "saccharose content" []
-is_a: TO:0000333 ! sugar content
+is_a: TO:0006007 ! polysaccharide content
 
 [Term]
 id: TO:0000329
@@ -2825,8 +2841,7 @@ id: TO:0000372
 name: amylose to amylopectin ratio
 def: "Ratio of amount of amylose to amylopectin content." [GR:pj]
 related_synonym: "AMYAMYPCTRO" []
-is_a: TO:0000097 ! amylopectin content
-is_a: TO:0000196 ! amylose content
+is_a: TO:0000291 ! carbohydrate content
 
 [Term]
 id: TO:0000373
@@ -3446,12 +3461,13 @@ is_a: TO:0000445 ! seed number
 [Term]
 id: TO:0000456
 name: spikelet number
-def: "Average number of spikelets in one or more inflorescence (e.g. rice panicle) found ina  plant or on all plants of a study." [GR:pj]
+def: "Average number of spikelets in one or more inflorescence (e.g. rice panicle) found in a plant or on all plants of a study." [GR:pj]
 synonym: "number of spikelets per panicle" []
 synonym: "spikelet number per panicle" []
 related_synonym: "SPKNB" []
 is_a: TO:0000371 ! yield trait
 is_a: TO:0000621 ! inflorescence development trait
+is_a: TO:0000657 ! spikelet anatomy and morphology trait
 
 [Term]
 id: TO:0000457
@@ -3908,7 +3924,7 @@ is_a: TO:0000349 ! physiological process related trait
 id: TO:0000524
 name: submergence tolerance
 related_synonym: "SUBTL" []
-is_a: TO:0000114 ! flooding related trait
+is_a: TO:0000286 ! submergence sensitivity
 
 [Term]
 id: TO:0000525
@@ -4247,18 +4263,21 @@ relationship: part_of TO:0000442 ! plant fresh weight
 [Term]
 id: TO:0000572
 name: petal color
+def: "Color of the petal." [GR:pj]
 is_a: TO:0000275 ! perianth anatomy and morphology trait
 relationship: part_of TO:0000537 ! flower color
 
 [Term]
 id: TO:0000573
 name: sepal color
+def: "Color of sepals in a flower." [GR:pj]
 is_a: TO:0000275 ! perianth anatomy and morphology trait
 relationship: part_of TO:0000537 ! flower color
 
 [Term]
 id: TO:0000574
 name: tepal color
+def: "Color of tepals in a flower." [GR:pj]
 is_a: TO:0000275 ! perianth anatomy and morphology trait
 relationship: part_of TO:0000537 ! flower color
 
@@ -4271,7 +4290,7 @@ is_a: TO:0000184 ! seed anatomy and morphology trait
 id: TO:0000576
 name: stem length
 alt_id: TO:0000309
-def: "Measure from soil surface to highest point on stem." [GR:pj37]
+def: "Length of the stem. Often measured from soil surface to highest point on stem." [GR:pj37]
 synonym: "culm height" []
 synonym: "stem height" []
 related_synonym: "CULMLG" []
@@ -4312,6 +4331,7 @@ is_a: TO:0000106 ! male sterility type
 [Term]
 id: TO:0000581
 name: inflorescence color
+def: "Color of the inflorescence." [GR:pj]
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
 [Term]
@@ -4603,7 +4623,7 @@ is_a: TO:0000357 ! growth and development trait
 id: TO:0000621
 name: inflorescence development trait
 def: "Traits associated with observing effects on the development of the inflorescence and its parts." [GR:pj]
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000654 ! shoot development trait
 
 [Term]
 id: TO:0000622
@@ -4712,7 +4732,7 @@ id: TO:0000637
 name: inflorescence width
 synonym: "panicle width" []
 related_synonym: "INFLWD" []
-is_a: TO:0000268 ! inflorescence shape
+is_a: TO:0006031 ! inflorescence size
 
 [Term]
 id: TO:0000638
@@ -4738,6 +4758,7 @@ is_a: TO:0000084 ! root number
 [Term]
 id: TO:0000641
 name: primary branch length
+def: "Length of the primary barnch of inflorescence." [GR:pj]
 related_synonym: "PBRLG" []
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
@@ -4751,6 +4772,7 @@ is_a: TO:0002637 ! leaf size
 [Term]
 id: TO:0000643
 name: bristle length
+def: "Length of the bristles found in inflorescence." [GR:pj]
 related_synonym: "BRLG" []
 is_a: TO:0000050 ! inflorescence branching
 
@@ -4789,6 +4811,7 @@ is_a: TO:0000102 ! phosphorus sensitivity
 [Term]
 id: TO:0000649
 name: peduncle width
+def: "Width of the peduncle." [GR:pj]
 related_synonym: "PDCWD" []
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
@@ -4840,6 +4863,7 @@ is_a: TO:0000357 ! growth and development trait
 [Term]
 id: TO:0000657
 name: spikelet anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the spikelet and its parts." [GR:pj]
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
 [Term]
@@ -4973,7 +4997,7 @@ related_synonym: "STYCL" []
 related_synonym: "color of silk" []
 related_synonym: "color of style" []
 related_synonym: "silk color" []
-is_a: TO:0000223 ! pistil anatomy and morphology trait
+is_a: TO:0006012 ! carpel anatomy and morphology trait
 
 [Term]
 id: TO:0000677
@@ -4994,13 +5018,13 @@ relationship: part_of TO:0000433 ! ear diameter
 [Term]
 id: TO:0000679
 name: inflorescence diameter
-is_a: TO:0000268 ! inflorescence shape
+is_a: TO:0006031 ! inflorescence size
 
 [Term]
 id: TO:0000680
 name: inflorescence circumference
 related_synonym: "INFLOCIRCUM" []
-is_a: TO:0000268 ! inflorescence shape
+is_a: TO:0006031 ! inflorescence size
 
 [Term]
 id: TO:0000681
@@ -5011,6 +5035,7 @@ is_a: TO:0000680 ! inflorescence circumference
 [Term]
 id: TO:0000682
 name: inflorescence height
+def: "The height of the inflorescence in a plant measured from ground to the attachment point." [GR:pj]
 related_synonym: "INFLOHT" []
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
@@ -5110,10 +5135,10 @@ relationship: part_of TO:0000326 ! leaf color
 [Term]
 id: TO:0000696
 name: starch content
-def: "Amount of starch present in the source of the sink parts of a plant. For example amount of stored starch in the seed endosperm." [GR:pj]
+def: "Amount of starch present in the plant or plant part. " [GR:pj]
 related_synonym: "STARCHCN" []
-is_a: TO:0000291 ! carbohydrate content
 is_a: TO:0000489 ! carbohydrate composition related trait
+is_a: TO:0006007 ! polysaccharide content
 
 [Term]
 id: TO:0000697
@@ -5129,7 +5154,7 @@ id: TO:0000698
 name: starchiness
 related_synonym: "STARCH" []
 related_synonym: "mealiness" []
-is_a: TO:0000696 ! starch content
+is_a: TO:0000291 ! carbohydrate content
 
 [Term]
 id: TO:0000699
@@ -5156,8 +5181,9 @@ is_a: TO:0000349 ! physiological process related trait
 [Term]
 id: TO:0000702
 name: starch concentration
+def: "Concentration of starch present in the plant or plant part." [GR:pj]
 related_synonym: "STARCHCONC" []
-is_a: TO:0000291 ! carbohydrate content
+is_a: TO:0006007 ! polysaccharide content
 
 [Term]
 id: TO:0000703
@@ -5590,66 +5616,77 @@ is_a: TO:0000207 ! plant height
 [Term]
 id: TO:0002600
 name: flower organ size
+def: "Size of the given floral organ type." [GR:pj]
 exact_synonym: "floral organ size" []
 is_a: TO:0000499 ! flower anatomy and morphology trait
 
 [Term]
 id: TO:0002601
 name: stamen size
+def: "Size of the stamen." [GR:pj]
 is_a: TO:0000215 ! stamenanatomy and morphology trait
 is_a: TO:0002600 ! flower organ size
 
 [Term]
 id: TO:0002602
 name: pistil size
+def: "Size of the pistil." [GR:pj]
 is_a: TO:0000223 ! pistil anatomy and morphology trait
 is_a: TO:0002600 ! flower organ size
 
 [Term]
 id: TO:0002603
 name: petal size
+def: "Size of the petal." [GR:pj]
 is_a: TO:0000275 ! perianth anatomy and morphology trait
 is_a: TO:0002600 ! flower organ size
 
 [Term]
 id: TO:0002604
 name: sepal size
+def: "Size of the sepal." [GR:pj]
 is_a: TO:0000275 ! perianth anatomy and morphology trait
 is_a: TO:0002600 ! flower organ size
 
 [Term]
 id: TO:0002605
 name: petal length
+def: "Length of the petal." [GR:pj]
 is_a: TO:0002603 ! petal size
 is_a: TO:0002614 ! floral organ length
 
 [Term]
 id: TO:0002606
 name: petal width
+def: "Width of petals in a flower." [GR:pj]
 is_a: TO:0002603 ! petal size
 is_a: TO:0002615 ! floral organ width
 
 [Term]
 id: TO:0002607
 name: sepal length
+def: "Length of the sepal." [GR:pj]
 is_a: TO:0002604 ! sepal size
 is_a: TO:0002614 ! floral organ length
 
 [Term]
 id: TO:0002608
 name: sepal width
+def: "Width of sepals in a flower." [GR:pj]
 is_a: TO:0002604 ! sepal size
 is_a: TO:0002615 ! floral organ width
 
 [Term]
 id: TO:0002609
 name: stamen length
+def: "Length of the stamen." [GR:pj]
 is_a: TO:0002601 ! stamen size
 is_a: TO:0002614 ! floral organ length
 
 [Term]
 id: TO:0002610
 name: pistil length
+def: "Length of the pistil." [GR:pj]
 is_a: TO:0002602 ! pistil size
 is_a: TO:0002614 ! floral organ length
 
@@ -5675,11 +5712,13 @@ is_a: TO:0002611 ! homeotic development trait
 [Term]
 id: TO:0002614
 name: floral organ length
+def: "Length of the given floral organ type." [GR:pj]
 is_a: TO:0002600 ! flower organ size
 
 [Term]
 id: TO:0002615
 name: floral organ width
+def: "Width of the given floral organ type." [GR:pj]
 is_a: TO:0002600 ! flower organ size
 
 [Term]
@@ -5825,8 +5864,10 @@ is_a: TO:0000419 ! leaf anatomy and morphology trait
 [Term]
 id: TO:0002638
 name: shoot meristem development
+def: "An assay to associate observing effects on the development of shoot meristem." [GR:pj]
 synonym: "shoot meristem abortion" []
 is_a: TO:0000654 ! shoot development trait
+is_a: TO:0006016 ! meristem tissue development trait
 
 [Term]
 id: TO:0002639
@@ -5965,9 +6006,10 @@ is_a: TO:0000283 ! biological process related trait
 [Term]
 id: TO:0002659
 name: pistil number
-def: "Variation in the number of pistils in the gynoecium." [GR:pj]
+def: "Number of pistils in the gynoecium." [GR:pj]
 is_a: TO:0000223 ! pistil anatomy and morphology trait
-is_a: TO:0000622 ! flower development trait
+is_a: TO:0002613 ! reproductive homeotic development trait
+is_a: TO:0006022 ! floral organ development trait
 
 [Term]
 id: TO:0002660
@@ -6083,7 +6125,7 @@ is_a: TO:0000281 ! metabolite content related trait
 [Term]
 id: TO:0002674
 name: tryptophan content
-def: "Measures the amino acid tryptophan content in a plant or plant part. " [GR:pj]
+def: "Amino acid tryptophan content in a plant or plant part. " [GR:pj]
 is_a: TO:0002673 ! amino acid content
 
 [Term]
@@ -6208,10 +6250,11 @@ is_a: TO:0000621 ! inflorescence development trait
 
 [Term]
 id: TO:0002692
-name: root meristem development trait
+name: root meristem development
 def: "An assay to determine the variation in the root meristem development." [GR:pj, PMID:17303594]
 comment: The variation may be due to both the genotypic and/or environmental effects.
 is_a: TO:0000656 ! root development trait
+is_a: TO:0006016 ! meristem tissue development trait
 
 [Term]
 id: TO:0002693
@@ -6590,6 +6633,265 @@ id: TO:0005010
 name: rootworm resistance
 def: "causal agent\: Diabrotica spp." [GR:pj]
 is_a: TO:0000261 ! insect damage resistance
+
+[Term]
+id: TO:0006001
+name: salt tolerance
+def: "Tolerance to the high salt content in the growth medium." [GR:pj]
+exact_synonym: "SALTTL" []
+is_a: TO:0000429 ! salt sensitivity
+
+[Term]
+id: TO:0006002
+name: proline content
+def: "Amino acid tryptophan content in a plant or plant part. " [GR:pj]
+is_a: TO:0002673 ! amino acid content
+
+[Term]
+id: TO:0006003
+name: oligosaccharide content
+def: "Amount of oligosaccharides present in the plant or its parts." [GR:pj]
+comment: Oligosaccharide is a carbohydrate polymer that on hydrolysis yields a small number of monosaccharide molecules.
+is_a: TO:0000333 ! sugar content
+
+[Term]
+id: TO:0006004
+name: raffinose content
+def: "Amount of raffinose present in the plant or plant part." [GR:pj]
+is_a: TO:0006003 ! oligosaccharide content
+
+[Term]
+id: TO:0006005
+name: fructose content
+def: "Amount of fructose present in the plant or plant part." [GR:pj]
+is_a: TO:0006003 ! oligosaccharide content
+
+[Term]
+id: TO:0006006
+name: monosaccharide content
+def: "Amount of monosaccharide present in the plant or plant part." [GR:pj]
+is_a: TO:0000333 ! sugar content
+
+[Term]
+id: TO:0006007
+name: polysaccharide content
+def: "Amount of polysaccharide present in the plant or plant part." [GR:pj]
+is_a: TO:0000333 ! sugar content
+
+[Term]
+id: TO:0006008
+name: carbohydrate derivative content
+def: "Total amount of carbohydrate derivatives present in the plant or plant part." [GR:pj]
+is_a: TO:0000291 ! carbohydrate content
+
+[Term]
+id: TO:0006009
+name: lodicule anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the lodicule and its parts." [GR:pj]
+is_a: TO:0000274 ! floret anatomy and morphology trait
+
+[Term]
+id: TO:0006010
+name: lodicule number
+def: "Average number of lodicules per grass flower (floret) in a study." [GR:pj]
+is_a: TO:0002613 ! reproductive homeotic development trait
+is_a: TO:0006009 ! lodicule anatomy and morphology trait
+is_a: TO:0006023 ! lodicule development trait
+
+[Term]
+id: TO:0006011
+name: lodicule shape
+def: "Shape of the lodicule" [GR:pj]
+is_a: TO:0006009 ! lodicule anatomy and morphology trait
+
+[Term]
+id: TO:0006012
+name: carpel anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the carpel and its parts." [GR:pj]
+is_a: TO:0000223 ! pistil anatomy and morphology trait
+
+[Term]
+id: TO:0006013
+name: carpel number
+def: "Number of carpels in a pistil in the gynoecium." [GR:pj]
+is_a: TO:0006012 ! carpel anatomy and morphology trait
+is_a: TO:0006038 ! floral organ number
+
+[Term]
+id: TO:0006014
+name: phyllotaxy
+def: "Arrangement of the leaves on the shoot of a plant." [GR:pj]
+exact_synonym: "leaf arrangement" []
+is_a: TO:0000419 ! leaf anatomy and morphology trait
+
+[Term]
+id: TO:0006015
+name: tissue development trait
+def: "Traits associated with observing effects on the development of a given tissue type." [GR:pj]
+is_a: TO:0000357 ! growth and development trait
+
+[Term]
+id: TO:0006016
+name: meristem tissue development trait
+def: "An assay to determine the variation in the  meristematic tissue development." [GR:pj]
+is_a: TO:0006015 ! tissue development trait
+
+[Term]
+id: TO:0006017
+name: meristem identity
+def: "Trait to determine the variation or effect on the establishment of meristem identity or determinacy." [GR:pj]
+exact_synonym: "meristem determinacy" []
+is_a: TO:0006016 ! meristem tissue development trait
+
+[Term]
+id: TO:0006018
+name: organ identity
+def: "Trait associated with observing effects on the establishment of organ identity." [GR:pj]
+comment: Identity is considered to be the aggregate of characteristics by which a structure is recognized
+is_a: TO:0000357 ! growth and development trait
+
+[Term]
+id: TO:0006019
+name: floral organ identity
+def: "Trait associated with observing effects on the establishment of floral organ identity." [GR:pj]
+is_a: TO:0006018 ! organ identity
+
+[Term]
+id: TO:0006020
+name: shoot apical meristem development
+def: "An assay to associate observing effects on the development of shoot apical (SAM) meristem." [GR:pj]
+is_a: TO:0002638 ! shoot meristem development
+
+[Term]
+id: TO:0006021
+name: vegetative to reproductive phase transition trait
+def: "Trait associated with the transition of vegetative growth phase to the reproductive growth phase. " [GR:pj]
+comment: Usually obesrved at the time of transition of shoot apical meristem (a vegetative meristem) to the inflorescence apical meristem (a reproductive meristem).
+is_a: TO:0000654 ! shoot development trait
+
+[Term]
+id: TO:0006022
+name: floral organ development trait
+def: "Traits associated with observing effects on the development of the floral organ and its parts." [GR:pj]
+is_a: TO:0000622 ! flower development trait
+
+[Term]
+id: TO:0006023
+name: lodicule development trait
+def: "Traits associated with observing effects on the development of the loducule ina grass flower (floret)." [GR:pj]
+is_a: TO:0006022 ! floral organ development trait
+
+[Term]
+id: TO:0006024
+name: ectopic lodicule development
+def: "Ectopic development of lodicule ina grass flower (floret)." [GR:pj]
+is_a: TO:0002613 ! reproductive homeotic development trait
+is_a: TO:0006023 ! lodicule development trait
+
+[Term]
+id: TO:0006025
+name: floral bract development trait
+def: "Traits associated with observing effects on the development of the floral bracts." [GR:pj]
+is_a: TO:0006022 ! floral organ development trait
+
+[Term]
+id: TO:0006026
+name: floral bract number
+def: "Number of bracts in a flower." [GR:pj]
+is_a: TO:0006025 ! floral bract development trait
+
+[Term]
+id: TO:0006027
+name: inflorescence bract development trait
+def: "Traits associated with observing effects on the development of the floral bracts." [GR:pj]
+is_a: TO:0000621 ! inflorescence development trait
+
+[Term]
+id: TO:0006028
+name: inflorescence bract number
+def: "Number of given type of bracts in a inflorescence." [GR:pj]
+is_a: TO:0006027 ! inflorescence bract development trait
+
+[Term]
+id: TO:0006029
+name: glume number
+def: "Number of glumes in an inflorecsnce of grass\, sedge or similar plant." [GR:pj]
+is_a: TO:0006028 ! inflorescence bract number
+
+[Term]
+id: TO:0006030
+name: spikelet meristem identitiy
+def: "Trait associated to observed effect on the establishment of spikelet meristem identity or determinacy." [GR:pj]
+is_a: TO:0000621 ! inflorescence development trait
+is_a: TO:0002638 ! shoot meristem development
+is_a: TO:0006017 ! meristem identity
+
+[Term]
+id: TO:0006031
+name: inflorescence size
+def: "Variation in size of inflorescence. " [GR:pj]
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+
+[Term]
+id: TO:0006032
+name: panicle size
+def: "Variation in size of panicle inflorescence. " [GR:pj]
+is_a: TO:0006031 ! inflorescence size
+
+[Term]
+id: TO:0006033
+name: floret number per spikelet
+def: "Number of florets in a grass spikelet." [GR:pj]
+is_a: TO:0000670 ! flower number
+
+[Term]
+id: TO:0006034
+name: tertiary branch number
+def: "Number of tertiary branches in an inflorescence." [GR:pj]
+is_a: TO:0006035 ! tertiary branching of inflorescence
+
+[Term]
+id: TO:0006035
+name: tertiary branching of inflorescence
+def: "The extent of tertiary branching usually determines the shape and compactness of the inflorescence (such as in rice panicle)." [GR:pj]
+is_a: TO:0000050 ! inflorescence branching
+
+[Term]
+id: TO:0006036
+name: stem elongation
+def: "Elongation of the stem." [GR:pj]
+comment: Alternative associated tarits are stem length (TO\:0000576) and shhot elongation rate (TO\:0000368).
+is_a: TO:0000654 ! shoot development trait
+
+[Term]
+id: TO:0006037
+name: carpel shape
+def: "Shape of the carpel." [GR:pj]
+is_a: TO:0006012 ! carpel anatomy and morphology trait
+
+[Term]
+id: TO:0006038
+name: floral organ number
+def: "Number of given floral organ type in a flower." [GR:pj]
+is_a: TO:0000499 ! flower anatomy and morphology trait
+
+[Term]
+id: TO:0006039
+name: petal number
+def: "Number of the petals in a flower." [GR:pj]
+is_a: TO:0000275 ! perianth anatomy and morphology trait
+
+[Term]
+id: TO:0006040
+name: sepal number
+def: "Number of the sepals in a flower." [GR:pj]
+is_a: TO:0000275 ! perianth anatomy and morphology trait
+
+[Term]
+id: TO:0006041
+name: tepal number
+def: "Number of the tepals in a flower." [GR:pj]
+is_a: TO:0000275 ! perianth anatomy and morphology trait
 
 [Term]
 id: TO:0010001
