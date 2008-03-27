@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.56 $
-date: 26:03:2008 14:54
+version: $Revision: 1.57 $
+date: 27:03:2008 14:57
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -179,7 +179,7 @@ name: ligule length
 def: "The actual measurement of ligules measured in millimeters from the base of the collar to the tip. " [IRRI:SES]
 related_synonym: "LIGLG" []
 related_synonym: "LgL" []
-is_a: TO:0002637 ! leaf size
+is_a: TO:0002748 ! ligule anatomy and morphology trait
 
 [Term]
 id: TO:0000025
@@ -205,6 +205,8 @@ is_a: TO:0000654 ! shoot development trait
 [Term]
 id: TO:0000028
 name: unfilled grain
+def: "Number of unfilled florets in a grass inflorescence. " [GR:pj]
+synonym: "unfilled florets per panicle" []
 is_a: TO:0000345 ! seed viability
 
 [Term]
@@ -288,7 +290,7 @@ name: brown rice length
 def: "Length of the grain monitored after dehulling but before polishing. The grain should contain pericarp." [ICIS:1259, IRRI:SES]
 related_synonym: "BRWLG" []
 related_synonym: "Len" []
-is_a: TO:0000146 ! seed length
+is_a: TO:0000734 ! grain length
 
 [Term]
 id: TO:0000042
@@ -637,7 +639,7 @@ related_synonym: "Sct" []
 related_synonym: "odour" []
 exact_synonym: "scent" []
 is_a: TO:0000488 ! seed composition based quality trait
-is_a: TO:0002694 ! flavor trait
+is_a: TO:0002694 ! fruit flavor trait
 
 [Term]
 id: TO:0000088
@@ -651,6 +653,8 @@ is_a: TO:0000148 ! viral disease resistance
 id: TO:0000089
 name: panicle type
 def: "Panicle types are classified according to their mode of branching\, angle of primary branches\, and spikelet density." [ICIS:1066, IRRI:SES]
+synonym: "PNTYPE" []
+synonym: "Panicle attitude of branches" []
 related_synonym: "PnT" []
 is_a: TO:0000267 ! inflorescence type
 is_a: TO:0000621 ! inflorescence development trait
@@ -1497,6 +1501,7 @@ name: ligule color
 def: "Changes observed in ligule color" [GR:pj, IRRI:SES]
 related_synonym: "LIGCL" []
 related_synonym: "LgC" []
+is_a: TO:0002748 ! ligule anatomy and morphology trait
 relationship: part_of TO:0000326 ! leaf color
 
 [Term]
@@ -1796,8 +1801,7 @@ id: TO:0000235
 name: liguleless
 def: "Absence of ligule." [GR:pj]
 related_synonym: "LIGMIN" []
-is_a: TO:0000419 ! leaf anatomy and morphology trait
-is_a: TO:0000655 ! leaf development trait
+is_a: TO:0002748 ! ligule anatomy and morphology trait
 
 [Term]
 id: TO:0000236
@@ -2008,6 +2012,10 @@ is_a: TO:0000587 ! endosperm quality
 [Term]
 id: TO:0000267
 name: inflorescence type
+alt_id: TO:0000500
+def: "Variation in the type of inflorescence\, wither due to extent and number of branching\, branch angles or modified form of the inflorescence." [GR:pj]
+synonym: "inflorescence type" []
+exact_synonym: "INFLOTYPE" []
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
 [Term]
@@ -2031,6 +2039,7 @@ is_a: TO:0000589 ! seed weight (sensu Poaceae)
 [Term]
 id: TO:0000270
 name: inflorescence axis angle
+def: "Angle of the inflorescence axis." [GR:pj]
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
 [Term]
@@ -2559,7 +2568,7 @@ name: ligule shape
 def: "Defines the actual shape of the ligule" [IRRI:SES]
 related_synonym: "LIGSHP" []
 related_synonym: "LS" []
-is_a: TO:0000492 ! leaf shape
+is_a: TO:0002748 ! ligule anatomy and morphology trait
 
 [Term]
 id: TO:0000336
@@ -2616,7 +2625,6 @@ id: TO:0000342
 name: panicle axis angle
 def: "Represents the angle of panicle axis." [IRRI:SES]
 related_synonym: "PnAk" []
-related_synonym: "panicle axis" []
 is_a: TO:0000270 ! inflorescence axis angle
 
 [Term]
@@ -3059,6 +3067,8 @@ is_a: TO:0000482 ! chemical stress sensitivity
 id: TO:0000402
 name: grain width
 def: "Width of the dehulled grain with pericarp." [GR:pj]
+synonym: "dehulled-grain width" []
+synonym: "grain curved width" []
 related_synonym: "GRWD" []
 is_a: TO:0002627 ! fruit width
 relationship: part_of TO:0000149 ! seed width
@@ -3370,6 +3380,7 @@ id: TO:0000445
 name: seed number
 alt_id: TO:0000139
 def: "Number of seeds in the fruit or the number of caryopsis found in a fertilized grass inflorescence." [GR:pj]
+synonym: "seeds per panicle" []
 related_synonym: "GRNB" []
 related_synonym: "SDNB" []
 related_synonym: "grain number" []
@@ -3411,9 +3422,11 @@ is_a: TO:0000371 ! yield trait
 
 [Term]
 id: TO:0000450
-name: grain yield per panicle
+name: grain number per panicle
 def: "Number of filled spikelets per panicle." [GR:pj]
+synonym: "grain yield per panicle" []
 synonym: "grains per panicle" []
+synonym: "seeds per panicle" []
 related_synonym: "GRYLDPPN" []
 is_a: TO:0000371 ! yield trait
 
@@ -3587,10 +3600,11 @@ is_a: TO:0000470 ! vascular tissue related trait
 id: TO:0000473
 name: seed shattering
 def: "Measurement of extent of grain shattering\, which depends on development of abscission zone. This trait often refers to shattering or the premature or ease of shedding of the grass fruit called caryopsis from the inflorescence." [GR:pj]
+synonym: "caryopsis shattering" []
 related_synonym: "GRSH" []
 related_synonym: "SDSH" []
 related_synonym: "grain shattering" []
-is_a: TO:0002729 ! fruit abscission quality trait
+is_a: TO:0002729 ! fruit senescing quality trait
 
 [Term]
 id: TO:0000474
@@ -3766,11 +3780,6 @@ id: TO:0000499
 name: flower anatomy and morphology trait
 def: "Traits associated with changes in the anatomy or structure of the flower and its parts." [GR:pj]
 relationship: part_of TO:0000373 ! inflorescence anatomy and morphology trait
-
-[Term]
-id: TO:0000500
-name: inflorescence type
-is_obsolete: true
 
 [Term]
 id: TO:0000501
@@ -4219,6 +4228,7 @@ is_a: TO:0000456 ! spikelet number
 [Term]
 id: TO:0000566
 name: stomatal frequency
+def: "Number of stomata present on the leaf surface" [GR:pj]
 related_synonym: "STOFQ" []
 is_a: TO:0000168 ! abiotic stress trait
 is_a: TO:0000419 ! leaf anatomy and morphology trait
@@ -4360,6 +4370,7 @@ is_a: TO:0000227 ! root length
 id: TO:0000587
 name: endosperm quality
 alt_id: TO:0000150
+def: "Qualities of the endosperm associated with texture\, content\, composition\, size\, etc." [GR:pj]
 related_synonym: "End" []
 related_synonym: "endosperm quality (sensu Poaceae)" []
 is_a: TO:0000162 ! seed quality
@@ -4381,6 +4392,7 @@ name: dehulled grain weight
 def: "Weight of the dehulled grains." [GR:pj]
 related_synonym: "DHULGRWT" []
 is_a: TO:0000371 ! yield trait
+is_a: TO:0002746 ! fruit weight
 
 [Term]
 id: TO:0000591
@@ -4944,12 +4956,11 @@ is_a: TO:0000668 ! mycotoxin content
 
 [Term]
 id: TO:0000670
-name: flower number
+name: floret number
 def: "The number of flowers present on a inflorescence branch or in the inflorescence itself." [GR:pj]
 related_synonym: "FLNB" []
-related_synonym: "floret number" []
-is_a: TO:0000499 ! flower anatomy and morphology trait
 is_a: TO:0000622 ! flower development trait
+is_a: TO:0002736 ! flower number
 
 [Term]
 id: TO:0000671
@@ -5052,7 +5063,7 @@ name: grassy flavor
 def: "An assay to test for aroma and flavor reminiscent of freshly cut grass." [GR:pj]
 related_synonym: "GRASSYFLVOR" []
 related_synonym: "grassy flavour" []
-is_a: TO:0002694 ! flavor trait
+is_a: TO:0002694 ! fruit flavor trait
 
 [Term]
 id: TO:0000685
@@ -5119,8 +5130,8 @@ relationship: part_of TO:0000691 ! Zea mays northern leaf blight disease resista
 
 [Term]
 id: TO:0000694
-name: crispness
-def: "An assay of firmness and freshness." [GR:pj]
+name: fruit crispness
+def: "An assay of firmness and freshness of the fruit." [GR:pj]
 related_synonym: "CRISP" []
 is_a: TO:0002728 ! fruit quality trait
 
@@ -5209,7 +5220,7 @@ is_a: TO:0000704 ! phosphatase activity
 id: TO:0000706
 name: hull color
 def: "Describes the color of hull." [GR:pj]
-comment: Hull is the dry outer covering of a grass fruit/grain. The hull is comprised of lemma and palea\, the two parts of a grass floret.
+comment: Hull is the dry outer covering of a grass fruit/grain. The hull is comprised of dry lemma and palea\, the two parts of a grass floret.
 synonym: "HULCL" []
 is_a: TO:0000597 ! quality trait
 
@@ -5378,8 +5389,8 @@ is_a: TO:0000349 ! physiological process related trait
 id: TO:0000734
 name: grain length
 def: "length of the dehulled grain with pericarp." [GR:pj]
-relationship: part_of TO:0000146 ! seed length
 relationship: part_of TO:0000397 ! grain size
+relationship: part_of TO:0002626 ! fruit length
 
 [Term]
 id: TO:0000735
@@ -5778,33 +5789,34 @@ id: TO:0002625
 name: fruit size
 def: "An assay to determine the variation in the size of the fruit." [GR:pj]
 synonym: "FRSZ" []
-is_a: TO:0002629 ! fruit anatomy and morphology trait
+is_a: TO:0002629 ! fruit structure trait
 is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0002626
 name: fruit length
 def: "An assay to determine the variation in the length of the fruit." [GR:pj]
-is_a: TO:0002728 ! fruit quality trait
+is_a: TO:0002625 ! fruit size
 
 [Term]
 id: TO:0002627
 name: fruit width
 def: "An assay to determine the variation in the width of the fruit." [GR:pj]
 synonym: "FRWD" []
-is_a: TO:0002728 ! fruit quality trait
+is_a: TO:0002625 ! fruit size
 
 [Term]
 id: TO:0002628
 name: fruit shape
 def: "An assay to determine the variation in the shape of the fruit." [GR:pj]
-is_a: TO:0002629 ! fruit anatomy and morphology trait
+is_a: TO:0002629 ! fruit structure trait
 is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0002629
-name: fruit anatomy and morphology trait
+name: fruit structure trait
 def: "Traits associated with changes in the anatomy or structure of the fruit and its parts." [GR:pj]
+synonym: "fruit anatomy and morphology trait" []
 synonym: "fruit morphology" []
 is_a: TO:0000017 ! anatomy and morphology related trait
 
@@ -5825,8 +5837,8 @@ id: TO:0002632
 name: fruit abscission zone size
 def: "An assay to determine the variation in the size of the fruit abscission zone." [GR:pj]
 synonym: "size stem scar size" []
-is_a: TO:0002629 ! fruit anatomy and morphology trait
-is_a: TO:0002729 ! fruit abscission quality trait
+is_a: TO:0002629 ! fruit structure trait
+is_a: TO:0002729 ! fruit senescing quality trait
 
 [Term]
 id: TO:0002633
@@ -6237,6 +6249,7 @@ relationship: part_of TO:0000135 ! leaf length
 id: TO:0002690
 name: leaf lamina length
 def: "Actual length measurements\, in centimeters of the leaf laimina." [GR:pj]
+exact_synonym: "leaf blade length" []
 is_a: TO:0002637 ! leaf size
 relationship: part_of TO:0000135 ! leaf length
 
@@ -6264,8 +6277,8 @@ is_a: TO:0000168 ! abiotic stress trait
 
 [Term]
 id: TO:0002694
-name: flavor trait
-def: "An assay to detrmine the sensory impression of a food product or other substance by the chemical senses of taste and smell." [GR:pj]
+name: fruit flavor trait
+def: "An assay to determine the sensory impression of a fruit by the chemical senses of taste and smell." [GR:pj]
 is_a: TO:0000281 ! metabolite content related trait
 is_a: TO:0002728 ! fruit quality trait
 
@@ -6308,7 +6321,7 @@ is_a: TO:0002698 ! acyclic carotene content
 id: TO:0002700
 name: pungency
 def: "The quality of producing a sharp sensation of taste or smell." [GR:pj]
-is_a: TO:0002694 ! flavor trait
+is_a: TO:0002694 ! fruit flavor trait
 
 [Term]
 id: TO:0002701
@@ -6384,13 +6397,12 @@ relationship: part_of TO:0000326 ! leaf color
 
 [Term]
 id: TO:0002713
-name: cell organelle development trait
+name: cell organelle structure trait
 def: "Trait(s) associated with phenotypes observed for abnormal development of organelle structure and biogenesis." [GR:pj]
+synonym: "cell organelle development trait" []
 narrow_synonym: "organelle biogenesis trait" []
 narrow_synonym: "organelle structure trait" []
 is_a: TO:0000017 ! anatomy and morphology related trait
-is_a: TO:0000283 ! biological process related trait
-is_a: TO:0000357 ! growth and development trait
 
 [Term]
 id: TO:0002714
@@ -6398,7 +6410,8 @@ name: plastid development trait
 def: "Trait(s) associated with phenotypes observed for abnormal development of plastid structure and its biogenesis." [GR:pj]
 narrow_synonym: "plastid biogenesis trait" []
 narrow_synonym: "plastid structure trait" []
-is_a: TO:0002713 ! cell organelle development trait
+is_a: TO:0002713 ! cell organelle structure trait
+is_a: TO:0002755 ! cell organelle development trait
 
 [Term]
 id: TO:0002715
@@ -6436,6 +6449,7 @@ is_a: TO:0002718 ! awn anatomy and morphology trait
 id: TO:0002720
 name: leaf lamina width
 def: "Actual measurements\, in centimeters of the widest portion of the leaf lamina." [GR:pj]
+synonym: "leaf blade width" []
 is_a: TO:0000370 ! leaf width
 
 [Term]
@@ -6454,6 +6468,7 @@ is_a: TO:0000419 ! leaf anatomy and morphology trait
 id: TO:0002723
 name: leaf lamina margin pubescence
 def: "Extent of pubescence  (presence of hairs)  on the leaf blade margin." [GR:pj]
+synonym: "leaf blade margin pubescence" []
 is_a: TO:0002722 ! leaf pubescence
 
 [Term]
@@ -6489,7 +6504,7 @@ is_a: TO:0000597 ! quality trait
 
 [Term]
 id: TO:0002729
-name: fruit abscission quality trait
+name: fruit senescing quality trait
 def: "Traits associated with the fruit abscission zone." [GR:pj]
 is_a: TO:0002728 ! fruit quality trait
 
@@ -6519,6 +6534,144 @@ name: flag leaf angle: late stage
 def: "In grasses the flag leaf angle is measured near the collar as the angle of attachment between the flag leaf blade and the main inflorescence axis in grass plants. Observed at maturity stage." [GR:pj]
 synonym: "flag leaf attitude\: late stage" []
 is_a: TO:0000124 ! flag leaf angle
+
+[Term]
+id: TO:0002734
+name: awn presence
+def: "The presence or absence of awn. Observation may include relative awn size." [GR:pj]
+is_a: TO:0002718 ! awn anatomy and morphology trait
+
+[Term]
+id: TO:0002735
+name: straighthead
+def: "Malformed inflorescence (panicle in rice)\, by staying upright/straight at the time of maturity and may carry infertile seeds." [GR:pj, web:http\://plantpathology.tamu.edu/Texlab/Grains/Rice/rices.html]
+comment: For rice\: Straighthead is a physiological disorder that causes the entire head to be blank and remain upright at maturity in rice. Straighthead generally occurs in spots scattered throughout a field and is most easily recognized near harvest when normal plants have downturned heads (from the weight of the grain in the panicle). The disease is frequently found on sandy loam soils but seldom on clay soils. Old cotton fields with arsenic residues can have a severe incidence of straighthead. Other\, as yet unknown\, soil factors are also involved in causing straighthead. Often it is found in fields where excessive non-decayed vegetation has been plowed under just before planting. The disease is characterized by upright heads when the rice matures due to infertile seed. Hulls may be distorted into a crescent shape or \"parrot beak\". One or both hulls may be missing. Affected plants continue to grow\, are a darker green\, and often produce shoots from a lower portion of the plant. First year crops of rice grown on \"new ground\" are more likely to be affected. Some varieties are more tolerant than others. Control measures include planting resistant varieties and draining fields with a history of the disorder just prior to internode elongation.
+is_a: TO:0000168 ! abiotic stress trait
+
+[Term]
+id: TO:0002736
+name: flower number
+def: "The number of flowers." [GR:pj]
+is_a: TO:0000499 ! flower anatomy and morphology trait
+
+[Term]
+id: TO:0002737
+name: floret number per branch
+def: "Average number of flowers (florets) per branch in a grass inflorescence." [GR:pj]
+is_a: TO:0000670 ! floret number
+
+[Term]
+id: TO:0002738
+name: florets per inflorescence
+def: "Average number of flowers (florets) in a grass inflorescence." [GR:pj]
+exact_synonym: "florets per panicle" []
+is_a: TO:0000670 ! floret number
+
+[Term]
+id: TO:0002739
+name: fruit surface area
+def: "Average whole fruit surface area." [GR:pj]
+is_a: TO:0002728 ! fruit quality trait
+
+[Term]
+id: TO:0002740
+name: kernel surface area
+def: "The average surface area of the grain with the hull intact in a grass fruit caryopsis." [GR:pj]
+synonym: "hulled-grain surface area" []
+is_a: TO:0002739 ! fruit surface area
+
+[Term]
+id: TO:0002741
+name: grain surface area
+def: "The average surface area of the grain without hull (dehulled) in a grass fruit caryopsis." [GR:pj]
+synonym: "dehulled-grain surface area" []
+is_a: TO:0002739 ! fruit surface area
+
+[Term]
+id: TO:0002742
+name: fruit volume
+def: "Volume of the fruit." [GR:pj]
+is_a: TO:0002728 ! fruit quality trait
+
+[Term]
+id: TO:0002743
+name: grain volume
+def: "Volume of the grain without hull (dehulled)." [GR:pj]
+exact_synonym: "dehulled-grain volume" []
+is_a: TO:0002742 ! fruit volume
+
+[Term]
+id: TO:0002744
+name: fruit curved length
+def: "Average length of the curved surface of fruit." [GR:pj]
+is_a: TO:0002728 ! fruit quality trait
+
+[Term]
+id: TO:0002745
+name: grain curved length
+def: "Average length of the curved surface of grain without hull (dehulled)." [GR:pj]
+exact_synonym: "curved length of dehulled-grain" []
+exact_synonym: "dehulled-grain curved length" []
+is_a: TO:0002744 ! fruit curved length
+
+[Term]
+id: TO:0002746
+name: fruit weight
+def: "Average weight of the given number of fruits." [GR:pj]
+is_a: TO:0002728 ! fruit quality trait
+
+[Term]
+id: TO:0002747
+name: 10-dehulled grain weight
+def: "Weight of 10-dehulled grain having pericarp (seed coat)" [GR:pj]
+exact_synonym: "TEDHULGRWT" []
+is_a: TO:0000590 ! dehulled grain weight
+
+[Term]
+id: TO:0002748
+name: ligule anatomy and morphology trait
+def: "Traits associated with changes in the anatomy or structure of the ligule." [GR:pj]
+is_a: TO:0000419 ! leaf anatomy and morphology trait
+
+[Term]
+id: TO:0002749
+name: ligule pubescence
+def: "Extent of pubescence  (presence of hairs)  on the ligule." [GR:pj]
+is_a: TO:0002748 ! ligule anatomy and morphology trait
+
+[Term]
+id: TO:0002750
+name: ligule margin pubescence
+def: "Extent of pubescence  (presence of hairs)  on the ligule margin." [GR:pj]
+exact_synonym: "ligule margin hairiness" []
+is_a: TO:0002748 ! ligule anatomy and morphology trait
+
+[Term]
+id: TO:0002751
+name: inflorescence branch arrangement
+alt_id: TO:0002752
+def: "Arrangement of inflorescence branches." [GR:pj]
+synonym: "panicle branch arrangement" []
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+
+[Term]
+id: TO:0002753
+name: primary branch arrangement of ininflorescence
+def: "Arrangement of primary branches in an inflorescence." [GR:pj]
+is_a: TO:0002751 ! inflorescence branch arrangement
+
+[Term]
+id: TO:0002754
+name: inflorescence axis texture
+def: "Texture of the inflorescence axis." [GR:pj]
+exact_synonym: "panicle axis texture" []
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+
+[Term]
+id: TO:0002755
+name: cell organelle development trait
+def: "Trait(s) associated with phenotypes observed for abnormal development of cell organelle structure and its biogenesis." [GR:pj]
+is_a: TO:0000357 ! growth and development trait
 
 [Term]
 id: TO:0005001
@@ -6842,7 +6995,7 @@ is_a: TO:0006031 ! inflorescence size
 id: TO:0006033
 name: floret number per spikelet
 def: "Number of florets in a grass spikelet." [GR:pj]
-is_a: TO:0000670 ! flower number
+is_a: TO:0000670 ! floret number
 
 [Term]
 id: TO:0006034
