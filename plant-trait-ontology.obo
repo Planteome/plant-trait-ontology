@@ -1,6 +1,6 @@
 format-version: 1.0
-version: $Revision: 1.58 $
-date: 01:04:2008 15:12
+version: $Revision: 1.59 $
+date: 03:04:2008 10:56
 saved-by: Pankaj Jaiswal
 auto-generated-by: DAG-Edit 1.419 rev 3
 default-namespace: plant_trait_ontology
@@ -984,6 +984,7 @@ is_a: TO:0000265 ! light quality sensitivity
 [Term]
 id: TO:0000131
 name: leaf water potential
+def: "Water potential of a leaf." [GR:pj]
 related_synonym: "LFWP" []
 related_synonym: "lwp" []
 is_a: TO:0000168 ! abiotic stress trait
@@ -2431,6 +2432,8 @@ is_a: TO:0000112 ! disease resistance
 [Term]
 id: TO:0000316
 name: photosynthetic ability
+def: "The photosynthesis ability determined on a plant or the plant part under stress." [GR:pj]
+comment: Methods may include actual measurements on photosynthesis\, pigment content or the content and composition of enzymes associated with photosynthesis.
 related_synonym: "PHOTOSYNAB" []
 is_a: TO:0000349 ! physiological process related trait
 
@@ -3581,6 +3584,8 @@ is_a: TO:0000465 ! mineral and ion content related trait
 [Term]
 id: TO:0000467
 name: cell membrane stability
+def: "Stability of the cell membrane under the impact of temperature (heat) and water deficit stress. " [GR:pj, web:http\://www.plantstress.com/methods/CMS_method.htm]
+comment: The trait is often observed in plants as a measure of drought and heat tolerance by determining the amount of solutes/electrolyte leaked from the cell.
 related_synonym: "CELMBSTB" []
 is_a: TO:0000349 ! physiological process related trait
 
@@ -3845,12 +3850,16 @@ is_a: TO:0000168 ! abiotic stress trait
 [Term]
 id: TO:0000506
 name: nitrogen recycling
+def: "It is a measure of reduced net ammonium production in response to the receipt of photosynthate" [GR:pj]
+synonym: "nitrogen conservation" []
 related_synonym: "NIRCYC" []
 is_a: TO:0000349 ! physiological process related trait
 
 [Term]
 id: TO:0000507
 name: osmotic adjustment capacity
+def: "The ability of the plant to adust the osmotic potential under stress conditions. " [GR:pj]
+comment: The main role of osmotic adjustment in the plant is to assist in the maintenance of turgor and volume as organs lose water during desiccation\, i.e. to provide dehydration tolerance. Often determined by relative water or the amount of solute accumulated at a given water potential.
 related_synonym: "OSADJCAP" []
 is_a: TO:0000349 ! physiological process related trait
 
@@ -3932,12 +3941,14 @@ is_a: TO:0000168 ! abiotic stress trait
 [Term]
 id: TO:0000520
 name: stomatal closure rate
+def: "The rate of closure of stomata due to stress or coupled to the rate of photosynthesis and/or transpiration." [GR:pj]
 related_synonym: "STOCSRRATE" []
 is_a: TO:0000349 ! physiological process related trait
 
 [Term]
 id: TO:0000521
 name: stomatal closure time
+def: "Average time taken for closure of stomata due to stress or coupled to the rate of photosynthesis and/or transpiration." [GR:pj]
 related_synonym: "STOCSRTM" []
 is_a: TO:0000349 ! physiological process related trait
 
@@ -5411,22 +5422,32 @@ is_a: TO:0000723 ! microsporocyte development trait
 [Term]
 id: TO:0000727
 name: sporogenesis
+def: "The formation of spores." [GR:pj]
 is_a: TO:0000283 ! biological process related trait
 
 [Term]
 id: TO:0000728
 name: cell cycle trait
+def: "The traits associated with various developmental landmarks and processes of cell division during either the meiotic cell cycle or mitotic cell cycle." [R:pj]
+synonym: "cell division cycle" []
+xref_analog: GO:GO\:0007049
 is_a: TO:0000283 ! biological process related trait
 is_a: TO:0002686 ! cell growth and development trait
 
 [Term]
 id: TO:0000729
 name: meiotic cell cycle trait
+def: "The traits associated with various developmental landmarks and processes of cell division during either the meiotic cell cycle." [GR:pj]
+comment: Meiosis is a type of cell division in which haploid gametes and spores are formed. The process involves a single duplication of the genetic material followed by two mitotic divisions. As a result each daughter cell receives half the chromosomal content (haploid) as the parent cell.
+xref_analog: GO:GO\:0051321
 is_a: TO:0000728 ! cell cycle trait
 
 [Term]
 id: TO:0000730
 name: mitotic cell cycle trait
+def: "The traits associated with various developmental landmarks and processes of cell division during the mitotic cell cycle." [GO:pj]
+comment: Mitosis is a type of cell division in which a cell duplicates its genetic information (DNA)\, in order to generate two\, identical\, daughter cells. Each daughter cell receives the same chromosome number / genetic content as the parent cell.
+xref_analog: GO:GO\:0000278
 is_a: TO:0000728 ! cell cycle trait
 
 [Term]
@@ -5443,6 +5464,8 @@ is_a: TO:0000731 ! lignin content
 [Term]
 id: TO:0000733
 name: lignin biosynthesis
+def: "Traits associated with the biosynthesis of lignin in a plant or plant part." [GR:pj]
+xref_analog: GO:GO\:0009809
 is_a: TO:0000349 ! physiological process related trait
 
 [Term]
@@ -5582,6 +5605,8 @@ is_a: TO:0000349 ! physiological process related trait
 [Term]
 id: TO:0001018
 name: transpiration rate
+def: "The rate of  transpiration." [GR:pj]
+xref_analog: GO:GO\:0010148
 is_a: TO:0000349 ! physiological process related trait
 
 [Term]
