@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 18:08:2011 11:35
+date: 19:08:2011 13:35
 saved-by: jaiswalp
-auto-generated-by: OBO-Edit 2.1-beta4
+auto-generated-by: OBO-Edit 2.1-beta18
 default-namespace: plant_trait_ontology
 
 [Term]
@@ -98,6 +98,7 @@ comment: The factors needed for successful test are the presence of sources and 
 synonym: "MLO" RELATED []
 synonym: "MLORS" RELATED []
 is_a: TO:0000112 ! disease resistance
+is_a: TO:0000242 ! microbial damage resistance
 
 [Term]
 id: TO:0000014
@@ -844,7 +845,7 @@ synonym: "disease control" EXACT []
 synonym: "disease resistance trait" EXACT []
 synonym: "disease susceptibility" NARROW []
 synonym: "disease tolerance" EXACT []
-is_a: TO:0000242 ! microbial damage resistance
+is_a: TO:0000236 ! crop damage resistance
 
 [Term]
 id: TO:0000113
@@ -1125,6 +1126,7 @@ name: viral disease resistance
 def: "An assay to determine the resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a viral pathogen infection as compared to the susceptible and/or the reference plants of the same species." [GR:pj, IRRI:SES]
 comment: It represents the damage done by the diease and/or the viral pathogen to the plant. The damage is a direct measure of resistance to the particular viral strain causing the diease.
 is_a: TO:0000112 ! disease resistance
+is_a: TO:0000242 ! microbial damage resistance
 
 [Term]
 id: TO:0000149
@@ -1270,7 +1272,7 @@ is_a: TO:0000387 ! trait ontology
 [Term]
 id: TO:0000165
 name: panicle exsertion
-def: "Trait monitored by observing the extent of coverage of panicle by the flag leaf sheath." [GR:pj, ICIS:1004, IRRI:SES]
+def: "A panicoid (rice) trait monitored by observing the extent of coverage of panicle by the flag leaf sheath." [GR:pj, ICIS:1004, IRRI:SES]
 synonym: "Exs" RELATED []
 synonym: "PNEX" RELATED []
 is_a: TO:0001002 ! inflorescence exsertion
@@ -1344,9 +1346,9 @@ is_obsolete: true
 
 [Term]
 id: TO:0000175
-name: bacterial blight disease resistance
-def: "Causal agent: Xanthomonas oryzae pv. oryzae. symptoms: lesions usually start near the leaf tips or leaf margins or both, and extend down the outer edge(s). young lesions are pale to grayish green, later turning yellow to grey (dead) with time. In very susceptible varieties, lesions may extend to the entire leaf  length into the leaf sheath. " [GR:pj, ICIS:1101, IRRI:SES]
-comment: Young leaves should not be inoculated  for assay. Old or leaves with symptoms of nutrient deficiency or other diseases should also be avoided for inoculation
+name: rice bacterial blight disease resistance
+def: "Causal agent: Xanthomonas oryzae pv. oryzae." [GR:pj, ICIS:1101, IRRI:SES]
+comment: Symptoms: lesions usually start near the leaf tips or leaf margins or both, and extend down the outer edge(s). young lesions are pale to grayish green, later turning yellow to grey (dead) with time. In very susceptible varieties, lesions may extend to the entire leaf length into the leaf sheath. Young leaves should not be inoculated for assay. Old or leaves with symptoms of nutrient deficiency or other diseases should also be avoided for inoculation.
 synonym: "BB" RELATED []
 synonym: "BBRS" RELATED []
 synonym: "leaf blight" RELATED []
@@ -1553,20 +1555,22 @@ is_a: TO:0000345 ! seed viability
 
 [Term]
 id: TO:0000203
-name: bacterial leaf streak disease resistance
-def: "Causal agent: Xanthomonas oryzae pv. oryzicola. Symptoms: linear lesions with small bacterial exudates evident. This scale may also be used for leaf smut caused by Entyloma oryzae. " [GR:pj, ICIS:1102, IRRI:SES]
+name: rice bacterial leaf streak disease resistance
+def: "Causal agent: Xanthomonas oryzae pv. oryzicola." [GR:pj, ICIS:1102, IRRI:SES]
+comment: Symptoms: linear lesions with small bacterial exudates evident. This scale may also be used for leaf smut caused by Entyloma oryzae.
 synonym: "BLS" RELATED []
 synonym: "BLSRS" RELATED []
 is_a: TO:0000315 ! bacterial disease resistance
 
 [Term]
 id: TO:0000204
-name: seedling blight disease resistance
-def: "Causal agent: Xanthomonas oryzae pv. oryzae. symptoms: lesions usually start near the leaf tips or leaf margins or both, and extend down the outer edge(s). young lesions are pale to grayish green, later turning yellow to grey (dead) with time. In very susceptible varieties, lesions may extend to the entire leaf  length into the leaf sheath. Kresek or seedling blight causes wilting and death of plant. " [GR:pj, ICIS:1117, IRRI:SES]
+name: rice seedling blight disease resistance
+def: "Causal agent: Xanthomonas oryzae pv. oryzae." [GR:pj, ICIS:1117, IRRI:SES]
+comment: Symptoms: lesions usually start near the leaf tips or leaf margins or both, and extend down the outer edge(s). Young lesions are pale to grayish green, later turning yellow to grey (dead) with time. In very susceptible varieties, lesions may extend to the entire leaf length into the leaf sheath. Kresek or seedling blight causes wilting and death of plant.
 synonym: "kresek" RELATED []
 synonym: "leaf blight" RELATED []
 synonym: "SDLBTRS" RELATED []
-is_a: TO:0000175 ! bacterial blight disease resistance
+is_a: TO:0000175 ! rice bacterial blight disease resistance
 
 [Term]
 id: TO:0000205
@@ -2147,7 +2151,7 @@ is_a: TO:0000277 ! biochemical trait
 [Term]
 id: TO:0000282
 name: enzymatic activity and protein content related trait
-def: "The trait associated with an assay to determine the effected enzymatic activity." [GR:pj]
+def: "The trait associated with an assay to determine the effected enzymatic activity and protein content." [GR:pj]
 is_a: TO:0000277 ! biochemical trait
 
 [Term]
@@ -2169,7 +2173,7 @@ synonym: "ADPG pyrophosphorylase" RELATED []
 synonym: "AGPACT" RELATED []
 synonym: "glucose 1-phosphate adenylyltransferase" RELATED []
 synonym: "glucose-1-phosphate adenylyltransferase activity" RELATED []
-is_a: TO:0000599 ! enzyme activity
+is_a: TO:0000599 ! enzyme activity trait
 
 [Term]
 id: TO:0000285
@@ -2394,7 +2398,7 @@ synonym: "invertin" RELATED []
 synonym: "maxinvert L 1000" RELATED []
 synonym: "saccharase" RELATED []
 synonym: "sucrase" RELATED []
-is_a: TO:0000599 ! enzyme activity
+is_a: TO:0000599 ! enzyme activity trait
 
 [Term]
 id: TO:0000312
@@ -2431,6 +2435,7 @@ name: bacterial disease resistance
 def: "The resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a bacterial pathogen infection as compared to the susceptible and/or the reference plants of the same species." [GR:pj]
 comment: It represents the damage done by the diease and/or the pathogen to the plant. The damage is a direct measure of resistance to the particular bacterial strain causing the disease.
 is_a: TO:0000112 ! disease resistance
+is_a: TO:0000242 ! microbial damage resistance
 
 [Term]
 id: TO:0000316
@@ -2563,7 +2568,7 @@ synonym: "sucrose-phosphate synthase activity" RELATED []
 synonym: "sucrosephosphate-UDP glucosyltransferase" RELATED []
 synonym: "UDP-glucose-fructose-phosphate glucosyltransferase" RELATED []
 synonym: "uridine diphosphoglucose-fructose phosphate glucosyltransferase" RELATED []
-is_a: TO:0000599 ! enzyme activity
+is_a: TO:0000599 ! enzyme activity trait
 
 [Term]
 id: TO:0000332
@@ -3818,7 +3823,7 @@ is_a: TO:0000497 ! fertility restoration trait
 id: TO:0000499
 name: flower anatomy and morphology trait
 def: "Traits associated with changes in the anatomy or structure of the flower and its parts." [GR:pj]
-relationship: part_of TO:0000373 ! inflorescence anatomy and morphology trait
+is_a: TO:0000077 ! shoot anatomy and morphology trait
 
 [Term]
 id: TO:0000501
@@ -4519,7 +4524,7 @@ is_a: TO:0000282 ! enzymatic activity and protein content related trait
 
 [Term]
 id: TO:0000599
-name: enzyme activity
+name: enzyme activity trait
 def: "Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic." [GO:GO\:0003824]
 synonym: "enzymatic activity" RELATED []
 synonym: "enzyme catalytic activity" RELATED []
@@ -4583,7 +4588,7 @@ id: TO:0000606
 name: diastatic power
 def: "An assay to determine the joint action of alpha-amylase, beta-amylase and any other carbohydrate-degrading enzymes." [GR_REF:8025]
 synonym: "DIASPWR" RELATED []
-is_a: TO:0000599 ! enzyme activity
+is_a: TO:0000599 ! enzyme activity trait
 
 [Term]
 id: TO:0000607
@@ -4757,7 +4762,7 @@ is_a: TO:0000102 ! phosphorus sensitivity
 
 [Term]
 id: TO:0000628
-name: Pearl millet downy mildew resistance
+name: pearl millet downy mildew resistance
 def: "Causal agent: Sclerospora graminicola (Sacc.) Schroet. It causes the downy mildew disease in Pearl millet." [GR:pj]
 synonym: "Pg_DNMDRS" RELATED []
 is_a: TO:0000439 ! fungal disease resistance
@@ -5251,7 +5256,7 @@ id: TO:0000699
 name: sucrose synthase activity
 def: "Catalysis of the reaction: UDP-glucose + D-fructose = UDP + sucrose." [GO:GO\:0016157]
 synonym: "SUSACT" RELATED []
-is_a: TO:0000599 ! enzyme activity
+is_a: TO:0000599 ! enzyme activity trait
 
 [Term]
 id: TO:0000700
@@ -5279,14 +5284,14 @@ is_a: TO:0006007 ! polysaccharide content
 id: TO:0000703
 name: amylase activity
 def: "Catalysis of the hydrolysis of amylose or an amylose derivative." [GR:pj]
-is_a: TO:0000599 ! enzyme activity
+is_a: TO:0000599 ! enzyme activity trait
 
 [Term]
 id: TO:0000704
 name: phosphatase activity
 def: "Catalysis of the hydrolysis of phosphoric monoesters, releasing inorganic phosphate." [GO:GO\:0016791]
 synonym: "phosphoric monoester hydrolase activity" RELATED []
-is_a: TO:0000599 ! enzyme activity
+is_a: TO:0000599 ! enzyme activity trait
 
 [Term]
 id: TO:0000705
@@ -6112,7 +6117,7 @@ def: "Catalysis of the reaction: ATP + pyruvate + phosphate = AMP + phosphoenolp
 synonym: "PPDK" EXACT []
 synonym: "Pyruvate phosphate dikinase" EXACT []
 synonym: "Pyruvate, phosphate phosphotransferase" EXACT []
-is_a: TO:0000599 ! enzyme activity
+is_a: TO:0000599 ! enzyme activity trait
 
 [Term]
 id: TO:0002655
@@ -6466,6 +6471,7 @@ id: TO:0002703
 name: protist disease resistance
 def: "The resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a protist infection as compared to the susceptible and/or the reference plants of the same species." [GR:pj]
 is_a: TO:0000112 ! disease resistance
+is_a: TO:0000242 ! microbial damage resistance
 
 [Term]
 id: TO:0002704
@@ -7315,7 +7321,6 @@ comment: May be assayed for per gram fresh weight.
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:38:27Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006043
@@ -7324,7 +7329,6 @@ def: "The total Boron ion concentration measured in a given volume of a plant or
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:49:08Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006044
@@ -7333,7 +7337,6 @@ def: "The total Magnesium ion concentration measured in a given volume of a plan
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:50:28Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006045
@@ -7342,7 +7345,6 @@ def: "The total Phosphorus concentration measured in a given volume of a plant o
 is_a: TO:0001024 ! phosphorus content
 created_by: jaiswalp
 creation_date: 2010-10-25T04:51:26Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006046
@@ -7351,7 +7353,6 @@ def: "The total Sulfur concentration measured in a given volume of a plant or a 
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:53:29Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006047
@@ -7360,7 +7361,6 @@ def: "The total Calcium ion concentration measured in a given volume of a plant 
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:54:15Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006048
@@ -7369,7 +7369,6 @@ def: "The total Manganese ion concentration measured in a given volume of a plan
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:55:34Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006049
@@ -7378,7 +7377,6 @@ def: "The total iron concentration measured in a given volume of a plant or a pl
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:56:30Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006050
@@ -7387,7 +7385,6 @@ def: "The total Cobalt ion concentration measured in a given volume of a plant o
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:57:41Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006051
@@ -7396,7 +7393,6 @@ def: "The total Nickel ion concentration measured in a given volume of a plant o
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:58:31Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006052
@@ -7405,7 +7401,6 @@ def: "The total Copper ion concentration measured in a given volume of a plant o
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:59:17Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006053
@@ -7414,7 +7409,6 @@ def: "The total Zinc ion concentration measured in a given volume of a plant or 
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:59:26Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006054
@@ -7423,7 +7417,6 @@ def: "The total Arsenic ion concentration measured in a given volume of a plant 
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:59:32Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006055
@@ -7432,7 +7425,6 @@ def: "The total Selenium ion concentration measured in a given volume of a plant
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:59:38Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006056
@@ -7441,7 +7433,6 @@ def: "The total Molybdenum  concentration measured in a given volume of a plant 
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T04:59:53Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006057
@@ -7450,7 +7441,6 @@ def: "The total Cu2+ ion concentration measured in a given volume of a plant or 
 is_a: TO:0006052 ! copper concentration
 created_by: jaiswalp
 creation_date: 2010-10-25T05:04:14Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006058
@@ -7459,7 +7449,6 @@ def: "The total Cu3+ ion concentration measured in a given volume of a plant or 
 is_a: TO:0006052 ! copper concentration
 created_by: jaiswalp
 creation_date: 2010-10-25T05:04:19Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006059
@@ -7468,7 +7457,6 @@ def: "The total Cadmium concentration measured in a given volume of a plant or a
 is_a: TO:0000465 ! mineral and ion content related trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:09:12Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006060
@@ -7477,7 +7465,6 @@ def: "Condition describing the yellowing of leaves, due to insufficient producti
 is_a: TO:0000326 ! leaf color
 created_by: jaiswalp
 creation_date: 2010-10-25T05:13:05Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006061
@@ -7486,7 +7473,6 @@ def: "Number of days taken from the day of sowing to the first emergence of coty
 is_a: TO:0000357 ! growth and development trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:23:52Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006062
@@ -7495,7 +7481,6 @@ def: "The average width of a plant measured across an axis such as the main stem
 is_a: TO:0000133 ! stature or vigor trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:27:37Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006063
@@ -7504,7 +7489,6 @@ def: "A leaf margin notched or grooved like a saw with teeth pointing toward the
 is_a: TO:0002635 ! leaf margin trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:30:17Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006064
@@ -7513,7 +7497,6 @@ def: "Leaf lamina rolled into a tube like structure." [GR:Karthik]
 is_a: TO:0000655 ! leaf development trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:34:19Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006065
@@ -7522,7 +7505,6 @@ def: "Length of the hypocotyl." [GR:Karthik]
 is_a: TO:0000077 ! shoot anatomy and morphology trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:36:01Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006066
@@ -7531,7 +7513,6 @@ def: "Measurement of trichomes found in per unit area of a leaf." [GR:curators]
 is_a: TO:0002722 ! leaf pubescence
 created_by: jaiswalp
 creation_date: 2010-10-25T05:37:25Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006067
@@ -7541,7 +7522,6 @@ comment: Aphids are members of the insect order Homoptera, family Aphididae.
 is_a: TO:0000261 ! insect damage resistance
 created_by: jaiswalp
 creation_date: 2010-10-25T05:38:56Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006068
@@ -7551,7 +7531,6 @@ is_a: TO:0000162 ! seed quality
 is_a: TO:0000357 ! growth and development trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:42:12Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0006069
@@ -7561,7 +7540,6 @@ is_a: TO:0000162 ! seed quality
 is_a: TO:0000357 ! growth and development trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:44:20Z
-created_by: jaiswalp
 
 [Term]
 id: TO:0010001
@@ -7860,6 +7838,261 @@ name: glume waxiness
 def: "Measurement of presence of wax on glume" [GR:cwt, IWIS:1412]
 is_a: TO:0000657 ! spikelet anatomy and morphology trait
 
+[Term]
+id: TO:0020051
+name: barley leaf scald disease resistance
+def: "Causal agent: Rhynchosporium secalis." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms include, oval, water-soaked, blue-grey spots (1.0-1.5 cm long) developing into lesions with dry necrotic centers and dark brown margins. Lesions will coalesce under high infection levels and are not delimited by veins.
+synonym: "scald" EXACT []
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:12:24Z
+
+[Term]
+id: TO:0020052
+name: barley spot blotch disease resistance
+def: "Causal agent: Cochliobolus sativus (Bipolaris sorokiniana)." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms include, uniform chocolate brown lesions that eventually merge forming irregular necrotic patches on leaves. Lesions may be surrounded by yellow zones of varying width.
+synonym: "spot blotch" EXACT []
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:19:00Z
+
+[Term]
+id: TO:0020053
+name: wheat spot blotch disease resistance
+def: "Causal agent: Cochliobolus sativus (Bipolaris sorokiniana)." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms include, elongated to oval shaped dark brown lesions. Centers often lighten to dark brown or tan surrounded by an irregular dark brown ring.
+synonym: "Helminthosporium leaf blotch" EXACT []
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:21:53Z
+
+[Term]
+id: TO:0020054
+name: barley stripe rust disease resistance
+def: "Causal agent: Puccinia striiformis f. sp. hordei." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: chlorotic flecks at the infection site initially appear, followed by yellow uredinia (spore masses) in prominent stripes along the leaf veins. Black telia (overseasoning structures) readily develop from uredinia as infected plants mature.
+synonym: "BSR" EXACT []
+synonym: "yellow rust" EXACT []
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:25:00Z
+
+[Term]
+id: TO:0020055
+name: wheat stripe rust disease resistance
+def: "Causal agent: Puccinia striiformis f. sp. tritici." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: pustules (spore masses) containing yellow to orange-yellow urediniospores form narrow stripes on leaves, leaf sheaths and glumes.
+synonym: "yellow rust" BROAD []
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:27:45Z
+
+[Term]
+id: TO:0020056
+name: barley leaf rust disease resistance
+def: "Causal agent: Puccinia hordei." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: small round orange brown pustules producing a mass of orange-brown urediniospores on the upper leaf surfaces and leaf sheaths.
+synonym: "brown rust" BROAD []
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:29:57Z
+
+[Term]
+id: TO:0020057
+name: wheat leaf rust disease resistance
+def: "Causal agent: Puccinia recondita f. sp. tritici." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: circular to slightly elliptical pustules containing masses of orange to orange-brown urediniospores on the leaf surfaces and leaf sheaths.
+synonym: "brown rust" BROAD []
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:31:09Z
+
+[Term]
+id: TO:0020058
+name: barley common root rot resistance
+def: "Causal agents: Cochliobolus sativus (Bipolaris sorokiniana), Fusarium culmorum and Fusarium pseudograminearum." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: brown lesions on the roots, especially the subcrown internode. Under severe conditions, lesions can become nearly black with brown tissue extending into the crown and leaf sheaths. Stunted plants with reduced tillering and yield. Heads can be white with fewer kernels that are small and shriveled.
+synonym: "crown rot" BROAD []
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:33:03Z
+
+[Term]
+id: TO:0020059
+name: wheat common root rot resistance
+def: "Causal agents: Cochliobolus sativus (Bipolaris sorokiniana)." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: browning of the root, crown and basal culm tissues.  Plants may lodge. White spikes can appear.
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:36:24Z
+
+[Term]
+id: TO:0020060
+name: barley powdery mildew disease resistance
+def: "Causal agent: Blumeria graminis f. sp. hordei." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: first visible signs are fuzzy white to pale grey tufts of mycelia and conidia on the upper surfaces of leaves and leaf sheaths (especially on lower leaves) and sometimes on the spikes. Older fungal tissue is yellowish grey and can be easily rubbed off.  Plant tissue becomes chlorotic or necrotic.  Spherical black cleistothecia may develop.
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:39:36Z
+
+[Term]
+id: TO:0020061
+name: wheat powdery mildew disease resistance
+def: "Causal agent: Blumeria graminis f. sp. tritici." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: first visible signs are fuzzy white to pale grey tufts of mycelia and conidia on the upper surfaces of leaves and leaf sheaths (especially on lower leaves) and sometimes on the spikes. Older fungal tissue is yellowish grey and can be easily rubbed off. Plant tissue becomes chlorotic or necrotic. Spherical black cleistothecia may develop.
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:39:36Z
+
+[Term]
+id: TO:0020062
+name: barley net form net blotch disease resistance
+def: "Causal agent: Pyrenophora teres f. teres." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: in adult plants, initial symptoms are small pinpoint to elliptical brown spots which expand to form narrow, tan to light brown lesions, often delimited by leaf veins. Within lesions, dark brown longitudinal and transverse striations appear forming a net-like pattern. In seedlings, greenish grey, water-soaked areas appear forming brown lesions with netted striations.
+synonym: "NFNB" EXACT []
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:39:36Z
+
+[Term]
+id: TO:0020063
+name: barley spot form net blotch disease resistance
+def: "Causal agent: Pyrenophora teres f. maculata." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: dark brown, circular to elliptical lesions surrounded by bands of chlorosis.
+synonym: "SFNB" EXACT []
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:39:36Z
+
+[Term]
+id: TO:0020064
+name: barley septoria disease resistance
+def: "Causal agent: Septoria passerinii and Stagonospora avenae f. sp. triticea (teleomorph: Phaeosphaeria avenaria f. sp. triticeae)." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: in seedlings, S. passerinii causes faint, yellowish areas that turn greenish gray then straw colored with time forming a distinct demarcation next to healthy green tissue.  On adult plants S. passerinii infection produces long, rectangular lesions delimited by veins that first appear graying then turn tan or straw colored. S. avenae f. sp. triticea produces yellow brown lesions that traverse veins and are shield or lens shaped.
+synonym: "SSLB" EXACT []
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:39:36Z
+
+[Term]
+id: TO:0020065
+name: wheat septoria leaf blotch disease resistance
+def: "Causal agent: Septoria tritici (Mycosphaerella graminicola), Septoria nodorum (Leptosphaeria nodorum), Septoria avenae f. sp. triticea (Leptosphaeria avenaria f. sp. triticea)." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: Initial infection sites tend to be irregular in shape, oval to elongated chlorotic spots or lesions. As these sites expand, the centers of the lesions become pale, straw colored, and slightly necrotic, often with numerous small black dots (pycnidia). The lesions of septoria tritici blotch tend to be linear and restricted laterally, while those of septoria nodorum blotch and septoria avenae blotch are more lens shaped. All above ground plant parts can be affected.
+is_a: TO:0000439 ! fungal disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:39:36Z
+
+[Term]
+id: TO:0020066
+name: barley leaf streak resistance
+def: "Causal agent: Xanthomonas translucens pv. translucens and pv. undulosa." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: small, light to pale green spots which later expand into linear streaks. Streaks can extend the entire length of the leaf, that will become translucent. Infected leaves will turn yellow then brown as it dies.
+is_a: TO:0000315 ! bacterial disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T12:58:34Z
+
+[Term]
+id: TO:0020067
+name: barley yellow dwarf virus disease resistance
+def: "Causal agent: The Barley Yellow Dwarf Viruses, Luteovirus (Group IV (+)ssRNA)." [T-CAP:Victoria Corollo Blake]
+comment: Symptoms: uneven blotches of bright yellow discoloration on the tips and margins of older leaves, eventually progressing down toward the base, covering the entire leaf within a few weeks.  Reduced internode elongation causes stunting with severe infection possibly.
+synonym: "BYDV" EXACT []
+is_a: TO:0000148 ! viral disease resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T01:00:45Z
+
+[Term]
+id: TO:0020068
+name: beta-glucan content
+def: "Amount of beta-glucan present in the plant, plant part or product (ex. malt). beta-Glucans are polysaccharides of D-glucose linked by beta-glycosidic bonds that vary by molecular mass, solubility, viscosity and 3D configuration." [T-CAP:Victoria Corollo Blake]
+is_a: TO:0000291 ! carbohydrate content
+created_by: jaiswalp
+creation_date: 2011-08-19T01:03:01Z
+
+[Term]
+id: TO:0020069
+name: spike exsertion
+def: "A triticea trait measured in distance from the base of the spike to the flag leaf auricle." [T-CAP:Victoria Corollo Blake]
+is_a: TO:0001002 ! inflorescence exsertion
+created_by: jaiswalp
+creation_date: 2011-08-19T01:07:39Z
+
+[Term]
+id: TO:0020070
+name: beta-glucanase activity
+def: "Activity of beta-glucanase ((1-3 and/or 1-4)-beta-D-glucan, 4-glucanohydrolase), (E.C:3.2.1.73) in the hydrolysis of beta-glucans." [T-CAP:Victoria Corollo Blake]
+is_a: TO:0000599 ! enzyme activity trait
+created_by: jaiswalp
+creation_date: 2011-08-19T01:10:26Z
+
+[Term]
+id: TO:0020071
+name: beta-glucanase thermostability
+def: "The ability of beta-glucanase [(1-3,1-4)-beta-D-glucan, 4-glucanohydrolase], (E.C:3.2.1.73) to remain active under mashing (boiling grain in water) conditions during beer making." [T-CAP:Victoria Corollo Blake]
+is_a: TO:0000597 ! quality trait
+is_a: TO:0000599 ! enzyme activity trait
+is_a: TO:0020070 ! beta-glucanase activity
+created_by: jaiswalp
+creation_date: 2011-08-19T01:18:25Z
+
+[Term]
+id: TO:0020072
+name: residual beta-glucanase activity
+def: "Activity of beta-glucanase [(1-3,1-4)-beta-D-glucan, 4-glucanohydrolase], (E.C:3.2.1.73) in the barley wort (the boiled grain and water) during the beer making process." [T-CAP:Victoria Corollo Blake]
+synonym: "residual beta-glucanase" BROAD []
+is_a: TO:0000597 ! quality trait
+is_a: TO:0000599 ! enzyme activity trait
+is_a: TO:0020070 ! beta-glucanase activity
+created_by: jaiswalp
+creation_date: 2011-08-19T01:20:23Z
+
+[Term]
+id: TO:0020073
+name: barley wort protein concentration
+def: "Concentration of protein in the wort after boiling the grain with water (mashing) in the beer making process." [T-CAP:Victoria Corollo Blake]
+synonym: "wort protein" BROAD []
+is_a: TO:0000597 ! quality trait
+is_a: TO:0000598 ! protein content
+created_by: jaiswalp
+creation_date: 2011-08-19T01:24:05Z
+
+[Term]
+id: TO:0020074
+name: barley wort color
+def: "Color of the solution derived from boiling barley grain with water during the beer making process." [T-CAP:Victoria Corollo Blake]
+is_a: TO:0000597 ! quality trait
+created_by: jaiswalp
+creation_date: 2011-08-19T01:27:42Z
+
+[Term]
+id: TO:0020075
+name: barley malt protein
+def: "Percent protein in the malt prior to mashing (boiling the grain with water to produce a wort) in the beer making process." [T-CAP:Victoria Corollo Blake]
+is_a: TO:0000597 ! quality trait
+created_by: jaiswalp
+creation_date: 2011-08-19T01:29:00Z
+
+[Term]
+id: TO:0020076
+name: phenolic compound content
+def: "Amount of phenolics present in the plant, plant part or product ." [T-CAP:Victoria Corollo Blake]
+comment: In barley its evaluated in ex malt.
+is_a: TO:0000281 ! metabolite content related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T01:29:58Z
+
+[Term]
+id: TO:0020077
+name: head drop
+def: "A triticea trait evaluated for fertile spikes dropped before harvest." [T-CAP:Victoria Corollo Blake]
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+created_by: jaiswalp
+creation_date: 2011-08-19T01:33:35Z
+
 [Typedef]
 id: part_of
 name: part of
+
