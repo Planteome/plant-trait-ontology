@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 19:08:2011 14:27
+date: 19:08:2011 17:13
 saved-by: jaiswalp
 auto-generated-by: OBO-Edit 2.1-beta18
 default-namespace: plant_trait_ontology
@@ -828,7 +828,7 @@ def: "Abortion of microspore development at uni-nucleate stage" [GR:pj, IRRI:SES
 synonym: "CMS-WA" RELATED []
 synonym: "WACMS" RELATED []
 is_a: TO:0000060 ! aborted uni-nucleate stage
-is_a: TO:0000232 ! cytoplasmic male sterility (sensu Oryza)
+is_a: TO:0000232 ! rice cytoplasmic male sterility
 
 [Term]
 id: TO:0000111
@@ -1309,7 +1309,7 @@ def: "Abortion of microspore development at trinucleate stage" [GR:pj, IRRI:SES]
 synonym: "BOROCMS" RELATED []
 synonym: "CMS-boro" RELATED []
 is_a: TO:0000026 ! aborted tri-nucleate stage
-is_a: TO:0000232 ! cytoplasmic male sterility (sensu Oryza)
+is_a: TO:0000232 ! rice cytoplasmic male sterility
 
 [Term]
 id: TO:0000170
@@ -1795,9 +1795,11 @@ is_a: TO:0000587 ! endosperm quality
 
 [Term]
 id: TO:0000232
-name: cytoplasmic male sterility (sensu Oryza)
+name: rice cytoplasmic male sterility
 def: "Caused by the interaction of cytoplasmic (mitochondrial) and nuclear genomes. The trait shows non-mendelian inheritance or maternal inheritance" [GR:pj, IRRI:SES]
+synonym: "<new synonym>" RELATED []
 synonym: "CMS" RELATED []
+synonym: "cytoplasmic male sterility (sensu Oryza)" EXACT []
 is_a: TO:0000580 ! cytoplasmic male sterility
 
 [Term]
@@ -2713,7 +2715,7 @@ name: cms-hl type
 def: "Abortion of microspore development at bi-nucleate stage" [GR:pj, IRRI:SES]
 synonym: "CMS-HL" RELATED []
 synonym: "HLCMS" RELATED []
-is_a: TO:0000232 ! cytoplasmic male sterility (sensu Oryza)
+is_a: TO:0000232 ! rice cytoplasmic male sterility
 is_a: TO:0000415 ! aborted bi-nucleate stage
 
 [Term]
@@ -3056,7 +3058,8 @@ is_a: TO:0000237 ! water stress trait
 [Term]
 id: TO:0000396
 name: grain yield
-def: "The grain yield, measured in kilograms per hectare at 14 percent moisture." [ICIS:1003, IRRI:SES]
+def: "Amount of grain measured in weight per unit of area, at a given grain moisture." [ICIS:1003, IRRI:SES, TO:contributors]
+comment: In Rice the grain yield if often measured in kilograms per hectare at 14 percent moisture if the experiment was done on a filed trail.
 synonym: "GRYLD" RELATED []
 synonym: "seed yield" RELATED []
 synonym: "Yld" RELATED []
@@ -3427,6 +3430,7 @@ comment: It is directly related to the filled grain number (TO:0000447) and grai
 synonym: "SDNB" RELATED []
 synonym: "seeds per panicle" RELATED []
 is_a: TO:0000371 ! yield trait
+is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0000446
@@ -3544,6 +3548,7 @@ name: root epidermis cell length
 def: "Length of the root epidermal cell length." [GR:pj37]
 synonym: "RTEPCELLG" RELATED []
 is_a: TO:0000043 ! root anatomy and morphology trait
+is_a: TO:0020107 ! plant cell length
 
 [Term]
 id: TO:0000460
@@ -3638,7 +3643,7 @@ id: TO:0000472
 name: vascular bundle number
 def: "Number of vascular bundles present in a plant part." [GR:pj]
 synonym: "VBNB" RELATED []
-is_a: TO:0000470 ! vascular tissue related trait
+is_a: TO:0020109 ! vascular bundle development trait
 
 [Term]
 id: TO:0000473
@@ -3897,7 +3902,7 @@ id: TO:0000511
 name: phosphorus uptake
 def: "The total phosphorus ion uptake measured in a plant or a plant part." [GR:pj]
 synonym: "PHOUP" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0020096 ! mineral and ion transport trait
 
 [Term]
 id: TO:0000512
@@ -3918,7 +3923,7 @@ id: TO:0000514
 name: potassium uptake
 def: "The total potassium ion uptake measured in a plant or a plant part." [GR:pj]
 synonym: "KUP" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0020096 ! mineral and ion transport trait
 
 [Term]
 id: TO:0000515
@@ -3957,21 +3962,21 @@ id: TO:0000520
 name: stomatal closure rate
 def: "The rate of closure of stomata due to stress or coupled to the rate of photosynthesis and/or transpiration." [GR:pj]
 synonym: "STOCSRRATE" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0020095 ! stomatal process related trait
 
 [Term]
 id: TO:0000521
 name: stomatal closure time
 def: "Average time taken for closure of stomata due to stress or coupled to the rate of photosynthesis and/or transpiration." [GR:pj]
 synonym: "STOCSRTM" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0020095 ! stomatal process related trait
 
 [Term]
 id: TO:0000522
 name: stomatal conductance
 def: "It is a numerical measure of the maximum rate of passage of either water vapour or carbon dioxide through the stomata" [GR:pj]
 synonym: "STOCOND" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0020095 ! stomatal process related trait
 
 [Term]
 id: TO:0000523
@@ -3979,7 +3984,7 @@ name: stomatal resistance
 def: "Stomatal resistance (or its inverse, stomatal conductance) can therefore be calculated from the transpiration rate and humidity gradient. (The humidity gradient is the humidity inside the leaf, determined from leaf temperature based on the assumption that the leaf's air spaces are saturated with vapor, minus the humidity of the ambient air, which is measured directly.) " [web:http\://en.wikipedia.org/wiki/Stomata]
 comment: This allows scientists to learn how stomata respond to changes in environmental conditions, such as light intensity, humidity, or carbon dioxide concentration.
 synonym: "STORS" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0020095 ! stomatal process related trait
 
 [Term]
 id: TO:0000524
@@ -4008,7 +4013,7 @@ id: TO:0000527
 name: sodium uptake
 def: "The total sodium ion uptake measured in a plant or a plant part." [GR:pj]
 synonym: "NAUP" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0020096 ! mineral and ion transport trait
 
 [Term]
 id: TO:0000528
@@ -6250,11 +6255,9 @@ is_a: TO:0002669 ! diterpenoid phytoalexin content
 [Term]
 id: TO:0002672
 name: auxin content
-def: "Measures the auxin content in a plant or plant part. " [GR:pj, PMID:16908506]
+def: "Measures the auxin content in a plant or plant part." [GR:pj, PMID:16908506]
 comment: The most important auxin produced by plants is indole-3-acetic acid (IAA)
 synonym: "AUXCN" RELATED []
-synonym: "IAA content" RELATED []
-synonym: "indole-3-acetic acid content" RELATED []
 is_a: TO:0000476 ! growth hormone content
 
 [Term]
@@ -7461,7 +7464,10 @@ creation_date: 2010-10-25T05:09:12Z
 [Term]
 id: TO:0006060
 name: leaf chlorosis
-def: "Condition describing the yellowing of leaves, due to insufficient production of chlorophyll. Chlorotic leaves are pale, yellow, or yellow-white in" [GR:Karthik]
+alt_id: TO:0020113
+def: "MERGED DEFINITION:\nTARGET DEFINITION: Condition describing the yellowing of leaves, due to insufficient production of chlorophyll. Chlorotic leaves are pale, yellow, or yellow-white in\n--------------------\nSOURCE DEFINITION: Leaf surface affected by abiotic stresses like insecticides and cold temperature as evidenced by chlorotic tissue." [GR:Karthik]
+synonym: "leaf chlorosis" EXACT []
+is_a: TO:0000168 ! abiotic stress trait
 is_a: TO:0000326 ! leaf color
 created_by: jaiswalp
 creation_date: 2010-10-25T05:13:05Z
@@ -8023,7 +8029,7 @@ creation_date: 2011-08-19T01:07:39Z
 [Term]
 id: TO:0020070
 name: beta-glucanase activity trait
-def: "Activity of beta-glucanase ((1,3-1,4)-beta-D-glucan, 4-glucanohydrolase), (EC:3.2.1.73) in the hydrolysis of beta-glucans." [GO:0042972, T-CAP:Victoria Corollo Blake]
+def: "Activity of beta-glucanase ((1,3-1,4)-beta-D-glucan, 4-glucanohydrolase), (EC:3.2.1.73) in the hydrolysis of beta-glucans." [GO:0042972, GO\::0052736, T-CAP:Victoria Corollo Blake]
 is_a: TO:0000599 ! enzyme activity trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:10:26Z
@@ -8091,6 +8097,385 @@ def: "A triticea trait evaluated for fertile spikes dropped before harvest." [T-
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:33:35Z
+
+[Term]
+id: TO:0020078
+name: zeaxanthin content
+def: "The zeaxanthin content in a plant or plant part." [GR:pj]
+is_a: TO:0000301 ! xanthophyll content
+created_by: jaiswalp
+creation_date: 2011-08-19T02:49:07Z
+
+[Term]
+id: TO:0020079
+name: beta-cryptoxanthin content
+def: "The beta-cryptoxanthin content in a plant or plant part." [GR:pj]
+is_a: TO:0000301 ! xanthophyll content
+created_by: jaiswalp
+creation_date: 2011-08-19T02:53:13Z
+
+[Term]
+id: TO:0020080
+name: stover organic matter digestability
+def: "This trait determines the amount of organic matter from the stover that would eventually be digested by animals. Value derived from chemical and in vitro analysis with rumen microbial inoculum of dried and ground stover, usually using Near Infrared Reflectance Spectrophotometry (NIRS) after appropriate calibration." [GCP:GCP_324.0000031, ICRISAT:Vincent Vadez, ILRI:Michael Blümmel]
+comment: Measured as percentage.
+synonym: "in vitro organic matter digestibility" EXACT []
+synonym: "stover related trait" BROAD [GCP:GCP_324.000003]
+is_a: TO:0000277 ! biochemical trait
+created_by: jaiswalp
+creation_date: 2011-08-19T03:13:08Z
+
+[Term]
+id: TO:0020081
+name: metabolized energy of stover
+def: "The trait  takes into account energy losses occurring in the animal in faeces, urine and CH4 and estimates how much energy (in calories or joules) a given unit of ground stover is actually available for meat and milk production . Value derived from chemical and in vitro analysis of dried and ground stover." [GCP:GCP_324.0000036, ICRISAT:Vincent Vadez, ILRI:Michael Blümmel]
+comment: Units: Kcal/kg.
+synonym: "metabolised energy" EXACT []
+synonym: "stover related traits" BROAD [GCP:GCP_324.000003]
+is_a: TO:0000277 ! biochemical trait
+created_by: jaiswalp
+creation_date: 2011-08-19T03:17:28Z
+
+[Term]
+id: TO:0020082
+name: stover nitrogen content
+def: "A trait to measure percent nitrogen concentration in the stover sample used for predicting crude protein (CP) content of stover by multiplication with a factor of 6.25 (CP = N x 6.25). This concentration is one of the criteria to assess the quality of fodder. Value derived from the analysis of stover using Near Infrared Reflectance Spectrophotometry (NIRS)." [GCP:GCP_324.0000016, ICRISAT:Vincent Vadez, ILRI:Michael Blümmel]
+synonym: "stover related traits" BROAD [GCP:GCP_324.000003]
+is_a: TO:0000281 ! metabolite content related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T03:20:23Z
+
+[Term]
+id: TO:0020083
+name: stem diameter
+def: "A trait to assay stem diameter." [GR:pj]
+synonym: "culm diameter" RELATED []
+is_a: TO:0000361 ! stem anatomy and morphology trait
+created_by: jaiswalp
+creation_date: 2011-08-19T03:31:47Z
+
+[Term]
+id: TO:0020084
+name: spiral leaf
+def: "A trait to measure leaf spiralling." [GR:pj]
+is_a: TO:0000492 ! leaf shape
+created_by: jaiswalp
+creation_date: 2011-08-19T03:33:01Z
+
+[Term]
+id: TO:0020085
+name: stem senescence
+def: "A trait to measure the stem senescence." [GR:pj]
+synonym: "culm senescence" EXACT []
+is_a: TO:0000654 ! shoot development trait
+created_by: jaiswalp
+creation_date: 2011-08-19T03:34:31Z
+
+[Term]
+id: TO:0020086
+name: neck leaf presence
+def: "A trait to observe neck leaf presence." [GR:pj]
+is_a: TO:0000419 ! leaf anatomy and morphology trait
+created_by: jaiswalp
+creation_date: 2011-08-19T03:35:46Z
+
+[Term]
+id: TO:0020087
+name: root cracking
+def: "A trait measuring the extent of physical cracking of a root caused by genetic, environmental factors or by post-harvest storage and handling of the root or root part." [GR:pj]
+is_a: TO:0000168 ! abiotic stress trait
+created_by: jaiswalp
+creation_date: 2011-08-19T03:44:21Z
+
+[Term]
+id: TO:0020088
+name: total water soluble content
+def: "A trait to measure the concentration of water soluble components in the plant as determined by refractive index." []
+comment: This trait is usually highly correlated with total soluble sugar content (TO:0000340). Often determined in fresh tissue.
+synonym: "total dissolved solids content" EXACT []
+is_a: TO:0000281 ! metabolite content related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T03:47:00Z
+
+[Term]
+id: TO:0020089
+name: iron content
+def: "The total iron ion content measured in a plant or a plant part." [TO:contributors]
+is_a: TO:0000465 ! mineral and ion content related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:02:53Z
+
+[Term]
+id: TO:0020090
+name: zinc content
+def: "The total zinc ion content measured in a plant or a plant part." [TO:contributors]
+is_a: TO:0000465 ! mineral and ion content related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:02:53Z
+
+[Term]
+id: TO:0020091
+name: manganese content
+def: "The total manganese ion content measured in a plant or a plant part." [TO:contributors]
+is_a: TO:0000465 ! mineral and ion content related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:02:53Z
+
+[Term]
+id: TO:0020092
+name: copper content
+def: "The total copper ion content measured in a plant or a plant part." [TO:contributors]
+is_a: TO:0000465 ! mineral and ion content related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:02:53Z
+
+[Term]
+id: TO:0020093
+name: nitrogen content
+def: "The total nitrogen content measured in a plant or a plant part." [TO:contributors]
+is_a: TO:0000465 ! mineral and ion content related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:02:53Z
+
+[Term]
+id: TO:0020094
+name: nitrate content
+def: "The total nitrate content measured in a plant or a plant part." [TO:contributors]
+is_a: TO:0020093 ! nitrogen content
+created_by: jaiswalp
+creation_date: 2011-08-19T04:02:53Z
+
+[Term]
+id: TO:0020095
+name: stomatal process related trait
+def: "Trait associated with any of the stomatal opening, closure, conductance, resistance process." [TO:contributors]
+is_a: TO:0000349 ! physiological process related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:06:44Z
+
+[Term]
+id: TO:0020096
+name: mineral and ion transport trait
+def: "Trait associated with directed movement of minerals and ions into, out of, within or between cells." [TO:contributors]
+is_a: TO:0000349 ! physiological process related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:08:23Z
+
+[Term]
+id: TO:0020097
+name: stomatal opening
+def: "A trait to measure the physiological parameters involved in the process of opening of stomatal pores." [GR:pj, TO:contributors]
+is_a: TO:0020095 ! stomatal process related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:09:49Z
+
+[Term]
+id: TO:0020098
+name: nitrate sensitivity
+def: "A trait to measure the sensitivity to the nitrate content in the growth medium." [GR:pj, TO:contributors]
+is_a: TO:0000011 ! nitrogen sensitivity
+created_by: jaiswalp
+creation_date: 2011-08-19T04:11:32Z
+
+[Term]
+id: TO:0020099
+name: nitrate transport
+def: "Trait associated with directed movement of nitrate into, out of, within or between cells." [TO:contributors]
+is_a: TO:0020096 ! mineral and ion transport trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:13:47Z
+
+[Term]
+id: TO:0020100
+name: nitrate uptake
+def: "The total nitrate ion uptake measured in a plant or a plant part." [TO:contributors]
+is_a: TO:0020096 ! mineral and ion transport trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:13:47Z
+
+[Term]
+id: TO:0020101
+name: starch mobilization
+def: "Trait associated with directed movement of starch." [TO:contributors]
+is_a: TO:0020096 ! mineral and ion transport trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:13:47Z
+
+[Term]
+id: TO:0020102
+name: phosphate content
+def: "The total phosphate content measured in a plant or a plant part." [TO:contributors]
+synonym: "phosphate ion content" EXACT []
+is_a: TO:0000465 ! mineral and ion content related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:16:58Z
+
+[Term]
+id: TO:0020103
+name: adventitious root length
+def: "Average maximum length of adventitious root of a plant in a study." [TO:contributors]
+is_a: TO:0000227 ! root length
+created_by: jaiswalp
+creation_date: 2011-08-19T04:18:45Z
+
+[Term]
+id: TO:0020104
+name: adventitious rootless
+def: "Absence of adventitious roots in the plant." [TO:contributors]
+is_a: TO:0000084 ! root number
+created_by: jaiswalp
+creation_date: 2011-08-19T04:19:49Z
+
+[Term]
+id: TO:0020105
+name: CW-cytoplasmic male sterility
+def: "A trait to measure the CW type of ytoplasmic male sterility in plants." [TO:contributors]
+comment: Often measured by abnormal pollen germination.
+is_a: TO:0000580 ! cytoplasmic male sterility
+created_by: jaiswalp
+creation_date: 2011-08-19T04:21:39Z
+
+[Term]
+id: TO:0020106
+name: Indole-3-acetic acid content
+def: "Measures the IAA content in a plant or plant part." [TO:contributors]
+synonym: "IAA content" EXACT []
+synonym: "Indole-3-acetic acid (IAA) content" EXACT []
+is_a: TO:0002672 ! auxin content
+created_by: jaiswalp
+creation_date: 2011-08-19T04:24:06Z
+
+[Term]
+id: TO:0020107
+name: plant cell length
+def: "A trait to measure the length of  a plant cell." [GR:pj]
+is_a: TO:0002683 ! plant cell anatomy and morphology trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:25:39Z
+
+[Term]
+id: TO:0020108
+name: root cortical cell length
+def: "Length of the root epidermal cell length." [GR:pj]
+is_a: TO:0020107 ! plant cell length
+created_by: jaiswalp
+creation_date: 2011-08-19T04:26:36Z
+
+[Term]
+id: TO:0020109
+name: vascular bundle development trait
+def: "Traits associated with observing effects on the development of vascular bundle." [TO:contributors]
+is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000470 ! vascular tissue related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:27:34Z
+
+[Term]
+id: TO:0020110
+name: gynoecium development trait
+def: "Traits associated with observing effects on the development of the gynoecium." [TO:contributors]
+is_a: TO:0000357 ! growth and development trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:29:46Z
+
+[Term]
+id: TO:0020111
+name: ovary development trait
+def: "Traits associated with observing effects on the development of the ovary." [TO:contributors]
+is_a: TO:0020110 ! gynoecium development trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:30:47Z
+
+[Term]
+id: TO:0020112
+name: phosphorus toxicity
+def: "Accumulation of phosphate level in a plant or a plant part at toxic level." [TO:contributors]
+is_a: TO:0000102 ! phosphorus sensitivity
+created_by: jaiswalp
+creation_date: 2011-08-19T04:31:40Z
+
+[Term]
+id: TO:0020114
+name: shoot phosphorus content
+def: "Amount of phosphorus in the shoot." [TO:contributors]
+is_a: TO:0001024 ! phosphorus content
+created_by: jaiswalp
+creation_date: 2011-08-19T04:35:33Z
+
+[Term]
+id: TO:0020115
+name: chlorophyll fluorescence quenching
+def: "The process to maintain the balance between dissipation and utilization of light energy to minimize generation of oxidizing molecules." [TO:contributors]
+is_a: TO:0000349 ! physiological process related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:36:34Z
+
+[Term]
+id: TO:0020116
+name: photochemical quenching
+def: "The process to maintain the balance between dissipation and utilization of light energy to minimize generation of oxidizing molecules under light conditions." [GR:pj, TO:contributors]
+is_a: TO:0000349 ! physiological process related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:37:43Z
+
+[Term]
+id: TO:0020117
+name: non photochemical quenching
+def: "The process to maintain the balance between dissipation and utilization of light energy to minimize generation of oxidizing molecules under no light conditions." [GR:pj, TO:contributors]
+is_a: TO:0000349 ! physiological process related trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:37:43Z
+
+[Term]
+id: TO:0020118
+name: neoxanthin content
+def: "The neoxanthin content in a plant or plant part." [TO:contributors]
+is_a: TO:0000301 ! xanthophyll content
+created_by: jaiswalp
+creation_date: 2011-08-19T04:39:32Z
+
+[Term]
+id: TO:0020119
+name: violaxanthin content
+def: "The violaxanthin content in a plant or plant part." [TO:contributors]
+is_a: TO:0000301 ! xanthophyll content
+created_by: jaiswalp
+creation_date: 2011-08-19T04:40:04Z
+
+[Term]
+id: TO:0020120
+name: involucral bract spine presence
+def: "A trait to observe for spines on involucral bracts." [GR:pj]
+synonym: "spines on involucral bracts" EXACT []
+is_a: TO:0000499 ! flower anatomy and morphology trait
+created_by: jaiswalp
+creation_date: 2011-08-19T04:50:17Z
+
+[Term]
+id: TO:0020121
+name: arachnid damage resitance
+def: "An assay to determine the resistance exhibited by a plant or a group of plants (population) in response to arachnids as compared to the susceptible and/or the reference plants of the same species." [GR:pj]
+is_a: TO:0000054 ! animal damage resistance
+created_by: jaiswalp
+creation_date: 2011-08-19T04:55:55Z
+
+[Term]
+id: TO:0020122
+name: two-spotted spider mite resistance
+def: "Causal agent: Tetranychus urticae." [GR:pj, TO:contributors]
+synonym: "red spider mite resistance" EXACT []
+is_a: TO:0020121 ! arachnid damage resitance
+created_by: jaiswalp
+creation_date: 2011-08-19T04:56:56Z
+
+[Term]
+id: TO:0020123
+name: ethanol yield from biomass
+def: "A trait to measure the ethanol yield from the industrial processing of feedstock (biomass)." [GR:pj, TO:contributors]
+comment: Often measured as volume/mass unit used by DOE-USA. it's also consistent with the common measure of fuel ethanol (volume, not mass) and common measure of biomass.  Please note that ethanol yield in liters per megagram would depend on both the ethanol conversion process and the composition (not just the quantity) of the biomass. And in most cases (at least for breeding), it probably would be predicted ethanol yield instead of ethanol yield that is directly measured from a pretreatment and fermentation process.
+is_a: TO:0000371 ! yield trait
+created_by: jaiswalp
+creation_date: 2011-08-19T05:09:40Z
 
 [Typedef]
 id: part_of
