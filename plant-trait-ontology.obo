@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 19:08:2011 17:13
+date: 09:12:2011 02:38
 saved-by: jaiswalp
-auto-generated-by: OBO-Edit 2.1-beta18
+auto-generated-by: OBO-Edit 2.1-rc3
 default-namespace: plant_trait_ontology
 
 [Term]
@@ -1911,7 +1911,8 @@ is_a: TO:0000176 ! macronutrient sensitivity
 [Term]
 id: TO:0000249
 name: leaf senescence
-def: "A measure of aging of leaf. Rapid senescence of leaves can be detrimental to yield." [ICIS:1015, IRRI:SES]
+def: "A measure of aging of leaf." [ICIS:1015, IRRI:SES]
+comment: Rapid senescence of leaves can be detrimental to yield. Can be measured by loss of normal leaf color. In triticeae it is often measured on the flag or the second from top leaf.
 synonym: "Foilar senescence" RELATED []
 synonym: "LFSNS" RELATED []
 synonym: "Sen" RELATED []
@@ -2706,7 +2707,7 @@ is_a: TO:0000261 ! insect damage resistance
 [Term]
 id: TO:0000349
 name: physiological process related trait
-def: "Trait to assay the physiological processes in a plant" [GR:pj]
+def: "Trait to assay the physiological processes in a plant." [GR:pj]
 is_a: TO:0000283 ! biological process related trait
 
 [Term]
@@ -7630,6 +7631,101 @@ synonym: "INCLPROXNDCL" RELATED []
 is_a: TO:0000426 ! internode color
 
 [Term]
+id: TO:0012001
+name: leaf area index
+def: "Leaf Area Index (LAI) is the ratio of total upper leaf surface of vegetation divided by the surface area of the land on which the vegetation grows." [web:wikipedia]
+comment: LAI is used to predict photosynthetic primary production and as a reference tool for crop growth. Measured on the plant canopy only.
+is_a: TO:0000349 ! physiological process related trait
+created_by: jaiswalp
+creation_date: 2011-12-09T01:27:39Z
+
+[Term]
+id: TO:0012002
+name: chlorophyll content on intact leaf
+is_a: TO:0000495 ! chlorophyll content
+created_by: jaiswalp
+creation_date: 2011-12-09T01:52:17Z
+
+[Term]
+id: TO:0012003
+name: chlorophyll content in an extract
+is_a: TO:0000495 ! chlorophyll content
+created_by: jaiswalp
+creation_date: 2011-12-09T01:54:09Z
+
+[Term]
+id: TO:0012004
+name: quantum yield
+synonym: "QY" RELATED []
+is_a: TO:0012006 ! fluorescence related trait
+created_by: jaiswalp
+creation_date: 2011-12-09T02:09:21Z
+
+[Term]
+id: TO:0012005
+name: chlorophyll fluorescence induction kinetics
+synonym: "OJIP" RELATED []
+is_a: TO:0012006 ! fluorescence related trait
+created_by: jaiswalp
+creation_date: 2011-12-09T02:09:52Z
+
+[Term]
+id: TO:0012006
+name: fluorescence related trait
+is_a: TO:0000349 ! physiological process related trait
+created_by: jaiswalp
+creation_date: 2011-12-09T02:12:03Z
+
+[Term]
+id: TO:0012007
+name: quantum yield determined by the light curve
+is_a: TO:0012004 ! quantum yield
+created_by: jaiswalp
+creation_date: 2011-12-09T02:13:21Z
+
+[Term]
+id: TO:0012008
+name: quantum yield at a given wavelength
+is_a: TO:0012004 ! quantum yield
+created_by: jaiswalp
+creation_date: 2011-12-09T02:16:09Z
+
+[Term]
+id: TO:0012009
+name: continuous fluorescence yield
+synonym: "F<sub>T</sub>" RELATED []
+xref: XX:<new xref>
+is_a: TO:0012006 ! fluorescence related trait
+created_by: jaiswalp
+creation_date: 2011-12-09T02:18:08Z
+
+[Term]
+id: TO:0012010
+name: leaf area duration
+def: "Leaf Area Duration (LAD) is the ratio of total upper leaf surface of vegetation divided by the surface area of the land on which the vegetation grows. Measured over time." [group:Crop Ontology Group]
+synonym: "LAD" RELATED []
+is_a: TO:0000349 ! physiological process related trait
+created_by: jaiswalp
+creation_date: 2011-12-09T02:28:13Z
+
+[Term]
+id: TO:0012011
+name: leaf senescence rate
+def: "Rate of loss of normal leaf color over time." [group:crop ontology group]
+is_a: TO:0000655 ! leaf development trait
+created_by: jaiswalp
+creation_date: 2011-12-09T02:34:15Z
+
+[Term]
+id: TO:0012012
+name: leaf senescence duration
+def: "Time taken to lose normal leaf color." [group:crop ontology roup]
+comment: In grasses often measured for flag or the second leaf from top.
+is_a: TO:0000655 ! leaf development trait
+created_by: jaiswalp
+creation_date: 2011-12-09T02:35:49Z
+
+[Term]
 id: TO:0020001
 name: panicle compactness and shape
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
@@ -8029,7 +8125,7 @@ creation_date: 2011-08-19T01:07:39Z
 [Term]
 id: TO:0020070
 name: beta-glucanase activity trait
-def: "Activity of beta-glucanase ((1,3-1,4)-beta-D-glucan, 4-glucanohydrolase), (EC:3.2.1.73) in the hydrolysis of beta-glucans." [GO:0042972, GO\::0052736, T-CAP:Victoria Corollo Blake]
+def: "Activity of beta-glucanase ((1,3-1,4)-beta-D-glucan, 4-glucanohydrolase), (EC:3.2.1.73) in the hydrolysis of beta-glucans." [GO:0042972, GO:\:0052736, T-CAP:Victoria Corollo Blake]
 is_a: TO:0000599 ! enzyme activity trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:10:26Z
@@ -8406,7 +8502,7 @@ creation_date: 2011-08-19T04:35:33Z
 id: TO:0020115
 name: chlorophyll fluorescence quenching
 def: "The process to maintain the balance between dissipation and utilization of light energy to minimize generation of oxidizing molecules." [TO:contributors]
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0012006 ! fluorescence related trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:36:34Z
 
@@ -8414,7 +8510,7 @@ creation_date: 2011-08-19T04:36:34Z
 id: TO:0020116
 name: photochemical quenching
 def: "The process to maintain the balance between dissipation and utilization of light energy to minimize generation of oxidizing molecules under light conditions." [GR:pj, TO:contributors]
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0012006 ! fluorescence related trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:37:43Z
 
@@ -8422,7 +8518,8 @@ creation_date: 2011-08-19T04:37:43Z
 id: TO:0020117
 name: non photochemical quenching
 def: "The process to maintain the balance between dissipation and utilization of light energy to minimize generation of oxidizing molecules under no light conditions." [GR:pj, TO:contributors]
-is_a: TO:0000349 ! physiological process related trait
+synonym: "NPQ" RELATED []
+is_a: TO:0012006 ! fluorescence related trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:37:43Z
 
