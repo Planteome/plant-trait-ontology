@@ -1,7 +1,11 @@
 format-version: 1.2
-date: 16:04:2012 14:53
-saved-by: moorel
+date: 17:04:2012 12:23
+saved-by: cooperl
 auto-generated-by: OBO-Edit 2.1.1-beta7
+subsetdef: Glycine max "Terms used for soybean"
+subsetdef: Solanaceae spp "Terms used for the Solanaceae"
+subsetdef: Triticum aestivum "Terms used for wheat"
+subsetdef: Zea mays "Terms used for maize or corn"
 default-namespace: plant_trait_ontology
 
 [Term]
@@ -125,7 +129,7 @@ is_a: TO:0000247 ! other nutrient sensitivity
 [Term]
 id: TO:0000017
 name: anatomy and morphology related trait
-def: "This category belongs to traits associated with changes in the anatomy or structure of the plant at organ, tissue or cellular level." [GR:pj]
+def: "A plant trait (TO:0000387) associated with changes in the anatomy or structure of the plant at organ, tissue or cellular level." [GR:pj]
 synonym: "plant architecture trait" RELATED []
 synonym: "plant structure trait" RELATED []
 is_a: TO:0000387 ! plant trait
@@ -3003,7 +3007,8 @@ is_a: TO:0000148 ! viral disease resistance
 [Term]
 id: TO:0000387
 name: plant trait
-def: "A measurable or observable characteristic of a plant anatomical entity (PO:0000003) and/or a plant structure development stage (PO:0009012)." [GR:pj, POC:cooperl]
+def: "A measurable or observable characteristic of a plant anatomical entity (PO:0000003), plant structure development stage (PO:0009012), plant cellular component, biological process or molecular function." [GO:0003674, GO:0005575, GO:0008150, GR:pj, POC:cooperl]
+comment: This includes physiological, molecular and biochemical traits as well.
 synonym: "plant phenotype" RELATED []
 synonym: "plant quality" RELATED []
 created_by: jaiswalp
@@ -5518,6 +5523,7 @@ id: TO:0000737
 name: plant aspect
 def: "An anatomy and morphology related trait (TO:0000017) that is a qualitative score of the visual appeal (ideotype) of the whole plant (PO:0000003)." [TO:curators]
 comment: Includes visual scoring of plant characteristics such as plant height (TO:0000207), uniformity of plants, plant damage by diseases and insects and lodging incidence (TO:0000068).
+subset: Zea mays
 xref: OBO_SF_TO:3518574
 is_a: TO:0000017 ! anatomy and morphology related trait
 created_by: moorel
@@ -6571,7 +6577,7 @@ is_a: TO:0002714 ! plastid development trait
 [Term]
 id: TO:0002716
 name: auricle pubescence
-def: "Extent of pubescence  (presence of hairs)  on the auricle." [GR:pj]
+def: "Extent of pubescence (presence of hairs) on the auricle." [GR:pj]
 synonym: "AUPUBES" RELATED []
 is_a: TO:0002717 ! auricle morphology and anatomy trait
 
