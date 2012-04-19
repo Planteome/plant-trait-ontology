@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 17:04:2012 12:23
-saved-by: cooperl
+date: 19:04:2012 10:58
+saved-by: moorel
 auto-generated-by: OBO-Edit 2.1.1-beta7
 subsetdef: Glycine max "Terms used for soybean"
 subsetdef: Solanaceae spp "Terms used for the Solanaceae"
@@ -129,7 +129,8 @@ is_a: TO:0000247 ! other nutrient sensitivity
 [Term]
 id: TO:0000017
 name: anatomy and morphology related trait
-def: "A plant trait (TO:0000387) associated with changes in the anatomy or structure of the plant at organ, tissue or cellular level." [GR:pj]
+def: "A plant trait (TO:0000387) which is associated with the anatomy or morphology of a plant anatomical entity (PO:0000003) or one or more constituent cellular components (GO:0005575) contained therein." [GO:0005575, GR:pj, PO:0000003, PO:0000034, PO:0009002, PO:0009007, PO:0009008, PO:0009010, PO:0009011, PO:0025117, PO:0025161]
+comment: Includes traits of plant structures (PO:0009011) such as plant cell (PO:0009002), plant organ (PO:0009008), portion of plant tissue (PO:0009007), vascular system (PO:0000034), whole plant (PO:0000003) and seed (PO:0009010) as well as those of plant anatomical spaces (PO:0025117), portions of plant substance (PO:0025161).
 synonym: "plant architecture trait" RELATED []
 synonym: "plant structure trait" RELATED []
 is_a: TO:0000387 ! plant trait
@@ -3007,7 +3008,7 @@ is_a: TO:0000148 ! viral disease resistance
 [Term]
 id: TO:0000387
 name: plant trait
-def: "A measurable or observable characteristic of a plant anatomical entity (PO:0000003), plant structure development stage (PO:0009012), plant cellular component, biological process or molecular function." [GO:0003674, GO:0005575, GO:0008150, GR:pj, POC:cooperl]
+def: "A measurable or observable characteristic of a cellular component (GO:0005575), biological process (GO:0008150) or molecular function (GO:0003674) that is part of, or has participant a plant anatomical entity (PO:0000003)and or a plant structure development stage (PO:0009012)." [GO:0003674, GO:0005575, GO:0008150, GR:pj, POC:cooperl]
 comment: This includes physiological, molecular and biochemical traits as well.
 synonym: "plant phenotype" RELATED []
 synonym: "plant quality" RELATED []
@@ -5519,6 +5520,14 @@ def: "The time between the initiation of two leaves on the shoot apical meristem
 is_a: TO:0000655 ! leaf development trait
 
 [Term]
+id: TO:0000736
+name: plant organ trait 
+def: "An anatomy and morphology trait (TO:0000017) which is associated with the anatomy or structure of a plant organ (PO:0009008)." [PO:0009008, TO:curators]
+is_a: TO:0000017 ! anatomy and morphology related trait
+created_by: moorel
+creation_date: 2012-04-19T10:36:57Z
+
+[Term]
 id: TO:0000737
 name: plant aspect
 def: "An anatomy and morphology related trait (TO:0000017) that is a qualitative score of the visual appeal (ideotype) of the whole plant (PO:0000003)." [TO:curators]
@@ -5528,6 +5537,86 @@ xref: OBO_SF_TO:3518574
 is_a: TO:0000017 ! anatomy and morphology related trait
 created_by: moorel
 creation_date: 2012-04-16T02:18:03Z
+
+[Term]
+id: TO:0000738
+name: plant axis trait 
+def: "A plant organ trait (TO:0000736) which is associated the anatomy or structure of a plant axis (PO:0025004)." [PO:0025004, TO:curators]
+is_a: TO:0000736 ! plant organ trait 
+created_by: moorel
+creation_date: 2012-04-19T10:38:30Z
+
+[Term]
+id: TO:0000739
+name: shoot axis trait 
+def: "A plant axis trait (TO:0000738) which is associated with the anatomy or structure of a shoot axis (PO:0025029)." [PO:0025029, TO:curators]
+is_a: TO:0000738 ! plant axis trait 
+created_by: moorel
+creation_date: 2012-04-19T10:40:33Z
+
+[Term]
+id: TO:0000740
+name: branch trait 
+def: "A shoot axis trait (TO:0000739) which is associated with the anatomy or structure of a branch (PO:0025073)." [PO:0025073, TO:curators]
+is_a: TO:0000739 ! shoot axis trait 
+created_by: moorel
+creation_date: 2012-04-19T10:42:49Z
+
+[Term]
+id: TO:0000741
+name: tuber trait 
+def: "A branch trait (TO:0000739) which is associated with the anatomy or structure of a tuber (PO:0004543)." [PO:0004543, TO:curators]
+is_a: TO:0000740 ! branch trait 
+created_by: moorel
+creation_date: 2012-04-19T10:45:11Z
+
+[Term]
+id: TO:0000742
+name: subterranean tuber trait 
+def: "A tuber trait (TO:0000741) which is associated with the anatomy or structure of a subterranean tuber (PO:0004547)." [PO:0004547, TO:curators]
+is_a: TO:0000741 ! tuber trait 
+created_by: moorel
+creation_date: 2012-04-19T10:46:10Z
+
+[Term]
+id: TO:0000743
+name: tuber shape
+def: "A subterranean tuber trait (TO:0000742) which is associated with the shape of a subterranean tuber (PO:0004547)." [PO:0004547, TO:curators]
+synonym: "tuber shape" RELATED []
+xref: PATO:0000052
+is_a: TO:0000742 ! subterranean tuber trait 
+created_by: moorel
+creation_date: 2012-04-19T10:48:44Z
+
+[Term]
+id: TO:0000744
+name: tuber size
+def: "A subterranean tuber trait (TO:0000742) which is associated with the size of a subterranean tuber (PO:0004547)." [PO:0004547, TO:curators]
+synonym: "tuber size" RELATED []
+xref: PATO:0000117
+is_a: TO:0000742 ! subterranean tuber trait 
+created_by: moorel
+creation_date: 2012-04-19T10:51:20Z
+
+[Term]
+id: TO:0000745
+name: tuber appearance
+def: "A subterranean tuber trait (TO:0000742) which is associated with the appearance of a subterranean tuber (PO:0004547)." [PO:0004547, TO:curators]
+comment: A 1-9 scale is used to score the overall appearance of the tuber, with 1 the lowest score (very poor) and 9 the highest (excellent).
+synonym: "tuber appearance" RELATED []
+is_a: TO:0000742 ! subterranean tuber trait 
+created_by: moorel
+creation_date: 2012-04-19T10:54:11Z
+
+[Term]
+id: TO:0000746
+name: tuber mass
+def: "A subterranean tuber trait (TO:0000742) which is associated with the mass of a subterranean tuber (PO:0004547)." [PO:0004547, TO:curators]
+synonym: "tuber mass" RELATED []
+xref: PATO:0000125
+is_a: TO:0000742 ! subterranean tuber trait 
+created_by: moorel
+creation_date: 2012-04-19T10:56:34Z
 
 [Term]
 id: TO:0001000
