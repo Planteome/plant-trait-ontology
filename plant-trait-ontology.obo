@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 23:04:2012 14:26
-saved-by: moorel
-auto-generated-by: OBO-Edit 2.1.1-beta7
+date: 24:04:2012 17:03
+saved-by: cooperl
+auto-generated-by: OBO-Edit 2.1.1-beta9
 subsetdef: Glycine max "Terms used for soybean"
 subsetdef: Solanaceae spp "Terms used for the Solanaceae"
 subsetdef: Triticum aestivum "Terms used for wheat"
@@ -128,7 +128,7 @@ is_a: TO:0000247 ! other nutrient sensitivity
 
 [Term]
 id: TO:0000017
-name: anatomy and morphology related trait
+name: anatomy and morphology trait
 def: "A plant trait (TO:0000387) which is associated with the anatomy or morphology of a plant anatomical entity (PO:0000003) or one or more constituent cellular components (GO:0005575) contained therein." [GO:0005575, GR:pj, PO:0000003, POC:cooperl]
 comment: Includes traits of plant structures (PO:0009011) such as plant cell (PO:0009002), plant organ (PO:0009008), portion of plant tissue (PO:0009007), vascular system (PO:0000034), whole plant (PO:0000003) and seed (PO:0009010), as well as those of plant anatomical spaces (PO:0025117) and portions of plant substance (PO:0025161).
 synonym: "plant architecture trait" RELATED []
@@ -563,7 +563,7 @@ name: shoot system anatomy and morphology trait
 def: "An anatomy and morphology trait (TO:0000017) which is associated with the anatomy or morphology of a shoot system (PO:0009006)." [GR:pj, PO:0009006, POC:cooperl]
 comment: Does not include traits on fruit, parts of fruit and adventitious roots whcih are borne on the shoot.
 xref: OBO_SF_TO:3520088
-is_a: TO:0000017 ! anatomy and morphology related trait
+is_a: TO:0000017 ! anatomy and morphology trait
 created_by: jaiswalp
 
 [Term]
@@ -1422,7 +1422,7 @@ is_a: TO:0000387 ! plant trait
 id: TO:0000184
 name: seed anatomy and morphology trait
 def: "Traits associated with changes in the anatomy or structure of the seed and its parts." [GR:pj]
-is_a: TO:0000017 ! anatomy and morphology related trait
+is_a: TO:0000017 ! anatomy and morphology trait
 
 [Term]
 id: TO:0000185
@@ -3639,7 +3639,7 @@ is_a: TO:0000653 ! seed development trait
 id: TO:0000470
 name: vascular tissue related trait
 def: "Traits associated with changes in the anatomy or structure of the vascular tissue and its parts." [GR:pj]
-is_a: TO:0000017 ! anatomy and morphology related trait
+is_a: TO:0000017 ! anatomy and morphology trait
 
 [Term]
 id: TO:0000471
@@ -5527,18 +5527,18 @@ id: TO:0000736
 name: plant organ anatomy and morphology trait
 def: "An anatomy and morphology trait (TO:0000017) which is associated with a plant organ (PO:0009008)." [PO:0009008, POC:cooperl]
 xref: OBO_SF_TO:3519674
-is_a: TO:0000017 ! anatomy and morphology related trait
+is_a: TO:0000017 ! anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-04-19T10:36:57Z
 
 [Term]
 id: TO:0000737
 name: plant aspect
-def: "An anatomy and morphology related trait (TO:0000017) that is a qualitative score of the visual appeal (ideotype) of the whole plant (PO:0000003)." [TO:curators]
+def: "A stature or vigor trait (TO:0000133) that is a qualitative score of the visual appeal (ideotype) of the whole plant (PO:0000003)." [TO:curators]
 comment: Includes visual scoring of plant characteristics such as plant height (TO:0000207), uniformity of plants, plant damage by diseases and insects and lodging incidence (TO:0000068).
 subset: Zea mays
 xref: OBO_SF_TO:3518574
-is_a: TO:0000017 ! anatomy and morphology related trait
+is_a: TO:0000133 ! stature or vigor trait
 created_by: moorel
 creation_date: 2012-04-16T02:18:03Z
 
@@ -5582,6 +5582,7 @@ creation_date: 2012-04-19T10:45:11Z
 id: TO:0000742
 name: subterranean tuber anatomy and morphology trait
 def: "A tuber anatomy and morphology trait (TO:0000741) which is associated with a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
+subset: Solanaceae spp
 xref: OBO_SF_TO:3519674
 is_a: TO:0000741 ! tuber anatomy and morphology trait
 created_by: moorel
@@ -5591,6 +5592,7 @@ creation_date: 2012-04-19T10:46:10Z
 id: TO:0000743
 name: subterranean tuber shape
 def: "A subterranean tuber anatomy and morphology trait (TO:0000742) which is associated with the shape of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
+subset: Solanaceae spp
 synonym: "tuber shape" RELATED []
 xref: OBO_SF_TO:3519950
 xref: PATO:0000052
@@ -5602,6 +5604,7 @@ creation_date: 2012-04-19T10:48:44Z
 id: TO:0000744
 name: subterranean tuber size
 def: "A subterranean tuber anatomy and morphology trait (TO:0000742) which is associated with the size of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
+subset: Solanaceae spp
 synonym: "tuber size" RELATED []
 xref: OBO_SF_TO:3519950
 xref: PATO:0000117
@@ -5614,6 +5617,7 @@ id: TO:0000745
 name: subterranean tuber appearance
 def: "A subterranean tuber anatomy and morphology trait (TO:0000742) which is associated with the appearance of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
 comment: A 1-9 scale is used to score the overall appearance of the tuber, with 1 the lowest score (very poor) and 9 the highest (excellent).
+subset: Solanaceae spp
 synonym: "tuber appearance" RELATED []
 xref: OBO_SF_TO:3519950
 is_a: TO:0000742 ! subterranean tuber anatomy and morphology trait
@@ -5624,6 +5628,7 @@ creation_date: 2012-04-19T10:54:11Z
 id: TO:0000746
 name: subterranean tuber mass
 def: "A subterranean tuber anatomy and morphology trait (TO:0000742) which is associated with the mass of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
+subset: Solanaceae spp
 synonym: "tuber mass" RELATED []
 xref: OBO_SF_TO:3519950
 xref: PATO:0000125
@@ -6069,7 +6074,7 @@ name: fruit structure trait
 def: "Traits associated with changes in the anatomy or structure of the fruit and its parts." [GR:pj]
 synonym: "fruit anatomy and morphology trait" RELATED []
 synonym: "fruit morphology" RELATED []
-is_a: TO:0000017 ! anatomy and morphology related trait
+is_a: TO:0000017 ! anatomy and morphology trait
 
 [Term]
 id: TO:0002630
@@ -6456,7 +6461,7 @@ is_a: TO:0002683 ! plant cell anatomy and morphology trait
 id: TO:0002683
 name: plant cell anatomy and morphology trait
 def: "Traits associated with changes in the anatomy or structure of the plant cell and its parts." [GR:pj]
-is_a: TO:0000017 ! anatomy and morphology related trait
+is_a: TO:0000017 ! anatomy and morphology trait
 
 [Term]
 id: TO:0002684
@@ -6657,7 +6662,7 @@ def: "Trait(s) associated with phenotypes observed for abnormal development of o
 synonym: "cell organelle development trait" RELATED []
 synonym: "organelle biogenesis trait" NARROW []
 synonym: "organelle structure trait" NARROW []
-is_a: TO:0000017 ! anatomy and morphology related trait
+is_a: TO:0000017 ! anatomy and morphology trait
 
 [Term]
 id: TO:0002714
