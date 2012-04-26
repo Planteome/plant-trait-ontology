@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 25:04:2012 14:46
+date: 26:04:2012 12:40
 saved-by: moorel
-auto-generated-by: OBO-Edit 2.1.1-beta7
+auto-generated-by: OBO-Edit 2.1.1-beta9
 subsetdef: Glycine max "Terms used for soybean"
 subsetdef: Solanaceae spp "Terms used for the Solanaceae"
 subsetdef: Triticum aestivum "Terms used for wheat"
@@ -1884,10 +1884,10 @@ is_a: TO:0000250 ! vigor related trait
 [Term]
 id: TO:0000244
 name: coleoptile color
-def: "Measure of color of the coleoptile in the germinating seedling." [GR:pj]
+def: "A coleoptile anatomy and morphology trait (TO:0000753) which is associated with the color of a coleoptile (PO:0020033)." [GR:pj, PO:0020033, POC:cooperl]
 synonym: "COLCL" RELATED []
-is_a: TO:0000064 ! embryo related trait
-is_a: TO:0000736 ! plant organ anatomy and morphology trait
+xref: PATO:0000014
+is_a: TO:0000753 ! coleoptile anatomy and morphology trait 
 
 [Term]
 id: TO:0000245
@@ -3255,7 +3255,7 @@ id: TO:0000419
 name: vascular leaf anatomy and morphology trait
 def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with a vascular leaf (PO:0009025)." [GR:pj, PO:0009025, POC:cooperl]
 xref: OBO_SF_ID:3521426
-is_a: TO:0000748 ! leaf anatomy and morphology trait 
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 created_by: jaiswalp
 
 [Term]
@@ -5639,7 +5639,7 @@ creation_date: 2012-04-19T10:56:34Z
 
 [Term]
 id: TO:0000747
-name: phyllome anatomy and morphology trait 
+name: phyllome anatomy and morphology trait
 def: "A plant organ anatomy and morphology trait (TO:0000736) which is associated with a phyllome (PO:0006001)." [PO:0006001, POC:cooperl]
 xref: OBO_SF_ID:3521426
 is_a: TO:0000736 ! plant organ anatomy and morphology trait
@@ -5648,10 +5648,10 @@ creation_date: 2012-04-25T01:09:12Z
 
 [Term]
 id: TO:0000748
-name: leaf anatomy and morphology trait 
+name: leaf anatomy and morphology trait
 def: "A phyllome anatomy and morphology trait (TO:0000747) which is associated with a leaf (PO:0025034)." [PO:0025034, POC:cooperl]
 xref: OBO_SF_ID:3521426
-is_a: TO:0000747 ! phyllome anatomy and morphology trait 
+is_a: TO:0000747 ! phyllome anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-04-25T01:16:59Z
 
@@ -5669,7 +5669,7 @@ id: TO:0000750
 name: cotyledon color
 def: "A cotyledon anatomy and morphology trait (TO:0000749) which is associated with the shape of a cotyledon(PO:0020030)." [PO:0020030, POC:cooperl]
 xref: OBO_SF_ID:3521436
-xref: PATO:0000052
+xref: PATO:0000014
 is_a: TO:0000749 ! cotyledon anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-04-25T01:38:00Z
@@ -5693,6 +5693,14 @@ xref: PATO:0000117
 is_a: TO:0000749 ! cotyledon anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-04-25T01:47:23Z
+
+[Term]
+id: TO:0000753
+name: coleoptile anatomy and morphology trait 
+def: "A plant organ anatomy and morphology trait (TO:0000736) which is associated with a coleoptile (PO:0020033)." [PO:0020033, POC:cooperl]
+is_a: TO:0000736 ! plant organ anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-04-26T12:12:50Z
 
 [Term]
 id: TO:0001000
@@ -5740,8 +5748,9 @@ is_a: TO:0000084 ! root number
 [Term]
 id: TO:0001007
 name: coleoptile length
-def: "Measurement of the length of the coleoptile in the germinating seed." [GR:pj]
-is_a: TO:0000736 ! plant organ anatomy and morphology trait
+def: "A coleoptile anatomy and morphology trait (TO:0000753) which is associated with the length of a coleoptile (PO:0020033)." [GR:pj, PO:0020033, POC:cooperl]
+xref: PATO:0000122
+is_a: TO:0000753 ! coleoptile anatomy and morphology trait 
 
 [Term]
 id: TO:0001008
