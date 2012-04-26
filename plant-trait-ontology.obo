@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 26:04:2012 13:03
+date: 26:04:2012 13:44
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.1.1-beta9
 subsetdef: Glycine max "Terms used for soybean"
@@ -4130,11 +4130,12 @@ is_a: TO:0000493 ! leaf composition trait
 [Term]
 id: TO:0000544
 name: mesocotyl length
-def: "The length of the mesocotyl." [GR:pj]
+def: "A mesocotyl anatomy and morphology trait (TO:0000758) which is associated with the length of a mesocotyl (PO:0020037)." [GR:pj, PO:0020037, POC:cooperl]
 synonym: "MCTLG" RELATED []
+xref: PATO:0000122
 is_a: TO:0000064 ! embryo related trait
-is_a: TO:0000077 ! shoot system anatomy and morphology trait
 is_a: TO:0000620 ! embryo development trait
+is_a: TO:0000758 ! mesocotyl anatomy and morphology trait
 
 [Term]
 id: TO:0000545
@@ -5703,6 +5704,55 @@ xref: OBO_SF_ID:3521755
 is_a: TO:0000736 ! plant organ anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-04-26T12:12:50Z
+
+[Term]
+id: TO:0000754
+name: cardinal organ part anatomy and morphology trait
+def: "An anatomy and morphology trait (TO:0000017) which is associated with a cardinal organ part (PO:0025001)." [PO:0025001, POC:cooperl]
+is_a: TO:0000017 ! anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-04-26T13:09:13Z
+
+[Term]
+id: TO:0000755
+name: shoot internode anatomy and morphology trait
+def: "A cardinal organ part anatomy and morphology trait (TO:0000754) which is associated with a shoot internode (PO:0005005)." [PO:0005005, POC:cooperl]
+is_a: TO:0000754 ! cardinal organ part anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-04-26T13:12:37Z
+
+[Term]
+id: TO:0000756
+name: stem internode anatomy and morphology trait
+def: "A shoot internode anatomy and morphology trait (TO:0000755) which is associated with a stem internode (PO:0020142)." [PO:0020142, POC:cooperl]
+is_a: TO:0000755 ! shoot internode anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-04-26T13:17:31Z
+
+[Term]
+id: TO:0000757
+name: hypocotyl anatomy and morphology trait
+def: "A stem internode anatomy and morphology trait (TO:0000756) which is associated with a hypocotyl (PO:0020100)." [PO:0020100, POC:cooperl]
+is_a: TO:0000756 ! stem internode anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-04-26T13:21:05Z
+
+[Term]
+id: TO:0000758
+name: mesocotyl anatomy and morphology trait
+def: "A stem internode anatomy and morphology trait (TO:0000756) which is associated with a mesocotyl (PO:0020037)." [PO:0020037, POC:cooperl]
+is_a: TO:0000756 ! stem internode anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-04-26T13:30:24Z
+
+[Term]
+id: TO:0000759
+name: hypocotyl color
+def: "A hypocotyl anatomy and morphology trait (TO:0000757) which is associated with the color of a hypocotyl (PO:0020100)." [PO:0020100, POC:cooperl]
+xref: PATO:0000014
+is_a: TO:0000757 ! hypocotyl anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-04-26T13:41:13Z
 
 [Term]
 id: TO:0001000
@@ -7701,8 +7751,9 @@ creation_date: 2010-10-25T05:34:19Z
 [Term]
 id: TO:0006065
 name: hypocotyl length
-def: "Length of the hypocotyl." [GR:Karthik]
-is_a: TO:0000077 ! shoot system anatomy and morphology trait
+def: "A hypocotyl anatomy and morphology trait (TO:0000757) which is associated with the length of a hypocotyl (PO:0020100)." [GR:Karthik, PO:0020100, POC:cooperl]
+xref: PATO:0000122
+is_a: TO:0000757 ! hypocotyl anatomy and morphology trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:36:01Z
 
