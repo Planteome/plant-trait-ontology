@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 03:05:2012 13:51
+date: 04:05:2012 13:55
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.1.1-beta9
 subsetdef: Glycine max "Terms used for soybean"
@@ -538,11 +538,11 @@ is_a: TO:0000080 ! micronutrient sensitivity
 
 [Term]
 id: TO:0000074
-name: blast disease
+name: blast disease resistance
 def: "Causal agent: Magnaporthe grisea." [GR:pj]
-synonym: "blast disease resistance" RELATED []
-synonym: "blast disease susceptibility" RELATED []
-synonym: "BLRS" RELATED []
+synonym: "blast disease resistance trait" EXACT []
+synonym: "blast disease susceptibility" NARROW []
+xref: OBO_SF_ID:3523493
 is_a: TO:0000439 ! fungal disease resistance
 
 [Term]
@@ -1359,7 +1359,7 @@ comment: Symptoms: lesions usually start near the leaf tips or leaf margins or b
 synonym: "BB" RELATED []
 synonym: "BBRS" RELATED []
 synonym: "leaf blight" RELATED []
-is_a: TO:0000315 ! bacterial disease resistance
+is_a: TO:0000770 ! bacterial blight disease resistance
 
 [Term]
 id: TO:0000176
@@ -1963,7 +1963,8 @@ name: sheath blight disease resistance
 def: "Causal agent: Rhizoctonia solani. Symptom: Grayish-green lesions may enlarge and coalesce with other lesions, mostly on lower leaf sheaths, but occasionally on the leaves." [IRRI:SES]
 synonym: "ShB" RELATED []
 synonym: "SHBTRS" RELATED []
-is_a: TO:0000439 ! fungal disease resistance
+xref: OBO_SF_ID:3523487
+is_a: TO:0000664 ! fungal blight disease resistance
 
 [Term]
 id: TO:0000256
@@ -3627,7 +3628,7 @@ name: leaf blast disease resistance
 def: "Causal agent: Magnaporthe grisea. Symptoms: Can affect either or both the leaf and panicles." [GR:pj, IRRI:SES]
 synonym: "Bl" RELATED []
 synonym: "LFBLRS" RELATED []
-is_a: TO:0000074 ! blast disease
+is_a: TO:0000074 ! blast disease resistance
 
 [Term]
 id: TO:0000469
@@ -3694,7 +3695,7 @@ name: panicle blast disease resistance
 def: "Causal agent: Magnaporthe grisea (Pyricularia oryzae). Symptoms are dark necrotic lesions covering partially or completely around the panicle base (node) or the uppermost internode or the lower part." [GR:pj, ICIS:1119, IRRI:SES]
 synonym: "PB" RELATED []
 synonym: "PNBLRS" RELATED []
-is_a: TO:0000074 ! blast disease
+is_a: TO:0000074 ! blast disease resistance
 
 [Term]
 id: TO:0000478
@@ -5007,16 +5008,17 @@ relationship: part_of TO:0000329 ! tillering ability
 
 [Term]
 id: TO:0000662
-name: Barley fusarium head blight resistance
+name: barley fusarium head blight resistance
 def: "Caused by Fusarium graminearum Schwabe, that affects the quality and yield of barley (Hordeum vulgare L.) grain." [GR:pj]
 synonym: "Hv_FUSHEADBTRS" RELATED []
 is_a: TO:0000664 ! fungal blight disease resistance
 
 [Term]
 id: TO:0000663
-name: Wheat fusarium head blight resistance
+name: wheat fusarium head blight resistance
 def: "Caused by Fusarium graminearum Schwabe (telomorph: Gibberella zeae), in the USA and Canada. It causes severe yield and quality losses in wheat (Triticum aestivum L.)." [GR:pj]
 synonym: "Ta_FUSHEADBTRS" RELATED []
+xref: OBO_SF_ID:3523496
 is_a: TO:0000664 ! fungal blight disease resistance
 
 [Term]
@@ -5775,9 +5777,10 @@ creation_date: 2012-04-30T13:15:20Z
 id: TO:0000761
 name: seedling hypocotyl green with bronze band
 def: "A seedling hypocotyl color trait (TO:0000759) where a hypocotyl (PO:0020100) is observed to have the color green with a bronze band." [PATO:0000320, PO:0020100, POC:cooperl]
-comment: Refers to bronze
+comment: Refers to bronze (PATO:0002363).
 xref: PATO:0000014
 xref: PATO:0000320
+xref: PATO:0002363
 is_a: TO:0000759 ! seedling hypocotyl color
 created_by: moorel
 creation_date: 2012-04-30T13:16:51Z
@@ -5855,6 +5858,33 @@ comment: Use this term to describe traits for a seedling hypocotyl (PO:002529; a
 is_a: TO:0000757 ! hypocotyl anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-05-03T12:51:59Z
+
+[Term]
+id: TO:0000770
+name: bacterial blight disease resistance
+def: "A bacterial disease resistance (TO:0000315) that resists bacterial blight disease." [POC:cooperl]
+xref: OBO_SF_ID:TO\:0000315
+is_a: TO:0000315 ! bacterial disease resistance
+created_by: moorel
+creation_date: 2012-05-04T13:30:57Z
+
+[Term]
+id: TO:0000771
+name: embryo hypocotyl anatomy and morphology trait 
+def: "A hypocotyl anatomy and morphology trait (TO:0000757) which is associated with an embryo hypocotyl (PO:0025290)." [PO:0025290, POC:cooperl]
+comment: Use this term to describe traits for embryo hypocotyl (A hypocotyl (PO:0020100) that is part of a plant embryo (PO:0009009)).
+is_a: TO:0000757 ! hypocotyl anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-05-04T13:47:12Z
+
+[Term]
+id: TO:0000772
+name: seedling mesocotyl anatomy and morphology trait
+def: "A mesocotyl anatomy and morphology trait (TO:0000758) which is associated with a seedling mesocotyl (PO:0025295)." [PO:0025295, POC:cooperl]
+comment: Use this term to descride traits for seedling mesocotyl (PO:0025295: A seedling mesocotyl is an elongation of and embryonic mesocotyl that is part of a whole plant in the seedling phase).
+is_a: TO:0000758 ! mesocotyl anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-05-04T13:52:34Z
 
 [Term]
 id: TO:0001000
@@ -8151,7 +8181,8 @@ is_a: TO:0000664 ! fungal blight disease resistance
 
 [Term]
 id: TO:0020015
-name: Sorghum leaf blight resistance
+name: sorghum leaf blight resistance
+xref: OBO_SF_ID:3523495
 is_a: TO:0000664 ! fungal blight disease resistance
 
 [Term]
