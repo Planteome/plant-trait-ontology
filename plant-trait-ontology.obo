@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:05:2012 13:19
+date: 11:05:2012 13:33
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.1.1-beta9
 subsetdef: Glycine max "Terms used for soybean"
@@ -1600,11 +1600,12 @@ created_by: jaiswalp
 [Term]
 id: TO:0000207
 name: plant height
-def: "Actual measurement of plant height from soil surface to the highest point in plant as identified in the study." [ICIS:1006, IRRI:SES]
+def: "A stature and vigor trait (TO:0000133) which is associated with the height of a whole plant (PO:0000003)." [ICIS:1006, IRRI:SES, PO:0000003, POC:cooperl]
 synonym: "Ht" RELATED []
 synonym: "PTHT" RELATED []
 synonym: "shoot height" RELATED []
-is_a: TO:0000077 ! shoot system anatomy and morphology trait
+xref: OBO_SF_ID:3525898
+xref: PATO:0000119
 is_a: TO:0000171 ! height related trait
 
 [Term]
@@ -5343,8 +5344,10 @@ is_a: TO:0002617 ! fruit color
 [Term]
 id: TO:0000708
 name: plant color
-def: "The color of the plant." [GR:pj]
-is_a: TO:0000077 ! shoot system anatomy and morphology trait
+def: "A stature and vigor trait (TO:0000133) which is associated with the color of a whole plant (PO:0000003)." [GR:pj, PO:0000003, POC:cooperl]
+xref: OBO_SF_ID:3525909
+xref: PATO:0000014
+is_a: TO:0000133 ! stature or vigor trait
 
 [Term]
 id: TO:0000709
@@ -5672,31 +5675,31 @@ creation_date: 2012-04-25T01:18:38Z
 
 [Term]
 id: TO:0000750
-name: cotyledon color
-def: "A cotyledon anatomy and morphology trait (TO:0000749) which is associated with the color of a cotyledon (PO:0020030)." [PO:0020030, POC:cooperl]
+name: seedling cotyledon color
+def: "A seedling cotyledon anatomy and morphology trait (TO:0000774) which is associated with the color of a seedling cotyledon (PO:0025471)." [PO:0025471, POC:cooperl]
 xref: OBO_SF_ID:3521436
 xref: PATO:0000014
-is_a: TO:0000749 ! cotyledon anatomy and morphology trait
+is_a: TO:0000774 ! seedling cotyledon anatomy and morphology trait 
 created_by: moorel
 creation_date: 2012-04-25T01:38:00Z
 
 [Term]
 id: TO:0000751
-name: cotyledon number
-def: "A cotyledon anatomy and morphology trait (TO:0000749) which is associated with the number of cotyledons (PO:0020030)." [PO:0020030, POC:cooperl]
+name: seedling cotyledon number
+def: "A seedling cotyledon anatomy and morphology trait (TO:0000774) which is associated with the number of seedling cotyledons (PO:0025471)." [PO:0025471, POC:cooperl]
 xref: OBO_SF_ID:3521436
 xref: PATO:0000070
-is_a: TO:0000749 ! cotyledon anatomy and morphology trait
+is_a: TO:0000774 ! seedling cotyledon anatomy and morphology trait 
 created_by: moorel
 creation_date: 2012-04-25T01:43:38Z
 
 [Term]
 id: TO:0000752
-name: cotyledon size
-def: "A cotyledon anatomy and morphology trait (TO:0000749) which is associated with the size of a cotyledon (PO:0020030)." [PO:0020030, POC:cooperl]
+name: seedling cotyledon size
+def: "A seedling cotyledon anatomy and morphology trait (TO:0000774) which is associated with the size of a seedling cotyledon (PO:0025471)." [PO:0025471, POC:cooperl]
 xref: OBO_SF_ID:3521436
 xref: PATO:0000117
-is_a: TO:0000749 ! cotyledon anatomy and morphology trait
+is_a: TO:0000774 ! seedling cotyledon anatomy and morphology trait 
 created_by: moorel
 creation_date: 2012-04-25T01:47:23Z
 
@@ -5896,6 +5899,24 @@ def: "A mesocotyl anatomy and morphology trait (TO:0000758) which is associated 
 is_a: TO:0000758 ! mesocotyl anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-05-04T13:57:56Z
+
+[Term]
+id: TO:0000774
+name: seedling cotyledon anatomy and morphology trait 
+def: "A cotyledon anatomy and morphology trait (TO:0000749) which is associated with a seedling cotyledon (PO:0025471)." [PO:0025471, POC:cooperl]
+comment: Use this term to describe traits for a seedling cotyledon ((PO:0025471):A cotyledon (PO:0020030) that is part of a whole plant (PO:0000003) in the seedling development stage (PO:0007131)).
+is_a: TO:0000749 ! cotyledon anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-05-11T12:28:54Z
+
+[Term]
+id: TO:0000775
+name: embryo cotyledon anatomy and morphology trait
+def: "A cotyledon anatomy and morphology trait (TO:0000749) which is associated with an embryo cotyledon (PO:0025470)." [PO:0025470, POC:cooperl]
+comment: Use this term to describe traits for an embryo hypocotyl ((PO:0025470): A cotyledon (PO:0020030) that is part of a plant embryo (PO:0009009)).
+is_a: TO:0000749 ! cotyledon anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-05-11T12:34:04Z
 
 [Term]
 id: TO:0001000
