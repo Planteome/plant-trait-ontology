@@ -1,8 +1,10 @@
 format-version: 1.2
-date: 17:05:2012 12:44
+date: 17:05:2012 14:24
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.1.1-beta9
+subsetdef: Cucurbita "Terms used for squash"
 subsetdef: Glycine max "Terms used for soybean"
+subsetdef: Hordeum vulgare "Term used for barley"
 subsetdef: Solanaceae spp "Terms used for the Solanaceae"
 subsetdef: Triticum aestivum "Terms used for wheat"
 subsetdef: Zea mays "Terms used for maize or corn"
@@ -4153,6 +4155,7 @@ id: TO:0000546
 name: peduncle top diameter
 def: "A peduncle anatomy and morphology trait (TO:0000776) which is associated with the diameter at the tip of the peduncle (PO:0009053)." [GR:pj, PDO:curators, PO:0009053]
 synonym: "PDTDIA" RELATED []
+xref: OBO_SF_ID:3527677
 xref: PATO:0001334
 is_a: TO:0000776 ! peduncle anatomy and morphology trait
 
@@ -4929,6 +4932,7 @@ id: TO:0000649
 name: peduncle width
 def: "A peduncle anatomy and morphology trait (TO:0000776) which is associated with the width of a peduncle (PO:0025386)." [GR:pj, PDO:curators, PO:0025386]
 synonym: "PDCWD" RELATED []
+xref: OBO_SF_ID:3527677
 xref: PATO:0000921
 is_a: TO:0000776 ! peduncle anatomy and morphology trait
 
@@ -5928,6 +5932,10 @@ creation_date: 2012-05-11T12:34:04Z
 id: TO:0000776
 name: peduncle anatomy and morphology trait
 def: "A shoot axis anatomy and morphology trait (TO:0000739) which is associated with a peduncle (PO:0009053)." [PDO:curators, PO:0009053]
+subset: Cucurbita
+subset: Hordeum vulgare
+subset: Triticum aestivum
+xref: OBO_SF_ID:3527677
 is_a: TO:0000739 ! shoot axis anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-05-17T12:28:05Z
@@ -5936,9 +5944,51 @@ creation_date: 2012-05-17T12:28:05Z
 id: TO:0000777
 name: peduncle waxiness
 def: "A peduncle anatomy and morphology trait (TO:0000776) which is associated with a visual observation of the presence of cuticular wax (PO:0025386)." [PDO:curators, PO:0025386]
+subset: Triticum aestivum
+xref: OBO_SF_ID:3527677
 is_a: TO:0000776 ! peduncle anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-05-17T12:29:02Z
+
+[Term]
+id: TO:0000778
+name: peduncle type
+def: "A peduncle anatomy and morphology trait (TO:0000776) which is associate with the type of a peduncle (PO:0009053)." [PDO:curators, PO:0009053]
+subset: Hordeum vulgare
+is_a: TO:0000776 ! peduncle anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-05-17T13:54:47Z
+
+[Term]
+id: TO:0000779
+name: peduncle color
+def: "A peduncle anatomy and morphology trait (TO:0000776) which is associated with the color of a peduncle (PO:0009053)." [PDO:curators, PO:0009053]
+subset: Cucurbita
+xref: PATO:0000014
+is_a: TO:0000776 ! peduncle anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-05-17T13:58:50Z
+
+[Term]
+id: TO:0000780
+name: peduncle attachment
+def: "A peduncle anatomy and morphology trait (TO:0000776) which is associated with the attachment quality of a peduncle (PO:0009053)." [PDO:curators, PO:0009053]
+subset: Cucurbita
+synonym: "pod attachment" RELATED []
+xref: PATO:0001435
+is_a: TO:0000776 ! peduncle anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-05-17T14:01:07Z
+
+[Term]
+id: TO:0000781
+name: seedling hypocotyl size
+def: "A seedling hypocotyl anatomy and morphology trait (TO:0000769) which is associated the size of a seedling hypocotyl (PO:0025291)." [PDO:curators, PO:0025291]
+subset: Zea mays
+xref: PATO:0000117
+is_a: TO:0000769 ! seedling hypocotyl anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-05-17T14:19:59Z
 
 [Term]
 id: TO:0001000
@@ -6824,6 +6874,7 @@ name: peduncle length
 def: "A peduncle anatomy and morphology trait (TO:0000776) which is associated with the length of a peduncle (PO:0009053)." [GR:pj, PDO:curators, PO:0009053]
 comment: Peduncle is the stalk of an inflorescence; that part of the inflorescence below the first flower or inflorescence branch and above the last foliage leaf/pair of foliage leaves.
 synonym: "neck internode length" EXACT [PMID:17303594]
+xref: OBO_SF_ID:3527677
 xref: PATO:0000122
 is_a: TO:0000776 ! peduncle anatomy and morphology trait
 
@@ -7937,11 +7988,11 @@ creation_date: 2010-10-25T05:34:19Z
 
 [Term]
 id: TO:0006065
-name: hypocotyl length
-def: "A hypocotyl anatomy and morphology trait (TO:0000757) which is associated with the length of a hypocotyl (PO:0020100)." [GR:Karthik, PO:0020100, POC:cooperl]
+name: seedling hypocotyl length
+def: "A seedling hypocotyl anatomy and morphology trait (TO:0000769) which is associated with the length of a seedling hypocotyl (PO:0025291)." [GR:Karthik, PO:0025291, POC:cooperl]
 xref: OBO_SF_ID:3521779
 xref: PATO:0000122
-is_a: TO:0000757 ! hypocotyl anatomy and morphology trait
+is_a: TO:0000769 ! seedling hypocotyl anatomy and morphology trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:36:01Z
 
