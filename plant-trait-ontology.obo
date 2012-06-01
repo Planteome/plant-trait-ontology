@@ -1,13 +1,15 @@
 format-version: 1.2
-date: 30:05:2012 14:12
+date: 01:06:2012 14:09
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
-subsetdef: Cucurbita "Terms used for squash"
-subsetdef: Glycine max "Terms used for soybean"
-subsetdef: Hordeum vulgare "Term used for barley"
-subsetdef: Solanaceae spp "Terms used for the Solanaceae"
-subsetdef: Triticum aestivum "Terms used for wheat"
-subsetdef: Zea mays "Terms used for maize or corn"
+subsetdef: Allium_porrum "Terms_used_for_leek"
+subsetdef: Cucurbita "Terms_used_for_squash"
+subsetdef: Glycine_max "Terms_used_for_soybean"
+subsetdef: Hordeum_vulgare "Term_used_for_barley"
+subsetdef: Saccharum "Terms_used_for_sugarcane"
+subsetdef: Solanaceae_spp "Terms_used_for_the_Solanaceae"
+subsetdef: Triticum_aestivum "Terms_used_for_wheat"
+subsetdef: Zea_mays "Terms_used_for_maize_or_corn"
 default-namespace: plant_trait_ontology
 
 [Term]
@@ -2061,7 +2063,10 @@ is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 [Term]
 id: TO:0000268
 name: inflorescence shape
-def: "Shape of the inflorescence." [GR:pj]
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the shape of an inflorescence (PO:0009049)." [GR:pj, PO:0009049, POC:cooperl]
+comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+xref: OBO_SF_ID:3531193
+xref: PATO:0000052
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
 [Term]
@@ -4431,7 +4436,10 @@ is_a: TO:0000106 ! male sterility type
 [Term]
 id: TO:0000581
 name: inflorescence color
-def: "Color of the inflorescence." [GR:pj]
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the color of an inflorescence (PO:0009049)." [GR:pj, PO:0009049, POC:cooperl]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
+xref: OBO_SF_ID:3531193
+xref: PATO:0000014
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
 [Term]
@@ -5553,7 +5561,7 @@ id: TO:0000737
 name: plant aspect
 def: "A stature or vigor trait (TO:0000133) that is a qualitative score of the visual appeal (ideotype) of the whole plant (PO:0000003)." [TO:curators]
 comment: Includes visual scoring of plant characteristics such as plant height (TO:0000207), uniformity of plants, plant damage by diseases and insects and lodging incidence (TO:0000068).
-subset: Zea mays
+subset: Zea_mays
 xref: OBO_SF_TO:3518574
 is_a: TO:0000133 ! stature or vigor trait
 created_by: moorel
@@ -5599,7 +5607,7 @@ creation_date: 2012-04-19T10:45:11Z
 id: TO:0000742
 name: subterranean tuber anatomy and morphology trait
 def: "A tuber anatomy and morphology trait (TO:0000741) which is associated with a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
-subset: Solanaceae spp
+subset: Solanaceae_spp
 xref: OBO_SF_TO:3519674
 is_a: TO:0000741 ! tuber anatomy and morphology trait
 created_by: moorel
@@ -5610,7 +5618,7 @@ id: TO:0000743
 name: subterranean tuber shape
 def: "A subterranean tuber anatomy and morphology trait (TO:0000742) which is associated with the shape of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
 comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
-subset: Solanaceae spp
+subset: Solanaceae_spp
 synonym: "tuber shape" RELATED []
 xref: OBO_SF_TO:3519950
 xref: PATO:0000052
@@ -5623,7 +5631,7 @@ id: TO:0000744
 name: subterranean tuber size
 def: "A subterranean tuber anatomy and morphology trait (TO:0000742) which is associated with the size of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
 comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude.
-subset: Solanaceae spp
+subset: Solanaceae_spp
 synonym: "tuber size" RELATED []
 xref: OBO_SF_TO:3519950
 xref: PATO:0000117
@@ -5636,7 +5644,7 @@ id: TO:0000745
 name: subterranean tuber appearance
 def: "A subterranean tuber anatomy and morphology trait (TO:0000742) which is associated with the appearance of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
 comment: A 1-9 scale is used to score the overall appearance of the tuber, with 1 the lowest score (very poor) and 9 the highest (excellent).
-subset: Solanaceae spp
+subset: Solanaceae_spp
 synonym: "tuber appearance" RELATED []
 xref: OBO_SF_TO:3519950
 is_a: TO:0000742 ! subterranean tuber anatomy and morphology trait
@@ -5648,7 +5656,7 @@ id: TO:0000746
 name: subterranean tuber mass
 def: "A subterranean tuber anatomy and morphology trait (TO:0000742) which is associated with the mass of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
 comment: Refer to mass (PATO:0000125): A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter.
-subset: Solanaceae spp
+subset: Solanaceae_spp
 synonym: "tuber mass" RELATED []
 xref: OBO_SF_TO:3519950
 xref: PATO:0000125
@@ -5669,6 +5677,7 @@ creation_date: 2012-04-25T01:09:12Z
 id: TO:0000748
 name: leaf anatomy and morphology trait
 def: "A phyllome anatomy and morphology trait (TO:0000747) which is associated with a leaf (PO:0025034)." [PO:0025034, POC:cooperl]
+subset: Zea_mays
 xref: OBO_SF_ID:3521426
 is_a: TO:0000747 ! phyllome anatomy and morphology trait
 created_by: moorel
@@ -5937,8 +5946,8 @@ id: TO:0000776
 name: peduncle anatomy and morphology trait
 def: "A shoot axis anatomy and morphology trait (TO:0000739) which is associated with a peduncle (PO:0009053)." [PO:0009053, POC:cooperl]
 subset: Cucurbita
-subset: Hordeum vulgare
-subset: Triticum aestivum
+subset: Hordeum_vulgare
+subset: Triticum_aestivum
 xref: OBO_SF_ID:3527677
 is_a: TO:0000739 ! shoot axis anatomy and morphology trait
 created_by: moorel
@@ -5948,7 +5957,7 @@ creation_date: 2012-05-17T12:28:05Z
 id: TO:0000777
 name: peduncle waxiness
 def: "A peduncle anatomy and morphology trait (TO:0000776) which is associated with a visual observation of the presence of cuticular wax (PO:0025386)." [PO:0025386, POC:cooperl]
-subset: Triticum aestivum
+subset: Triticum_aestivum
 xref: OBO_SF_ID:3527677
 is_a: TO:0000776 ! peduncle anatomy and morphology trait
 created_by: moorel
@@ -5958,7 +5967,7 @@ creation_date: 2012-05-17T12:29:02Z
 id: TO:0000778
 name: peduncle type
 def: "A peduncle anatomy and morphology trait (TO:0000776) which is associate with the type of a peduncle (PO:0009053)." [PO:0009053, POC:cooperl]
-subset: Hordeum vulgare
+subset: Hordeum_vulgare
 is_a: TO:0000776 ! peduncle anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-05-17T13:54:47Z
@@ -5990,7 +5999,7 @@ creation_date: 2012-05-17T14:01:07Z
 id: TO:0000781
 name: seedling hypocotyl size
 def: "A seedling hypocotyl anatomy and morphology trait (TO:0000769) which is associated the size of a seedling hypocotyl (PO:0025291)." [PO:0025291, POC:cooperl]
-subset: Zea mays
+subset: Zea_mays
 xref: PATO:0000117
 is_a: TO:0000769 ! seedling hypocotyl anatomy and morphology trait
 created_by: moorel
@@ -6009,6 +6018,7 @@ id: TO:0000783
 name: inflorescence axis size
 def: "An inflorescence anatomy and morphology trait (TO:0000782) which is associated with the size of an inflorescence axis (PO:0020122)." [PO:0020122, POC:cooperl]
 comment: Refers to the size ((PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude) of an inflorescence axis (PO:0020122).
+subset: Hordeum_vulgare
 xref: PATO:0000117
 is_a: TO:0000782 ! inflorescence axis anatomy and morphology trait
 created_by: moorel
@@ -6042,6 +6052,7 @@ creation_date: 2012-05-18T13:35:01Z
 id: TO:0000787
 name: inflorescence waxiness
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the waxiness of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
+subset: Hordeum_vulgare
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-05-18T13:38:09Z
@@ -6050,6 +6061,7 @@ creation_date: 2012-05-18T13:38:09Z
 id: TO:0000788
 name: tassel inflorescence anatomy and morphology trait
 def: "An inflorescence anatomy and morphology trait (TO:0000373) that is associated with a tassel inflorescence (PO:0020126)." [PO:0020126, POC:cooperl]
+subset: Zea_mays
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-05-18T13:45:59Z
@@ -6067,6 +6079,7 @@ creation_date: 2012-05-24T13:52:40Z
 id: TO:0000790
 name: axillary bud anatomy and morphology trait
 def: "A bud anatomy and morphology trait (TO:0000789) which is associated with an axillary bud (PO:0004709)." [PO:0004709, POC:cooperl]
+subset: Saccharum
 xref: OBO_SF_ID:3529551
 is_a: TO:0000789 ! bud anatomy and morphology trait
 created_by: moorel
@@ -6077,6 +6090,7 @@ id: TO:0000791
 name: axillary bud size
 def: "An axillary bud anatomy and morphology trait (TO:0000790) which is associated with the size of an axillary bud (PO:0004709)." [PO:0004709, POC:cooperl]
 comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
+subset: Saccharum
 xref: OBO_SF_ID:3529551
 xref: PATO:0000117
 is_a: TO:0000790 ! axillary bud anatomy and morphology trait
@@ -6088,6 +6102,7 @@ id: TO:0000792
 name: axillary bud number
 def: "An axillary bud anatomy and morphology trait (TO:0000790) which is associated with the number of axillary buds (PO:0004709) on a stalk or stem." [PO:0004709, POC:cooperl]
 comment: Refer to number (PATO:0001056).
+subset: Saccharum
 xref: OBO_SF_ID:3529551
 xref: PATO:0001056
 is_a: TO:0000790 ! axillary bud anatomy and morphology trait
@@ -6099,6 +6114,7 @@ id: TO:0000793
 name: axillary bud shape
 def: "An axillary bud anatomy and morphology trait (TO:0000790) which is associated with the shape of an axillary bud (PO:0004709)." [PO:0004709, POC:cooperl]
 comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+subset: Saccharum
 xref: OBO_SF_ID:3529551
 xref: PATO:0000052
 is_a: TO:0000790 ! axillary bud anatomy and morphology trait
@@ -6110,6 +6126,7 @@ id: TO:0000794
 name: axillary bud prominence
 def: "An axillary bud anatomy and morphology trait (TO:0000790) which is associated with the prominence of an axillary bud (PO:0004709)." [PO:0004709, POC:cooperl]
 comment: Refer to prominent (PATO:0014820): A protruding quality inhering in a bearer by virtue of the bearer's standing out or projecting beyond a surface or line. Promenence categorized by hidden, medium or exposed.
+subset: Saccharum
 xref: OBO_SF_ID:3529551
 xref: PATO:0014820
 is_a: TO:0000790 ! axillary bud anatomy and morphology trait
@@ -6121,6 +6138,7 @@ id: TO:0000795
 name: tassel inflorescence color
 def: "A tassel inflorescence anatomy and morphology trait (TO:0000788) which is associated with the color of a tassel inflorescence (PO:0020126)." [PO:0020126, POC:cooperl]
 comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
+subset: Zea_mays
 xref: OBO_SF_ID:3529222
 xref: PATO:0000014
 is_a: TO:0000788 ! tassel inflorescence anatomy and morphology trait
@@ -6132,6 +6150,7 @@ id: TO:0000796
 name: tassel inflorescence circumference
 def: "A tassel inflorescence anatomy and morphology trait (TO:0000788) which is associated with the circumference of a tassel inflorescence (PO:0020126)." [PO:0020126, POC:cooperl]
 comment: Refer to circumference PATO:0001684: An 1-D extent quality which is equal to the length of the closed curve of a circle.
+subset: Zea_mays
 xref: OBO_SF_ID:3529222
 xref: PATO:0001684
 is_a: TO:0000788 ! tassel inflorescence anatomy and morphology trait
@@ -6143,6 +6162,7 @@ id: TO:0000797
 name: tassel inflorescence height
 def: "A tassel inflorescence anatomy and morphology trait (TO:0000788) which is associated with the height of a tassel inflorescence (PO:0020126)." [PO:0020126, POC:cooperl]
 comment: Refer to height PATO:0000119: A 1-D extent quality inhering in a bearer by virtue of the bearer's vertical dimension of extension.
+subset: Zea_mays
 xref: OBO_SF_ID:3529222
 xref: PATO:0000119
 is_a: TO:0000788 ! tassel inflorescence anatomy and morphology trait
@@ -6154,6 +6174,7 @@ id: TO:0000798
 name: tassel inflorescence length
 def: "A tassel inflorescence anatomy and morphology trait (TO:0000788) which is associated with the length of a tassel inflorescence (PO:0020126)." [PO:0020126, POC:cooperl]
 comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
+subset: Zea_mays
 xref: OBO_SF_ID:3529222
 xref: PATO:0000122
 is_a: TO:0000788 ! tassel inflorescence anatomy and morphology trait
@@ -6165,11 +6186,147 @@ id: TO:0000799
 name: tassel inflorescence diameter
 def: "A tassel inflorescence anatomy and morphology trait (TO:0000788) which is associated with the diameter of a tassel inflorescence (PO:0020126)." [PO:0020126, POC:cooperl]
 comment: Refer to diameter PATO:0001334: A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
+subset: Zea_mays
 xref: OBO_SF_ID:3529222
 xref: PATO:0001334
 is_a: TO:0000788 ! tassel inflorescence anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-05-30T14:09:31Z
+
+[Term]
+id: TO:0000800
+name: inflorescence density
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the density of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
+comment: Refer to absolute density PATO:0001070.
+xref: OBO_SF_ID:3531193
+xref: PATO:0001070
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-06-01T13:16:10Z
+
+[Term]
+id: TO:0000801
+name: inflorescence depth 
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the depth of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
+comment: Refer to depth PATO:0001595: A 1-D extent quality inhering in a bearer by virtue of the bearer's downward or backward or inward dimenision.
+xref: OBO_SF_ID:3531193
+xref: PATO:0001595
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-06-01T13:18:51Z
+
+[Term]
+id: TO:0000802
+name: inflorescence diameter
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the diameter of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
+comment: Refer to diameter PATO:0001334:A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
+xref: OBO_SF_ID:3531193
+xref: PATO:0001334
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-06-01T13:20:49Z
+
+[Term]
+id: TO:0000803
+name: inflorescence weight
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the weight of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
+comment: Refer to weight PATO:0000128:A physical quality inhering in a bearer that has mass near a gravitational body.
+xref: OBO_SF_ID:3531193
+xref: PATO:0000128
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-06-01T13:23:12Z
+
+[Term]
+id: TO:0000804
+name: inflorescence width
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the width of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
+comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
+xref: OBO_SF_ID:3531193
+xref: PATO:0000921
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-06-01T13:25:43Z
+
+[Term]
+id: TO:0000805
+name: inflorescence texture
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the texture of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
+comment: Refer to texture PATO:0000150: A morphologic quality inhering in a bearer by virtue of the bearer's relative size, organization and distribution of its surface elements or the representation or invention of the appearance of its surface; visual and tactile surface characteristics.
+xref: OBO_SF_ID:3531193
+xref: PATO:0000150
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-06-01T13:28:08Z
+
+[Term]
+id: TO:0000806
+name: inflorescence presence
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the presence of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
+comment: Refer to presence value PATO:0000458.
+xref: OBO_SF_ID:3531193
+xref: PATO:0000458
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-06-01T13:30:09Z
+
+[Term]
+id: TO:0000807
+name: pseudostem anatomy and morphology trait
+def: "A stem anatomy and morphology trait (TO:0000361) which is associated with a pseudostem (PO:0025248)." [PO:0025248, POC:cooperl]
+subset: Allium_porrum
+xref: OBO_SF_ID:3531191
+is_a: TO:0000361 ! stem anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-06-01T13:35:28Z
+
+[Term]
+id: TO:0000808
+name: pseudostem length
+def: "A pseudostem anatomy and morphology trait (TO:0000807) which is associated with the length of a pseudostem (PO:0025248)." [PO:0025248, POC:cooperl]
+comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
+subset: Allium_porrum
+xref: OBO_SF_ID:3531191
+xref: PATO:0000122
+is_a: TO:0000807 ! pseudostem anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-06-01T13:38:37Z
+
+[Term]
+id: TO:0000809
+name: pseudostem shape
+def: "A pseudostem anatomy and morphology trait (TO:0000807) which is associated with the shape of a pseudostem (PO:0025248)." [PO:0025248, POC:cooperl]
+comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+subset: Allium_porrum
+xref: OBO_SF_ID:3531191
+xref: PATO:0000052
+is_a: TO:0000807 ! pseudostem anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-06-01T13:40:25Z
+
+[Term]
+id: TO:0000810
+name: pseudostem color
+def: "A pseudostem anatomy and morphology trait (TO:0000807) which is associated with the color of a pseudostem (PO:0025248)." [PO:0025248, POC:cooperl]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
+subset: Allium_porrum
+xref: OBO_SF_ID:3531191
+xref: PATO:0000014
+is_a: TO:0000807 ! pseudostem anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-06-01T13:43:28Z
+
+[Term]
+id: TO:0000811
+name: pseudostem diameter
+def: "A pseudostem anatomy and morphology trait (TO:0000807) which is associated with the diameter of a pseudostem (PO:0025248)." [PO:0025248, POC:cooperl]
+comment: Refer to diameter PATO:0001334:A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
+subset: Allium_porrum
+xref: OBO_SF_ID:3531191
+xref: PATO:0001334
+is_a: TO:0000807 ! pseudostem anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-06-01T13:45:05Z
 
 [Term]
 id: TO:0001000
