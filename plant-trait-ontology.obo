@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 26:06:2012 14:44
+date: 28:06:2012 14:19
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -185,9 +185,11 @@ is_a: TO:0000439 ! fungal disease resistance
 [Term]
 id: TO:0000024
 name: ligule length
-def: "The actual measurement of ligules measured in millimeters from the base of the leaf collar to the ligule tip." [IRRI:SES]
+def: "A ligule anatomy and morphology trait (TO:0002748) which is associated with the actual measurement of ligules measured in millimeters from the base of the leaf collar to the tip of the ligule (PO:0020105)." [IRRI:SES, PO:0020105, POC:cooperl]
+comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
 synonym: "LgL" RELATED []
 synonym: "LIGLG" RELATED []
+xref: PATO:0000122
 is_a: TO:0002748 ! ligule anatomy and morphology trait
 
 [Term]
@@ -822,9 +824,11 @@ is_a: TO:0002653 ! endosperm storage protein content
 [Term]
 id: TO:0000108
 name: leaf shattering
-def: "Extent of leaf shattering based on the development of abscission zone." [GR:pj]
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the extent of leaf shattering based on the development of the leaf abscission zone (PO:0006501)." [GR:pj, PO:0006501, POC:cooperl]
+comment: Refer to shattering (PATO:0000074)
 synonym: "LFSH" RELATED []
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+xref: PATO:0000074
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0000109
@@ -1523,9 +1527,11 @@ is_a: TO:0006007 ! polysaccharide content
 [Term]
 id: TO:0000197
 name: ligule color
-def: "Color of the ligule." [GR:pj, IRRI:SES]
+def: "A ligule anatomy and morphology trait (TO:0002748) which is associated with the color of a ligule (PO:0020105)." [GR:pj, IRRI:SES, PO:0020105, POC:cooperl]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "LgC" RELATED []
 synonym: "LIGCL" RELATED []
+xref: PATO:0000014
 is_a: TO:0002748 ! ligule anatomy and morphology trait
 relationship: part_of TO:0000326 ! leaf color
 
@@ -1594,11 +1600,12 @@ is_a: TO:0000348 ! sogatodes resistance
 [Term]
 id: TO:0000206
 name: leaf angle
-def: "The angle of openness of the blade tip is measured against the stem." [IRRI:SES]
-comment: In rice it is measured against the culm on the leaf below the flag leaf.
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the angle of a leaf (PO:0025034) measured against the stem." [IRRI:SES, POC:ccoperl]
+comment: In rice it is measured against the culm on the leaf below the flag leaf. Refer to angle value (PATO:0000602)
 synonym: "LBP" RELATED []
 synonym: "LFAG" RELATED []
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+xref: PATO:0000602
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 created_by: jaiswalp
 
 [Term]
@@ -1760,12 +1767,12 @@ is_a: TO:0006038 ! floral organ number
 [Term]
 id: TO:0000226
 name: auricleless
-def: "A measure of either the absence of auricle or the length of auricle neing zero." [GR:pj]
+def: "A measure of either the absence of auricle or the length of auricle being zero." [GR:pj]
 synonym: "AUMIN" RELATED []
 synonym: "auricle absence" EXACT []
 synonym: "auricle absent" EXACT []
 is_a: TO:0000655 ! leaf development trait
-is_a: TO:0002717 ! auricle morphology and anatomy trait
+is_a: TO:0002717 ! leaf sheath auricle morphology and anatomy trait
 
 [Term]
 id: TO:0000227
@@ -1831,8 +1838,10 @@ is_a: TO:0000198 ! rootless
 [Term]
 id: TO:0000235
 name: liguleless
-def: "Absence of ligule." [GR:pj]
+def: "A ligule anatomy and morphology trait (TO:0002748) which is associated with the absence of a ligule (PO:0020105)." [GR:pj, PO:0020105, POC:cooperl]
+comment: Refer to absent (PATO:0000462): A quality denoting the lack of an entity.
 synonym: "LIGMIN" RELATED []
+xref: PATO:0000462
 is_a: TO:0002748 ! ligule anatomy and morphology trait
 
 [Term]
@@ -1869,9 +1878,9 @@ is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 [Term]
 id: TO:0000241
 name: leaf number
-def: "Number of leaves in a plant at a particular growth stage." [GR:pj]
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the number of leaves in a plant at a particular growth stage." [GR:pj]
 synonym: "LFNB" RELATED []
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0000242
@@ -2270,11 +2279,13 @@ is_a: TO:0000495 ! chlorophyll content
 
 [Term]
 id: TO:0000294
-name: auricle color
-def: "The changes in the color of auricle." [IRRI:SES]
+name: leaf sheath auricle color
+def: "A leaf sheath auricle anatomy and morphology trait (TO:0002717) which is associated with the color of a leaf sheath auricle (PO:0020106)." [IRRI:SES, PO:0020106, POC:cooperl]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "AC" RELATED []
 synonym: "AUCL" RELATED []
-is_a: TO:0002717 ! auricle morphology and anatomy trait
+xref: PATO:0000014
+is_a: TO:0002717 ! leaf sheath auricle morphology and anatomy trait
 relationship: part_of TO:0000326 ! leaf color
 
 [Term]
@@ -2538,9 +2549,11 @@ is_a: TO:0000598 ! protein content
 [Term]
 id: TO:0000326
 name: leaf color
-def: "Changes observed in the color of leaf." [GR:pj]
+def: "A vascular leaf anatomy and morphology trait (TO:0000748) which is associated with the color of leaf (PO:0025034)." [GR:pj, PO:0025034, POC:cooperl]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "LFCL" RELATED []
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+xref: PATO:0000014
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 created_by: jaiswalp
 
 [Term]
@@ -2616,9 +2629,11 @@ is_obsolete: true
 [Term]
 id: TO:0000335
 name: ligule shape
-def: "Defines the actual shape of the ligule." [IRRI:SES]
+def: "A ligule anatomy and morphology trait (TO:0002748) which is associated with the actual shape of the ligule (PO:0020105)." [IRRI:SES, PO:0020105, POC:cooperl]
+comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's\nratios of distances between its features (points, edges, surfaces and\nalso holes etc).
 synonym: "LIGSHP" RELATED []
 synonym: "LS" RELATED []
+xref: PATO:0000052
 is_a: TO:0002748 ! ligule anatomy and morphology trait
 
 [Term]
@@ -3805,9 +3820,11 @@ is_a: TO:0000488 ! seed composition based quality trait
 [Term]
 id: TO:0000492
 name: leaf shape
-def: "Variation in shapes and forms of leaf." [GR:pj]
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the variation in shapes and forms of a leaf (PO:0025034)." [GR:pj, PO:0025034, POC:cooperl]
+comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).\npreferred name
 synonym: "LFSHP" RELATED []
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+xref: PATO:0000052
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0000493
@@ -4113,16 +4130,20 @@ is_a: TO:0000472 ! vascular bundle number
 [Term]
 id: TO:0000540
 name: leaf area
-def: "Measurement of the total area of a leaf." [GR:pj]
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the total area of a leaf (PO:0025034)." [GR:pj, PO:0025034, POC:cooperl]
+comment: Refer to area (PATO:0001323): A 2-D extent quality inhering in a bearer by virtue of the bearer's two dimensional extent.
 synonym: "LFAR" RELATED []
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+xref: PATO:0001323
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0000541
 name: leaf height
-def: "Height of the leaf measured as described in various studies." [GR:pj]
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the height of the leaf (PO:0025034)." [GR:pj, POC:cooperl]
+comment: Refer to height (PATO:0000119): A 1-D extent quality inhering in a bearer by virtue of the bearer's vertical dimension of extension.
 synonym: "LFHT" RELATED []
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+xref: PATO:0000119
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0000542
@@ -4322,7 +4343,7 @@ name: stomatal frequency
 def: "Number of stomata present on the leaf surface." [GR:pj]
 synonym: "STOFQ" RELATED []
 is_a: TO:0000168 ! abiotic stress trait
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0000567
@@ -4964,10 +4985,10 @@ is_a: TO:0000667 ! cooking or brewing quality
 [Term]
 id: TO:0000652
 name: leaf necrosis
-def: "Leaf surface area affected by abiotic stresses like insecticides and cold temperature as evidenced by chlorotic and/or necrotic tissue." [GR:pj]
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the leaf surface area affected by abiotic stresses like insecticides and cold temperature as evidenced by chlorotic and/or necrotic tissue." [GR:pj]
 synonym: "leaf scorch" RELATED []
 synonym: "LFNEC" RELATED []
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0000653
@@ -5370,8 +5391,8 @@ is_a: TO:0000133 ! stature or vigor trait
 [Term]
 id: TO:0000709
 name: leaf gloss
-def: "Appearance of glossiness of the leaf surface. Contributed by change in either the amount or content of cuticle wax." [GR:pj]
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the appearance of glossiness of the leaf surface. Contributed by change in either the amount or content of cuticle wax (PO:0025386) on a leaf (PO:0025034)." [GR:pj]
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0000710
@@ -5444,8 +5465,8 @@ is_a: TO:0000719 ! leaf vein color
 [Term]
 id: TO:0000721
 name: leaf adherence
-def: "A tightly rolled leaf encasing the next emerging leaf." [GR:pj]
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+def: "A leaf anatomy and morphology trait (TO:0000748) whiach is associated with a tightly rolled leaf encasing the next emerging leaf." [GR:pj, POC:cooperl]
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0000722
@@ -6899,10 +6920,10 @@ is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0002635
-name: leaf margin trait
-def: "Traits associated with changes in the anatomy or structure of the leaf margin. Often associated with leaf margin curvature." [GR:pj]
+name: leaf margin anatomy and morphology trait
+def: "A leaf anatomy and morphology trait which is associated with changes in the anatomy or structure of the leaf margin (PO:0020128). Often associated with leaf margin curvature." [GR:pj, PO:0020128]
 synonym: "leaf margin curvature" RELATED []
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 created_by: jaiswalp
 
 [Term]
@@ -6914,8 +6935,10 @@ is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
 [Term]
 id: TO:0002637
 name: leaf size
-def: "Variation in sizes of leaf." [GR:pj]
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the variation in sizes of a leaf (PO:0025034)." [GR:pj, PO:0025034, POC:cooperl]
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude.
+xref: PATO:0000117
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0002638
@@ -7471,15 +7494,15 @@ is_a: TO:0002714 ! plastid development trait
 
 [Term]
 id: TO:0002716
-name: auricle pubescence
-def: "Extent of pubescence (presence of hairs) on the auricle." [GR:pj]
+name: leaf sheath auricle pubescence
+def: "A leaf sheath anatomy and morphology trait (TO: 0002717) which is associated with the extent of pubescence (presence of hairs) on the leaf sheath auricle (PO:0020106)." [GR:pj, PO:0020106]
 synonym: "AUPUBES" RELATED []
-is_a: TO:0002717 ! auricle morphology and anatomy trait
+is_a: TO:0002717 ! leaf sheath auricle morphology and anatomy trait
 
 [Term]
 id: TO:0002717
-name: auricle morphology and anatomy trait
-def: "Traits associated with changes in the anatomy or structure of the auricle." [GR:pj]
+name: leaf sheath auricle morphology and anatomy trait
+def: "A vascular leaf anatomy and morphology trait (TO:0000419) which is associated with changes in the anatomy or structure of a leaf sheath auricle (PO:0020106)." [GR:pj, PO:0020106, POC:cooperl]
 is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
 
 [Term]
@@ -7512,8 +7535,10 @@ is_a: TO:0000370 ! leaf width
 [Term]
 id: TO:0002722
 name: leaf pubescence
-def: "Extent of pubescence  (presence of hairs)  on the leaf surface." [GR:pj]
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the extent of pubescence  (presence of hairs)  on the leaf (PO:0025034)." [GR:pj, PO:0025034]
+comment: Refer to pubescent hair (PATO:0001320): A pilosity quality of being covered with short hairs or soft down.
+xref: PATO:0001320
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 created_by: jaiswalp
 
 [Term]
@@ -7707,22 +7732,26 @@ is_a: TO:0000590 ! grain weight
 [Term]
 id: TO:0002748
 name: ligule anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the ligule." [GR:pj]
+def: "A vascular leaf anatomy and morphology trait (TO:0000419) which is associated with changes in the anatomy or structure of the ligule (PO:0020105)." [GR:pj, PO:0020105, POC:cooperl]
 is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
 
 [Term]
 id: TO:0002749
 name: ligule pubescence
-def: "Extent of pubescence  (presence of hairs)  on the ligule." [GR:pj]
+def: "A ligule anatomy and morphology trait (TO:0002748) which is associated with the extent of pubescence  (presence of hairs)  on the ligule (PO:0020105)." [GR:pj, PO:0020105, POC:cooperl]
+comment: Refer to pubescent hair (PATO:0001320): A pilosity quality of being covered with short hairs or soft down.
 synonym: "LIGPUBES" RELATED []
+xref: PATO:0001320
 is_a: TO:0002748 ! ligule anatomy and morphology trait
 
 [Term]
 id: TO:0002750
 name: ligule margin pubescence
-def: "Extent of pubescence  (presence of hairs)  on the ligule margin." [GR:pj]
+def: "A ligule anatomy and morphology trait (TO:0002748) which is associated with the extent of pubescence  (presence of hairs)  on the margin of a ligule (PO:0020105)." [GR:pj, PO:0020105, POC:cooperl]
+comment: Refer to pubescent hair (PATO:0001320): A pilosity quality of being covered with short hairs or soft down.
 synonym: "LIGMPUBES" RELATED []
 synonym: "ligule margin hairiness" EXACT []
+xref: PATO:0001320
 is_a: TO:0002748 ! ligule anatomy and morphology trait
 
 [Term]
@@ -7840,8 +7869,10 @@ is_a: TO:0002742 ! fruit volume
 [Term]
 id: TO:0002766
 name: ligule margin shape
-def: "Shape of the ligule margin." [GR:pj]
+def: "A ligule anatomy andmorphology trait (TO:0002748) which is associated with the shape of a margin of a ligule (PO:0020105)." [GR:pj, PO:0020105, POC:cooperl]
+comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's\nratios of distances between its features (points, edges, surfaces and\nalso holes etc).
 synonym: "LIGMSHP" RELATED []
+xref: PATO:0000052
 is_a: TO:0002748 ! ligule anatomy and morphology trait
 
 [Term]
@@ -8057,9 +8088,9 @@ is_a: TO:0006038 ! floral organ number
 [Term]
 id: TO:0006014
 name: phyllotaxy
-def: "Arrangement of the leaves on the shoot of a plant." [GR:pj]
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the arrangement of the leaves on the shoot of a plant." [GR:pj, POC:cooperl]
 synonym: "leaf arrangement" EXACT []
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0006015
@@ -8406,7 +8437,7 @@ creation_date: 2010-10-25T05:27:37Z
 id: TO:0006063
 name: serrated leaf margin
 def: "A leaf margin notched or grooved like a saw with teeth pointing toward the apex." [GR:curators]
-is_a: TO:0002635 ! leaf margin trait
+is_a: TO:0002635 ! leaf margin anatomy and morphology trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:30:17Z
 
