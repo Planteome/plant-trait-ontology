@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 02:07:2012 13:13
+date: 02:07:2012 14:46
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -405,12 +405,14 @@ is_a: TO:0000236 ! crop damage resistance
 [Term]
 id: TO:0000055
 name: leaf lamina pubescence
-def: "Extent of pubescence  (presence of hairs)  on the leaf blade surface." [IRRI:SES]
+def: "A leaf lamina anatomy and morphology trait (TO:0000829) which is associated with the extent of pubescence  (presence of hairs)  on a leaf lamina (PO:0020039)." [IRRI:SES]
+comment: Refer to pubescent hair (PATO:0001320): A pilosity quality of being covered with short hairs or soft down.
 synonym: "LBP" RELATED []
 synonym: "leaf blade pubescence" RELATED []
 synonym: "LFLHR" RELATED []
 synonym: "LFLPUBES" RELATED []
-is_a: TO:0002722 ! leaf pubescence
+xref: PATO:0001320
+is_a: TO:0000829 ! leaf lamina anatomy and morphology trait
 
 [Term]
 id: TO:0000056
@@ -2286,7 +2288,6 @@ synonym: "AC" RELATED []
 synonym: "AUCL" RELATED []
 xref: PATO:0000014
 is_a: TO:0002717 ! leaf sheath auricle morphology and anatomy trait
-relationship: part_of TO:0000326 ! leaf color
 
 [Term]
 id: TO:0000295
@@ -2326,12 +2327,14 @@ is_a: TO:0000495 ! chlorophyll content
 [Term]
 id: TO:0000299
 name: leaf lamina color
-def: "Color of the leaf lamina/blade." [ICIS:1054, IRRI:SES]
+def: "A leaf lamina anatomy and morphology trait (TO:0000829) which is associated with the color of the leaf lamina (PO:0020039)." [ICIS:1054, IRRI:SES, PO:0020039, TO:moorel]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "LBC" RELATED []
 synonym: "leaf blade color" RELATED []
 synonym: "leaf color" RELATED []
 synonym: "LFLCL" RELATED []
-relationship: part_of TO:0000326 ! leaf color
+xref: PATO:0000014
+is_a: TO:0000829 ! leaf lamina anatomy and morphology trait
 
 [Term]
 id: TO:0000300
@@ -5282,10 +5285,13 @@ is_a: TO:0002728 ! fruit quality trait
 [Term]
 id: TO:0000695
 name: leaf margin color
+def: "A leaf margin anatomy and morphology trait (TO:0002635) which is associated with the color of a leaf margin (PO:0020128)." [PO:0020128, TO:moorel]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "leaf margin pigmentation" RELATED []
 synonym: "LFMCL" RELATED []
 synonym: "pigmentation of leaf margin" RELATED []
-relationship: part_of TO:0000326 ! leaf color
+xref: PATO:0000014
+is_a: TO:0002635 ! leaf margin anatomy and morphology trait
 
 [Term]
 id: TO:0000696
@@ -5455,7 +5461,10 @@ is_a: TO:0000162 ! seed quality
 [Term]
 id: TO:0000719
 name: leaf vein color
-is_a: TO:0000326 ! leaf color
+def: "A leaf vein anatomy and morphology trait (TO:0000820) which is associated with the color of a leaf lamina vein (PO:0020138)." [PO:0020138, TO:moorel]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
+xref: PATO:0000014
+is_a: TO:0000820 ! leaf vein anatomy and morphology trait
 
 [Term]
 id: TO:0000720
@@ -5465,7 +5474,7 @@ is_a: TO:0000719 ! leaf vein color
 [Term]
 id: TO:0000721
 name: leaf adherence
-def: "A leaf anatomy and morphology trait (TO:0000748) whiach is associated with a tightly rolled leaf encasing the next emerging leaf." [GR:pj, POC:cooperl]
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with a tightly rolled leaf encasing the next emerging leaf (PO:0025034)." [GR:pj, PO:0025034, POC:cooperl]
 is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
@@ -6517,11 +6526,11 @@ creation_date: 2012-07-02T12:21:58Z
 [Term]
 id: TO:0000827
 name: leaf lamina area
-def: "A leaf area (TO:0000540) which is associated with the area of a leaf lamina (PO:0020039)." [PO:0020039, POC:cooperl]
+def: "A leaf lamina anatomy and morphology trait (TO:0000829) which is associated with the area of a leaf lamina (PO:0020039)." [PO:0020039, POC:cooperl]
 comment: Refer to area (PATO:0001323): A 2-D extent quality inhering in a bearer by virtue of the bearer's two dimensional extent.
 xref: OBO_SF_ID:3530450
 xref: PATO:0001323
-is_a: TO:0000540 ! leaf area
+is_a: TO:0000829 ! leaf lamina anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-07-02T12:30:01Z
 
@@ -6533,6 +6542,22 @@ xref: OBO_SF_ID:3530450
 is_a: TO:0000748 ! leaf anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-07-02T12:36:51Z
+
+[Term]
+id: TO:0000829
+name: leaf lamina anatomy and morphology trait
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with a leaf lamina (PO:0020039)." [PO:0020039]
+is_a: TO:0000748 ! leaf anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-02T13:36:23Z
+
+[Term]
+id: TO:0000830
+name: leaf lamina margin anatomy and morphology trait
+def: "A leaf margin anatomy and morphology trait (TO:0002635) which is associated with a leaf lamina margin (PO:0025009)." [PO:0025009, TO:moorel]
+is_a: TO:0002635 ! leaf margin anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-02T13:58:07Z
 
 [Term]
 id: TO:0001000
@@ -7393,9 +7418,9 @@ is_a: TO:0002686 ! cell growth and development trait
 [Term]
 id: TO:0002688
 name: leaf lamina joint bending
-def: "An assay to determine the extent of the bending that occurrs to the leaf lamina joint in degrees." [GR:pj, PMID:14615594]
+def: "A leaf lamina anatomy and morphology trait (TO:0000829) which is associated with the extent of the bending that occurrs to the leaf lamina (PO:0020039) joint in degrees." [GR:pj, PMID:14615594, PO:0020039, TO:moorel]
 comment: It may happen due to environmental stress such as upon brassinosteroid treatment.
-is_a: TO:0000492 ! leaf shape
+is_a: TO:0000829 ! leaf lamina anatomy and morphology trait
 
 [Term]
 id: TO:0002689
@@ -7408,11 +7433,12 @@ relationship: part_of TO:0000135 ! leaf length
 [Term]
 id: TO:0002690
 name: leaf lamina length
-def: "Actual length measurements, in centimeters of the leaf laimina." [GR:pj]
+def: "A leaf lamina anatomy and morphology trait (TO:0000829) which is associated with the actual length measurements, in centimeters of the leaf laimina (PO:0020039)." [GR:pj, PO:0020039, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "leaf blade length" EXACT []
 synonym: "LFLLG" RELATED []
-is_a: TO:0002637 ! leaf size
-relationship: part_of TO:0000135 ! leaf length
+xref: PATO:0000122
+is_a: TO:0000829 ! leaf lamina anatomy and morphology trait
 
 [Term]
 id: TO:0002691
@@ -7614,10 +7640,12 @@ is_a: TO:0002718 ! awn anatomy and morphology trait
 [Term]
 id: TO:0002720
 name: leaf lamina width
-def: "Actual measurements, in centimeters of the widest portion of the leaf lamina." [GR:pj]
+def: "A leaf lamina anatomy and morphology trait (TO:0000829) which is associated with the actual measurements, in centimeters of the widest portion of the leaf lamina (PO:0020039)." [GR:pj, PO:0020039, TO:moorel]
+comment: Refer to width (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "leaf blade width" RELATED []
 synonym: "LFLWD" EXACT []
-is_a: TO:0000370 ! leaf width
+xref: PATO:0000921
+is_a: TO:0000829 ! leaf lamina anatomy and morphology trait
 
 [Term]
 id: TO:0002721
@@ -7637,10 +7665,12 @@ created_by: jaiswalp
 [Term]
 id: TO:0002723
 name: leaf lamina margin pubescence
-def: "Extent of pubescence  (presence of hairs)  on the leaf blade margin." [GR:pj]
+def: "A leaf lamina margin anatomy and morphology trait (TO:0000830) which is associate with the extent of pubescence  (presence of hairs)  on a leaf lamina margin (PO:0025009)." [GR:pj]
+comment: Refer to pubescent hair (PATO:0001320): A pilosity quality of being covered with short hairs or soft down.
 synonym: "leaf blade margin pubescence" RELATED []
 synonym: "LFLMPUBES" RELATED []
-is_a: TO:0002722 ! leaf pubescence
+xref: PATO:0001320
+is_a: TO:0000830 ! leaf lamina margin anatomy and morphology trait
 
 [Term]
 id: TO:0002724
@@ -8936,13 +8966,19 @@ is_a: TO:0000055 ! leaf lamina pubescence
 [Term]
 id: TO:0020031
 name: leaf lamina margin pubescence length
-def: "Length of pubescence (presence of hairs) on the leaf blade margin." [GR:cwt]
+def: "A leaf lamina margin pudescence (TO:0002723) trait which is associated with the length of pubescence (presence of hairs) on the leaf lamina margin (PO:0025009)." [GR:cwt, PO:0025009, TO:moorel]
+comment: Refer to pubescent hair (PATO:0001320): A pilosity quality of being covered with short hairs or soft down. Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
+xref: PATO:0000122
+xref: PATO:0001320
 is_a: TO:0002723 ! leaf lamina margin pubescence
 
 [Term]
 id: TO:0020032
 name: leaf lamina margin pubescence density
-def: "Density of pubescence (presence of hairs) on the leaf blade margin." [GR:cwt6]
+def: "A leaf lamina margin pubescence trait (TO:0002723) which is associated with the density of pubescence (presence of hairs) on the leaf lamina margin (PO:0025009)." [GR:cwt6, PO:002009, TO:moorel]
+comment: Refer to pubescent hair (PATO:0001320): A pilosity quality of being covered with short hairs or soft down. Refer to density (PATO:0001019): A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size.
+xref: PATO:0001019
+xref: PATO:0001320
 is_a: TO:0002723 ! leaf lamina margin pubescence
 
 [Term]
