@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 02:07:2012 14:46
+date: 03:07:2012 13:32
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -947,9 +947,9 @@ is_a: TO:0000120 ! percent root mass density
 [Term]
 id: TO:0000124
 name: flag leaf angle
-def: "In grasses the flag leaf angle is measured near the collar as the angle of attachment between the flag leaf blade and the main inflorescence axis in grass plants." [ICIS:1065, IRRI:SES]
+def: "A flag leaf anatomy and morphology trait (TO:0000832) which is associated with the flag leaf (PO:0020103) angle measured near the collar as the angle of attachment between the flag leaf blade and the main inflorescence axis in grass plants." [ICIS:1065, IRRI:SES, PO:0020103, TO:moorel]
 synonym: "FLFAG" RELATED []
-is_a: TO:0000206 ! leaf angle
+is_a: TO:0000832 ! flag leaf anatomy and morphology trait
 
 [Term]
 id: TO:0000125
@@ -1535,7 +1535,6 @@ synonym: "LgC" RELATED []
 synonym: "LIGCL" RELATED []
 xref: PATO:0000014
 is_a: TO:0002748 ! ligule anatomy and morphology trait
-relationship: part_of TO:0000326 ! leaf color
 
 [Term]
 id: TO:0000198
@@ -4918,9 +4917,11 @@ is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 [Term]
 id: TO:0000642
 name: leaf sheath diameter
-def: "Actual measurements, in centimeters of the leaf sheath diameter." [GR:pj]
+def: "A leaf sheath anatomy and morphology trait (TO:0000835) which is associated with the actual measurements, in centimeters of the leaf sheath (PO:0020104) diameter." [GR:pj, PO:0020104, TO:moorel]
+comment: Refer to diameter (PATO:0001334): A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
 synonym: "LFSDIA" RELATED []
-is_a: TO:0002637 ! leaf size
+xref: PATO:0001334
+is_a: TO:0000835 ! leaf sheath anatomy and morphology trait
 
 [Term]
 id: TO:0000643
@@ -6461,7 +6462,7 @@ creation_date: 2012-07-02T11:39:41Z
 
 [Term]
 id: TO:0000821
-name: leaf vein size 
+name: leaf vein size
 def: "A leaf vein anatomy and morphology trait (TO:0000820) which is associated with the size of a leaf lamina vein (PO:0020138)." [PO:0020138, POC:cooperl]
 comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude.
 xref: OBO_SF_ID:3530450
@@ -6555,9 +6556,55 @@ creation_date: 2012-07-02T13:36:23Z
 id: TO:0000830
 name: leaf lamina margin anatomy and morphology trait
 def: "A leaf margin anatomy and morphology trait (TO:0002635) which is associated with a leaf lamina margin (PO:0025009)." [PO:0025009, TO:moorel]
+xref: OBO_SF_ID:3539885
 is_a: TO:0002635 ! leaf margin anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-07-02T13:58:07Z
+
+[Term]
+id: TO:0000831
+name: adult leaf anatomy and morphology trait
+def: "A vascular leaf anatomy and morphology trait (TO:0000419) which is associated with an adult vascular leaf (PO:0006340)." [PO:0006340, TO:moorel]
+xref: OBO_SF_ID:3539863
+is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-03T11:54:31Z
+
+[Term]
+id: TO:0000832
+name: flag leaf anatomy and morphology trait
+def: "An adult vascular leaf anatomy and morphology trait (TO:0000831) which is associated with a flag leaf (PO:0020103)." [PO:0020103, TO:moorel]
+xref: OBO_SF_ID:3539863
+is_a: TO:0000831 ! adult leaf anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-03T12:06:07Z
+
+[Term]
+id: TO:0000833
+name: organ margin anatomy and morphology trait
+def: "A cardinal organ part anatomy and morphology trait (TO:0000754) which is associated with a organ margin (PO:0025005)." [PO:0025005, TO:moorel]
+xref: OBO_SF_ID:3539885
+is_a: TO:0000754 ! cardinal organ part anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-03T12:54:18Z
+
+[Term]
+id: TO:0000834
+name: phyllome margin anatomy and morphology trait
+def: "An organ margin anatomy and morphology trait (TO:0000833) which is associated with a phyllome margin (PO:0025018)." [PO:0025018, TO:moorel]
+xref: OBO_SF_ID:3539885
+is_a: TO:0000833 ! organ margin anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-03T12:56:42Z
+
+[Term]
+id: TO:0000835
+name: leaf sheath anatomy and morphology trait
+def: "A cardinal organ part anatomy and morphology trait (TO:0000754) which is associated with a leaf sheath (PO:0020104)." [PO:0020104, TO:moorel]
+xref: OBO_SF_ID:3539886
+is_a: TO:0000754 ! cardinal organ part anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-03T13:07:07Z
 
 [Term]
 id: TO:0001000
@@ -7039,9 +7086,10 @@ is_a: TO:0002728 ! fruit quality trait
 [Term]
 id: TO:0002635
 name: leaf margin anatomy and morphology trait
-def: "A leaf anatomy and morphology trait which is associated with changes in the anatomy or structure of the leaf margin (PO:0020128). Often associated with leaf margin curvature." [GR:pj, PO:0020128]
+def: "A phyllome margin anatomy and morphology trait (TO:0000834) which is associated with changes in the anatomy or structure of the leaf margin (PO:0020128). Often associated with leaf margin curvature." [GR:pj, PO:0020128]
 synonym: "leaf margin curvature" RELATED []
-is_a: TO:0000748 ! leaf anatomy and morphology trait
+xref: OBO_SF_ID:3539885
+is_a: TO:0000834 ! phyllome margin anatomy and morphology trait
 created_by: jaiswalp
 
 [Term]
@@ -7425,10 +7473,11 @@ is_a: TO:0000829 ! leaf lamina anatomy and morphology trait
 [Term]
 id: TO:0002689
 name: leaf sheath length
-def: "Actual length measurements, in centimeters of the leaf sheath." [GR:pj]
+def: "A leaf sheath anatomy and morphology trait (TO:0000835) which is associated with the actual length measurements, in centimeters of the leaf sheath (PO:0020104)." [GR:pj, PO:0020104, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "LFSLG" RELATED []
-is_a: TO:0002637 ! leaf size
-relationship: part_of TO:0000135 ! leaf length
+xref: PATO:0000122
+is_a: TO:0000835 ! leaf sheath anatomy and morphology trait
 
 [Term]
 id: TO:0002690
@@ -7552,8 +7601,10 @@ is_a: TO:0000384 ! nematode damage resistance
 [Term]
 id: TO:0002707
 name: petiole color
-def: "The color of the petiole." [GR:pj]
-relationship: part_of TO:0000326 ! leaf color
+def: "A petiole anatomy and morphology trait (TO:0000765) which is associated with the color of the petiole (PO:0020038)." [GR:pj, PO:0020038, TO:moorel]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
+xref: PATO:0000014
+is_a: TO:0000765 ! petiole anatomy and morphology trait
 
 [Term]
 id: TO:0002708
@@ -7621,8 +7672,9 @@ is_a: TO:0002717 ! leaf sheath auricle morphology and anatomy trait
 [Term]
 id: TO:0002717
 name: leaf sheath auricle morphology and anatomy trait
-def: "A vascular leaf anatomy and morphology trait (TO:0000419) which is associated with changes in the anatomy or structure of a leaf sheath auricle (PO:0020106)." [GR:pj, PO:0020106, POC:cooperl]
-is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+def: "A cardinal organ part anatomy and morphology trait (TO:0000754) which is associated with changes in the anatomy or structure of a leaf sheath auricle (PO:0020106)." [GR:pj, PO:0020106, POC:cooperl]
+xref: OBO_SF_ID:3539886
+is_a: TO:0000754 ! cardinal organ part anatomy and morphology trait
 
 [Term]
 id: TO:0002718
@@ -7650,8 +7702,10 @@ is_a: TO:0000829 ! leaf lamina anatomy and morphology trait
 [Term]
 id: TO:0002721
 name: leaf sheath width
-def: "Actual measurements, in centimeters of the widest portion of the leaf sheath in a grass plant." [GR:pj]
-is_a: TO:0000370 ! leaf width
+def: "A leaf sheath anatomy and morphology trait (TO:0000835) which is associated with the actual measurements, in centimeters of the widest portion of the leaf sheath (PO:0020104) in a grass plant." [GR:pj, PO:0020104, TO:moorel]
+comment: Refer to width (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
+xref: PATO:0000921
+is_a: TO:0000835 ! leaf sheath anatomy and morphology trait
 
 [Term]
 id: TO:0002722
@@ -7675,9 +7729,11 @@ is_a: TO:0000830 ! leaf lamina margin anatomy and morphology trait
 [Term]
 id: TO:0002724
 name: leaf sheath color
-def: "Color of the leaf sheath." [GR:pj]
+def: "A leaf sheath anatomy and morphology trait (TO:0000835) which is associated with the color of the leaf sheath (PO:0020104)." [GR:pj, PO:0020104, TO:moorel]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "LFSCL" RELATED []
-is_a: TO:0000326 ! leaf color
+xref: PATO:0000014
+is_a: TO:0000835 ! leaf sheath anatomy and morphology trait
 
 [Term]
 id: TO:0002725
@@ -7926,9 +7982,11 @@ is_a: TO:0000739 ! shoot axis anatomy and morphology trait
 [Term]
 id: TO:0002757
 name: flag leaf length
-def: "Length of the flag leaf in the grass plant." [GR:pj]
+def: "A flag leaf anatomy and morphology trait (TO:0000832) which is associated with the length of the flag leaf (PO:0020103)." [GR:pj, PO:0020103, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "FLFLG" EXACT []
-is_a: TO:0000135 ! leaf length
+xref: PATO:0000122
+is_a: TO:0000832 ! flag leaf anatomy and morphology trait
 
 [Term]
 id: TO:0002758
