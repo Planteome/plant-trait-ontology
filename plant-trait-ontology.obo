@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 03:07:2012 13:32
+date: 09:07:2012 14:16
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -301,9 +301,11 @@ is_a: TO:0000271 ! inflorescence length
 [Term]
 id: TO:0000041
 name: brown rice length
-def: "Length of the grain monitored after dehulling but before polishing. The grain should contain pericarp." [ICIS:1259, IRRI:SES]
+def: "A grain length (TO:0000734) monitored after dehulling but before polishing. The grain should contain pericarp (PO:0009084)." [ICIS:1259, IRRI:SES, PO:0009084, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "BRWLG" RELATED []
 synonym: "Len" RELATED []
+xref: PATO:0000122
 is_a: TO:0000734 ! grain length
 
 [Term]
@@ -1431,8 +1433,8 @@ is_a: TO:0000387 ! plant trait
 [Term]
 id: TO:0000184
 name: seed anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the seed and its parts." [GR:pj]
-is_a: TO:0000017 ! anatomy and morphology trait
+def: "A multi-tissue plant structure anatomy and morphology trait (TO:0000836) which is associated with a seed (PO:0009010)." [GR:pj, PO:0009010, TO:moorel]
+is_a: TO:0000836 ! multi-tissue plant structure anatomy and morphology trait
 
 [Term]
 id: TO:0000185
@@ -2224,9 +2226,11 @@ is_a: TO:0000114 ! flooding related trait
 [Term]
 id: TO:0000287
 name: brown rice shape
-def: "Shape of the brown rice. Measure after harvesting, cleaning, and dehulling." [ICIS:1258, IRRI:SES]
+def: "A grain shape (TO:0002730) of the brown rice. Measure after harvesting, cleaning, and dehulling." [ICIS:1258, IRRI:SES, TO:moorel]
+comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 synonym: "BrS" RELATED []
 synonym: "BRWSHP" RELATED []
+xref: PATO:0000052
 is_a: TO:0002730 ! grain shape
 
 [Term]
@@ -2949,9 +2953,13 @@ is_a: TO:0000667 ! cooking or brewing quality
 [Term]
 id: TO:0000375
 name: brown rice ratio
-def: "Determined from grain length and grain width on dehulled unpolished rice grain." [GR:pj]
+def: "A grain length to width ratio (TO:0002731) which is determined from grain length and grain width on dehulled unpolished rice grain." [GR:pj, TO:moorel]
+comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite. Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points. Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
 synonym: "brown rice length to width ratio" RELATED []
 synonym: "BRWRRO" RELATED []
+xref: PATO:0000117
+xref: PATO:0000122
+xref: PATO:0000921
 is_a: TO:0002731 ! grain length to width ratio
 
 [Term]
@@ -3023,10 +3031,11 @@ is_a: TO:0000054 ! animal damage resistance
 [Term]
 id: TO:0000385
 name: milled grain color
-def: "Color of the dehulled, milled grain, which does not have pericarp." [GR:pj]
-comment: Based on the definition the term name was changed to milled grain color instead of grain color. For color of the dehulled grain please see pericarp color (TO:0000707).
+def: "A fruit color (TO:0002617) associated with the dehulled, milled grain, which does not have pericarp (PO:0009084)." [GR:pj, PO:0009084, TO:moorel]
+comment: Based on the definition the term name was changed to milled grain color instead of grain color. For color of the dehulled grain please see pericarp color (TO:0000707).\nRefer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "GRCL" RELATED []
 synonym: "MGRCL" RELATED []
+xref: PATO:0000014
 is_a: TO:0002617 ! fruit color
 
 [Term]
@@ -3108,7 +3117,8 @@ is_a: TO:0000371 ! yield trait
 [Term]
 id: TO:0000397
 name: grain size
-def: "Size of the dehulled, milled grain without pericarp." [GR:pj]
+def: "A fruit size (TO:0002625) which is associated with a dehulled, milled grain without pericarp (PO:0009084)." [GR:pj, PO:0009084, TO:moorel]
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
 synonym: "GRSZ" RELATED []
 is_a: TO:0002625 ! fruit size
 
@@ -3145,15 +3155,15 @@ is_a: TO:0000482 ! chemical stress sensitivity
 [Term]
 id: TO:0000402
 name: grain width
-def: "Width of the dehulled grain with pericarp." [GR:pj]
+def: "A fruit width (TO:0002627) which is associated with the width of the dehulled grain with pericarp (PO:0009084)." [GR:pj, PO:0009084, TO:moorel]
+comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "dehulled grain curved width" RELATED []
 synonym: "dehulled-grain width" RELATED []
 synonym: "DHULGRWD" RELATED []
 synonym: "GRWD" RELATED []
 synonym: "width of grain without hull" RELATED []
-is_a: TO:0000357 ! growth and development trait
+xref: PATO:0000921
 is_a: TO:0002627 ! fruit width
-relationship: part_of TO:0000397 ! grain size
 
 [Term]
 id: TO:0000403
@@ -5562,15 +5572,16 @@ is_a: TO:0000349 ! physiological process related trait
 id: TO:0000734
 name: grain length
 alt_id: TO:0002760
-def: "Length of the dehulled grain with pericarp." [GR:pj]
+def: "A fruit length (TO:0002626) of the dehulled grain with pericarp (PO:0009084)." [GR:pj, PO:0009084, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "DHULGRLG" RELATED []
 synonym: "GRLG" RELATED []
 synonym: "KERLG" RELATED []
 synonym: "kernel length" RELATED []
 synonym: "length of dehulled grain" RELATED []
 synonym: "length of grain without hull" RELATED []
+xref: PATO:0000122
 is_a: TO:0002626 ! fruit length
-relationship: part_of TO:0000397 ! grain size
 
 [Term]
 id: TO:0000735
@@ -5581,9 +5592,9 @@ is_a: TO:0000655 ! leaf development trait
 [Term]
 id: TO:0000736
 name: plant organ anatomy and morphology trait
-def: "An anatomy and morphology trait (TO:0000017) which is associated with a plant organ (PO:0009008)." [PO:0009008, POC:cooperl]
+def: "A multi-tissue plant structure anatomy and morphology trait (TO:0000836) which is associated with a plant organ (PO:0009008)." [PO:0009008, POC:cooperl]
 xref: OBO_SF_TO:3519674
-is_a: TO:0000017 ! anatomy and morphology trait
+is_a: TO:0000836 ! multi-tissue plant structure anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-04-19T10:36:57Z
 
@@ -5765,9 +5776,9 @@ creation_date: 2012-04-26T12:12:50Z
 [Term]
 id: TO:0000754
 name: cardinal organ part anatomy and morphology trait
-def: "An anatomy and morphology trait (TO:0000017) which is associated with a cardinal organ part (PO:0025001)." [PO:0025001, POC:cooperl]
+def: "A cardinal organ part of a multi-tissue plant structure anatomy and morphology trait (TO:0000837) which is associated with a cardinal organ part (PO:0025001)." [PO:0025001, POC:cooperl, TO:moorel]
 xref: OBO_SF_ID:3521773
-is_a: TO:0000017 ! anatomy and morphology trait
+is_a: TO:0000837 ! cardinal organ part of a multi-tissue plant structure anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-04-26T13:09:13Z
 
@@ -6607,6 +6618,24 @@ created_by: moorel
 creation_date: 2012-07-03T13:07:07Z
 
 [Term]
+id: TO:0000836
+name: multi-tissue plant structure anatomy and morphology trait
+def: "An anatomy and morphology trait (TO:0000017) which is associated with a multi-tissue plant structure (PO:0025496)." [PO:0025496, TO:moorel]
+xref: OBO_SF_ID:3541748
+is_a: TO:0000017 ! anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-09T11:41:28Z
+
+[Term]
+id: TO:0000837
+name: cardinal organ part of a multi-tissue plant structure anatomy and morphology trait
+def: "A multi-tissue anatomy and morphology trait (TO:0000836) which is associated with a cardinal organ part of a multi-tissue plant structure (PO:0025498)." [PO:0025498, TO:moorel]
+xref: OBO_SF_ID:3541748
+is_a: TO:0000836 ! multi-tissue plant structure anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-09T13:36:14Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "The glume cover over the caryopsis. Often measured as percentage." [GR:pj]
@@ -6972,8 +7001,10 @@ is_a: TO:0000622 ! flower development trait
 [Term]
 id: TO:0002617
 name: fruit color
-def: "An assay for the color of the fruit and its parts." [GR:pj]
-is_a: TO:0002728 ! fruit quality trait
+def: "A fruit anatomy and morphology trait (TO:0002617) which is associated with the color of a fruit (PO:0009001)." [GR:pj, PO:0009001, TO:moorel]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
+xref: PATO:0000014
+is_a: TO:0002629 ! fruit anatomy and morphology trait
 
 [Term]
 id: TO:0002618
@@ -6993,6 +7024,9 @@ is_a: TO:0000707 ! pericarp color
 [Term]
 id: TO:0002621
 name: fruit columella color
+def: "A fruit color (TO:0002617) associated with a fruit columella (PO:0004540)." [PO:0004540, TO:moorel]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
+xref: PATO:0000014
 is_a: TO:0002617 ! fruit color
 
 [Term]
@@ -7015,57 +7049,72 @@ is_a: TO:0002623 ! pericarp texture
 [Term]
 id: TO:0002625
 name: fruit size
-def: "An assay to determine the variation in the size of the fruit." [GR:pj]
+def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the variation in the size of a fruit (PO:0009001)." [GR:pj, PO:0009001, TO:moorel]
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
 synonym: "FRSZ" RELATED []
-is_a: TO:0002629 ! fruit structure trait
-is_a: TO:0002728 ! fruit quality trait
+synonym: "pod size" NARROW []
+xref: PATO:0000117
+is_a: TO:0002629 ! fruit anatomy and morphology trait
 
 [Term]
 id: TO:0002626
 name: fruit length
-def: "An assay to determine the variation in the length of the fruit." [GR:pj]
-is_a: TO:0002625 ! fruit size
+def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the variation in the length of a fruit (PO:0009001)." [GR:pj, PO:0009001, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
+synonym: "pod length" NARROW []
+xref: PATO:0000122
+is_a: TO:0002629 ! fruit anatomy and morphology trait
 
 [Term]
 id: TO:0002627
 name: fruit width
-def: "An assay to determine the variation in the width of the fruit." [GR:pj]
+def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the variation in the width of a fruit (PO:0009001)." [GR:pj, PO:0009001, TO:moorel]
+comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "FRWD" RELATED []
-is_a: TO:0002625 ! fruit size
+xref: PATO:0000921
+is_a: TO:0002629 ! fruit anatomy and morphology trait
 
 [Term]
 id: TO:0002628
 name: fruit shape
-def: "An assay to determine the variation in the shape of the fruit." [GR:pj]
-is_a: TO:0002629 ! fruit structure trait
-is_a: TO:0002728 ! fruit quality trait
+def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the variation in the shape of a fruit (PO:0009001)." [GR:pj, PO:0009001, TO:moorel]
+comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+synonym: "pod shape" NARROW []
+xref: PATO:0000052
+is_a: TO:0002629 ! fruit anatomy and morphology trait
 
 [Term]
 id: TO:0002629
-name: fruit structure trait
-def: "Traits associated with changes in the anatomy or structure of the fruit and its parts." [GR:pj]
+name: fruit anatomy and morphology trait
+def: "A multi-tissue plant structure anatomy and morphology trait (TO:0000836) which is associated with a fruit (PO:0009001)." [GR:pj, PO:0009001, TO:moorel]
 synonym: "fruit anatomy and morphology trait" RELATED []
 synonym: "fruit morphology" RELATED []
-is_a: TO:0000017 ! anatomy and morphology trait
+is_a: TO:0000836 ! multi-tissue plant structure anatomy and morphology trait
 
 [Term]
 id: TO:0002630
 name: fruit distal end shape
-def: "An assay to determine the variation in the shape of the fruit's distal end." [GR:pj]
+def: "A fruit shape (TO:0002628) which is associated with the variation in the shape of a fruit's distal end (PO:0008001)." [GR:pj, PO:0008001, TO:moorel]
+comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+xref: PATO:0000052
 is_a: TO:0002628 ! fruit shape
 
 [Term]
 id: TO:0002631
 name: fruit proximal end shape
-def: "An assay to determine the variation in the shape of the fruit's proximal end." [GR:pj]
+def: "A fruit shape (TO:0002628) which is associated with the variation in the shape of the fruit's proximal end (PO:0008002)." [GR:pj, PO:0008002, TO:moorel]
+comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+xref: PATO:0000052
 is_a: TO:0002628 ! fruit shape
 
 [Term]
 id: TO:0002632
 name: fruit abscission zone size
-def: "An assay to determine the variation in the size of the fruit abscission zone." [GR:pj]
+def: "A fruit anatomy and morphology trait (TO:0002632) which is associated with the variation in the size of the fruit abscission zone (PO:0006503)." [GR:pj, PO:0006503, TO:moorel]
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
 synonym: "size stem scar size" RELATED []
-is_a: TO:0002629 ! fruit structure trait
+xref: PATO:0000117
+is_a: TO:0002629 ! fruit anatomy and morphology trait
 is_a: TO:0002729 ! fruit senescing quality trait
 
 [Term]
@@ -7771,19 +7820,25 @@ is_a: TO:0002728 ! fruit quality trait
 [Term]
 id: TO:0002730
 name: grain shape
-def: "An assay to determine the variation in the shape of the dehulled grain." [GR:pj]
+def: "A fruit shape (TO:0002628) which is associated with the variation in the shape of the dehulled grain." [GR:pj, TO:moorel]
+comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 synonym: "dehulled-grain shape" RELATED []
 synonym: "DHULGRSHP" RELATED []
 synonym: "GRSHP" RELATED []
+xref: PATO:0000052
 is_a: TO:0002628 ! fruit shape
 
 [Term]
 id: TO:0002731
 name: grain length to width ratio
-def: "Determined from grain length and grain width on dehulled grain." [GR:pj]
+def: "A grain size (TO:0000397) which is determined from grain length and grain width on dehulled grain." [GR:pj, TO:moorel]
+comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite. Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points. Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
 synonym: "dehulled-grain length to width ratio" RELATED []
 synonym: "DHULGRLGWDRO" RELATED []
 synonym: "GRLHWDRO" RELATED []
+xref: PATO:0000117
+xref: PATO:0000122
+xref: PATO:0000921
 is_a: TO:0000397 ! grain size
 
 [Term]
@@ -7863,33 +7918,40 @@ is_a: TO:0002739 ! fruit surface area
 [Term]
 id: TO:0002742
 name: fruit volume
-def: "Volume of the fruit." [GR:pj]
-is_a: TO:0002728 ! fruit quality trait
+def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the volume of the fruit (PO:0002629)." [GR:pj, PO:0002629]
+comment: Refer to volume (PATO:0000918): A 3-D extent quality inhering in a bearer by virtue of the bearer's amount of 3-dimensional space it occupies.
+xref: PATO:0000918
+is_a: TO:0002629 ! fruit anatomy and morphology trait
 
 [Term]
 id: TO:0002743
 name: grain volume
-def: "Volume of the grain without hull (dehulled)." [GR:pj]
+def: "A fruit volume (TO:0002742) of a grain without hull (dehulled)." [GR:pj, TO:moorel]
+comment: Refer to volume (PATO:0000918): A 3-D extent quality inhering in a bearer by virtue of the bearer's amount of 3-dimensional space it occupies.
 synonym: "dehulled-grain volume" EXACT []
 synonym: "DHULGRVOL" RELATED []
 synonym: "GRVOL" RELATED []
+xref: PATO:0000918
 is_a: TO:0002742 ! fruit volume
 
 [Term]
 id: TO:0002744
 name: fruit curved length
-def: "Average length of the curved surface of fruit." [GR:pj]
-is_a: TO:0002625 ! fruit size
-is_a: TO:0002728 ! fruit quality trait
+def: "A fruit length (TO:0002626) which is associated with the average length of the curved surface of fruit (PO:0009001)." [GR:pj, PO:0009001, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
+xref: PATO:0000122
+is_a: TO:0002626 ! fruit length
 
 [Term]
 id: TO:0002745
 name: grain curved length
-def: "Average length of the curved surface of grain without hull (dehulled)." [GR:pj]
+def: "A grain length (TO:0000734) which is associated with the curved surface of grain without hull (dehulled)." [GR:pj, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "curved length of dehulled-grain" EXACT []
 synonym: "dehulled-grain curved length" EXACT []
 synonym: "DHULGRCURVLG" RELATED []
-is_a: TO:0002744 ! fruit curved length
+xref: PATO:0000122
+is_a: TO:0000734 ! grain length
 
 [Term]
 id: TO:0002746
@@ -8008,28 +8070,33 @@ is_a: TO:0000371 ! yield trait
 [Term]
 id: TO:0002761
 name: length of grain with hull
-def: "Length of the grain with hull." [GR:pj]
+def: "A grain length (TO:0000734) with hull." [GR:pj]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "HULGRLG" RELATED []
 synonym: "hulled grain length" RELATED []
 synonym: "hulled-grain length" RELATED []
-is_a: TO:0002626 ! fruit length
+is_a: TO:0000734 ! grain length
 
 [Term]
 id: TO:0002762
 name: width of grain with hull
-def: "Width of the grain with hull." [GR:pj]
+def: "A grain width (TO:0000402) with hull." [GR:pj, TO:moorel]
+comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "HULGRWD" RELATED []
 synonym: "hulled grain curved width" RELATED []
 synonym: "hulled grain width" RELATED []
-is_a: TO:0002627 ! fruit width
+xref: PATO:0000921
+is_a: TO:0000402 ! grain width
 
 [Term]
 id: TO:0002763
 name: curved length of grain with hull
 def: "Average length of the curved surface of grain with hull (hulled)." [GR:pj]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "HULGRCURVLG" RELATED []
 synonym: "hulled grain curved length" RELATED []
-is_a: TO:0002744 ! fruit curved length
+xref: PATO:0000122
+is_a: TO:0002761 ! length of grain with hull
 
 [Term]
 id: TO:0002764
@@ -8616,7 +8683,7 @@ creation_date: 2010-10-25T05:27:37Z
 
 [Term]
 id: TO:0006063
-name: serrated leaf margin
+name: leaf margin serrated
 def: "A leaf margin anatomy and morphology trait (TO:0002635) which is associated with a notched or grooved leaf margin (PO:0020128)." [GR:curators, PO:0020128, POC:cooperl]
 comment: Refer to serrated (PATO:0001206): A shape quality inhering in a bearer by virtue of having sharp straight-edged teeth pointing to the apex.
 xref: PATO:0001206
