@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:07:2012 14:16
+date: 11:07:2012 12:00
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -473,7 +473,8 @@ is_a: TO:0000236 ! crop damage resistance
 
 [Term]
 id: TO:0000064
-name: embryo related trait
+name: embryo anatomy and morphology trait
+def: "A seed anatomy and morphology trait (TO:0000184) which is associated with a plant embryo (PO:0009009)." [PO:0009009, TO:moorel]
 is_a: TO:0000184 ! seed anatomy and morphology trait
 
 [Term]
@@ -1468,20 +1469,22 @@ is_a: TO:0000394 ! drought related trait
 [Term]
 id: TO:0000189
 name: embryoless
-def: "Absence of embryo in the developing seed." [GR:pj]
+def: "An embryo anatomy and morphology trait (TO:0000064) which is associated with the absence of embryo in the developing seed." [GR:pj, TO:moorel]
 synonym: "germless" RELATED []
-is_a: TO:0000064 ! embryo related trait
+is_a: TO:0000064 ! embryo anatomy and morphology trait
 is_a: TO:0000620 ! embryo development trait
 
 [Term]
 id: TO:0000190
 name: seed coat color
-def: "The color of the seed coat." [GR:pj, IRRI:SES]
+def: "A seed coat anatomy and morphology trait (TO:0000838) which is associated with the color of the seed coat (PO:0009088)." [GR:pj, IRRI:SES, PO:0009088, TO:moorel]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "bran color" RELATED []
 synonym: "SCC" RELATED []
 synonym: "SDCCL" RELATED []
+xref: PATO:0000014
 is_a: TO:0000162 ! seed quality
-is_a: TO:0000184 ! seed anatomy and morphology trait
+is_a: TO:0000838 ! seed coat anatomy and morphology trait
 relationship: part_of TO:0000486 ! seed color
 
 [Term]
@@ -1501,11 +1504,17 @@ is_a: TO:0000261 ! insect damage resistance
 [Term]
 id: TO:0000193
 name: embryo shape
-is_a: TO:0000064 ! embryo related trait
+def: "An embryo anatomy and morphology trait (TO:0000064) which is associated with the shape of a plant embryo (PO:0009009)." [PO:0009009, TO:moorel]
+comment: Refer to shape PATO:0000052:A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+xref: PATO:0000052
+is_a: TO:0000064 ! embryo anatomy and morphology trait
 
 [Term]
 id: TO:0000194
 name: globular embryo
+def: "An embryo shape (TO:0000193) which is associated with a globular plant embryo (PO:0009009)." [PO:0009009, TO:moorel]
+comment: Refer to globular (PATO:0001499): A spheroid quality inhering in a bearer by virtue of the bearer's resembling a ball (a sphere whose equatorial diameter is equal to the polar diameter).
+xref: PATO:0001499
 is_a: TO:0000193 ! embryo shape
 
 [Term]
@@ -1513,7 +1522,7 @@ id: TO:0000195
 name: shootless
 def: "The embryo of the germinating seed does not produce shoot." [GR:pj]
 synonym: "SHMIN" RELATED []
-is_a: TO:0000064 ! embryo related trait
+is_a: TO:0000064 ! embryo anatomy and morphology trait
 is_a: TO:0000620 ! embryo development trait
 is_a: TO:0000739 ! shoot axis anatomy and morphology trait
 
@@ -3677,7 +3686,7 @@ is_a: TO:0000653 ! seed development trait
 
 [Term]
 id: TO:0000470
-name: vascular tissue related trait
+name: vascular tissue anatomy and morphology trait
 def: "Traits associated with changes in the anatomy or structure of the vascular tissue and its parts." [GR:pj]
 is_a: TO:0000017 ! anatomy and morphology trait
 
@@ -3783,8 +3792,10 @@ is_a: TO:0000653 ! seed development trait
 [Term]
 id: TO:0000484
 name: seed shape
-def: "Defines shape of the seed." [GR:pj]
+def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the shape of a seed (PO:0009010)." [GR:pj, PO:0009010, TO:moorel]
+comment: Refer to shape PATO:0000052:A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 synonym: "SDSHP" RELATED []
+xref: PATO:0000052
 is_a: TO:0000162 ! seed quality
 is_a: TO:0000184 ! seed anatomy and morphology trait
 is_a: TO:0000653 ! seed development trait
@@ -3797,17 +3808,21 @@ is_a: TO:0000392 ! sterility or fertility trait
 [Term]
 id: TO:0000486
 name: seed color
-def: "The color of the seed." [GR:pj]
+def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the color of a seed (PO:0009010)." [GR:pj, PO:0009019, TO:moorel]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "SDCL" RELATED []
+xref: PATO:000014
 is_a: TO:0000162 ! seed quality
 is_a: TO:0000184 ! seed anatomy and morphology trait
 
 [Term]
 id: TO:0000487
 name: endosperm color
-def: "The color of the endosperm." [GR:pj]
+def: "An endosperm anatomy and morphology trait (TO:0000575) which is associated with the color of an endosperm (PO:0009089)." [GR:pj, PO:0009089, TO:moorel]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "ENDCL" RELATED []
-is_a: TO:0000575 ! endosperm related trait
+xref: PATO:0000014
+is_a: TO:0000575 ! endosperm anatomy and morphology trait
 
 [Term]
 id: TO:0000488
@@ -4417,7 +4432,8 @@ relationship: part_of TO:0000537 ! flower color
 
 [Term]
 id: TO:0000575
-name: endosperm related trait
+name: endosperm anatomy and morphology trait
+def: "A seed anatomy and morphology trait (TO:0000184) which is associated with an endosperm (PO:0009089)." [PO:0009089, TO:moorel]
 is_a: TO:0000184 ! seed anatomy and morphology trait
 
 [Term]
@@ -5437,7 +5453,8 @@ is_a: TO:0000058 ! herbicide sensitivity
 [Term]
 id: TO:0000713
 name: brittle endosperm
-is_a: TO:0000575 ! endosperm related trait
+def: "An endosperm anatomy and morphology trait (TO:0000575) which is associated with a brittle endosperm (PO:0009089)." [PO:0009089, TO:moorel]
+is_a: TO:0000575 ! endosperm anatomy and morphology trait
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
@@ -6636,6 +6653,14 @@ created_by: moorel
 creation_date: 2012-07-09T13:36:14Z
 
 [Term]
+id: TO:0000838
+name: seed coat anatomy and morphology trait
+def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the seed coat (PO:0009088)." [PO:0009088, TO:moorel]
+is_a: TO:0000184 ! seed anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-11T11:29:01Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "The glume cover over the caryopsis. Often measured as percentage." [GR:pj]
@@ -7659,13 +7684,13 @@ is_a: TO:0000765 ! petiole anatomy and morphology trait
 id: TO:0002708
 name: xylem color
 def: "The color of the xylem tissue." [GR:pj]
-is_a: TO:0000470 ! vascular tissue related trait
+is_a: TO:0000470 ! vascular tissue anatomy and morphology trait
 
 [Term]
 id: TO:0002709
 name: phloem color
 def: "The color of the phloem tissue." [GR:pj]
-is_a: TO:0000470 ! vascular tissue related trait
+is_a: TO:0000470 ! vascular tissue anatomy and morphology trait
 
 [Term]
 id: TO:0002710
@@ -9007,6 +9032,9 @@ is_a: TO:0000664 ! fungal blight disease resistance
 [Term]
 id: TO:0020016
 name: seed texture
+def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the texture of a seed (PO:0009010)." [PO:0009010, TO:moorel]
+comment: Refer to texture PATO:0000150: A morphologic quality inhering in a bearer by virtue of the bearer's relative size, organization and distribution of its surface elements or the representation or invention of the appearance of its surface; visual and tactile surface characteristics.
+xref: TO:0000150
 is_a: TO:0000184 ! seed anatomy and morphology trait
 
 [Term]
@@ -9664,7 +9692,7 @@ id: TO:0020109
 name: vascular bundle development trait
 def: "Traits associated with observing effects on the development of vascular bundle." [TO:contributors]
 is_a: TO:0000357 ! growth and development trait
-is_a: TO:0000470 ! vascular tissue related trait
+is_a: TO:0000470 ! vascular tissue anatomy and morphology trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:27:34Z
 
