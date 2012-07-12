@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 11:07:2012 12:59
+date: 12:07:2012 12:50
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -571,10 +571,10 @@ is_obsolete: true
 [Term]
 id: TO:0000077
 name: shoot system anatomy and morphology trait
-def: "An anatomy and morphology trait (TO:0000017) which is associated with a shoot system (PO:0009006)." [GR:pj, PO:0009006, POC:cooperl]
+def: "A collective plant organ structure anatomy and morphology trait (TO:0000842) which is associated with a shoot system (PO:0009006)." [GR:pj, PO:0009006, POC:cooperl]
 comment: Does not include traits of fruit, parts of fruit and adventitious roots which are borne on the shoot.
 xref: OBO_SF_TO:3520088
-is_a: TO:0000017 ! anatomy and morphology trait
+is_a: TO:0000842 ! collective plant organ structure anatomy and morphology trait
 created_by: jaiswalp
 
 [Term]
@@ -3687,8 +3687,8 @@ is_a: TO:0000653 ! seed development trait
 [Term]
 id: TO:0000470
 name: vascular tissue anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the vascular tissue and its parts." [GR:pj]
-is_a: TO:0000017 ! anatomy and morphology trait
+def: "A portion of plant tissue anatomy and morphology trait (TO:0000843) which is associated with changes in the anatomy or structure of the vascular tissue and its parts." [GR:pj, TO:moorel]
+is_a: TO:0000843 ! portion of plant tissue anatomy and morphology trait
 
 [Term]
 id: TO:0000471
@@ -5795,7 +5795,7 @@ id: TO:0000754
 name: cardinal organ part anatomy and morphology trait
 def: "A cardinal organ part of a multi-tissue plant structure anatomy and morphology trait (TO:0000837) which is associated with a cardinal organ part (PO:0025001)." [PO:0025001, POC:cooperl, TO:moorel]
 xref: OBO_SF_ID:3521773
-is_a: TO:0000837 ! cardinal organ part of a multi-tissue plant structure anatomy and morphology trait
+is_a: TO:0000837 ! cardinal part of a multi-tissue plant structure anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-04-26T13:09:13Z
 
@@ -6637,18 +6637,18 @@ creation_date: 2012-07-03T13:07:07Z
 [Term]
 id: TO:0000836
 name: multi-tissue plant structure anatomy and morphology trait
-def: "An anatomy and morphology trait (TO:0000017) which is associated with a multi-tissue plant structure (PO:0025496)." [PO:0025496, TO:moorel]
+def: "A plant structure anatomy and morphology trait (TO:0000839) which is associated with a multi-tissue plant structure (PO:0025496)." [PO:0025496, TO:moorel]
 xref: OBO_SF_ID:3541748
-is_a: TO:0000017 ! anatomy and morphology trait
+is_a: TO:0000839 ! plant structure anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-07-09T11:41:28Z
 
 [Term]
 id: TO:0000837
-name: cardinal organ part of a multi-tissue plant structure anatomy and morphology trait
-def: "A multi-tissue anatomy and morphology trait (TO:0000836) which is associated with a cardinal organ part of a multi-tissue plant structure (PO:0025498)." [PO:0025498, TO:moorel]
+name: cardinal part of a multi-tissue plant structure anatomy and morphology trait
+def: "A plant structure anatomy and morphology trait (TO:0000839) which is associated with a cardinal organ part of a multi-tissue plant structure (PO:0025498)." [PO:0025498, TO:moorel]
 xref: OBO_SF_ID:3541748
-is_a: TO:0000836 ! multi-tissue plant structure anatomy and morphology trait
+is_a: TO:0000839 ! plant structure anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-07-09T13:36:14Z
 
@@ -6659,6 +6659,51 @@ def: "A seed anatomy and morphology trait (TO:0000184) which is associated with 
 is_a: TO:0000184 ! seed anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-07-11T11:29:01Z
+
+[Term]
+id: TO:0000839
+name: plant structure anatomy and morphology trait
+def: "An anatomy and morphology trait (TO:0000017) which is associated with a plant structure (PO:0009011)." [PO:0009011, TO:moorel]
+xref: OBO_SF_ID:3543173
+is_a: TO:0000017 ! anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-12T11:29:26Z
+
+[Term]
+id: TO:0000840
+name: collective plant structure anatomy and morphology trait
+def: "A plant structure anatomy and morphology trait (TO:0000839) which is associated with a collective plant structure (PO:0025497)." [PO:0025497, TO:moorel]
+xref: OBO_SF_ID:3543175
+is_a: TO:0000839 ! plant structure anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-12T11:42:53Z
+
+[Term]
+id: TO:0000841
+name: collective organ part structure anatomy and morphology trait
+def: "A collective plant structure anatomy and morphology trait (TO:0000840) which is associated with a collective organ part structure (PO:0025269)." [PO:0025269, TO:moorel]
+xref: OBO_SF_ID:3543175
+is_a: TO:0000840 ! collective plant structure anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-12T11:49:46Z
+
+[Term]
+id: TO:0000842
+name: collective plant organ structure anatomy and morphology trait
+def: "A collective plant structure anatomy and morphology trait (TO:0000840) which is associated with a collective plant organ structure (PO:0025007)." [PO:0025007, TO:moorel]
+xref: OBO_SF_ID:3543175
+is_a: TO:0000840 ! collective plant structure anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-12T11:55:17Z
+
+[Term]
+id: TO:0000843
+name: portion of plant tissue anatomy and morphology trait
+def: "A plant structure anatomy and morphology trait (TO:0000839) which is associated with a portion of plant tissue (PO:0009007)." [PO:0009007, TO:moorel]
+xref: OBO_SF_ID:3543192
+is_a: TO:0000839 ! plant structure anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-12T12:18:33Z
 
 [Term]
 id: TO:0001000
@@ -7511,8 +7556,8 @@ is_a: TO:0002683 ! plant cell anatomy and morphology trait
 [Term]
 id: TO:0002683
 name: plant cell anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the plant cell and its parts." [GR:pj]
-is_a: TO:0000017 ! anatomy and morphology trait
+def: "A plant structure anatomy and morphology trait (TO:0000839) which is associated with changes in the anatomy or structure of the plant cell (PO:0009002) and its parts." [GR:pj, PO:0009002, TO:moorel]
+is_a: TO:0000839 ! plant structure anatomy and morphology trait
 
 [Term]
 id: TO:0002684
@@ -7716,12 +7761,12 @@ relationship: part_of TO:0000326 ! leaf color
 
 [Term]
 id: TO:0002713
-name: cell organelle structure trait
-def: "Trait(s) associated with phenotypes observed for abnormal development of organelle structure and biogenesis." [GR:pj]
+name: cell organelle anatomy and morphology trait
+def: "A plant cell anatomy and morphology trait (TO:0002683) which is associated with phenotypes observed for abnormal development of organelle structure and biogenesis." [GR:pj, TO:moorel]
 synonym: "cell organelle development trait" RELATED []
 synonym: "organelle biogenesis trait" NARROW []
 synonym: "organelle structure trait" NARROW []
-is_a: TO:0000017 ! anatomy and morphology trait
+is_a: TO:0002683 ! plant cell anatomy and morphology trait
 
 [Term]
 id: TO:0002714
@@ -7729,7 +7774,7 @@ name: plastid development trait
 def: "Trait(s) associated with phenotypes observed for abnormal development of plastid structure and its biogenesis." [GR:pj]
 synonym: "plastid biogenesis trait" NARROW []
 synonym: "plastid structure trait" NARROW []
-is_a: TO:0002713 ! cell organelle structure trait
+is_a: TO:0002713 ! cell organelle anatomy and morphology trait
 is_a: TO:0002755 ! cell organelle development trait
 
 [Term]
