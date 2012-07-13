@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 12:07:2012 13:54
+date: 13:07:2012 14:47
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -292,11 +292,11 @@ is_obsolete: true
 [Term]
 id: TO:0000040
 name: panicle length
-def: "Is the actual measurement in centimeters from panicle base to tip." [IRRI:SES]
+def: "A panicle anatomy and morphology trait (TO:0000847) which is associated this the actual measurement in centimeters from panicle base to tip." [IRRI:SES]
 comment: Evaluated at growth stage:8 in rice.
 synonym: "PnL" RELATED []
 synonym: "PNLG" RELATED []
-is_a: TO:0000271 ! inflorescence length
+is_a: TO:0000847 ! panicle anatomy and morphology trait
 
 [Term]
 id: TO:0000041
@@ -366,7 +366,7 @@ is_a: TO:0000310 ! self-incompatibility
 id: TO:0000050
 name: inflorescence branching
 alt_id: TO:0000263
-def: "The extent of branching usually sets the tone for shape and compactness of the inflorescence." [GR:pj]
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the extent of branching usually sets the tone for shape and compactness of the inflorescence (PO:0009049)." [GR:pj, PO:0009049, TO:moorel]
 synonym: "panicle branching" RELATED []
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 is_a: TO:0000621 ! inflorescence development trait
@@ -386,7 +386,7 @@ is_a: TO:0000597 ! quality trait
 [Term]
 id: TO:0000052
 name: primary branching of inflorescence
-def: "The extent of primary branching usually sets the tone for shape and compactness of the inflorescence (rice panicle)." [GR:pj]
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the extent of primary branching that usually sets the tone for shape and compactness of the inflorescence (PO:0009049) (rice panicle)." [GR:pj, PO:0009049, TO:moorel]
 synonym: "PBR" RELATED []
 synonym: "primary branching of panicle" RELATED []
 is_a: TO:0000050 ! inflorescence branching
@@ -678,12 +678,12 @@ is_a: TO:0000148 ! viral disease resistance
 [Term]
 id: TO:0000089
 name: panicle type
-def: "Panicle types are classified according to their mode of branching, angle of primary branches, and spikelet density." [ICIS:1066, IRRI:SES]
+def: "A panicle anatomy and morphology trait (TO:0000847) which is associated with panicle types, classified according to their mode of branching, angle of primary branches, and spikelet density." [ICIS:1066, IRRI:SES, TO:moorel]
 synonym: "Panicle attitude of branches" RELATED []
 synonym: "PnT" RELATED []
 synonym: "PNTYPE" RELATED []
-is_a: TO:0000267 ! inflorescence type
 is_a: TO:0000621 ! inflorescence development trait
+is_a: TO:0000847 ! panicle anatomy and morphology trait
 
 [Term]
 id: TO:0000090
@@ -1091,7 +1091,7 @@ relationship: part_of TO:0000536 ! floret color
 [Term]
 id: TO:0000142
 name: secondary branching of inflorescence
-def: "The extent of secondary branching usually determines the shape and compactness of the inflorescence (such as in rice panicle)." [GR:pj, IRRI:SES]
+def: "An inflorescence branching (TO:0000050) trait which is associated with the extent of secondary branching that usually determines the shape and compactness of the inflorescence  (PO:0009049) (such as in rice panicle)." [GR:pj, IRRI:SES, PO:0009049, TO:moorel]
 synonym: "panicle secondary branching" RELATED []
 synonym: "PnBr" RELATED []
 synonym: "SBR" RELATED []
@@ -1170,7 +1170,7 @@ is_a: TO:0000261 ! insect damage resistance
 [Term]
 id: TO:0000152
 name: panicle number
-def: "Average number of panicles per plant in a study." [GR:pj, ICIS:1057]
+def: "A panicle anatomy and morphology trait (TO:0000847) which is associated with the average number of panicles per plant in a study." [GR:pj, ICIS:1057, TO:moorel]
 synonym: "NOP" RELATED []
 synonym: "NP" RELATED []
 synonym: "number of effective tiller per plant" RELATED []
@@ -1182,7 +1182,7 @@ synonym: "PNNB" RELATED []
 synonym: "seed setting tillers per plant" RELATED []
 synonym: "spike number" RELATED []
 synonym: "TP" RELATED []
-is_a: TO:0000582 ! inflorescence number
+is_a: TO:0000847 ! panicle anatomy and morphology trait
 
 [Term]
 id: TO:0000153
@@ -1292,10 +1292,10 @@ is_a: TO:0000387 ! plant trait
 [Term]
 id: TO:0000165
 name: panicle exsertion
-def: "A panicoid (rice) trait monitored by observing the extent of coverage of panicle by the flag leaf sheath." [GR:pj, ICIS:1004, IRRI:SES]
+def: "A panicle anatomy and morphology (rice) trait (TO:0000847) monitored by observing the extent of coverage of panicle by the flag leaf sheath." [GR:pj, ICIS:1004, IRRI:SES]
 synonym: "Exs" RELATED []
 synonym: "PNEX" RELATED []
-is_a: TO:0001002 ! inflorescence exsertion
+is_a: TO:0000847 ! panicle anatomy and morphology trait
 
 [Term]
 id: TO:0000166
@@ -1570,9 +1570,11 @@ is_a: TO:0000051 ! stem strength
 [Term]
 id: TO:0000201
 name: panicle color
-def: "Variation in color of the panicle inflorescence." [GR:pj]
+def: "A panicle anatomy and morphology trait (TO:0000847) which is associated with the variation in color of the panicle inflorescence." [GR:pj]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "PNCL" RELATED []
-is_a: TO:0000581 ! inflorescence color
+xref: PATO:0000014
+is_a: TO:0000847 ! panicle anatomy and morphology trait
 
 [Term]
 id: TO:0000202
@@ -2038,8 +2040,10 @@ created_by: jaiswalp
 [Term]
 id: TO:0000262
 name: panicle shape
-def: "Shape of the panicle inflorescence." [GR:pj]
-is_a: TO:0000268 ! inflorescence shape
+def: "A panicle anatomy and morphology trait (TO:0000847) which is associated with the shape of the panicle inflorescence." [GR:pj]
+comment: Refer to shape PATO:0000052:A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+xref: PATO:0000052
+is_a: TO:0000847 ! panicle anatomy and morphology trait
 
 [Term]
 id: TO:0000264
@@ -2076,7 +2080,7 @@ is_a: TO:0000587 ! endosperm quality
 id: TO:0000267
 name: inflorescence type
 alt_id: TO:0000500
-def: "Variation in the type of inflorescence, wither due to extent and number of branching, branch angles or modified form of the inflorescence." [GR:pj]
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the variation in the type of inflorescence, wither due to extent and number of branching, branch angles or modified form of the inflorescence (PO:0009049)." [GR:pj, PO:0009049, TO:moorel]
 synonym: "inflorescence type" RELATED []
 synonym: "INFLOTYPE" EXACT []
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
@@ -3203,10 +3207,10 @@ is_a: TO:0000261 ! insect damage resistance
 [Term]
 id: TO:0000406
 name: panicle threshability
-def: "Percentage of shattered grains, determined by firmly grasping and pulling the hand over the panicle." [ICIS:1008, IRRI:SES]
+def: "A panicle anatomy and morphology trait (TO:0000847) which is associated with the percentage of shattered grains, determined by firmly grasping and pulling the hand over the panicle." [ICIS:1008, IRRI:SES]
 synonym: "PNTH" RELATED []
 synonym: "Thr" RELATED []
-is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+is_a: TO:0000847 ! panicle anatomy and morphology trait
 
 [Term]
 id: TO:0000407
@@ -4198,12 +4202,14 @@ is_a: TO:0000758 ! mesocotyl anatomy and morphology trait
 [Term]
 id: TO:0000545
 name: panicle base to lowest branch
-def: "Length of the region between the panicle base to the lowest (the first)  primary panicle branch." [GR:pj]
+def: "A panicle anatomy and morphology trait (TO:0000847) which is associated with the length of the region between the panicle base to the lowest (the first)  primary panicle branch." [GR:pj, TO:moorel]
+comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
 synonym: "panicle base to first primary branch" RELATED []
 synonym: "panicle base to lowest primary panicle branch" RELATED []
 synonym: "peduncle length from panicle base to first primary branch" RELATED []
 synonym: "PNBLBR" RELATED []
-is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+xref: PATO:0000122
+is_a: TO:0000847 ! panicle anatomy and morphology trait
 
 [Term]
 id: TO:0000546
@@ -4218,7 +4224,7 @@ is_a: TO:0000776 ! peduncle anatomy and morphology trait
 [Term]
 id: TO:0000547
 name: primary branch number
-def: "Number of primary branches present in the inflorescence." [GR:pj]
+def: "A primary branch of inflorescence (TO:0000052) trait which is associated with the number of primary branches present in the inflorescence (PO:0009049)." [GR:pj, PO:0009049, TO:moorel]
 synonym: "NPB" RELATED []
 synonym: "number of primary rachis branches" RELATED []
 synonym: "panicle primary branch number" RELATED []
@@ -4300,7 +4306,7 @@ relationship: part_of TO:0000352 ! plant dry weight
 [Term]
 id: TO:0000557
 name: secondary branch number
-def: "Number of secondary branches in an inflorescence." [GR:pj]
+def: "A secondary branching of inflorescence (TO:0000142) trait which is associated with the number of secondary branches in an inflorescence (PO:0009049)." [GR:pj, PO:0009049, TO:moorel]
 synonym: "SBRNB" RELATED []
 synonym: "secondary branches per panicle" RELATED []
 is_a: TO:0000142 ! secondary branching of inflorescence
@@ -4494,8 +4500,10 @@ is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 [Term]
 id: TO:0000582
 name: inflorescence number
-def: "Average number of inflorescence per plant in a study." [GR:pj]
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the average number of inflorescence (PO:0009049) per plant in a study." [GR:pj, PO:0009049, TO:moorel]
+comment: Refer to number of (PATO:0001555): The number of parts of a particular type that the bearer entity has. This is a relational quality, and thus holds between two entities: the bearer of the quality, and the type of parts.
 synonym: "INFLONB" RELATED []
+xref: PATO:0001555
 is_a: TO:0000371 ! yield trait
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 is_a: TO:0000621 ! inflorescence development trait
@@ -4935,10 +4943,12 @@ is_a: TO:0000084 ! root number
 
 [Term]
 id: TO:0000641
-name: primary branch length
-def: "Length of the primary barnch of inflorescence." [GR:pj]
+name: inflorescence primary branch length
+def: "An inflorescence primary branch anatomy and morphology trait (TO:0000846) which is associated with the length of a second order inflorescence axis (PO:0006321)." [GR:pj, PO:0006321, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "PBRLG" RELATED []
-is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+xref: PATO:0000122
+is_a: TO:0000846 ! inflorescence primary branch anatomy and morphology trait
 
 [Term]
 id: TO:0000642
@@ -4952,7 +4962,7 @@ is_a: TO:0000835 ! leaf sheath anatomy and morphology trait
 [Term]
 id: TO:0000643
 name: bristle length
-def: "Length of the bristles found in inflorescence." [GR:pj]
+def: "An inflorescence branching (TO:0000050) trait which is associated with the length of the bristles found in inflorescence (PO:0009049)." [GR:pj, PO:0009049, TO:moorel]
 synonym: "BRLG" RELATED []
 is_a: TO:0000050 ! inflorescence branching
 
@@ -5048,7 +5058,7 @@ is_a: TO:0000357 ! growth and development trait
 [Term]
 id: TO:0000657
 name: spikelet anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the spikelet and its parts." [GR:pj]
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with changes in the anatomy or structure of the spikelet (PO:0009051) and its parts." [GR:pj, PO:0009051, TO:moorel]
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
 [Term]
@@ -5220,8 +5230,10 @@ is_a: TO:0000680 ! inflorescence circumference
 [Term]
 id: TO:0000682
 name: inflorescence height
-def: "The height of the inflorescence in a plant measured from ground to the attachment point." [GR:pj]
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the height of an inflorescence (PO:0009049) measured from ground to the attachment point." [GR:pj, PO:0009049, TO:moorel]
+comment: Refer to height (PATO:0000119):  A 1-D extent quality inhering in a bearer by virtue of the bearer's vertical dimension of extension.
 synonym: "INFLOHT" RELATED []
+xref: PATO:0000119
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
 [Term]
@@ -6714,6 +6726,30 @@ created_by: moorel
 creation_date: 2012-07-12T13:52:02Z
 
 [Term]
+id: TO:0000845
+name: collective phyllome structure anatomy and morphology trait
+def: "A collective plant organ structure anatomy and morphology trait (TO:0000842) which is associated with a collective phyllome structure (PO:0025023)." [PO:0025023, TO:moorel]
+is_a: TO:0000842 ! collective plant organ structure anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-13T11:30:15Z
+
+[Term]
+id: TO:0000846
+name: inflorescence primary branch anatomy and morphology trait
+def: "An inflorescence branch anatomy and morphology trait (TO:0000784) which is associated with a second order inflorescence axis (PO:0006321)." [PO:0006321, TO:moorel]
+is_a: TO:0000784 ! inflorescence branch anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-13T13:09:22Z
+
+[Term]
+id: TO:0000847
+name: panicle anatomy and morphology trait
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with a panicle." [TO:moorel]
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-13T13:43:22Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "The glume cover over the caryopsis. Often measured as percentage." [GR:pj]
@@ -6728,6 +6764,7 @@ is_a: TO:0000657 ! spikelet anatomy and morphology trait
 [Term]
 id: TO:0001002
 name: inflorescence exsertion
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the exsertion of an inflorescence (PO:0009049)." [PO:0009049, TO:moorel]
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
 [Term]
@@ -6928,7 +6965,7 @@ is_a: TO:0001014 ! leaf dry weight
 [Term]
 id: TO:0001032
 name: relative panicle number
-def: "It is a ratio of panicle number determined from a stressed plant to that grown in normal environment." [GR:pj]
+def: "A panicle number (TO:0000152) trait which is associated with the ratio of panicle number determined from a stressed plant to that grown in normal environment." [GR:pj, TO:moorel]
 is_a: TO:0000152 ! panicle number
 
 [Term]
@@ -7527,7 +7564,7 @@ is_a: TO:0000401 ! plant growth hormone sensitivity
 [Term]
 id: TO:0002678
 name: panicleless
-def: "The absence of panicle in the plant, either due to the abortion of the developmental process and/or due to environmental factors." [GR:pj]
+def: "A panicle number (TO:0000152) trait which is associated with the absence of panicle in the plant, either due to the abortion of the developmental process and/or due to environmental factors." [GR:pj, TO:moorel]
 is_a: TO:0000152 ! panicle number
 is_a: TO:0002679 ! inflorescenceless
 
@@ -8081,15 +8118,15 @@ is_a: TO:0002748 ! ligule anatomy and morphology trait
 id: TO:0002751
 name: inflorescence branch arrangement
 alt_id: TO:0002752
-def: "Arrangement of inflorescence branches." [GR:pj]
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the arrangement of inflorescence branches (PO:0009081)." [GR:pj, PO:0009081, TO:moorel]
 synonym: "INFLBRARANGE" RELATED []
 synonym: "panicle branch arrangement" RELATED []
-is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+is_a: TO:0000050 ! inflorescence branching
 
 [Term]
 id: TO:0002753
 name: arrangement of inflorescence primary branch
-def: "Arrangement of primary branches in an inflorescence." [GR:pj]
+def: "An inflorescence branch arrangement (TO:0002751) trait which is associated with the arrangement of primary branches in an inflorescence (PO:0009049)." [GR:pj, PO:0009049, TO:moorel]
 synonym: "arrangement of primary branch" RELATED []
 synonym: "PBRARANGE" RELATED []
 synonym: "primary branch arrangement" RELATED []
@@ -8527,14 +8564,16 @@ is_a: TO:0006017 ! meristem identity
 [Term]
 id: TO:0006031
 name: inflorescence size
-def: "Variation in size of inflorescence." [GR:pj]
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the variation in size of inflorescence (PO:0009049)." [GR:pj, PO:0009049, TO:moorel]
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude.
+xref: PATO:0000117
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
 [Term]
 id: TO:0006032
 name: panicle size
-def: "Variation in size of panicle inflorescence." [GR:pj]
-is_a: TO:0006031 ! inflorescence size
+def: "A panicle anatomy and morphology trait (TO:0000847) which is associated with the variation in size of panicle inflorescence." [GR:pj, TO:moorel]
+is_a: TO:0000847 ! panicle anatomy and morphology trait
 
 [Term]
 id: TO:0006033
@@ -8546,13 +8585,13 @@ is_a: TO:0000670 ! floret number
 [Term]
 id: TO:0006034
 name: tertiary branch number
-def: "Number of tertiary branches in an inflorescence." [GR:pj]
+def: "A tertiary branching of inflorescence (TO:0006035) trait which is associated with the number of tertiary branches in an inflorescence (PO:0009049)." [GR:pj, PO:0009049, TO:moorel]
 is_a: TO:0006035 ! tertiary branching of inflorescence
 
 [Term]
 id: TO:0006035
 name: tertiary branching of inflorescence
-def: "The extent of tertiary branching usually determines the shape and compactness of the inflorescence (such as in rice panicle)." [GR:pj]
+def: "An inflorescence branching (TO:0000050) trait which is associated with the extent of tertiary branching that usually determines the shape and compactness of the inflorescence (PO:0009049) (such as in rice panicle)." [GR:pj, PO:0009049, TO:moorel]
 is_a: TO:0000050 ! inflorescence branching
 
 [Term]
@@ -8842,24 +8881,30 @@ is_a: TO:0000299 ! leaf lamina color
 [Term]
 id: TO:0011002
 name: inflorescence primary branch attitude
-def: "The attitude of the inflorescence primary branch in terms of upright and drooping characters." [GR:pj]
+def: "An inflorescence primary branch anatomy and morphology trait (TO:0000846) which is associated with the attitude of a second order inflorescence axis (PO:0006321) in terms of upright and drooping characters." [GR:pj, PO:0006321, TO:moorel]
 comment: Associated to the trait inflorescence type (TO:0000267).
 synonym: "INFLPBRAATT" RELATED []
-is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+is_a: TO:0000846 ! inflorescence primary branch anatomy and morphology trait
 
 [Term]
 id: TO:0011003
 name: inflorescence axis color
-def: "Color of the inflorescence axis." [GR:pj]
+def: "An inflorescence axis anatomy and morphology trait (TO:0000782) which is associated with the color of the inflorescence axis (PO:0020122)." [GR:pj, PO:0020122, TO:moorel]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "INFLAXISCL" RELATED []
+xref: PATO:0000014
+is_a: TO:0000782 ! inflorescence axis anatomy and morphology trait
 relationship: part_of TO:0000581 ! inflorescence color
 
 [Term]
 id: TO:0011004
 name: inflorescence branch color
-def: "Color of the inflorescence branch." [GR:pj]
+def: "An inflorescence branch anatomy and morphology trait (TO:0000784) which is associated with the color of the inflorescence branch (PO:0009081)." [GR:pj, PO:0009081, TO:moorel]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "INFLBRACL" RELATED []
 synonym: "panicle branch color" RELATED []
+xref: PATO:0000014
+is_a: TO:0000784 ! inflorescence branch anatomy and morphology trait
 relationship: part_of TO:0000581 ! inflorescence color
 
 [Term]
@@ -9005,7 +9050,11 @@ creation_date: 2011-12-09T02:35:49Z
 [Term]
 id: TO:0020001
 name: panicle compactness and shape
-is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+def: "A panicle anatomy and morphology trait (TO:0000847) which is associated with the compactness and shape of a panicle." [TO:moorel]
+comment: Refer to compact (PATO:0001485): A structural quality inhering in a bearer by virtue of the bearer's being thicker or more closely packed together; pressed tightly together.\nRefer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+xref: PATO:0000052
+xref: PATO:0001485
+is_a: TO:0000847 ! panicle anatomy and morphology trait
 
 [Term]
 id: TO:0020002
