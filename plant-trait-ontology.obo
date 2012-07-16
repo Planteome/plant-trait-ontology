@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 13:07:2012 14:47
+date: 16:07:2012 14:43
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -473,7 +473,7 @@ is_a: TO:0000236 ! crop damage resistance
 
 [Term]
 id: TO:0000064
-name: embryo anatomy and morphology trait
+name: plant embryo anatomy and morphology trait
 def: "A plant structure anatomy and morphology trait (TO:0000839) which is associated with a plant embryo (PO:0009009)." [PO:0009009, TO:moorel]
 is_a: TO:0000839 ! plant structure anatomy and morphology trait
 
@@ -534,10 +534,12 @@ is_a: TO:0000494 ! pigment content
 [Term]
 id: TO:0000072
 name: awn length
-def: "Defines the length of awn." [ICIS:1063, IRRI:SES]
+def: "An awn anatomy and morphology trait (TO:0002718) which is associated with the length of awn (PO:0025349)." [ICIS:1063, IRRI:SES, PO:0025349, TO:moorel]
+comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
 synonym: "An" RELATED []
 synonym: "awning" RELATED []
 synonym: "AWNLG" RELATED []
+xref: PATO:0000122
 is_a: TO:0002718 ! awn anatomy and morphology trait
 
 [Term]
@@ -592,8 +594,9 @@ relationship: part_of TO:0000352 ! plant dry weight
 [Term]
 id: TO:0000079
 name: lemma and palea anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the lemma and palea and their parts." [GR:pj]
+def: "A floret anatomy and morphology trait (TO:0000274) which is associated with changes in the anatomy or structure of the lemma (PO:0009037) and palea (PO:0009038) and their parts." [GR:pj, PO:0009037, PO:0009038, TO:moorel]
 synonym: "lemma and palea related trait" RELATED []
+xref: OBO_SF_ID:3532182
 is_a: TO:0000274 ! floret anatomy and morphology trait
 
 [Term]
@@ -1083,8 +1086,10 @@ relationship: part_of TO:0000536 ! floret color
 [Term]
 id: TO:0000141
 name: awn color
-def: "Describes the change in color of the awn." [IRRI:SES]
+def: "An awn anatomy and morphology trait (TO:0002718) which is associated with the change in color of the awn (PO:0025349)." [IRRI:SES, PO:0025349, TO:moorel]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "AWNCL" RELATED []
+xref: PATO:0000014
 is_a: TO:0002718 ! awn anatomy and morphology trait
 relationship: part_of TO:0000536 ! floret color
 
@@ -1471,7 +1476,7 @@ id: TO:0000189
 name: embryoless
 def: "An embryo anatomy and morphology trait (TO:0000064) which is associated with the absence of embryo in the developing seed." [GR:pj, TO:moorel]
 synonym: "germless" RELATED []
-is_a: TO:0000064 ! embryo anatomy and morphology trait
+is_a: TO:0000064 ! plant embryo anatomy and morphology trait
 is_a: TO:0000620 ! embryo development trait
 
 [Term]
@@ -1507,7 +1512,7 @@ name: embryo shape
 def: "An embryo anatomy and morphology trait (TO:0000064) which is associated with the shape of a plant embryo (PO:0009009)." [PO:0009009, TO:moorel]
 comment: Refer to shape PATO:0000052:A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 xref: PATO:0000052
-is_a: TO:0000064 ! embryo anatomy and morphology trait
+is_a: TO:0000064 ! plant embryo anatomy and morphology trait
 
 [Term]
 id: TO:0000194
@@ -1522,7 +1527,7 @@ id: TO:0000195
 name: shootless
 def: "The embryo of the germinating seed does not produce shoot." [GR:pj]
 synonym: "SHMIN" RELATED []
-is_a: TO:0000064 ! embryo anatomy and morphology trait
+is_a: TO:0000064 ! plant embryo anatomy and morphology trait
 is_a: TO:0000620 ! embryo development trait
 is_a: TO:0000739 ! shoot axis anatomy and morphology trait
 
@@ -1636,7 +1641,7 @@ is_a: TO:0000171 ! height related trait
 [Term]
 id: TO:0000208
 name: lemma number
-def: "Number of lemma in the grass flower (floret)." [GR:pj]
+def: "A lemma and palea anatomy and morphology trait (TO:0000079) which is associated with the number of lemma (PO:0009037) in the grass flower (PO:0009001) (floret)." [GR:pj, PO:0009001, PO:0009037, TO:moorel]
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 is_a: TO:0002613 ! reproductive homeotic development trait
 is_a: TO:0006026 ! floral bract number
@@ -1645,7 +1650,7 @@ is_a: TO:0006038 ! floral organ number
 [Term]
 id: TO:0000209
 name: palea number
-def: "Number of palea in the grass flower (floret)." [GR:pj]
+def: "A lemma and palea anatomy and morphology trait (TO:0000079) which is associated with the number of palea (PO:0009038) in the grass flower (floret)." [GR:pj, PO:0009038, TO:moorel]
 synonym: "PALNB" RELATED []
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 is_a: TO:0002613 ! reproductive homeotic development trait
@@ -1884,9 +1889,11 @@ is_obsolete: true
 [Term]
 id: TO:0000240
 name: sterile lemma length
-def: "Length of the sterile lemma. The measurement is made on each of the two sterile lemmas." [IRRI:SES]
+def: "A lemma and palea anatomy and morphology trait (TO:0000079) which is associated with the length of the sterile lemma (PO:0009040). The measurement is made on each of the two sterile lemmas." [IRRI:SES, PO:0009040, TO:moorel]
+comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
 synonym: "SLmL" RELATED []
 synonym: "STLEMLG" RELATED []
+xref: PATO:0000122
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 
 [Term]
@@ -2048,13 +2055,15 @@ is_a: TO:0000847 ! panicle anatomy and morphology trait
 [Term]
 id: TO:0000264
 name: lemma and palea color
-def: "Color of the lemma and the palea." [GR:pj, IRRI:SES]
+def: "A lemma and palea anatomy and morphology trait (TO:0000079) which is associated with the color of the lemma (PO:0009037) and the palea (PO:0009038)." [GR:pj, IRRI:SES, PO:0009037, PO:0009038, TO:moorel]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "LEMCL" RELATED []
 synonym: "Lemma color" RELATED []
 synonym: "LEMPALCL" RELATED []
 synonym: "LmPC" RELATED []
 synonym: "PALCL" RELATED []
 synonym: "palea color" RELATED []
+xref: PATO:0000014
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 relationship: part_of TO:0000536 ! floret color
 
@@ -2135,8 +2144,9 @@ is_a: TO:0000261 ! insect damage resistance
 [Term]
 id: TO:0000274
 name: floret anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the grass floret and its parts." [GR:pj]
+def: "A flower anatomy and morphology trait (TO:0000499) which is associated with changes in the anatomy or structure of the grass floret and its parts." [GR:pj, TO:moorel]
 synonym: "floret related trait" RELATED []
+xref: OBO_SF_ID:3532182
 is_a: TO:0000499 ! flower anatomy and morphology trait
 
 [Term]
@@ -3152,9 +3162,11 @@ relationship: part_of TO:0000397 ! grain size
 [Term]
 id: TO:0000400
 name: sterile lemma color
-def: "Color of the sterile lemma." [IRRI:SES]
+def: "A lemma and palea anatomy and morphology trait (TO:0000079) which is associated with the color of the sterile lemma  (PO:0009040)." [IRRI:SES, PO:0009040, TO:moorel]
+comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "SLmC" RELATED []
 synonym: "STLEMCL" RELATED []
+xref: PATO:0000014
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 relationship: part_of TO:0000536 ! floret color
 
@@ -3290,8 +3302,10 @@ is_a: TO:0000358 ! female sterility
 [Term]
 id: TO:0000417
 name: lemma and palea pubescence
-def: "Extent of pubescence (hairs) on the lemma and palea." [IRRI:SES]
+def: "A lemma and palea anatomy and morphology trait (TO:0000079) which is associated with the extent of pubescence (hairs) on the lemma (PO:0009037) and palea (PO:0009038)." [IRRI:SES, PO:0009037, PO:0009038, TO:moorel]
+comment: Refer to pubescent hair (PATO:0001320): A pilosity quality of being covered with short hairs or soft down.
 synonym: "LmPb" RELATED []
+xref: PATO:0001320
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 
 [Term]
@@ -4132,8 +4146,10 @@ is_a: TO:0000056 ! stem color
 [Term]
 id: TO:0000536
 name: floret color
-def: "The color of the floret." [GR:pj]
+def: "A floret anatomy and morphology trait (TO:0000274) which is associated with the color of the floret." [GR:pj]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "FLCL" RELATED []
+xref: PATO:0000014
 is_a: TO:0000274 ! floret anatomy and morphology trait
 is_a: TO:0000537 ! flower color
 
@@ -4744,7 +4760,9 @@ is_a: TO:0002728 ! fruit quality trait
 [Term]
 id: TO:0000614
 name: lemma shape
-def: "Shape of the lemma in a floret." [GR:pj]
+def: "A lemma and palea anatomy and morphology trait (TO:0000079) which is associated with the shape of the lemma (PO:0009037) in a floret." [GR:pj, PO:0009037, TO:moorel]
+comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+xref: PATO:0000052
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 
 [Term]
@@ -5012,8 +5030,10 @@ is_a: TO:0000776 ! peduncle anatomy and morphology trait
 [Term]
 id: TO:0000650
 name: lemma length
-def: "Length of the lemma." [GR:pj]
+def: "A lemma and palea anatomy and morphology trait (TO:0000079) which is associated with the length of the lemma (PO:0009037)." [GR:pj, PO:0009037, TO:moorel]
+comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
 synonym: "LEMLG" RELATED []
+xref: PATO:0000122
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 
 [Term]
@@ -6750,6 +6770,107 @@ created_by: moorel
 creation_date: 2012-07-13T13:43:22Z
 
 [Term]
+id: TO:0000848
+name: fruit diameter
+def: "A fruit size (TO:0002625) trait which is associated with the diameter of a fruit (PO:0009001)." [PO:0009001, TO:moorel]
+comment: Refer to diameter (PATO:0001334): A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
+xref: PATO:0001334
+is_a: TO:0002625 ! fruit size
+created_by: moorel
+creation_date: 2012-07-16T12:31:27Z
+
+[Term]
+id: TO:0000849
+name: fruit attachment
+def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the attachment of a fruit (PO:0009001)." [PO:0009001, TO:moorel]
+comment: Refer to attachment quality (PATO:0001435): A structural quality inhering in a bearer by virtue of the bearer's having connection or association with another entity.
+xref: PATO:0001435
+is_a: TO:0002629 ! fruit anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-16T12:39:53Z
+
+[Term]
+id: TO:0000850
+name: fruit type
+def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the type of a fruit (PO:0009001)." [PO:0009001, TO:moorel]
+is_a: TO:0002629 ! fruit anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-16T12:45:56Z
+
+[Term]
+id: TO:0000851
+name: fruit hairiness
+def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the presence or absence of hair on a fruit (PO:0009001)." [PO:0009001, TO:moorel]
+comment: Refer to hairy (PATO:0000454): A pilosity quality inhering in a bearer by virtue of the bearer's being covered with hair or hairlike projections.
+xref: OBO_SF_ID:3538929
+xref: PATO:0000454
+is_a: TO:0002629 ! fruit anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-16T12:48:45Z
+
+[Term]
+id: TO:0000852
+name: fruit set
+def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the visual rating of cassava fruit set with 0 = absent and 1 = present." [TO:moorel]
+xref: OBO_SF_ID:3538929
+is_a: TO:0002629 ! fruit anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-16T12:53:17Z
+
+[Term]
+id: TO:0000853
+name: floret shape
+def: "A floret anatomy and morphology trait (TO:0000274) which is associated with the shape of a floret." [TO:moorel]
+comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+xref: OBO_SF_ID:3532182
+xref: PATO:0000052
+is_a: TO:0000274 ! floret anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-16T13:05:08Z
+
+[Term]
+id: TO:0000854
+name: floret size
+def: "A floret anatomy and morphology trait (TO:0000274) which is associated with the size of a floret." [TO:moorel]
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
+xref: OBO_SF_ID:3532182
+xref: PATO:0000117
+is_a: TO:0000274 ! floret anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-16T13:08:42Z
+
+[Term]
+id: TO:0000855
+name: floret diameter
+def: "A floret anatomy and morphology trait (TO:0000274) which is associated with the diameter of a floret." [TO:moorel]
+comment: Refer to diameter PATO:0001334:A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
+xref: OBO_SF_ID:3532182
+xref: PATO:0001334
+is_a: TO:0000274 ! floret anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-16T13:11:57Z
+
+[Term]
+id: TO:0000856
+name: lodicule length
+def: "A lodiclue anatomy and morphology trait (TO:0006009) which is associated with the length of a lodicule (PO:0009036)." [PO:0009036, TO:moorel]
+comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
+xref: OBO_SF_ID:3532182
+xref: PATO:0000122
+is_a: TO:0006009 ! lodicule anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-16T13:47:12Z
+
+[Term]
+id: TO:0000857
+name: lodicule type
+def: "A lodicule anatomy and morphology trait (TO:0006009) which is associated with the type of lodicule (PO:0009036)." [PO:0009036, TO:moorel]
+xref: OBO_SF_ID:3532182
+is_a: TO:0006009 ! lodicule anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-16T13:51:17Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "The glume cover over the caryopsis. Often measured as percentage." [GR:pj]
@@ -7202,8 +7323,19 @@ is_a: TO:0002629 ! fruit anatomy and morphology trait
 id: TO:0002629
 name: fruit anatomy and morphology trait
 def: "A multi-tissue plant structure anatomy and morphology trait (TO:0000836) which is associated with a fruit (PO:0009001)." [GR:pj, PO:0009001, TO:moorel]
+synonym: "berry" NARROW []
+synonym: "capsule" NARROW []
+synonym: "caryopsis" NARROW []
+synonym: "citrus fruit" NARROW []
 synonym: "fruit anatomy and morphology trait" RELATED []
 synonym: "fruit morphology" RELATED []
+synonym: "grain" NARROW []
+synonym: "kernel" NARROW []
+synonym: "nut" NARROW []
+synonym: "pepo" NARROW []
+synonym: "pod" NARROW []
+synonym: "silique" NARROW []
+synonym: "stone fruit" NARROW []
 is_a: TO:0000836 ! multi-tissue plant structure anatomy and morphology trait
 
 [Term]
@@ -7847,14 +7979,16 @@ is_a: TO:0000754 ! cardinal organ part anatomy and morphology trait
 [Term]
 id: TO:0002718
 name: awn anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the awn." [GR:pj]
-is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
+def: "A cardinal organ part anatomy and morphology trait (TO:0000754) which is associated with changes in the anatomy or structure of the awn (PO:0025349)." [GR:pj, PO:0025349, TO:moorel]
+is_a: TO:0000754 ! cardinal organ part anatomy and morphology trait
 
 [Term]
 id: TO:0002719
 name: awn thickness
-def: "Thickness of the awn measured at a given distance from the apiculus." [GR:pj]
+def: "An awn anatomy and morphology trait (TO:0002718) which is associated with the thickness of the awn (PO:0025349) measured at a given distance from the apiculus." [GR:pj, PO:0025349, TO:moorel]
+comment: Refer to thickness (PATO:0000915): A 1-D extent quality which is equal to the dimension through an object as opposed to its length or width.
 synonym: "AWNTH" RELATED []
+xref: PATO:0000915
 is_a: TO:0002718 ! awn anatomy and morphology trait
 
 [Term]
@@ -7913,15 +8047,19 @@ is_a: TO:0000357 ! growth and development trait
 [Term]
 id: TO:0002726
 name: sterile lemma shape
-def: "Shape of the sterile lemma." [GR:pj]
+def: "A lemma and palea anatomy and morphology trait (TO:0000079) which is associated with the shape of the sterile lemma (PO:0009040)." [GR:pj, PO:0009040, TO:moorel]
+comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 synonym: "STLEMSHP" RELATED []
+xref: PATO:0000052
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 
 [Term]
 id: TO:0002727
 name: sterile lemma width
-def: "Width of the sterile lemma. Measured in the widest portion of the sterile lemma." [GR:pj]
+def: "A lemma anatomy and morphology trait (TO:0000079) which is associated with the width of the sterile lemma (PO:0009040). Measured in the widest portion of the sterile lemma." [GR:pj, PO:0009040, TO:moorel]
+comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "STLEMWD" RELATED []
+xref: PATO:0000921
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 
 [Term]
@@ -7979,8 +8117,10 @@ is_a: TO:0000124 ! flag leaf angle
 [Term]
 id: TO:0002734
 name: awn presence
-def: "The presence or absence of awn. Observation may include relative awn size." [GR:pj]
+def: "An awn anatomy and morphology trait (TO:0002718) which is associated with the presence or absence of awn (PO:0025349). Observation may include relative awn size." [GR:pj, PO:0025349, TO:moorel]
+comment: Refer to presence value PATO:0000458.
 synonym: "AWNPLU" RELATED []
+xref: PATO:0000458
 is_a: TO:0002718 ! awn anatomy and morphology trait
 
 [Term]
@@ -8422,13 +8562,14 @@ is_a: TO:0000291 ! carbohydrate content
 [Term]
 id: TO:0006009
 name: lodicule anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the lodicule and its parts." [GR:pj]
+def: "A floret anatomy and morphology trait (TO:0000274) which is associated with changes in the anatomy or structure of the lodicule (PO:0009036) and its parts." [GR:pj, PO:0009036, TO:moorel]
+xref: OBO_SF_ID:3532182
 is_a: TO:0000274 ! floret anatomy and morphology trait
 
 [Term]
 id: TO:0006010
 name: lodicule number
-def: "Average number of lodicules per grass flower (floret) in a study." [GR:pj]
+def: "A lodicule anatomy and morphology trait (TO:0006009) which is associated with the average number of lodicules (PO:0009036) per grass flower (floret) in a study." [GR:pj, PO:0009036, TO:moorel]
 is_a: TO:0002613 ! reproductive homeotic development trait
 is_a: TO:0006009 ! lodicule anatomy and morphology trait
 is_a: TO:0006023 ! lodicule development trait
@@ -8436,7 +8577,9 @@ is_a: TO:0006023 ! lodicule development trait
 [Term]
 id: TO:0006011
 name: lodicule shape
-def: "Shape of the lodicule." [GR:pj]
+def: "A lodicule anatomy and morphology trait (TO:0006009) which is associated with the shape of a lodicule (PO:0009036)." [GR:pj, PO:0009036, TO:moorel]
+comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+xref: PATO:0000052
 is_a: TO:0006009 ! lodicule anatomy and morphology trait
 
 [Term]
@@ -8928,8 +9071,10 @@ is_a: TO:0002720 ! leaf lamina width
 [Term]
 id: TO:0011007
 name: awn width
-def: "Width of the awn." [GR:pj]
+def: "An awn anatomy and morphology trait (TO:0002718) which is associated with the width of the awn (PO:0025349)." [GR:pj, PO:0025349, TO:moorel]
+comment: Refer to width (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "AWNWD" RELATED []
+xref: PATO:0000921
 is_a: TO:0002718 ! awn anatomy and morphology trait
 
 [Term]
