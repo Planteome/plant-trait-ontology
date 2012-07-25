@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 19:07:2012 16:39
-saved-by: cooperl
+date: 25:07:2012 12:43
+saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
@@ -594,10 +594,10 @@ relationship: part_of TO:0000352 ! plant dry weight
 [Term]
 id: TO:0000079
 name: lemma and palea anatomy and morphology trait
-def: "A floret anatomy and morphology trait (TO:0000274) which is associated with changes in the anatomy or structure of the lemma (PO:0009037) and palea (PO:0009038) and their parts." [GR:pj, PO:0009037, PO:0009038, TO:moorel]
+def: "An inflorescence bract anatomy and morphology trait (TO:0000816) which is associated with changes in the anatomy or structure of the lemma (PO:0009037) and palea (PO:0009038) and their parts." [GR:pj, PO:0009037, PO:0009038, TO:moorel]
 synonym: "lemma and palea related trait" RELATED []
 xref: OBO_SF_ID:3532182
-is_a: TO:0000274 ! floret anatomy and morphology trait
+is_a: TO:0000816 ! inflorescence bract anatomy and morphology trait
 
 [Term]
 id: TO:0000080
@@ -1645,7 +1645,6 @@ def: "A lemma and palea anatomy and morphology trait (TO:0000079) which is assoc
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 is_a: TO:0002613 ! reproductive homeotic development trait
 is_a: TO:0006026 ! floral bract number
-is_a: TO:0006038 ! floral organ number
 
 [Term]
 id: TO:0000209
@@ -1655,7 +1654,6 @@ synonym: "PALNB" RELATED []
 is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 is_a: TO:0002613 ! reproductive homeotic development trait
 is_a: TO:0006026 ! floral bract number
-is_a: TO:0006038 ! floral organ number
 
 [Term]
 id: TO:0000210
@@ -2152,9 +2150,9 @@ is_a: TO:0000499 ! flower anatomy and morphology trait
 [Term]
 id: TO:0000275
 name: perianth anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the perianth and its parts." [GR:pj]
+def: "A collective phyllome structure anatomy and morphology trait (TO:0000845) which is associated with changes in the anatomy or structure of a perianth (PO:0009058)." [GR:pj, PO:0009058, TO:moorel]
 synonym: "perianth related trait" RELATED []
-is_a: TO:0000499 ! flower anatomy and morphology trait
+is_a: TO:0000845 ! collective phyllome structure anatomy and morphology trait
 
 [Term]
 id: TO:0000276
@@ -4151,13 +4149,14 @@ comment: Refer to color (PATO:0000014): A composite chromatic quality composed o
 synonym: "FLCL" RELATED []
 xref: PATO:0000014
 is_a: TO:0000274 ! floret anatomy and morphology trait
-is_a: TO:0000537 ! flower color
 
 [Term]
 id: TO:0000537
 name: flower color
-def: "The color of the flower or the grass floret." [GR:pj]
+def: "A flower anatomy and morphology trait (TO:0000499) which is associated with the color of the flower (PO:0009046)." [GR:pj, PO:0009046, TO:moorel]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "FLCL" RELATED []
+xref: PATO:0000014
 is_a: TO:0000499 ! flower anatomy and morphology trait
 
 [Term]
@@ -4434,22 +4433,28 @@ relationship: part_of TO:0000442 ! plant fresh weight
 [Term]
 id: TO:0000572
 name: petal color
-def: "Color of the petal." [GR:pj]
-is_a: TO:0000275 ! perianth anatomy and morphology trait
+def: "A petal anatomy and morphology trait (TO:0000863) which is associated with the color of a petal (PO:0009032)." [GR:pj, PO:0009032, TO:moorel]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
+xref: PATO:0000014
+is_a: TO:0000863 ! petal anatomy and morphology trait
 relationship: part_of TO:0000537 ! flower color
 
 [Term]
 id: TO:0000573
 name: sepal color
-def: "Color of sepals in a flower." [GR:pj]
-is_a: TO:0000275 ! perianth anatomy and morphology trait
+def: "A sepal anatomy and morphology trait (TO:0000864) which is associated with the color of a sepal (PO:0009031) in a flower (PO:0009049)." [GR:pj, PO:0009031, PO:0009049, TO:moorel]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
+xref: PATO:0000014
+is_a: TO:0000864 ! sepal anatomy and morphology trait
 relationship: part_of TO:0000537 ! flower color
 
 [Term]
 id: TO:0000574
 name: tepal color
-def: "Color of tepals in a flower." [GR:pj]
-is_a: TO:0000275 ! perianth anatomy and morphology trait
+def: "A tepal anatomy and morphology trait (TO:0000865) which is associated with the color of a tepal (PO:0009033)." [GR:pj, PO:0009033, TO:moorel]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
+xref: PATO:0000014
+is_a: TO:0000865 ! tepal anatomy and morphology trait
 relationship: part_of TO:0000537 ! flower color
 
 [Term]
@@ -5163,8 +5168,8 @@ id: TO:0000670
 name: floret number
 def: "The number of flowers present on a inflorescence branch or in the inflorescence itself." [GR:pj]
 synonym: "FLNB" RELATED []
+is_a: TO:0000274 ! floret anatomy and morphology trait
 is_a: TO:0000622 ! flower development trait
-is_a: TO:0002736 ! flower number
 
 [Term]
 id: TO:0000671
@@ -6871,6 +6876,84 @@ created_by: moorel
 creation_date: 2012-07-16T13:51:17Z
 
 [Term]
+id: TO:0000858
+name: flower diameter
+def: "A flower anatomy and morphology trait (TO:0000499) which is associated with the diameter of a flower (PO:0009046)." [PO:0009046, TO:moorel]
+comment: Refer to diameter (PATO:0001334): A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
+xref: OBO_SF_ID:3532182
+xref: PATO:0001334
+is_a: TO:0000499 ! flower anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-25T10:16:56Z
+
+[Term]
+id: TO:0000859
+name: flower shape
+def: "A flower anatomy and morphology trait (TO:0000499) which is associated with the shape of a flower (PO:0009046)." [PO:0009046, TO:moorel]
+comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+xref: OBO_SF_ID:3532182
+xref: PATO:0000052
+is_a: TO:0000499 ! flower anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-25T10:21:29Z
+
+[Term]
+id: TO:0000860
+name: flower length
+def: "A flower anatomy and morphology trait (TO:0000499) which is associated with the length of a flower (PO:0009046)." [PO:0009046, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
+xref: OBO_SF_ID:3532182
+xref: PATO:0000122
+is_a: TO:0000499 ! flower anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-25T10:27:25Z
+
+[Term]
+id: TO:0000861
+name: flower abscission zone
+def: "A flower anatomy and morphology trait (TO:0000499) which is associated with the flower abscission zone (PO:0006502)." [PO:0006502, TO:moorel]
+xref: OBO_SF_ID:3532182
+is_a: TO:0000499 ! flower anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-25T10:30:55Z
+
+[Term]
+id: TO:0000862
+name: floral organ anatomy and morphology trait
+def: "A plant organ anatomy and morphology trait (TO:0000736) which is associated with a floral organ (PO:0025395)." [PO:0025395, TO:moorel]
+xref: OBO_SF_ID:3548451
+is_a: TO:0000736 ! plant organ anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-25T10:47:57Z
+
+[Term]
+id: TO:0000863
+name: petal anatomy and morphology trait
+def: "A phyllome anatomy and morphology trait (TO:0000747) which is associated with a petal (PO:0009032)." [PO:0009032, TO:moorel]
+xref: OBO_SF_ID:3548465
+is_a: TO:0000747 ! phyllome anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-25T11:18:56Z
+
+[Term]
+id: TO:0000864
+name: sepal anatomy and morphology trait
+def: "A phyllome anatomy and morphology trait (TO:0000747) which is associated with a sepal (PO:0009031)." [PO:0009031, TO:moorel]
+xref: OBO_SF_ID:3548465
+is_a: TO:0000747 ! phyllome anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-25T11:22:26Z
+
+[Term]
+id: TO:0000865
+name: tepal anatomy and morphology trait
+def: "A phyllome anatomy and morphology trait (TO:0000747) which is associated with a tepal (PO:0009033)." [PO:0009033, TO:moorel]
+xref: OBO_SF_ID:3548465
+is_a: TO:0000747 ! phyllome anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-25T12:19:50Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "The glume cover over the caryopsis. Often measured as percentage." [GR:pj]
@@ -7119,66 +7202,74 @@ is_a: TO:0000361 ! stem anatomy and morphology trait
 
 [Term]
 id: TO:0002600
-name: flower organ size
-def: "Size of the given floral organ type." [GR:pj]
+name: floral organ size
+def: "A floral organ anatomy and morphology trait (TO:0000862) which is associated with the size of a floral organ (PO:0025395)." [GR:pj, PO:0025395, TO:moorel]
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude.
 synonym: "floral organ size" EXACT []
-is_a: TO:0000499 ! flower anatomy and morphology trait
+xref: PATO:0000117
+is_a: TO:0000862 ! floral organ anatomy and morphology trait
 
 [Term]
 id: TO:0002601
 name: stamen size
 def: "Size of the stamen." [GR:pj]
 is_a: TO:0000215 ! stamen anatomy and morphology trait
-is_a: TO:0002600 ! flower organ size
+is_a: TO:0002600 ! floral organ size
 
 [Term]
 id: TO:0002602
 name: pistil size
 def: "Size of the pistil." [GR:pj]
 is_a: TO:0000223 ! pistil anatomy and morphology trait
-is_a: TO:0002600 ! flower organ size
+is_a: TO:0002600 ! floral organ size
 
 [Term]
 id: TO:0002603
 name: petal size
-def: "Size of the petal." [GR:pj]
-is_a: TO:0000275 ! perianth anatomy and morphology trait
-is_a: TO:0002600 ! flower organ size
+def: "A petal anatomy and morphology trait (TO:0000863) which is associated with the size of a petal (PO:0009032)." [GR:pj, PO:0009032, TO:moorel]
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
+xref: PATO:0000117
+is_a: TO:0000863 ! petal anatomy and morphology trait
 
 [Term]
 id: TO:0002604
 name: sepal size
-def: "Size of the sepal." [GR:pj]
-is_a: TO:0000275 ! perianth anatomy and morphology trait
-is_a: TO:0002600 ! flower organ size
+def: "A sepal anatomy and morphology trait (TO:0000864) which is associated with the size of a sepal (PO:0009031)." [GR:pj, PO:0009031, TO:moorel]
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
+xref: PATO:0000117
+is_a: TO:0000864 ! sepal anatomy and morphology trait
 
 [Term]
 id: TO:0002605
 name: petal length
-def: "Length of the petal." [GR:pj]
-is_a: TO:0002603 ! petal size
-is_a: TO:0002614 ! floral organ length
+def: "A petal anatomy and morphology trait (TO:0000863) which is associated with the length of a petal (PO:0009032)." [GR:pj, PO:0009032, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
+xref: PATO:0000122
+is_a: TO:0000863 ! petal anatomy and morphology trait
 
 [Term]
 id: TO:0002606
 name: petal width
-def: "Width of petals in a flower." [GR:pj]
-is_a: TO:0002603 ! petal size
-is_a: TO:0002615 ! floral organ width
+def: "A petal anatomy and morphology trait (TO:0000863) which is associated with the width of a petal (PO:0009032) in a flower (PO:0009049)." [GR:pj, PO:0009032, PO:0009049, TO:moorel]
+comment: Refer to width (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
+xref: PATO:0000921
+is_a: TO:0000863 ! petal anatomy and morphology trait
 
 [Term]
 id: TO:0002607
 name: sepal length
-def: "Length of the sepal." [GR:pj]
-is_a: TO:0002604 ! sepal size
-is_a: TO:0002614 ! floral organ length
+def: "A sepal anatomy and morphology trait (TO:0000864) which is associated with the length of a sepal (PO:0009031)." [GR:pj, PO:0009031, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
+xref: PATO:0000122
+is_a: TO:0000864 ! sepal anatomy and morphology trait
 
 [Term]
 id: TO:0002608
 name: sepal width
-def: "Width of sepals in a flower." [GR:pj]
-is_a: TO:0002604 ! sepal size
-is_a: TO:0002615 ! floral organ width
+def: "A sepal anatomy and morphology trait (TO:0000864) which is associated with the width of a sepal (PO:0009031) in a flower (PO:0009049)." [GR:pj, PO:0009031, PO:0009049, TO:moorel]
+comment: Refer to width (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
+xref: PATO:0000921
+is_a: TO:0000864 ! sepal anatomy and morphology trait
 
 [Term]
 id: TO:0002609
@@ -7216,14 +7307,18 @@ is_a: TO:0002611 ! homeotic development trait
 [Term]
 id: TO:0002614
 name: floral organ length
-def: "Length of the given floral organ type." [GR:pj]
-is_a: TO:0002600 ! flower organ size
+def: "A floral organ anatomy and morphology trait (TO:0000862) which is associated with the length of a floral organ (PO:0025395)." [GR:pj, PO:0025395, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
+xref: PATO:0000122
+is_a: TO:0000862 ! floral organ anatomy and morphology trait
 
 [Term]
 id: TO:0002615
 name: floral organ width
-def: "Width of the given floral organ type." [GR:pj]
-is_a: TO:0002600 ! flower organ size
+def: "A floral organ anatomy and morphology trait (TO:0000862) which is associated with the width of a floral organ (PO:0025395)." [GR:pj, PO:0025395, TO:moorel]
+comment: Refer to width (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
+xref: PATO:0000921
+is_a: TO:0000862 ! floral organ anatomy and morphology trait
 
 [Term]
 id: TO:0002616
@@ -8133,7 +8228,7 @@ is_a: TO:0000168 ! abiotic stress trait
 [Term]
 id: TO:0002736
 name: flower number
-def: "The number of flowers." [GR:pj]
+def: "A flower anatomy and morphology trait (TO:0000499) which is associated with the number of flowers (PO:0009046)." [GR:pj, PO:0009046, TO:moorel]
 is_a: TO:0000499 ! flower anatomy and morphology trait
 
 [Term]
@@ -8562,9 +8657,9 @@ is_a: TO:0000291 ! carbohydrate content
 [Term]
 id: TO:0006009
 name: lodicule anatomy and morphology trait
-def: "A floret anatomy and morphology trait (TO:0000274) which is associated with changes in the anatomy or structure of the lodicule (PO:0009036) and its parts." [GR:pj, PO:0009036, TO:moorel]
+def: "A plant organ anatomy and morphology trait (TO:0000736) which is associated with changes in the anatomy or structure of the lodicule (PO:0009036) and its parts." [GR:pj, PO:0009036, TO:moorel]
 xref: OBO_SF_ID:3532182
-is_a: TO:0000274 ! floret anatomy and morphology trait
+is_a: TO:0000736 ! plant organ anatomy and morphology trait
 
 [Term]
 id: TO:0006010
@@ -8753,26 +8848,26 @@ is_a: TO:0006012 ! carpel anatomy and morphology trait
 [Term]
 id: TO:0006038
 name: floral organ number
-def: "Number of given floral organ type in a flower." [GR:pj]
-is_a: TO:0000499 ! flower anatomy and morphology trait
+def: "A floral organ anatomy and morphology trait (TO:0000862) which is associated with the number of floral organ (PO:0025395) types in a flower (PO:0009046)." [GR:pj, PO:0009046, TO:moorel]
+is_a: TO:0000862 ! floral organ anatomy and morphology trait
 
 [Term]
 id: TO:0006039
 name: petal number
-def: "Number of the petals in a flower." [GR:pj]
-is_a: TO:0000275 ! perianth anatomy and morphology trait
+def: "A petal anatomy and morphology trait (TO:0000863) which is associated with the number of petals (PO:0009032) in a flower (PO:0009049)." [GR:pj, PO:0009032, PO:0009049, TO:moorel]
+is_a: TO:0000863 ! petal anatomy and morphology trait
 
 [Term]
 id: TO:0006040
 name: sepal number
-def: "Number of the sepals in a flower." [GR:pj]
-is_a: TO:0000275 ! perianth anatomy and morphology trait
+def: "A sepal anatomy and morphology trait (TO:0000864) which is associated with the number of the sepals (PO:0009031) in a flower (PO:0009049)." [GR:pj, PO:0009031, PO:0009049, TO:moorel]
+is_a: TO:0000864 ! sepal anatomy and morphology trait
 
 [Term]
 id: TO:0006041
 name: tepal number
-def: "Number of the tepals in a flower." [GR:pj]
-is_a: TO:0000275 ! perianth anatomy and morphology trait
+def: "A tepal anatomy and morphology trait (TO:0000865) which is associated with the number of the tepals (PO:0009033) in a flower (PO:0009049)." [GR:pj, PO:0009033, PO:0009049, TO:moorel]
+is_a: TO:0000865 ! tepal anatomy and morphology trait
 
 [Term]
 id: TO:0006042
@@ -9082,14 +9177,14 @@ id: TO:0011008
 name: stigma length
 def: "Length of the stigma in a pistil." [GR:pj]
 synonym: "STIGLG" RELATED []
-is_a: TO:0002600 ! flower organ size
+is_a: TO:0002600 ! floral organ size
 
 [Term]
 id: TO:0011009
 name: style length
 def: "Length of the style in a pistil." [GR:pj]
 synonym: "STYLLG" RELATED []
-is_a: TO:0002600 ! flower organ size
+is_a: TO:0002600 ! floral organ size
 
 [Term]
 id: TO:0011010
