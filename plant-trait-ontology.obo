@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 25:07:2012 12:43
+date: 25:07:2012 14:13
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -1697,9 +1697,9 @@ is_a: TO:0000215 ! stamen anatomy and morphology trait
 [Term]
 id: TO:0000215
 name: stamen anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the stamen and its parts." [GR:pj]
+def: "A microsporophyll anatomy and morphology trait (TO:0000868) which is associated with the changes in the anatomy or structure of a stamen (PO:0009029)." [GR:pj, PO:0009029, TO:moorel]
 synonym: "stamen related trait" RELATED []
-is_a: TO:0000499 ! flower anatomy and morphology trait
+is_a: TO:0000868 ! microsporophyll anatomy and morphology trait
 
 [Term]
 id: TO:0000216
@@ -1758,9 +1758,9 @@ is_a: TO:0000162 ! seed quality
 [Term]
 id: TO:0000223
 name: pistil anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the pistil and its parts." [GR:pj]
+def: "A carpel anatomy and morphology trait (TO:0006012) which is associated with changes in the anatomy or structure of a pistil." [GR:pj, TO:moorel]
 synonym: "pistil related trait  " RELATED []
-is_a: TO:0000499 ! flower anatomy and morphology trait
+is_a: TO:0006012 ! carpel anatomy and morphology trait
 
 [Term]
 id: TO:0000224
@@ -1774,12 +1774,11 @@ is_a: TO:0000080 ! micronutrient sensitivity
 [Term]
 id: TO:0000225
 name: stamen number
-def: "Number of stamens present in the flower." [GR:pj]
+def: "A stamen anatomy and morphology trait (TO:0000215) which is associated with the number of stamens (PO:0009029) present in the flower (PO:0009049)." [GR:pj, PO:0009029, PO:0009049, TO:moorel]
 synonym: "STANB" RELATED []
 is_a: TO:0000215 ! stamen anatomy and morphology trait
 is_a: TO:0002613 ! reproductive homeotic development trait
 is_a: TO:0006022 ! floral organ development trait
-is_a: TO:0006038 ! floral organ number
 
 [Term]
 id: TO:0000226
@@ -6954,6 +6953,32 @@ created_by: moorel
 creation_date: 2012-07-25T12:19:50Z
 
 [Term]
+id: TO:0000866
+name: sporophyll anatomy and morphology trait
+def: "A phyllome anatomy and morphology trait (TO:0000747) which is associated with a sporophyll (PO:0009026)." [PO:0009026, TO:moorel]
+xref: OBO_SF_ID:3548495
+is_a: TO:0000747 ! phyllome anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-25T13:04:01Z
+
+[Term]
+id: TO:0000867
+name: megasporophyll anatomy and morphology trait
+def: "A sporophyll anatomy and morphology trait (TO:0000866) which is associated with a megasporophyll (PO:0009027)." [PO:0009027, TO:moorel]
+xref: OBO_SF_ID:3548495
+is_a: TO:0000866 ! sporophyll anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-25T13:05:52Z
+
+[Term]
+id: TO:0000868
+name: microsporophyll anatomy and morphology trait
+def: "A sporophyll anatomy and morphology trait (TO:0000866) which is associated with a microsporophyll (PO:0009028)." [PO:0009028, TO:moorel]
+is_a: TO:0000866 ! sporophyll anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-07-25T13:07:55Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "The glume cover over the caryopsis. Often measured as percentage." [GR:pj]
@@ -7212,16 +7237,18 @@ is_a: TO:0000862 ! floral organ anatomy and morphology trait
 [Term]
 id: TO:0002601
 name: stamen size
-def: "Size of the stamen." [GR:pj]
+def: "A stamen anatomy and morphology trait (TO:0000225) which is associated with the size of a stamen (PO:0009029)." [GR:pj, PO:0009029, TO:moorel]
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
+xref: PATO:0000117
 is_a: TO:0000215 ! stamen anatomy and morphology trait
-is_a: TO:0002600 ! floral organ size
 
 [Term]
 id: TO:0002602
 name: pistil size
-def: "Size of the pistil." [GR:pj]
+def: "A pistil anatomy and morphology trait (TO:0000223) which is associated with the size of a pistil." [GR:pj, TO:moorel]
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude.
+xref: PATO:0000117
 is_a: TO:0000223 ! pistil anatomy and morphology trait
-is_a: TO:0002600 ! floral organ size
 
 [Term]
 id: TO:0002603
@@ -7274,16 +7301,18 @@ is_a: TO:0000864 ! sepal anatomy and morphology trait
 [Term]
 id: TO:0002609
 name: stamen length
-def: "Length of the stamen." [GR:pj]
-is_a: TO:0002601 ! stamen size
-is_a: TO:0002614 ! floral organ length
+def: "A stamen anatomy and morphology trait (TO:0000215) which is associated with the length of a stamen (PO:0009029)." [GR:pj, PO:0009029, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
+xref: PATO:0000122
+is_a: TO:0000215 ! stamen anatomy and morphology trait
 
 [Term]
 id: TO:0002610
 name: pistil length
-def: "Length of the pistil." [GR:pj]
-is_a: TO:0002602 ! pistil size
-is_a: TO:0002614 ! floral organ length
+def: "A pistil anatomy and morphology trait (TO:0000223) which is associated with the length of a pistil." [GR:pj, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
+xref: PATO:0000122
+is_a: TO:0000223 ! pistil anatomy and morphology trait
 
 [Term]
 id: TO:0002611
@@ -7642,7 +7671,7 @@ is_a: TO:0000283 ! biological process related trait
 [Term]
 id: TO:0002659
 name: pistil number
-def: "Number of pistils in the gynoecium." [GR:pj]
+def: "A pistil anatomy and morphology trait (TO:0000223) which is associated with the number of pistils in the gynoecium (PO:0009062)." [GR:pj, PO:0009062, TO:moorel]
 is_a: TO:0000223 ! pistil anatomy and morphology trait
 is_a: TO:0002613 ! reproductive homeotic development trait
 is_a: TO:0006022 ! floral organ development trait
@@ -8680,15 +8709,14 @@ is_a: TO:0006009 ! lodicule anatomy and morphology trait
 [Term]
 id: TO:0006012
 name: carpel anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the carpel and its parts." [GR:pj]
-is_a: TO:0000223 ! pistil anatomy and morphology trait
+def: "A megasporophyll anatomy and morphology trait (TO:0000867) which is associated with changes in the anatomy or structure of a carpel (PO:0009030)." [GR:pj, PO:0009030, TO:moorel]
+is_a: TO:0000867 ! megasporophyll anatomy and morphology trait
 
 [Term]
 id: TO:0006013
 name: carpel number
-def: "Number of carpels in a pistil in the gynoecium." [GR:pj]
+def: "A carpel anatomy and morphology trait (TO:0006012) which is associated with the number of carpels (PO:0009030) in the gynoecium (PO:0009062)." [GR:pj, PO:0009030, PO:0009062, TO:moorel]
 is_a: TO:0006012 ! carpel anatomy and morphology trait
-is_a: TO:0006038 ! floral organ number
 
 [Term]
 id: TO:0006014
@@ -8842,7 +8870,9 @@ is_a: TO:0000654 ! shoot development trait
 [Term]
 id: TO:0006037
 name: carpel shape
-def: "Shape of the carpel." [GR:pj]
+def: "A carpel anatomy  and morphology trait  (TO:0006012) which is associated with the shape of a carpel (PO:0009030)." [GR:pj, PO:0009030, TO:moorel]
+comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+xref: PATO:0000052
 is_a: TO:0006012 ! carpel anatomy and morphology trait
 
 [Term]
