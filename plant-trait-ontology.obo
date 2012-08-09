@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 08:08:2012 12:25
+date: 09:08:2012 11:05
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -1411,7 +1411,8 @@ is_a: TO:0000164 ! stress trait
 [Term]
 id: TO:0000180
 name: spikelet fertility
-def: "Determined by percent of spikelets with grains identified by pressing the spikelets with the fingers and counting those that have no grains or the percent seed setting." [GR:pj, ICIS:1001, ICIS:1059, ICIS:1062, IRRI:SES]
+def: "A spikelet anatomy and morphology trait (TO:0000657) which is associated with the fertility to a spikelet (PO:0009051)." [GR:pj, ICIS:1001, ICIS:1059, ICIS:1062, IRRI:SES, PO:0009051, TO:moorel]
+comment: Determined by percent of spikelets with grains identified by pressing the spikelets with the fingers and counting those that have no grains or the percent seed setting.\nRefer to fertility (PATO:0000274): A reproductive quality inhering in a bearer by virtue of the bearer's initiating, sustaining, or supporting reproduction.
 synonym: "percent sterility" RELATED []
 synonym: "seed setting" RELATED []
 synonym: "SpFert" RELATED []
@@ -3596,7 +3597,7 @@ is_a: TO:0000445 ! seed number
 [Term]
 id: TO:0000456
 name: spikelet number
-def: "Average number of spikelets in one or more inflorescence (e.g. rice panicle) found in a plant or on all plants of a study." [GR:pj]
+def: "A spikelet anaotmy and morphology trait (TO:0000657) which is associated with the average number of spikelets (PO:0009051) in one or more inflorescence (PO:0009049) (e.g. rice panicle) found in a plant or on all plants of a study." [GR:pj, PO:0009049, PO:0009051, TO:moorel]
 synonym: "number of spikelets per panicle" RELATED []
 synonym: "spikelet number per panicle" RELATED []
 synonym: "SPKNB" RELATED []
@@ -3918,8 +3919,10 @@ is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 [Term]
 id: TO:0000501
 name: spikelet weight
-def: "Weight of the spikelet." [GR:pj]
+def: "A spikelet anatomy and morphology trait (TO:0000657) which is associated with the weight of a spikelet (PO:0009051)." [GR:pj, PO:0009051, TO:moorel]
+comment: Refer to weight (PATO:0000128): A physical quality inhering in a bearer that has mass near a gravitational body.
 synonym: "SPKWT" RELATED []
+xref: PATO:0000128
 is_a: TO:0000657 ! spikelet anatomy and morphology trait
 
 [Term]
@@ -4366,15 +4369,20 @@ is_a: TO:0000540 ! leaf area
 [Term]
 id: TO:0000563
 name: spikelet length to width ratio
-def: "A ratio of length to the width of the spikelet." [GR:pj]
+def: "A spikelet anatomy and morphology trait (TO:0000657) which is associated with the ratio of length to the width of a spikelet (PO:0009051)." [GR:pj, PO:0009051, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.\nRefer to width (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "SPKLGWDRO" RELATED []
+xref: PATO:0000122
+xref: PATO:0000921
 is_a: TO:0000657 ! spikelet anatomy and morphology trait
 
 [Term]
 id: TO:0000564
 name: spikelet width
-def: "Width of the spikelets present in a grass inflorescence." [GR:pj]
+def: "A spikelet anatomy and morphology trait (TO:0000657) which is associated with the width of the spikelets (PO:0009051) present in a grass inflorescence." [GR:pj, PO:0009051, TO:moorel]
+comment: Refer to width (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "SPKWD" RELATED []
+xref: PATO:0000921
 is_a: TO:0000657 ! spikelet anatomy and morphology trait
 
 [Term]
@@ -4859,8 +4867,10 @@ is_a: TO:0000347 ! weed damage
 [Term]
 id: TO:0000625
 name: spikelet density
-def: "Density of the spikelets in the inflorescence or on the given inflorescence branch order." [GR:pj]
+def: "A spikelet anatomy and morphology trait (TO:0000657) which is associated with the density of a spikelet (PO:0009051) in the inflorescence (PO:0009049) or on the given inflorescence branch (PO:0009081) order." [GR:pj, PO:0009049, PO:0009051, PO:0009081, TO:moorel]
+comment: Refer to density (PATO:0001019): A physical quality which inheres in a bearer by virtue of some influence is exerted by the bearer's mass per unit size.
 synonym: "SPKDN" RELATED []
+xref: PATO:0001019
 is_a: TO:0000657 ! spikelet anatomy and morphology trait
 
 [Term]
@@ -4897,7 +4907,7 @@ id: TO:0000630
 name: pedicel length
 def: "Length of the pedicel." [GR:pj]
 synonym: "PDCLG" RELATED []
-is_a: TO:0000657 ! spikelet anatomy and morphology trait
+is_a: TO:0000784 ! inflorescence branch anatomy and morphology trait
 
 [Term]
 id: TO:0000631
@@ -5084,8 +5094,8 @@ is_a: TO:0000357 ! growth and development trait
 [Term]
 id: TO:0000657
 name: spikelet anatomy and morphology trait
-def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with changes in the anatomy or structure of the spikelet (PO:0009051) and its parts." [GR:pj, PO:0009051, TO:moorel]
-is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+def: "A reproductive shoot system anatomy and morphology trait (TO:0000786) which is associated with changes in the anatomy or structure of the spikelet (PO:0009051) and its parts." [GR:pj, PO:0009051, TO:moorel]
+is_a: TO:0000786 ! reproductive shoot system anatomy and morphology trait
 
 [Term]
 id: TO:0000658
@@ -6827,7 +6837,7 @@ creation_date: 2012-07-16T12:53:17Z
 id: TO:0000853
 name: floret shape
 def: "A floret anatomy and morphology trait (TO:0000274) which is associated with the shape of a floret." [TO:moorel]
-comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 xref: OBO_SF_ID:3532182
 xref: PATO:0000052
 is_a: TO:0000274 ! floret anatomy and morphology trait
@@ -6849,7 +6859,7 @@ creation_date: 2012-07-16T13:08:42Z
 id: TO:0000855
 name: floret diameter
 def: "A floret anatomy and morphology trait (TO:0000274) which is associated with the diameter of a floret." [TO:moorel]
-comment: Refer to diameter PATO:0001334:A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
+comment: Refer to diameter (PATO:0001334):A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
 xref: OBO_SF_ID:3532182
 xref: PATO:0001334
 is_a: TO:0000274 ! floret anatomy and morphology trait
@@ -6860,7 +6870,7 @@ creation_date: 2012-07-16T13:11:57Z
 id: TO:0000856
 name: lodicule length
 def: "A lodiclue anatomy and morphology trait (TO:0006009) which is associated with the length of a lodicule (PO:0009036)." [PO:0009036, TO:moorel]
-comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 xref: OBO_SF_ID:3532182
 xref: PATO:0000122
 is_a: TO:0006009 ! lodicule anatomy and morphology trait
@@ -8528,8 +8538,10 @@ is_a: TO:0000549 ! rhizome anatomy and morphology trait
 [Term]
 id: TO:0002768
 name: spikelet length
-def: "Length of the spikelet." [GR:pj]
+def: "A spikelet anatomy and morphology trait (TO:0000657) which is associated with the length of a spikelet (PO:0009051)." [GR:pj, PO:0009051, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "SPKLG" RELATED []
+xref: PATO:0000122
 is_a: TO:0000657 ! spikelet anatomy and morphology trait
 
 [Term]
