@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 04:10:2012 15:19
+date: 04:10:2012 15:51
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -1111,7 +1111,7 @@ def: "Relative yield was calculated as the ratio of biomass in stress to that of
 synonym: "RB" RELATED []
 synonym: "relative biomass yield" RELATED []
 synonym: "RELBIOM" RELATED []
-is_a: TO:0000327 ! biomass yield
+is_a: TO:0000327 ! above ground biomass yield trait
 
 [Term]
 id: TO:0000144
@@ -2592,8 +2592,8 @@ created_by: jaiswalp
 
 [Term]
 id: TO:0000327
-name: biomass yield
-def: "The material produced by the growth of plants, especially as a product of farming." [ICIS:1301, ISBN:0198506732]
+name: above ground biomass yield trait
+def: "A yield trait (TO: 0000371) that is associated with the  amount of a plant anatomical entity (PO:0025131)  which is produced above ground." [ICIS:1301, ISBN:0198506732]
 synonym: "BIOMYLD" RELATED []
 synonym: "BY" RELATED []
 is_a: TO:0000371 ! yield trait
@@ -2805,7 +2805,7 @@ synonym: "dry mass" RELATED []
 synonym: "PTDWT" RELATED []
 synonym: "RTWT" RELATED []
 synonym: "total dry mass" RELATED []
-is_a: TO:0000327 ! biomass yield
+is_a: TO:0000327 ! above ground biomass yield trait
 
 [Term]
 id: TO:0000353
@@ -2944,7 +2944,7 @@ is_a: TO:0002637 ! leaf size
 [Term]
 id: TO:0000371
 name: yield trait
-def: "Traits that contribute directly or indirectly to the yield or the produce from a plant. IT may be determined in terms of weight or the number of grains/seed." [GR:pj]
+def: "A plant trait (TO:0000387) which is associated with a harvestable product that is a plant anatomical entity (PO:0025131) or one or more constituent cellular components (GO:0005575) contained therein." [GR:pj, TO:cooperl]
 synonym: "YLD" RELATED []
 is_a: TO:0000387 ! plant trait
 
@@ -3090,7 +3090,7 @@ def: "Yield of forage matter upon harvest." [GR:pj]
 synonym: "FRGYLD" RELATED []
 synonym: "FY" RELATED []
 synonym: "straw yield" RELATED []
-is_a: TO:0000327 ! biomass yield
+is_a: TO:0000327 ! above ground biomass yield trait
 
 [Term]
 id: TO:0000389
@@ -3134,13 +3134,13 @@ is_a: TO:0000237 ! water stress trait
 
 [Term]
 id: TO:0000396
-name: grain yield
-def: "Amount of grain measured in weight per unit of area, at a given grain moisture." [ICIS:1003, IRRI:SES, TO:contributors]
+name: grain yield trait
+def: "A fruit yield trait (TO:0000871) that is associated with grain." [ICIS:1003, IRRI:SES, TO:contributors, TO:cooperl]
 comment: In Rice the grain yield if often measured in kilograms per hectare at 14 percent moisture if the experiment was done on a field trial.
 synonym: "GRYLD" RELATED []
 synonym: "seed yield" RELATED []
 synonym: "Yld" RELATED []
-is_a: TO:0000371 ! yield trait
+is_a: TO:0000871 ! fruit yield trait
 
 [Term]
 id: TO:0000397
@@ -3485,7 +3485,7 @@ id: TO:0000442
 name: plant fresh weight
 def: "Fresh weight of the plant." [GR:pj37]
 synonym: "PLFWT" RELATED []
-is_a: TO:0000327 ! biomass yield
+is_a: TO:0000327 ! above ground biomass yield trait
 
 [Term]
 id: TO:0000443
@@ -3619,7 +3619,7 @@ name: total biomass yield
 synonym: "dry matter yield" RELATED []
 synonym: "TBIOMYLD" RELATED []
 synonym: "total dry weight" RELATED []
-is_a: TO:0000327 ! biomass yield
+is_a: TO:0000327 ! above ground biomass yield trait
 
 [Term]
 id: TO:0000458
@@ -7009,6 +7009,22 @@ created_by: moorel
 creation_date: 2012-08-08T11:50:03Z
 
 [Term]
+id: TO:0000870
+name: leaf yield trait
+def: "An above ground biomass yield trait (TO:0000327) which is comprised of leaves (PO:0025034) or parts of leaves." [TO:cooperl]
+is_a: TO:0000327 ! above ground biomass yield trait
+created_by: moorel
+creation_date: 2012-10-04T15:42:58Z
+
+[Term]
+id: TO:0000871
+name: fruit yield trait
+def: "An above ground biomass yield trait (TO:0000327) which is associated with a fruit (PO:0009001)." [TO:cooperl]
+is_a: TO:0000327 ! above ground biomass yield trait
+created_by: moorel
+creation_date: 2012-10-04T15:45:03Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "A glume anatomy and morphology trait (TO:0000869) which is associated with the glume (PO:0009039) cover over the caryopsis. Often measured as percentage." [GR:pj, PO:0009039, TO:moorel]
@@ -7139,7 +7155,7 @@ id: TO:0001019
 name: root to total biomass ratio
 def: "A ratio of root dry weight to total plant dry weight." [GR:pj]
 synonym: "root dry weight to total plant dry weight ratio" RELATED []
-is_a: TO:0000327 ! biomass yield
+is_a: TO:0000327 ! above ground biomass yield trait
 
 [Term]
 id: TO:0001020
