@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 04:10:2012 15:51
+date: 09:10:2012 15:08
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -1622,12 +1622,12 @@ is_a: TO:0000348 ! sogatodes resistance
 [Term]
 id: TO:0000206
 name: leaf angle
-def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the angle of a leaf (PO:0025034) measured against the stem." [IRRI:SES, POC:ccoperl]
+def: "A leaf attitude (TO:0000206) which is associated with the angle of a leaf (PO:0025034) measured against the stem." [IRRI:SES, POC:ccoperl]
 comment: In rice it is measured against the culm on the leaf below the flag leaf. Refer to angle value (PATO:0000602)
 synonym: "LBP" RELATED []
 synonym: "LFAG" RELATED []
 xref: PATO:0000602
-is_a: TO:0000748 ! leaf anatomy and morphology trait
+is_a: TO:0000824 ! leaf attitude
 created_by: jaiswalp
 
 [Term]
@@ -6582,6 +6582,7 @@ creation_date: 2012-07-02T11:56:25Z
 id: TO:0000824
 name: leaf attitude
 def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the attitude of a leaf (PO:0025034)." [PO:0025034, POC:cooperl]
+comment: Leaf attitude traits refer to the way a leaf is naturally held on the plant.
 xref: OBO_SF_TO:3530450
 is_a: TO:0000748 ! leaf anatomy and morphology trait
 created_by: moorel
@@ -6589,12 +6590,12 @@ creation_date: 2012-07-02T12:06:18Z
 
 [Term]
 id: TO:0000825
-name: leaf felixibility
-def: "A leaf attitude (TO:0000824) which is associated with the felixibility of a leaf (PO:0025034)." [PO:0025034, POC:cooperl]
+name: leaf flexibility
+def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the flexibility of a leaf (PO:0025034)." [PO:0025034, POC:cooperl]
 comment: Refer to flexibility (PATO:0001543): A physical quality inhering in a bearer by virtue of the bearer's disposition to being turned, bowed, or twisted without breaking.
 xref: OBO_SF_TO:3530450
 xref: PATO:0001543
-is_a: TO:0000824 ! leaf attitude
+is_a: TO:0000748 ! leaf anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-07-02T12:12:45Z
 
@@ -6797,7 +6798,7 @@ creation_date: 2012-07-13T13:43:22Z
 [Term]
 id: TO:0000848
 name: fruit diameter
-def: "A fruit size (TO:0002625) trait which is associated with the diameter of a fruit (PO:0009001)." [PO:0009001, TO:moorel]
+def: "A fruit size trait (TO:0002625) which is associated with the diameter of a fruit (PO:0009001)." [PO:0009001, TO:moorel]
 comment: Refer to diameter (PATO:0001334): A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
 xref: PATO:0001334
 is_a: TO:0002625 ! fruit size
@@ -7023,6 +7024,76 @@ def: "An above ground biomass yield trait (TO:0000327) which is associated with 
 is_a: TO:0000327 ! above ground biomass yield trait
 created_by: moorel
 creation_date: 2012-10-04T15:45:03Z
+
+[Term]
+id: TO:0000872
+name: leaf erect
+def: "A leaf attitude (TO:0000824) which is associated with a leaf held upright away from the substrate or host." [TO:moorel]
+comment: Refer to erect (PATO:0000622): A positional quality inhering in a bearer by virtue of the bearer's being upright in position or posture.
+xref: PATO:0000622
+is_a: TO:0000824 ! leaf attitude
+created_by: moorel
+creation_date: 2012-10-09T13:55:46Z
+
+[Term]
+id: TO:0000873
+name: leaf prostrate
+def: "A leaf attitude (TO:0000824) which is associated with a leaf hanging straight down." [TO:moorel]
+comment: Refer to prostrate (PATO:0000631): A positional quality inhering in a bearer by virtue of the bearer's being stretched out and lying at full length along the ground.
+xref: PATO:0000631
+is_a: TO:0000824 ! leaf attitude
+created_by: moorel
+creation_date: 2012-10-09T14:01:24Z
+
+[Term]
+id: TO:0000874
+name: leaf penduloum
+def: "A leaf attitude (TO:0000824) which is associated with a leaf laying flat against the substrate or host." [TO:moorel]
+is_a: TO:0000824 ! leaf attitude
+created_by: moorel
+creation_date: 2012-10-09T14:04:08Z
+
+[Term]
+id: TO:0000875
+name: leaf lamina splitting
+def: "A leaf lamina anatomy and morphology trait (TO:0000829) which is associated with the splitting of a leaf lamina (PO:0020039)." [PO:0020039, TO:moorel]
+comment: Refer to split (PATO:0001786): A shape quality inhering in a bearer by virtue of the bearer's being divided or broken up into parts or divisions.
+xref: OBO_SF_ID:3530450
+xref: PATO:0001786
+is_a: TO:0000829 ! leaf lamina anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-10-09T14:11:08Z
+
+[Term]
+id: TO:0000876
+name: spine leaf anatomy and morphology trait
+def: "A vascular leaf anatomy and morphology trait (TO:0000419) which is associated with a spine leaf (PO:0025173)." [PO:0025173, TO:moorel]
+xref: OBO_SF_ID:3544734
+is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-10-09T14:46:53Z
+
+[Term]
+id: TO:0000877
+name: spine leaf size
+def: "A spine leaf anatomy and morphology trait (TO:0000876) which is associated with the size of the spin leaf (PO:0025173)." [PO:0025173, TO:moorel]
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude.
+xref: OBO_SF_ID:3544734
+xref: PATO:0000117
+is_a: TO:0000876 ! spine leaf anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-10-09T14:48:19Z
+
+[Term]
+id: TO:0000878
+name: spine leaf color
+def: "A spine leaf anatomy and morphology trait (TO:0000876) which is associated with the color of the spin leaf (PO:0025173)." [PO:0025173, TO:moorel]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
+xref: OBO_SF_ID:3544734
+xref: PATO:0000014
+is_a: TO:0000876 ! spine leaf anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-10-09T14:52:10Z
 
 [Term]
 id: TO:0001000
