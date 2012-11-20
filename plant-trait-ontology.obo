@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 11:10:2012 12:53
+date: 20:11:2012 16:05
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -375,11 +375,13 @@ is_a: TO:0000621 ! inflorescence development trait
 [Term]
 id: TO:0000051
 name: stem strength
-def: "The test gives indication of culm stiffness and resilience." [GR:pj, ICIS:1014, IRRI:Rice_SES(1996)]
+def: "A stem anatomy and morphology trait (TO:0000361) which is associated with the strength of a stem (PO:0009047)." [GR:pj, ICIS:1014, IRRI:Rice_SES(1996), PO:0009047, TO:moorel]
+comment: Refer to strength (PATO:0001230): A quality inhering in a bearer by virtue of the bearer's power or force.
 synonym: "Cs" RELATED []
 synonym: "culm strength" RELATED []
 synonym: "CULMSTR" RELATED []
 synonym: "STEMSTR" RELATED []
+xref: PATO:0001230
 is_a: TO:0000168 ! abiotic stress trait
 is_a: TO:0000361 ! stem anatomy and morphology trait
 is_a: TO:0000597 ! quality trait
@@ -420,7 +422,9 @@ is_a: TO:0000829 ! leaf lamina anatomy and morphology trait
 [Term]
 id: TO:0000056
 name: stem color
-def: "Variation in color of the stem." [GR:pj]
+def: "A stem anatomy and morphology trait (TO:0000361) which is associated with the color of a stem (PO:0009047)." [GR:pj, PO:0009047, TO:moorel]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
+xref: PATO:0000014
 is_a: TO:0000361 ! stem anatomy and morphology trait
 
 [Term]
@@ -2876,7 +2880,9 @@ is_a: TO:0000655 ! leaf development trait
 [Term]
 id: TO:0000361
 name: stem anatomy and morphology trait
-def: "Traits associated with changes in the anatomy or structure of the stem and its parts." [GR:pj]
+def: "A shoot axis anatomy and morphology trait (TO:0000739) which is associated with a stem (PO:0009047)." [GR:pj, PO:0009047, TO:moorel]
+synonym: "core anatomy and morphology trait " NARROW []
+xref: OBO_SF_ID:3544731
 is_a: TO:0000739 ! shoot axis anatomy and morphology trait
 
 [Term]
@@ -4485,14 +4491,17 @@ is_a: TO:0000843 ! portion of plant tissue anatomy and morphology trait
 id: TO:0000576
 name: stem length
 alt_id: TO:0000309
-def: "Length of the stem." [GR:pj37]
-comment: Often measured from soil surface to highest point on stem.
+def: "A stem anatomy and morphology trait (TO:0000361) which is associated with the length of the stem (PO:0009047)." [GR:pj37, PO:0009047, TO:moorel]
+comment: Often measured from soil surface to highest point on stem.\nRefer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "CmL" RELATED []
+synonym: "core length" NARROW []
 synonym: "culm height" RELATED []
 synonym: "culm length" RELATED []
 synonym: "CULMLG" RELATED []
 synonym: "stem height" RELATED []
 synonym: "STEMLG" RELATED []
+xref: OBO_SF_ID:3544731
+xref: PATO:0000122
 is_a: TO:0000168 ! abiotic stress trait
 is_a: TO:0000361 ! stem anatomy and morphology trait
 is_a: TO:0000654 ! shoot development trait
@@ -4501,8 +4510,10 @@ relationship: part_of TO:0000207 ! plant height
 [Term]
 id: TO:0000577
 name: stem angle
-def: "Angle of the stem." [GR:pj]
+def: "A stem anatomy and morphology trait (TO:0000361) which is associated with the angle of a stem (PO:0009047)." [GR:pj, PO:0009047, TO:moorel]
+comment: Refer to angle (PATO:0002326): An orientation inhering in a bearer by virtue of the bearer's placement at an angle.
 synonym: "STEMAG" RELATED []
+xref: PATO:0002326
 is_a: TO:0000361 ! stem anatomy and morphology trait
 
 [Term]
@@ -7224,6 +7235,30 @@ created_by: moorel
 creation_date: 2012-10-11T12:50:20Z
 
 [Term]
+id: TO:0000892
+name: stem size
+def: "A stem anatomy and morphology trait (TO:0000361) which is associated with the size of a stem (PO:0009047)." [PO:0009047, TO:moorel]
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude.
+synonym: "core size" NARROW []
+xref: OBO_SF_ID:3544731
+xref: PATO:0000117
+is_a: TO:0000361 ! stem anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-11-20T15:35:42Z
+
+[Term]
+id: TO:0000893
+name: stem shape
+def: "A stem anatomy and morphology trait (TO:0000361) which is associated with the shape of a stem (PO:0009047)." [PO:0009047, TO:moorel]
+comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+synonym: "core shape" NARROW []
+xref: OBO_SF_ID:3544731
+xref: PATO:0000052
+is_a: TO:0000361 ! stem anatomy and morphology trait
+created_by: moorel
+creation_date: 2012-11-20T15:44:05Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "A glume anatomy and morphology trait (TO:0000869) which is associated with the glume (PO:0009039) cover over the caryopsis. Often measured as percentage." [GR:pj, PO:0009039, TO:moorel]
@@ -7460,9 +7495,11 @@ is_a: TO:0000207 ! plant height
 [Term]
 id: TO:0001035
 name: stem width
-def: "Measurement of width of the stem." [GR:cwt]
+def: "A stem anatomy and morphology trait (TO:0000361) which is associated with the width of a stem (PO:0009047)." [GR:cwt, PO:0009047, TO:moorel]
+comment: Refer to width (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "culm diameter" RELATED []
 synonym: "culm width" RELATED []
+xref: PATO:0000921
 is_a: TO:0000361 ! stem anatomy and morphology trait
 
 [Term]
@@ -10116,8 +10153,10 @@ creation_date: 2011-08-19T03:20:23Z
 [Term]
 id: TO:0020083
 name: stem diameter
-def: "A trait to assay stem diameter." [GR:pj]
+def: "A stem anatomy and morphology trait (TO:0000361) which is associated with the diameter of a stem (PO:0009047)." [GR:pj, PO:0009047, TO:moorel]
+comment: Refer to diameter (PATO:0001334): A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
 synonym: "culm diameter" RELATED []
+xref: PATO:0001334
 is_a: TO:0000361 ! stem anatomy and morphology trait
 created_by: jaiswalp
 creation_date: 2011-08-19T03:31:47Z
