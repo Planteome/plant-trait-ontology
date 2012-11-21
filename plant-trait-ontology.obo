@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 20:11:2012 16:05
+date: 21:11:2012 13:36
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -4504,7 +4504,6 @@ xref: OBO_SF_ID:3544731
 xref: PATO:0000122
 is_a: TO:0000168 ! abiotic stress trait
 is_a: TO:0000361 ! stem anatomy and morphology trait
-is_a: TO:0000654 ! shoot development trait
 relationship: part_of TO:0000207 ! plant height
 
 [Term]
@@ -7252,6 +7251,7 @@ name: stem shape
 def: "A stem anatomy and morphology trait (TO:0000361) which is associated with the shape of a stem (PO:0009047)." [PO:0009047, TO:moorel]
 comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 synonym: "core shape" NARROW []
+xref: OBO_SF_ID:3524919
 xref: OBO_SF_ID:3544731
 xref: PATO:0000052
 is_a: TO:0000361 ! stem anatomy and morphology trait
@@ -7505,9 +7505,9 @@ is_a: TO:0000361 ! stem anatomy and morphology trait
 [Term]
 id: TO:0001036
 name: stem senescence
-def: "A measurement of aging of stem." [GR:cwt]
+def: "This term has been obsoleted. Please refer to stem senescence (TO:0020085)." [GR:cwt, TO:moorel]
 synonym: "culm senescence" RELATED []
-is_a: TO:0000361 ! stem anatomy and morphology trait
+is_obsolete: true
 
 [Term]
 id: TO:0002600
@@ -10172,8 +10172,11 @@ creation_date: 2011-08-19T03:33:01Z
 [Term]
 id: TO:0020085
 name: stem senescence
-def: "A trait to measure the stem senescence." [GR:pj]
+def: "A shoot development trait (TO:0000654) to measure the senescence of a stem (PO:0009047)." [GR:pj, PO:0009047, TO:moorel]
+comment: Refer to organ senescence (GO:0010260): The process that occurs in an organ near the end of its active life that is associated with the dismantling of cell components and membranes, and an overall decline in metabolism. An example of this process is found in Arabidopsis thaliana.
 synonym: "culm senescence" EXACT []
+xref: GO:0010260
+xref: OBO_SF_ID:3531323
 is_a: TO:0000654 ! shoot development trait
 created_by: jaiswalp
 creation_date: 2011-08-19T03:34:31Z
