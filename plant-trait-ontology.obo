@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 24:01:2013 14:52
+date: 28:01:2013 13:07
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -1136,10 +1136,12 @@ relationship: part_of TO:0000576 ! stem length
 id: TO:0000146
 name: seed length
 alt_id: TO:0000395
-def: "Is the average length of the seed or caryopsis fruit in a cereal (with hull)." [GR:pj, ICIS:1051, IRRI:SES]
+def: "A seed size (TO:0000391) trait which is associated with the average length of the seed (PO:0009010) or caryopsis fruit in a cereal (with hull)." [GR:pj, ICIS:1051, IRRI:SES, PO:0009010, TO:moorel]
+comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "grain length" RELATED []
 synonym: "GRLG" RELATED []
 synonym: "SDLG" RELATED []
+xref: PATO:0000122
 is_a: TO:0000391 ! seed size
 
 [Term]
@@ -1161,13 +1163,15 @@ is_a: TO:0000242 ! microbial damage resistance
 [Term]
 id: TO:0000149
 name: seed width
-def: "Determined by the actual measurement of width in millimeters as the distance across the seed (with hull)." [GR:pj, ICIS:1052, IRRI:SES]
+def: "A seed size (TO:0000391) trait which is associated with the actual measurement of width in millimeters as the distance across the seed (PO:0009010). (with hull)." [GR:pj, ICIS:1052, IRRI:SES, PO:0009010, TO:moorel]
+comment: Refer to (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "kernel plumpness" RELATED []
 synonym: "kernel width" RELATED []
 synonym: "percentatge of plump kernels" RELATED []
 synonym: "plump grain" RELATED []
 synonym: "plump seed" RELATED []
 synonym: "SDWD" RELATED []
+xref: PATO:0000921
 is_a: TO:0000391 ! seed size
 
 [Term]
@@ -2405,8 +2409,10 @@ is_a: TO:0000432 ! temperature response trait
 [Term]
 id: TO:0000304
 name: seed thickness
-def: "Thickness of the seed or fruit caryopsis with the hull." [GR:pj]
+def: "A seed size (TO:0000391) which is associated with the thickness of the seed (PO:0009010) or fruit caryopsis with the hull." [GR:pj, PO:0009010, TO:moorel]
+comment: Refer to (PATO:0000915): A 1-D extent quality which is equal to the dimension through an object as opposed to its length or width.
 synonym: "SDTH" RELATED []
+xref: PATO:0000915
 is_a: TO:0000391 ! seed size
 
 [Term]
@@ -3115,10 +3121,12 @@ is_a: TO:0000587 ! endosperm quality
 [Term]
 id: TO:0000391
 name: seed size
-def: "Seed size is determined by  its length to width ratio." [GR:pj, ICIS:1302]
-synonym: "kernel size" RELATED []
+def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the size of a seed (PO:0009010) determined by  its length to width ratio." [GR:pj, ICIS:1302, PO:0009010, TO:moorel]
+comment: Is a seed quality trait (TO:0000162). Refer to size (PATO:0000117): A morphology quality  inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
+xref: OBO_SF_ID:3602441
+xref: PATO:0000162
 is_a: TO:0000162 ! seed quality
-is_a: TO:0000653 ! seed development trait
+is_a: TO:0000184 ! seed anatomy and morphology trait
 
 [Term]
 id: TO:0000392
@@ -3830,7 +3838,6 @@ synonym: "SDSHP" RELATED []
 xref: PATO:0000052
 is_a: TO:0000162 ! seed quality
 is_a: TO:0000184 ! seed anatomy and morphology trait
-is_a: TO:0000653 ! seed development trait
 
 [Term]
 id: TO:0000485
@@ -7318,7 +7325,7 @@ creation_date: 2013-01-24T14:26:46Z
 
 [Term]
 id: TO:0000900
-name: root nodule number 
+name: root nodule number
 def: "A root nodule anatomy and morphology trait (TO:0000898)\nwhich is associated with the number of root nodules (PO:0003023)." [PO:0003023, TO:moorel]
 comment: Refer to has number of (PATO:0001555): The number of parts of a particular type that the bearer entity has. This is a relational quality, and thus holds between two entities: the bearer of the quality, and the type of parts.
 xref: OBO_SF_ID:3602031
@@ -7809,6 +7816,7 @@ name: fruit size
 def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the variation in the size of a fruit (PO:0009001)." [GR:pj, PO:0009001, TO:moorel]
 comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
 synonym: "FRSZ" RELATED []
+synonym: "kernel size" NARROW []
 synonym: "pod size" NARROW []
 xref: PATO:0000117
 is_a: TO:0002629 ! fruit anatomy and morphology trait
