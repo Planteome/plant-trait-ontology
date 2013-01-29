@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 28:01:2013 16:58
+date: 28:01:2013 19:10
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -1280,6 +1280,9 @@ alt_id: TO:0000588
 def: "The quality assessment of the seed commonly called as kernel or grain in case of cereals, as well as those of the dehulled grains.  Often associated with the commercial value either directly or indirectly." [GR:pj]
 synonym: "grain quality" RELATED []
 is_a: TO:0000597 ! quality trait
+relationship: has_part TO:0000391 ! seed size
+relationship: has_part TO:0000484 ! seed shape
+relationship: has_part TO:0000486 ! seed color
 
 [Term]
 id: TO:0000163
@@ -3128,8 +3131,6 @@ comment: Seed size is determined by the ratio of the seed length to seed width a
 xref: OBO_SF_TO:3602441
 xref: PATO:0000117
 is_a: TO:0000184 ! seed anatomy and morphology trait
-intersection_of: TO:0000184 ! seed anatomy and morphology trait
-intersection_of: part_of TO:0000162 ! seed quality
 
 [Term]
 id: TO:0000392
@@ -3838,7 +3839,6 @@ def: "A seed anatomy and morphology trait (TO:0000184) which is associated with 
 comment: Refer to shape PATO:0000052:A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 synonym: "SDSHP" RELATED []
 xref: PATO:0000052
-is_a: TO:0000162 ! seed quality
 is_a: TO:0000184 ! seed anatomy and morphology trait
 
 [Term]
@@ -3853,7 +3853,6 @@ def: "A seed anatomy and morphology trait (TO:0000184) which is associated with 
 comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "SDCL" RELATED []
 xref: PATO:000014
-is_a: TO:0000162 ! seed quality
 is_a: TO:0000184 ! seed anatomy and morphology trait
 
 [Term]
@@ -10624,6 +10623,15 @@ created_by: jaiswalp
 creation_date: 2011-08-19T05:09:40Z
 
 [Typedef]
+id: has_part
+name: has_part
+xref: BFO:0000051
+is_transitive: true
+created_by: cooperl
+creation_date: 2013-01-28T17:48:27Z
+
+[Typedef]
 id: part_of
-name: part of
+name: part_of
+is_transitive: true
 
