@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 31:01:2013 10:35
+date: 31:01:2013 11:17
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -1139,6 +1139,7 @@ alt_id: TO:0000395
 def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the length of a seed (PO:0009010)." [GR:pj, ICIS:1051, IRRI:SES, PO:0009010, TO:moorel]
 comment: Seed length is a component of seed size (TO:0000391) and has a component of seed quality (TO:0000162). Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "SDLG" RELATED []
+xref: OBO_SF_TO:3602838
 xref: PATO:0000122
 is_a: TO:0000184 ! seed anatomy and morphology trait
 relationship: part_of TO:0000391 ! seed size
@@ -1166,6 +1167,7 @@ def: "A seed anatomy and morphology trait (TO:0000184) which is associated with 
 comment: Seed width is measured in millimeters as the distance across the seed and is a component of the seed size (TO:0000391) and can be a component of seed quality (TO:0000162). Refers to (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "plump seed" RELATED []
 synonym: "SDWD" RELATED []
+xref: OBO_SF_TO:3602594
 xref: PATO:0000921
 is_a: TO:0000184 ! seed anatomy and morphology trait
 relationship: part_of TO:0000391 ! seed size
@@ -1278,6 +1280,8 @@ synonym: "grain quality" RELATED []
 is_a: TO:0000597 ! quality trait
 relationship: has_part TO:0000146 ! seed length
 relationship: has_part TO:0000149 ! seed width
+relationship: has_part TO:0000181 ! seed weight
+relationship: has_part TO:0000304 ! seed thickness
 relationship: has_part TO:0000391 ! seed size
 relationship: has_part TO:0000484 ! seed shape
 relationship: has_part TO:0000486 ! seed color
@@ -1432,10 +1436,10 @@ is_a: TO:0000657 ! spikelet anatomy and morphology trait
 [Term]
 id: TO:0000181
 name: seed weight
-def: "A seed yield (TO:0000905) trait which is associated with the average weight of seeds (PO:0009010) obtained from a plant, representing the overall yields or produce from the field." [GR:pj, ICIS:1058, PO:0009010, TO:moorel]
-comment: Refer to weight (PATO:0000128): A physical quality inhering in a bearer that has mass near a gravitational body.
-xref: OBO_SF_ID:3602437
-is_a: TO:0000905 ! seed yield
+def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the weight of a seed (PO:0009010)." [GR:pj, ICIS:1058, PO:0009010, TO:moorel]
+comment: Seed weight is associated with the average weight of seeds (PO:0009010) obtained from a plant, representing the overall yields or produce from the field. Seed weight has a component of seed yield (TO:0000905) and seed quality (TO:0000162). Refer to weight (PATO:0000128): A physical quality inhering in a bearer that has mass near a gravitational body.
+xref: OBO_SF_TO:3602842
+is_a: TO:0000184 ! seed anatomy and morphology trait
 
 [Term]
 id: TO:0000182
@@ -2412,11 +2416,13 @@ is_a: TO:0000432 ! temperature response trait
 [Term]
 id: TO:0000304
 name: seed thickness
-def: "A seed size (TO:0000391) which is associated with the thickness of the seed (PO:0009010) or fruit caryopsis with the hull." [GR:pj, PO:0009010, TO:moorel]
-comment: Refer to (PATO:0000915): A 1-D extent quality which is equal to the dimension through an object as opposed to its length or width.
+def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the thickness of a seed (PO:0009010)." [GR:pj, PO:0009010, TO:moorel]
+comment: Seed thickness is a component of seed size (TO:0000391) and has a component of seed quality (TO:0000162). Refer to (PATO:0000915): A 1-D extent quality which is equal to the dimension through an object as opposed to its length or width.
 synonym: "SDTH" RELATED []
+xref: OBO_SF_TO:3602844
 xref: PATO:0000915
-is_a: TO:0000391 ! seed size
+is_a: TO:0000184 ! seed anatomy and morphology trait
+relationship: part_of TO:0000391 ! seed size
 
 [Term]
 id: TO:0000305
@@ -3836,6 +3842,7 @@ name: seed shape
 def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the shape of a seed (PO:0009010)." [GR:pj, PO:0009010, TO:moorel]
 comment: Seed shape can be a component of seed quality (TO:0000162). Refers to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 synonym: "SDSHP" RELATED []
+xref: OBO_SF_TO:3602591
 xref: PATO:0000052
 is_a: TO:0000184 ! seed anatomy and morphology trait
 
@@ -3850,6 +3857,7 @@ name: seed color
 def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the color of a seed (PO:0009010)." [GR:pj, PO:0009019, TO:moorel]
 comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts. In a seed this can be measured on the seed coat or the inside parts of a seed.
 synonym: "SDCL" RELATED []
+xref: OBO_SF_TO:3602590
 xref: PATO:000014
 is_a: TO:0000184 ! seed anatomy and morphology trait
 
@@ -7381,8 +7389,9 @@ creation_date: 2013-01-24T14:48:21Z
 id: TO:0000905
 name: seed yield
 def: "A yield trait (TO:0000371) which is associated with a seed (PO:0009010)." [PO:0009010, TO:moorel]
-xref: OBO_SF_ID:3602437
+xref: OBO_SF_TO:3602437
 is_a: TO:0000371 ! yield trait
+relationship: has_part TO:0000181 ! seed weight
 created_by: moorel
 creation_date: 2013-01-28T13:14:23Z
 
