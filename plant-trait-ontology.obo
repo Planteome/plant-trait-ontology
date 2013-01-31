@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 28:01:2013 19:10
-saved-by: cooperl
+date: 31:01:2013 10:35
+saved-by: moorel
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
@@ -1136,13 +1136,12 @@ relationship: part_of TO:0000576 ! stem length
 id: TO:0000146
 name: seed length
 alt_id: TO:0000395
-def: "A seed size (TO:0000391) trait which is associated with the average length of the seed (PO:0009010) or caryopsis fruit in a cereal (with hull)." [GR:pj, ICIS:1051, IRRI:SES, PO:0009010, TO:moorel]
-comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
-synonym: "grain length" RELATED []
-synonym: "GRLG" RELATED []
+def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the length of a seed (PO:0009010)." [GR:pj, ICIS:1051, IRRI:SES, PO:0009010, TO:moorel]
+comment: Seed length is a component of seed size (TO:0000391) and has a component of seed quality (TO:0000162). Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "SDLG" RELATED []
 xref: PATO:0000122
-is_a: TO:0000391 ! seed size
+is_a: TO:0000184 ! seed anatomy and morphology trait
+relationship: part_of TO:0000391 ! seed size
 
 [Term]
 id: TO:0000147
@@ -1163,16 +1162,13 @@ is_a: TO:0000242 ! microbial damage resistance
 [Term]
 id: TO:0000149
 name: seed width
-def: "A seed size (TO:0000391) trait which is associated with the actual measurement of width in millimeters as the distance across the seed (PO:0009010). (with hull)." [GR:pj, ICIS:1052, IRRI:SES, PO:0009010, TO:moorel]
-comment: Refer to (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
-synonym: "kernel plumpness" RELATED []
-synonym: "kernel width" RELATED []
-synonym: "percentatge of plump kernels" RELATED []
-synonym: "plump grain" RELATED []
+def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the width of a seed (PO:0009010)." [GR:pj, ICIS:1052, IRRI:SES, PO:0009010, TO:moorel]
+comment: Seed width is measured in millimeters as the distance across the seed and is a component of the seed size (TO:0000391) and can be a component of seed quality (TO:0000162). Refers to (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "plump seed" RELATED []
 synonym: "SDWD" RELATED []
 xref: PATO:0000921
-is_a: TO:0000391 ! seed size
+is_a: TO:0000184 ! seed anatomy and morphology trait
+relationship: part_of TO:0000391 ! seed size
 
 [Term]
 id: TO:0000151
@@ -1280,6 +1276,8 @@ alt_id: TO:0000588
 def: "The quality assessment of the seed commonly called as kernel or grain in case of cereals, as well as those of the dehulled grains.  Often associated with the commercial value either directly or indirectly." [GR:pj]
 synonym: "grain quality" RELATED []
 is_a: TO:0000597 ! quality trait
+relationship: has_part TO:0000146 ! seed length
+relationship: has_part TO:0000149 ! seed width
 relationship: has_part TO:0000391 ! seed size
 relationship: has_part TO:0000484 ! seed shape
 relationship: has_part TO:0000486 ! seed color
@@ -3836,7 +3834,7 @@ is_a: TO:0000653 ! seed development trait
 id: TO:0000484
 name: seed shape
 def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the shape of a seed (PO:0009010)." [GR:pj, PO:0009010, TO:moorel]
-comment: Refer to shape PATO:0000052:A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+comment: Seed shape can be a component of seed quality (TO:0000162). Refers to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 synonym: "SDSHP" RELATED []
 xref: PATO:0000052
 is_a: TO:0000184 ! seed anatomy and morphology trait
@@ -3850,7 +3848,7 @@ is_a: TO:0000392 ! sterility or fertility trait
 id: TO:0000486
 name: seed color
 def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the color of a seed (PO:0009010)." [GR:pj, PO:0009019, TO:moorel]
-comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts. In a seed this can be measured on the seed coat or the inside parts of a seed.
 synonym: "SDCL" RELATED []
 xref: PATO:000014
 is_a: TO:0000184 ! seed anatomy and morphology trait
@@ -7836,6 +7834,8 @@ id: TO:0002626
 name: fruit length
 def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the variation in the length of a fruit (PO:0009001)." [GR:pj, PO:0009001, TO:moorel]
 comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
+synonym: "grain length " NARROW []
+synonym: "GRLG" NARROW []
 synonym: "pod length" NARROW []
 xref: PATO:0000122
 is_a: TO:0002629 ! fruit anatomy and morphology trait
@@ -7846,6 +7846,10 @@ name: fruit width
 def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the variation in the width of a fruit (PO:0009001)." [GR:pj, PO:0009001, TO:moorel]
 comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "FRWD" RELATED []
+synonym: "kernel plumpness" RELATED []
+synonym: "kernel width" NARROW []
+synonym: "percentage of plump kernels" RELATED []
+synonym: "plump grain" RELATED []
 xref: PATO:0000921
 is_a: TO:0002629 ! fruit anatomy and morphology trait
 
