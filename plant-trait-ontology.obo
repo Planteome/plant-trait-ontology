@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 28:04:2013 17:02
+date: 06:05:2013 16:16
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.2
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -7397,7 +7397,7 @@ creation_date: 2013-01-28T13:14:23Z
 id: TO:0000906
 name: exocarp anatomy and morhology trait
 def: "A portion of plant tissue anatomy and morphology trait (TO:0000843) which is associated with the qualities of the exocarp (PO:0009084)." [PO:cooperl]
-xref: OBO_SF_TO:3538916
+xref: OBO_SF_TO:3533464
 is_a: TO:0000843 ! portion of plant tissue anatomy and morphology trait
 created_by: cooperl
 creation_date: 2013-04-28T15:48:43Z
@@ -7407,7 +7407,7 @@ id: TO:0000907
 name: exocarp thickness
 def: "An exocarp anatomy and morhology trait (TO:0000906) (TO:0000843) which is associated with the thickness (PATO:0000915) of the exocarp (PO:0009084)." [PATO:0000915, PO:cooperl]
 synonym: "rind thickness" EXACT []
-xref: OBO_SF_TO:3538916
+xref: OBO_SF_TO:3533464
 is_a: TO:0000906 ! exocarp anatomy and morhology trait
 is_a: TO:0002728 ! fruit quality trait
 created_by: cooperl
@@ -7416,7 +7416,8 @@ creation_date: 2013-04-28T16:05:01Z
 [Term]
 id: TO:0000908
 name: fruit hollowness
-def: "A fruit anatomy and morphology trait (TO:0002617) which is associated with hollowness of a fruit (PO:0009001)." [PO:cooperl]
+def: "A fruit anatomy and morphology trait (TO:0002617) which is associated with hollowness of a fruit (PO:0009001)." [PATO:0002078, PO:0009001, PO:cooperl]
+xref: OBO_SF_TO:3533464
 is_a: TO:0002629 ! fruit anatomy and morphology trait
 is_a: TO:0002728 ! fruit quality trait
 created_by: cooperl
@@ -7425,17 +7426,20 @@ creation_date: 2013-04-28T16:18:53Z
 [Term]
 id: TO:0000909
 name: fruit color uniformity
-def: "A fruit color trait (TO:0002617) associated with the uniformity of the fruit color." []
+def: "A fruit color trait (TO:0002617) associated with the uniformly colored (PATO:0000122) fruit (PO:0009001)." [PATO:0000122, PO:cooperl]
 comment: The proportion of the 2D area of the red color epicarp out of the total epicarp area visible from a top view of the proximal fruit end.
+xref: OBO_SF_TO:3533464
 is_a: TO:0002617 ! fruit color
+is_a: TO:0002728 ! fruit quality trait
 created_by: cooperl
 creation_date: 2013-04-28T16:33:44Z
 
 [Term]
 id: TO:0000910
 name: fruit bitterness trait
-def: "A fruit flavor trait (TO:0002694) associated with the a bitter (PATO:xxx) fruit flavor." [PO:cooperl]
-xref: OBO_SF_TO:3538916
+def: "A fruit flavor trait (TO:0002694) associated with the bitter fruit flavor." [PO:cooperl]
+comment: Need PATO quality: bitter - has been requested.
+xref: OBO_SF_TO:3533464
 is_a: TO:0002694 ! fruit flavor trait
 created_by: cooperl
 creation_date: 2013-04-28T16:46:02Z
@@ -8415,6 +8419,8 @@ is_a: TO:0000168 ! abiotic stress trait
 id: TO:0002694
 name: fruit flavor trait
 def: "An assay to determine the sensory impression of a fruit by the chemical senses of taste and smell." [GR:pj]
+synonym: "pod flavor trait" NARROW []
+xref: OBO_SF_TO:3533464
 is_a: TO:0000281 ! metabolite content related trait
 is_a: TO:0002728 ! fruit quality trait
 
@@ -10685,13 +10691,13 @@ id: has_part
 name: has_part
 xref: BFO:0000051
 is_transitive: true
-inverse_of: part_of
+inverse_of: part_of ! part_of
 created_by: cooperl
 creation_date: 2013-01-28T17:48:27Z
 
 [Typedef]
 id: part_of
 name: part_of
-is_transitive: true
 xref: BFO:0000050
+is_transitive: true
 
