@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 14:11:2013 13:23
+date: 14:11:2013 14:36
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -4603,14 +4603,10 @@ is_a: TO:0000181 ! seed weight
 
 [Term]
 id: TO:0000590
-name: grain weight
-def: "Weight of the dehulled grains." [GR:pj]
-synonym: "<20 kernel weight>" RELATED []
-synonym: "<kernel weight>" RELATED []
-synonym: "dehulled grain weight" RELATED []
+name: dehulled grain weight
+def: "A fruit weight (TO:0002746) of the dehulled grains." [GR:pj, POC:cooperl]
 synonym: "DHULGRWT" RELATED []
 synonym: "GRWT" RELATED []
-xref: MaizeGDB:<kernel weight>
 is_a: TO:0002746 ! fruit weight
 
 [Term]
@@ -4621,7 +4617,7 @@ synonym: "HDGRWT" RELATED []
 synonym: "HDHULGRWT" RELATED []
 synonym: "hundred dehulled-grain weight" RELATED []
 synonym: "hundred grain weight" RELATED []
-is_a: TO:0000590 ! grain weight
+is_a: TO:0000590 ! dehulled grain weight
 
 [Term]
 id: TO:0000592
@@ -4631,7 +4627,7 @@ synonym: "TDGRWT" RELATED []
 synonym: "TDHULGRWT" RELATED []
 synonym: "thousand dehulled-grain weight" RELATED []
 synonym: "thousand grain weight" RELATED []
-is_a: TO:0000590 ! grain weight
+is_a: TO:0000590 ! dehulled grain weight
 
 [Term]
 id: TO:0000593
@@ -7522,6 +7518,16 @@ created_by: moorel
 creation_date: 2013-06-19T10:18:46Z
 
 [Term]
+id: TO:0000919
+name: kernel weight
+def: "A fruit weight (TO:0002746) which is associated with the weight of one or more kernels." [POC:cooperl]
+synonym: "20 kernel weight" NARROW []
+synonym: "kwt" RELATED [MaizeGDB:78154]
+is_a: TO:0002746 ! fruit weight
+created_by: cooperl
+creation_date: 2013-11-14T14:06:21Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "A glume anatomy and morphology trait (TO:0000869) which is associated with the glume (PO:0009039) cover over the caryopsis. Often measured as percentage." [GR:pj, PO:0009039, TO:moorel]
@@ -8911,7 +8917,7 @@ synonym: "ten dehulled-grain weight" RELATED []
 synonym: "ten grain weight" RELATED []
 synonym: "TENDHULGRWT" EXACT []
 synonym: "TENGRWT" RELATED []
-is_a: TO:0000590 ! grain weight
+is_a: TO:0000590 ! dehulled grain weight
 
 [Term]
 id: TO:0002748
@@ -9893,7 +9899,7 @@ is_a: TO:0000847 ! panicle anatomy and morphology trait
 id: TO:0020002
 name: grain weight to panicle weight ratio
 is_a: TO:0000014 ! panicle weight
-is_a: TO:0000590 ! grain weight
+is_a: TO:0000590 ! dehulled grain weight
 
 [Term]
 id: TO:0020003
