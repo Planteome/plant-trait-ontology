@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 15:11:2013 11:28
+date: 15:11:2013 16:26
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -580,6 +580,7 @@ id: TO:0000077
 name: shoot system anatomy and morphology trait
 def: "A collective plant organ structure anatomy and morphology trait (TO:0000842) which is associated with a shoot system (PO:0009006)." [GR:pj, PO:0009006, POC:cooperl]
 comment: Does not include traits of fruit, parts of fruit and adventitious roots which are borne on the shoot.
+xref: OBO_SF2_TO:56
 xref: OBO_SF_TO:3520088
 is_a: TO:0000842 ! collective plant organ structure anatomy and morphology trait
 created_by: jaiswalp
@@ -3436,7 +3437,8 @@ is_a: TO:0000250 ! vigor related trait
 id: TO:0000431
 name: ear length
 synonym: "EARLG" RELATED []
-is_a: TO:0000271 ! inflorescence length
+xref: OBO_SF2_TO:244
+is_a: TO:0000920 ! infructescence anatomy and morphology trait
 
 [Term]
 id: TO:0000432
@@ -3449,7 +3451,8 @@ id: TO:0000433
 name: ear diameter
 def: "Diameter measurement of a corn ear." [GR:pj37]
 synonym: "EARDIA" RELATED []
-is_a: TO:0000679 ! inflorescence diameter
+xref: OBO_SF2_TO:244
+is_a: TO:0000920 ! infructescence anatomy and morphology trait
 
 [Term]
 id: TO:0000434
@@ -3516,7 +3519,8 @@ synonym: "ears per 10 plants" RELATED []
 synonym: "ears per plant" RELATED []
 synonym: "ENO" RELATED []
 synonym: "ENP" RELATED []
-is_a: TO:0000582 ! inflorescence number
+xref: OBO_SF2_TO:244
+is_a: TO:0000920 ! infructescence anatomy and morphology trait
 
 [Term]
 id: TO:0000444
@@ -3623,7 +3627,7 @@ is_a: TO:0000445 ! seed number
 [Term]
 id: TO:0000456
 name: spikelet number
-def: "A spikelet anaotmy and morphology trait (TO:0000657) which is associated with the average number of spikelets (PO:0009051) in one or more inflorescence (PO:0009049) (e.g. rice panicle) found in a plant or on all plants of a study." [GR:pj, PO:0009049, PO:0009051, TO:moorel]
+def: "A spikelet anatomy and morphology trait (TO:0000657) which is associated with the average number of spikelets (PO:0009051) in one or more inflorescence (PO:0009049) (e.g. rice panicle) found in a plant or on all plants of a study." [GR:pj, PO:0009049, PO:0009051, TO:moorel]
 synonym: "number of spikelets per panicle" RELATED []
 synonym: "spikelet number per panicle" RELATED []
 synonym: "SPKNB" RELATED []
@@ -3939,8 +3943,8 @@ is_a: TO:0000497 ! fertility restoration trait
 [Term]
 id: TO:0000499
 name: flower anatomy and morphology trait
-def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with a flower (PO:0009046)." [GR:pj, PO:0009046, POC:cooperl]
-is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+def: "A reproductive shoot system anatomy and morphology trait (TO:0000786) which is associated with a flower (PO:0009046)." [GR:pj, PO:0009046, POC:cooperl]
+is_a: TO:0000786 ! reproductive shoot system anatomy and morphology trait
 
 [Term]
 id: TO:0000501
@@ -5123,8 +5127,10 @@ is_a: TO:0000357 ! growth and development trait
 [Term]
 id: TO:0000657
 name: spikelet anatomy and morphology trait
-def: "A reproductive shoot system anatomy and morphology trait (TO:0000786) which is associated with changes in the anatomy or structure of the spikelet (PO:0009051) and its parts." [GR:pj, PO:0009051, TO:moorel]
-is_a: TO:0000786 ! reproductive shoot system anatomy and morphology trait
+def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with a spikelet (PO:0009051)." [GR:pj, PO:0009051, TO:cooperl, TO:moorel]
+synonym: "<new synonym>" RELATED []
+xref: OBO_SF2_TO:143
+is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
 [Term]
 id: TO:0000658
@@ -5270,9 +5276,12 @@ is_a: TO:0000541 ! leaf height
 [Term]
 id: TO:0000678
 name: cob diameter
+def: "An infructescence axis anatomy and morphology trait (TO:0000921) associated with the diameter of a cob." [POC:Cooperl]
+comment: The cob is the first order infructescence axis PO:0025244 of the ear infructescence (new).
 synonym: "COBDIA" RELATED []
 synonym: "diameter of central spike of ear " RELATED []
-is_a: TO:0000679 ! inflorescence diameter
+xref: OBO_SF2_TO:243
+is_a: TO:0000921 ! infructescence axis anatomy and morphology trait
 relationship: part_of TO:0000433 ! ear diameter
 
 [Term]
@@ -5290,7 +5299,8 @@ is_a: TO:0006031 ! inflorescence size
 id: TO:0000681
 name: ear circumference
 synonym: "EARCIRCUM" RELATED []
-is_a: TO:0000680 ! inflorescence circumference
+xref: OBO_SF2_TO:244
+is_a: TO:0000920 ! infructescence anatomy and morphology trait
 
 [Term]
 id: TO:0000682
@@ -6180,6 +6190,7 @@ creation_date: 2012-05-18T13:29:07Z
 id: TO:0000786
 name: reproductive shoot system anatomy and morphology trait
 def: "A shoot system anatomy and morphology trait (TO:0000077) that is associated with an reproductive shoot system (PO:0025082)." [PO:0025082, POC:cooperl]
+xref: OBO_SF2_TO:56
 is_a: TO:0000077 ! shoot system anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-05-18T13:35:01Z
@@ -7528,6 +7539,24 @@ xref: OBO_SF2_TO:242
 is_a: TO:0002746 ! fruit weight
 created_by: cooperl
 creation_date: 2013-11-14T14:06:21Z
+
+[Term]
+id: TO:0000920
+name: infructescence anatomy and morphology trait
+def: "A reproductive shoot system anatomy and morphology trait (TO:0000786) which is associated with an infructescence (PO:0006342)." [POC:cooperl]
+xref: OBO_SF2_TO:244
+is_a: TO:0000786 ! reproductive shoot system anatomy and morphology trait
+created_by: cooperl
+creation_date: 2013-11-15T13:32:29Z
+
+[Term]
+id: TO:0000921
+name: infructescence axis anatomy and morphology trait
+def: "A shoot axis anatomy and morphology trait (TO:0000739) which is associated with an infructescence axis (PO:0025242)." [TO:cooperl]
+xref: OBO_SF2_TO:243
+is_a: TO:0000739 ! shoot axis anatomy and morphology trait
+created_by: cooperl
+creation_date: 2013-11-15T15:54:24Z
 
 [Term]
 id: TO:0001000
