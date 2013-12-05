@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 15:11:2013 16:26
+date: 05:12:2013 12:43
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -1276,7 +1276,7 @@ is_a: TO:0000168 ! abiotic stress trait
 id: TO:0000162
 name: seed quality
 alt_id: TO:0000588
-def: "The quality assessment of the seed commonly called as kernel or grain in case of cereals, as well as those of the dehulled grains.  Often associated with the commercial value either directly or indirectly." [GR:pj]
+def: "The quality assessment of the seed commonly called as kernel or grain in case of cereals, as well as those of the dehulled grains. Often associated with the commercial value either directly or indirectly." [GR:pj]
 synonym: "grain quality" RELATED []
 is_a: TO:0000597 ! quality trait
 relationship: has_part TO:0000181 ! seed weight
@@ -2130,7 +2130,7 @@ synonym: "HGRWT" RELATED []
 synonym: "HSDWT" RELATED []
 synonym: "hundred grain weight" RELATED []
 synonym: "hundred seed weight" RELATED []
-is_a: TO:0000589 ! seed weight (sensu Poaceae)
+is_a: TO:0002746 ! fruit weight
 
 [Term]
 id: TO:0000270
@@ -3058,7 +3058,7 @@ synonym: "TGRWT" RELATED []
 synonym: "thousand grain weight" RELATED []
 synonym: "thousand seed weight" RELATED []
 synonym: "TSDWT" RELATED []
-is_a: TO:0000589 ! seed weight (sensu Poaceae)
+is_a: TO:0002746 ! fruit weight
 
 [Term]
 id: TO:0000383
@@ -4596,14 +4596,15 @@ is_a: TO:0000162 ! seed quality
 
 [Term]
 id: TO:0000589
-name: seed weight (sensu Poaceae)
+name: average grain weight
 alt_id: TO:0000509
-def: "Average weights of full grain with the hull (seeds) obtained from a grass plant, representing the overall yield or produce from the field." [GR:pj]
+def: "A yield trait (TO:0000371) associated with the average weight of a grain, including the caryopsis hull (PO:0006000), representing the overall yield or produce from the field." [GR:pj, POC:cooperl]
 synonym: "grain weight" RELATED []
 synonym: "GRWT" RELATED []
 synonym: "kernel weight" RELATED []
 synonym: "SDWT" RELATED []
-is_a: TO:0000181 ! seed weight
+xref: OBO_SF2_TO:245
+is_a: TO:0000371 ! yield trait
 
 [Term]
 id: TO:0000590
@@ -4639,7 +4640,7 @@ id: TO:0000593
 name: polished grain weight
 def: "Weight of the polished grain (without hull and pericarp) weight." [GR:pj]
 synonym: "PLSGRWT" RELATED []
-is_a: TO:0000589 ! seed weight (sensu Poaceae)
+is_a: TO:0000589 ! average grain weight
 
 [Term]
 id: TO:0000594
@@ -5418,7 +5419,7 @@ is_a: TO:0006007 ! polysaccharide content
 [Term]
 id: TO:0000697
 name: starch yield
-def: "An assay to detrmine the starch yield from a bigger sample such as from a given population or from a plot or field. It is often carried out initially with the smaller sample but later converted to associate with a large sample for example record starch yeild in kilograms per hectare." [GR:pj]
+def: "An assay to determine the starch yield from a bigger sample such as from a given population or from a plot or field. It is often carried out initially with the smaller sample but later converted to associate with a large sample for example record starch yield in kilograms per hectare." [GR:pj]
 synonym: "STARCHYLD" RELATED []
 is_a: TO:0000162 ! seed quality
 is_a: TO:0000291 ! carbohydrate content
@@ -9928,8 +9929,7 @@ is_a: TO:0000847 ! panicle anatomy and morphology trait
 [Term]
 id: TO:0020002
 name: grain weight to panicle weight ratio
-is_a: TO:0000014 ! panicle weight
-is_a: TO:0000590 ! dehulled grain weight
+is_a: TO:0000396 ! grain yield trait
 
 [Term]
 id: TO:0020003
