@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 05:12:2013 14:36
+date: 10:12:2013 21:46
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -3436,9 +3436,11 @@ is_a: TO:0000250 ! vigor related trait
 [Term]
 id: TO:0000431
 name: ear length
-def: "An infructescence anatomy and morphology trait (TO:0000920) that is associated with the length of ear from base to tip." [TO:cooperl]
-comment: In maize this is measured in centimeters.
+def: "An infructescence anatomy and morphology trait (TO:0000920) that is associated with the length of an ear infructescence (PO:0025597) from base to tip." [TO:cooperl]
+comment: Refers to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points. In maize, this is measured in centimeters.
+subset: Zea_mays
 synonym: "EARLG" RELATED []
+synonym: "earln" RELATED [MaizeGDB:???]
 xref: OBO_SF2_TO:244
 is_a: TO:0000920 ! infructescence anatomy and morphology trait
 
@@ -3451,7 +3453,10 @@ is_a: TO:0000168 ! abiotic stress trait
 [Term]
 id: TO:0000433
 name: ear diameter
-def: "Diameter measurement of a corn ear." [GR:pj37]
+def: "An infructescence anatomy and morphology trait (TO:0000920) that is associated with the diameter of an ear infructescence (PO:0025597)." [GR:pj37, TO:cooperl]
+comment: Refers to diameter (PATO:0001334): A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary. In maize, this is measured in centimeters.
+subset: Zea_mays
+synonym: "eard" RELATED [MaizeGDB:???]
 synonym: "EARDIA" RELATED []
 xref: OBO_SF2_TO:244
 is_a: TO:0000920 ! infructescence anatomy and morphology trait
@@ -3522,7 +3527,7 @@ synonym: "ears per plant" RELATED []
 synonym: "ENO" RELATED []
 synonym: "ENP" RELATED []
 xref: OBO_SF2_TO:244
-is_a: TO:0000920 ! infructescence anatomy and morphology trait
+is_a: TO:0000327 ! above ground biomass yield trait
 
 [Term]
 id: TO:0000444
@@ -4606,7 +4611,7 @@ synonym: "GRWT" RELATED []
 synonym: "kernel weight" RELATED []
 synonym: "SDWT" RELATED []
 xref: OBO_SF2_TO:245
-is_a: TO:0000371 ! yield trait
+is_a: TO:0000871 ! fruit yield trait
 
 [Term]
 id: TO:0000590
@@ -7562,6 +7567,24 @@ created_by: cooperl
 creation_date: 2013-11-15T15:54:24Z
 
 [Term]
+id: TO:0000922
+name: <new term>
+created_by: cooperl
+creation_date: 2013-12-10T20:53:29Z
+
+[Term]
+id: TO:0000923
+name: ear weight
+def: "An infructescence anatomy and morphology trait (TO:0000920) that is associated with the weight (mass) of an ear infructescence (PO:0025597)." [TO:cooperl]
+comment: Refers to mass (PATO:0000125): A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter.
+subset: Zea_mays
+synonym: "earwt" RELATED [MaizeGDB:???]
+xref: OBO_SF2_PO:244
+is_a: TO:0000920 ! infructescence anatomy and morphology trait
+created_by: cooperl
+creation_date: 2013-12-10T20:53:38Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "A glume anatomy and morphology trait (TO:0000869) which is associated with the glume (PO:0009039) cover over the caryopsis. Often measured as percentage." [GR:pj, PO:0009039, TO:moorel]
@@ -8135,7 +8158,7 @@ is_a: TO:0000361 ! stem anatomy and morphology trait
 [Term]
 id: TO:0002640
 name: fruit set trait
-is_a: TO:0000371 ! yield trait
+is_a: TO:0000871 ! fruit yield trait
 
 [Term]
 id: TO:0002641
