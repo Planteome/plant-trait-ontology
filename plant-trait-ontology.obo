@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 11:12:2013 11:51
+date: 11:12:2013 17:33
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -114,7 +114,7 @@ id: TO:0000014
 name: panicle weight
 def: "Average weight of the panicle from the plants or tillers in a given study." [GR:pj]
 synonym: "PNWT" RELATED []
-is_a: TO:0000583 ! inflorescence weight
+is_a: TO:0000583 ! infructescence weight
 
 [Term]
 id: TO:0000015
@@ -2988,6 +2988,7 @@ synonym: "inflorescence structure trait" RELATED []
 synonym: "panicle anatomy and morphology trait" RELATED []
 synonym: "panicle related trait" RELATED []
 synonym: "tassel anatomy and morphology trait" RELATED []
+xref: OBO_SF2_PO:96
 is_a: TO:0000786 ! reproductive shoot system anatomy and morphology trait
 
 [Term]
@@ -4564,6 +4565,7 @@ id: TO:0000581
 name: inflorescence color
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the color of an inflorescence (PO:0009049)." [GR:pj, PO:0009049, POC:cooperl]
 comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
+xref: OBO_SF2_PO:96
 xref: OBO_SF_TO:3531193
 xref: PATO:0000014
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
@@ -4581,9 +4583,11 @@ is_a: TO:0000621 ! inflorescence development trait
 
 [Term]
 id: TO:0000583
-name: inflorescence weight
-def: "Average weight of the inflorescence carrying the mature fruits from the plants or tillers in a given study." [GR:pj]
-is_a: TO:0000371 ! yield trait
+name: infructescence weight
+def: "An infructescence anatomy and morphology trait (TO:0000920) that is associated with the average weight (mass) of an infructescence bearing mature fruit (PO:0009001)." [GR:pj, TO:cooperl]
+comment: Refers to mass (PATO:0000125): A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter.
+xref: OBO_SF2_PO:244
+is_a: TO:0000920 ! infructescence anatomy and morphology trait
 
 [Term]
 id: TO:0000586
@@ -4989,17 +4993,10 @@ synonym: "RELSHDWT" RELATED []
 is_a: TO:0000552 ! shoot dry weight
 
 [Term]
-id: TO:0000637
-name: inflorescence width
-synonym: "INFLWD" RELATED []
-synonym: "panicle width" RELATED []
-is_a: TO:0006031 ! inflorescence size
-
-[Term]
 id: TO:0000638
 name: spike width
 synonym: "SPIKEWD" RELATED []
-is_a: TO:0000637 ! inflorescence width
+is_a: TO:0000804 ! inflorescence width
 
 [Term]
 id: TO:0000639
@@ -5291,11 +5288,6 @@ synonym: "diameter of central spike of ear " RELATED []
 xref: OBO_SF2_TO:243
 is_a: TO:0000921 ! infructescence axis anatomy and morphology trait
 relationship: part_of TO:0000433 ! ear diameter
-
-[Term]
-id: TO:0000679
-name: inflorescence diameter
-is_a: TO:0006031 ! inflorescence size
 
 [Term]
 id: TO:0000680
@@ -6354,6 +6346,7 @@ name: inflorescence density
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the density of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
 comment: Refer to absolute density PATO:0001070.
 synonym: "panicle density (PO:0009049)" NARROW []
+xref: OBO_SF2_PO:96
 xref: OBO_SF_TO:3531193
 xref: PATO:0001070
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
@@ -6365,6 +6358,7 @@ id: TO:0000801
 name: inflorescence depth
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the depth of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
 comment: Refer to depth PATO:0001595: A 1-D extent quality inhering in a bearer by virtue of the bearer's downward or backward or inward dimenision.
+xref: OBO_SF2_PO:96
 xref: OBO_SF_TO:3531193
 xref: PATO:0001595
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
@@ -6374,9 +6368,10 @@ creation_date: 2012-06-01T13:18:51Z
 [Term]
 id: TO:0000802
 name: inflorescence diameter
+alt_id: TO:0000679
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the diameter of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
 comment: Refer to diameter PATO:0001334:A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
-xref: OBO_SF_TO:3531193
+xref: OBO_SF2_TO:96
 xref: PATO:0001334
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 created_by: moorel
@@ -6387,6 +6382,7 @@ id: TO:0000803
 name: inflorescence weight
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the weight of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
 comment: Refer to weight PATO:0000128:A physical quality inhering in a bearer that has mass near a gravitational body.
+xref: OBO_SF2_PO:96
 xref: OBO_SF_TO:3531193
 xref: PATO:0000128
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
@@ -6396,11 +6392,16 @@ creation_date: 2012-06-01T13:23:12Z
 [Term]
 id: TO:0000804
 name: inflorescence width
+alt_id: TO:0000637
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the width of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
 comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
+synonym: "INFLWD" RELATED []
+synonym: "panicle width" RELATED []
+xref: OBO_SF2_PO:96
 xref: OBO_SF_TO:3531193
 xref: PATO:0000921
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
+relationship: part_of TO:0006031 ! inflorescence size
 created_by: moorel
 creation_date: 2012-06-01T13:25:43Z
 
@@ -6409,6 +6410,7 @@ id: TO:0000805
 name: inflorescence texture
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the texture of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
 comment: Refer to texture PATO:0000150: A morphologic quality inhering in a bearer by virtue of the bearer's relative size, organization and distribution of its surface elements or the representation or invention of the appearance of its surface; visual and tactile surface characteristics.
+xref: OBO_SF2_PO:96
 xref: OBO_SF_TO:3531193
 xref: PATO:0000150
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
@@ -6420,6 +6422,7 @@ id: TO:0000806
 name: inflorescence presence
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the presence of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
 comment: Refer to presence value PATO:0000458.
+xref: OBO_SF2_PO:96
 xref: OBO_SF_TO:3531193
 xref: PATO:0000458
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
@@ -7569,12 +7572,12 @@ creation_date: 2013-11-15T15:54:24Z
 [Term]
 id: TO:0000923
 name: ear weight
-def: "An infructescence anatomy and morphology trait (TO:0000920) that is associated with the weight (mass) of an ear infructescence (PO:0025597)." [TO:cooperl]
+def: "An infructescence weight trait (TO:0000583) that is associated with the weight (mass) of an ear infructescence (PO:0025597)." [TO:cooperl]
 comment: Refers to mass (PATO:0000125): A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter.
 subset: Zea_mays
 synonym: "earwt" RELATED [MaizeGDB:???]
 xref: OBO_SF2_PO:244
-is_a: TO:0000920 ! infructescence anatomy and morphology trait
+is_a: TO:0000583 ! infructescence weight
 created_by: cooperl
 creation_date: 2013-12-10T20:53:38Z
 
