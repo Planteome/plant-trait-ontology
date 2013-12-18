@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 11:12:2013 17:33
+date: 18:12:2013 12:10
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -2219,7 +2219,7 @@ is_a: TO:0000296 ! vegetative vigor
 [Term]
 id: TO:0000281
 name: metabolite content related trait
-def: "The trait associated with an assay to determine the effected metabolite's profile." [GR:pj]
+def: "The trait associated with an assay to determine the affected metabolite's profile." [GR:pj]
 is_a: TO:0000277 ! biochemical trait
 
 [Term]
@@ -3461,6 +3461,7 @@ synonym: "eard" RELATED [MaizeGDB:???]
 synonym: "EARDIA" RELATED []
 xref: OBO_SF2_TO:244
 is_a: TO:0000920 ! infructescence anatomy and morphology trait
+relationship: part_of TO:0000681 ! ear circumference
 
 [Term]
 id: TO:0000434
@@ -5298,6 +5299,8 @@ is_a: TO:0006031 ! inflorescence size
 [Term]
 id: TO:0000681
 name: ear circumference
+def: "An infructescence anatomy and morphology trait (TO:0000920) that is associated with the circumference of an ear infructescence (PO:0025597)." [TO:cooperl]
+comment: Refers to circumference (PATO:0001648):  An 1-D extent quality which is equal to the length of the closed curve of a circle. Ear circumference (TO:0000681) is equal to ear diameter (TO:0000433) times 3.14.
 synonym: "EARCIRCUM" RELATED []
 xref: OBO_SF2_TO:244
 is_a: TO:0000920 ! infructescence anatomy and morphology trait
@@ -8665,12 +8668,6 @@ def: "The shape of the plant root system." [GR:pj]
 is_a: TO:0000043 ! root anatomy and morphology trait
 
 [Term]
-id: TO:0002711
-name: total water soluble content
-def: "The concentration of water soluble components in the plant as determined by refractive index." [GR:pj]
-is_a: TO:0000281 ! metabolite content related trait
-
-[Term]
 id: TO:0002712
 name: stay green trait
 def: "The color of plant and the photosynthetic organs remain green compared to turning yellow and or brown at the time of senescing." [GR:pj]
@@ -10534,9 +10531,11 @@ creation_date: 2011-08-19T03:44:21Z
 [Term]
 id: TO:0020088
 name: total water soluble content
-def: "A trait to measure the concentration of water soluble components in the plant as determined by refractive index." []
+alt_id: TO:0002711
+def: "A metabolite content related trait (TO:0000281) associated with the concentration of water soluble components in a plant, as determined by refractive index." [GR:pj, TO:cooperl]
 comment: This trait is usually highly correlated with total soluble sugar content (TO:0000340). Often determined in fresh tissue.
-synonym: "total dissolved solids content" EXACT []
+synonym: "total dissolved solids content" RELATED []
+xref: OBO_SF2_TO:99
 is_a: TO:0000281 ! metabolite content related trait
 created_by: jaiswalp
 creation_date: 2011-08-19T03:47:00Z
