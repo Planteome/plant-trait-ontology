@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 07:01:2014 13:47
+date: 07:01:2014 15:12
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -1046,9 +1046,11 @@ is_a: TO:0000462 ! gelatinization temperature
 [Term]
 id: TO:0000135
 name: leaf length
-def: "Actual measurements, in centimeters of the leaf." [IRRI:SES]
+def: "A leaf size (TO:0002637) trait which is associated with the length of a leaf (PO:0025034)." [IRRI:SES, PO:0025034, TO:moorel]
+comment: Actual measurements, in centimeters of the leaf. Refers to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points. In maize, this is measured in centimeters. If you are annotating to this term, please add an additional annotation to vascular leaf anatomy and morphology (TO:0000419) or non-vascular leaf anatomy and morphology trait (TO:0000925), depending on the species.
 synonym: "LFLG" RELATED []
 synonym: "LL" RELATED []
+xref: PATO:0000122
 is_a: TO:0002637 ! leaf size
 
 [Term]
@@ -2036,6 +2038,9 @@ is_a: TO:0000168 ! abiotic stress trait
 [Term]
 id: TO:0000258
 name: leaf thickness
+def: "A leaf size (TO:0002637) trait which is associated with the thickness of a leaf (PO:0025034)." [PO:0025034, TO:moorel]
+comment: Refers to thickness PATO:0000915 A 1-D extent quality which is equal to the dimension through an object as opposed to its length or width. If you are annotating to this term, please add an additional annotation to vascular leaf anatomy and morphology (TO:0000419) or non-vascular leaf anatomy and morphology trait (TO:0000925), depending on the species.
+xref: PATO:0000915
 is_a: TO:0002637 ! leaf size
 
 [Term]
@@ -2954,9 +2959,11 @@ is_a: TO:0000357 ! growth and development trait
 [Term]
 id: TO:0000370
 name: leaf width
-def: "Actual measurements, in centimeters of the widest portion of the leaf. To be precise use the children terms leaf lamina width (TO:0002720) or  'leaf sheath width (TO:0002721)." [ICIS:1308, IRRI:SES]
+def: "A leaf size (TO:0002637) trait which is associated with the width of a leaf (PO:0025034)." [ICIS:1308, IRRI:SES, PO:0025034, TO:moorel]
+comment: Actual measurements, in centimeters of the widest portion of the leaf. To be precise use the children terms leaf lamina width (TO:0002720) or  'leaf sheath width (TO:0002721). Refers to width (PATO:0000921) A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite. If you are annotating to this term, please add an additional annotation to vascular leaf anatomy and morphology (TO:0000419) or non-vascular leaf anatomy and morphology trait (TO:0000925), depending on the species.
 synonym: "LFWD" RELATED []
 synonym: "LW" RELATED []
+xref: PATO:0000921
 is_a: TO:0002637 ! leaf size
 
 [Term]
@@ -4241,7 +4248,8 @@ is_a: TO:0000748 ! leaf anatomy and morphology trait
 [Term]
 id: TO:0000542
 name: leaf length to width ratio
-def: "A ratio of the leaf length to its width." [GR:pj]
+def: "A leaf size (TO:0002637) which is associated with the ratio of leaf length to its width." [GR:pj]
+comment: If you are annotating to this term, please add an additional annotation to vascular leaf anatomy and morphology (TO:0000419) or non-vascular leaf anatomy and morphology trait (TO:0000925), depending on the species.
 synonym: "LFLGWDRO" RELATED []
 is_a: TO:0002637 ! leaf size
 
@@ -8178,7 +8186,7 @@ is_a: TO:0000419 ! vascular leaf anatomy and morphology trait
 id: TO:0002637
 name: leaf size
 def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the variation in sizes of a leaf (PO:0025034)." [GR:pj, PO:0025034, POC:cooperl]
-comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude.
+comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. If you are annotating to this term, please add an additional annotation to vascular leaf anatomy and morphology (TO:0000419) or non-vascular leaf anatomy and morphology trait (TO:0000925), depending on the species.
 xref: PATO:0000117
 is_a: TO:0000748 ! leaf anatomy and morphology trait
 
