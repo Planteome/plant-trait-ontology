@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 09:01:2014 11:39
-saved-by: moorel
+date: 16:01:2014 14:59
+saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
@@ -838,11 +838,12 @@ is_a: TO:0002653 ! endosperm storage protein content
 [Term]
 id: TO:0000108
 name: leaf shattering
-def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the extent of leaf shattering based on the development of the leaf abscission zone (PO:0006501)." [GR:pj, PO:0006501, POC:cooperl]
-comment: Refer to shattering (PATO:0000074).
+def: "A leaf growth and development trait (TO:0000655) which is associated with the extent of leaf shattering based on the development of a leaf abscission zone (PO:0006501)." [GR:pj, PO:0006501, POC:cooperl]
+comment: The leaf shattering trait is associated with the occurence of  the biological process of leaf abscission (GO:0060866): the controlled shedding of a leaf.
+synonym: "leaf abscission" RELATED [GO:0060866]
 synonym: "LFSH" RELATED []
-xref: PATO:0000074
-is_a: TO:0000748 ! leaf anatomy and morphology trait
+xref: GO:0060866
+is_a: TO:0000655 ! leaf growth and development trait
 
 [Term]
 id: TO:0000109
@@ -1809,7 +1810,7 @@ def: "A measure of either the absence of auricle or the length of auricle being 
 synonym: "AUMIN" RELATED []
 synonym: "auricle absence" EXACT []
 synonym: "auricle absent" EXACT []
-is_a: TO:0000655 ! leaf development trait
+is_a: TO:0000655 ! leaf growth and development trait
 is_a: TO:0002717 ! leaf sheath auricle morphology and anatomy trait
 
 [Term]
@@ -1980,7 +1981,7 @@ comment: Rapid senescence of leaves can be detrimental to yield. Can be measured
 synonym: "Foilar senescence" RELATED []
 synonym: "LFSNS" RELATED []
 synonym: "Sen" RELATED []
-is_a: TO:0000655 ! leaf development trait
+is_a: TO:0000655 ! leaf growth and development trait
 
 [Term]
 id: TO:0000250
@@ -2866,7 +2867,9 @@ is_a: TO:0000439 ! fungal disease resistance
 [Term]
 id: TO:0000357
 name: growth and development trait
-def: "Traits associated with observing effects on the development of the plant or plant parts." [GR:pj]
+def: "A growth and development trait (TO:0000357) that has as primary participant a plant anatomical entity (PO:0025131) or a constituent cellular component (GO:0005575) contained therein." [GR:pj, TO:cooperl]
+comment: Growth and development traits are associated with the development of the whole plant or plant parts.
+xref: OBO_SF2_TO:248
 is_a: TO:0000387 ! plant trait
 created_by: jaiswalp
 
@@ -2895,7 +2898,7 @@ name: leaf elongation rate
 def: "Measure of growth or elongation rate of the leaf in a plant." [GR:pj]
 synonym: "leaf growth rate" RELATED []
 synonym: "LFELRATE" RELATED []
-is_a: TO:0000655 ! leaf development trait
+is_a: TO:0000655 ! leaf growth and development trait
 
 [Term]
 id: TO:0000361
@@ -3756,7 +3759,7 @@ name: days to maturity
 def: "Number of days required from seeding to seed/grain ripening ." [ICIS:1012, IRRI:SES]
 synonym: "DTMT" RELATED []
 synonym: "Mat" RELATED []
-is_a: TO:0000653 ! seed development trait
+is_a: TO:0000653 ! seed growth and development trait
 
 [Term]
 id: TO:0000470
@@ -3861,7 +3864,7 @@ def: "Measure of the seed's germination ability at sub-permissive temperature le
 synonym: "GERMABITMP" RELATED []
 synonym: "germination ability at low temperature" RELATED []
 is_a: TO:0000162 ! seed quality
-is_a: TO:0000653 ! seed development trait
+is_a: TO:0000653 ! seed growth and development trait
 
 [Term]
 id: TO:0000484
@@ -5125,9 +5128,10 @@ is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0000653
-name: seed development trait
-def: "Traits associated with observing effects on the development of the seed and its parts." [GR:pj]
-is_a: TO:0000357 ! growth and development trait
+name: seed growth and development trait
+def: "A multi-tissue plant structure development trait (TO:0000927) that has as primary participant a seed (PO:0009010)." [GR:pj, TO:cooperl]
+xref: OBO_SF2_TO:254
+is_a: TO:0000926 ! multi-tissue plant structure growth and development trait
 
 [Term]
 id: TO:0000654
@@ -5137,9 +5141,10 @@ is_a: TO:0000357 ! growth and development trait
 
 [Term]
 id: TO:0000655
-name: leaf development trait
-def: "Traits associated with observing effects on the development of the leaf and its parts." [GR:pj]
-is_a: TO:0000654 ! shoot development trait
+name: leaf growth and development trait
+def: "A plant organ development trait (TO:0000927) that has as primary participant a leaf (PO:0025034)." [GR:pj, TO:cooperl]
+xref: OBO_SF2_TO:253
+is_a: TO:0000927 ! plant organ growth and development trait
 created_by: jaiswalp
 
 [Term]
@@ -5168,7 +5173,7 @@ is_a: TO:0000359 ! female flowering
 id: TO:0000659
 name: phyllochron
 def: "The time interval between the appearance of successive leaves (days/leaf) on the developing shoot." [GR:pj]
-is_a: TO:0000655 ! leaf development trait
+is_a: TO:0000655 ! leaf growth and development trait
 
 [Term]
 id: TO:0000660
@@ -5719,7 +5724,7 @@ is_a: TO:0002626 ! fruit length
 id: TO:0000735
 name: plastochron
 def: "The time between the initiation of two leaves on the shoot apical meristem is called a plastochron." [GR:pj]
-is_a: TO:0000655 ! leaf development trait
+is_a: TO:0000655 ! leaf growth and development trait
 
 [Term]
 id: TO:0000736
@@ -7645,6 +7650,42 @@ created_by: moorel
 creation_date: 2014-01-07T13:45:07Z
 
 [Term]
+id: TO:0000926
+name: multi-tissue plant structure growth and development trait
+def: "A plant structure growth and development trait (TO:0000928) that has as primary participant a multi-tissue plant structure (PO:0025496)." [TO:cooperl]
+xref: OBO_SF2_TO:250
+is_a: TO:0000928 ! plant structure growth and development trait
+created_by: cooperl
+creation_date: 2014-01-16T12:55:32Z
+
+[Term]
+id: TO:0000927
+name: plant organ growth and development trait
+def: "A multi-tissue plant structure development trait (TO:0000927) that has as primary participant a plant organ (PO:0009008)." [TO:cooperl]
+xref: OBO_SF2_TO:251
+is_a: TO:0000926 ! multi-tissue plant structure growth and development trait
+created_by: cooperl
+creation_date: 2014-01-16T12:57:38Z
+
+[Term]
+id: TO:0000928
+name: plant structure growth and development trait
+def: "A growth and development trait (TO:0000357) that has as primary participant a plant structure (PO:0009011)." [TO:cooperl]
+xref: OBO_SF2_TO:252
+is_a: TO:0000357 ! growth and development trait
+created_by: cooperl
+creation_date: 2014-01-16T13:36:38Z
+
+[Term]
+id: TO:0000929
+name: fruit growth and development trait
+def: "A multi-tissue plant structure development trait (TO:0000927) that has as primary participant a fruit (PO:0009001)." [TO:cooperl]
+xref: OBO_SF2_TO:255
+is_a: TO:0000926 ! multi-tissue plant structure growth and development trait
+created_by: cooperl
+creation_date: 2014-01-16T14:38:50Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "A glume anatomy and morphology trait (TO:0000869) which is associated with the glume (PO:0009039) cover over the caryopsis. Often measured as percentage." [GR:pj, PO:0009039, TO:moorel]
@@ -7702,7 +7743,7 @@ is_a: TO:0000753 ! coleoptile anatomy and morphology trait
 id: TO:0001008
 name: days to flag leaf emergence
 def: "In grass plants the number of days required for the full emergence of the flag leaf in a field or study. It can be counted from date of seed sowing or the transplant (in case of rice)." [GR:pj]
-is_a: TO:0000655 ! leaf development trait
+is_a: TO:0000655 ! leaf growth and development trait
 
 [Term]
 id: TO:0001009
@@ -8167,10 +8208,13 @@ is_a: TO:0002729 ! fruit senescing quality trait
 [Term]
 id: TO:0002633
 name: fruit ripening trait
-def: "An assay to determine the variation in the extent of fruit ripening." [GR:pj]
+def: "A fruit growth and development trait (TO:0000929) that is associated with the variation in the extent of fruit ripening (GO:0009835)." [GR:pj, TO:cooperl]
+comment: Fruit ripening (GO:0009835) is an aging process that has as participant a fruit. Ripening causes changes in one or more characteristics of a fruit (color, aroma, flavor, texture, hardness, cell wall structure) and may make it more attractive to animals and aid in seed dispersal.
 synonym: "fruit ripening" RELATED []
+xref: GO:0009835
+xref: OBO_SF2_TO:256
 is_a: TO:0000349 ! physiological process related trait
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000929 ! fruit growth and development trait
 is_a: TO:0002728 ! fruit quality trait
 
 [Term]
@@ -8367,7 +8411,7 @@ synonym: "asynchronous seed maturation" RELATED []
 synonym: "nonsynchronous seed maturation" RELATED []
 synonym: "SDMT" RELATED []
 synonym: "synchronous seed maturation" RELATED []
-is_a: TO:0000653 ! seed development trait
+is_a: TO:0000653 ! seed growth and development trait
 
 [Term]
 id: TO:0002662
@@ -8521,7 +8565,7 @@ def: "An assay to measure the extent of curling of the leaf lamina." [GR:pj]
 comment: This is due to the changes in the leaf developmental process and is different from the leaf rolling (TO:0000085) observed due to the water deficient or dorught linke conditions.
 synonym: "curled leaf trait" RELATED []
 synonym: "frizzled leaf trait" RELATED []
-is_a: TO:0000655 ! leaf development trait
+is_a: TO:0000655 ! leaf growth and development trait
 
 [Term]
 id: TO:0002682
@@ -9763,7 +9807,7 @@ creation_date: 2010-10-25T05:30:17Z
 id: TO:0006064
 name: rolled leaf
 def: "Leaf lamina rolled into a tube like structure." [GR:Karthik]
-is_a: TO:0000655 ! leaf development trait
+is_a: TO:0000655 ! leaf growth and development trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:34:19Z
 
@@ -9983,7 +10027,7 @@ creation_date: 2011-12-09T02:28:13Z
 id: TO:0012011
 name: leaf senescence rate
 def: "Rate of loss of normal leaf color over time." [group:Crop_Ontology_Group]
-is_a: TO:0000655 ! leaf development trait
+is_a: TO:0000655 ! leaf growth and development trait
 created_by: jaiswalp
 creation_date: 2011-12-09T02:34:15Z
 
@@ -9992,7 +10036,7 @@ id: TO:0012012
 name: leaf senescence duration
 def: "Time taken to lose normal leaf color." [group:Crop_Ontology_Group]
 comment: In grasses often measured for flag or the second leaf from top.
-is_a: TO:0000655 ! leaf development trait
+is_a: TO:0000655 ! leaf growth and development trait
 created_by: jaiswalp
 creation_date: 2011-12-09T02:35:49Z
 
