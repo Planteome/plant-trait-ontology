@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 21:01:2014 10:53
+date: 21:01:2014 12:21
 saved-by: moorel
 auto-generated-by: OBO-Edit 2.3-beta5
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -765,25 +765,34 @@ is_a: TO:0006007 ! polysaccharide content
 [Term]
 id: TO:0000098
 name: glutinous endosperm
-def: "Opaque and hard endosperm with low or no amylose content." [GR:pj]
-comment: If the endosperm has high amount of amylose it is called as non-glutinous endosperm.
+def: "An endosperm anatomy and morphology trait (TO:0000575) which is associated with an opaque and hard endosperm (PO:0009089) with low or no amylose content (TO:0000196)." [GR:pj, PO:0009089, TO:moorel]
+comment: If the endosperm has high amount of amylose it is called as non-glutinous endosperm. This is also an endosperm quality trait (TO:0000587).
 synonym: "opaque endosperm" RELATED []
 synonym: "waxy endosperm" RELATED []
+xref: OBO_SF2_TO:139
+is_a: TO:0000575 ! endosperm anatomy and morphology trait
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
 id: TO:0000099
 name: sugary endosperm
-def: "Endosperm is wrinkled and glassy when dry." [GR:pj]
+def: "An endosperm anatomy and morphology trait (TO:0000575) which is associated with a wrinkled and glassy endosperm (PO:0009089) when dry." [GR:pj, PO:0009089, TO:moorel]
+comment: This is also an endosperm quality trait (TO:0000587).
 synonym: "sugary kernel" RELATED []
+xref: OBO_SF2_TO:139
+is_a: TO:0000575 ! endosperm anatomy and morphology trait
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
 id: TO:0000100
 name: shrunken endosperm
-def: "Shrunken and opaque to translucent endosperm. Rich in sugars." [GR:pj]
+def: "An endosperm anatomy and morphology trait (TO:0000575) which is associated with a shrunken and opaque endosperm (PO:0009089)." [GR:pj, PO:0009089, TO:moorel]
+comment: This is also an endosperm quality trait (TO:0000587). Refers to shrunken PATO:0000585 A decreased size quality inhering in a bearer by virtue of the bearer's exhibiting reduced size of a cell or constituent group of cells (for example, organ).
 synonym: "collapsed kernel" RELATED []
 synonym: "transluscent kernel" RELATED []
+xref: OBO_SF2_TO:139
+xref: PATO:0000585
+is_a: TO:0000575 ! endosperm anatomy and morphology trait
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
@@ -812,14 +821,20 @@ is_a: TO:0000237 ! water stress trait
 [Term]
 id: TO:0000104
 name: floury endosperm
-def: "Opaque and soft endosperm." [GR:pj]
+def: "An endosperm anatomy and morphology trait (TO:0000575) which is associated with an opaque and soft endosperm (PO:0009089)." [GR:pj, PO:0009089, TO:moorel]
+comment: This is also an endosperm quality trait (TO:0000587).
+xref: OBO_SF2_TO:139
+is_a: TO:0000575 ! endosperm anatomy and morphology trait
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
 id: TO:0000105
 name: dull endosperm
-def: "Glassy and tarnished endosperm, low amylose content." [GR:pj]
+def: "An endosperm anatomy and morphology trait (TO:0000575) which is associated with a glassy and tarnished endosperm (PO:0009089) with low amylose content (TO:0000196)." [GR:pj, PO:0009089, TO:moorel]
+comment: This is also an endosperm quality trait (TO:0000587).
 synonym: "glassy endosperm" RELATED []
+xref: OBO_SF2_TO:139
+is_a: TO:0000575 ! endosperm anatomy and morphology trait
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
@@ -1847,8 +1862,11 @@ is_a: TO:0002685 ! crown root number
 [Term]
 id: TO:0000231
 name: endospermless
-def: "Absence of endosperm in the seed or grain." [GR:pj]
+def: "An endosperm anatomy and morphology trait (TO:0000575) which is associated with the absence of endosperm (PO:0009089) in the seed (PO:0009010) or grain." [GR:pj, PO:0009010, PO:0009089, TO:moorel]
+comment: This is also an endosperm quality trait (TO:0000587).
 synonym: "ENDMIN" RELATED []
+xref: OBO_SF2_TO:139
+is_a: TO:0000575 ! endosperm anatomy and morphology trait
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
@@ -2104,11 +2122,14 @@ is_a: TO:0000075 ! light sensitivity
 [Term]
 id: TO:0000266
 name: chalky endosperm
-def: "Defines a representative milled sample for the degree (extent) of chalkiness that will best describe the sample with respect to (a) white belly, (b) white center, (c) white back." [GR:pj, ICIS:1253, IRRI:SES]
+def: "An endosperm anatomy and morphology trait (TO:0000575) which is associated with the chalkiness of an endosperm (PO:0009089) on the scale of (a) white belly, (b) white center or (c) white back." [GR:pj, ICIS:1253, IRRI:SES, TO:moorel]
+comment: This is also an endosperm quality trait (TO:0000587).
 synonym: "CHALK" RELATED []
 synonym: "chalkiness of endosperm" RELATED []
 synonym: "Clk" RELATED []
+xref: OBO_SF2_TO:139
 is_a: TO:0000489 ! carbohydrate composition related trait
+is_a: TO:0000575 ! endosperm anatomy and morphology trait
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
@@ -4619,7 +4640,7 @@ is_a: TO:0000227 ! root length
 id: TO:0000587
 name: endosperm quality
 alt_id: TO:0000150
-def: "Qualities of the endosperm associated with texture, content, composition, size, etc." [GR:pj]
+def: "A seed quality trait (TO:0000162) which is associated with the qualities of the endosperm (PO:0009089) associated with texture, content, composition, size, etc." [GR:pj, PO:0009089]
 synonym: "End" RELATED []
 synonym: "endosperm quality (sensu Poaceae)" RELATED []
 is_a: TO:0000162 ! seed quality
@@ -5590,11 +5611,20 @@ is_a: TO:0000267 ! inflorescence type
 [Term]
 id: TO:0000716
 name: etched endosperm
+def: "An endosperm anatomy and morphology trait (TO:0000575) which is associated with an etched endosperm (PO:0009089)." [PO:0009089, TO:moorel]
+comment: This is also an endosperm quality trait (TO:0000587).
+xref: OBO_SF2_TO:139
+is_a: TO:0000575 ! endosperm anatomy and morphology trait
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
 id: TO:0000717
 name: rough endosperm
+def: "An endosperm anatomy and morphology trait (TO:0000575) which is associated with a rough endosperm (PO:0009089)." [PO:0009089, TO:moorel]
+comment: This is also an endosperm quality trait (TO:0000587). Refers to rough PATO:0000700 A texture quality inhering in a bearer by virtue of the bearer's irregular surface.
+xref: OBO_SF2_TO:139
+xref: PATO:0000700
+is_a: TO:0000575 ! endosperm anatomy and morphology trait
 is_a: TO:0000587 ! endosperm quality
 
 [Term]
