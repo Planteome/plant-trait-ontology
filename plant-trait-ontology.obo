@@ -1,7 +1,7 @@
 format-version: 1.2
-date: 21:01:2014 16:27
+date: 17:03:2014 12:55
 saved-by: cooperl
-auto-generated-by: OBO-Edit 2.3-beta5
+auto-generated-by: OBO-Edit 2.3
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
 subsetdef: Glycine_max "Terms_used_for_soybean"
@@ -1145,7 +1145,7 @@ name: milled rice
 def: "Rice kernels that have been milled to remove the bran, leaving \"white\" or milled rice." [RiceCAP:http\://www.uark.edu/ua/ricecap/ricecapgloss.htm]
 synonym: "milled rice ratio" RELATED []
 synonym: "MR" RELATED []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0000145
@@ -1295,11 +1295,11 @@ is_a: TO:0000168 ! abiotic stress trait
 
 [Term]
 id: TO:0000162
-name: seed quality
+name: grain quality trait
 alt_id: TO:0000588
-def: "The quality assessment of the seed commonly called as kernel or grain in case of cereals, as well as those of the dehulled grains. Often associated with the commercial value either directly or indirectly." [GR:pj]
-synonym: "grain quality" RELATED []
-is_a: TO:0000597 ! quality trait
+def: "A fruit quality trait (TO:0002728) that is associated with the commercial and /or economical value of the grain (i.e. fruit (PO:0009001)), or its overall improvement." [GR:pj, TO:cooperl]
+xref: OBO_SF_TO:208
+is_a: TO:0002728 ! fruit quality trait
 relationship: has_part TO:0000181 ! seed weight
 relationship: has_part TO:0000484 ! seed shape
 relationship: has_part TO:0000486 ! seed color
@@ -1524,8 +1524,8 @@ synonym: "bran color" RELATED []
 synonym: "SCC" RELATED []
 synonym: "SDCCL" RELATED []
 xref: PATO:0000014
-is_a: TO:0000162 ! seed quality
 is_a: TO:0000838 ! seed coat anatomy and morphology trait
+is_a: TO:0000931 ! seed quality trait
 relationship: part_of TO:0000486 ! seed color
 
 [Term]
@@ -1791,7 +1791,7 @@ def: "The 3/4 or longer whole milled kernels separated from the total milled ric
 synonym: "head milled rice" RELATED []
 synonym: "head rice ratio" RELATED []
 synonym: "HEADR" RELATED []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0000223
@@ -2796,7 +2796,7 @@ is_a: TO:0002616 ! flowering time
 id: TO:0000345
 name: seed viability
 synonym: "SDVIA" RELATED []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000346
@@ -3086,7 +3086,7 @@ name: cracked grain percentage
 def: "The percentage of cracked dehulled grain with most of the size still intact." [GR:pj]
 synonym: "CRKGRPCENT" RELATED []
 synonym: "fissured grain percentage" RELATED []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0000382
@@ -3171,8 +3171,8 @@ def: "A seed anatomy and morphology trait (TO:0000184) which is associated with 
 comment: Seed size is determined by the ratio of the seed length to seed width and is a component of seed quality (TO:0000162).  Seed size may be a qualitative measure or may be organized into categories ranging from small to medium to large.  Refers to size (PATO:0000117): A morphology quality  inhering in a bearer by virtue of the bearer's physical magnitude.
 xref: OBO_SF_TO:3602441
 xref: PATO:0000117
-is_a: TO:0000162 ! seed quality
 is_a: TO:0000184 ! seed anatomy and morphology trait
+is_a: TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000392
@@ -3217,9 +3217,10 @@ is_obsolete: true
 [Term]
 id: TO:0000399
 name: grain thickness
-def: "A fruit quality trait (TO:0002728) which is associated with the thickness of a dehulled grain with a pericarp (PO:0009084)." [GR:pj, PO:0009084, TO:moorel]
+def: "A grain quality trait (TO:0000399) which is associated with the thickness of a dehulled grain with a pericarp (PO:0009084)." [GR:pj, PO:0009084, TO:moorel]
 synonym: "GRTH" RELATED []
-is_a: TO:0002728 ! fruit quality trait
+xref: OBO_SF_TO:264
+is_a: TO:0000162 ! grain quality trait
 relationship: part_of TO:0000397 ! grain size
 
 [Term]
@@ -3883,8 +3884,8 @@ name: germinability at low temperature
 def: "Measure of the seed's germination ability at sub-permissive temperature levels." [GR:pj]
 synonym: "GERMABITMP" RELATED []
 synonym: "germination ability at low temperature" RELATED []
-is_a: TO:0000162 ! seed quality
 is_a: TO:0000653 ! seed growth and development trait
+is_a: TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000484
@@ -3924,7 +3925,7 @@ is_a: TO:0000575 ! endosperm anatomy and morphology trait
 [Term]
 id: TO:0000488
 name: seed composition based quality trait
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000489
@@ -4644,10 +4645,10 @@ is_a: TO:0000227 ! root length
 id: TO:0000587
 name: endosperm quality
 alt_id: TO:0000150
-def: "A seed quality trait (TO:0000162) which is associated with the qualities of the endosperm (PO:0009089) associated with texture, content, composition, size, etc." [GR:pj, PO:0009089]
+def: "A seed quality trait (TO:0000931) which is associated with the qualities of the endosperm (PO:0009089) associated with texture, content, composition, size, etc." [GR:pj, PO:0009089]
 synonym: "End" RELATED []
 synonym: "endosperm quality (sensu Poaceae)" RELATED []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000589
@@ -4721,7 +4722,9 @@ is_obsolete: true
 [Term]
 id: TO:0000597
 name: quality trait
-def: "Any trait contributing to the overall improvement of the product. Often associated to economical and or commercial importance." [GR:pj]
+def: "A plant trait (TO:0000387) that is often associated with the commercial and /or economical value of the plant product, or its overall improvement." [GR:pj, TO:cooperl]
+comment: Quality traits are often also classified as belonging to another upper level class such as: anatomy and morphology trait (TO:0000017), biochemical trait (TO:0000277), growth and development trait (TO:0000357), stature or vigor trait (TO:0000133) and so on.
+xref: OBO_SF_TO:260
 is_a: TO:0000387 ! plant trait
 created_by: jaiswalp
 
@@ -4842,11 +4845,12 @@ is_a: TO:0000667 ! cooking or brewing quality
 
 [Term]
 id: TO:0000612
-name: seed density
-def: "Test weight is a measure of the density or weight per unit of volume of a grain at a standardized moisture level." [GR_REF:8025]
+name: grain density
+def: "A grain quality trait (TO:0000162) that is a measure of the density or weight per unit of volume of a grain at a standardized moisture level." [GR_REF:8025, TO:cooperl]
 synonym: "SDDN" RELATED []
 synonym: "test weight" RELATED []
-is_a: TO:0000162 ! seed quality
+xref: OBO_SF_TO:262
+is_a: TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0000613
@@ -4906,7 +4910,7 @@ synonym: "crushed dehulled-grain percentage" RELATED []
 synonym: "CRUSHGRPCENT" RELATED []
 synonym: "percent broken" RELATED []
 synonym: "percentage brokens" RELATED []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0000619
@@ -5047,8 +5051,8 @@ id: TO:0000639
 name: seed fertility
 synonym: "percent seed fertility" RELATED []
 synonym: "SDFRT" RELATED []
-is_a: TO:0000162 ! seed quality
 is_a: TO:0000420 ! fertility related trait
+is_a: TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000640
@@ -5245,7 +5249,7 @@ is_a: TO:0000449 ! grain yield per plant
 id: TO:0000667
 name: cooking or brewing quality
 def: "The quality trait of the seed or the products derived from it." [GR:pj]
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000668
@@ -5281,7 +5285,7 @@ id: TO:0000672
 name: bran percentage
 synonym: "BRAPCENT" RELATED []
 synonym: "rice bran percentage" RELATED []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0000673
@@ -5475,7 +5479,7 @@ id: TO:0000697
 name: starch yield
 def: "An assay to determine the starch yield from a bigger sample such as from a given population or from a plot or field. It is often carried out initially with the smaller sample but later converted to associate with a large sample for example record starch yield in kilograms per hectare." [GR:pj]
 synonym: "STARCHYLD" RELATED []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000162 ! grain quality trait
 is_a: TO:0000291 ! carbohydrate content
 is_a: TO:0000371 ! yield trait
 
@@ -5636,7 +5640,7 @@ is_a: TO:0000587 ! endosperm quality
 id: TO:0000718
 name: wrinkled seed
 synonym: "wrinkled kernel" RELATED []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000719
@@ -7728,6 +7732,15 @@ created_by: moorel
 creation_date: 2014-01-21T10:24:42Z
 
 [Term]
+id: TO:0000931
+name: seed quality trait
+def: "A quality trait (TO:0000597) associated with the commercial and /or economical value of a seed (PO:0009010) , or its overall improvement." [TO:cooperl]
+xref: OBO_SF_TO:209
+is_a: TO:0000597 ! quality trait
+created_by: cooperl
+creation_date: 2014-03-17T11:41:08Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "A glume anatomy and morphology trait (TO:0000869) which is associated with the glume (PO:0009039) cover over the caryopsis. Often measured as percentage." [GR:pj, PO:0009039, TO:moorel]
@@ -8363,7 +8376,7 @@ id: TO:0002648
 name: water absorption by seed
 def: "A measure of the relative water absorption after soaking a known amount (weight) of seed." [GR:pj, GrainGenes_trait:Water_absorption]
 synonym: "WABSORPSD" RELATED []
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0002649
@@ -8411,13 +8424,13 @@ is_a: TO:0000599 ! enzyme activity trait
 id: TO:0002655
 name: starch grain size
 def: "Assay to determine the size of the starcg grain size." [GR:pj]
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0002656
 name: starch grain shape
 def: "Assay to determine the shape of the starch grain." [GR:pj]
-is_a: TO:0000162 ! seed quality
+is_a: TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0002657
@@ -8948,7 +8961,8 @@ is_a: TO:0000079 ! lemma and palea anatomy and morphology trait
 [Term]
 id: TO:0002728
 name: fruit quality trait
-def: "Any trait contributing to overall improvement of the fruit. Often associated to economical and or commercial importance." [GR:pj]
+def: "A quality trait (TO:0000597) associated with the commercial and /or economical value of a fruit (PO:0009001) , or its overall improvement." [GR:pj, TO:cooperl]
+xref: OBO_SF_TO:263
 is_a: TO:0000597 ! quality trait
 
 [Term]
@@ -9884,8 +9898,8 @@ creation_date: 2010-10-25T05:38:56Z
 id: TO:0006068
 name: germinability in dark
 def: "Measure of the seed's germination ability in dark." [GR:curators]
-is_a: TO:0000162 ! seed quality
 is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000931 ! seed quality trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:42:12Z
 
@@ -9893,8 +9907,8 @@ creation_date: 2010-10-25T05:42:12Z
 id: TO:0006069
 name: DSDS50
 def: "A measure of seed dormancy defined as the days of seed dry storage required to reach 50% germination (DSDS50)." [GR:Karthik]
-is_a: TO:0000162 ! seed quality
 is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000931 ! seed quality trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:44:20Z
 
