@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 05:05:2014 19:14
+date: 06:05:2014 13:41
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -565,7 +565,7 @@ is_a: TO:0000439 ! fungal disease resistance
 [Term]
 id: TO:0000075
 name: light sensitivity
-def: "Response shown by the plant in terms of  sensitivity to light stress (quality and quantity of light)." [GR:pj]
+def: "Response shown by the plant in terms of sensitivity to light stress (quality and quantity of light)." [GR:pj]
 is_a: TO:0000161 ! radiation response trait
 
 [Term]
@@ -1285,7 +1285,7 @@ is_a: TO:0000265 ! light quality sensitivity
 [Term]
 id: TO:0000161
 name: radiation response trait
-def: "Response shown by the plant in terms of  sensitivity to one or more types of radiation stress (quality and quantity of light)." [GR:pj]
+def: "Response shown by the plant in terms of sensitivity to one or more types of radiation stress (quality and quantity of light)." [GR:pj]
 synonym: "radiation sensitivity" RELATED []
 synonym: "RADSN" RELATED []
 synonym: "response to radiation" RELATED []
@@ -2782,12 +2782,13 @@ is_a: TO:0000347 ! weed damage
 
 [Term]
 id: TO:0000344
-name: days to flower
-def: "Number of days from the seed sowing or the seedling transplant date (in some cases of rice) to the anthesis (flowering) stage." [GR:pj]
+name: days to flower trait
+def: "A flowering time trait (TO:0002616) associated with the number of days required for an individual flower (PO:0009046), a whole plant (PO:0000003) or a plant population to reach flowering stage (PO:0007616) from a predetermined time point (e.g. the date of seed sowing, seedling transplant, or seedling emergence)." [GR:pj, TO:cooperl]
 comment: Often determinded by either pollen shedding, exsertion of the anthers or simply opening of the flower.
 synonym: "days to flowering" EXACT []
 synonym: "Delay in flowering time" NARROW []
 synonym: "DTFL" RELATED []
+xref: OBO_SF2_TO:269
 is_a: TO:0002616 ! flowering time
 
 [Term]
@@ -2903,7 +2904,7 @@ is_a: TO:0000485 ! sterility related trait
 [Term]
 id: TO:0000359
 name: female flowering
-def: "Traits associated with the timing of the flowering  (anthesis) of female flowers." [GR:pj]
+def: "Traits associated with the timing of the flowering (anthesis) of female flowers." [GR:pj]
 comment: Ofetn influenced by the environemnt that includes, day light, temperature and geographic location.
 synonym: "days to silk" RELATED []
 synonym: "DTSLK" RELATED []
@@ -2946,7 +2947,7 @@ relationship: part_of TO:0000326 ! leaf color
 [Term]
 id: TO:0000365
 name: male flowering
-def: "Traits associated with the timing of the flowering  (anthesis) of male flowers." [GR:pj]
+def: "Traits associated with the timing of the flowering (anthesis) of male flowers." [GR:pj]
 comment: Ofetn influenced by the environemnt that includes, day light, temperature and geographic location.
 synonym: "male flower anthesis" RELATED []
 synonym: "male flower flowering" RELATED []
@@ -3734,6 +3735,7 @@ def: "A difference of the average number of days between the maize tassel flower
 synonym: "ANTSKIT" RELATED []
 synonym: "ASI" RELATED []
 synonym: "FLWSLKINTER" RELATED []
+xref: MaizeGDB_QTL:62044
 is_a: TO:0002616 ! flowering time
 
 [Term]
@@ -4989,7 +4991,7 @@ name: days to tassel
 def: "It is determined as the number of days from the seed sowing to the stage when either the pollen shedding or anther exsertion occurs on the maize tassel." [GR:pj]
 comment: Depends on the study type. For a study with multiple plants, on average 50% of the plants must have sheeding of pollen or anther exsertion.
 synonym: "days to tassel flowering" EXACT []
-is_a: TO:0000344 ! days to flower
+is_a: TO:0000344 ! days to flower trait
 is_a: TO:0000365 ! male flowering
 
 [Term]
@@ -5190,7 +5192,7 @@ id: TO:0000658
 name: days to silk
 def: "It is determined as the number of days from the seed sowing to the first visible silk (stigma) on the maize ear." [GR:pj]
 comment: Depends on the study type. For a study with multiple plants, on average 50% of the plants must have exposed silks.
-is_a: TO:0000344 ! days to flower
+is_a: TO:0000344 ! days to flower trait
 is_a: TO:0000359 ! female flowering
 
 [Term]
