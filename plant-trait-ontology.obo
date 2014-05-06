@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 30:04:2014 11:33
+date: 05:05:2014 19:14
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -212,7 +212,7 @@ id: TO:0000027
 name: culm number
 def: "Actual count of the total number of tillers after full heading, Specify if per plant, hill or area." [IRRI:SES]
 synonym: "CmN" RELATED []
-is_a: TO:0000654 ! shoot development trait
+is_a: TO:0000654 ! shoot system growth and development trait
 
 [Term]
 id: TO:0000028
@@ -221,7 +221,6 @@ def: "Number of unfilled florets in a grass inflorescence." [GR:pj]
 synonym: "UNFILGRNB" RELATED []
 synonym: "unfilled florets per panicle" RELATED []
 synonym: "unfilled grain" RELATED []
-is_a: TO:0000357 ! growth and development trait
 is_a: TO:0002759 ! grain number
 
 [Term]
@@ -692,7 +691,6 @@ def: "A panicle anatomy and morphology trait (TO:0000847) which is associated wi
 synonym: "Panicle attitude of branches" RELATED []
 synonym: "PnT" RELATED []
 synonym: "PNTYPE" RELATED []
-is_a: TO:0000621 ! inflorescence development trait
 is_a: TO:0000847 ! panicle anatomy and morphology trait
 
 [Term]
@@ -750,7 +748,7 @@ def: "Regeneration of the main stem and tillers after harvesting in a grass plan
 synonym: "RAAB" RELATED []
 is_a: TO:0000250 ! vigor related trait
 is_a: TO:0000371 ! yield trait
-is_a: TO:0000654 ! shoot development trait
+is_a: TO:0000654 ! shoot system growth and development trait
 
 [Term]
 id: TO:0000097
@@ -2659,7 +2657,7 @@ def: "Degree of tillering is affected by variety, spacing of plants in the field
 synonym: "Ti" RELATED []
 synonym: "TIAB" RELATED []
 is_a: TO:0000371 ! yield trait
-is_a: TO:0000654 ! shoot development trait
+is_a: TO:0000654 ! shoot system growth and development trait
 
 [Term]
 id: TO:0000330
@@ -2961,7 +2959,7 @@ id: TO:0000366
 name: reproductive growth time
 def: "Measure of time taken by the reproductive growth phase in a plant's life cycle." [GR:pj]
 synonym: "RGTM" RELATED []
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000933 ! plant phenological trait
 
 [Term]
 id: TO:0000367
@@ -2976,14 +2974,14 @@ id: TO:0000368
 name: shoot elongation rate
 synonym: "elongation of plant height" RELATED []
 synonym: "SHELRATE" RELATED []
-is_a: TO:0000654 ! shoot development trait
+is_a: TO:0000654 ! shoot system growth and development trait
 
 [Term]
 id: TO:0000369
 name: vegetative growth time
 def: "Measure of the vegetative growth phase time in a plant's life cycle." [GR:pj]
 synonym: "VGTM" RELATED []
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000933 ! plant phenological trait
 
 [Term]
 id: TO:0000370
@@ -3684,7 +3682,6 @@ synonym: "number of spikelets per panicle" RELATED []
 synonym: "spikelet number per panicle" RELATED []
 synonym: "SPKNB" RELATED []
 is_a: TO:0000371 ! yield trait
-is_a: TO:0000621 ! inflorescence development trait
 is_a: TO:0000657 ! spikelet anatomy and morphology trait
 
 [Term]
@@ -4925,13 +4922,13 @@ is_a: TO:0000620 ! embryo development trait
 id: TO:0000620
 name: embryo development trait
 def: "The traits that are assayed during embryogenesis starting from the zygote to the germination phase." [GR:pj]
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000928 ! plant structure growth and development trait
 
 [Term]
 id: TO:0000621
 name: inflorescence development trait
 def: "Traits associated with observing effects on the development of the inflorescence and its parts." [GR:pj]
-is_a: TO:0000654 ! shoot development trait
+is_a: TO:0000654 ! shoot system growth and development trait
 
 [Term]
 id: TO:0000622
@@ -5161,9 +5158,10 @@ is_a: TO:0000926 ! multi-tissue plant structure growth and development trait
 
 [Term]
 id: TO:0000654
-name: shoot development trait
-def: "Traits associated with observing effects on the development of the shoot and its parts." [GR:pj]
-is_a: TO:0000357 ! growth and development trait
+name: shoot system growth and development trait
+def: "A plant structure growth and development trait (TO:0000928) that is associated with the growth of the shoot system (PO:0009006), and shoot system development stages (PO:0025527)." [GR:pj, TO:cooperl]
+xref: OBO_SF2_TO:268
+is_a: TO:0000928 ! plant structure growth and development trait
 
 [Term]
 id: TO:0000655
@@ -5177,7 +5175,7 @@ created_by: jaiswalp
 id: TO:0000656
 name: root development trait
 def: "Traits associated with observing effects on the development of the root and its parts." [GR:pj]
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000927 ! plant organ growth and development trait
 
 [Term]
 id: TO:0000657
@@ -5204,7 +5202,7 @@ is_a: TO:0000655 ! leaf growth and development trait
 [Term]
 id: TO:0000660
 name: axillary bud dormancy
-is_a: TO:0000654 ! shoot development trait
+is_a: TO:0000654 ! shoot system growth and development trait
 
 [Term]
 id: TO:0000661
@@ -5665,7 +5663,7 @@ is_a: TO:0000748 ! leaf anatomy and morphology trait
 id: TO:0000722
 name: sporocyte development trait
 def: "Traits associated with observing effects on the sporocyte development." [GR:pj]
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0002686 ! cell growth and development trait
 
 [Term]
 id: TO:0000723
@@ -7752,6 +7750,15 @@ created_by: cooperl
 creation_date: 2014-04-30T11:28:13Z
 
 [Term]
+id: TO:0000933
+name: plant phenological trait
+def: "A growth and development trait (TO:0000357) that is associated with the timing of the occurrence of plant structure development stages (PO:0009012) and the relevant biological processes (GO:0008150)." [TO:cooperl]
+xref: OBO_SF2_TO:266
+is_a: TO:0000357 ! growth and development trait
+created_by: cooperl
+creation_date: 2014-05-05T17:32:19Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "A glume anatomy and morphology trait (TO:0000869) which is associated with the glume (PO:0009039) cover over the caryopsis. Often measured as percentage." [GR:pj, PO:0009039, TO:moorel]
@@ -7897,7 +7904,7 @@ name: days to inflorescence exsertion
 def: "Number of days required for the emergence of inflorescence to become visible on the plant." [GR:pj]
 comment: Often in grasses it emerges from the flag leaf whcih is the top most leaft on the shoot.
 synonym: "days to inflorescence emergence" RELATED []
-is_a: TO:0000621 ! inflorescence development trait
+is_a: TO:0000933 ! plant phenological trait
 
 [Term]
 id: TO:0001022
@@ -8095,7 +8102,7 @@ id: TO:0002611
 name: homeotic development trait
 def: "A developmental trait resulting development of increased, decreased or new organs and organ parts due to a mutation that causes one member of a repetitive series to assume the identity of another member , for example, the transformation of sepals into petals." [GR:pj]
 synonym: "homeotic mutation" RELATED []
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000927 ! plant organ growth and development trait
 
 [Term]
 id: TO:0002612
@@ -8128,11 +8135,12 @@ is_a: TO:0000862 ! floral organ anatomy and morphology trait
 [Term]
 id: TO:0002616
 name: flowering time
-def: "Traits associated with the timing of the flowering (anthesis)." [GR:pj]
+def: "A plant phenological trait (TO:0000933) associated with the timing of anthesis (flowering stage; PO:0007616)." [GR:pj, TO:cooperl]
 comment: Ofetn influenced by the environemnt that includes, day light, temperature and geographic location.
-synonym: "anthesis" RELATED []
+synonym: "anthesis timing" RELATED []
 synonym: "time of flowering" RELATED []
-is_a: TO:0000622 ! flower development trait
+xref: OBO_SF2_TO:267
+is_a: TO:0000933 ! plant phenological trait
 
 [Term]
 id: TO:0002617
@@ -8317,7 +8325,7 @@ id: TO:0002638
 name: shoot meristem development
 def: "An assay to associate observing effects on the development of shoot meristem." [GR:pj]
 synonym: "shoot meristem abortion" RELATED []
-is_a: TO:0000654 ! shoot development trait
+is_a: TO:0000654 ! shoot system growth and development trait
 is_a: TO:0006016 ! meristem tissue development trait
 
 [Term]
@@ -8665,7 +8673,7 @@ is_a: TO:0000084 ! root number
 id: TO:0002686
 name: cell growth and development trait
 def: "Traits associated with observing effects on the growth and development of the plant cell and its parts." [GR:pj]
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000928 ! plant structure growth and development trait
 
 [Term]
 id: TO:0002687
@@ -8947,9 +8955,9 @@ is_a: TO:0000835 ! leaf sheath anatomy and morphology trait
 [Term]
 id: TO:0002725
 name: life cycle habit
-def: "Determined for type of life cycle being annual, binneal, perennial etc." [GR:pj]
+def: "Determined for type of life cycle being annual, biannual, perennial etc." [GR:pj]
 synonym: "LIFECYCHAB" RELATED []
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000933 ! plant phenological trait
 
 [Term]
 id: TO:0002726
@@ -9198,7 +9206,7 @@ is_a: TO:0000782 ! inflorescence axis anatomy and morphology trait
 id: TO:0002755
 name: cell organelle development trait
 def: "Trait(s) associated with phenotypes observed for abnormal development of cell organelle structure and its biogenesis." [GR:pj]
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0002686 ! cell growth and development trait
 
 [Term]
 id: TO:0002756
@@ -9519,7 +9527,7 @@ is_a: TO:0000748 ! leaf anatomy and morphology trait
 id: TO:0006015
 name: tissue development trait
 def: "Traits associated with observing effects on the development of a given tissue type." [GR:pj]
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000928 ! plant structure growth and development trait
 
 [Term]
 id: TO:0006016
@@ -9539,7 +9547,7 @@ id: TO:0006018
 name: organ identity
 def: "Trait associated with observing effects on the establishment of organ identity." [GR:pj]
 comment: Identity is considered to be the aggregate of characteristics by which a structure is recognized.
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000927 ! plant organ growth and development trait
 
 [Term]
 id: TO:0006019
@@ -9558,7 +9566,7 @@ id: TO:0006021
 name: vegetative to reproductive phase transition trait
 def: "Trait associated with the transition of vegetative growth phase to the reproductive growth phase." [GR:pj]
 comment: Usually observed at the time of transition of shoot apical meristem (a vegetative meristem) to the inflorescence apical meristem (a reproductive meristem).
-is_a: TO:0000654 ! shoot development trait
+is_a: TO:0000654 ! shoot system growth and development trait
 
 [Term]
 id: TO:0006022
@@ -9655,7 +9663,7 @@ id: TO:0006036
 name: stem elongation
 def: "Elongation of the stem." [GR:pj]
 comment: Alternative associated traits are stem length (TO:0000576) and shoot elongation rate (TO:0000368).
-is_a: TO:0000654 ! shoot development trait
+is_a: TO:0000654 ! shoot system growth and development trait
 
 [Term]
 id: TO:0006037
@@ -9848,7 +9856,7 @@ creation_date: 2010-10-25T05:13:05Z
 id: TO:0006061
 name: days to germinate
 def: "Number of days taken from the day of sowing to the first emergence of cotyledons or hypocotyl." [GR:curators]
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000933 ! plant phenological trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:23:52Z
 
@@ -9909,7 +9917,7 @@ creation_date: 2010-10-25T05:38:56Z
 id: TO:0006068
 name: germinability in dark
 def: "Measure of the seed's germination ability in dark." [GR:curators]
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000653 ! seed growth and development trait
 is_a: TO:0000931 ! seed quality trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:42:12Z
@@ -9918,8 +9926,8 @@ creation_date: 2010-10-25T05:42:12Z
 id: TO:0006069
 name: DSDS50
 def: "A measure of seed dormancy defined as the days of seed dry storage required to reach 50% germination (DSDS50)." [GR:Karthik]
-is_a: TO:0000357 ! growth and development trait
 is_a: TO:0000931 ! seed quality trait
+is_a: TO:0000933 ! plant phenological trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:44:20Z
 
@@ -10679,7 +10687,7 @@ comment: Refer to organ senescence (GO:0010260): The process that occurs in an o
 synonym: "culm senescence" EXACT []
 xref: GO:0010260
 xref: OBO_SF_ID:3531323
-is_a: TO:0000654 ! shoot development trait
+is_a: TO:0000654 ! shoot system growth and development trait
 created_by: jaiswalp
 creation_date: 2011-08-19T03:34:31Z
 
@@ -10881,8 +10889,8 @@ creation_date: 2011-08-19T04:26:36Z
 id: TO:0020109
 name: vascular bundle development trait
 def: "Traits associated with observing effects on the development of vascular bundle." [TO:contributors]
-is_a: TO:0000357 ! growth and development trait
 is_a: TO:0000470 ! vascular tissue anatomy and morphology trait
+is_a: TO:0006015 ! tissue development trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:27:34Z
 
@@ -10890,7 +10898,7 @@ creation_date: 2011-08-19T04:27:34Z
 id: TO:0020110
 name: gynoecium development trait
 def: "Traits associated with observing effects on the development of the gynoecium." [TO:contributors]
-is_a: TO:0000357 ! growth and development trait
+is_a: TO:0000928 ! plant structure growth and development trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:29:46Z
 
