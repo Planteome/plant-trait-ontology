@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 06:05:2014 13:41
+date: 06:05:2014 17:20
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -2782,14 +2782,14 @@ is_a: TO:0000347 ! weed damage
 
 [Term]
 id: TO:0000344
-name: days to flower trait
+name: days to flowering trait
 def: "A flowering time trait (TO:0002616) associated with the number of days required for an individual flower (PO:0009046), a whole plant (PO:0000003) or a plant population to reach flowering stage (PO:0007616) from a predetermined time point (e.g. the date of seed sowing, seedling transplant, or seedling emergence)." [GR:pj, TO:cooperl]
 comment: Often determinded by either pollen shedding, exsertion of the anthers or simply opening of the flower.
 synonym: "days to flowering" EXACT []
 synonym: "Delay in flowering time" NARROW []
 synonym: "DTFL" RELATED []
 xref: OBO_SF2_TO:269
-is_a: TO:0002616 ! flowering time
+is_a: TO:0002616 ! flowering time trait
 
 [Term]
 id: TO:0000345
@@ -2912,7 +2912,7 @@ synonym: "Female flower anthesis" RELATED []
 synonym: "Female flower flowering" RELATED []
 synonym: "FEMFLW" RELATED []
 synonym: "FFLW" RELATED []
-is_a: TO:0002616 ! flowering time
+is_a: TO:0002616 ! flowering time trait
 
 [Term]
 id: TO:0000360
@@ -2953,7 +2953,7 @@ synonym: "male flower anthesis" RELATED []
 synonym: "male flower flowering" RELATED []
 synonym: "MALEFLW" RELATED []
 synonym: "MFLW" RELATED []
-is_a: TO:0002616 ! flowering time
+is_a: TO:0002616 ! flowering time trait
 
 [Term]
 id: TO:0000366
@@ -3736,7 +3736,7 @@ synonym: "ANTSKIT" RELATED []
 synonym: "ASI" RELATED []
 synonym: "FLWSLKINTER" RELATED []
 xref: MaizeGDB_QTL:62044
-is_a: TO:0002616 ! flowering time
+is_a: TO:0002616 ! flowering time trait
 
 [Term]
 id: TO:0000464
@@ -4991,7 +4991,7 @@ name: days to tassel
 def: "It is determined as the number of days from the seed sowing to the stage when either the pollen shedding or anther exsertion occurs on the maize tassel." [GR:pj]
 comment: Depends on the study type. For a study with multiple plants, on average 50% of the plants must have sheeding of pollen or anther exsertion.
 synonym: "days to tassel flowering" EXACT []
-is_a: TO:0000344 ! days to flower trait
+is_a: TO:0000344 ! days to flowering trait
 is_a: TO:0000365 ! male flowering
 
 [Term]
@@ -5192,7 +5192,7 @@ id: TO:0000658
 name: days to silk
 def: "It is determined as the number of days from the seed sowing to the first visible silk (stigma) on the maize ear." [GR:pj]
 comment: Depends on the study type. For a study with multiple plants, on average 50% of the plants must have exposed silks.
-is_a: TO:0000344 ! days to flower trait
+is_a: TO:0000344 ! days to flowering trait
 is_a: TO:0000359 ! female flowering
 
 [Term]
@@ -7761,6 +7761,16 @@ created_by: cooperl
 creation_date: 2014-05-05T17:32:19Z
 
 [Term]
+id: TO:0000934
+name: photoperiod response trait
+def: "A flowering time trait (TO:0002616) which is associated with the difference between the time to flowering stage (PO:0007616) in long photoperiod and short photoperiod environments." [TO:cooperl]
+xref: MaizeGDB_QTL:64797
+xref: OBO_SF2_TO:265
+is_a: TO:0002616 ! flowering time trait
+created_by: cooperl
+creation_date: 2014-05-06T16:41:00Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "A glume anatomy and morphology trait (TO:0000869) which is associated with the glume (PO:0009039) cover over the caryopsis. Often measured as percentage." [GR:pj, PO:0009039, TO:moorel]
@@ -8136,9 +8146,9 @@ is_a: TO:0000862 ! floral organ anatomy and morphology trait
 
 [Term]
 id: TO:0002616
-name: flowering time
+name: flowering time trait
 def: "A plant phenological trait (TO:0000933) associated with the timing of anthesis (flowering stage; PO:0007616)." [GR:pj, TO:cooperl]
-comment: Ofetn influenced by the environemnt that includes, day light, temperature and geographic location.
+comment: Often influenced by the environment that includes, day light, temperature and geographic location.
 synonym: "anthesis timing" RELATED []
 synonym: "time of flowering" RELATED []
 xref: OBO_SF2_TO:267
