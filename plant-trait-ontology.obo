@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 06:05:2014 17:20
+date: 09:05:2014 11:01
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -1848,6 +1848,7 @@ name: photoperiod sensitivity
 def: "Sensitivity response on the plant development and the related growth stages by the duration of light, to which the plant has been exposed." [GR:pj]
 synonym: "PPDSN" RELATED []
 is_a: TO:0000075 ! light sensitivity
+relationship: part_of TO:0000934 ! photoperiod response trait
 
 [Term]
 id: TO:0000230
@@ -3648,7 +3649,7 @@ name: leaf area to spikelet number ratio
 def: "A ratio of leaf area to the number of spikelets in a grass inflorescence." [GR:pj]
 comment: Often measured using the flag leaf.
 synonym: "LFARSPKNBRO" RELATED []
-is_a: TO:0000540 ! leaf area
+is_a: TO:0000540 ! leaf area trait
 
 [Term]
 id: TO:0000453
@@ -4029,7 +4030,7 @@ is_a: TO:0000748 ! leaf anatomy and morphology trait
 
 [Term]
 id: TO:0000505
-name: leaf weight
+name: leaf weight trait
 def: "A leaf anatomy and morphology trait (TO:0000505) which is associated with the measure of leaf weight." [GR:pj, TO:moorel]
 synonym: "LFWT" RELATED []
 is_a: TO:0000748 ! leaf anatomy and morphology trait
@@ -4259,7 +4260,7 @@ is_a: TO:0000472 ! vascular bundle number
 
 [Term]
 id: TO:0000540
-name: leaf area
+name: leaf area trait
 def: "A leaf anatomy and morphology trait (TO:0000748) which is associated with the total area of a leaf (PO:0025034)." [GR:pj, PO:0025034, POC:cooperl]
 comment: Refer to area (PATO:0001323): A 2-D extent quality inhering in a bearer by virtue of the bearer's two dimensional extent.
 synonym: "LFAR" RELATED []
@@ -4444,8 +4445,13 @@ is_a: TO:0000559 ! plant volume
 [Term]
 id: TO:0000562
 name: specific leaf area
+def: "A leaf area trait (TO:0000540) that is the ratio of the leaf area (TO:0000540) to the leaf dry weight (TO:0001014) or leaf dry mass (TO:New)." [TO:cooperl]
+synonym: "leaf specific area" RELATED []
+synonym: "SLA" RELATED []
 synonym: "SLFAR" RELATED []
-is_a: TO:0000540 ! leaf area
+xref: MaizeGDB_QTL:247869
+xref: OBO_SF2_TO:271
+is_a: TO:0000540 ! leaf area trait
 
 [Term]
 id: TO:0000563
@@ -7331,7 +7337,7 @@ creation_date: 2012-10-11T12:32:02Z
 id: TO:0000891
 name: leaf wet weight
 def: "A leaf weight trait (TO:0000505) which is associated with the measure of the wet weight of a leaf (PO:0025034)." [PO:0025034, TO:moorel]
-is_a: TO:0000505 ! leaf weight
+is_a: TO:0000505 ! leaf weight trait
 created_by: moorel
 creation_date: 2012-10-11T12:50:20Z
 
@@ -7866,7 +7872,7 @@ is_a: TO:0000084 ! root number
 id: TO:0001014
 name: leaf dry weight
 def: "A leaf weight trait (TO:0000505) which is associated with the measure of the dry weight of a leaf (PO:0025034)." [GR:pj, PO:0025034, TO:moorel]
-is_a: TO:0000505 ! leaf weight
+is_a: TO:0000505 ! leaf weight trait
 
 [Term]
 id: TO:0001015
@@ -7977,7 +7983,7 @@ is_a: TO:0000128 ! harvest index
 id: TO:0001030
 name: relative leaf area
 def: "It is a ratio of leaf area determined from a stressed plant to that grown in normal environment." [GR:pj]
-is_a: TO:0000540 ! leaf area
+is_a: TO:0000540 ! leaf area trait
 
 [Term]
 id: TO:0001031
