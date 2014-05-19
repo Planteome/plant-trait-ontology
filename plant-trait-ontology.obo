@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:05:2014 11:42
+date: 19:05:2014 11:52
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -1844,11 +1844,10 @@ is_a: TO:0000488 ! seed composition based quality trait
 
 [Term]
 id: TO:0000229
-name: photoperiod sensitivity
+name: photoperiod sensitivity trait
 def: "Sensitivity response on the plant development and the related growth stages by the duration of light, to which the plant has been exposed." [GR:pj]
 synonym: "PPDSN" RELATED []
 is_a: TO:0000075 ! light sensitivity
-relationship: part_of TO:0000934 ! photoperiod response trait
 
 [Term]
 id: TO:0000230
@@ -7768,10 +7767,12 @@ creation_date: 2014-05-05T17:32:19Z
 
 [Term]
 id: TO:0000934
-name: photoperiod response trait
-def: "A flowering time trait (TO:0002616) which is associated with the difference between the time to flowering stage (PO:0007616) in long photoperiod and short photoperiod environments." [TO:cooperl]
+name: photoperiod-sensitive flowering time trait
+def: "A flowering time trait (TO:0002616) which is assayed as the difference between the time to flowering stage (PO:0007616) in long photoperiod (EO:0007199) and short photoperiod (EO:0007200) environments." [TO:cooperl]
+synonym: "flowering time response to photoperiod trait" EXACT []
 xref: MaizeGDB_QTL:64797
 xref: OBO_SF2_TO:265
+is_a: TO:0000229 ! photoperiod sensitivity trait
 is_a: TO:0002616 ! flowering time trait
 created_by: cooperl
 creation_date: 2014-05-06T16:41:00Z
