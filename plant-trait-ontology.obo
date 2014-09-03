@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 27:06:2014 08:44
+date: 02:09:2014 18:35
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -3195,7 +3195,7 @@ is_a: TO:0000237 ! water stress trait
 id: TO:0000396
 name: grain yield trait
 def: "A fruit yield trait (TO:0000871) that is associated with grain." [ICIS:1003, IRRI:SES, TO:contributors, TO:cooperl]
-comment: In Rice the grain yield if often measured in kilograms per hectare at 14 percent moisture if the experiment was done on a field trial.
+comment: In rice, the grain yield is often measured in kilograms per hectare at 14 percent moisture, if the experiment was done on a field trial.
 synonym: "GRYLD" RELATED []
 synonym: "Yld" RELATED []
 is_a: TO:0000871 ! fruit yield trait
@@ -3561,8 +3561,8 @@ is_a: TO:0000327 ! above ground biomass yield trait
 
 [Term]
 id: TO:0000443
-name: ear number
-def: "Number of ears found in a plant or and average number present in population." [GR:pj]
+name: ear infructescence number
+def: "An infructescence yield trait (TO:0000936) that is associated with the number of ears (ear infructescence; PO:0025597) on a plant or the average number present in population." [GR:pj, TO:cooperl]
 comment: To be used only for traits from maize.
 synonym: "ear number per plant" RELATED []
 synonym: "EARNB" RELATED []
@@ -3571,7 +3571,7 @@ synonym: "ears per plant" RELATED []
 synonym: "ENO" RELATED []
 synonym: "ENP" RELATED []
 xref: OBO_SF2_TO:244
-is_a: TO:0000327 ! above ground biomass yield trait
+is_a: TO:0000936 ! infructescence yield trait
 
 [Term]
 id: TO:0000444
@@ -3625,14 +3625,14 @@ id: TO:0000449
 name: grain yield per plant
 def: "Average weight of dehulled grains per plant." [GR:pj]
 synonym: "GRYLDPPL" RELATED []
-is_a: TO:0000371 ! yield trait
+is_a: TO:0000396 ! grain yield trait
 
 [Term]
 id: TO:0000450
 name: grain yield per panicle
 def: "Average weight of dehulled grains per panicle." [GR:pj]
 synonym: "GRYLDPPN" EXACT []
-is_a: TO:0000371 ! yield trait
+is_a: TO:0000396 ! grain yield trait
 
 [Term]
 id: TO:0000451
@@ -4658,13 +4658,14 @@ is_a: TO:0000931 ! seed quality trait
 id: TO:0000589
 name: average grain weight
 alt_id: TO:0000509
-def: "A yield trait (TO:0000371) associated with the average weight of a grain, including the caryopsis hull (PO:0006000), representing the overall yield or produce from the field." [GR:pj, POC:cooperl]
+def: "A grain yield trait (TO:0000396) associated with the average weight of a grain, including the caryopsis hull (PO:0006000)." [GR:pj, POC:cooperl]
+comment: The average grain weight (TO:0000589) can be used to calculate the overall yield or produce from a field.
 synonym: "grain weight" RELATED []
 synonym: "GRWT" RELATED []
 synonym: "kernel weight" RELATED []
 synonym: "SDWT" RELATED []
 xref: OBO_SF2_TO:245
-is_a: TO:0000871 ! fruit yield trait
+is_a: TO:0000396 ! grain yield trait
 
 [Term]
 id: TO:0000590
@@ -5411,13 +5412,14 @@ id: TO:0000687
 name: kernel row number
 synonym: "kernel row" RELATED []
 synonym: "KERROWNB" RELATED []
-is_a: TO:0000371 ! yield trait
+xref: MaizeGDB_QTL:99383
+is_a: TO:0000936 ! infructescence yield trait
 
 [Term]
 id: TO:0000688
 name: kernel row length
 synonym: "KERROWLG" RELATED []
-is_a: TO:0000371 ! yield trait
+is_a: TO:0000936 ! infructescence yield trait
 
 [Term]
 id: TO:0000689
@@ -7367,7 +7369,7 @@ creation_date: 2012-11-20T15:44:05Z
 
 [Term]
 id: TO:0000894
-name: fruit number
+name: fruit number trait
 def: "A fruit yield trait (TO:0000871) which is associated with the number of fruits (PO:0009001) per plant." [PO:0009001, TO:moorel]
 comment: Refer to has number of (PATO:0001555): The number of parts of a particular type that the bearer entity has. This is a relational quality, and thus holds between two entities: the bearer of the quality, and the type of parts.
 synonym: "accessory fruit number" NARROW []
@@ -7785,6 +7787,35 @@ xref: OBO_S2F_TO:280
 is_a: TO:0000919 ! kernel weight
 created_by: cooperl
 creation_date: 2014-06-27T08:27:30Z
+
+[Term]
+id: TO:0000936
+name: infructescence yield trait
+def: "An above ground biomass yield trait (TO:0000327) associated with the characteristics of an infructescence (PO:0006342), or the number born on a plant." [TO:cooperl]
+is_a: TO:0000327 ! above ground biomass yield trait
+created_by: cooperl
+creation_date: 2014-09-02T16:37:45Z
+
+[Term]
+id: TO:0000937
+name: kernel number per ear
+def: "An infructescence yield trait (TO:0000936) that is associated with the number of kernels (fruit; PO:0009001) per ear infructescence (PO:0025597)." [PMID:22027895, TO:cooperl]
+comment: Often calculated as the number of kernel rows in the middle of the ear times number of kernels per row. Also calculated based on total weight of kernels for an ear and average weight/kernel (Hung et al 2012).
+xref: MaizeGDB_QTL:99383
+xref: OBO_SF_TO:284
+is_a: TO:0000936 ! infructescence yield trait
+created_by: cooperl
+creation_date: 2014-09-02T17:16:07Z
+
+[Term]
+id: TO:0000938
+name: kernel number per row
+def: "An infructescence yield trait (TO:0000936) that is associated with the number of kernels (fruit; PO:0009001) per row on an ear infructescence (PO:0025597)." [TO:cooperl]
+xref: MaizeGDB_QTL:78114
+xref: OBO_SF_TO:285
+is_a: TO:0000936 ! infructescence yield trait
+created_by: cooperl
+creation_date: 2014-09-02T18:07:39Z
 
 [Term]
 id: TO:0001000
@@ -9163,7 +9194,6 @@ def: "A fruit anatomy and morphology trait (TO:0002629) that is associated with 
 comment: Fruit weight is the weight of one or more fruits at a specified level of maturity and, for grain, moisture level. In maize it is often reported as 100 or 1000 kernel weight, in grams and at 15% moisture content.
 xref: OBO_SF2_TO:242
 is_a: TO:0000871 ! fruit yield trait
-is_a: TO:0002629 ! fruit anatomy and morphology trait
 
 [Term]
 id: TO:0002747
