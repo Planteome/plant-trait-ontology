@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 02:09:2014 18:35
+date: 08:09:2014 18:41
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -368,6 +368,7 @@ name: inflorescence branching
 alt_id: TO:0000263
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the extent of branching usually sets the tone for shape and compactness of the inflorescence (PO:0009049)." [GR:pj, PO:0009049, TO:moorel]
 synonym: "panicle branching" RELATED []
+xref: OBO_SF2_TO:96
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 is_a: TO:0000621 ! inflorescence development trait
 
@@ -2144,7 +2145,7 @@ id: TO:0000268
 name: inflorescence shape
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the shape of an inflorescence (PO:0009049)." [GR:pj, PO:0009049, POC:cooperl]
 comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
-xref: OBO_SF_TO:3531193
+xref: OBO_SF2_TO:96
 xref: PATO:0000052
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
@@ -4615,7 +4616,6 @@ name: inflorescence color
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the color of an inflorescence (PO:0009049)." [GR:pj, PO:0009049, POC:cooperl]
 comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 xref: OBO_SF2_PO:96
-xref: OBO_SF_TO:3531193
 xref: PATO:0000014
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
@@ -4623,10 +4623,11 @@ is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 id: TO:0000582
 name: inflorescence number
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the average number of inflorescence (PO:0009049) per plant in a study." [GR:pj, PO:0009049, TO:moorel]
-comment: Refer to number of (PATO:0001555): The number of parts of a particular type that the bearer entity has. This is a relational quality, and thus holds between two entities: the bearer of the quality, and the type of parts.
+comment: Refer to number of (PATO:0001555): The number of parts of a particular type that the bearer entity has. This is a relational quality, and thus holds between two entities: the bearer of the quality, and the type of parts.  The infloresence number is also an above ground biomas yield trait (TO:0000327).
 synonym: "INFLONB" RELATED []
+xref: OBO_SF2_TO:96
 xref: PATO:0001555
-is_a: TO:0000371 ! yield trait
+is_a: TO:0000327 ! above ground biomass yield trait
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 is_a: TO:0000621 ! inflorescence development trait
 
@@ -5409,15 +5410,20 @@ is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0000687
-name: kernel row number
+name: kernel row number per ear
+def: "A infructescence yield trait (TO:0000936) associated with the number of rows of kernels per ear infructescence (PO:0025597)." [TO:cooperl]
+comment: In maize, kernel row number is counted on the central, widest part of the uppermost ear infructescence. In comparing to teosinte "rank',  kernal row number is divided by two.
 synonym: "kernel row" RELATED []
 synonym: "KERROWNB" RELATED []
 xref: MaizeGDB_QTL:99383
+xref: OBO_SF2_TO:286
 is_a: TO:0000936 ! infructescence yield trait
 
 [Term]
 id: TO:0000688
 name: kernel row length
+def: "A infructescence yield trait (TO:0000936) associated with the length of a kernel row from base to where kernels end on the ear infructescence (PO:0025597)." [TO:cooperl]
+synonym: "kernel set length " RELATED []
 synonym: "KERROWLG" RELATED []
 is_a: TO:0000936 ! infructescence yield trait
 
@@ -6285,6 +6291,7 @@ id: TO:0000788
 name: tassel inflorescence anatomy and morphology trait
 def: "An inflorescence anatomy and morphology trait (TO:0000373) that is associated with a tassel inflorescence (PO:0020126)." [PO:0020126, POC:cooperl]
 subset: Zea_mays
+xref: OBO_SF2_TO:88
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 created_by: moorel
 creation_date: 2012-05-18T13:45:59Z
@@ -6362,7 +6369,7 @@ name: tassel inflorescence color
 def: "A tassel inflorescence anatomy and morphology trait (TO:0000788) which is associated with the color of a tassel inflorescence (PO:0020126)." [PO:0020126, POC:cooperl]
 comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 subset: Zea_mays
-xref: OBO_SF_TO:3529222
+xref: OBO_SF2_TO:88
 xref: PATO:0000014
 is_a: TO:0000788 ! tassel inflorescence anatomy and morphology trait
 created_by: moorel
@@ -6374,7 +6381,7 @@ name: tassel inflorescence circumference
 def: "A tassel inflorescence anatomy and morphology trait (TO:0000788) which is associated with the circumference of a tassel inflorescence (PO:0020126)." [PO:0020126, POC:cooperl]
 comment: Refer to circumference PATO:0001684: An 1-D extent quality which is equal to the length of the closed curve of a circle.
 subset: Zea_mays
-xref: OBO_SF_TO:3529222
+xref: OBO_SF2_TO:88
 xref: PATO:0001684
 is_a: TO:0000788 ! tassel inflorescence anatomy and morphology trait
 created_by: moorel
@@ -6386,7 +6393,7 @@ name: tassel inflorescence height
 def: "A tassel inflorescence anatomy and morphology trait (TO:0000788) which is associated with the height of a tassel inflorescence (PO:0020126)." [PO:0020126, POC:cooperl]
 comment: Refer to height PATO:0000119: A 1-D extent quality inhering in a bearer by virtue of the bearer's vertical dimension of extension.
 subset: Zea_mays
-xref: OBO_SF_TO:3529222
+xref: OBO_SF2_TO:88
 xref: PATO:0000119
 is_a: TO:0000788 ! tassel inflorescence anatomy and morphology trait
 created_by: moorel
@@ -6398,7 +6405,7 @@ name: tassel inflorescence length
 def: "A tassel inflorescence anatomy and morphology trait (TO:0000788) which is associated with the length of a tassel inflorescence (PO:0020126)." [PO:0020126, POC:cooperl]
 comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
 subset: Zea_mays
-xref: OBO_SF_TO:3529222
+xref: OBO_SF2_TO:88
 xref: PATO:0000122
 is_a: TO:0000788 ! tassel inflorescence anatomy and morphology trait
 created_by: moorel
@@ -6410,7 +6417,7 @@ name: tassel inflorescence diameter
 def: "A tassel inflorescence anatomy and morphology trait (TO:0000788) which is associated with the diameter of a tassel inflorescence (PO:0020126)." [PO:0020126, POC:cooperl]
 comment: Refer to diameter PATO:0001334: A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
 subset: Zea_mays
-xref: OBO_SF_TO:3529222
+xref: OBO_SF2_TO:88
 xref: PATO:0001334
 is_a: TO:0000788 ! tassel inflorescence anatomy and morphology trait
 created_by: moorel
@@ -6423,7 +6430,6 @@ def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associ
 comment: Refer to absolute density PATO:0001070.
 synonym: "panicle density (PO:0009049)" NARROW []
 xref: OBO_SF2_PO:96
-xref: OBO_SF_TO:3531193
 xref: PATO:0001070
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 created_by: moorel
@@ -6435,7 +6441,6 @@ name: inflorescence depth
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the depth of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
 comment: Refer to depth PATO:0001595: A 1-D extent quality inhering in a bearer by virtue of the bearer's downward or backward or inward dimenision.
 xref: OBO_SF2_PO:96
-xref: OBO_SF_TO:3531193
 xref: PATO:0001595
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 created_by: moorel
@@ -6459,7 +6464,6 @@ name: inflorescence weight
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the weight of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
 comment: Refer to weight PATO:0000128:A physical quality inhering in a bearer that has mass near a gravitational body.
 xref: OBO_SF2_PO:96
-xref: OBO_SF_TO:3531193
 xref: PATO:0000128
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 created_by: moorel
@@ -6474,7 +6478,6 @@ comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the
 synonym: "INFLWD" RELATED []
 synonym: "panicle width" RELATED []
 xref: OBO_SF2_PO:96
-xref: OBO_SF_TO:3531193
 xref: PATO:0000921
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 relationship: part_of TO:0006031 ! inflorescence size
@@ -6487,7 +6490,6 @@ name: inflorescence texture
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the texture of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
 comment: Refer to texture PATO:0000150: A morphologic quality inhering in a bearer by virtue of the bearer's relative size, organization and distribution of its surface elements or the representation or invention of the appearance of its surface; visual and tactile surface characteristics.
 xref: OBO_SF2_PO:96
-xref: OBO_SF_TO:3531193
 xref: PATO:0000150
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 created_by: moorel
@@ -6499,7 +6501,6 @@ name: inflorescence presence
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the presence of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
 comment: Refer to presence value PATO:0000458.
 xref: OBO_SF2_PO:96
-xref: OBO_SF_TO:3531193
 xref: PATO:0000458
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 created_by: moorel
@@ -6590,8 +6591,8 @@ creation_date: 2012-06-26T12:40:53Z
 id: TO:0000814
 name: tassel inflorescence type
 def: "A tassel inflorescence anatomy and morphology trait (TO:0000788) which is associated with the type of tassel inflorescence (PO:0020126)." [PO:0020126, POC:cooperl]
-comment: Refer to shape PATO:0000052:A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
-xref: OBO_SF_TO:3529222
+comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+xref: OBO_SF2_TO:88
 xref: PATO:0000052
 is_a: TO:0000788 ! tassel inflorescence anatomy and morphology trait
 created_by: moorel
@@ -7792,6 +7793,7 @@ creation_date: 2014-06-27T08:27:30Z
 id: TO:0000936
 name: infructescence yield trait
 def: "An above ground biomass yield trait (TO:0000327) associated with the characteristics of an infructescence (PO:0006342), or the number born on a plant." [TO:cooperl]
+xref: OBO_SF2_TO:286
 is_a: TO:0000327 ! above ground biomass yield trait
 created_by: cooperl
 creation_date: 2014-09-02T16:37:45Z
@@ -7811,11 +7813,38 @@ creation_date: 2014-09-02T17:16:07Z
 id: TO:0000938
 name: kernel number per row
 def: "An infructescence yield trait (TO:0000936) that is associated with the number of kernels (fruit; PO:0009001) per row on an ear infructescence (PO:0025597)." [TO:cooperl]
+synonym: " 78114  " RELATED []
 xref: MaizeGDB_QTL:78114
 xref: OBO_SF_TO:285
 is_a: TO:0000936 ! infructescence yield trait
 created_by: cooperl
 creation_date: 2014-09-02T18:07:39Z
+
+[Term]
+id: TO:0000939
+name: tassel spike length
+xref: OBO_SF2_TO:272
+is_a: TO:0000798 ! tassel inflorescence length
+created_by: cooperl
+creation_date: 2014-09-08T11:52:52Z
+
+[Term]
+id: TO:0000940
+name: tassel branch zone length
+xref: OBO_SF2_TO:272
+is_a: TO:0000798 ! tassel inflorescence length
+created_by: cooperl
+creation_date: 2014-09-08T11:53:39Z
+
+[Term]
+id: TO:0000941
+name: rank number per ear
+def: "An infructescence yield trait (TO:0000936) that is the number of ranks of cupules per ear infructescence (PO:0025597)." [TO:cooperl]
+comment: Used to look at QTL traits in crossses between Teosinte and maize. In order to compare the two types of ears, The kernel row number (TO:0000687; maize) is divided by two.
+xref: OBO_SF2_TO:XX
+is_a: TO:0000936 ! infructescence yield trait
+created_by: cooperl
+creation_date: 2014-09-08T14:05:22Z
 
 [Term]
 id: TO:0001000
@@ -7835,6 +7864,7 @@ is_a: TO:0000869 ! glume anatomy and morphology trait
 id: TO:0001002
 name: inflorescence exsertion
 def: "An inflorescence anatomy and morphology trait (TO:0000373) which is associated with the exsertion of an inflorescence (PO:0009049)." [PO:0009049, TO:moorel]
+xref: OBO_SF2_TO:96
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 
 [Term]
