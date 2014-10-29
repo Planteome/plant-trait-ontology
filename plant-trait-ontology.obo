@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 28:10:2014 14:45
+date: 28:10:2014 20:00
 saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -212,7 +212,7 @@ id: TO:0000027
 name: culm number
 def: "Actual count of the total number of tillers after full heading, Specify if per plant, hill or area." [IRRI:SES]
 synonym: "CmN" RELATED []
-is_a: TO:0000654 ! shoot system growth and development trait
+is_a: TO:0000077 ! shoot system anatomy and morphology trait
 
 [Term]
 id: TO:0000028
@@ -1136,7 +1136,7 @@ def: "Relative yield was calculated as the ratio of biomass in stress to that of
 synonym: "RB" RELATED []
 synonym: "relative biomass yield" RELATED []
 synonym: "RELBIOM" RELATED []
-is_a: TO:0000327 ! above ground biomass yield trait
+is_a: TO:0000327 ! shoot system yield trait
 
 [Term]
 id: TO:0000144
@@ -1299,9 +1299,6 @@ alt_id: TO:0000588
 def: "A fruit quality trait (TO:0002728) that is associated with the commercial and /or economical value of the grain (i.e. fruit (PO:0009001)), or its overall improvement." [GR:pj, TO:cooperl]
 xref: OBO_SF_TO:208
 is_a: TO:0002728 ! fruit quality trait
-relationship: has_part TO:0000181 ! seed weight
-relationship: has_part TO:0000484 ! seed shape
-relationship: has_part TO:0000486 ! seed color
 
 [Term]
 id: TO:0000163
@@ -1455,7 +1452,7 @@ id: TO:0000181
 name: seed weight
 def: "A seed anatomy and morphology trait (TO:0000184) which is associated with the weight of a seed (PO:0009010)." [GR:pj, ICIS:1058, PO:0009010, TO:moorel]
 comment: Seed weight is associated with the average weight of seeds (PO:0009010) obtained from a plant, representing the overall yields or produce from the field. Seed weight has a component of seed yield (TO:0000905) and seed quality (TO:0000162). Refer to weight (PATO:0000128): A physical quality inhering in a bearer that has mass near a gravitational body.
-xref: OBO_SF_TO:3602842
+xref: OBO_SF2_TO:195
 is_a: TO:0000184 ! seed anatomy and morphology trait
 
 [Term]
@@ -2159,7 +2156,7 @@ synonym: "HGRWT" RELATED []
 synonym: "HSDWT" RELATED []
 synonym: "hundred grain weight" RELATED []
 synonym: "hundred seed weight" RELATED []
-is_a: TO:0002746 ! fruit weight
+is_a: TO:0000181 ! seed weight
 
 [Term]
 id: TO:0000270
@@ -2637,10 +2634,11 @@ created_by: jaiswalp
 
 [Term]
 id: TO:0000327
-name: above ground biomass yield trait
-def: "A yield trait (TO: 0000371) that is associated with the amount of a plant anatomical entity (PO:0025131) which is produced above ground." [ICIS:1301, ISBN:0198506732]
+name: shoot system yield trait
+def: "A yield trait (TO: 0000371) that is associated with the amount of a plant structure (PO:0009011) or portion of plant substance (PO:0025161) produced by the shoot system (PO:0009006) which is harvested." [ICIS:1301, ISBN:0198506732, TO:cooperl]
 synonym: "BIOMYLD" RELATED []
 synonym: "BY" RELATED []
+xref: OBO_SF2-TO:290
 is_a: TO:0000371 ! yield trait
 
 [Term]
@@ -2851,7 +2849,7 @@ synonym: "dry mass" RELATED []
 synonym: "PTDWT" RELATED []
 synonym: "RTWT" RELATED []
 synonym: "total dry mass" RELATED []
-is_a: TO:0000327 ! above ground biomass yield trait
+is_a: TO:0000327 ! shoot system yield trait
 
 [Term]
 id: TO:0000353
@@ -3098,7 +3096,7 @@ synonym: "TGRWT" RELATED []
 synonym: "thousand grain weight" RELATED []
 synonym: "thousand seed weight" RELATED []
 synonym: "TSDWT" RELATED []
-is_a: TO:0002746 ! fruit weight
+is_a: TO:0000181 ! seed weight
 
 [Term]
 id: TO:0000383
@@ -3148,7 +3146,7 @@ def: "Yield of forage matter upon harvest." [GR:pj]
 synonym: "FRGYLD" RELATED []
 synonym: "FY" RELATED []
 synonym: "straw yield" RELATED []
-is_a: TO:0000327 ! above ground biomass yield trait
+is_a: TO:0000327 ! shoot system yield trait
 
 [Term]
 id: TO:0000389
@@ -3172,7 +3170,7 @@ comment: Seed size is determined by the ratio of the seed length to seed width a
 xref: OBO_SF_TO:3602441
 xref: PATO:0000117
 is_a: TO:0000184 ! seed anatomy and morphology trait
-is_a: TO:0000931 ! seed quality trait
+relationship: has_part TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000392
@@ -3199,6 +3197,7 @@ def: "A fruit yield trait (TO:0000871) that is associated with grain." [ICIS:100
 comment: In rice, the grain yield is often measured in kilograms per hectare at 14 percent moisture, if the experiment was done on a field trial.
 synonym: "GRYLD" RELATED []
 synonym: "Yld" RELATED []
+xref: OBO_SF2_TO:242
 is_a: TO:0000871 ! fruit yield trait
 
 [Term]
@@ -3558,7 +3557,7 @@ id: TO:0000442
 name: plant fresh weight
 def: "Fresh weight of the plant." [GR:pj37]
 synonym: "PLFWT" RELATED []
-is_a: TO:0000327 ! above ground biomass yield trait
+is_a: TO:0000327 ! shoot system yield trait
 
 [Term]
 id: TO:0000443
@@ -3583,12 +3582,10 @@ is_a: TO:0000347 ! weed damage
 id: TO:0000445
 name: seed number
 alt_id: TO:0000139
-def: "A seed yield (TO:0000905) trait which is associated with the number of seeds (PO:0009010) in the fruit (PO:0009001) or those sampled from a given inflorescence (PO:0009049) in a grass plant." [GR:pj, PO:0009001, PO:0009010, PO:0009049, TO:moorel]
-comment: It is directly related to the filled grain number (TO:0000447) and grain number (TO:0002759).
+def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the number of seeds (PO:0009010) in a fruit (PO:0009001)." [GR:pj, PO:0009001, PO:0009010, PO:0009049]
 synonym: "SDNB" RELATED []
 synonym: "seeds per panicle" RELATED []
-is_a: TO:0000905 ! seed yield
-is_a: TO:0002728 ! fruit quality trait
+is_a: TO:0002629 ! fruit anatomy and morphology trait
 
 [Term]
 id: TO:0000446
@@ -3692,7 +3689,7 @@ name: total biomass yield
 synonym: "dry matter yield" RELATED []
 synonym: "TBIOMYLD" RELATED []
 synonym: "total dry weight" RELATED []
-is_a: TO:0000327 ! above ground biomass yield trait
+is_a: TO:0000327 ! shoot system yield trait
 
 [Term]
 id: TO:0000458
@@ -4627,7 +4624,6 @@ comment: Refer to number of (PATO:0001555): The number of parts of a particular 
 synonym: "INFLONB" RELATED []
 xref: OBO_SF2_TO:96
 xref: PATO:0001555
-is_a: TO:0000327 ! above ground biomass yield trait
 is_a: TO:0000373 ! inflorescence anatomy and morphology trait
 is_a: TO:0000621 ! inflorescence development trait
 
@@ -5412,7 +5408,7 @@ is_a: TO:0002728 ! fruit quality trait
 id: TO:0000687
 name: kernel row number per ear
 def: "An infructescence anatomy and morphology trait (TO:0000920) associated with the number of rows of kernels per ear infructescence (PO:0025597)." [TO:cooperl]
-comment: In maize, kernel row number is counted on the central, widest part of the uppermost ear infructescence. In comparing to teosinte "rank',  kernal row number is divided by two.
+comment: In maize, kernel row number is counted on the central, widest part of the uppermost ear infructescence. In comparing to teosinte "rank',  kernel row number is divided by two.
 synonym: "kernel row" RELATED []
 synonym: "KERROWNB" RELATED []
 xref: MaizeGDB_QTL:99383
@@ -7133,17 +7129,20 @@ creation_date: 2012-08-08T11:50:03Z
 [Term]
 id: TO:0000870
 name: leaf yield trait
-def: "An above ground biomass yield trait (TO:0000327) which is comprised of leaves (PO:0025034) or parts of leaves." [TO:cooperl]
-is_a: TO:0000327 ! above ground biomass yield trait
+def: "A shoot system yield trait (TO:0000327) which is comprised of leaves (PO:0025034) or parts of leaves." [TO:cooperl]
+is_a: TO:0000327 ! shoot system yield trait
 created_by: moorel
 creation_date: 2012-10-04T15:42:58Z
 
 [Term]
 id: TO:0000871
 name: fruit yield trait
-def: "An above ground biomass yield trait (TO:0000327) which is associated with a fruit (PO:0009001)." [TO:cooperl]
-xref: OBO_SF2_TO:242
-is_a: TO:0000327 ! above ground biomass yield trait
+def: "A shoot system yield trait (TO:0000327) which is associated with the yield of fruits (PO:0009001)." [TO:cooperl]
+xref: OBO_SF2_TO:291
+is_a: TO:0000327 ! shoot system yield trait
+relationship: has_part TO:0000894 ! fruit number trait
+relationship: has_part TO:0002625 ! fruit size
+relationship: has_part TO:0002746 ! fruit weight
 created_by: moorel
 creation_date: 2012-10-04T15:45:03Z
 
@@ -7373,12 +7372,12 @@ creation_date: 2012-11-20T15:44:05Z
 [Term]
 id: TO:0000894
 name: fruit number trait
-def: "A fruit yield trait (TO:0000871) which is associated with the number of fruits (PO:0009001) per plant." [PO:0009001, TO:moorel]
+def: "An infructescence anatomy and morphology trait (TO:0000920) which is associated with the number of fruits (PO:0009001)." [PO:0009001, TO:moorel]
 comment: Refer to has number of (PATO:0001555): The number of parts of a particular type that the bearer entity has. This is a relational quality, and thus holds between two entities: the bearer of the quality, and the type of parts.
 synonym: "accessory fruit number" NARROW []
-xref: OBO_SF_TO:3602015
+xref: OBO_SF2_TO:177
 xref: PATO:0001555
-is_a: TO:0000871 ! fruit yield trait
+is_a: TO:0000920 ! infructescence anatomy and morphology trait
 created_by: moorel
 creation_date: 2013-01-24T14:03:35Z
 
@@ -7486,11 +7485,13 @@ creation_date: 2013-01-24T14:48:21Z
 
 [Term]
 id: TO:0000905
-name: seed yield
-def: "A yield trait (TO:0000371) which is associated with a seed (PO:0009010)." [PO:0009010, TO:moorel]
-xref: OBO_SF_TO:3602437
-is_a: TO:0000371 ! yield trait
+name: seed yield trait
+def: "A shoot system yield trait  (TO:0000327) which is associated with the yield of seeds (PO:0009010)." [PO:0009010, TO:cooperl, TO:moorel]
+xref: OBO_SF2_TO:181
+is_a: TO:0000327 ! shoot system yield trait
 relationship: has_part TO:0000181 ! seed weight
+relationship: has_part TO:0000391 ! seed size
+relationship: has_part TO:0000445 ! seed number
 created_by: moorel
 creation_date: 2013-01-28T13:14:23Z
 
@@ -7622,7 +7623,7 @@ creation_date: 2013-06-19T10:18:46Z
 [Term]
 id: TO:0000919
 name: kernel weight
-def: "A fruit weight (TO:0002746) which is associated with the weight of one or more kernels." [POC:cooperl]
+def: "A fruit weight (TO:0002746) which is associated with the weight of one or more kernels." [TO:cooperl]
 synonym: "20 kernel weight" NARROW []
 synonym: "kwt" RELATED [MaizeGDB:78154]
 xref: OBO_SF2_TO:242
@@ -7794,9 +7795,9 @@ creation_date: 2014-06-27T08:27:30Z
 [Term]
 id: TO:0000936
 name: infructescence yield trait
-def: "An above ground biomass yield trait (TO:0000327) associated with the characteristics of an infructescence (PO:0006342), or the number born on a plant." [TO:cooperl]
+def: "A shoot system yield trait (TO:0000327) associated with the characteristics of an infructescence (PO:0006342), or the number born on a plant." [TO:cooperl]
 xref: OBO_SF2_TO:286
-is_a: TO:0000327 ! above ground biomass yield trait
+is_a: TO:0000327 ! shoot system yield trait
 created_by: cooperl
 creation_date: 2014-09-02T16:37:45Z
 
@@ -7981,7 +7982,7 @@ id: TO:0001019
 name: root to total biomass ratio
 def: "A ratio of root dry weight to total plant dry weight." [GR:pj]
 synonym: "root dry weight to total plant dry weight ratio" RELATED []
-is_a: TO:0000327 ! above ground biomass yield trait
+is_a: TO:0000327 ! shoot system yield trait
 
 [Term]
 id: TO:0001020
@@ -8285,7 +8286,7 @@ is_a: TO:0002623 ! pericarp texture
 [Term]
 id: TO:0002625
 name: fruit size
-def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the variation in the size of a fruit (PO:0009001)." [GR:pj, PO:0009001, TO:moorel]
+def: "A fruit anatomy and morphology trait (TO:0002629) which is associated with the size of a fruit (PO:0009001)." [GR:pj, PO:0009001, TO:moorel]
 comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
 synonym: "FRSZ" RELATED []
 synonym: "kernel size" NARROW []
@@ -9223,10 +9224,10 @@ is_a: TO:0000734 ! grain length
 [Term]
 id: TO:0002746
 name: fruit weight
-def: "A fruit anatomy and morphology trait (TO:0002629) that is associated with the weight of one or more fruits (PO:0009001)." [GR:pj, POC:Cooperl]
+def: "A fruit anatomy and morphology trait (TO:0002629) that is associated with the weight of one or more fruits (PO:0009001)." [GR:pj, TO:Cooperl]
 comment: Fruit weight is the weight of one or more fruits at a specified level of maturity and, for grain, moisture level. In maize it is often reported as 100 or 1000 kernel weight, in grams and at 15% moisture content.
 xref: OBO_SF2_TO:242
-is_a: TO:0000871 ! fruit yield trait
+is_a: TO:0002629 ! fruit anatomy and morphology trait
 
 [Term]
 id: TO:0002747
