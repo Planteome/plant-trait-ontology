@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 22:07:2015 10:23
-saved-by: planteome
+date: 22:07:2015 16:30
+saved-by: cooperl
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
@@ -5561,14 +5561,17 @@ is_a: TO:0000597 ! quality trait
 [Term]
 id: TO:0000707
 name: pericarp color
-def: "Describes the color of fruit wall (pericarp)." [GR:pj]
+def: "A pericarp anatomy and morphology trait (TO:0000945) that is associated with the color of the pericarp (PO:0009084)." [GR:pj, TO:cooperl]
 comment: Pericarp is the wall of a fruit, developed from the ovary or carpel wall. Also scored for grain color or color of the dehulled grain in grasses.
 synonym: "bran color" RELATED []
 synonym: "dehulled grain color" RELATED []
 synonym: "DHULGRCL" RELATED []
 synonym: "grain color" RELATED []
 synonym: "PERICARPCL" RELATED []
-is_a: TO:0002617 ! fruit color
+xref: PATO:0000014
+is_a: TO:0000945 ! pericarp anatomy and morphology trait
+is_a: TO:0002728 ! fruit quality trait
+relationship: part_of TO:0002617 ! fruit color
 
 [Term]
 id: TO:0000708
@@ -7880,6 +7883,14 @@ created_by: cooperl
 creation_date: 2015-07-21T16:08:50Z
 
 [Term]
+id: TO:0000945
+name: pericarp anatomy and morphology trait
+def: "A portion of plant tissue anatomy and morphology trait (TO:0000843) which is associated with the qualities of the pericarp (PO:0009084)." [TO:cooperl]
+is_a: TO:0000843 ! portion of plant tissue anatomy and morphology trait
+created_by: cooperl
+creation_date: 2015-07-22T15:54:55Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "A glume anatomy and morphology trait (TO:0000869) which is associated with the glume (PO:0009039) cover over the caryopsis. Often measured as percentage." [GR:pj, PO:0009039, TO:moorel]
@@ -8305,6 +8316,9 @@ is_a: TO:0002728 ! fruit quality trait
 [Term]
 id: TO:0002623
 name: pericarp texture
+def: "A pericarp anatomy and morphology trait (TO:0000945) that is associated with the texture of the pericarp (PO:0009084)." [TO:cooperl]
+xref: PATO:0000150
+is_a: TO:0000945 ! pericarp anatomy and morphology trait
 is_a: TO:0002728 ! fruit quality trait
 
 [Term]
