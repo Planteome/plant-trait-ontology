@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 22:07:2015 16:30
-saved-by: cooperl
+date: 22:07:2015 17:47
+saved-by: austinmeier
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
@@ -7891,6 +7891,30 @@ created_by: cooperl
 creation_date: 2015-07-22T15:54:55Z
 
 [Term]
+id: TO:0000946
+name: endocarp anatomy and morphology trait
+def: "A portion of plant tissue anatomy and morphology trait (TO:0000843) which is associated with the qualities of the endocarp (PO:0009086)." [TO:austin_meier]
+is_a: TO:0000843 ! portion of plant tissue anatomy and morphology trait
+created_by: austinmeier
+creation_date: 2015-07-22T17:16:05Z
+
+[Term]
+id: TO:0000947
+name: epicarp anatomy and morphology trait
+def: "A portion of plant tissue anatomy and morphology trait (TO:0000843) which is associated with the qualities of the epicarp (PO:xxx)" [TO:austin_meier]
+is_a: TO:0000843 ! portion of plant tissue anatomy and morphology trait
+created_by: austinmeier
+creation_date: 2015-07-22T17:25:26Z
+
+[Term]
+id: TO:0000948
+name: mesocarp anatomy and morphology trait
+def: "A portion of plant tissue anatomy and morphology trait (TO:0000843) which is associated with the qualities of the mesocarp (PO:0009087)." [TO:austin_meier]
+is_a: TO:0000843 ! portion of plant tissue anatomy and morphology trait
+created_by: austinmeier
+creation_date: 2015-07-22T17:28:39Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "A glume anatomy and morphology trait (TO:0000869) which is associated with the glume (PO:0009039) cover over the caryopsis. Often measured as percentage." [GR:pj, PO:0009039, TO:moorel]
@@ -8286,17 +8310,26 @@ is_a: TO:0002629 ! fruit anatomy and morphology trait
 [Term]
 id: TO:0002618
 name: endocarp color
-is_a: TO:0000707 ! pericarp color
+def: "An endocarp anatomy and morphology trait (TO:0000946) that is associated with the color of the endocarp (PO:0009084)." [TO:austin_meier]
+xref: PATO:0000014
+is_a: TO:0000946 ! endocarp anatomy and morphology trait
+relationship: has_part TO:0002617 ! fruit color
 
 [Term]
 id: TO:0002619
 name: mesocarp color
-is_a: TO:0000707 ! pericarp color
+def: "An mesocarp anatomy and morphology trait (TO:0000948) that is associated with the qualities of the mesocarp (PO:0009087)." [TO:austin_meier]
+xref: PATO:0000014
+is_a: TO:0000948 ! mesocarp anatomy and morphology trait
+relationship: has_part TO:0002617 ! fruit color
 
 [Term]
 id: TO:0002620
 name: epicarp color
-is_a: TO:0000707 ! pericarp color
+def: "An epicarp anatomy and morphology trait (TO:0000947) that is associated with the qualities of the epicarp (PO:xxx)." [TO:austin_meier]
+xref: PATO:0000014
+is_a: TO:0000947 ! epicarp anatomy and morphology trait
+relationship: has_part TO:0002617 ! fruit color
 
 [Term]
 id: TO:0002621
