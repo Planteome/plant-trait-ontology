@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 19:10:2015 15:53
-saved-by: johnseth
+date: 20:10:2015 15:32
+saved-by: meiera
 auto-generated-by: OBO-Edit 2.3.1
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
@@ -3241,8 +3241,8 @@ is_a: TO:0000482 ! chemical stress sensitivity
 
 [Term]
 id: TO:0000402
-name: grain width
-def: "A fruit width (TO:0002627) which is associated with the width of the dehulled grain with pericarp (PO:0009084)." [GR:pj, PO:0009084, TO:moorel]
+name: dehulled grain width
+def: "A grain width (TO:0000975) which is associated with the width of the dehulled grain with pericarp (PO:0009084)." [GR:pj, PO:0009084, TO:moorel]
 comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "dehulled grain curved width" RELATED []
 synonym: "dehulled-grain width" RELATED []
@@ -3250,7 +3250,8 @@ synonym: "DHULGRWD" RELATED []
 synonym: "GRWD" RELATED []
 synonym: "width of grain without hull" RELATED []
 xref: PATO:0000921
-is_a: TO:0002627 ! fruit width
+xref: TO_GIT:123
+is_a: TO:0000975 ! grain width
 
 [Term]
 id: TO:0000403
@@ -8199,6 +8200,14 @@ created_by: johnseth
 creation_date: 2015-10-19T14:47:51Z
 
 [Term]
+id: TO:0000975
+name: grain width
+def: "A fruit width (TO:0002627) which is associated with the variation in the width of a grain (PO:0009001)." [TO:austin_meier]
+is_a: TO:0002627 ! fruit width
+created_by: meiera
+creation_date: 2015-10-20T15:15:19Z
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "A glume anatomy and morphology trait (TO:0000869) which is associated with the glume (PO:0009039) cover over the caryopsis. Often measured as percentage." [GR:pj, PO:0009039, TO:moorel]
@@ -9719,13 +9728,13 @@ is_a: TO:0000734 ! grain length
 [Term]
 id: TO:0002762
 name: width of grain with hull
-def: "A grain width (TO:0000402) with hull." [GR:pj, TO:moorel]
+def: "A grain width (TO:0000975) with caryopsis hull (PO:0006000)." [GR:pj, TO:moorel]
 comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "HULGRWD" RELATED []
 synonym: "hulled grain curved width" RELATED []
 synonym: "hulled grain width" RELATED []
 xref: PATO:0000921
-is_a: TO:0000402 ! grain width
+is_a: TO:0000975 ! grain width
 
 [Term]
 id: TO:0002763
