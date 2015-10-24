@@ -10,7 +10,7 @@
      xmlns:obo="http://purl.obolibrary.org/obo/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/to.owl">
         <oboInOwl:hasOBOFormatVersion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</oboInOwl:hasOBOFormatVersion>
-        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22:10:2015 11:48</oboInOwl:date>
+        <oboInOwl:date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23:10:2015 11:15</oboInOwl:date>
         <oboInOwl:auto-generated-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBO-Edit 2.3.1</oboInOwl:auto-generated-by>
         <oboInOwl:saved-by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">johnseth</oboInOwl:saved-by>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:default-namespace>
@@ -8989,6 +8989,7 @@ Refer to color PATO:0000014: A composite chromatic quality composed of hue, satu
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refers to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points. In maize, this is measured in centimeters.</rdfs:comment>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000431</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:132</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ear infructescence length</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">earln</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/to#Zea_mays"/>
@@ -13763,14 +13764,14 @@ Refer to length (PATO:0000122): A 1-D extent quality which is equal to the dista
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000687">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kernel row number per ear</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000920"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000936"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000976"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An infructescence anatomy and morphology trait (TO:0000920) associated with the number of rows of kernels per ear infructescence (PO:0025597).</obo:IAO_0000115>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In maize, kernel row number is counted on the central, widest part of the uppermost ear infructescence. In comparing to teosinte &quot;rank&apos;,  kernel row number is divided by two.</rdfs:comment>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KERROWNB</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MaizeGDB_QTL:99383</oboInOwl:hasDbXref>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000687</oboInOwl:id>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:287</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:286</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kernel row number per ear</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
     </owl:Class>
@@ -17807,6 +17808,12 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000869">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glume anatomy and morphology trait</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000816"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0000657"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-08-08T11:50:03Z</oboInOwl:creation_date>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An inflorescence bract anatomy and morphology trait (TO:0000816) which is associated with a glume (PO:0009039).</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000869</oboInOwl:id>
@@ -17858,13 +17865,13 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0000894"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0002625"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0002625"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0000894"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012-10-04T15:45:03Z</oboInOwl:creation_date>
@@ -18659,6 +18666,12 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0000181"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0000391"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -18666,12 +18679,6 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0000445"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0000181"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-01-28T13:14:23Z</oboInOwl:creation_date>
@@ -19023,14 +19030,14 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infructescence anatomy and morphology trait</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000786"/>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013-11-15T13:32:29Z</oboInOwl:creation_date>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reproductive shoot system anatomy and morphology trait (TO:0000786) which is associated with an  infructescence (PO:0006342).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reproductive shoot system anatomy and morphology trait (TO:0000786) which is associated with the qualities of the infructescence (PO:0006342).</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000920</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:244</oboInOwl:hasDbXref>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cooperl</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reproductive shoot system anatomy and morphology trait (TO:0000786) which is associated with an  infructescence (PO:0006342).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A reproductive shoot system anatomy and morphology trait (TO:0000786) which is associated with the qualities of the infructescence (PO:0006342).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POC:cooperl</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000920"/>
@@ -19100,16 +19107,16 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/to#Zea_mays"/>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MaizeGDB:???</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">earwt</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000923"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An infructescence weight trait (TO:0000583) that is associated with the weight (mass) of an ear infructescence (PO:0025597).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000923"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MaizeGDB:???</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">earwt</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000923"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
     </owl:Axiom>
     
 
@@ -19264,17 +19271,17 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
     </owl:Class>
     <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOY:0001341</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hilum abscission</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000930"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-    </owl:Axiom>
-    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A seed growth and development trait (TO:0000653) which is associated with the extent of seed shattering based on the development of an abscission zone (PO:0000146).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:0000146</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:moorel</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000930"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOY:0001341</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hilum abscission</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000930"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
     </owl:Axiom>
     
 
@@ -20240,7 +20247,7 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ear infructescence anatomy and morphology trait</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000920"/>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-10-22T09:35:32Z</oboInOwl:creation_date>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An infructescence anatomy and morphology trait (TO:0000920) which is associated with the qualities of the ear infructescence (PO:0025597)</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An infructescence anatomy and morphology trait (TO:0000920) which is associated with the qualities of the ear infructescence (PO:0025597).</obo:IAO_0000115>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000976</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:132</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:144</oboInOwl:hasDbXref>
@@ -20248,10 +20255,53 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
     </owl:Class>
     <owl:Axiom>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An infructescence anatomy and morphology trait (TO:0000920) which is associated with the qualities of the ear infructescence (PO:0025597)</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An infructescence anatomy and morphology trait (TO:0000920) which is associated with the qualities of the ear infructescence (PO:0025597).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:Ethan_Johnson</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000976"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TO_0000977 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000977">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leaf foliage rating</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002637"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-10-23T10:29:59Z</oboInOwl:creation_date>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf size trait (TO:0002637) which is associated with the size of the total surface of a leaf (PO:0025034).</obo:IAO_0000115>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comment: rating scale of  3, small; 5, intermediate; 7 large</rdfs:comment>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000977</oboInOwl:id>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:139</oboInOwl:hasDbXref>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">johnseth</oboInOwl:created_by>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf size trait (TO:0002637) which is associated with the size of the total surface of a leaf (PO:0025034).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:Ethan_Johnson</oboInOwl:hasDbXref>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000977"/>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TO_0000978 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000978">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glume shape</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000869"/>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-10-23T10:46:05Z</oboInOwl:creation_date>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A glume anatomy and morphology trait (TO:0000869) with is associated with the shape of a glume (PO:0009039).</obo:IAO_0000115>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000978</oboInOwl:id>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:144</oboInOwl:hasDbXref>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">johnseth</oboInOwl:created_by>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A glume anatomy and morphology trait (TO:0000869) with is associated with the shape of a glume (PO:0009039).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:Ethan_Johnson</oboInOwl:hasDbXref>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000978"/>
     </owl:Axiom>
     
 
@@ -27790,18 +27840,18 @@ Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by v
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stover related traits</oboInOwl:hasBroadSynonym>
     </owl:Class>
     <owl:Axiom>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GCP:GCP_324.000003</oboInOwl:hasDbXref>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stover related traits</owl:annotatedTarget>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0020082"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
+    </owl:Axiom>
+    <owl:Axiom>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A trait to measure percent nitrogen concentration in the stover sample used for predicting crude protein (CP) content of stover by multiplication with a factor of 6.25 (CP = N x 6.25). This concentration is one of the criteria to assess the quality of fodder. Value derived from the analysis of stover using Near Infrared Reflectance Spectrophotometry (NIRS).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GCP:GCP_324.0000016</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ICRISAT:Vincent_Vadez</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ILRI:Michael_Blummel</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0020082"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GCP:GCP_324.000003</oboInOwl:hasDbXref>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stover related traits</owl:annotatedTarget>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0020082"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
     </owl:Axiom>
     
 
