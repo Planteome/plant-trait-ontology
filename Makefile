@@ -21,5 +21,10 @@ imports/%_import.owl: imports/%_filtered.owl robot imports/seed.tsv
 imports/%_import.obo: imports/%_import.owl
 	./robot convert -i $< -f OBO -o $@
 
-plant-trait-ontology-reasoned.obo: plant-trait-ontology.obo
-	
+plant-trait-ontology-reasoned.owl: plant-trait-ontology.obo
+	robot reason -i $< -r ELK -o $@
+plant-trait-ontology-reasoned.obo: plant-trait-ontology-reasoned.owl
+	./robot convert -i $< -f OBO -o $@
+
+reasoner-report.txt: plant-trait-ontology.obo
+	owltools --use-catalog $< --run-reasoner -r elk -u > $@.tmp && egrep '(INFERENCE|UNSAT)' $@.tmp > $@
