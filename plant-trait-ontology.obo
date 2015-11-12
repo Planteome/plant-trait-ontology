@@ -17,6 +17,7 @@ import: http://purl.obolibrary.org/obo/to/imports/chebi_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/po_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/pato_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/eo_import.owl
+import: http://purl.obolibrary.org/obo/to/imports/go_import.owl
 
 [Term]
 id: TO:0000001
@@ -1716,7 +1717,7 @@ def: "An embryo morphology trait (TO:0000064) which is the absence of embryo in 
 synonym: "germless" RELATED []
 is_a: TO:0000064 ! plant embryo morphology trait
 is_a: TO:0000620 ! plant embryo development trait
-intersection_of: PATO:0001557
+intersection_of: PATO:0000462 ! absent
 intersection_of: inheres_in PO:0009009 ! plant embryo
 intersection_of: occurs_in PO:0009010 ! seed
 
@@ -1777,7 +1778,7 @@ synonym: "SHMIN" RELATED []
 is_a: TO:0000064 ! plant embryo morphology trait
 is_a: TO:0000620 ! plant embryo development trait
 is_a: TO:0000739 ! shoot axis morphology trait
-intersection_of: PATO:0001557
+intersection_of: PATO:0000462 ! absent
 intersection_of: inheres_in PO:0009006 ! shoot system
 intersection_of: occurs_in PO:0009011 ! plant structure
 
@@ -1814,7 +1815,7 @@ def: "Absence of roots in the seedling or plant." [GR:pj]
 synonym: "RTMIN" RELATED []
 is_a: TO:0000043 ! root morphology trait
 is_a: TO:0000656 ! root development trait
-intersection_of: PATO:0001557
+intersection_of: PATO:0000462 ! absent
 intersection_of: inheres_in PO:0009005 ! root
 intersection_of: occurs_in PO:0009011 ! plant structure
 
@@ -2074,7 +2075,7 @@ synonym: "auricle absence" EXACT []
 synonym: "auricle absent" EXACT []
 is_a: TO:0000655 ! leaf growth and development trait
 is_a: TO:0002717 ! leaf sheath auricle morphology trait
-intersection_of: PATO:0001557
+intersection_of: PATO:0000462 ! absent
 intersection_of: inheres_in PO:0020106 ! leaf sheath auricle
 intersection_of: occurs_in PO:0009025 ! vascular leaf
 
@@ -2110,7 +2111,7 @@ def: "Absence of crown roots in the plant." [GR:pj]
 synonym: "CWRTMIN" RELATED []
 is_a: TO:0000198 ! rootless
 is_a: TO:0002685 ! crown root number
-intersection_of: PATO:0001557
+intersection_of: PATO:0000462 ! absent
 intersection_of: inheres_in PO:0000043 ! crown root
 intersection_of: occurs_in PO:0009011 ! plant structure
 
@@ -2123,7 +2124,7 @@ synonym: "ENDMIN" RELATED []
 xref: TO_GIT:133
 is_a: TO:0000575 ! endosperm morphology trait
 is_a: TO:0000587 ! endosperm quality
-intersection_of: PATO:0001557
+intersection_of: PATO:0000462 ! absent
 intersection_of: inheres_in PO:0009089 ! endosperm
 intersection_of: occurs_in PO:0009010 ! seed
 
@@ -2151,7 +2152,7 @@ id: TO:0000234
 name: radicleless
 def: "The embryo of the germinating seed does not produce roots." [GR:pj]
 is_a: TO:0000198 ! rootless
-intersection_of: PATO:0001557
+intersection_of: PATO:0000462 ! absent
 intersection_of: inheres_in PO:0020031 ! radicle
 intersection_of: occurs_in PO:0009010 ! seed
 
@@ -2163,7 +2164,7 @@ comment: Refer to absent (PATO:0000462): A quality denoting the lack of an entit
 synonym: "LIGMIN" RELATED []
 xref: PATO:0000462
 is_a: TO:0002748 ! ligule morphology trait
-intersection_of: PATO:0001557
+intersection_of: PATO:0000462 ! absent
 intersection_of: inheres_in PO:0020105 ! ligule
 intersection_of: occurs_in PO:0009025 ! vascular leaf
 
@@ -2358,7 +2359,7 @@ def: "Tolerance to warm temperatures if plant is exposed to above than permissiv
 synonym: "HTol" RELATED []
 is_a: TO:0000432 ! temperature response trait
 intersection_of: PATO:0000515 ! tolerant to
-intersection_of: inheres_in PATO:0000678
+intersection_of: inheres_in EO:0007173 ! warm/hot temperature regimen
 
 [Term]
 id: TO:0000260
@@ -2777,7 +2778,7 @@ synonym: "COLDTL" RELATED []
 synonym: "CTol" RELATED []
 is_a: TO:0000432 ! temperature response trait
 intersection_of: PATO:0000515 ! tolerant to
-intersection_of: inheres_in PATO:0000677
+intersection_of: inheres_in EO:0007174 ! cold temperature regimen
 
 [Term]
 id: TO:0000304
@@ -5367,8 +5368,6 @@ name: diastatic power
 def: "An assay to determine the joint action of alpha-amylase, beta-amylase and any other carbohydrate-degrading enzymes." [GR_REF:8025]
 synonym: "DIASPWR" RELATED []
 is_a: TO:0000599 ! enzyme activity trait
-intersection_of: PATO:0001024 ! power
-intersection_of: inheres_in PATO:0001506 ! diastatic
 
 [Term]
 id: TO:0000607
@@ -6271,7 +6270,7 @@ name: seminal rootless
 def: "Absence of seminal roots in the plant." [GR:pj]
 synonym: "absence of seminal roots" RELATED []
 is_a: TO:0000198 ! rootless
-intersection_of: PATO:0001557
+intersection_of: PATO:0000462 ! absent
 intersection_of: inheres_in PO:0000046 ! seminal root
 intersection_of: occurs_in PO:0009011 ! plant structure
 
@@ -6410,7 +6409,7 @@ name: lignin content
 def: "Measures the lignin content in a plant or plant part." [GR:pj]
 is_a: TO:0000281 ! metabolite content related trait
 intersection_of: PATO:0000070 ! amount
-intersection_of: inheres_in CHEBI:25037
+intersection_of: inheres_in CHEBI:6457 ! lignin
 
 [Term]
 id: TO:0000732
