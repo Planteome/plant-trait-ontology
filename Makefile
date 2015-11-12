@@ -2,6 +2,9 @@ include Makefile-ROBOT
 
 SRC=plant-trait-ontology.obo
 
+all: plant-trait-ontology-reasoned.obo
+test: plant-trait-ontology-reasoned.obo
+
 imports/seed.tsv: $(SRC)
 	./util/dump-referenced-ids.pl $(SRC) > $@.tmp && mv $@.tmp $@
 
@@ -20,6 +23,9 @@ imports/%_import.owl: imports/%_filtered.owl robot imports/seed.tsv
 
 imports/%_import.obo: imports/%_import.owl
 	./robot convert -i $< -f OBO -o $@
+
+plant-trait-ontology.obo.owl: plant-trait-ontology.obo
+	./robot convert -i $<  -o $@
 
 plant-trait-ontology-reasoned.owl: plant-trait-ontology.obo
 	robot reason -i $< -r ELK -o $@
