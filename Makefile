@@ -15,8 +15,11 @@ imports/%_mirrored.owl:
 	wget --no-check-certificate $(OBO)/$*.owl -O $@ && touch $@
 .PRECIOUS: imports/%_mirrored.owl
 
+imports/ro_filtered.owl: imports/ro_mirrored.owl
+	owltools $< --merge-imports-closure --remove-tbox --remove-annotation-assertions -r -l -d --set-ontology-id $(OBO)/$*.owl -o $@
+
 imports/%_filtered.owl: imports/%_mirrored.owl
-	owltools $< --make-subset-by-properties -f BFO:0000050 --extract-mingraph -o $@
+	owltools $< --make-subset-by-properties -f BFO:0000050 --extract-mingraph --set-ontology-id $(OBO)/$*.owl -o $@
 #	./robot filter -T imports/ro_filter.tsv -i $< -o $@
 .PRECIOUS: imports/%_filtered.owl
 
@@ -38,6 +41,9 @@ plant-trait-ontology-reasoned.obo: plant-trait-ontology-reasoned.owl
 
 reasoner-report.txt: plant-trait-ontology.obo
 	owltools --use-catalog $< --run-reasoner -r elk -u > $@.tmp && egrep '(INFERENCE|UNSAT)' $@.tmp > $@
+
+build/to.obo: $(SRC)
+	ontology-release-runner --catalog-xml catalog-v001.xml $< --reasoner elk --skip-format owx --outdir target --run-obo-basic-dag-check
 
 # REPORTING
 # See: https://github.com/Planteome/plant-trait-ontology/issues/302
