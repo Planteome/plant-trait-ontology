@@ -29,15 +29,15 @@ imports/%_import.owl: imports/%_filtered.owl robot imports/seed.tsv
 	   annotate -O $(OBO)/to/$@ -o $@
 .PRECIOUS: imports/%_filtered.owl
 
-imports/%_import.obo: imports/%_import.owl
+imports/%_import.obo: imports/%_import.owl robot
 	./robot convert -i $< -f OBO -o $@
 
-plant-trait-ontology.obo.owl: plant-trait-ontology.obo
+plant-trait-ontology.obo.owl: plant-trait-ontology.obo robot
 	./robot convert -i $<  -o $@
 
-plant-trait-ontology-reasoned.owl: plant-trait-ontology.obo
+plant-trait-ontology-reasoned.owl: plant-trait-ontology.obo robot
 	./robot reason -i $< -r ELK -o $@
-plant-trait-ontology-reasoned.obo: plant-trait-ontology-reasoned.owl
+plant-trait-ontology-reasoned.obo: plant-trait-ontology-reasoned.owl robot
 	./robot convert -i $< -f OBO -o $@
 
 reasoner-report.txt: plant-trait-ontology.obo
