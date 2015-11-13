@@ -11,13 +11,13 @@ subsetdef: Solanaceae_spp "Terms_used_for_the_Solanaceae"
 subsetdef: Triticum_aestivum "Terms_used_for_wheat"
 subsetdef: Zea_mays "Terms_used_for_maize_or_corn"
 default-namespace: plant_trait_ontology
-ontology: to
-import: http://purl.obolibrary.org/obo/to/imports/ro_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/chebi_import.owl
-import: http://purl.obolibrary.org/obo/to/imports/po_import.owl
-import: http://purl.obolibrary.org/obo/to/imports/pato_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/eo_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/go_import.owl
+import: http://purl.obolibrary.org/obo/to/imports/pato_import.owl
+import: http://purl.obolibrary.org/obo/to/imports/po_import.owl
+import: http://purl.obolibrary.org/obo/to/imports/ro_import.owl
+ontology: to
 
 [Term]
 id: TO:0000001
@@ -45,7 +45,7 @@ synonym: "alkali sensitivity" RELATED []
 synonym: "AlkS" RELATED []
 is_a: TO:0000481 ! alkali sensitivity
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in EO:0007062
+intersection_of: inheres_in EO:0007062 ! basic pH soil environment
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -440,7 +440,7 @@ id: TO:0000050
 name: inflorescence branching
 alt_id: TO:0000263
 def: "An inflorescence morphology trait (TO:0000373) which is the extent of branching. (PO:0009049)." [GR:pj, PO:0009049, TO:moorel]
-comment: Branching usually determines the shape and compactness of the inflorescence 
+comment: Branching usually determines the shape and compactness of the inflorescence
 synonym: "panicle branching" RELATED []
 xref: TO_GIT:96
 is_a: TO:0000373 ! inflorescence morphology trait
@@ -532,9 +532,9 @@ id: TO:0000059
 name: node color
 def: "Color of the stem node." [GR:pj]
 synonym: "NDCL" RELATED []
-relationship: part_of TO:0000056 ! stem color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0020141 ! stem node
+relationship: part_of TO:0000056 ! stem color
 
 [Term]
 id: TO:0000060
@@ -672,7 +672,7 @@ name: light sensitivity
 def: "Response shown by the plant in terms of sensitivity to light stress (quality and quantity of light)." [GR:pj]
 is_a: TO:0000161 ! radiation response trait
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in EO:0007196
+intersection_of: inheres_in EO:0007196 ! light regimen
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -688,9 +688,9 @@ def: "A collective plant organ structure morphology trait (TO:0000842) which is 
 comment: Does not include traits of fruit, parts of fruit and adventitious roots which are borne on the shoot.
 xref: TO_GIT:57
 is_a: TO:0000842 ! collective plant organ structure morphology trait
-created_by: jaiswalp
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: inheres_in PO:0009006 ! shoot system
+created_by: jaiswalp
 
 [Term]
 id: TO:0000078
@@ -799,7 +799,7 @@ synonym: "RYMV" RELATED []
 synonym: "RYMVRS" RELATED []
 is_a: TO:0000148 ! viral disease resistance
 intersection_of: PATO:0001046 ! resistance to
-intersection_of: inheres_in EO:0007318
+intersection_of: inheres_in EO:0007318 ! rice yellow mottle virus
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -850,8 +850,8 @@ def: "The thickness of the root present 2cm below the soil surface." [GR:jcl, GR
 synonym: "BARTTH" RELATED []
 synonym: "brt" RELATED []
 is_a: TO:0000306 ! root thickness
-intersection_of: PATO:0000915  ! thickness
-intersection_of: inheres_in PO:0025002  ! basal root
+intersection_of: PATO:0000915 ! thickness
+intersection_of: inheres_in PO:0025002 ! basal root
 
 [Term]
 id: TO:0000095
@@ -860,8 +860,8 @@ def: "Sensitivity to the osmoticum in the growth medium." [GR:pj]
 synonym: "oa" RELATED []
 synonym: "OSRPSN" RELATED []
 is_a: TO:0000237 ! water stress trait
-intersection_of: PATO:0000085  ! sensitivity toward
-intersection_of: inheres_in GO:0006970  ! response to osmotic stress
+intersection_of: PATO:0000085 ! sensitivity toward
+intersection_of: inheres_in GO:0006970 ! response to osmotic stress
 
 [Term]
 id: TO:0000096
@@ -947,7 +947,7 @@ synonym: "deep water stress" RELATED []
 synonym: "DWSTR" RELATED []
 is_a: TO:0000237 ! water stress trait
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in EO:0007396
+intersection_of: inheres_in EO:0007396 ! flood prone region
 
 [Term]
 id: TO:0000104
@@ -1251,9 +1251,9 @@ def: "Color of the apiculus." [IRRI:SES]
 synonym: "ApC" RELATED []
 synonym: "APICL" RELATED []
 is_a: TO:0000079 ! lemma and palea morphology trait
-relationship: part_of TO:0000536 ! floret color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0006033 ! paleal apiculus
+relationship: part_of TO:0000536 ! floret color
 
 [Term]
 id: TO:0000141
@@ -1263,9 +1263,9 @@ comment: Refer to color PATO:0000014: A composite chromatic quality composed of 
 synonym: "AWNCL" RELATED []
 xref: PATO:0000014
 is_a: TO:0002718 ! awn morphology trait
-relationship: part_of TO:0000536 ! floret color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0025349 ! awn
+relationship: part_of TO:0000536 ! floret color
 
 [Term]
 id: TO:0000142
@@ -1299,9 +1299,9 @@ id: TO:0000145
 name: internode length
 def: "Measurement of length of the internode." [GR:pj]
 synonym: "INLG" RELATED []
-relationship: part_of TO:0000576 ! stem length
 intersection_of: PATO:0000122 ! length
 intersection_of: inheres_in PO:0020142 ! stem internode
+relationship: part_of TO:0000576 ! stem length
 
 [Term]
 id: TO:0000146
@@ -1313,9 +1313,9 @@ synonym: "SDLG" RELATED []
 xref: PATO:0000122
 xref: TO_GIT:195
 is_a: TO:0000184 ! seed morphology trait
-relationship: part_of TO:0000391 ! seed size
 intersection_of: PATO:0000122 ! length
 intersection_of: inheres_in PO:0009010 ! seed
+relationship: part_of TO:0000391 ! seed size
 
 [Term]
 id: TO:0000147
@@ -1343,9 +1343,9 @@ synonym: "SDWD" RELATED []
 xref: PATO:0000921
 xref: TO_GIT:194
 is_a: TO:0000184 ! seed morphology trait
-relationship: part_of TO:0000391 ! seed size
 intersection_of: PATO:0000921 ! width
 intersection_of: inheres_in PO:0009010 ! seed
+relationship: part_of TO:0000391 ! seed size
 
 [Term]
 id: TO:0000151
@@ -1420,7 +1420,7 @@ synonym: "Pr light sensitivity" RELATED []
 synonym: "RLTSN" RELATED []
 is_a: TO:0000265 ! light quality sensitivity
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in EO:0007207
+intersection_of: inheres_in EO:0007207 ! red light regimen
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -1430,7 +1430,7 @@ def: "Sensitivity response observed in an environment illuminated with blue ligh
 synonym: "BLTSN" RELATED []
 is_a: TO:0000265 ! light quality sensitivity
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in EO:0007218
+intersection_of: inheres_in EO:0007218 ! blue light regimen
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -1443,7 +1443,7 @@ synonym: "UV resistance" RELATED []
 synonym: "UVRS" RELATED []
 is_a: TO:0000265 ! light quality sensitivity
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in EO:0007222
+intersection_of: inheres_in EO:0007222 ! UV light regimen
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -1455,7 +1455,7 @@ synonym: "RADSN" RELATED []
 synonym: "response to radiation" RELATED []
 is_a: TO:0000168 ! abiotic stress trait
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in EO:0007151
+intersection_of: inheres_in EO:0007151 ! radiation treatment
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -1607,7 +1607,7 @@ synonym: "24DSN" RELATED []
 xref: EO:EO\:0007180
 is_a: TO:0000058 ! herbicide sensitivity
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in EO:0007180
+intersection_of: inheres_in EO:0007180 ! 2,4-dichlorophenoxyacetic acid treatment
 
 [Term]
 id: TO:0000178
@@ -1615,7 +1615,7 @@ name: acid soil sensitivity
 def: "Plant sensitivity to soils with acidic conditions (pH<7)." [GR:pj, TO:moorel]
 is_a: TO:0000479 ! acid sensitivity
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in EO:0007059
+intersection_of: inheres_in EO:0007059 ! acidic pH soil environment
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -1704,7 +1704,7 @@ synonym: "DRS" RELATED []
 synonym: "DRSN" RELATED []
 is_a: TO:0000394 ! drought related trait
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in EO:0007404
+intersection_of: inheres_in EO:0007404 ! drought environment
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -1729,9 +1729,9 @@ synonym: "SDCCL" RELATED []
 xref: PATO:0000014
 is_a: TO:0000838 ! seed coat morphology trait
 is_a: TO:0000931 ! seed quality trait
-relationship: part_of TO:0000486 ! seed color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009088 ! seed coat
+relationship: part_of TO:0000486 ! seed color
 
 [Term]
 id: TO:0000191
@@ -1883,9 +1883,9 @@ synonym: "LBP" RELATED []
 synonym: "LFAG" RELATED []
 xref: PATO:0000602
 is_a: TO:0000824 ! leaf attitude
-created_by: jaiswalp
 intersection_of: PATO:0000133 ! orientation
 intersection_of: inheres_in PO:0009025 ! vascular leaf
+created_by: jaiswalp
 
 [Term]
 id: TO:0000207
@@ -2395,9 +2395,9 @@ synonym: "PALCL" RELATED []
 synonym: "palea color" RELATED []
 xref: PATO:0000014
 is_a: TO:0000079 ! lemma and palea morphology trait
-relationship: part_of TO:0000536 ! floret color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009034 ! flower bract
+relationship: part_of TO:0000536 ! floret color
 
 [Term]
 id: TO:0000265
@@ -2587,8 +2587,8 @@ synonym: "AGPACT" RELATED []
 synonym: "glucose 1-phosphate adenylyltransferase" RELATED []
 synonym: "glucose-1-phosphate adenylyltransferase activity" RELATED []
 is_a: TO:0000599 ! enzyme activity trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0008878  ! glucose-1-phosphate adenylyltransferase activity
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0008878 ! glucose-1-phosphate adenylyltransferase activity
 
 [Term]
 id: TO:0000285
@@ -2654,7 +2654,7 @@ def: "Trait associated with the carbohydrate content, concentration and/or yield
 synonym: "CARBCN" RELATED []
 is_a: TO:0000281 ! metabolite content related trait
 intersection_of: PATO:0000070 ! amount
-intersection_of: inheres_in CHEBI:16646
+intersection_of: inheres_in CHEBI:16646 ! carbohydrate
 intersection_of: occurs_in PO:0009011 ! plant structure
 
 [Term]
@@ -2786,9 +2786,9 @@ synonym: "SDTH" RELATED []
 xref: PATO:0000915
 xref: TO_GIT:197
 is_a: TO:0000184 ! seed morphology trait
-relationship: part_of TO:0000391 ! seed size
 intersection_of: PATO:0000915 ! thickness
 intersection_of: inheres_in PO:0009010 ! seed
+relationship: part_of TO:0000391 ! seed size
 
 [Term]
 id: TO:0000305
@@ -2977,9 +2977,9 @@ comment: Refer to color (PATO:0000014): A composite chromatic quality composed o
 synonym: "LFCL" RELATED []
 xref: PATO:0000014
 is_a: TO:0000748 ! leaf morphology trait
-created_by: jaiswalp
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009025 ! vascular leaf
+created_by: jaiswalp
 
 [Term]
 id: TO:0000327
@@ -3306,9 +3306,9 @@ def: "Changes monitored in leaf collar color." [IRRI:SES]
 synonym: "CC" RELATED []
 synonym: "collar color" RELATED []
 synonym: "LFCCL" RELATED []
-relationship: part_of TO:0000326 ! leaf color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0006012 ! leaf collar
+relationship: part_of TO:0000326 ! leaf color
 
 [Term]
 id: TO:0000365
@@ -3498,7 +3498,7 @@ def: "Causal agent: rice ragged stunt virus (RRSV). Symptoms: plants are stunted
 synonym: "RSVRS" RELATED []
 is_a: TO:0000148 ! viral disease resistance
 intersection_of: PATO:0001046 ! resistance to
-intersection_of: inheres_in EO:0007195
+intersection_of: inheres_in EO:0007195 ! rice ragged stunt virus
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -3509,9 +3509,9 @@ comment: This includes physiological, molecular and biochemical traits as well.
 synonym: "plant phenotype" RELATED []
 synonym: "plant quality" RELATED []
 xref: TO_GIT:52
-created_by: jaiswalp
 intersection_of: PATO:0000001 ! quality
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
 
 [Term]
 id: TO:0000388
@@ -3544,9 +3544,9 @@ comment: Seed size is determined by the ratio of the seed length to seed width a
 xref: PATO:0000117
 xref: TO_GIT:183
 is_a: TO:0000184 ! seed morphology trait
-relationship: has_part TO:0000931 ! seed quality trait
 intersection_of: PATO:0000117 ! size
 intersection_of: inheres_in PO:0009010 ! seed
+relationship: has_part TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000392
@@ -3607,9 +3607,9 @@ synonym: "SLmC" RELATED []
 synonym: "STLEMCL" RELATED []
 xref: PATO:0000014
 is_a: TO:0000079 ! lemma and palea morphology trait
-relationship: part_of TO:0000536 ! floret color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009040 ! sterile lemma
+relationship: part_of TO:0000536 ! floret color
 
 [Term]
 id: TO:0000401
@@ -3773,9 +3773,9 @@ name: vascular leaf morphology trait
 def: "A leaf morphology trait (TO:0000748) which is a quality of a vascular leaf (PO:0009025)." [GR:pj, PO:0009025, POC:cooperl]
 xref: TO_GIT:60
 is_a: TO:0000748 ! leaf morphology trait
-created_by: jaiswalp
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: inheres_in PO:0009025 ! vascular leaf
+created_by: jaiswalp
 
 [Term]
 id: TO:0000420
@@ -3789,8 +3789,8 @@ id: TO:0000421
 name: pollen fertility
 synonym: "POFRT" RELATED []
 is_a: TO:0000420 ! fertility related trait
-intersection_of: PATO:0000274  ! fertility
-intersection_of: inheres_in PO:0025281  ! pollen
+intersection_of: PATO:0000274 ! fertility
+intersection_of: inheres_in PO:0025281 ! pollen
 
 [Term]
 id: TO:0000422
@@ -4053,7 +4053,7 @@ comment: Often measured using the flag leaf.
 synonym: "LFARSPKNBRO" RELATED []
 is_a: TO:0000540 ! leaf area trait
 intersection_of: PATO:0001470 ! proportionality to
-intersection_of: inheres_in TO:0000540 ! leaf area
+intersection_of: inheres_in TO:0000540 ! leaf area trait
 intersection_of: relative_to TO:0000456 ! spikelet number
 
 [Term]
@@ -4361,7 +4361,7 @@ id: TO:0000489
 name: carbohydrate composition related trait
 is_a: TO:0000488 ! seed composition based quality trait
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in CHEBI:16646
+intersection_of: inheres_in CHEBI:16646 ! carbohydrate
 
 [Term]
 id: TO:0000490
@@ -4588,8 +4588,8 @@ name: stomatal closure rate
 def: "The rate of closure of stomata due to stress or coupled to the rate of photosynthesis and/or transpiration." [GR:pj]
 synonym: "STOCSRRATE" RELATED []
 is_a: TO:0020095 ! stomatal process related trait
-intersection_of: PATO:0000161  ! rate
-intersection_of: inheres_in GO:0090332  ! stomatal closure
+intersection_of: PATO:0000161 ! rate
+intersection_of: inheres_in GO:0090332 ! stomatal closure
 
 [Term]
 id: TO:0000521
@@ -4597,8 +4597,8 @@ name: stomatal closure time
 def: "Average time taken for closure of stomata due to stress or coupled to the rate of photosynthesis and/or transpiration." [GR:pj]
 synonym: "STOCSRTM" RELATED []
 is_a: TO:0020095 ! stomatal process related trait
-intersection_of: PATO:0000165  ! time
-intersection_of: inheres_in GO:0090332  ! stomatal closure
+intersection_of: PATO:0000165 ! time
+intersection_of: inheres_in GO:0090332 ! stomatal closure
 
 [Term]
 id: TO:0000522
@@ -4731,7 +4731,7 @@ synonym: "LVBNBLFARRO" RELATED []
 is_a: TO:0000472 ! vascular bundle number
 intersection_of: PATO:0001470 ! proportionality to
 intersection_of: inheres_in TO:0000539 ! large vascular bundle number
-intersection_of: relative_to TO:0000540 ! leaf area
+intersection_of: relative_to TO:0000540 ! leaf area trait
 
 [Term]
 id: TO:0000539
@@ -4891,8 +4891,8 @@ def: "Length of internodes on a rhizhomatic stem." [GR:pj]
 synonym: "average rhizome internode length" RELATED []
 synonym: "RHZINLG" RELATED []
 is_a: TO:0000549 ! rhizome morphology trait
-intersection_of: PATO:0000122  ! length
-intersection_of: inheres_in PO:0025204  ! rhizome internode
+intersection_of: PATO:0000122 ! length
+intersection_of: inheres_in PO:0025204 ! rhizome internode
 
 [Term]
 id: TO:0000555
@@ -4907,6 +4907,7 @@ id: TO:0000556
 name: rhizome dry weight
 synonym: "rhizome dry weight per plant" RELATED []
 synonym: "RHZDWT" RELATED []
+is_a: TO:0000549 ! rhizome morphology trait
 relationship: part_of TO:0000352 ! plant dry weight
 
 [Term]
@@ -5052,9 +5053,9 @@ def: "A petal morphology trait (TO:0000863) which is associated with the color o
 comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
 xref: PATO:0000014
 is_a: TO:0000863 ! petal morphology trait
-relationship: part_of TO:0000537 ! flower color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009032 ! petal
+relationship: part_of TO:0000537 ! flower color
 
 [Term]
 id: TO:0000573
@@ -5063,9 +5064,9 @@ def: "A sepal morphology trait (TO:0000864) which is the color of a sepal (PO:00
 comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
 xref: PATO:0000014
 is_a: TO:0000864 ! sepal morphology trait
-relationship: part_of TO:0000537 ! flower color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009031 ! sepal
+relationship: part_of TO:0000537 ! flower color
 
 [Term]
 id: TO:0000574
@@ -5074,9 +5075,9 @@ def: "A tepal morphology trait (TO:0000865) which is the color of a tepal (PO:00
 comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
 xref: PATO:0000014
 is_a: TO:0000865 ! tepal morphology trait
-relationship: part_of TO:0000537 ! flower color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009033 ! tepal
+relationship: part_of TO:0000537 ! flower color
 
 [Term]
 id: TO:0000575
@@ -5104,9 +5105,9 @@ xref: PATO:0000122
 xref: TO_GIT:157
 is_a: TO:0000168 ! abiotic stress trait
 is_a: TO:0000361 ! stem morphology trait
-relationship: part_of TO:0000207 ! plant height
 intersection_of: PATO:0000122 ! length
 intersection_of: inheres_in PO:0009047 ! stem
+relationship: part_of TO:0000207 ! plant height
 
 [Term]
 id: TO:0000577
@@ -5296,8 +5297,8 @@ def: "Catalysis of a biochemical reaction at physiological temperatures. In biol
 synonym: "enzymatic activity" RELATED []
 synonym: "enzyme catalytic activity" RELATED []
 is_a: TO:0000282 ! enzymatic activity and protein content related trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0003824  ! catalytic activity
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0003824 ! catalytic activity
 
 [Term]
 id: TO:0000600
@@ -5506,8 +5507,8 @@ id: TO:0000621
 name: inflorescence development trait
 def: "Traits associated with observing effects on the development of the inflorescence and its parts." [GR:pj]
 is_a: TO:0000654 ! shoot system growth and development trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0010229  ! inflorescence development
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0010229 ! inflorescence development
 
 [Term]
 id: TO:0000622
@@ -5515,8 +5516,8 @@ name: flower development trait
 def: "Traits associated with observing effects on the development of the flower and its parts." [GR:pj]
 synonym: "floret development trait" RELATED []
 is_a: TO:0000621 ! inflorescence development trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0009908  ! flower development
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0009908 ! flower development
 
 [Term]
 id: TO:0000623
@@ -5777,8 +5778,8 @@ id: TO:0000656
 name: root development trait
 def: "Traits associated with observing effects on the development of the root and its parts." [GR:pj]
 is_a: TO:0000927 ! plant organ growth and development trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0048364  ! root development
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0048364 ! root development
 
 [Term]
 id: TO:0000657
@@ -5949,9 +5950,9 @@ xref: MaizeGDB_QTL:82753
 xref: PATO:0001334
 xref: TO_GIT:243
 is_a: TO:0000921 ! infructescence axis morphology trait
-relationship: part_of TO:0000433 ! ear diameter
 intersection_of: PATO:0001334 ! diameter
 intersection_of: inheres_in PO:0006505 ! central spike of ear inflorescence
+relationship: part_of TO:0000433 ! ear diameter
 
 [Term]
 id: TO:0000680
@@ -6056,8 +6057,8 @@ def: "Measures the maysin content in a plant or plant part." [GR:pj]
 comment: Maysin is a coagulable globulin protein produced by the maize plant. It has insecticide properties.
 synonym: "MAYSINCN" RELATED []
 is_a: TO:0000281 ! metabolite content related trait
-intersection_of: PATO:0000025  ! composition
-intersection_of: inheres_in CHEBI:70206  ! maysin
+intersection_of: PATO:0000025 ! composition
+intersection_of: inheres_in CHEBI:70206 ! maysin
 
 [Term]
 id: TO:0000691
@@ -6105,8 +6106,8 @@ def: "Amount of starch present in the plant or plant part." [GR:pj]
 synonym: "STARCHCN" RELATED []
 is_a: TO:0000489 ! carbohydrate composition related trait
 is_a: TO:0006007 ! polysaccharide content
-intersection_of: PATO:0000025  ! composition
-intersection_of: inheres_in CHEBI:28017  ! starch
+intersection_of: PATO:0000025 ! composition
+intersection_of: inheres_in CHEBI:28017 ! starch
 
 [Term]
 id: TO:0000697
@@ -6130,8 +6131,8 @@ name: sucrose synthase activity trait
 def: "Catalysis of the reaction: UDP-glucose + D-fructose = UDP + sucrose." [GO:GO\:0016157]
 synonym: "SUSACT" RELATED []
 is_a: TO:0000599 ! enzyme activity trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0016157  ! sucrose synthase activity
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0016157 ! sucrose synthase activity
 
 [Term]
 id: TO:0000700
@@ -6162,8 +6163,8 @@ id: TO:0000703
 name: amylase activity trait
 def: "Catalysis of the hydrolysis of amylose or an amylose derivative." [GR:pj]
 is_a: TO:0000599 ! enzyme activity trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0016160  ! amylase activity
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0016160 ! amylase activity
 
 [Term]
 id: TO:0000704
@@ -6171,8 +6172,8 @@ name: phosphatase activity trait
 def: "Catalysis of the hydrolysis of phosphoric monoesters, releasing inorganic phosphate." [GO:GO\:0016791]
 synonym: "phosphoric monoester hydrolase activity" RELATED []
 is_a: TO:0000599 ! enzyme activity trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0016791  ! phosphatase activity
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0016791 ! phosphatase activity
 
 [Term]
 id: TO:0000705
@@ -6203,9 +6204,9 @@ xref: PATO:0000014
 xref: TO_GIT:292
 is_a: TO:0000945 ! pericarp morphology trait
 is_a: TO:0002728 ! fruit quality trait
-relationship: part_of TO:0002617 ! fruit color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009084 ! pericarp
+relationship: part_of TO:0002617 ! fruit color
 
 [Term]
 id: TO:0000708
@@ -6375,8 +6376,8 @@ synonym: "cell division cycle" RELATED []
 xref: GO:GO\:0007049
 is_a: TO:0000283 ! biological process related trait
 is_a: TO:0002686 ! cell growth and development trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0007049  ! cell cycle
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0007049 ! cell cycle
 
 [Term]
 id: TO:0000729
@@ -6385,8 +6386,8 @@ def: "The traits associated with various developmental landmarks and processes o
 comment: Meiosis is a type of cell division in which haploid gametes and spores are formed. The process involves a single duplication of the genetic material followed by two mitotic divisions. As a result each daughter cell receives half the chromosomal content (haploid) as the parent cell.
 xref: GO:GO\:0051321
 is_a: TO:0000728 ! cell cycle trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0051321  ! meiotic cell cycle
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0051321 ! meiotic cell cycle
 
 [Term]
 id: TO:0000730
@@ -6395,8 +6396,8 @@ def: "The traits associated with various developmental landmarks and processes o
 comment: Mitosis is a type of cell division in which a cell duplicates its genetic information (DNA), in order to generate two, identical, daughter cells. Each daughter cell receives the same chromosome number / genetic content as the parent cell.
 xref: GO:GO\:0000278
 is_a: TO:0000728 ! cell cycle trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0000278  ! mitotic cell cycle
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0000278 ! mitotic cell cycle
 
 [Term]
 id: TO:0000731
@@ -6418,8 +6419,8 @@ def: "Traits associated with the biosynthesis of lignin in a plant or plant part
 synonym: "lignin biosynthesis" RELATED []
 xref: GO:GO\:0009809
 is_a: TO:0000349 ! physiological process related trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0009809  ! lignin biosynthetic process
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0009809 ! lignin biosynthetic process
 
 [Term]
 id: TO:0000734
@@ -6448,10 +6449,10 @@ name: plant organ morphology trait
 def: "A multi-tissue plant structure morphology trait (TO:0000836) which is associated with a plant organ (PO:0009008)." [PO:0009008, POC:cooperl]
 xref: TO_GIT:55
 is_a: TO:0000836 ! multi-tissue plant structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009008 ! plant organ
 created_by: moorel
 creation_date: 2012-04-19T10:36:57Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009008  ! plant organ
 
 [Term]
 id: TO:0000737
@@ -6470,10 +6471,10 @@ name: plant axis morphology trait
 def: "A plant organ morphology trait (TO:0000736) which is associated with a plant axis (PO:0025004)." [PO:0025004, POC:cooperl]
 xref: TO_GIT:55
 is_a: TO:0000736 ! plant organ morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025004 ! plant axis
 created_by: moorel
 creation_date: 2012-04-19T10:38:30Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025004  ! plant axis
 
 [Term]
 id: TO:0000739
@@ -6481,10 +6482,10 @@ name: shoot axis morphology trait
 def: "A plant axis morphology trait (TO:0000738) which is associated with a shoot axis (PO:0025029)." [PO:0025029, POC:cooperl]
 xref: TO_GIT:55
 is_a: TO:0000738 ! plant axis morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025029 ! shoot axis
 created_by: moorel
 creation_date: 2012-04-19T10:40:33Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025029  ! shoot axis
 
 [Term]
 id: TO:0000740
@@ -6492,10 +6493,10 @@ name: branch morphology trait
 def: "A shoot axis trait (TO:0000739) which is a quality of a branch (PO:0025073)." [PO:0025073, POC:cooperl]
 xref: TO_GIT:56
 is_a: TO:0000739 ! shoot axis morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025073 ! branch
 created_by: moorel
 creation_date: 2012-04-19T10:42:49Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025073  ! branch
 
 [Term]
 id: TO:0000741
@@ -6503,10 +6504,10 @@ name: tuber morphology trait
 def: "A branch morphology trait (TO:0000739) which is associated with a tuber (PO:0004543)." [PO:0004543, POC:cooperl]
 xref: TO_GIT:56
 is_a: TO:0000740 ! branch morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025522 ! tuber
 created_by: moorel
 creation_date: 2012-04-19T10:45:11Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025522  ! tuber
 
 [Term]
 id: TO:0000742
@@ -6515,10 +6516,10 @@ def: "A tuber morphology trait (TO:0000741) which is associated with a subterran
 subset: Solanaceae_spp
 xref: TO_GIT:56
 is_a: TO:0000741 ! tuber morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
 creation_date: 2012-04-19T10:46:10Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0004547  ! subterranean tuber
 
 [Term]
 id: TO:0000743
@@ -6530,10 +6531,10 @@ synonym: "tuber shape" RELATED []
 xref: PATO:0000052
 xref: TO_GIT:56
 is_a: TO:0000742 ! subterranean tuber morphology trait
+intersection_of: PATO:0000052 ! shape
+intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
 creation_date: 2012-04-19T10:48:44Z
-intersection_of: PATO:0000052  ! shape
-intersection_of: inheres_in PO:0004547  ! subterranean tuber
 
 [Term]
 id: TO:0000744
@@ -6545,10 +6546,10 @@ synonym: "tuber size" RELATED []
 xref: PATO:0000117
 xref: TO_GIT:56
 is_a: TO:0000742 ! subterranean tuber morphology trait
+intersection_of: PATO:0000117 ! size
+intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
 creation_date: 2012-04-19T10:51:20Z
-intersection_of: PATO:0000117  ! size
-intersection_of: inheres_in PO:0004547  ! subterranean tuber
 
 [Term]
 id: TO:0000745
@@ -6572,10 +6573,10 @@ synonym: "tuber mass" RELATED []
 xref: PATO:0000125
 xref: TO_GIT:56
 is_a: TO:0000742 ! subterranean tuber morphology trait
+intersection_of: PATO:0000125 ! mass
+intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
 creation_date: 2012-04-19T10:56:34Z
-intersection_of: PATO:0000125  ! mass
-intersection_of: inheres_in PO:0004547  ! subterranean tuber
 
 [Term]
 id: TO:0000747
@@ -6583,10 +6584,10 @@ name: phyllome morphology trait
 def: "A plant organ morphology trait (TO:0000736) which is associated with a phyllome (PO:0006001)." [PO:0006001, POC:cooperl]
 xref: TO_GIT:60
 is_a: TO:0000736 ! plant organ morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0006001 ! phyllome
 created_by: moorel
 creation_date: 2012-04-25T01:09:12Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0006001  ! phyllome
 
 [Term]
 id: TO:0000748
@@ -6595,10 +6596,10 @@ def: "A phyllome morphology trait (TO:0000747) which is associated with a leaf (
 subset: Zea_mays
 xref: TO_GIT:60
 is_a: TO:0000747 ! phyllome morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025034 ! leaf
 created_by: moorel
 creation_date: 2012-04-25T01:16:59Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025034  ! leaf
 
 [Term]
 id: TO:0000749
@@ -6606,10 +6607,10 @@ name: cotyledon morphology trait
 def: "A vascular leaf morphology trait (TO:0000419) which is associated with a cotyledon (PO:0020030)." [PO:0020030, POC:cooperl]
 xref: TO_GIT:61
 is_a: TO:0000419 ! vascular leaf morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020030 ! cotyledon
 created_by: moorel
 creation_date: 2012-04-25T01:18:38Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020030  ! cotyledon
 
 [Term]
 id: TO:0000750
@@ -6618,10 +6619,10 @@ def: "A seedling cotyledon morphology trait (TO:0000774) which is associated wit
 xref: PATO:0000014
 xref: TO_GIT:61
 is_a: TO:0000774 ! seedling cotyledon morphology trait
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0025471 ! seedling cotyledon
 created_by: moorel
 creation_date: 2012-04-25T01:38:00Z
-intersection_of: PATO:0000014  ! color
-intersection_of: inheres_in PO:0025471  ! seedling cotyledon
 
 [Term]
 id: TO:0000751
@@ -6640,10 +6641,10 @@ def: "A seedling cotyledon morphology trait (TO:0000774) which is associated wit
 xref: PATO:0000117
 xref: TO_GIT:60
 is_a: TO:0000774 ! seedling cotyledon morphology trait
+intersection_of: PATO:0000117 ! size
+intersection_of: inheres_in PO:0025471 ! seedling cotyledon
 created_by: moorel
 creation_date: 2012-04-25T01:47:23Z
-intersection_of: PATO:0000117  ! size
-intersection_of: inheres_in PO:0025471  ! seedling cotyledon
 
 [Term]
 id: TO:0000753
@@ -6651,10 +6652,10 @@ name: coleoptile morphology trait
 def: "A plant organ morphology trait (TO:0000736) which is associated with a coleoptile (PO:0020033)." [PO:0020033, POC:cooperl]
 xref: TO_GIT:62
 is_a: TO:0000736 ! plant organ morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020033 ! coleoptile
 created_by: moorel
 creation_date: 2012-04-26T12:12:50Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020033  ! coleoptile
 
 [Term]
 id: TO:0000754
@@ -6662,10 +6663,10 @@ name: cardinal organ part morphology trait
 def: "A cardinal organ part of a multi-tissue plant structure morphology trait (TO:0000837) which is a quality of a cardinal organ part (PO:0025001)." [PO:0025001, POC:cooperl, TO:moorel]
 xref: TO_GIT:63
 is_a: TO:0000837 ! cardinal part of a multi-tissue plant structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025001 ! cardinal organ part
 created_by: moorel
 creation_date: 2012-04-26T13:09:13Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025001  ! cardinal organ part
 
 [Term]
 id: TO:0000755
@@ -6682,10 +6683,10 @@ name: stem internode morphology trait
 def: "A shoot internode morphology trait (TO:0000755) which is associated with a stem internode (PO:0020142)." [PO:0020142, POC:cooperl]
 xref: TO_GIT:64
 is_a: TO:0000755 ! shoot internode morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020142 ! stem internode
 created_by: moorel
 creation_date: 2012-04-26T13:17:31Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020142  ! stem internode
 
 [Term]
 id: TO:0000757
@@ -6693,10 +6694,10 @@ name: hypocotyl morphology trait
 def: "A stem internode morphology trait (TO:0000756) which is associated with a hypocotyl (PO:0020100)." [PO:0020100, POC:cooperl]
 xref: TO_GIT:64
 is_a: TO:0000756 ! stem internode morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020100 ! hypocotyl
 created_by: moorel
 creation_date: 2012-04-26T13:21:05Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020100  ! hypocotyl
 
 [Term]
 id: TO:0000758
@@ -6704,10 +6705,10 @@ name: mesocotyl morphology trait
 def: "A stem internode morphology trait (TO:0000756) which is associated with a mesocotyl (PO:0020037)." [PO:0020037, POC:cooperl]
 xref: TO_GIT:64
 is_a: TO:0000756 ! stem internode morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020037 ! mesocotyl
 created_by: moorel
 creation_date: 2012-04-26T13:30:24Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020037  ! mesocotyl
 
 [Term]
 id: TO:0000759
@@ -6717,10 +6718,10 @@ comment: The color of a seedling hypocotyl (PO:0025291) during the hypocotyl eme
 xref: PATO:0000014
 xref: TO_GIT:64
 is_a: TO:0000769 ! seedling hypocotyl morphology trait
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0025291 ! seedling hypocotyl
 created_by: moorel
 creation_date: 2012-04-26T13:41:13Z
-intersection_of: PATO:0000014  ! color
-intersection_of: inheres_in PO:0025291  ! seedling hypocotyl
 
 [Term]
 id: TO:0000760
@@ -6730,10 +6731,10 @@ comment: Refers to green (PATO:0000320): A color hue with medium-low wavelength 
 xref: PATO:0000014
 xref: PATO:0000320
 is_a: TO:0000759 ! seedling hypocotyl color
+intersection_of: PATO:0000320 ! green
+intersection_of: inheres_in PO:0025291 ! seedling hypocotyl
 created_by: moorel
 creation_date: 2012-04-30T13:15:20Z
-intersection_of: PATO:0000320  ! green
-intersection_of: inheres_in PO:0025291  ! seedling hypocotyl
 
 [Term]
 id: TO:0000761
@@ -6755,10 +6756,10 @@ comment: Refers to purple (PATO:0000951): A color that falls about midway betwee
 xref: PATO:0000014
 xref: PATO:0000951
 is_a: TO:0000759 ! seedling hypocotyl color
+intersection_of: PATO:0000951 ! purple
+intersection_of: inheres_in PO:0025291 ! seedling hypocotyl
 created_by: moorel
 creation_date: 2012-04-30T13:18:41Z
-intersection_of: PATO:0000951  ! purple
-intersection_of: inheres_in PO:0025291  ! seedling hypocotyl
 
 [Term]
 id: TO:0000763
@@ -6768,20 +6769,20 @@ comment: Refers to dark purple (PATO:0001259): A color consisting of purple colo
 xref: PATO:0000014
 xref: PATO:0001259
 is_a: TO:0000759 ! seedling hypocotyl color
+intersection_of: PATO:0001259 ! dark purple
+intersection_of: inheres_in PO:0025291 ! seedling hypocotyl
 created_by: moorel
 creation_date: 2012-04-30T13:20:07Z
-intersection_of: PATO:0001259  ! dark purple
-intersection_of: inheres_in PO:0025291  ! seedling hypocotyl
 
 [Term]
 id: TO:0000764
 name: stalk morphology trait
 def: "A cardinal organ part morphology trait (TO:0000754) which is associated with a stalk (PO:0025066)." [PO:0025066, POC:cooperl]
 is_a: TO:0000754 ! cardinal organ part morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025066 ! stalk
 created_by: moorel
 creation_date: 2012-04-30T13:27:43Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025066  ! stalk
 
 [Term]
 id: TO:0000765
@@ -6789,10 +6790,10 @@ name: petiole morphology trait
 def: "A stalk morphology trait (TO:0000764) which is associated with a petiole (PO:0020038)." [PO:0020038, POC:cooperl]
 xref: TO_GIT:87
 is_a: TO:0000764 ! stalk morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020038 ! petiole
 created_by: moorel
 creation_date: 2012-04-30T13:29:38Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020038  ! petiole
 
 [Term]
 id: TO:0000766
@@ -6801,10 +6802,10 @@ def: "A petiole morphology trait (TO:0000765) that is associated with the length
 xref: PATO:0000122
 xref: TO_GIT:87
 is_a: TO:0000765 ! petiole morphology trait
+intersection_of: PATO:0000122 ! length
+intersection_of: inheres_in PO:0020038 ! petiole
 created_by: moorel
 creation_date: 2012-04-30T13:31:22Z
-intersection_of: PATO:0000122  ! length
-intersection_of: inheres_in PO:0020038  ! petiole
 
 [Term]
 id: TO:0000767
@@ -6813,10 +6814,10 @@ def: "A petiole morphology trait (TO:0000765) that is associated with the shape 
 xref: PATO:0000052
 xref: TO_GIT:87
 is_a: TO:0000765 ! petiole morphology trait
+intersection_of: PATO:0000052 ! shape
+intersection_of: inheres_in PO:0020038 ! petiole
 created_by: moorel
 creation_date: 2012-04-30T13:33:50Z
-intersection_of: PATO:0000052  ! shape
-intersection_of: inheres_in PO:0020038  ! petiole
 
 [Term]
 id: TO:0000768
@@ -6825,10 +6826,10 @@ def: "A petiole morphology trait (TO:0000765) that is associated with the size o
 xref: PATO:0000117
 xref: TO_GIT:87
 is_a: TO:0000765 ! petiole morphology trait
+intersection_of: PATO:0000117 ! size
+intersection_of: inheres_in PO:0020038 ! petiole
 created_by: moorel
 creation_date: 2012-04-30T13:37:02Z
-intersection_of: PATO:0000117  ! size
-intersection_of: inheres_in PO:0020038  ! petiole
 
 [Term]
 id: TO:0000769
@@ -6836,10 +6837,10 @@ name: seedling hypocotyl morphology trait
 def: "A hypocotyl morphology trait (TO:0000757) which is associated with a seedling hypocotyl (PO:0025291)." [PO:0025291, POC:cooperl]
 comment: Use this term to describe traits for a seedling hypocotyl (PO:002529; a hypocotyl (PO:0020100) that is part of a whole plant (PO:0000003) in the seedling development stage (PO:0007131)).
 is_a: TO:0000757 ! hypocotyl morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025291 ! seedling hypocotyl
 created_by: moorel
 creation_date: 2012-05-03T12:51:59Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025291  ! seedling hypocotyl
 
 [Term]
 id: TO:0000770
@@ -6856,10 +6857,10 @@ name: embryo hypocotyl morphology trait
 def: "A hypocotyl morphology trait (TO:0000757) which is associated with an embryo hypocotyl (PO:0025290)." [PO:0025290, POC:cooperl]
 comment: Use this term to describe traits for embryo hypocotyl (A hypocotyl (PO:0020100) that is part of a plant embryo (PO:0009009)).
 is_a: TO:0000757 ! hypocotyl morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025290 ! embryo hypocotyl
 created_by: moorel
 creation_date: 2012-05-04T13:47:12Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025290  ! embryo hypocotyl
 
 [Term]
 id: TO:0000772
@@ -6867,20 +6868,20 @@ name: seedling mesocotyl morphology trait
 def: "A mesocotyl morphology trait (TO:0000758) which is associated with an seedling mesocotyl (PO:0025295)." [PO:0025295, POC:cooperl]
 comment: Use this term to descride traits for seedling mesocotyl (PO:0025295: A seedling mesocotyl is an elongation of and embryonic mesocotyl that is part of a whole plant in the seedling phase).
 is_a: TO:0000758 ! mesocotyl morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025295 ! seedling mesocotyl
 created_by: moorel
 creation_date: 2012-05-04T13:52:34Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025295  ! seedling mesocotyl
 
 [Term]
 id: TO:0000773
 name: embryo mesocotyl morphology trait
 def: "A mesocotyl morphology trait (TO:0000758) which is associated with an embryo mesocotyl (PO:0025294)." [PO:0025294, POC:cooperl]
 is_a: TO:0000758 ! mesocotyl morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025294 ! embryo mesocotyl
 created_by: moorel
 creation_date: 2012-05-04T13:57:56Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025294  ! embryo mesocotyl
 
 [Term]
 id: TO:0000774
@@ -6889,10 +6890,10 @@ def: "A cotyledon morphology trait (TO:0000749) which is associated with a seedl
 comment: Use this term to describe traits for a seedling cotyledon ((PO:0025471):A cotyledon (PO:0020030) that is part of a whole plant (PO:0000003) in the seedling development stage (PO:0007131)).
 xref: TO_GIT:61
 is_a: TO:0000749 ! cotyledon morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025471 ! seedling cotyledon
 created_by: moorel
 creation_date: 2012-05-11T12:28:54Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025471  ! seedling cotyledon
 
 [Term]
 id: TO:0000775
@@ -6900,10 +6901,10 @@ name: embryo cotyledon morphology trait
 def: "A cotyledon morphology trait (TO:0000749) which is associated with an embryo cotyledon (PO:0025470)." [PO:0025470, POC:cooperl]
 comment: Use this term to describe traits for an embryo hypocotyl ((PO:0025470): A cotyledon (PO:0020030) that is part of a plant embryo (PO:0009009)).
 is_a: TO:0000749 ! cotyledon morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025470 ! embryo cotyledon
 created_by: moorel
 creation_date: 2012-05-11T12:34:04Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025470  ! embryo cotyledon
 
 [Term]
 id: TO:0000776
@@ -6914,10 +6915,10 @@ subset: Hordeum_vulgare
 subset: Triticum_aestivum
 xref: TO_GIT:88
 is_a: TO:0000739 ! shoot axis morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009053 ! peduncle
 created_by: moorel
 creation_date: 2012-05-17T12:28:05Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009053  ! peduncle
 
 [Term]
 id: TO:0000777
@@ -6926,10 +6927,10 @@ def: "A peduncle morphology trait (TO:0000776) which is associated with a visual
 subset: Triticum_aestivum
 xref: TO_GIT:88
 is_a: TO:0000776 ! peduncle morphology trait
+intersection_of: PATO:0002381 ! waxiness
+intersection_of: inheres_in PO:0009053 ! peduncle
 created_by: moorel
 creation_date: 2012-05-17T12:29:02Z
-intersection_of: PATO:0002381  ! waxiness
-intersection_of: inheres_in PO:0009053  ! peduncle
 
 [Term]
 id: TO:0000778
@@ -6948,10 +6949,10 @@ comment: Refers to the color ((PATO:0000014):A composite chromatic quality compo
 subset: Cucurbita
 xref: PATO:0000014
 is_a: TO:0000776 ! peduncle morphology trait
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0009053 ! peduncle
 created_by: moorel
 creation_date: 2012-05-17T13:58:50Z
-intersection_of: PATO:0000014  ! color
-intersection_of: inheres_in PO:0009053  ! peduncle
 
 [Term]
 id: TO:0000780
@@ -6972,20 +6973,20 @@ def: "A seedling hypocotyl morphology trait (TO:0000769) which is associated the
 subset: Zea_mays
 xref: PATO:0000117
 is_a: TO:0000769 ! seedling hypocotyl morphology trait
+intersection_of: PATO:0000117 ! size
+intersection_of: inheres_in PO:0025291 ! seedling hypocotyl
 created_by: moorel
 creation_date: 2012-05-17T14:19:59Z
-intersection_of: PATO:0000117  ! size
-intersection_of: inheres_in PO:0025291  ! seedling hypocotyl
 
 [Term]
 id: TO:0000782
 name: inflorescence axis morphology trait
 def: "A shoot axis morphology trait (TO:0000739) which is associated with an inflorescence axis (PO:0020122)." [PO:0020122, POC:cooperl]
 is_a: TO:0000739 ! shoot axis morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020122 ! inflorescence axis
 created_by: moorel
 creation_date: 2012-05-17T14:39:45Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020122  ! inflorescence axis
 
 [Term]
 id: TO:0000783
@@ -6995,20 +6996,20 @@ comment: Refers to the size ((PATO:0000117): A morphology quality inhering in a 
 subset: Hordeum_vulgare
 xref: PATO:0000117
 is_a: TO:0000782 ! inflorescence axis morphology trait
+intersection_of: PATO:0000117 ! size
+intersection_of: inheres_in PO:0020122 ! inflorescence axis
 created_by: moorel
 creation_date: 2012-05-17T14:42:14Z
-intersection_of: PATO:0000117  ! size
-intersection_of: inheres_in PO:0020122  ! inflorescence axis
 
 [Term]
 id: TO:0000784
 name: inflorescence branch morphology trait
 def: "A inflorescence axis morphology trait (TO:0000782) which is associated with an inflorescence branch (PO:0009081)." [PO:0009081, TO:cooperl]
 is_a: TO:0000782 ! inflorescence axis morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009081 ! inflorescence branch
 created_by: moorel
 creation_date: 2012-05-18T13:25:20Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009081  ! inflorescence branch
 
 [Term]
 id: TO:0000785
@@ -7025,10 +7026,10 @@ name: reproductive shoot system morphology trait
 def: "A shoot system morphology trait (TO:0000077) that is a quality of a reproductive shoot system (PO:0025082)." [PO:0025082, TO:cooperl]
 xref: TO_GIT:57
 is_a: TO:0000077 ! shoot system morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025082 ! reproductive shoot system
 created_by: moorel
 creation_date: 2012-05-18T13:35:01Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025082  ! reproductive shoot system
 
 [Term]
 id: TO:0000787
@@ -7036,10 +7037,10 @@ name: inflorescence waxiness
 def: "An inflorescence morphology trait (TO:0000373) which is associated with the waxiness of an inflorescence (PO:0009049)." [PO:0009049, POC:cooperl]
 subset: Hordeum_vulgare
 is_a: TO:0000373 ! inflorescence morphology trait
+intersection_of: PATO:0002381 ! waxiness
+intersection_of: inheres_in PO:0009049 ! inflorescence
 created_by: moorel
 creation_date: 2012-05-18T13:38:09Z
-intersection_of: PATO:0002381  ! waxiness
-intersection_of: inheres_in PO:0009049  ! inflorescence
 
 [Term]
 id: TO:0000788
@@ -7048,10 +7049,10 @@ def: "An inflorescence morphology trait (TO:0000373) that is associated with a t
 subset: Zea_mays
 xref: TO_GIT:89
 is_a: TO:0000373 ! inflorescence morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020126 ! tassel inflorescence
 created_by: moorel
 creation_date: 2012-05-18T13:45:59Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020126  ! tassel inflorescence
 
 [Term]
 id: TO:0000789
@@ -7059,10 +7060,10 @@ name: bud morphology trait
 def: "A shoot system morphology trait (TO:0000077) which is associated with a bud (PO:0000055)." [PO:0000055, TO:cooperl]
 xref: TO_GIT:91
 is_a: TO:0000077 ! shoot system morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0000055 ! bud
 created_by: moorel
 creation_date: 2012-05-24T13:52:40Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0000055  ! bud
 
 [Term]
 id: TO:0000790
@@ -7071,10 +7072,10 @@ def: "A bud morphology trait (TO:0000789) which is associated with an axillary b
 subset: Saccharum
 xref: TO_GIT:91
 is_a: TO:0000789 ! bud morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0004709 ! axillary bud
 created_by: moorel
 creation_date: 2012-05-24T13:55:08Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0004709  ! axillary bud
 
 [Term]
 id: TO:0000791
@@ -7085,10 +7086,10 @@ subset: Saccharum
 xref: PATO:0000117
 xref: TO_GIT:91
 is_a: TO:0000790 ! axillary bud morphology trait
+intersection_of: PATO:0000117 ! size
+intersection_of: inheres_in PO:0004709 ! axillary bud
 created_by: moorel
 creation_date: 2012-05-30T13:20:21Z
-intersection_of: PATO:0000117  ! size
-intersection_of: inheres_in PO:0004709  ! axillary bud
 
 [Term]
 id: TO:0000792
@@ -7111,10 +7112,10 @@ subset: Saccharum
 xref: PATO:0000052
 xref: TO_GIT:91
 is_a: TO:0000790 ! axillary bud morphology trait
+intersection_of: PATO:0000052 ! shape
+intersection_of: inheres_in PO:0004709 ! axillary bud
 created_by: moorel
 creation_date: 2012-05-30T13:25:45Z
-intersection_of: PATO:0000052  ! shape
-intersection_of: inheres_in PO:0004709  ! axillary bud
 
 [Term]
 id: TO:0000794
@@ -7137,10 +7138,10 @@ subset: Zea_mays
 xref: PATO:0000014
 xref: TO_GIT:89
 is_a: TO:0000788 ! tassel inflorescence morphology trait
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0020126 ! tassel inflorescence
 created_by: moorel
 creation_date: 2012-05-30T13:56:54Z
-intersection_of: PATO:0000014  ! color
-intersection_of: inheres_in PO:0020126  ! tassel inflorescence
 
 [Term]
 id: TO:0000796
@@ -7151,10 +7152,10 @@ subset: Zea_mays
 xref: PATO:0001684
 xref: TO_GIT:89
 is_a: TO:0000788 ! tassel inflorescence morphology trait
+intersection_of: PATO:0001648 ! circumference
+intersection_of: inheres_in PO:0020126 ! tassel inflorescence
 created_by: moorel
 creation_date: 2012-05-30T14:00:19Z
-intersection_of: PATO:0001648  ! circumference
-intersection_of: inheres_in PO:0020126  ! tassel inflorescence
 
 [Term]
 id: TO:0000797
@@ -7165,10 +7166,10 @@ subset: Zea_mays
 xref: PATO:0000119
 xref: TO_GIT:89
 is_a: TO:0000788 ! tassel inflorescence morphology trait
+intersection_of: PATO:0000119 ! height
+intersection_of: inheres_in PO:0020126 ! tassel inflorescence
 created_by: moorel
 creation_date: 2012-05-30T14:04:13Z
-intersection_of: PATO:0000119  ! height
-intersection_of: inheres_in PO:0020126  ! tassel inflorescence
 
 [Term]
 id: TO:0000798
@@ -7179,10 +7180,10 @@ subset: Zea_mays
 xref: PATO:0000122
 xref: TO_GIT:89
 is_a: TO:0000788 ! tassel inflorescence morphology trait
+intersection_of: PATO:0000122 ! length
+intersection_of: inheres_in PO:0020126 ! tassel inflorescence
 created_by: moorel
 creation_date: 2012-05-30T14:06:52Z
-intersection_of: PATO:0000122  ! length
-intersection_of: inheres_in PO:0020126  ! tassel inflorescence
 
 [Term]
 id: TO:0000799
@@ -7193,10 +7194,10 @@ subset: Zea_mays
 xref: PATO:0001334
 xref: TO_GIT:89
 is_a: TO:0000788 ! tassel inflorescence morphology trait
+intersection_of: PATO:0001334 ! diameter
+intersection_of: inheres_in PO:0020126 ! tassel inflorescence
 created_by: moorel
 creation_date: 2012-05-30T14:09:31Z
-intersection_of: PATO:0001334  ! diameter
-intersection_of: inheres_in PO:0020126  ! tassel inflorescence
 
 [Term]
 id: TO:0000800
@@ -7221,10 +7222,10 @@ xref: PATO:0001595
 xref: TO_GIT:92
 xref: TO_GIT:97
 is_a: TO:0000373 ! inflorescence morphology trait
+intersection_of: PATO:0001595 ! depth
+intersection_of: inheres_in PO:0009049 ! inflorescence
 created_by: moorel
 creation_date: 2012-06-01T13:18:51Z
-intersection_of: PATO:0001595  ! depth
-intersection_of: inheres_in PO:0009049  ! inflorescence
 
 [Term]
 id: TO:0000802
@@ -7237,10 +7238,10 @@ xref: PATO:0001334
 xref: TO_GIT:92
 xref: TO_GIT:97
 is_a: TO:0000373 ! inflorescence morphology trait
+intersection_of: PATO:0001334 ! diameter
+intersection_of: inheres_in PO:0009049 ! inflorescence
 created_by: moorel
 creation_date: 2012-06-01T13:20:49Z
-intersection_of: PATO:0001334  ! diameter
-intersection_of: inheres_in PO:0009049  ! inflorescence
 
 [Term]
 id: TO:0000803
@@ -7252,10 +7253,10 @@ xref: PATO:0000128
 xref: TO_GIT:92
 xref: TO_GIT:97
 is_a: TO:0000373 ! inflorescence morphology trait
+intersection_of: PATO:0000128 ! weight
+intersection_of: inheres_in PO:0009049 ! inflorescence
 created_by: moorel
 creation_date: 2012-06-01T13:23:12Z
-intersection_of: PATO:0000128  ! weight
-intersection_of: inheres_in PO:0009049  ! inflorescence
 
 [Term]
 id: TO:0000804
@@ -7269,11 +7270,11 @@ xref: PATO:0000921
 xref: TO_GIT:92
 xref: TO_GIT:97
 is_a: TO:0000373 ! inflorescence morphology trait
+intersection_of: PATO:0000921 ! width
+intersection_of: inheres_in PO:0009049 ! inflorescence
 relationship: part_of TO:0006031 ! inflorescence size
 created_by: moorel
 creation_date: 2012-06-01T13:25:43Z
-intersection_of: PATO:0000921  ! width
-intersection_of: inheres_in PO:0009049  ! inflorescence
 
 [Term]
 id: TO:0000805
@@ -7285,10 +7286,10 @@ xref: PATO:0000150
 xref: TO_GIT:92
 xref: TO_GIT:97
 is_a: TO:0000373 ! inflorescence morphology trait
+intersection_of: PATO:0000150 ! texture
+intersection_of: inheres_in PO:0009049 ! inflorescence
 created_by: moorel
 creation_date: 2012-06-01T13:28:08Z
-intersection_of: PATO:0000150  ! texture
-intersection_of: inheres_in PO:0009049  ! inflorescence
 
 [Term]
 id: TO:0000806
@@ -7309,10 +7310,10 @@ subset: Allium_porrum
 xref: TO_GIT:94
 xref: TO_GIT:96
 is_a: TO:0000841 ! collective organ part structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025248 ! pseudostem
 created_by: moorel
 creation_date: 2012-06-01T13:35:28Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025248  ! pseudostem
 
 [Term]
 id: TO:0000808
@@ -7323,10 +7324,10 @@ subset: Allium_porrum
 xref: PATO:0000122
 xref: TO_GIT:94
 is_a: TO:0000807 ! pseudostem morphology trait
+intersection_of: PATO:0000122 ! length
+intersection_of: inheres_in PO:0025248 ! pseudostem
 created_by: moorel
 creation_date: 2012-06-01T13:38:37Z
-intersection_of: PATO:0000122  ! length
-intersection_of: inheres_in PO:0025248  ! pseudostem
 
 [Term]
 id: TO:0000809
@@ -7338,10 +7339,10 @@ xref: PATO:0000052
 xref: TO_GIT:94
 xref: TO_GIT:96
 is_a: TO:0000807 ! pseudostem morphology trait
+intersection_of: PATO:0000052 ! shape
+intersection_of: inheres_in PO:0025248 ! pseudostem
 created_by: moorel
 creation_date: 2012-06-01T13:40:25Z
-intersection_of: PATO:0000052  ! shape
-intersection_of: inheres_in PO:0025248  ! pseudostem
 
 [Term]
 id: TO:0000810
@@ -7353,10 +7354,10 @@ xref: PATO:0000014
 xref: TO_GIT:94
 xref: TO_GIT:96
 is_a: TO:0000807 ! pseudostem morphology trait
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0025248 ! pseudostem
 created_by: moorel
 creation_date: 2012-06-01T13:43:28Z
-intersection_of: PATO:0000014  ! color
-intersection_of: inheres_in PO:0025248  ! pseudostem
 
 [Term]
 id: TO:0000811
@@ -7368,10 +7369,10 @@ xref: PATO:0001334
 xref: TO_GIT:94
 xref: TO_GIT:96
 is_a: TO:0000807 ! pseudostem morphology trait
+intersection_of: PATO:0001334 ! diameter
+intersection_of: inheres_in PO:0025248 ! pseudostem
 created_by: moorel
 creation_date: 2012-06-01T13:45:05Z
-intersection_of: PATO:0001334  ! diameter
-intersection_of: inheres_in PO:0025248  ! pseudostem
 
 [Term]
 id: TO:0000812
@@ -7414,10 +7415,10 @@ def: "A phyllome morphology trait (TO:0000747) with is associated with a bract (
 synonym: "<new synonym>" RELATED []
 xref: TO_GIT:109
 is_a: TO:0000747 ! phyllome morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009055 ! bract
 created_by: moorel
 creation_date: 2012-06-26T14:29:09Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009055  ! bract
 
 [Term]
 id: TO:0000816
@@ -7426,10 +7427,10 @@ def: "A bract morphology trait (TO:0000815) which is the quality of an infloresc
 synonym: "husk" EXACT []
 xref: TO_GIT:110
 is_a: TO:0000815 ! bract morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009054 ! inflorescence bract
 created_by: moorel
 creation_date: 2012-06-26T14:31:08Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009054  ! inflorescence bract
 
 [Term]
 id: TO:0000817
@@ -7441,10 +7442,10 @@ synonym: "husk length" EXACT []
 xref: PATO:0000122
 xref: TO_GIT:110
 is_a: TO:0000816 ! inflorescence bract morphology trait
+intersection_of: PATO:0000122 ! length
+intersection_of: inheres_in PO:0009054 ! inflorescence bract
 created_by: moorel
 creation_date: 2012-06-26T14:34:28Z
-intersection_of: PATO:0000122  ! length
-intersection_of: inheres_in PO:0009054 ! inflorescence bract
 
 [Term]
 id: TO:0000818
@@ -7467,10 +7468,10 @@ synonym: "husk color" EXACT []
 xref: PATO:0000014
 xref: TO_GIT:110
 is_a: TO:0000816 ! inflorescence bract morphology trait
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0009054 ! inflorescence bract
 created_by: moorel
 creation_date: 2012-06-26T14:41:14Z
-intersection_of: PATO:0000014  ! color
-intersection_of: inheres_in PO:0009054 ! inflorescence bract
 
 [Term]
 id: TO:0000820
@@ -7499,10 +7500,10 @@ def: "A leaf  vein morphology trait (TO:0000820) which is associated with a leaf
 synonym: "leaf midrib" BROAD []
 xref: TO_GIT:91
 is_a: TO:0000820 ! leaf vein morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020139 ! leaf midvein
 created_by: moorel
 creation_date: 2012-07-02T11:51:56Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020139  ! leaf midvein
 
 [Term]
 id: TO:0000823
@@ -7513,10 +7514,10 @@ synonym: "leaf midrib" BROAD []
 xref: PATO:0000915
 xref: TO_GIT:91
 is_a: TO:0000822 ! leaf midvein morphology trait
+intersection_of: PATO:0000915 ! thickness
+intersection_of: inheres_in PO:0020139 ! leaf midvein
 created_by: moorel
 creation_date: 2012-07-02T11:56:25Z
-intersection_of: PATO:0000915  ! thickness
-intersection_of: inheres_in PO:0020139  ! leaf midvein
 
 [Term]
 id: TO:0000824
@@ -7536,10 +7537,10 @@ comment: Refer to flexibility (PATO:0001543): A physical quality inhering in a b
 xref: PATO:0001543
 xref: TO_GIT:91
 is_a: TO:0000748 ! leaf morphology trait
+intersection_of: PATO:0001543 ! flexibility
+intersection_of: inheres_in PO:0025034 ! leaf
 created_by: moorel
 creation_date: 2012-07-02T12:12:45Z
-intersection_of: PATO:0001543  ! flexibility
-intersection_of: inheres_in PO:0025034  ! leaf
 
 [Term]
 id: TO:0000826
@@ -7549,10 +7550,10 @@ comment: Refer to volume (PATO:0000918): A 3-D extent quality inhering in a bear
 xref: PATO:0000918
 xref: TO_GIT:91
 is_a: TO:0000748 ! leaf morphology trait
+intersection_of: PATO:0000918 ! volume
+intersection_of: inheres_in PO:0025034 ! leaf
 created_by: moorel
 creation_date: 2012-07-02T12:21:58Z
-intersection_of: PATO:0000918  ! volume
-intersection_of: inheres_in PO:0025034  ! leaf
 
 [Term]
 id: TO:0000827
@@ -7562,10 +7563,10 @@ comment: Refer to area (PATO:0001323): A 2-D extent quality inhering in a bearer
 xref: PATO:0001323
 xref: TO_GIT:91
 is_a: TO:0000829 ! leaf lamina morphology trait
+intersection_of: PATO:0001323 ! area
+intersection_of: inheres_in PO:0020039 ! leaf lamina
 created_by: moorel
 creation_date: 2012-07-02T12:30:01Z
-intersection_of: PATO:0001323  ! area
-intersection_of: inheres_in PO:0020039  ! leaf lamina
 
 [Term]
 id: TO:0000828
@@ -7581,10 +7582,10 @@ id: TO:0000829
 name: leaf lamina morphology trait
 def: "A leaf morphology trait (TO:0000748) which is associated with a leaf lamina (PO:0020039)." [PO:0020039]
 is_a: TO:0000748 ! leaf morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020039 ! leaf lamina
 created_by: moorel
 creation_date: 2012-07-02T13:36:23Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020039  ! leaf lamina
 
 [Term]
 id: TO:0000830
@@ -7592,10 +7593,10 @@ name: leaf lamina margin morphology trait
 def: "A leaf margin morphology trait (TO:0002635) which is associated with a leaf lamina margin (PO:0025009)." [PO:0025009, TO:moorel]
 xref: TO_GIT:142
 is_a: TO:0002635 ! leaf margin morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025009 ! leaf lamina margin
 created_by: moorel
 creation_date: 2012-07-02T13:58:07Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025009  ! leaf lamina margin
 
 [Term]
 id: TO:0000831
@@ -7612,10 +7613,10 @@ name: flag leaf morphology trait
 def: "An adult vascular leaf morphology trait (TO:0000831) which is associated with a flag leaf (PO:0020103)." [PO:0020103, TO:moorel]
 xref: TO_GIT:141
 is_a: TO:0000831 ! adult leaf morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020103 ! flag leaf
 created_by: moorel
 creation_date: 2012-07-03T12:06:07Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020103  ! flag leaf
 
 [Term]
 id: TO:0000833
@@ -7623,10 +7624,10 @@ name: organ margin morphology trait
 def: "A cardinal organ part morphology trait (TO:0000754) which is associated with a organ margin (PO:0025005)." [PO:0025005, TO:moorel]
 xref: TO_GIT:142
 is_a: TO:0000754 ! cardinal organ part morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025005 ! organ margin
 created_by: moorel
 creation_date: 2012-07-03T12:54:18Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025005  ! organ margin
 
 [Term]
 id: TO:0000834
@@ -7634,10 +7635,10 @@ name: phyllome margin morphology trait
 def: "An organ margin morphology trait (TO:0000833) which is associated with a phyllome margin (PO:0025018)." [PO:0025018, TO:moorel]
 xref: TO_GIT:142
 is_a: TO:0000833 ! organ margin morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025018 ! phyllome margin
 created_by: moorel
 creation_date: 2012-07-03T12:56:42Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025018  ! phyllome margin
 
 [Term]
 id: TO:0000835
@@ -7645,10 +7646,10 @@ name: leaf sheath morphology trait
 def: "A cardinal organ part morphology trait (TO:0000754) which is associated with a leaf sheath (PO:0020104)." [PO:0020104, TO:moorel]
 xref: TO_GIT:143
 is_a: TO:0000754 ! cardinal organ part morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020104 ! leaf sheath
 created_by: moorel
 creation_date: 2012-07-03T13:07:07Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020104  ! leaf sheath
 
 [Term]
 id: TO:0000836
@@ -7656,10 +7657,10 @@ name: multi-tissue plant structure morphology trait
 def: "A plant structure morphology trait (TO:0000839) which is a quality of a multi-tissue plant structure (PO:0025496)." [PO:0025496, TO:moorel]
 xref: TO_GIT:147
 is_a: TO:0000839 ! plant structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025496 ! multi-tissue plant structure
 created_by: moorel
 creation_date: 2012-07-09T11:41:28Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025496  ! multi-tissue plant structure
 
 [Term]
 id: TO:0000837
@@ -7676,10 +7677,10 @@ name: seed coat morphology trait
 def: "A portion of plant tissue morphology trait (TO:0000843) which is associated with the seed coat (PO:0009088)." [PO:0009088, TO:moorel]
 xref: TO_GIT:76
 is_a: TO:0000843 ! portion of plant tissue morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009088 ! seed coat
 created_by: moorel
 creation_date: 2012-07-11T11:29:01Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009088  ! seed coat
 
 [Term]
 id: TO:0000839
@@ -7687,10 +7688,10 @@ name: plant structure morphology trait
 def: "A plant morphology trait (TO:0000017) which is a quality of a plant structure (PO:0009011)." [PO:0009011, TO:cooperl, TO:moorel]
 xref: TO_GIT:149
 is_a: TO:0000017 ! plant morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009011 ! plant structure
 created_by: moorel
 creation_date: 2012-07-12T11:29:26Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009011  ! plant structure
 
 [Term]
 id: TO:0000840
@@ -7698,10 +7699,10 @@ name: collective plant structure morphology trait
 def: "A plant structure morphology trait (TO:0000839) which is a quality of a collective plant structure (PO:0025497)." [PO:0025497, TO:cooperl, TO:moorel]
 xref: TO_GIT:150
 is_a: TO:0000839 ! plant structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025497 ! collective plant structure
 created_by: moorel
 creation_date: 2012-07-12T11:42:53Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025497  ! collective plant structure
 
 [Term]
 id: TO:0000841
@@ -7709,10 +7710,10 @@ name: collective organ part structure morphology trait
 def: "A collective plant structure morphology trait (TO:0000840) which is a quality of a collective organ part structure (PO:0025269)." [PO:0025269, TO:cooperl, TO:moorel]
 xref: TO_GIT:150
 is_a: TO:0000840 ! collective plant structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025269 ! collective organ part structure
 created_by: moorel
 creation_date: 2012-07-12T11:49:46Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025269  ! collective organ part structure
 
 [Term]
 id: TO:0000842
@@ -7720,10 +7721,10 @@ name: collective plant organ structure morphology trait
 def: "A collective plant structure morphology trait (TO:0000840) which is a quality of a collective plant organ structure (PO:0025007)." [PO:0025007, TO:cooperl, TO:moorel]
 xref: TO_GIT:150
 is_a: TO:0000840 ! collective plant structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025007 ! collective plant organ structure
 created_by: moorel
 creation_date: 2012-07-12T11:55:17Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025007  ! collective plant organ structure
 
 [Term]
 id: TO:0000843
@@ -7731,10 +7732,10 @@ name: portion of plant tissue morphology trait
 def: "A plant structure morphology trait (TO:0000839) which is a quality of a portion of plant tissue (PO:0009007)." [PO:0009007, TO:moorel]
 xref: TO_GIT:151
 is_a: TO:0000839 ! plant structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009007 ! portion of plant tissue
 created_by: moorel
 creation_date: 2012-07-12T12:18:33Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009007  ! portion of plant tissue
 
 [Term]
 id: TO:0000844
@@ -7742,10 +7743,10 @@ name: in vitro plant structure morphology trait
 def: "A plant structure morphology trait (TO:0000839) which is a quality of an in vitro plant structure (PO:0000004)." [PO:0000004, TO:moorel]
 xref: TO_GIT:149
 is_a: TO:0000839 ! plant structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0000004 ! in vitro plant structure
 created_by: moorel
 creation_date: 2012-07-12T13:52:02Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0000004  ! in vitro plant structure
 
 [Term]
 id: TO:0000845
@@ -7754,10 +7755,10 @@ def: "A collective plant organ structure morphology trait (TO:0000842) which is 
 synonym: "<new synonym>" RELATED []
 xref: TO_GIT:304
 is_a: TO:0000842 ! collective plant organ structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025023 ! collective phyllome structure
 created_by: moorel
 creation_date: 2012-07-13T11:30:15Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025023  ! collective phyllome structure
 
 [Term]
 id: TO:0000846
@@ -7784,10 +7785,10 @@ def: "A fruit size trait (TO:0002625) which is associated with the diameter of a
 comment: Refer to diameter (PATO:0001334): A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
 xref: PATO:0001334
 is_a: TO:0002625 ! fruit size
+intersection_of: PATO:0001334 ! diameter
+intersection_of: inheres_in PO:0009001 ! fruit
 created_by: moorel
 creation_date: 2012-07-16T12:31:27Z
-intersection_of: PATO:0001334  ! diameter
-intersection_of: inheres_in PO:0009001  ! fruit
 
 [Term]
 id: TO:0000849
@@ -7868,10 +7869,10 @@ comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to 
 xref: PATO:0000122
 xref: TO_GIT:105
 is_a: TO:0006009 ! lodicule morphology trait
+intersection_of: PATO:0000122 ! length
+intersection_of: inheres_in PO:0009036 ! lodicule
 created_by: moorel
 creation_date: 2012-07-16T13:47:12Z
-intersection_of: PATO:0000122  ! length
-intersection_of: inheres_in PO:0009036  ! lodicule
 
 [Term]
 id: TO:0000857
@@ -7890,10 +7891,10 @@ comment: Refer to diameter (PATO:0001334): A length quality which is equal to th
 xref: PATO:0001334
 xref: TO_GIT:105
 is_a: TO:0000499 ! flower morphology trait
+intersection_of: PATO:0001334 ! diameter
+intersection_of: inheres_in PO:0009046 ! flower
 created_by: moorel
 creation_date: 2012-07-25T10:16:56Z
-intersection_of: PATO:0001334  ! diameter
-intersection_of: inheres_in PO:0009046  ! flower
 
 [Term]
 id: TO:0000859
@@ -7903,10 +7904,10 @@ comment: Refer to shape (PATO:0000052): A morphological quality inhering in a be
 xref: PATO:0000052
 xref: TO_GIT:105
 is_a: TO:0000499 ! flower morphology trait
+intersection_of: PATO:0000052 ! shape
+intersection_of: inheres_in PO:0009046 ! flower
 created_by: moorel
 creation_date: 2012-07-25T10:21:29Z
-intersection_of: PATO:0000052  ! shape
-intersection_of: inheres_in PO:0009046  ! flower
 
 [Term]
 id: TO:0000860
@@ -7916,10 +7917,10 @@ comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to 
 xref: PATO:0000122
 xref: TO_GIT:105
 is_a: TO:0000499 ! flower morphology trait
+intersection_of: PATO:0000122 ! length
+intersection_of: inheres_in PO:0009046 ! flower
 created_by: moorel
 creation_date: 2012-07-25T10:27:25Z
-intersection_of: PATO:0000122  ! length
-intersection_of: inheres_in PO:0009046  ! flower
 
 [Term]
 id: TO:0000861
@@ -7936,10 +7937,10 @@ name: floral organ morphology trait
 def: "A plant organ morphology trait (TO:0000736) which is associated with a floral organ (PO:0025395)." [PO:0025395, TO:moorel]
 xref: TO_GIT:160
 is_a: TO:0000736 ! plant organ morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025395 ! floral organ
 created_by: moorel
 creation_date: 2012-07-25T10:47:57Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025395  ! floral organ
 
 [Term]
 id: TO:0000863
@@ -7947,10 +7948,10 @@ name: petal morphology trait
 def: "A phyllome morphology trait (TO:0000747) which is associated with a petal (PO:0009032)." [PO:0009032, TO:moorel]
 xref: TO_GIT:161
 is_a: TO:0000747 ! phyllome morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009032 ! petal
 created_by: moorel
 creation_date: 2012-07-25T11:18:56Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009032  ! petal
 
 [Term]
 id: TO:0000864
@@ -7958,10 +7959,10 @@ name: sepal morphology trait
 def: "A phyllome morphology trait (TO:0000747) which is associated with a sepal (PO:0009031)." [PO:0009031, TO:moorel]
 xref: TO_GIT:161
 is_a: TO:0000747 ! phyllome morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009031 ! sepal
 created_by: moorel
 creation_date: 2012-07-25T11:22:26Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009031  ! sepal
 
 [Term]
 id: TO:0000865
@@ -7969,10 +7970,10 @@ name: tepal morphology trait
 def: "A phyllome morphology trait (TO:0000747) which is associated with a tepal (PO:0009033)." [PO:0009033, TO:moorel]
 xref: TO_GIT:161
 is_a: TO:0000747 ! phyllome morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009033 ! tepal
 created_by: moorel
 creation_date: 2012-07-25T12:19:50Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009033  ! tepal
 
 [Term]
 id: TO:0000866
@@ -7980,10 +7981,10 @@ name: sporophyll morphology trait
 def: "A phyllome morphology trait (TO:0000747) which is associated with a sporophyll (PO:0009026)." [PO:0009026, TO:moorel]
 xref: TO_GIT:162
 is_a: TO:0000747 ! phyllome morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009026 ! sporophyll
 created_by: moorel
 creation_date: 2012-07-25T13:04:01Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009026  ! sporophyll
 
 [Term]
 id: TO:0000867
@@ -7991,20 +7992,20 @@ name: megasporophyll morphology trait
 def: "A sporophyll morphology trait (TO:0000866) which is associated with a megasporophyll (PO:0009027)." [PO:0009027, TO:moorel]
 xref: TO_GIT:162
 is_a: TO:0000866 ! sporophyll morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009027 ! megasporophyll
 created_by: moorel
 creation_date: 2012-07-25T13:05:52Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009027  ! megasporophyll
 
 [Term]
 id: TO:0000868
 name: microsporophyll morphology trait
 def: "A sporophyll morphology trait (TO:0000866) which is associated with a microsporophyll (PO:0009028)." [PO:0009028, TO:moorel]
 is_a: TO:0000866 ! sporophyll morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009028 ! microsporophyll
 created_by: moorel
 creation_date: 2012-07-25T13:07:55Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009028  ! microsporophyll
 
 [Term]
 id: TO:0000869
@@ -8012,11 +8013,11 @@ name: glume morphology trait
 def: "An inflorescence bract morphology trait (TO:0000816) which is associated with a glume (PO:0009039)." [PO:0009039, TO:moorel]
 xref: TO_GIT:166
 is_a: TO:0000816 ! inflorescence bract morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009039 ! glume
 relationship: part_of TO:0000657 ! spikelet morphology trait
 created_by: moorel
 creation_date: 2012-08-08T11:50:03Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009039  ! glume
 
 [Term]
 id: TO:0000870
@@ -8045,10 +8046,10 @@ def: "A leaf attitude (TO:0000824) which is associated with a leaf held upright 
 comment: Refer to erect (PATO:0000622): A positional quality inhering in a bearer by virtue of the bearer's being upright in position or posture.
 xref: PATO:0000622
 is_a: TO:0000824 ! leaf attitude
+intersection_of: PATO:0000622 ! erect
+intersection_of: inheres_in PO:0025034 ! leaf
 created_by: moorel
 creation_date: 2012-10-09T13:55:46Z
-intersection_of: PATO:0000622  ! erect
-intersection_of: inheres_in PO:0025034  ! leaf
 
 [Term]
 id: TO:0000873
@@ -8057,10 +8058,10 @@ def: "A leaf attitude (TO:0000824) which is associated with a leaf hanging strai
 comment: Refer to prostrate (PATO:0000631): A positional quality inhering in a bearer by virtue of the bearer's being stretched out and lying at full length along the ground.
 xref: PATO:0000631
 is_a: TO:0000824 ! leaf attitude
+intersection_of: PATO:0000631 ! prostrate
+intersection_of: inheres_in PO:0025034 ! leaf
 created_by: moorel
 creation_date: 2012-10-09T14:01:24Z
-intersection_of: PATO:0000631  ! prostrate
-intersection_of: inheres_in PO:0025034  ! leaf
 
 [Term]
 id: TO:0000874
@@ -8087,10 +8088,10 @@ name: spine leaf morphology trait
 def: "A vascular leaf morphology trait (TO:0000419) which is associated with a spine leaf (PO:0025173)." [PO:0025173, TO:moorel]
 xref: TO_GIT:158
 is_a: TO:0000419 ! vascular leaf morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025173 ! spine leaf
 created_by: moorel
 creation_date: 2012-10-09T14:46:53Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025173  ! spine leaf
 
 [Term]
 id: TO:0000877
@@ -8100,10 +8101,10 @@ comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer
 xref: PATO:0000117
 xref: TO_GIT:158
 is_a: TO:0000876 ! spine leaf morphology trait
+intersection_of: PATO:0000117 ! size
+intersection_of: inheres_in PO:0025173 ! spine leaf
 created_by: moorel
 creation_date: 2012-10-09T14:48:19Z
-intersection_of: PATO:0000117  ! size
-intersection_of: inheres_in PO:0025173  ! spine leaf
 
 [Term]
 id: TO:0000878
@@ -8113,10 +8114,10 @@ comment: Refer to color (PATO:0000014): A composite chromatic quality composed o
 xref: PATO:0000014
 xref: TO_GIT:158
 is_a: TO:0000876 ! spine leaf morphology trait
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0025173 ! spine leaf
 created_by: moorel
 creation_date: 2012-10-09T14:52:10Z
-intersection_of: PATO:0000014  ! color
-intersection_of: inheres_in PO:0025173  ! spine leaf
 
 [Term]
 id: TO:0000879
@@ -8136,10 +8137,10 @@ comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to 
 xref: PATO:0000122
 xref: TO_GIT:76
 is_a: TO:0000838 ! seed coat morphology trait
+intersection_of: PATO:0000122 ! length
+intersection_of: inheres_in PO:0009088 ! seed coat
 created_by: moorel
 creation_date: 2012-10-09T15:27:02Z
-intersection_of: PATO:0000122  ! length
-intersection_of: inheres_in PO:0009088  ! seed coat
 
 [Term]
 id: TO:0000881
@@ -8174,10 +8175,10 @@ name: petiolule morphology trait
 def: "A stalk morphology trait (TO:0000764) which is associated with a petiolule (PO:0020050)." [PO:0020050, TO:moorel]
 xref: TO_GIT:176
 is_a: TO:0000764 ! stalk morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020050 ! petiolule
 created_by: moorel
 creation_date: 2012-10-11T11:53:06Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020050  ! petiolule
 
 [Term]
 id: TO:0000885
@@ -8187,10 +8188,10 @@ comment: Refer to color (PATO:0000014): A composite chromatic quality composed o
 xref: PATO:0000014
 xref: TO_GIT:176
 is_a: TO:0000884 ! petiolule morphology trait
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0020050 ! petiolule
 created_by: moorel
 creation_date: 2012-10-11T11:55:06Z
-intersection_of: PATO:0000014  ! color
-intersection_of: inheres_in PO:0020050  ! petiolule
 
 [Term]
 id: TO:0000886
@@ -8200,10 +8201,10 @@ comment: Refer to shape (PATO:0000052): A morphological quality inhering in a be
 xref: PATO:0000052
 xref: TO_GIT:176
 is_a: TO:0000884 ! petiolule morphology trait
+intersection_of: PATO:0000052 ! shape
+intersection_of: inheres_in PO:0020050 ! petiolule
 created_by: moorel
 creation_date: 2012-10-11T12:02:02Z
-intersection_of: PATO:0000052  ! shape
-intersection_of: inheres_in PO:0020050  ! petiolule
 
 [Term]
 id: TO:0000887
@@ -8213,10 +8214,10 @@ comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to 
 xref: PATO:0000122
 xref: TO_GIT:176
 is_a: TO:0000884 ! petiolule morphology trait
+intersection_of: PATO:0000122 ! length
+intersection_of: inheres_in PO:0020050 ! petiolule
 created_by: moorel
 creation_date: 2012-10-11T12:05:48Z
-intersection_of: PATO:0000122  ! length
-intersection_of: inheres_in PO:0020050  ! petiolule
 
 [Term]
 id: TO:0000888
@@ -8237,10 +8238,10 @@ xref: PATO:0000048
 xref: TO_GIT:148
 xref: TO_GIT:76
 is_a: TO:0000838 ! seed coat morphology trait
+intersection_of: PATO:0000048 ! hardness
+intersection_of: inheres_in PO:0009088 ! seed coat
 created_by: moorel
 creation_date: 2012-10-11T12:29:15Z
-intersection_of: PATO:0000048  ! hardness
-intersection_of: inheres_in PO:0009088  ! seed coat
 
 [Term]
 id: TO:0000890
@@ -8271,10 +8272,10 @@ synonym: "stalk size" RELATED []
 xref: PATO:0000117
 xref: TO_GIT:157
 is_a: TO:0000361 ! stem morphology trait
+intersection_of: PATO:0000117 ! size
+intersection_of: inheres_in PO:0009047 ! stem
 created_by: moorel
 creation_date: 2012-11-20T15:35:42Z
-intersection_of: PATO:0000117  ! size
-intersection_of: inheres_in PO:0009047  ! stem
 
 [Term]
 id: TO:0000893
@@ -8285,10 +8286,10 @@ synonym: "core shape" NARROW []
 xref: PATO:0000052
 xref: TO_GIT:80
 is_a: TO:0000361 ! stem morphology trait
+intersection_of: PATO:0000052 ! shape
+intersection_of: inheres_in PO:0009047 ! stem
 created_by: moorel
 creation_date: 2012-11-20T15:44:05Z
-intersection_of: PATO:0000052  ! shape
-intersection_of: inheres_in PO:0009047  ! stem
 
 [Term]
 id: TO:0000894
@@ -8335,10 +8336,10 @@ name: root nodule morphology trait
 def: "A cardinal organ part morphology trait (TO:0000754) which is associated with a root nodule (PO:0003023)." [PO:0003023, TO:moorel]
 xref: TO_GIT:181
 is_a: TO:0000754 ! cardinal organ part morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0003023 ! root nodule
 created_by: moorel
 creation_date: 2013-01-24T14:24:48Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0003023  ! root nodule
 
 [Term]
 id: TO:0000899
@@ -8348,10 +8349,10 @@ comment: Refer to weight (PATO:0000128): A physical quality inhering in a bearer
 xref: PATO:0000128
 xref: TO_GIT:181
 is_a: TO:0000898 ! root nodule morphology trait
+intersection_of: PATO:0000128 ! weight
+intersection_of: inheres_in PO:0003023 ! root nodule
 created_by: moorel
 creation_date: 2013-01-24T14:26:46Z
-intersection_of: PATO:0000128  ! weight
-intersection_of: inheres_in PO:0003023  ! root nodule
 
 [Term]
 id: TO:0000900
@@ -8394,10 +8395,10 @@ comment: Refer to texture (PATO:0000150): A morphologic quality inhering in a be
 xref: PATO:0000150
 xref: TO_GIT:147
 is_a: TO:0000838 ! seed coat morphology trait
+intersection_of: PATO:0000150 ! texture
+intersection_of: inheres_in PO:0009088 ! seed coat
 created_by: moorel
 creation_date: 2013-01-24T14:45:40Z
-intersection_of: PATO:0000150  ! texture
-intersection_of: inheres_in PO:0009088  ! seed coat
 
 [Term]
 id: TO:0000904
@@ -8430,10 +8431,10 @@ synonym: "epicarp morphology trait " EXACT []
 xref: TO_GIT:117
 xref: TO_GIT:295
 is_a: TO:0000843 ! portion of plant tissue morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009085 ! exocarp
 created_by: cooperl
 creation_date: 2013-04-28T15:48:43Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009085  ! exocarp
 
 [Term]
 id: TO:0000907
@@ -8445,10 +8446,10 @@ xref: TO_GIT:117
 xref: TO_GIT:295
 is_a: TO:0000906 ! exocarp morphology trait
 is_a: TO:0002728 ! fruit quality trait
+intersection_of: PATO:0000915 ! thickness
+intersection_of: inheres_in PO:0009085 ! exocarp
 created_by: cooperl
 creation_date: 2013-04-28T16:05:01Z
-intersection_of: PATO:0000915  ! thickness
-intersection_of: inheres_in PO:0009085  ! exocarp
 
 [Term]
 id: TO:0000908
@@ -8487,10 +8488,10 @@ name: trichome morphology trait
 def: "A plant structure morphology trait (TO:0000839) which is a quality of a trichome (PO:0000282)." [PO:0000282, TO:moorel]
 xref: TO_GIT:228
 is_a: TO:0000839 ! plant structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0000282 ! trichome
 created_by: moorel
 creation_date: 2013-06-18T14:29:56Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0000282  ! trichome
 
 [Term]
 id: TO:0000912
@@ -8535,10 +8536,10 @@ def: "A trichome morphology trait (TO:0000911) which is associated with a club-s
 comment: Clavate (PATO:0001883): A concave 3-D shape quality inhering in a bearer by virtue of the bearer's gradually becoming thicker towards the end.
 xref: TO_GIT:228
 is_a: TO:0000911 ! trichome morphology trait
+intersection_of: PATO:0001883 ! clavate
+intersection_of: inheres_in PO:0000282 ! trichome
 created_by: moorel
 creation_date: 2013-06-19T10:06:59Z
-intersection_of: PATO:0001883  ! clavate
-intersection_of: inheres_in PO:0000282  ! trichome
 
 [Term]
 id: TO:0000917
@@ -8576,10 +8577,10 @@ name: infructescence morphology trait
 def: "A reproductive shoot system morphology trait (TO:0000786) which is associated with the qualities of the infructescence (PO:0006342)." [POC:cooperl]
 xref: TO_GIT:244
 is_a: TO:0000786 ! reproductive shoot system morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0006342 ! infructescence
 created_by: cooperl
 creation_date: 2013-11-15T13:32:29Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0006342  ! infructescence
 
 [Term]
 id: TO:0000921
@@ -8587,10 +8588,10 @@ name: infructescence axis morphology trait
 def: "A shoot axis morphology trait (TO:0000739) which is associated with an infructescence axis (PO:0025242)." [TO:cooperl]
 xref: TO_GIT:243
 is_a: TO:0000739 ! shoot axis morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025242 ! infructescence axis
 created_by: cooperl
 creation_date: 2013-11-15T15:54:24Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025242  ! infructescence axis
 
 [Term]
 id: TO:0000922
@@ -8614,10 +8615,10 @@ xref: MaizeGDB_QTL:65408
 xref: PATO:0000125
 xref: TO_GIT:244
 is_a: TO:0000583 ! infructescence weight
+intersection_of: PATO:0000128 ! weight
+intersection_of: inheres_in PO:0020136 ! ear inflorescence
 created_by: cooperl
 creation_date: 2013-12-10T20:53:38Z
-intersection_of: PATO:0000128  ! weight
-intersection_of: inheres_in PO:0020136  ! ear inflorescence
 
 [Term]
 id: TO:0000924
@@ -8637,10 +8638,10 @@ name: non-vascular leaf morphology trait
 def: "A leaf morphology trait (TO:0000748) which is associated with a non-vascular leaf (PO:0025075)." [PO:0025075, TO:moorel]
 xref: TO_GIT:246
 is_a: TO:0000748 ! leaf morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025075 ! non-vascular leaf
 created_by: moorel
 creation_date: 2014-01-07T13:45:07Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025075  ! non-vascular leaf
 
 [Term]
 id: TO:0000926
@@ -8705,10 +8706,10 @@ synonym: "D-mannose content " NARROW []
 synonym: "man content " RELATED []
 xref: TO_GIT:259
 is_a: TO:0000307 ! hexose content
+intersection_of: PATO:0000025 ! composition
+intersection_of: inheres_in CHEBI:37684 ! mannose
 created_by: cooperl
 creation_date: 2014-04-30T11:28:13Z
-intersection_of: PATO:0000025  ! composition
-intersection_of: inheres_in CHEBI:37684  ! mannose
 
 [Term]
 id: TO:0000933
@@ -8807,11 +8808,11 @@ subset: Triticum_aestivum
 subset: Zea_mays
 xref: TO_GIT:291
 is_a: TO:0000843 ! portion of plant tissue morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0005360 ! aleurone layer
 relationship: part_of TO:0000575 ! endosperm morphology trait
 created_by: cooperl
 creation_date: 2015-07-21T15:15:42Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0005360  ! aleurone layer
 
 [Term]
 id: TO:0000943
@@ -8820,10 +8821,10 @@ def: "An aleurone layer appearance (TO:0000944) that is associated with the colo
 xref: PATO:0000014
 xref: TO_GIT:291
 is_a: TO:0000944 ! aleurone layer appearance
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0005360 ! aleurone layer
 created_by: cooperl
 creation_date: 2015-07-21T15:16:24Z
-intersection_of: PATO:0000014  ! color
-intersection_of: inheres_in PO:0005360  ! aleurone layer
 
 [Term]
 id: TO:0000944
@@ -8840,10 +8841,10 @@ name: pericarp morphology trait
 def: "A portion of plant tissue morphology trait (TO:0000843) which is associated with the qualities of the pericarp (PO:0009084)." [TO:cooperl]
 xref: TO_GIT:292
 is_a: TO:0000843 ! portion of plant tissue morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009084 ! pericarp
 created_by: cooperl
 creation_date: 2015-07-22T15:54:55Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009084  ! pericarp
 
 [Term]
 id: TO:0000946
@@ -8851,10 +8852,10 @@ name: endocarp morphology trait
 def: "A portion of plant tissue morphology trait (TO:0000843) which is associated with the qualities of the endocarp (PO:0009086)." [TO:austin_meier]
 xref: TO_GIT:293
 is_a: TO:0000843 ! portion of plant tissue morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009086 ! endocarp
 created_by: austinmeier
 creation_date: 2015-07-22T17:16:05Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009086  ! endocarp
 
 [Term]
 id: TO:0000947
@@ -8871,10 +8872,10 @@ name: mesocarp morphology trait
 def: "A portion of plant tissue morphology trait (TO:0000843) which is associated with the qualities of the mesocarp (PO:0009087)." [TO:austin_meier]
 xref: TO_GIT:294
 is_a: TO:0000843 ! portion of plant tissue morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009087 ! mesocarp
 created_by: austinmeier
 creation_date: 2015-07-22T17:28:39Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009087  ! mesocarp
 
 [Term]
 id: TO:0000949
@@ -8891,10 +8892,10 @@ name: corolla morphology trait
 def: "A collective phyllome structure morphology trait (TO:0000845) that is a quality of a corolla (PO:0009059)." [TO:cooperl]
 xref: TO_GIT:299
 is_a: TO:0000845 ! collective phyllome structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009059 ! corolla
 created_by: cooperl
 creation_date: 2015-07-27T14:48:47Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009059  ! corolla
 
 [Term]
 id: TO:0000951
@@ -8903,10 +8904,10 @@ def: "A corolla morphology trait (TO:0000950) that is the color of a corolla (PO
 xref: PATO:0000014
 xref: TO_GIT:299
 is_a: TO:0000950 ! corolla morphology trait
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0009059 ! corolla
 created_by: cooperl
 creation_date: 2015-07-27T15:41:16Z
-intersection_of: PATO:0000014  ! color
-intersection_of: inheres_in PO:0009059  ! corolla
 
 [Term]
 id: TO:0000952
@@ -8916,10 +8917,10 @@ synonym: "stalk weight" NARROW []
 xref: PATO:0000128
 xref: TO_GIT:157
 is_a: TO:0000361 ! stem morphology trait
+intersection_of: PATO:0000128 ! weight
+intersection_of: inheres_in PO:0009047 ! stem
 created_by: cooperl
 creation_date: 2015-08-27T15:05:35Z
-intersection_of: PATO:0000128  ! weight
-intersection_of: inheres_in PO:0009047  ! stem
 
 [Term]
 id: TO:0000953
@@ -8939,10 +8940,10 @@ def: "An inflorescence branch morphology trait (TO:0000784) that is associated w
 xref: PATO:0000051
 xref: TO_GIT:106
 is_a: TO:0000784 ! inflorescence branch morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009080 ! spikelet rachilla
 created_by: johnseth
 creation_date: 2015-10-19T14:35:34Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009080  ! spikelet rachilla
 
 [Term]
 id: TO:0000955
@@ -9023,10 +9024,10 @@ synonym: "ear infructescence color " EXACT []
 xref: PATO:0000014
 xref: TO_GIT:132
 is_a: TO:0000976 ! ear infructescence morphology trait
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0020136 ! ear inflorescence
 created_by: johnseth
 creation_date: 2015-09-01T15:52:16Z
-intersection_of: PATO:0000014  ! color
-intersection_of: inheres_in PO:0020136  ! ear inflorescence
 
 [Term]
 id: TO:0000964
@@ -9036,10 +9037,10 @@ synonym: "ear infructescence shape" EXACT []
 xref: PATO:0000052
 xref: TO_GIT:132
 is_a: TO:0000976 ! ear infructescence morphology trait
+intersection_of: PATO:0000052 ! shape
+intersection_of: inheres_in PO:0020136 ! ear inflorescence
 created_by: johnseth
 creation_date: 2015-09-01T16:07:23Z
-intersection_of: PATO:0000052  ! shape
-intersection_of: inheres_in PO:0020136 ! ear inflorescence
 
 [Term]
 id: TO:0000965
@@ -9058,10 +9059,10 @@ def: "An ear infructescence morphology trait (TO:0000976) which is associated wi
 synonym: "ear infructescence position" EXACT []
 xref: TO_GIT:132
 is_a: TO:0000976 ! ear infructescence morphology trait
+intersection_of: PATO:0000140 ! position
+intersection_of: inheres_in PO:0020136 ! ear inflorescence
 created_by: johnseth
 creation_date: 2015-09-01T16:17:13Z
-intersection_of: PATO:0000140  ! position
-intersection_of: inheres_in PO:0020136 ! ear inflorescence
 
 [Term]
 id: TO:0000967
@@ -9069,10 +9070,10 @@ name: hilum morphology trait
 def: "A seed morphology trait (TO:0000184) which is associated with a hilum (PO:0020063)." [POC:austin_meier]
 xref: TO_GIT:81
 is_a: TO:0000184 ! seed morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020063 ! hilum
 created_by: meiera
 creation_date: 2015-10-13T11:16:35Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020063  ! hilum
 
 [Term]
 id: TO:0000968
@@ -9080,10 +9081,10 @@ name: hilum color
 def: "A hilum morphology trait (TO:0000967) which is associated with the color of a hilum (PO:0020063)." [POC:austin_meier]
 xref: TO_GIT:81
 is_a: TO:0000967 ! hilum morphology trait
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0020063 ! hilum
 created_by: meiera
 creation_date: 2015-10-13T11:19:20Z
-intersection_of: PATO:0000014  ! color
-intersection_of: inheres_in PO:0020063  ! hilum
 
 [Term]
 id: TO:0000969
@@ -9091,10 +9092,10 @@ name: ear inflorescence morphology trait
 def: "An inflorescence morphology trait (TO:0000373) which is associated with the qualities of an ear inflorescence (PO:0020136)." [TO:cooperl]
 xref: TO_GIT:97
 is_a: TO:0000373 ! inflorescence morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020136 ! ear inflorescence
 created_by: cooperl
 creation_date: 2015-10-16T14:24:59Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020136  ! ear inflorescence
 
 [Term]
 id: TO:0000970
@@ -9125,10 +9126,10 @@ synonym: "rachilla length " BROAD []
 xref: PATO:0000122
 xref: TO_GIT:106
 is_a: TO:0000954 ! spikelet rachilla morphology trait
+intersection_of: PATO:0000122 ! length
+intersection_of: inheres_in PO:0009080 ! spikelet rachilla
 created_by: johnseth
 creation_date: 2015-10-19T14:40:20Z
-intersection_of: PATO:0000122  ! length
-intersection_of: inheres_in PO:0009080  ! spikelet rachilla
 
 [Term]
 id: TO:0000973
@@ -9138,10 +9139,10 @@ synonym: "rachilla shape" BROAD []
 xref: PATO:0000052
 xref: TO_GIT:106
 is_a: TO:0000954 ! spikelet rachilla morphology trait
+intersection_of: PATO:0000052 ! shape
+intersection_of: inheres_in PO:0009080 ! spikelet rachilla
 created_by: johnseth
 creation_date: 2015-10-19T14:46:04Z
-intersection_of: PATO:0000052  ! shape
-intersection_of: inheres_in PO:0009080  ! spikelet rachilla
 
 [Term]
 id: TO:0000974
@@ -9169,10 +9170,10 @@ def: "An infructescence morphology trait (TO:0000920) which is associated with t
 xref: TO_GIT:132
 xref: TO_GIT:144
 is_a: TO:0000920 ! infructescence morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025597
 created_by: johnseth
 creation_date: 2015-10-22T09:35:32Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025597  ! ear infructescence
 
 [Term]
 id: TO:0000977
@@ -9190,10 +9191,10 @@ name: glume shape
 def: "A glume morphology trait (TO:0000869) with is associated with the shape of a glume (PO:0009039)." [TO:Ethan_Johnson]
 xref: TO_GIT:166
 is_a: TO:0000869 ! glume morphology trait
+intersection_of: PATO:0000052 ! shape
+intersection_of: inheres_in PO:0009039 ! glume
 created_by: johnseth
 creation_date: 2015-10-23T10:46:05Z
-intersection_of: PATO:0000052  ! shape
-intersection_of: inheres_in PO:0009039  ! glume
 
 [Term]
 id: TO:0000979
@@ -9201,10 +9202,10 @@ name: involucre morphology trait
 def: "A collective phyllome structure morphology trait (TO:0000845) that is a quality of an involucre (PO:0009100)." [TO:Ethan_Johnson]
 xref: TO_GIT:153
 is_a: TO:0000845 ! collective phyllome structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009100 ! involucre
 created_by: johnseth
 creation_date: 2015-11-02T15:02:56Z
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009100  ! involucre
 
 [Term]
 id: TO:0001000
@@ -9348,8 +9349,8 @@ name: transpiration rate
 def: "The rate of  transpiration." [GR:pj]
 xref: GO:GO\:0010148
 is_a: TO:0000349 ! physiological process related trait
-intersection_of: PATO:0000161  ! rate
-intersection_of: inheres_in GO:0010148  ! transpiration
+intersection_of: PATO:0000161 ! rate
+intersection_of: inheres_in GO:0010148 ! transpiration
 
 [Term]
 id: TO:0001019
@@ -9393,9 +9394,9 @@ name: phosphorus content
 def: "Amount of phosphorus in the plant or the plant parts." [GR:pj]
 synonym: "PHOCN" RELATED []
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
 intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:28659 ! phosphorus atom
+created_by: jaiswalp
 
 [Term]
 id: TO:0001025
@@ -9472,8 +9473,8 @@ synonym: "culm diameter" RELATED []
 synonym: "culm width" RELATED []
 xref: PATO:0000921
 is_a: TO:0000361 ! stem morphology trait
-intersection_of: PATO:0000921  ! width
-intersection_of: inheres_in PO:0009047  ! stem
+intersection_of: PATO:0000921 ! width
+intersection_of: inheres_in PO:0009047 ! stem
 
 [Term]
 id: TO:0001036
@@ -9661,9 +9662,9 @@ def: "An endocarp morphology trait (TO:0000946) that is associated with the colo
 xref: PATO:0000014
 xref: TO_GIT:293
 is_a: TO:0000946 ! endocarp morphology trait
-relationship: part_of TO:0002617 ! fruit color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009086 ! endocarp
+relationship: part_of TO:0002617 ! fruit color
 
 [Term]
 id: TO:0002619
@@ -9672,9 +9673,9 @@ def: "A mesocarp morphology trait (TO:0000948) that is associated with the color
 xref: PATO:0000014
 xref: TO_GIT:294
 is_a: TO:0000948 ! mesocarp morphology trait
-relationship: part_of TO:0002617 ! fruit color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009087 ! mesocarp
+relationship: part_of TO:0002617 ! fruit color
 
 [Term]
 id: TO:0002620
@@ -9684,9 +9685,9 @@ synonym: "epicarp color" EXACT []
 xref: PATO:0000014
 xref: TO_GIT:295
 is_a: TO:0000906 ! exocarp morphology trait
-relationship: part_of TO:0002617 ! fruit color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009085 ! exocarp
+relationship: part_of TO:0002617 ! fruit color
 
 [Term]
 id: TO:0002621
@@ -9842,8 +9843,8 @@ xref: TO_GIT:256
 is_a: TO:0000349 ! physiological process related trait
 is_a: TO:0000929 ! fruit growth and development trait
 is_a: TO:0002728 ! fruit quality trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0009835  ! fruit ripening
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0009835 ! fruit ripening
 
 [Term]
 id: TO:0002634
@@ -9860,9 +9861,9 @@ def: "A phyllome margin morphology trait (TO:0000834) which is a quality of a le
 synonym: "leaf margin curvature" RELATED []
 xref: TO_GIT:142
 is_a: TO:0000834 ! phyllome margin morphology trait
-created_by: jaiswalp
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: inheres_in PO:0020128 ! leaf margin
+created_by: jaiswalp
 
 [Term]
 id: TO:0002636
@@ -10009,16 +10010,16 @@ id: TO:0002655
 name: starch grain size
 def: "Assay to determine the size of the starch grain size." [GR:pj]
 is_a: TO:0000162 ! grain quality trait
-intersection_of: PATO:0000117  ! size
-intersection_of: inheres_in GO:0043036  ! starch grain
+intersection_of: PATO:0000117 ! size
+intersection_of: inheres_in GO:0043036 ! starch grain
 
 [Term]
 id: TO:0002656
 name: starch grain shape
 def: "Assay to determine the shape of the starch grain." [GR:pj]
 is_a: TO:0000162 ! grain quality trait
-intersection_of: PATO:0000052  ! shape
-intersection_of: inheres_in GO:0043036  ! starch grain
+intersection_of: PATO:0000052 ! shape
+intersection_of: inheres_in GO:0043036 ! starch grain
 
 [Term]
 id: TO:0002657
@@ -10205,7 +10206,7 @@ comment: Brassinosteroids (BR) are a group of steroidal plant hormones.
 synonym: "BRSN" RELATED []
 is_a: TO:0000401 ! plant growth hormone sensitivity
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in EO:0007409
+intersection_of: inheres_in EO:0007409 ! brassinosteroid treatment
 
 [Term]
 id: TO:0002678
@@ -10252,8 +10253,8 @@ name: plant cell morphology trait
 def: "A plant structure morphology trait (TO:0000839) which is a quality of a plant cell (PO:0009002)." [GR:pj, PO:0009002, TO:moorel]
 xref: TO_GIT:307
 is_a: TO:0000839 ! plant structure morphology trait
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009002  ! plant cell
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009002 ! plant cell
 
 [Term]
 id: TO:0002684
@@ -10429,7 +10430,7 @@ name: Meloidogyne incognita resistance
 def: "Causal agent: Meloidogyne incognita. Symptom: resistant to damage caused by the pathogen Meloidogyne incognita (root knot nematode). It  produces characteristic galls (swellings) on roots." [GR:pj]
 is_a: TO:0000384 ! nematode damage resistance
 intersection_of: PATO:0001046 ! resistance to
-intersection_of: inheres_in EO:0007372
+intersection_of: inheres_in EO:0007372 ! Meloidogyne incognita
 
 [Term]
 id: TO:0002705
@@ -10443,7 +10444,7 @@ name: Meloidogyne javanica resistance
 def: "Causal agent: Meloidogyne javanica. Symptom: resistant to damage caused by the pathogen Meloidogyne javanica (root knot nematode). It  produces characteristic galls (swellings) on roots." [GR:pj]
 is_a: TO:0000384 ! nematode damage resistance
 intersection_of: PATO:0001046 ! resistance to
-intersection_of: inheres_in EO:0007371
+intersection_of: inheres_in EO:0007371 ! Meloidogyne javanica
 
 [Term]
 id: TO:0002707
@@ -10524,16 +10525,16 @@ name: leaf sheath auricle morphology trait
 def: "A cardinal organ part morphology trait (TO:0000754) which is a quality of a leaf sheath auricle (PO:0020106)." [GR:pj, PO:0020106, POC:cooperl]
 xref: TO_GIT:143
 is_a: TO:0000754 ! cardinal organ part morphology trait
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020106  ! leaf sheath auricle
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020106 ! leaf sheath auricle
 
 [Term]
 id: TO:0002718
 name: awn morphology trait
 def: "A cardinal organ part morphology trait (TO:0000754) which a quality of a awn (PO:0025349)." [GR:pj, PO:0025349, TO:moorel]
 is_a: TO:0000754 ! cardinal organ part morphology trait
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0025349  ! awn
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025349 ! awn
 
 [Term]
 id: TO:0002719
@@ -10815,8 +10816,8 @@ id: TO:0002748
 name: ligule morphology trait
 def: "A vascular leaf morphology trait (TO:0000419) which is a quality of a ligule (PO:0020105)." [GR:pj, PO:0020105, POC:cooperl]
 is_a: TO:0000419 ! vascular leaf morphology trait
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0020105  ! ligule
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0020105 ! ligule
 
 [Term]
 id: TO:0002749
@@ -11188,8 +11189,8 @@ name: lodicule morphology trait
 def: "A plant organ morphology trait (TO:0000736) which is a quality of a lodicule (PO:0009036) and its parts." [GR:pj, PO:0009036, TO:moorel]
 xref: TO_GIT:105
 is_a: TO:0000736 ! plant organ morphology trait
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009036  ! lodicule
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009036 ! lodicule
 
 [Term]
 id: TO:0006010
@@ -11216,8 +11217,8 @@ id: TO:0006012
 name: carpel morphology trait
 def: "A megasporophyll morphology trait (TO:0000867) which is a quality of a carpel (PO:0009030)." [GR:pj, PO:0009030, TO:moorel]
 is_a: TO:0000867 ! megasporophyll morphology trait
-intersection_of: PATO:0001241  ! physical object quality
-intersection_of: inheres_in PO:0009030  ! carpel
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009030 ! carpel
 
 [Term]
 id: TO:0006013
@@ -11239,8 +11240,8 @@ id: TO:0006015
 name: tissue development trait
 def: "Traits associated with observing effects on the development of a given tissue type." [GR:pj]
 is_a: TO:0000928 ! plant structure growth and development trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0009888  ! tissue development
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0009888 ! tissue development
 
 [Term]
 id: TO:0006016
@@ -11286,8 +11287,8 @@ id: TO:0006022
 name: floral organ development trait
 def: "Traits associated with observing effects on the development of the floral organ and its parts." [GR:pj]
 is_a: TO:0000622 ! flower development trait
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0048437  ! floral organ development
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0048437 ! floral organ development
 
 [Term]
 id: TO:0006023
@@ -11437,99 +11438,99 @@ name: lithium concentration
 def: "The total Lithium ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 comment: May be assayed for per gram fresh weight.
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T04:38:27Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:30145 ! lithium atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:38:27Z
 
 [Term]
 id: TO:0006043
 name: boron concentration
 def: "The total Boron ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T04:49:08Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:27560 ! boron atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:49:08Z
 
 [Term]
 id: TO:0006044
 name: magnesium concentration
 def: "The total Magnesium ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T04:50:28Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:25107 ! magnesium atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:50:28Z
 
 [Term]
 id: TO:0006045
 name: phosphorus concentration
 def: "The total Phosphorus concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0001024 ! phosphorus content
-created_by: jaiswalp
-creation_date: 2010-10-25T04:51:26Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:28659 ! phosphorus atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:51:26Z
 
 [Term]
 id: TO:0006046
 name: sulfur concentration
 def: "The total Sulfur concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T04:53:29Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:26833 ! sulfur atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:53:29Z
 
 [Term]
 id: TO:0006047
 name: calcium concentration
 def: "The total Calcium ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T04:54:15Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:22984 ! calcium atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:54:15Z
 
 [Term]
 id: TO:0006048
 name: manganese concentration
 def: "The total Manganese ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T04:55:34Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:18291 ! manganese atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:55:34Z
 
 [Term]
 id: TO:0006049
 name: iron concentration
 def: "The total iron concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T04:56:30Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:18248 ! iron atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:56:30Z
 
 [Term]
 id: TO:0006050
 name: cobalt concentration
 def: "The total Cobalt ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T04:57:41Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:27638 ! cobalt atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:57:41Z
 
 [Term]
 id: TO:0006051
@@ -11544,55 +11545,55 @@ id: TO:0006052
 name: copper concentration
 def: "The total Copper ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T04:59:17Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:28694 ! copper atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:59:17Z
 
 [Term]
 id: TO:0006053
 name: zinc concentration
 def: "The total Zinc ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T04:59:26Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:27363 ! zinc atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:59:26Z
 
 [Term]
 id: TO:0006054
 name: arsenic concentration
 def: "The total Arsenic ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T04:59:32Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:27563 ! arsenic atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:59:32Z
 
 [Term]
 id: TO:0006055
 name: selenium concentration
 def: "The total Selenium ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T04:59:38Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:27568 ! selenium atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:59:38Z
 
 [Term]
 id: TO:0006056
 name: molybdenum concentration
 def: "The total Molybdenum  concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T04:59:53Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:28685 ! molybdenum atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T04:59:53Z
 
 [Term]
 id: TO:0006057
@@ -11615,11 +11616,11 @@ id: TO:0006059
 name: cadmium concentration
 def: "The total Cadmium concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2010-10-25T05:09:12Z
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:22977 ! cadmium atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2010-10-25T05:09:12Z
 
 [Term]
 id: TO:0006060
@@ -11654,10 +11655,10 @@ def: "A leaf margin morphology trait (TO:0002635) which is associated with a not
 comment: Refer to serrated (PATO:0001206): A shape quality inhering in a bearer by virtue of having sharp straight-edged teeth pointing to the apex.
 xref: PATO:0001206
 is_a: TO:0002635 ! leaf margin morphology trait
+intersection_of: PATO:0001206 ! serrated
+intersection_of: inheres_in PO:0020128 ! leaf margin
 created_by: jaiswalp
 creation_date: 2010-10-25T05:30:17Z
-intersection_of: PATO:0001206  ! serrated
-intersection_of: inheres_in PO:0020128  ! leaf margin
 
 [Term]
 id: TO:0006064
@@ -11674,10 +11675,10 @@ def: "A seedling hypocotyl morphology trait (TO:0000769) which is associated wit
 xref: PATO:0000122
 xref: TO_GIT:64
 is_a: TO:0000769 ! seedling hypocotyl morphology trait
+intersection_of: PATO:0000122 ! length
+intersection_of: inheres_in PO:0025291 ! seedling hypocotyl
 created_by: jaiswalp
 creation_date: 2010-10-25T05:36:01Z
-intersection_of: PATO:0000122  ! length
-intersection_of: inheres_in PO:0025291  ! seedling hypocotyl
 
 [Term]
 id: TO:0006066
@@ -11743,9 +11744,9 @@ comment: Refer to color PATO:0000014: A composite chromatic quality composed of 
 synonym: "INFLAXISCL" RELATED []
 xref: PATO:0000014
 is_a: TO:0000782 ! inflorescence axis morphology trait
-relationship: part_of TO:0000581 ! inflorescence color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0020122 ! inflorescence axis
+relationship: part_of TO:0000581 ! inflorescence color
 
 [Term]
 id: TO:0011004
@@ -11756,9 +11757,9 @@ synonym: "INFLBRACL" RELATED []
 synonym: "panicle branch color" RELATED []
 xref: PATO:0000014
 is_a: TO:0000784 ! inflorescence branch morphology trait
-relationship: part_of TO:0000581 ! inflorescence color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009081 ! inflorescence branch
+relationship: part_of TO:0000581 ! inflorescence color
 
 [Term]
 id: TO:0011005
@@ -11786,8 +11787,8 @@ comment: Refer to width (PATO:0000921): A 1-D extent quality which is equal to t
 synonym: "AWNWD" RELATED []
 xref: PATO:0000921
 is_a: TO:0002718 ! awn morphology trait
-intersection_of: PATO:0000921  ! width
-intersection_of: inheres_in PO:0025349  ! awn
+intersection_of: PATO:0000921 ! width
+intersection_of: inheres_in PO:0025349 ! awn
 
 [Term]
 id: TO:0011008
@@ -11901,10 +11902,10 @@ id: TO:0012011
 name: leaf senescence rate
 def: "Rate of loss of normal leaf color over time." [group:Crop_Ontology_Group]
 is_a: TO:0000655 ! leaf growth and development trait
+intersection_of: PATO:0000161 ! rate
+intersection_of: inheres_in GO:0010150 ! leaf senescence
 created_by: jaiswalp
 creation_date: 2011-12-09T02:34:15Z
-intersection_of: PATO:0000161  ! rate
-intersection_of: inheres_in GO:0010150  ! leaf senescence
 
 [Term]
 id: TO:0012012
@@ -11912,10 +11913,10 @@ name: leaf senescence duration
 def: "Time taken to lose normal leaf color." [group:Crop_Ontology_Group]
 comment: In grasses often measured for flag or the second leaf from top.
 is_a: TO:0000655 ! leaf growth and development trait
+intersection_of: PATO:0001309 ! duration
+intersection_of: inheres_in GO:0010150 ! leaf senescence
 created_by: jaiswalp
 creation_date: 2011-12-09T02:35:49Z
-intersection_of: PATO:0001309  ! duration
-intersection_of: inheres_in GO:0010150  ! leaf senescence
 
 [Term]
 id: TO:0020001
@@ -12133,8 +12134,8 @@ def: "A glume morphology trait (TO:0000869) with is associated with the measurem
 comment: Refer to width (PATO:0000921): A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 xref: PATO:0000921
 is_a: TO:0000869 ! glume morphology trait
-intersection_of: PATO:0000921  ! width
-intersection_of: inheres_in PO:0009039  ! glume
+intersection_of: PATO:0000921 ! width
+intersection_of: inheres_in PO:0009039 ! glume
 
 [Term]
 id: TO:0020035
@@ -12167,8 +12168,8 @@ def: "A glume morphology trait (TO:0000869) which is associated with the measure
 comment: Refer to waxiness (PATO:0002381): A composition quality inhering in an bearer by virtue of the presence of long chain aliphatic lipids on the surface of an organism.
 xref: PATO:0002381
 is_a: TO:0000869 ! glume morphology trait
-intersection_of: PATO:0002381  ! waxiness
-intersection_of: inheres_in PO:0009039  ! glume
+intersection_of: PATO:0002381 ! waxiness
+intersection_of: inheres_in PO:0009039 ! glume
 
 [Term]
 id: TO:0020051
@@ -12357,10 +12358,10 @@ id: TO:0020070
 name: beta-glucanase activity trait
 def: "Activity of beta-glucanase ((1,3-1,4)-beta-D-glucan, 4-glucanohydrolase), (EC:3.2.1.73) in the hydrolysis of beta-glucans." [GO:0042972, GO:\:0052736, T-CAP:Victoria_Corollo_Blake]
 is_a: TO:0000599 ! enzyme activity trait
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0052736 ! beta-glucanase activity
 created_by: jaiswalp
 creation_date: 2011-08-19T01:10:26Z
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0052736  ! beta-glucanase activity
 
 [Term]
 id: TO:0020071
@@ -12433,22 +12434,22 @@ id: TO:0020078
 name: zeaxanthin content
 def: "The zeaxanthin content in a plant or plant part." [GR:pj]
 is_a: TO:0000301 ! xanthophyll content
-created_by: jaiswalp
-creation_date: 2011-08-19T02:49:07Z
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:27547 ! zeaxanthin
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2011-08-19T02:49:07Z
 
 [Term]
 id: TO:0020079
 name: beta-cryptoxanthin content
 def: "The beta-cryptoxanthin content in a plant or plant part." [GR:pj]
 is_a: TO:0000301 ! xanthophyll content
-created_by: jaiswalp
-creation_date: 2011-08-19T02:53:13Z
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:10362 ! beta-cryptoxanthin
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2011-08-19T02:53:13Z
 
 [Term]
 id: TO:0020080
@@ -12489,10 +12490,10 @@ comment: Refer to diameter (PATO:0001334): A length quality which is equal to th
 synonym: "culm diameter" RELATED []
 xref: PATO:0001334
 is_a: TO:0000361 ! stem morphology trait
+intersection_of: PATO:0001334 ! diameter
+intersection_of: inheres_in PO:0009047 ! stem
 created_by: jaiswalp
 creation_date: 2011-08-19T03:31:47Z
-intersection_of: PATO:0001334  ! diameter
-intersection_of: inheres_in PO:0009047  ! stem
 
 [Term]
 id: TO:0020084
@@ -12547,66 +12548,66 @@ id: TO:0020089
 name: iron content
 def: "The total iron ion content measured in a plant or a plant part." [TO:contributors]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2011-08-19T04:02:53Z
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:18248 ! iron atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2011-08-19T04:02:53Z
 
 [Term]
 id: TO:0020090
 name: zinc content
 def: "The total zinc ion content measured in a plant or a plant part." [TO:contributors]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2011-08-19T04:02:53Z
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:27363 ! zinc atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2011-08-19T04:02:53Z
 
 [Term]
 id: TO:0020091
 name: manganese content
 def: "The total manganese ion content measured in a plant or a plant part." [TO:contributors]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2011-08-19T04:02:53Z
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:18291 ! manganese atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2011-08-19T04:02:53Z
 
 [Term]
 id: TO:0020092
 name: copper content
 def: "The total copper ion content measured in a plant or a plant part." [TO:contributors]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2011-08-19T04:02:53Z
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:28694 ! copper atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2011-08-19T04:02:53Z
 
 [Term]
 id: TO:0020093
 name: nitrogen content
 def: "The total nitrogen content measured in a plant or a plant part." [TO:contributors]
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2011-08-19T04:02:53Z
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:25555 ! nitrogen atom
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2011-08-19T04:02:53Z
 
 [Term]
 id: TO:0020094
 name: nitrate content
 def: "The total nitrate content measured in a plant or a plant part." [TO:contributors]
 is_a: TO:0020093 ! nitrogen content
-created_by: jaiswalp
-creation_date: 2011-08-19T04:02:53Z
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:17632 ! nitrate
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2011-08-19T04:02:53Z
 
 [Term]
 id: TO:0020095
@@ -12637,11 +12638,11 @@ id: TO:0020098
 name: nitrate sensitivity
 def: "The sensitivity to the nitrate content in the growth medium." [GR:pj, TO:contributors]
 is_a: TO:0000011 ! nitrogen sensitivity
-created_by: jaiswalp
-creation_date: 2011-08-19T04:11:32Z
 intersection_of: PATO:0000085 ! sensitivity toward
 intersection_of: inheres_in CHEBI:17632 ! nitrate
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2011-08-19T04:11:32Z
 
 [Term]
 id: TO:0020099
@@ -12673,11 +12674,11 @@ name: phosphate content
 def: "The total phosphate content measured in a plant or a plant part." [TO:contributors]
 synonym: "phosphate ion content" EXACT []
 is_a: TO:0000465 ! mineral and ion content related trait
-created_by: jaiswalp
-creation_date: 2011-08-19T04:16:58Z
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:26020 ! phosphate
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2011-08-19T04:16:58Z
 
 [Term]
 id: TO:0020103
@@ -12711,11 +12712,11 @@ def: "Measures the IAA content in a plant or plant part." [TO:contributors]
 synonym: "IAA content" EXACT []
 synonym: "Indole-3-acetic acid (IAA) content" EXACT []
 is_a: TO:0002672 ! auxin content
-created_by: jaiswalp
-creation_date: 2011-08-19T04:24:06Z
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:16411 ! indole-3-acetic acid
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2011-08-19T04:24:06Z
 
 [Term]
 id: TO:0020107
@@ -12724,10 +12725,10 @@ def: "A plant cell morphology trait (TO:0002683) which is associated with the le
 comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
 xref: PATO:0000122
 is_a: TO:0002683 ! plant cell morphology trait
+intersection_of: PATO:0000122 ! length
+intersection_of: inheres_in PO:0009002 ! plant cell
 created_by: jaiswalp
 creation_date: 2011-08-19T04:25:39Z
-intersection_of: PATO:0000122  ! length
-intersection_of: inheres_in PO:0009002  ! plant cell
 
 [Term]
 id: TO:0020108
@@ -12751,10 +12752,10 @@ id: TO:0020110
 name: gynoecium development trait
 def: "Traits associated with observing effects on the development of the gynoecium." [TO:contributors]
 is_a: TO:0000928 ! plant structure growth and development trait
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in GO:0048467 ! gynoecium development
 created_by: jaiswalp
 creation_date: 2011-08-19T04:29:46Z
-intersection_of: PATO:0000001  ! quality
-intersection_of: inheres_in GO:0048467  ! gynoecium development
 
 [Term]
 id: TO:0020111
@@ -12810,22 +12811,22 @@ id: TO:0020118
 name: neoxanthin content
 def: "The neoxanthin content in a plant or plant part." [TO:contributors]
 is_a: TO:0000301 ! xanthophyll content
-created_by: jaiswalp
-creation_date: 2011-08-19T04:39:32Z
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:25501 ! neoxanthin
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2011-08-19T04:39:32Z
 
 [Term]
 id: TO:0020119
 name: violaxanthin content
 def: "The violaxanthin content in a plant or plant part." [TO:contributors]
 is_a: TO:0000301 ! xanthophyll content
-created_by: jaiswalp
-creation_date: 2011-08-19T04:40:04Z
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:27295 ! violaxanthin
 intersection_of: occurs_in PO:0000003 ! whole plant
+created_by: jaiswalp
+creation_date: 2011-08-19T04:40:04Z
 
 [Term]
 id: TO:0020120
@@ -12864,14 +12865,29 @@ created_by: jaiswalp
 creation_date: 2011-08-19T05:09:40Z
 
 [Typedef]
+id: has_dividend_entity
+name: has dividend entity
+
+[Typedef]
+id: has_dividend_quality
+name: has dividend quality
+
+[Typedef]
+id: has_divisor_entity
+name: has divisor entity
+
+[Typedef]
+id: has_divisor_quality
+name: has divisor quality
+
+[Typedef]
 id: has_part
 name: has part
 xref: BFO:0000051
 
 [Typedef]
-id: part_of
-name: part of
-xref: BFO:0000050
+id: has_ratio_quality
+name: has ratio quality
 
 [Typedef]
 id: inheres_in
@@ -12884,25 +12900,11 @@ name: occurs in
 xref: BFO:0000066
 
 [Typedef]
+id: part_of
+name: part of
+xref: BFO:0000050
+
+[Typedef]
 id: relative_to
 name: relative to
 
-[Typedef]
-id: has_divisor_entity
-name: has divisor entity
-
-[Typedef]
-id: has_dividend_entity
-name: has dividend entity
-
-[Typedef]
-id: has_divisor_quality
-name: has divisor quality
-
-[Typedef]
-id: has_dividend_quality
-name: has dividend quality
-
-[Typedef]
-id: has_ratio_quality
-name: has ratio quality
