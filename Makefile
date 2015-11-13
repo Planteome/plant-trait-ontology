@@ -1,7 +1,7 @@
 
 SRC=plant-trait-ontology.obo
 
-all: plant-trait-ontology-reasoned.obo build/to.obo
+all: plant-trait-ontology-reasoned.obo target/to.obo
 test: plant-trait-ontology-reasoned.obo
 
 include Makefile-ROBOT
@@ -43,8 +43,11 @@ plant-trait-ontology-reasoned.obo: plant-trait-ontology-reasoned.owl
 reasoner-report.txt: plant-trait-ontology.obo
 	owltools --use-catalog $< --run-reasoner -r elk -u > $@.tmp && egrep '(INFERENCE|UNSAT)' $@.tmp > $@
 
-build/to.obo: $(SRC)
-	ontology-release-runner --catalog-xml catalog-v001.xml $< --reasoner elk --skip-format owx --outdir target --run-obo-basic-dag-check
+target/to.obo: $(SRC)
+	ontology-release-runner --catalog-xml catalog-v001.xml $< --reasoner elk --simple --skip-format owx --outdir target --run-obo-basic-dag-check
+
+subsets/to-basic.obo: target/to.obo
+	owltools --use-catalog $< --remove-imports-declarations  --make-subset-by-properties -f // --set-ontology-id $(OBO)/to/subsets/to-basic.owl -o -f obo $@
 
 # REPORTING
 # See: https://github.com/Planteome/plant-trait-ontology/issues/302
