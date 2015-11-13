@@ -36,7 +36,7 @@ plant-trait-ontology.obo.owl: plant-trait-ontology.obo
 	./robot convert -i $<  -o $@
 
 plant-trait-ontology-reasoned.owl: plant-trait-ontology.obo
-	robot reason -i $< -r ELK -o $@
+	./robot reason -i $< -r ELK -o $@
 plant-trait-ontology-reasoned.obo: plant-trait-ontology-reasoned.owl
 	./robot convert -i $< -f OBO -o $@
 
