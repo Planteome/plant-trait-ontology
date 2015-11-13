@@ -2,7 +2,7 @@
 
 This is the repository for the plant trait ontology.
 
-Note that you are not a Planteome ontology developer then you are
+Note that if you are NOT a Planteome ontology developer then you are
 probably in the wrong place. The TO can be accessed via its official
 PURLs:
 
