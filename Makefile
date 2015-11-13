@@ -1,9 +1,10 @@
-include Makefile-ROBOT
 
 SRC=plant-trait-ontology.obo
 
-all: plant-trait-ontology-reasoned.obo
+all: plant-trait-ontology-reasoned.obo build/to.obo
 test: plant-trait-ontology-reasoned.obo
+
+include Makefile-ROBOT
 
 MODS= ro chebi po pato eo go
 all_imports: $(patsubst %, imports/%_import.obo, $(MODS))

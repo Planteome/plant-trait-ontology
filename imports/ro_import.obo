@@ -17,6 +17,21 @@ is_transitive: true
 is_a: RO:0002131 ! overlaps
 
 [Typedef]
+id: BFO:0000066
+name: occurs in
+def: "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
+domain: BFO:0000003
+range: BFO:0000004
+holds_over_chain: BFO:0000050 BFO:0000066
+inverse_of: BFO:0000067 ! contains process
+transitive_over: BFO:0000050 ! part of
+
+[Typedef]
+id: BFO:0000067
+name: contains process
+def: "[copied from inverse property 'occurs in'] b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t" []
+
+[Typedef]
 id: RO:0000052
 name: inheres in
 def: "a relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent specifically depends on the bearer for its existence" []
@@ -50,6 +65,14 @@ transitive_over: BFO:0000050 ! part of
 id: RO:0002323
 name: mereotopologically related to
 def: "A mereological relationship or a topological relationship" []
+
+[Typedef]
+id: RO:0002479
+name: has part that occurs in
+def: "p has part that occurs in c if and only if there exists some p1, such that p has_part p1, and p1 occurs in c." []
+domain: BFO:0000003
+range: BFO:0000004
+holds_over_chain: BFO:0000051 BFO:0000066 {http://purl.obolibrary.org/obo/RO_0002581="true"}
 
 [Typedef]
 id: RO:0002502
