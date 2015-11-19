@@ -9218,6 +9218,26 @@ is_a: TO:0000842 ! collective plant organ structure morphology trait
 created_by: Ethan_Johnson
 
 [Term]
+id: TO:0000986
+name: staminate flower number trait
+def: "A flower number trait (TO:0002736) which is the number of staminate flowers (PO:0025600)." []
+synonym: "male flower number trait" EXACT []
+xref: PATO:0001555
+xref: TO_GIT:356
+is_a: TO:0002736 ! flower number trait
+created_by: ethan_johnson
+
+[Term]
+id: TO:0000987
+name: pistillate flower number trait
+def: "A flower number trait (TO:0002736) which is the number of pistillate flowers (PO:0025599)." []
+synonym: "female flower number trait" EXACT []
+xref: PATO:0001555
+xref: TO_GIT:356
+is_a: TO:0002736 ! flower number trait
+created_by: ethan_johnson
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "A glume morphology trait (TO:0000869) which is amount the glume (PO:0009039) covers the caryopsis. Often measured as percentage." [GR:pj, PO:0009039, TO:moorel]
@@ -10715,9 +10735,10 @@ is_a: TO:0000168 ! abiotic stress trait
 
 [Term]
 id: TO:0002736
-name: flower number
+name: flower number trait
 def: "A flower morphology trait (TO:0000499) which is the number of flowers (PO:0009046)." [GR:pj, PO:0009046, TO:moorel]
-is_a: TO:0000499 ! flower morphology trait
+xref: PATO:0001555
+is_a: TO:0000786 ! reproductive shoot system morphology trait
 intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in PO:0009046 ! flower
 
