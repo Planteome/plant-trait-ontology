@@ -45,6 +45,12 @@ reasoner-report.txt: plant-trait-ontology.obo
 
 target/to.obo: $(SRC)
 	ontology-release-runner --catalog-xml catalog-v001.xml $< --reasoner elk --simple --skip-format owx --outdir target --run-obo-basic-dag-check
+target/to.owl: target/to.obo
+
+to.owl: target/to.owl
+	cp $< $@
+to.owl: target/to.owl
+	cp $< $@
 
 subsets/to-basic.obo: target/to.obo
 	owltools --use-catalog $< --remove-imports-declarations  --make-subset-by-properties -f // --set-ontology-id $(OBO)/to/subsets/to-basic.owl -o -f obo $@
