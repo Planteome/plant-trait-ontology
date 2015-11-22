@@ -2,7 +2,7 @@
 SRC=plant-trait-ontology.obo
 
 all: plant-trait-ontology-reasoned.obo target/to.obo
-test: plant-trait-ontology-reasoned.obo
+test: all
 
 include Makefile-ROBOT
 
