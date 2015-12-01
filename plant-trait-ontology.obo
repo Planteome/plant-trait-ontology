@@ -3827,12 +3827,14 @@ is_a: TO:0000250 ! vigor related trait
 
 [Term]
 id: TO:0000426
-name: internode color
-def: "Color of the stem internode." [ICIS:1064, IRRI:SES]
+name: stem internode color
+def: "A stem internode morphology trait (TO:0000756) which is the color of the stem internode (PO:0020142)." [ICIS:1064, IRRI:SES] {comment="TO:cooperl"}
 synonym: "CmlC" RELATED []
 synonym: "culm internode color" RELATED []
 synonym: "INCL" RELATED []
-synonym: "stem internode color" RELATED []
+xref: TO_GIT:317
+xref: TO_GIT:64
+is_a: TO:0000756 ! stem internode morphology trait
 relationship: part_of TO:0000056 ! stem color
 
 [Term]
@@ -6682,7 +6684,7 @@ creation_date: 2012-04-26T13:12:37Z
 [Term]
 id: TO:0000756
 name: stem internode morphology trait
-def: "A shoot axis internode morphology trait (TO:0000755) which is a quality of a stem internode (PO:0020142)." [PO:0020142, POC:cooperl]
+def: "A shoot axis internode morphology trait (TO:0000755) which is a quality of a stem internode (PO:0020142)." [PO:0020142, TO:cooperl]
 xref: TO_GIT:64
 is_a: TO:0000755 ! shoot axis internode morphology trait
 intersection_of: PATO:0001241 ! physical object quality
@@ -6693,7 +6695,7 @@ creation_date: 2012-04-26T13:17:31Z
 [Term]
 id: TO:0000757
 name: hypocotyl morphology trait
-def: "A stem internode morphology trait (TO:0000756) which is a quality of a hypocotyl (PO:0020100)." [PO:0020100, POC:cooperl]
+def: "A stem internode morphology trait (TO:0000756) which is a quality of a hypocotyl (PO:0020100)." [PO:0020100, TO:cooperl]
 xref: TO_GIT:64
 is_a: TO:0000756 ! stem internode morphology trait
 intersection_of: PATO:0001241 ! physical object quality
@@ -11891,7 +11893,7 @@ id: TO:0011010
 name: internode color in proxomity to colored node
 def: "Color of the spatial section of the internode that is found proximal (next) to the colored node of a stem." [GR:pj]
 synonym: "INCLPROXNDCL" RELATED []
-is_a: TO:0000426 ! internode color
+is_a: TO:0000426 ! stem internode color
 
 [Term]
 id: TO:0012001
