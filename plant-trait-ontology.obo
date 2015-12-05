@@ -1,7 +1,5 @@
 format-version: 1.2
-date: 06:11:2015 11:31
 saved-by: cooperl
-auto-generated-by: OBO-Edit 2.3.1
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
 subsetdef: Glycine_max "Terms_used_for_soybean"
@@ -6001,13 +5999,14 @@ intersection_of: inheres_in PO:0009049 ! inflorescence
 
 [Term]
 id: TO:0000683
-name: ear infructescence height
-def: "A height related trait (TO:0000171) which is the height of an ear infructescence (PO:0025597) measured from the ground to the attachment point." [GR:pj, TO:moorel]
-comment: Refer to height (PATO:0000119):  A 1-D extent quality inhering in a bearer by virtue of the bearer's vertical dimension of extension.
+name: ear infructescence position
+def: "An ear infructescence morphology trait (TO:0000976) which is the position of an ear infructescence (PO:0025597)." [GR:pj, TO:cooperl, TO:moorel]
+comment: Refers to: position (PATO_0000140): A spatial quality inhering in a bearer by virtue of the bearer's spatial location relative to other objects in the vicinity.  In maize this is usually measured from the ground to the attachment point of the ear.
+synonym: "ear height" RELATED []
 synonym: "EARHT" RELATED []
 xref: MaizeGDB_QTL:61369
 xref: TO_GIT:226
-is_a: TO:0000171 ! height trait
+is_a: TO:0000976 ! ear infructescence morphology trait
 intersection_of: PATO:0000119 ! height
 intersection_of: inheres_in PO:0020136 ! ear inflorescence
 
@@ -9070,9 +9069,9 @@ creation_date: 2015-09-01T16:12:33Z
 
 [Term]
 id: TO:0000966
-name: ear position
-def: "An ear infructescence morphology trait (TO:0000976) which is the ratio of ear height to plant height." [TO:Ethan_Johnson]
-synonym: "ear infructescence position" EXACT []
+name: ear infructescence position ratio
+def: "An ear infructescence morphology trait (TO:0000976) which is the ratio of ear infructescence position (TO:0000683) to plant height (TO:0000207)." [TO: cooperl, TO:Ethan_Johnson]
+synonym: "ear position ratio" RELATED []
 xref: TO_GIT:132
 is_a: TO:0000976 ! ear infructescence morphology trait
 intersection_of: PATO:0000140 ! position
