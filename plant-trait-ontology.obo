@@ -4763,18 +4763,20 @@ synonym: "LFAR" RELATED []
 xref: PATO:0001323
 is_a: TO:0000748 ! leaf morphology trait
 intersection_of: PATO:0001323 ! area
-intersection_of: inheres_in PO:0009025 ! vascular leaf
+intersection_of: inheres_in PO:0025034 ! leaf
 
 [Term]
 id: TO:0000541
-name: leaf height
-def: "A leaf morphology trait (TO:0000748) which is the height of the leaf (PO:0025034)." [GR:pj, POC:cooperl]
-comment: Refer to height (PATO:0000119): A 1-D extent quality inhering in a bearer by virtue of the bearer's vertical dimension of extension.
+name: leaf position
+def: "A leaf morphology trait (TO:0000748) which is the position of the leaf (PO:0025034) on the plant." [GR:pj, TO:cooperl]
+comment: Refers to: position (PATO_0000140): A spatial quality inhering in a bearer by virtue of the bearer's spatial location relative to other objects in the vicinity. Usually measured from the ground.
+synonym: "leaf height" RELATED []
 synonym: "LFHT" RELATED []
-xref: PATO:0000119
+xref: PATO:0000140
+xref: TO_GIT:226
 is_a: TO:0000748 ! leaf morphology trait
-intersection_of: PATO:0000119 ! height
-intersection_of: inheres_in PO:0009025 ! vascular leaf
+intersection_of: PATO:0000140 ! position
+intersection_of: inheres_in PO:0025034 ! leaf
 
 [Term]
 id: TO:0000542
@@ -5948,11 +5950,13 @@ intersection_of: inheres_in PO:0009074 ! style
 
 [Term]
 id: TO:0000677
-name: third leaf height
-def: "Height of the 3rd leaf measured as described in various studies." [GR:pj]
+name: third leaf position
+def: "A leaf position (TO:0000541) which is the position of the third leaf (PO:0025034) on a plant." [GR:pj, TO:cooperl]
 synonym: "3LFHT" RELATED []
 synonym: "3rd leaf height" RELATED []
-is_a: TO:0000541 ! leaf height
+synonym: "third leaf height" RELATED []
+xref: TO_GIT:226
+is_a: TO:0000541 ! leaf position
 
 [Term]
 id: TO:0000678
