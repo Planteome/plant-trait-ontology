@@ -767,7 +767,7 @@ intersection_of: inheres_in PO:0009005 ! root
 id: TO:0000085
 name: leaf rolling
 def: "A leaf morphology trait (TO:0000748) which is the rolling of a leaf preceding the leaf drying stage." [GR:jcl, GR:pj, TO:moorel]
-comment: Leaf rolling is a feature observed in response to stresses like drought, water and temperature.
+comment: Leaf rolling is a feature observed in response to stresses like drought, water and temperature.  If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFRL" RELATED []
 synonym: "wilting" RELATED []
 is_a: TO:0000748 ! leaf morphology trait
@@ -1115,7 +1115,7 @@ is_a: TO:0000120 ! percent root mass density
 [Term]
 id: TO:0000124
 name: flag leaf angle
-def: "A flag leaf morphology trait (TO:0000832) which is an angle of the flag leaf (PO:0020103) measured near the collar, as the angle of attachment between the flag leaf blade and the main inflorescence axis in grass plants." [ICIS:1065, IRRI:SES, PO:0020103, TO:moorel]
+def: "A flag leaf morphology trait (TO:0000832) which is an angle of the flag leaf (PO:0020103) measured near the collar, as the angle of attachment between the flag leaf blade and the main inflorescence axis in grass plants." [ICIS:1065, IRRI:SES, PO:0020103, TO:moorel, TO:cooperl]
 synonym: "FLFAG" RELATED []
 is_a: TO:0000832 ! flag leaf morphology trait
 intersection_of: PATO:0000133 ! orientation
@@ -1204,7 +1204,7 @@ is_a: TO:0000462 ! gelatinization temperature
 [Term]
 id: TO:0000135
 name: leaf length
-def: "A leaf size (TO:0002637) trait which is a length of a leaf (PO:0025034)." [IRRI:SES, PO:0025034, TO:moorel]
+def: "A leaf size (TO:0002637) trait which is a length of a leaf (PO:0025034)." [IRRI:SES, PO:0025034, TO:moorel, TO:cooperl]
 comment: Actual measurements, in centimeters of the leaf. Refers to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points. In maize, this is measured in centimeters. If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFLG" RELATED []
 synonym: "lfln" RELATED [MaizeGDB_QTL:61715]
@@ -2214,7 +2214,8 @@ intersection_of: inheres_in PO:0009040 ! sterile lemma
 [Term]
 id: TO:0000241
 name: leaf number
-def: "A leaf morphology trait (TO:0000748) which is the number of leaves in a plant at a particular growth stage." [GR:pj]
+def: "A leaf morphology trait (TO:0000748) which is the number of leaves in a plant at a particular growth stage." [GR:pj, TO:cooperl]
+comment: If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFNB" RELATED []
 is_a: TO:0000748 ! leaf morphology trait
 intersection_of: PATO:0000070 ! amount
@@ -2980,8 +2981,8 @@ is_a: TO:0000598 ! protein content
 [Term]
 id: TO:0000326
 name: leaf color
-def: "A vascular leaf morphology trait (TO:0000748) which is the color of leaf (PO:0025034)." [GR:pj, PO:0025034, POC:cooperl]
-comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
+def: "A leaf morphology trait (TO:0000748) which is the color of a leaf (PO:0025034)." [GR:pj, PO:0025034, TO:cooperl]
+comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts. If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFCL" RELATED []
 xref: PATO:0000014
 is_a: TO:0000748 ! leaf morphology trait
@@ -3362,7 +3363,7 @@ is_a: TO:0000933 ! plant phenological trait
 [Term]
 id: TO:0000370
 name: leaf width
-def: "A leaf size (TO:0002637) trait which the width of a leaf (PO:0025034)." [ICIS:1308, IRRI:SES, PO:0025034, TO:moorel]
+def: "A leaf size (TO:0002637) trait which the width of a leaf (PO:0025034)." [ICIS:1308, IRRI:SES, PO:0025034, TO:moorel, TO:cooperl]
 comment: Actual measurements, in centimeters of the widest portion of the leaf. To be precise use the children terms leaf lamina width (TO:0002720) or  'leaf sheath width (TO:0002721). Refers to width (PATO:0000921) A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite. If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFWD" RELATED []
 synonym: "lfwid" RELATED [MaizeGDB_QTL:61714]
@@ -3513,7 +3514,7 @@ intersection_of: occurs_in PO:0000003 ! whole plant
 [Term]
 id: TO:0000387
 name: plant trait
-def: "A measurable or observable characteristic of a cellular component (GO:0005575), biological process (GO:0008150) or molecular function (GO:0003674) that is part of, or has participant a plant anatomical entity (PO:0025131) and/or a plant structure development stage (PO:0009012)." [GO:0003674, GO:0005575, GO:0008150, GR:pj, PO:0009012, PO:0025131, POC:cooperl]
+def: "A measurable or observable characteristic of a cellular component (GO:0005575), biological process (GO:0008150) or molecular function (GO:0003674) that is part of, or has participant a plant anatomical entity (PO:0025131) and/or a plant structure development stage (PO:0009012)." [GO:0003674, GO:0005575, GO:0008150, GR:pj, PO:0009012, PO:0025131, TO:cooperl]
 comment: This includes physiological, molecular and biochemical traits as well.
 synonym: "plant phenotype" RELATED []
 synonym: "plant quality" RELATED []
@@ -3782,7 +3783,7 @@ is_a: TO:0000439 ! fungal disease resistance
 [Term]
 id: TO:0000419
 name: vascular leaf morphology trait
-def: "A leaf morphology trait (TO:0000748) which is a quality of a vascular leaf (PO:0009025)." [GR:pj, PO:0009025, POC:cooperl]
+def: "A leaf morphology trait (TO:0000748) which is a quality of a vascular leaf (PO:0009025)." [GR:pj, PO:0009025, TO:cooperl]
 xref: TO_GIT:60
 is_a: TO:0000748 ! leaf morphology trait
 intersection_of: PATO:0001241 ! physical object quality
@@ -4009,8 +4010,8 @@ intersection_of: inheres_in PO:0009010 ! seed
 [Term]
 id: TO:0000446
 name: leaf drying
-def: "A leaf morphology trait (TO:0000748) which is the drying of a leaf (PO:0025034)." [PO:0025034, TO:moorel]
-comment: Response to abiotic stress.
+def: "A leaf morphology trait (TO:0000748) which is the drying of a leaf (PO:0025034)." [PO:0025034, TO:moorel, TO:cooperl]
+comment: May be a response to abiotic stress. If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFDRY" RELATED []
 is_a: TO:0000748 ! leaf morphology trait
 
@@ -4393,7 +4394,7 @@ is_a: TO:0000488 ! seed composition based quality trait
 id: TO:0000492
 name: leaf shape
 def: "A leaf morphology trait (TO:0000748) which is the variation in shapes and forms of a leaf (PO:0025034)." [GR:pj, PO:0025034, TO:cooperl]
-comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
+comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).  If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFSHP" RELATED []
 xref: PATO:0000052
 is_a: TO:0000748 ! leaf morphology trait
@@ -4404,9 +4405,10 @@ intersection_of: inheres_in PO:0025034 ! leaf
 id: TO:0000493
 name: leaf composition trait
 def: "A leaf morphology trait (TO:0000748) which is the composition of a leaf (PO:0025034)." [PO:0025034, TO:moorel]
+comment: If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 is_a: TO:0000748 ! leaf morphology trait
 intersection_of: PATO:0000025 ! composition
-intersection_of: occurs_in PO:0009025 ! vascular leaf
+intersection_of: inheres_in PO:0025034 ! leaf
 
 [Term]
 id: TO:0000494
@@ -4488,20 +4490,22 @@ intersection_of: inheres_in TO:0000085 ! leaf rolling
 [Term]
 id: TO:0000504
 name: leaf temperature
-def: "A leaf morphology trait (TO:0000748) which is the leaf surface temperature." [GR:pj, TO:moorel]
+def: "A leaf morphology trait (TO:0000748) which is the leaf surface temperature." [GR:pj, TO:moorel, TO:cooperl]
+comment: If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFTMP" RELATED []
 is_a: TO:0000748 ! leaf morphology trait
 intersection_of: PATO:0000146 ! temperature
-intersection_of: inheres_in PO:0009025 ! vascular leaf
+intersection_of: inheres_in PO:0025034 ! leaf
 
 [Term]
 id: TO:0000505
-name: leaf weight trait
-def: "A leaf morphology trait (TO:0000505) which is the measure of leaf weight." [GR:pj, TO:moorel]
+name: leaf weight
+def: "A leaf morphology trait (TO:0000505) which is the weight of a leaf (PO:0025034)." [GR:pj, TO:moorel, TO:cooperl]
+comment: If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFWT" RELATED []
 is_a: TO:0000748 ! leaf morphology trait
 intersection_of: PATO:0000128 ! weight
-intersection_of: inheres_in PO:0009025 ! vascular leaf
+intersection_of: inheres_in PO:0025034 ! leaf
 
 [Term]
 id: TO:0000506
@@ -4758,7 +4762,7 @@ is_a: TO:0000472 ! vascular bundle number
 id: TO:0000540
 name: leaf area trait
 def: "A leaf morphology trait (TO:0000748) which is the total area of a leaf (PO:0025034)." [GR:pj, PO:0025034, POC:cooperl]
-comment: Refer to area (PATO:0001323): A 2-D extent quality inhering in a bearer by virtue of the bearer's two dimensional extent.
+comment: Refer to area (PATO:0001323): A 2-D extent quality inhering in a bearer by virtue of the bearer's two dimensional extent. If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFAR" RELATED []
 xref: PATO:0001323
 is_a: TO:0000748 ! leaf morphology trait
@@ -4769,7 +4773,7 @@ intersection_of: inheres_in PO:0025034 ! leaf
 id: TO:0000541
 name: leaf position
 def: "A leaf morphology trait (TO:0000748) which is the position of the leaf (PO:0025034) on the plant." [GR:pj, TO:cooperl]
-comment: Refers to: position (PATO_0000140): A spatial quality inhering in a bearer by virtue of the bearer's spatial location relative to other objects in the vicinity. Usually measured from the ground.
+comment: Refers to: position (PATO_0000140): A spatial quality inhering in a bearer by virtue of the bearer's spatial location relative to other objects in the vicinity. Usually measured from the ground.  If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "leaf height" RELATED []
 synonym: "LFHT" RELATED []
 xref: PATO:0000140
@@ -5013,13 +5017,12 @@ is_a: TO:0000456 ! spikelet number
 
 [Term]
 id: TO:0000566
-name: stomatal frequency
-def: "Number of stomata present on the leaf surface." [GR:pj]
+name: leaf stomatal complex frequency
+def: "A vascular leaf morphology trait (TO:0000419) which is the number of leaf stomatal complexes (PO:0025183) present on the leaf surface." [GR:pj]
 synonym: "STOFQ" RELATED []
-is_a: TO:0000168 ! abiotic stress trait
-is_a: TO:0000748 ! leaf morphology trait
-intersection_of: PATO:0000070 ! amount
-intersection_of: inheres_in PO:0002000 ! stomatal complex
+is_a: TO:0000419 ! vascular leaf morphology trait
+intersection_of: PATO:0001555 ! has number of
+intersection_of: inheres_in PO:0025183 ! leaf stomatal complex
 
 [Term]
 id: TO:0000567
@@ -5764,7 +5767,8 @@ is_a: TO:0000667 ! cooking or brewing quality
 [Term]
 id: TO:0000652
 name: leaf necrosis
-def: "A leaf morphology trait (TO:0000748) which is the leaf surface area affected by abiotic stresses like insecticides and cold temperature as evidenced by chlorotic and/or necrotic tissue." [GR:pj]
+def: "A leaf morphology trait (TO:0000748) which is the leaf surface area affected by abiotic stresses like insecticides and cold temperature as evidenced by chlorotic and/or necrotic tissue." [GR:pj, TO:cooperl]
+comment: If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "leaf scorch" RELATED []
 synonym: "LFNEC" RELATED []
 is_a: TO:0000748 ! leaf morphology trait
@@ -6247,6 +6251,7 @@ intersection_of: inheres_in PO:0000003 ! whole plant
 id: TO:0000709
 name: leaf gloss
 def: "A leaf morphology trait (TO:0000748) which is the appearance of glossiness of the leaf surface. Contributed by change in either the amount or content of cuticle wax (PO:0025386) on a leaf (PO:0025034)." [GR:pj]
+comment: If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 is_a: TO:0000748 ! leaf morphology trait
 
 [Term]
@@ -6350,7 +6355,8 @@ is_a: TO:0000719 ! leaf vein color
 [Term]
 id: TO:0000721
 name: leaf adherence
-def: "A leaf morphology trait (TO:0000748) which is a tightly rolled leaf encasing the next emerging leaf (PO:0025034)." [GR:pj, PO:0025034, POC:cooperl]
+def: "A leaf morphology trait (TO:0000748) which is a tightly rolled leaf encasing the next emerging leaf (PO:0025034)." [GR:pj, PO:0025034,TO:cooperl]
+comment: If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 is_a: TO:0000748 ! leaf morphology trait
 
 [Term]
@@ -7547,8 +7553,8 @@ creation_date: 2012-07-02T11:56:25Z
 [Term]
 id: TO:0000824
 name: leaf attitude
-def: "A leaf morphology trait (TO:0000748) which is the attitude of a leaf (PO:0025034)." [PO:0025034, POC:cooperl]
-comment: Leaf attitude traits refer to the way a leaf is naturally held on the plant.
+def: "A leaf morphology trait (TO:0000748) which is the attitude of a leaf (PO:0025034)." [PO:0025034, TO:cooperl]
+comment: Leaf attitude traits refer to the way a leaf is naturally held on the plant.  If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 xref: TO_GIT:91
 is_a: TO:0000748 ! leaf morphology trait
 created_by: moorel
@@ -7558,7 +7564,7 @@ creation_date: 2012-07-02T12:06:18Z
 id: TO:0000825
 name: leaf flexibility
 def: "A leaf morphology trait (TO:0000748) which is the flexibility of a leaf (PO:0025034)." [PO:0025034, POC:cooperl]
-comment: Refer to flexibility (PATO:0001543): A physical quality inhering in a bearer by virtue of the bearer's disposition to being turned, bowed, or twisted without breaking.
+comment: Refer to flexibility (PATO:0001543): A physical quality inhering in a bearer by virtue of the bearer's disposition to being turned, bowed, or twisted without breaking. If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 xref: PATO:0001543
 xref: TO_GIT:91
 is_a: TO:0000748 ! leaf morphology trait
@@ -7570,8 +7576,8 @@ creation_date: 2012-07-02T12:12:45Z
 [Term]
 id: TO:0000826
 name: leaf volume
-def: "A leaf morphology trait (TO:0000748) which is the volume of a leaf (PO:0025034)." [PO:0025034, POC:cooperl]
-comment: Refer to volume (PATO:0000918): A 3-D extent quality inhering in a bearer by virtue of the bearer's amount of 3-dimensional space it occupies.
+def: "A leaf morphology trait (TO:0000748) which is the volume of a leaf (PO:0025034)." [PO:0025034, TO:cooperl]
+comment: Refer to volume (PATO:0000918): A 3-D extent quality inhering in a bearer by virtue of the bearer's amount of 3-dimensional space it occupies. If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 xref: PATO:0000918
 xref: TO_GIT:91
 is_a: TO:0000748 ! leaf morphology trait
@@ -9976,7 +9982,7 @@ intersection_of: inheres_in PO:0020049 ! leaflet
 [Term]
 id: TO:0002637
 name: leaf size
-def: "A leaf morphology trait (TO:0000748) which is the variation in sizes of a leaf (PO:0025034)." [GR:pj, PO:0025034, POC:cooperl]
+def: "A leaf morphology trait (TO:0000748) which is the size of a leaf (PO:0025034)." [GR:pj, PO:0025034, TO:cooperl]
 comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 xref: PATO:0000117
 is_a: TO:0000748 ! leaf morphology trait
@@ -12969,14 +12975,10 @@ creation_date: 2011-08-19T05:09:40Z
 [Term]
 id: TO:1000000
 name: stem internode bent
-def: "A stem internode morphology trait (TO:0000756) where the stem internode (PO:0020142) is bent." [GOC:TermGenie]
-synonym: "internodo del tallo (Spanish) bent" EXACT [GOC:TermGenie]
-synonym: "茎節間 (Japanese) bent" EXACT [GOC:TermGenie]
-is_a: PATO:0000617 {is_inferred="true"} ! bent
-is_a: TO:0000756 {is_inferred="true"} ! stem internode morphology trait
+def: "A stem internode morphology trait (TO:0000756) where the stem internode (PO:0020142) is bent." [TO:cooperl]
+is_a: TO:0000756 ! stem internode morphology trait
 intersection_of: PATO:0000617 ! bent
 intersection_of: inheres_in PO:0020142 ! stem internode
-relationship: inheres_in PO:0020142 {is_inferred="true"} ! stem internode
 created_by: cooperl
 creation_date: 2015-11-24T22:16:25Z
 
