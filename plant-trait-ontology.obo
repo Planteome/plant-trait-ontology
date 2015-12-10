@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 09:12:2015 09:55
+date: 09:12:2015 16:17
 saved-by: cooperl
 auto-generated-by: TermGenie 1.0
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -9093,9 +9093,12 @@ name: ear infructescence position ratio
 def: "An ear infructescence morphology trait (TO:0000976) which is the ratio of ear infructescence position (TO:0000683) to plant height (TO:0000207)." [TO: cooperl, TO:Ethan_Johnson]
 synonym: "ear position ratio" RELATED []
 xref: TO_GIT:132
+is_a: TO:0000969 {is_inferred="true"} ! ear inflorescence morphology trait
 is_a: TO:0000976 ! ear infructescence morphology trait
+is_a: TO:1000004 {is_inferred="true"} ! infructescence position
 intersection_of: PATO:0000140 ! position
 intersection_of: inheres_in PO:0020136 ! ear inflorescence
+relationship: inheres_in PO:0020136 {is_inferred="true"} ! ear inflorescence
 created_by: johnseth
 creation_date: 2015-09-01T16:17:13Z
 
@@ -12985,6 +12988,16 @@ intersection_of: PATO:0000052 ! shape
 intersection_of: inheres_in PO:0020142 ! stem internode
 created_by: cooperl
 creation_date: 2015-11-24T22:16:25Z
+
+[Term]
+id: TO:1000004
+name: infructescence position
+def: "An infructescence morphology trait (TO:0000920) which is the position of an infructescence (PO:0006342)." [TO:cooperl]
+is_a: TO:0000920 ! infructescence morphology trait
+intersection_of: PATO:0000140 ! position
+intersection_of: inheres_in PO:0006342 ! infructescence
+created_by: cooperl
+creation_date: 2015-12-10T00:13:35Z
 
 [Typedef]
 id: has_dividend_entity
