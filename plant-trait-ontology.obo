@@ -6522,7 +6522,7 @@ creation_date: 2012-04-19T10:40:33Z
 [Term]
 id: TO:0000740
 name: branch morphology trait
-def: "A shoot axis trait (TO:0000739) which is a quality of a branch (PO:0025073)." [PO:0025073, POC:cooperl]
+def: "A shoot axis morphology trait (TO:0000739) which is a quality of a branch (PO:0025073)." [PO:0025073, POC:cooperl]
 xref: TO_GIT:56
 is_a: TO:0000739 ! shoot axis morphology trait
 intersection_of: PATO:0001241 ! physical object quality
@@ -6533,9 +6533,9 @@ creation_date: 2012-04-19T10:42:49Z
 [Term]
 id: TO:0000741
 name: tuber morphology trait
-def: "A branch morphology trait (TO:0000739) which is quality of a tuber (PO:0004543)." [PO:0004543, POC:cooperl]
+def: "A plant axis morphology trait (TO:0000738) which is quality of a tuber (PO:0004543)." [PO:0004543, TO:cooperl]
 xref: TO_GIT:56
-is_a: TO:0000740 ! branch morphology trait
+is_a: TO:0000738 ! plant axis morphology trait
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: inheres_in PO:0025522 ! tuber
 created_by: moorel
@@ -6543,8 +6543,8 @@ creation_date: 2012-04-19T10:45:11Z
 
 [Term]
 id: TO:0000742
-name: subterranean tuber morphology trait
-def: "A tuber morphology trait (TO:0000741) which is a quality of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
+name: subterranean shoot axis tuber morphology trait
+def: "A tuber morphology trait (TO:0000741) which is a quality of a subterranean tuber (PO:0004547)." [PO:0004547, TO:cooperl]
 subset: Solanaceae_spp
 xref: TO_GIT:56
 is_a: TO:0000741 ! tuber morphology trait
@@ -6555,14 +6555,14 @@ creation_date: 2012-04-19T10:46:10Z
 
 [Term]
 id: TO:0000743
-name: subterranean tuber shape
+name: subterranean shoot axis tuber shape
 def: "A subterranean tuber morphology trait (TO:0000742) which is the shape of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
 comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 subset: Solanaceae_spp
-synonym: "tuber shape" RELATED []
+synonym: "tuber shape" BROAD []
 xref: PATO:0000052
 xref: TO_GIT:56
-is_a: TO:0000742 ! subterranean tuber morphology trait
+is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 intersection_of: PATO:0000052 ! shape
 intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
@@ -6570,14 +6570,14 @@ creation_date: 2012-04-19T10:48:44Z
 
 [Term]
 id: TO:0000744
-name: subterranean tuber size
+name: subterranean shoot axis tuber size
 def: "A subterranean tuber morphology trait (TO:0000742) which is the size of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
 comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude.
 subset: Solanaceae_spp
-synonym: "tuber size" RELATED []
+synonym: "tuber size"  BROAD []
 xref: PATO:0000117
 xref: TO_GIT:56
-is_a: TO:0000742 ! subterranean tuber morphology trait
+is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 intersection_of: PATO:0000117 ! size
 intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
@@ -6585,26 +6585,26 @@ creation_date: 2012-04-19T10:51:20Z
 
 [Term]
 id: TO:0000745
-name: subterranean tuber appearance
-def: "A subterranean tuber morphology trait (TO:0000742) which is the appearance of a  subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
+name: subterranean shoot axis tuber appearance
+def: "A subterranean tuber morphology trait (TO:0000742) which is the appearance of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
 comment: A 1-9 scale is used to score the overall appearance of the tuber, with 1 the lowest score (very poor) and 9 the highest (excellent).
 subset: Solanaceae_spp
-synonym: "tuber appearance" RELATED []
+synonym: "tuber appearance"  BROAD []
 xref: TO_GIT:56
-is_a: TO:0000742 ! subterranean tuber morphology trait
+is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 created_by: moorel
 creation_date: 2012-04-19T10:54:11Z
 
 [Term]
 id: TO:0000746
-name: subterranean tuber mass
+name: subterranean shoot axis tuber mass
 def: "A subterranean tuber morphology trait (TO:0000742) which is the mass of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
 comment: Refer to mass (PATO:0000125): A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter.
 subset: Solanaceae_spp
-synonym: "tuber mass" RELATED []
+synonym: "tuber mass"  BROAD []
 xref: PATO:0000125
 xref: TO_GIT:56
-is_a: TO:0000742 ! subterranean tuber morphology trait
+is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 intersection_of: PATO:0000125 ! mass
 intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
@@ -12998,6 +12998,10 @@ created_by: cooperl
 creation_date: 2015-12-10T00:13:35Z
 
 [Typedef]
+id: from_country
+name: from country
+
+[Typedef]
 id: has_dividend_entity
 name: has dividend entity
 
@@ -13017,6 +13021,10 @@ name: has divisor quality
 id: has_part
 name: has part
 xref: BFO:0000051
+
+[Typedef]
+id: has_phenotype_score
+name: has phenotype score
 
 [Typedef]
 id: has_ratio_quality
@@ -13041,10 +13049,3 @@ xref: BFO:0000050
 id: relative_to
 name: relative to
 
-[Typedef]
-id: has_phenotype_score
-name: has phenotype score
-
-[Typedef]
-id: from_country
-name: from country
