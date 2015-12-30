@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 30:12:2015 10:44
+date: 30:12:2015 11:45
 saved-by: cooperl
 auto-generated-by: TermGenie 1.0
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -1034,9 +1034,12 @@ is_a: TO:0000236 ! crop damage resistance
 id: TO:0000113
 name: giant embryo
 def: "An embryo shape trait (TO:0000193) that is a large sized plant embryo (PO:0009009)." [GR:pj, PO:0009009, TO:moorel]
+is_a: PATO:0000586 {is_inferred="true"} ! increased size
 is_a: TO:0000193 ! embryo shape
+is_a: TO:1000012 {is_inferred="true"} ! whole plant size
 intersection_of: PATO:0000586 ! increased size
 intersection_of: inheres_in PO:0009009 ! plant embryo
+relationship: inheres_in PO:0009009 {is_inferred="true"} ! plant embryo
 
 [Term]
 id: TO:0000114
@@ -1903,9 +1906,11 @@ synonym: "shoot height" RELATED []
 xref: PATO:0000119
 xref: TO_GIT:367
 xref: TO_GIT:84
-is_a: TO:0000398 ! whole plant morphology trait
+is_a: PATO:0000119 {is_inferred="true"} ! height
+is_a: TO:1000012 {is_inferred="true"} ! whole plant size
 intersection_of: PATO:0000119 ! height
 intersection_of: inheres_in PO:0000003 ! whole plant
+relationship: inheres_in PO:0000003 {is_inferred="true"} ! whole plant
 
 [Term]
 id: TO:0000208
@@ -13074,6 +13079,38 @@ intersection_of: inheres_in PO:0009001 ! fruit
 relationship: inheres_in PO:0009001 {is_inferred="true"} ! fruit
 created_by: cooperl
 creation_date: 2015-12-30T18:26:07Z
+
+[Term]
+id: TO:1000012
+name: whole plant size
+def: "A whole plant morphology trait (TO:0000398) which is the size of a whole plant (PO:0000003)." [TO:cooperl]
+synonym: "bush size" NARROW [GOC:TermGenie]
+synonym: "clonal colony size" RELATED [GOC:TermGenie]
+synonym: "colony size" RELATED [GOC:TermGenie]
+synonym: "frutex size" NARROW [GOC:TermGenie]
+synonym: "frutices size" NARROW [GOC:TermGenie]
+synonym: "gametophyte size" NARROW [GOC:TermGenie]
+synonym: "herb size" NARROW [GOC:TermGenie]
+synonym: "liana size" NARROW [GOC:TermGenie]
+synonym: "planta entera (Spanish) size" EXACT [GOC:TermGenie]
+synonym: "prothalli size" NARROW [GOC:TermGenie]
+synonym: "prothallium size" NARROW [GOC:TermGenie]
+synonym: "prothallus size" NARROW [GOC:TermGenie]
+synonym: "seedling size" NARROW [GOC:TermGenie]
+synonym: "shrub size" NARROW [GOC:TermGenie]
+synonym: "sporophyte size" NARROW [GOC:TermGenie]
+synonym: "suffrutex size" NARROW [GOC:TermGenie]
+synonym: "suffrutices size" NARROW [GOC:TermGenie]
+synonym: "tree size" NARROW [GOC:TermGenie]
+synonym: "vine size" NARROW [GOC:TermGenie]
+synonym: "woody clump size" NARROW [GOC:TermGenie]
+is_a: PATO:0000117 {is_inferred="true"} ! size
+is_a: TO:0000398 {is_inferred="true"} ! whole plant morphology trait
+intersection_of: PATO:0000117 ! size
+intersection_of: inheres_in PO:0000003 ! whole plant
+relationship: inheres_in PO:0000003 {is_inferred="true"} ! whole plant
+created_by: cooperl
+creation_date: 2015-12-30T19:41:19Z
 
 [Typedef]
 id: from_country
