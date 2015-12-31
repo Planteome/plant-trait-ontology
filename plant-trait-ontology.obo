@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 30:12:2015 11:45
-saved-by: cooperl
+date: 31:12:2015 12:59
+saved-by: marieangelique.laporte
 auto-generated-by: TermGenie 1.0
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
@@ -9583,6 +9583,13 @@ synonym: "culm senescence" RELATED []
 is_obsolete: true
 
 [Term]
+id: TO:0001041
+name: root yield
+def: "A yield trait (TO:0000371) which is the yield of roots (PO:0009005)." [TO:cooperl]
+is_a: TO:0000371 ! yield trait
+created_by: cooperl
+
+[Term]
 id: TO:0002600
 name: floral organ size
 def: "A floral organ morphology trait (TO:0000862) which is the size of a floral organ (PO:0025395)." [GR:pj, PO:0025395, TO:moorel]
@@ -13010,6 +13017,19 @@ created_by: marieangelique.laporte
 creation_date: 2015-12-11T16:05:03Z
 
 [Term]
+id: TO:1000008
+name: branch position
+def: "A branch morphology trait (TO:0000740) which is the position of a branch (PO:0025073)." [GOC:TermGenie]
+synonym: "shoot axis branch position" EXACT [GOC:TermGenie]
+is_a: PATO:0000140 {is_inferred="true"} ! position
+is_a: TO:0000740 {is_inferred="true"} ! branch morphology trait
+intersection_of: PATO:0000140 ! position
+intersection_of: inheres_in PO:0025073 ! branch
+relationship: inheres_in PO:0025073 {is_inferred="true"} ! branch
+created_by: marieangelique.laporte
+creation_date: 2015-12-16T09:38:12Z
+
+[Term]
 id: TO:1000011
 name: fruit position
 def: "A fruit morphology trait (TO:0002629) which is the position of a fruit (PO:0009001)." [TO:cooperl]
@@ -13111,13 +13131,6 @@ intersection_of: inheres_in PO:0000003 ! whole plant
 relationship: inheres_in PO:0000003 {is_inferred="true"} ! whole plant
 created_by: cooperl
 creation_date: 2015-12-30T19:41:19Z
-
-[Term]
-id: TO:0001041
-name: root yield
-def: "A yield trait (TO:0000371) which is the yield of roots (PO:0009005)." [TO:cooperl]
-is_a: TO:0000371 ! yield trait
-created_by: cooperl
 
 [Typedef]
 id: from_country
