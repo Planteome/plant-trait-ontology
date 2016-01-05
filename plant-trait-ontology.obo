@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 09:12:2015 16:17
-saved-by: cooperl
+date: 31:12:2015 12:59
+saved-by: marieangelique.laporte
 auto-generated-by: TermGenie 1.0
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
@@ -18,12 +18,7 @@ import: http://purl.obolibrary.org/obo/to/imports/go_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/pato_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/ro_import.owl
 ontology: to
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nEquivalentClasses(<http://purl.obolibrary.org/obo/TO_0000387> ObjectIntersectionOf(ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000066> <http://purl.obolibrary.org/obo/PO_0025131>) <http://purl.obolibrary.org/obo/PO_0009012>) <http://purl.obolibrary.org/obo/PATO_0000001>))\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/TO_0000980> \"\")\n)
-
-[Term]
-id: PATO:0002266 ! 3-D shape
-intersection_of: PATO:0000052 ! shape
-intersection_of: inheres_in PO:0020142 ! stem internode
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/TO_0000980> \"\")\n)
 
 [Term]
 id: TO:0000001
@@ -39,7 +34,7 @@ intersection_of: occurs_in PO:0000003 ! whole plant
 [Term]
 id: TO:0000002
 name: epigenetic trait
-def: "An epigenetic trait is a distinguishable feature or a characteristic or a quality of character or a phenotypic feature of a developing or developed individual but have arisen as a result of mechanisms regulating the expression of the genes rather than differences in the gene sequence." [GR:pj, ISBN:0198506732]
+def: "OBSOLETE. An epigenetic trait is a distinguishable feature or a characteristic or a quality of character or a phenotypic feature of a developing or developed individual but have arisen as a result of mechanisms regulating the expression of the genes rather than differences in the gene sequence." [GR:pj, ISBN:0198506732]
 is_obsolete: true
 
 [Term]
@@ -347,7 +342,7 @@ is_a: TO:0000371 ! yield trait
 [Term]
 id: TO:0000037
 name: male sterility extent
-def: "Determines the extent of male sterility of a male sterile line. Can be determined by either pollen sterility or spikelet fertility" [GR:pj, IRRI:SES]
+def: "OBSOLETE. Determines the extent of male sterility of a male sterile line. Can be determined by either pollen sterility or spikelet fertility" [GR:pj, IRRI:SES]
 synonym: "degree of male sterility of male sterile lines" RELATED []
 synonym: "male sterility measure" RELATED []
 is_obsolete: true
@@ -363,7 +358,7 @@ intersection_of: occurs_in PO:0000003 ! whole plant
 [Term]
 id: TO:0000039
 name: yield component
-def: "defines the components that determine the over all yield from a plant" [GR:pj]
+def: "OBSOLETE. Defines the components that determine the over all yield from a plant" [GR:pj]
 is_obsolete: true
 
 [Term]
@@ -592,6 +587,7 @@ intersection_of: inheres_in PO:0009005 ! root
 [Term]
 id: TO:0000066
 name: spot disease
+def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
@@ -684,7 +680,7 @@ intersection_of: occurs_in PO:0000003 ! whole plant
 [Term]
 id: TO:0000076
 name: inflorescence feature
-def: "The instances define various distinguishing trait features associated with inflorescence and its instances." [GR:pj]
+def: "OBSOLETE. The instances define various distinguishing trait features associated with inflorescence and its instances." [GR:pj]
 is_obsolete: true
 
 [Term]
@@ -828,6 +824,7 @@ is_a: TO:0000306 ! root thickness
 [Term]
 id: TO:0000091
 name: leafhopper
+def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
@@ -1037,9 +1034,12 @@ is_a: TO:0000236 ! crop damage resistance
 id: TO:0000113
 name: giant embryo
 def: "An embryo shape trait (TO:0000193) that is a large sized plant embryo (PO:0009009)." [GR:pj, PO:0009009, TO:moorel]
+is_a: PATO:0000586 {is_inferred="true"} ! increased size
 is_a: TO:0000193 ! embryo shape
+is_a: TO:1000012 {is_inferred="true"} ! whole plant size
 intersection_of: PATO:0000586 ! increased size
 intersection_of: inheres_in PO:0009009 ! plant embryo
+relationship: inheres_in PO:0009009 {is_inferred="true"} ! plant embryo
 
 [Term]
 id: TO:0000114
@@ -1552,12 +1552,10 @@ is_a: TO:0000114 ! flooding related trait
 [Term]
 id: TO:0000171
 name: height trait
-def: "A stature and vigor trait (TO:0000133) which is the height of a whole plant (PO:0000003) or another plant structure (PO:0009011)." [GR:pj, TO:cooperl]
+def: "OBSOLETE. A stature and vigor trait (TO:0000133) which is the height of a whole plant (PO:0000003) or another plant structure (PO:0009011)." [GR:pj, TO:cooperl]
 comment: Refers to: height (PATO_0000119): A 1-D extent quality inhering in a bearer by virtue of the bearer's vertical dimension of extension.
 xref: TO_GIT:226
-is_a: TO:0000133 ! stature or vigor trait
-intersection_of: PATO:0000119 ! height
-intersection_of: inheres_in PO:0009011 ! plant structure
+is_obsolete: true
 
 [Term]
 id: TO:0000172
@@ -1583,6 +1581,7 @@ intersection_of: occurs_in PO:0000003 ! whole plant
 [Term]
 id: TO:0000174
 name: maturity trait
+def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
@@ -1692,6 +1691,7 @@ intersection_of: inheres_in PO:0009073 ! stigma
 [Term]
 id: TO:0000186
 name: environmental stress related trait
+def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
@@ -1736,10 +1736,10 @@ synonym: "SCC" RELATED []
 synonym: "SDCCL" RELATED []
 xref: PATO:0000014
 is_a: TO:0000838 ! seed coat morphology trait
-is_a: TO:0000931 ! seed quality trait
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009088 ! seed coat
 relationship: part_of TO:0000486 ! seed color
+relationship: part_of TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000191
@@ -1906,9 +1906,11 @@ synonym: "shoot height" RELATED []
 xref: PATO:0000119
 xref: TO_GIT:367
 xref: TO_GIT:84
-is_a: TO:0000398 ! whole plant morphology trait
+is_a: PATO:0000119 {is_inferred="true"} ! height
+is_a: TO:1000012 {is_inferred="true"} ! whole plant size
 intersection_of: PATO:0000119 ! height
 intersection_of: inheres_in PO:0000003 ! whole plant
+relationship: inheres_in PO:0000003 {is_inferred="true"} ! whole plant
 
 [Term]
 id: TO:0000208
@@ -1986,6 +1988,7 @@ intersection_of: inheres_in PO:0009029 ! stamen
 [Term]
 id: TO:0000216
 name: grassy stunt virus disease
+def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
@@ -2007,6 +2010,7 @@ is_a: TO:0000437 ! male sterility
 [Term]
 id: TO:0000219
 name: stem morphology
+def: "OBSOLETE." []
 synonym: "culm morphology" RELATED []
 is_obsolete: true
 
@@ -2202,6 +2206,7 @@ is_a: TO:0000482 ! chemical stress sensitivity
 [Term]
 id: TO:0000239
 name: plant genetic trait unknown
+def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
@@ -2339,7 +2344,7 @@ is_a: TO:0000664 ! fungal blight disease resistance
 [Term]
 id: TO:0000256
 name: genetic trait
-def: "A genetic trait is a distinguishable feature or a characteristic or a quality of character or a phenotypic feature of a developing or developed individual that is linked to a physical or genetic marker" [GR:pj]
+def: "OBSOLETE. A genetic trait is a distinguishable feature or a characteristic or a quality of character or a phenotypic feature of a developing or developed individual that is linked to a physical or genetic marker" [GR:pj]
 is_obsolete: true
 
 [Term]
@@ -2488,6 +2493,7 @@ intersection_of: inheres_in PO:0009049 ! inflorescence
 [Term]
 id: TO:0000272
 name: plant survivability
+def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
@@ -2779,6 +2785,7 @@ intersection_of: inheres_in CHEBI:27325 ! xanthophyll
 [Term]
 id: TO:0000302
 name: smut disease
+def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
@@ -3065,6 +3072,7 @@ is_a: TO:0000291 ! carbohydrate content
 [Term]
 id: TO:0000334
 name: hybrid evaluation
+def: "OBSOLETE." []
 synonym: "parental line evaluation" RELATED []
 is_obsolete: true
 
@@ -3131,7 +3139,7 @@ is_a: TO:0000333 ! sugar content
 id: TO:0000341
 name: plant genetic trait
 alt_id: TO:0000005
-def: "A plant genetic trait is a distinguishable feature or a characteristic or a quality of character or a phenotypic feature of a developing or developed plant species which is genetically linked to a physical or genetic marker" [GR:pj]
+def: "OBSOLETE. A plant genetic trait is a distinguishable feature or a characteristic or a quality of character or a phenotypic feature of a developing or developed plant species which is genetically linked to a physical or genetic marker" [GR:pj]
 synonym: "obsolete trait term" RELATED []
 is_obsolete: true
 
@@ -3312,6 +3320,7 @@ intersection_of: inheres_in PO:0009047 ! stem
 [Term]
 id: TO:0000362
 name: rot disease
+def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
@@ -3460,6 +3469,7 @@ is_a: TO:0000667 ! cooking or brewing quality
 [Term]
 id: TO:0000380
 name: planthopper
+def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
@@ -3570,6 +3580,7 @@ is_a: TO:0000387 ! plant trait
 [Term]
 id: TO:0000393
 name: yield and yield component
+def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
@@ -3688,6 +3699,7 @@ is_a: TO:0000847 ! panicle morphology trait
 [Term]
 id: TO:0000407
 name: hoppers
+def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
@@ -3900,7 +3912,7 @@ xref: PATO:0000122
 xref: TO_GIT:132
 is_a: TO:0000976 ! ear infructescence morphology trait
 intersection_of: PATO:0000122 ! length
-intersection_of: inheres_in PO:0020136 ! ear inflorescence
+intersection_of: inheres_in PO:0025597 ! ear infructescence
 
 [Term]
 id: TO:0000432
@@ -3922,7 +3934,7 @@ xref: PATO:0001334
 xref: TO_GIT:132
 is_a: TO:0000976 ! ear infructescence morphology trait
 intersection_of: PATO:0001334 ! diameter
-intersection_of: inheres_in PO:0020136 ! ear inflorescence
+intersection_of: inheres_in PO:0025597 ! ear infructescence
 
 [Term]
 id: TO:0000434
@@ -4173,7 +4185,7 @@ is_a: TO:0000357 ! plant growth and development trait
 [Term]
 id: TO:0000465
 name: mineral and ion content related trait
-def: "The total mineral and/or ion content measured in a plant or a plant part." [GR:pj]
+def: "A biochemical trait (TO:0000277) that is the amount of a particular mineral or ion constituent occurring in a plant anatomical entity (PO:0025131)." [GR:pj]
 comment: May be measured in a dry mass or in a fresh tissue.
 is_a: TO:0000277 ! biochemical trait
 created_by: jaiswalp
@@ -4560,7 +4572,7 @@ id: TO:0000513
 name: potassium concentration
 def: "The total potassium ion concentration measured in a plant or a plant part or plant extract." [GR:pj]
 synonym: "KCONC" RELATED []
-is_a: TO:0000465 ! mineral and ion content related trait
+is_a: TO:0000609 ! potassium content
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:26216 ! potassium atom
 
@@ -4659,7 +4671,7 @@ id: TO:0000526
 name: sodium concentration
 def: "The total sodium ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:pj]
 synonym: "NACONC" RELATED []
-is_a: TO:0000465 ! mineral and ion content related trait
+is_a: TO:0000608 ! sodium content
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:26708 ! sodium atom
 
@@ -4956,7 +4968,7 @@ name: plant volume
 def: "Space occupied by the plant." [GR:pj]
 synonym: "SP" RELATED []
 synonym: "space" RELATED []
-is_a: TO:0000133 ! stature or vigor trait
+is_a: TO:0000398 ! whole plant morphology trait
 
 [Term]
 id: TO:0000560
@@ -4964,7 +4976,7 @@ name: space per culm
 def: "Space occupied by each culm or the tiller in a plant." [GR:pj]
 synonym: "SPPCULM" RELATED []
 synonym: "tiller volume" RELATED []
-is_a: TO:0000559 ! plant volume
+is_a: TO:0000361 ! stem morphology trait
 
 [Term]
 id: TO:0000561
@@ -5293,6 +5305,7 @@ is_a: TO:0000593 ! polished grain weight
 [Term]
 id: TO:0000596
 name: plant volume (sensu Poaceae)
+def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
@@ -5377,7 +5390,7 @@ name: hydrogen peroxide content
 def: "An assay to determine the content of hydrogen peroxide or the peroxide reactive ions." [GR:pj]
 synonym: "H2O2 content" RELATED []
 synonym: "H2O2CN" RELATED []
-is_a: TO:0000277 ! biochemical trait
+is_a: TO:0000281 ! metabolite content related trait
 is_a: TO:0002657 ! oxidative stress
 intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:16240 ! hydrogen peroxide
@@ -6000,7 +6013,7 @@ synonym: "EARCIRCUM" RELATED []
 xref: TO_GIT:132
 is_a: TO:0000976 ! ear infructescence morphology trait
 intersection_of: PATO:0001648 ! circumference
-intersection_of: inheres_in PO:0020136 ! ear inflorescence
+intersection_of: inheres_in PO:0025597 ! ear infructescence
 
 [Term]
 id: TO:0000682
@@ -6024,8 +6037,8 @@ synonym: "EARHT" RELATED []
 xref: MaizeGDB_QTL:61369
 xref: TO_GIT:226
 is_a: TO:0000976 ! ear infructescence morphology trait
-intersection_of: PATO:0000119 ! height
-intersection_of: inheres_in PO:0020136 ! ear inflorescence
+intersection_of: PATO:0000140 ! position
+intersection_of: inheres_in PO:0025597 ! ear infructescence
 
 [Term]
 id: TO:0000684
@@ -6408,7 +6421,6 @@ name: cell cycle trait
 def: "The traits associated with various developmental landmarks and processes of cell division during either the meiotic cell cycle or mitotic cell cycle." [R:pj]
 synonym: "cell division cycle" RELATED []
 xref: GO:GO\:0007049
-is_a: TO:0000283 ! biological process related trait
 is_a: TO:0002686 ! cell growth and development trait
 intersection_of: PATO:0001236 ! process quality
 intersection_of: inheres_in GO:0007049 ! cell cycle
@@ -6495,7 +6507,7 @@ def: "A stature or vigor trait (TO:0000133) that is a qualitative score of the v
 comment: Includes visual scoring of plant characteristics such as plant height (TO:0000207), uniformity of plants, plant damage by diseases and insects and lodging incidence (TO:0000068).
 subset: Zea_mays
 xref: TO_GIT:53
-is_a: TO:0000133 ! stature or vigor trait
+is_a: TO:0000398 ! whole plant morphology trait
 created_by: moorel
 creation_date: 2012-04-16T02:18:03Z
 
@@ -6524,7 +6536,7 @@ creation_date: 2012-04-19T10:40:33Z
 [Term]
 id: TO:0000740
 name: branch morphology trait
-def: "A shoot axis trait (TO:0000739) which is a quality of a branch (PO:0025073)." [PO:0025073, POC:cooperl]
+def: "A shoot axis morphology trait (TO:0000739) which is a quality of a branch (PO:0025073)." [PO:0025073, POC:cooperl]
 xref: TO_GIT:56
 is_a: TO:0000739 ! shoot axis morphology trait
 intersection_of: PATO:0001241 ! physical object quality
@@ -6535,9 +6547,9 @@ creation_date: 2012-04-19T10:42:49Z
 [Term]
 id: TO:0000741
 name: tuber morphology trait
-def: "A branch morphology trait (TO:0000739) which is quality of a tuber (PO:0004543)." [PO:0004543, POC:cooperl]
+def: "A plant axis morphology trait (TO:0000738) which is quality of a tuber (PO:0004543)." [PO:0004543, TO:cooperl]
 xref: TO_GIT:56
-is_a: TO:0000740 ! branch morphology trait
+is_a: TO:0000738 ! plant axis morphology trait
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: inheres_in PO:0025522 ! tuber
 created_by: moorel
@@ -6545,8 +6557,8 @@ creation_date: 2012-04-19T10:45:11Z
 
 [Term]
 id: TO:0000742
-name: subterranean tuber morphology trait
-def: "A tuber morphology trait (TO:0000741) which is a quality of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
+name: subterranean shoot axis tuber morphology trait
+def: "A tuber morphology trait (TO:0000741) which is a quality of a subterranean tuber (PO:0004547)." [PO:0004547, TO:cooperl]
 subset: Solanaceae_spp
 xref: TO_GIT:56
 is_a: TO:0000741 ! tuber morphology trait
@@ -6557,14 +6569,14 @@ creation_date: 2012-04-19T10:46:10Z
 
 [Term]
 id: TO:0000743
-name: subterranean tuber shape
+name: subterranean shoot axis tuber shape
 def: "A subterranean tuber morphology trait (TO:0000742) which is the shape of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
 comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 subset: Solanaceae_spp
-synonym: "tuber shape" RELATED []
+synonym: "tuber shape" BROAD []
 xref: PATO:0000052
 xref: TO_GIT:56
-is_a: TO:0000742 ! subterranean tuber morphology trait
+is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 intersection_of: PATO:0000052 ! shape
 intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
@@ -6572,14 +6584,14 @@ creation_date: 2012-04-19T10:48:44Z
 
 [Term]
 id: TO:0000744
-name: subterranean tuber size
+name: subterranean shoot axis tuber size
 def: "A subterranean tuber morphology trait (TO:0000742) which is the size of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
 comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude.
 subset: Solanaceae_spp
-synonym: "tuber size" RELATED []
+synonym: "tuber size" BROAD []
 xref: PATO:0000117
 xref: TO_GIT:56
-is_a: TO:0000742 ! subterranean tuber morphology trait
+is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 intersection_of: PATO:0000117 ! size
 intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
@@ -6587,26 +6599,26 @@ creation_date: 2012-04-19T10:51:20Z
 
 [Term]
 id: TO:0000745
-name: subterranean tuber appearance
-def: "A subterranean tuber morphology trait (TO:0000742) which is the appearance of a  subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
+name: subterranean shoot axis tuber appearance
+def: "A subterranean tuber morphology trait (TO:0000742) which is the appearance of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
 comment: A 1-9 scale is used to score the overall appearance of the tuber, with 1 the lowest score (very poor) and 9 the highest (excellent).
 subset: Solanaceae_spp
-synonym: "tuber appearance" RELATED []
+synonym: "tuber appearance" BROAD []
 xref: TO_GIT:56
-is_a: TO:0000742 ! subterranean tuber morphology trait
+is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 created_by: moorel
 creation_date: 2012-04-19T10:54:11Z
 
 [Term]
 id: TO:0000746
-name: subterranean tuber mass
+name: subterranean shoot axis tuber mass
 def: "A subterranean tuber morphology trait (TO:0000742) which is the mass of a subterranean tuber (PO:0004547)." [PO:0004547, POC:cooperl]
 comment: Refer to mass (PATO:0000125): A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter.
 subset: Solanaceae_spp
-synonym: "tuber mass" RELATED []
+synonym: "tuber mass" BROAD []
 xref: PATO:0000125
 xref: TO_GIT:56
-is_a: TO:0000742 ! subterranean tuber morphology trait
+is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 intersection_of: PATO:0000125 ! mass
 intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
@@ -7614,8 +7626,8 @@ creation_date: 2012-07-02T12:36:51Z
 [Term]
 id: TO:0000829
 name: leaf lamina morphology trait
-def: "A leaf morphology trait (TO:0000748) which is a quality of a leaf lamina (PO:0020039)." [PO:0020039]
-is_a: TO:0000748 ! leaf morphology trait
+def: "A cardinal organ part morphology trait (TO:0000754) which is a quality of a leaf lamina (PO:0020039)." [PO:0020039]
+is_a: TO:0000754 ! cardinal organ part morphology trait
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: inheres_in PO:0020039 ! leaf lamina
 created_by: moorel
@@ -8642,7 +8654,7 @@ creation_date: 2014-01-07T12:48:27Z
 [Term]
 id: TO:0000923
 name: ear weight
-def: "An infructescence weight trait (TO:0000583) that is the weight of an ear infructescence (PO:0025597)." [TO:cooperl]
+def: "An ear infructescence morphology trait (TO:0000976) that is the weight of an ear infructescence (PO:0025597)." [TO:cooperl]
 comment: Refers to mass (PATO:0000125): A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter.
 subset: Zea_mays
 synonym: "earwt" RELATED [MaizeGDB:???]
@@ -8650,8 +8662,9 @@ xref: MaizeGDB_QTL:65408
 xref: PATO:0000125
 xref: TO_GIT:244
 is_a: TO:0000583 ! infructescence weight
+is_a: TO:0000976 ! ear infructescence morphology trait
 intersection_of: PATO:0000128 ! weight
-intersection_of: inheres_in PO:0020136 ! ear inflorescence
+intersection_of: inheres_in PO:0025597 ! ear infructescence
 created_by: cooperl
 creation_date: 2013-12-10T20:53:38Z
 
@@ -8982,24 +8995,10 @@ creation_date: 2015-10-19T14:35:34Z
 
 [Term]
 id: TO:0000955
-name: <new term>
-is_obsolete: true
-created_by: johnseth
-creation_date: 2015-08-27T16:30:44Z
-
-[Term]
-id: TO:0000956
-name: <new term>
-is_obsolete: true
-created_by: johnseth
-creation_date: 2015-08-27T16:30:51Z
-
-[Term]
-id: TO:0000957
-name: <new term>
-is_obsolete: true
-created_by: johnseth
-creation_date: 2015-08-27T16:31:10Z
+name: cyanide content
+def: "A metabolite content related trait (TO:0000281) which is the amount of cyanide (CHEBI:17514) occurring in a plant anatomical entity (PO:0025131)." []
+xref: CHEBI:17514
+is_a: TO:0000281 ! metabolite content related trait
 
 [Term]
 id: TO:0000958
@@ -9060,7 +9059,7 @@ xref: PATO:0000014
 xref: TO_GIT:132
 is_a: TO:0000976 ! ear infructescence morphology trait
 intersection_of: PATO:0000014 ! color
-intersection_of: inheres_in PO:0020136 ! ear inflorescence
+intersection_of: inheres_in PO:0025597 ! ear infructescence
 created_by: johnseth
 creation_date: 2015-09-01T15:52:16Z
 
@@ -9073,7 +9072,7 @@ xref: PATO:0000052
 xref: TO_GIT:132
 is_a: TO:0000976 ! ear infructescence morphology trait
 intersection_of: PATO:0000052 ! shape
-intersection_of: inheres_in PO:0020136 ! ear inflorescence
+intersection_of: inheres_in PO:0025597 ! ear infructescence
 created_by: johnseth
 creation_date: 2015-09-01T16:07:23Z
 
@@ -9090,15 +9089,10 @@ creation_date: 2015-09-01T16:12:33Z
 [Term]
 id: TO:0000966
 name: ear infructescence position ratio
-def: "An ear infructescence morphology trait (TO:0000976) which is the ratio of ear infructescence position (TO:0000683) to plant height (TO:0000207)." [TO: cooperl, TO:Ethan_Johnson]
+def: "An ear infructescence morphology trait (TO:0000976) which is the ratio of ear infructescence position (TO:0000683) to plant height (TO:0000207)." [TO:cooperl, TO:Ethan_Johnson]
 synonym: "ear position ratio" RELATED []
 xref: TO_GIT:132
-is_a: TO:0000969 {is_inferred="true"} ! ear inflorescence morphology trait
 is_a: TO:0000976 ! ear infructescence morphology trait
-is_a: TO:1000004 {is_inferred="true"} ! infructescence position
-intersection_of: PATO:0000140 ! position
-intersection_of: inheres_in PO:0020136 ! ear inflorescence
-relationship: inheres_in PO:0020136 {is_inferred="true"} ! ear inflorescence
 created_by: johnseth
 creation_date: 2015-09-01T16:17:13Z
 
@@ -9590,9 +9584,24 @@ intersection_of: inheres_in PO:0009047 ! stem
 [Term]
 id: TO:0001036
 name: stem senescence
-def: "This term has been obsoleted. Please refer to stem senescence (TO:0020085)." [GR:cwt, TO:moorel]
+def: "OBSOLETE." []
+comment: Please refer to stem senescence (TO:0020085)." [GR:cwt, TO:moorel]
 synonym: "culm senescence" RELATED []
 is_obsolete: true
+
+[Term]
+id: TO:0001041
+name: root yield
+def: "A yield trait (TO:0000371) which is the yield of roots (PO:0009005)." [TO:cooperl]
+is_a: TO:0000371 ! yield trait
+created_by: cooperl
+
+[Term]
+id: TO:0001042
+name: root quality trait
+def: "A quality trait (TO:0000597) which is the quality of roots (PO:0009005)." [TO:cooperl]
+is_a: TO:0000597 ! quality trait
+created_by: cooperl
 
 [Term]
 id: TO:0002600
@@ -11617,7 +11626,7 @@ creation_date: 2010-10-25T04:54:15Z
 id: TO:0006048
 name: manganese concentration
 def: "The total Manganese ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
-is_a: TO:0000465 ! mineral and ion content related trait
+is_a: TO:0020091 ! manganese content
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:18291 ! manganese atom
 intersection_of: occurs_in PO:0000003 ! whole plant
@@ -11628,7 +11637,7 @@ creation_date: 2010-10-25T04:55:34Z
 id: TO:0006049
 name: iron concentration
 def: "The total iron concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
-is_a: TO:0000465 ! mineral and ion content related trait
+is_a: TO:0020089 ! iron content
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:18248 ! iron atom
 intersection_of: occurs_in PO:0000003 ! whole plant
@@ -11657,8 +11666,8 @@ creation_date: 2010-10-25T04:58:31Z
 [Term]
 id: TO:0006052
 name: copper concentration
-def: "The total Copper ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
-is_a: TO:0000465 ! mineral and ion content related trait
+def: "A copper content (TO:0020092) which is the amount of copper in a measured volumn." [GR:Karthik]
+is_a: TO:0020092 ! copper content
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:28694 ! copper atom
 intersection_of: occurs_in PO:0000003 ! whole plant
@@ -11669,7 +11678,7 @@ creation_date: 2010-10-25T04:59:17Z
 id: TO:0006053
 name: zinc concentration
 def: "The total Zinc ion concentration measured in a given volume of a plant or a plant part or plant extract." [GR:Karthik]
-is_a: TO:0000465 ! mineral and ion content related trait
+is_a: TO:0020090 ! zinc content
 intersection_of: PATO:0000033 ! concentration of
 intersection_of: inheres_in CHEBI:27363 ! zinc atom
 intersection_of: occurs_in PO:0000003 ! whole plant
@@ -11758,7 +11767,7 @@ creation_date: 2010-10-25T05:23:52Z
 id: TO:0006062
 name: plant width
 def: "The average width of a plant measured across an axis such as the main stem/stalk." [GR:pj]
-is_a: TO:0000133 ! stature or vigor trait
+is_a: TO:0000398 ! whole plant morphology trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:27:37Z
 
@@ -12132,12 +12141,12 @@ intersection_of: inheres_in PO:0009010 ! seed
 
 [Term]
 id: TO:0020017
-name: seed coat spots
-def: "A seed coat color trait (TO:0000190) where the seed coat (PO:0009088) has color spots." [PO:0009088, TO:moorel]
+name: seed coat spotted
+def: "A seed coat pattern trait  (TO:0000904) where the seed coat (PO:0009088) has colored spots." [PO:0009088, TO:moorel]
 comment: Refer to spotted (PATO:0000333): A color pattern inhering in a bearer by virtue of bearer's being marked with a round area of different hue or degree of saturation.
 xref: PATO:0000333
 xref: TO_GIT:148
-is_a: TO:0000190 ! seed coat color
+is_a: TO:0000904 ! seed coat pattern
 
 [Term]
 id: TO:0020018
@@ -12583,7 +12592,7 @@ def: "The trait  takes into account energy losses occurring in the animal in fae
 comment: Units: Kcal/kg.
 synonym: "metabolised energy" EXACT []
 synonym: "stover related traits" BROAD [GCP:GCP_324.000003]
-is_a: TO:0000277 ! biochemical trait
+is_a: TO:0000281 ! metabolite content related trait
 created_by: jaiswalp
 creation_date: 2011-08-19T03:17:28Z
 
@@ -12999,6 +13008,175 @@ intersection_of: inheres_in PO:0006342 ! infructescence
 created_by: cooperl
 creation_date: 2015-12-10T00:13:35Z
 
+[Term]
+id: TO:1000006
+name: tuberous root tuber diameter
+def: "A tuberous root tuber morphology trait (TO:1000007) which is the diameter of a tuberous root tuber (PO:0025476)." [GOC:TermGenie]
+synonym: "root tuber diameter" RELATED [TO:TermGenie]
+synonym: "storage root diameter" EXACT [TO:TermGenie]
+is_a: TO:1000007 ! tuberous root tuber morphology trait
+intersection_of: PATO:0001334 ! diameter
+intersection_of: inheres_in PO:0025476 ! tuberous root tuber
+created_by: marieangelique.laporte
+creation_date: 2015-12-11T15:55:08Z
+
+[Term]
+id: TO:1000007
+name: tuberous root tuber morphology trait
+def: "A tuber morphology trait (TO:0000741) which is the quality of a tuberous root tuber (PO:0025476)." [TO:malaporte]
+is_a: TO:0000741 ! tuber morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025476 ! tuberous root tuber
+created_by: marieangelique.laporte
+creation_date: 2015-12-11T16:05:03Z
+
+[Term]
+id: TO:1000008
+name: branch position
+def: "A branch morphology trait (TO:0000740) which is the position of a branch (PO:0025073)." [GOC:TermGenie]
+synonym: "shoot axis branch position" EXACT [GOC:TermGenie]
+is_a: PATO:0000140 {is_inferred="true"} ! position
+is_a: TO:0000740 {is_inferred="true"} ! branch morphology trait
+intersection_of: PATO:0000140 ! position
+intersection_of: inheres_in PO:0025073 ! branch
+relationship: inheres_in PO:0025073 {is_inferred="true"} ! branch
+created_by: marieangelique.laporte
+creation_date: 2015-12-16T09:38:12Z
+
+[Term]
+id: TO:1000009
+name: branch angle
+def: "A branch morphology trait (TO:0000740) which is the angle of a branch (PO:0025073)." [GOC:TermGenie]
+synonym: "branching angle" EXACT []
+synonym: "shoot axis branch angle" EXACT [GOC:TermGenie]
+is_a: PATO:0002326 {is_inferred="true"} ! angle
+is_a: TO:0000740 {is_inferred="true"} ! branch morphology trait
+intersection_of: PATO:0002326 ! angle
+intersection_of: inheres_in PO:0025073 ! branch
+relationship: inheres_in PO:0025073 {is_inferred="true"} ! branch
+created_by: marieangelique.laporte
+creation_date: 2015-12-16T14:12:59Z
+
+[Term]
+id: TO:1000010
+name: caruncle color
+def: "A plant structure morphology trait (PO:0020060) which is the color of a caruncle (PO:0020060)." [GOC:TermGenie]
+synonym: "caruncle colour" EXACT [GOC:TermGenie]
+is_a: PATO:0000014 {is_inferred="true"} ! color
+is_a: TO:0000839 {is_inferred="true"} ! plant structure morphology trait
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0020060 ! caruncle
+relationship: inheres_in PO:0020060 {is_inferred="true"} ! caruncle
+created_by: marieangelique.laporte
+creation_date: 2015-12-16T14:18:40Z
+
+[Term]
+id: TO:1000011
+name: fruit position
+def: "A fruit morphology trait (TO:0002629) which is the position of a fruit (PO:0009001)." [TO:cooperl]
+synonym: "accessory fruit position" NARROW [TO:TermGenie]
+synonym: "achene position" NARROW [TO:TermGenie]
+synonym: "acorn position" NARROW [TO:TermGenie]
+synonym: "aggregate fruit position" NARROW [TO:TermGenie]
+synonym: "akene position" NARROW [TO:TermGenie]
+synonym: "anthocarp position" NARROW [TO:TermGenie]
+synonym: "berry position" NARROW [TO:TermGenie]
+synonym: "capsule position" NARROW [TO:TermGenie]
+synonym: "caryopsides position" NARROW [TO:TermGenie]
+synonym: "caryopsis position" NARROW [TO:TermGenie]
+synonym: "circumcissile capsule position" NARROW [TO:TermGenie]
+synonym: "citrus fruit position" NARROW [GOC:TermGenie]
+synonym: "coenocarp position" NARROW [GOC:TermGenie]
+synonym: "cypsela position" NARROW [GOC:TermGenie]
+synonym: "diclesium position" NARROW [GOC:TermGenie]
+synonym: "diplotegia position" NARROW [GOC:TermGenie]
+synonym: "diplotegium position" NARROW [GOC:TermGenie]
+synonym: "drupe position" NARROW [GOC:TermGenie]
+synonym: "folliceta position" NARROW [GOC:TermGenie]
+synonym: "follicetum position" NARROW [GOC:TermGenie]
+synonym: "fruit location" EXACT [GOC:TermGenie]
+synonym: "fruit placement" EXACT [GOC:TermGenie]
+synonym: "glandes position" NARROW [GOC:TermGenie]
+synonym: "glans position" NARROW [GOC:TermGenie]
+synonym: "grain position" NARROW [GOC:TermGenie]
+synonym: "hesperidia position" NARROW [GOC:TermGenie]
+synonym: "hesperidium position" NARROW [GOC:TermGenie]
+synonym: "hip position" NARROW [GOC:TermGenie]
+synonym: "kernel position" NARROW [GOC:TermGenie]
+synonym: "legume position" NARROW [GOC:TermGenie]
+synonym: "loculicidal capsule position" NARROW [GOC:TermGenie]
+synonym: "loment position" NARROW [GOC:TermGenie]
+synonym: "lomentum position" NARROW [GOC:TermGenie]
+synonym: "multiple fruit position" NARROW [GOC:TermGenie]
+synonym: "nut position" NARROW [GOC:TermGenie]
+synonym: "nutlet position" NARROW [GOC:TermGenie]
+synonym: "pepo position" NARROW [GOC:TermGenie]
+synonym: "pod position" NARROW [GOC:TermGenie]
+synonym: "pome position" NARROW [GOC:TermGenie]
+synonym: "poricidal capsule position" NARROW [GOC:TermGenie]
+synonym: "pyxides location" NARROW [GOC:TermGenie]
+synonym: "pyxides position" NARROW [GOC:TermGenie]
+synonym: "pyxis position" NARROW [GOC:TermGenie]
+synonym: "samara position" NARROW [GOC:TermGenie]
+synonym: "schizocarp location" NARROW [GOC:TermGenie]
+synonym: "schizocarp position" NARROW [GOC:TermGenie]
+synonym: "septicidal capsule position" NARROW [GOC:TermGenie]
+synonym: "silicle location" NARROW [GOC:TermGenie]
+synonym: "silicle position" NARROW [GOC:TermGenie]
+synonym: "silicula position" NARROW [GOC:TermGenie]
+synonym: "silicula relational spatial quality" NARROW [GOC:TermGenie]
+synonym: "siliqua position" NARROW [GOC:TermGenie]
+synonym: "silique position" NARROW [GOC:TermGenie]
+synonym: "stone fruit position" NARROW [GOC:TermGenie]
+synonym: "syconia position" NARROW [GOC:TermGenie]
+synonym: "syconium position" NARROW [GOC:TermGenie]
+synonym: "syncarp position" NARROW [GOC:TermGenie]
+synonym: "utricle location" NARROW [GOC:TermGenie]
+synonym: "utricle position" NARROW [GOC:TermGenie]
+is_a: PATO:0000140 {is_inferred="true"} ! position
+is_a: TO:0002629 {is_inferred="true"} ! fruit morphology trait
+intersection_of: PATO:0000140 ! position
+intersection_of: inheres_in PO:0009001 ! fruit
+relationship: inheres_in PO:0009001 {is_inferred="true"} ! fruit
+created_by: cooperl
+creation_date: 2015-12-30T18:26:07Z
+
+[Term]
+id: TO:1000012
+name: whole plant size
+def: "A whole plant morphology trait (TO:0000398) which is the size of a whole plant (PO:0000003)." [TO:cooperl]
+synonym: "bush size" NARROW [GOC:TermGenie]
+synonym: "clonal colony size" RELATED [GOC:TermGenie]
+synonym: "colony size" RELATED [GOC:TermGenie]
+synonym: "frutex size" NARROW [GOC:TermGenie]
+synonym: "frutices size" NARROW [GOC:TermGenie]
+synonym: "gametophyte size" NARROW [GOC:TermGenie]
+synonym: "herb size" NARROW [GOC:TermGenie]
+synonym: "liana size" NARROW [GOC:TermGenie]
+synonym: "planta entera (Spanish) size" EXACT [GOC:TermGenie]
+synonym: "prothalli size" NARROW [GOC:TermGenie]
+synonym: "prothallium size" NARROW [GOC:TermGenie]
+synonym: "prothallus size" NARROW [GOC:TermGenie]
+synonym: "seedling size" NARROW [GOC:TermGenie]
+synonym: "shrub size" NARROW [GOC:TermGenie]
+synonym: "sporophyte size" NARROW [GOC:TermGenie]
+synonym: "suffrutex size" NARROW [GOC:TermGenie]
+synonym: "suffrutices size" NARROW [GOC:TermGenie]
+synonym: "tree size" NARROW [GOC:TermGenie]
+synonym: "vine size" NARROW [GOC:TermGenie]
+synonym: "woody clump size" NARROW [GOC:TermGenie]
+is_a: PATO:0000117 {is_inferred="true"} ! size
+is_a: TO:0000398 {is_inferred="true"} ! whole plant morphology trait
+intersection_of: PATO:0000117 ! size
+intersection_of: inheres_in PO:0000003 ! whole plant
+relationship: inheres_in PO:0000003 {is_inferred="true"} ! whole plant
+created_by: cooperl
+creation_date: 2015-12-30T19:41:19Z
+
+[Typedef]
+id: from_country
+name: from country
+
 [Typedef]
 id: has_dividend_entity
 name: has dividend entity
@@ -13019,6 +13197,10 @@ name: has divisor quality
 id: has_part
 name: has part
 xref: BFO:0000051
+
+[Typedef]
+id: has_phenotype_score
+name: has phenotype score
 
 [Typedef]
 id: has_ratio_quality
