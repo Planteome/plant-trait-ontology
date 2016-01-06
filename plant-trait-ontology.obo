@@ -1,6 +1,6 @@
 format-version: 1.2
-date: 05:01:2016 17:37
-saved-by: marieangelique.laporte
+date: 05:01:2016 17:38
+saved-by: cjmungall
 auto-generated-by: TermGenie 1.0
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
@@ -533,8 +533,10 @@ id: TO:0000059
 name: node color
 def: "Color of the stem node." [GR:pj]
 synonym: "NDCL" RELATED []
+is_a: TO:1000003 {is_inferred="true"} ! shoot axis node color
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0020141 ! stem node
+relationship: inheres_in PO:0020141 {is_inferred="true"} ! stem node
 relationship: part_of TO:0000056 ! stem color
 
 [Term]
@@ -12997,6 +12999,43 @@ intersection_of: PATO:0000052 ! shape
 intersection_of: inheres_in PO:0020142 ! stem internode
 created_by: cooperl
 creation_date: 2015-11-24T22:16:25Z
+
+[Term]
+id: TO:1000001
+name: obsolete cotyledon size
+def: "OBSOLETE. A trait which is associated with the size of a cotyledon." [GOC:TermGenie]
+comment: This term was obsoleted at the TermGenie Gatekeeper stage.
+synonym: "seed leaf size" EXACT [GOC:TermGenie]
+is_obsolete: true
+created_by: cjmungall
+creation_date: 2015-11-30T17:23:54Z
+
+[Term]
+id: TO:1000002
+name: secondary xylem volumetric density
+def: "A trait which is associated with the volumetric density of a secondary xylem." [GOC:TermGenie]
+synonym: "wood volumetric density" EXACT [GOC:TermGenie]
+is_a: PATO:0001353 {is_inferred="true"} ! volumetric density
+is_a: TO:0000470 {is_inferred="true"} ! vascular tissue morphology trait
+intersection_of: PATO:0001353 ! volumetric density
+intersection_of: inheres_in PO:0005848 ! secondary xylem
+relationship: inheres_in PO:0005848 {is_inferred="true"} ! secondary xylem
+created_by: cjmungall
+creation_date: 2015-11-30T17:23:56Z
+
+[Term]
+id: TO:1000003
+name: shoot axis node color
+def: "A trait which is associated with the color of a shoot axis node." [GOC:TermGenie]
+synonym: "shoot axis node colour" EXACT [GOC:TermGenie]
+synonym: "shoot axis node relative color" EXACT [GOC:TermGenie]
+is_a: PATO:0000014 {is_inferred="true"} ! color
+is_a: TO:0000754 {is_inferred="true"} ! cardinal organ part morphology trait
+intersection_of: PATO:0000014 ! color
+intersection_of: inheres_in PO:0005004 ! shoot axis node
+relationship: inheres_in PO:0005004 {is_inferred="true"} ! shoot axis node
+created_by: cjmungall
+creation_date: 2015-11-30T17:23:58Z
 
 [Term]
 id: TO:1000004
