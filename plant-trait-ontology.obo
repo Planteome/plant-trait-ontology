@@ -2919,7 +2919,7 @@ name: photosynthetic ability
 def: "The photosynthesis ability determined on a plant or the plant part under stress." [GR:pj]
 comment: Methods may include actual measurements on photosynthesis, pigment content or the content and composition of enzymes associated with photosynthesis.
 synonym: "PHOTOSYNAB" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000283 ! biological process related trait
 
 [Term]
 id: TO:0000317
@@ -4204,7 +4204,7 @@ name: cell membrane stability
 def: "Stability of the cell membrane under the impact of temperature (heat) and water deficit stress." [GR:pj, web:http\://www.plantstress.com/methods/CMS_method.htm]
 comment: The trait is often observed in plants as a measure of drought and heat tolerance by determining the amount of solutes/electrolyte leaked from the cell.
 synonym: "CELMBSTB" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000168 ! abiotic stress trait
 
 [Term]
 id: TO:0000468
@@ -4527,7 +4527,7 @@ name: nitrogen recycling
 def: "It is a measure of reduced net ammonium production in response to the receipt of photosynthate." [GR:pj]
 synonym: "NIRCYC" RELATED []
 synonym: "nitrogen conservation" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000283 ! biological process related trait
 
 [Term]
 id: TO:0000507
@@ -4535,7 +4535,7 @@ name: osmotic adjustment capacity
 def: "The ability of the plant to adust the osmotic potential under stress conditions." [GR:pj]
 comment: The main role of osmotic adjustment in the plant is to assist in the maintenance of turgor and volume as organs lose water during desiccation, i.e. to provide dehydration tolerance. Often determined by relative water or the amount of solute accumulated at a given water potential.
 synonym: "OSADJCAP" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000168 ! abiotic stress trait
 
 [Term]
 id: TO:0000508
@@ -6461,9 +6461,7 @@ name: lignin biosynthesis trait
 def: "Traits associated with the biosynthesis of lignin in a plant or plant part." [GR:pj]
 synonym: "lignin biosynthesis" RELATED []
 xref: GO:GO\:0009809
-is_a: TO:0000349 ! physiological process related trait
-intersection_of: PATO:0000001 ! quality
-intersection_of: inheres_in GO:0009809 ! lignin biosynthetic process
+is_a: TO:0000283 ! biological process related trait
 
 [Term]
 id: TO:0000734
@@ -9430,7 +9428,7 @@ name: photosynthetic rate
 def: "The total amount of carbon fixed by the plant per unit time and is measured by determining the changes in CO2 concentration over a plant leaf in a glass enclosure." [GR:pj]
 synonym: "gross photosynthetic rate" RELATED []
 synonym: "leaf photosynthetic rate" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000283 ! biological process related trait
 
 [Term]
 id: TO:0001016
@@ -9443,14 +9441,14 @@ id: TO:0001017
 name: water use efficiency
 def: "As determined by the ratio of photosynthetic rate to transpiration rate." [GR:pj]
 synonym: "photosynthetic rate to transpiration rate ratio" EXACT []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000283 ! biological process related trait
 
 [Term]
 id: TO:0001018
 name: transpiration rate
 def: "The rate of  transpiration." [GR:pj]
 xref: GO:GO\:0010148
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000283 ! biological process related trait
 intersection_of: PATO:0000161 ! rate
 intersection_of: inheres_in GO:0010148 ! transpiration
 
@@ -9466,7 +9464,7 @@ id: TO:0001020
 name: exudate sap volume
 def: "Volume of the sap exudate collected from the cut parts of a plant." [GR:pj]
 synonym: "Sap per tiller" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000281 ! metabolite content related trait
 
 [Term]
 id: TO:0001021
@@ -9512,7 +9510,7 @@ is_a: TO:0001024 ! phosphorus content
 id: TO:0001026
 name: respiration rate
 def: "The total amount of carbon lost metabolically by the plant per unit time and is measured by determining the increase in CO2 concentration over a plant leaf in a glass enclosure." [GR:pj]
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000283 ! biological process related trait
 intersection_of: PATO:0000161 ! rate
 intersection_of: inheres_in GO:0007585 ! respiratory gaseous exchange
 
@@ -9520,14 +9518,14 @@ intersection_of: inheres_in GO:0007585 ! respiratory gaseous exchange
 id: TO:0001027
 name: net photosynthetic rate
 def: "It is measured as the difference between gross photosynthesis (the total amount of carbon fixed by the plant per unit time) and the respiration (the total amount of carbon lost metabolically during that same time)." [GR:pj]
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000283 ! biological process related trait
 
 [Term]
 id: TO:0001028
 name: osmotic adjustment break point
 def: "Break point of leaf water potential in the regression of leaf water potential against leaf relative water content." [CIRAD:Brigitte_Courtois]
 synonym: "Break point of osmotic adjustment" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000283 ! biological process related trait
 
 [Term]
 id: TO:0001029
@@ -9957,7 +9955,7 @@ comment: Fruit ripening (GO:0009835) is an aging process that has as participant
 synonym: "fruit ripening" RELATED []
 xref: GO:0009835
 xref: TO_GIT:256
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000283 ! biological process related trait
 is_a: TO:0000929 ! fruit growth and development trait
 is_a: TO:0002728 ! fruit quality trait
 intersection_of: PATO:0000001 ! quality
@@ -11942,7 +11940,7 @@ id: TO:0012001
 name: leaf area index
 def: "Leaf Area Index (LAI) is the ratio of total upper leaf surface of vegetation divided by the surface area of the land on which the vegetation grows." [web:wikipedia]
 comment: LAI is used to predict photosynthetic primary production and as a reference tool for crop growth. Measured on the plant canopy only.
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000540 ! leaf area trait
 created_by: jaiswalp
 creation_date: 2011-12-09T01:27:39Z
 
@@ -11981,7 +11979,7 @@ creation_date: 2011-12-09T02:09:52Z
 [Term]
 id: TO:0012006
 name: fluorescence related trait
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000283 ! biological process related trait
 created_by: jaiswalp
 creation_date: 2011-12-09T02:12:03Z
 
@@ -12012,7 +12010,7 @@ id: TO:0012010
 name: leaf area duration
 def: "Leaf Area Duration (LAD) is the ratio of total upper leaf surface of vegetation divided by the surface area of the land on which the vegetation grows. Measured over time." [group:Crop_Ontology_Group]
 synonym: "LAD" RELATED []
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000540 ! leaf area trait
 created_by: jaiswalp
 creation_date: 2011-12-09T02:28:13Z
 
@@ -12732,7 +12730,7 @@ creation_date: 2011-08-19T04:02:53Z
 id: TO:0020095
 name: stomatal process related trait
 def: "Trait associated with any of the stomatal opening, closure, conductance, resistance process." [TO:contributors]
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000283 ! biological process related trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:06:44Z
 
@@ -12740,7 +12738,7 @@ creation_date: 2011-08-19T04:06:44Z
 id: TO:0020096
 name: mineral and ion transport trait
 def: "Trait associated with directed movement of minerals and ions into, out of, within or between cells." [TO:contributors]
-is_a: TO:0000349 ! physiological process related trait
+is_a: TO:0000283 ! biological process related trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:08:23Z
 
