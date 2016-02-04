@@ -2579,8 +2579,6 @@ id: TO:0000281
 name: metabolite content related trait
 def: "The trait associated with an assay to determine the affected metabolite's profile." [GR:pj]
 is_a: TO:0000277 ! biochemical trait
-intersection_of: PATO:0000070 ! amount
-intersection_of: inheres_in CHEBI:25212 ! metabolite
 
 [Term]
 id: TO:0000282
@@ -5325,8 +5323,6 @@ def: "The total protein content measured in a plant or a plant part." [GR:pj37]
 synonym: "PROTCN" RELATED []
 synonym: "total protein content" RELATED []
 is_a: TO:0000281 ! metabolite content related trait
-intersection_of: PATO:0000070 ! amount
-intersection_of: inheres_in CHEBI:36080 ! protein
 
 [Term]
 id: TO:0000599
@@ -6099,7 +6095,7 @@ name: Maysin content
 def: "Measures the maysin content in a plant or plant part." [GR:pj]
 comment: Maysin is a coagulable globulin protein produced by the maize plant. It has insecticide properties.
 synonym: "MAYSINCN" RELATED []
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000598 ! protein content
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:70206 ! maysin
 
@@ -10471,7 +10467,6 @@ name: fruit flavor trait
 def: "An assay to determine the sensory impression of a fruit by the chemical senses of taste and smell." [GR:pj]
 synonym: "pod flavor trait" NARROW []
 xref: TO_GIT:117
-is_a: TO:0000281 ! metabolite content related trait
 is_a: TO:0002728 ! fruit quality trait
 intersection_of: PATO:0000043 ! flavor
 intersection_of: inheres_in PO:0009011 ! plant structure
