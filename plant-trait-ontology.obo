@@ -2589,7 +2589,9 @@ replaced_by: 'enzyme activity trait'
 [Term]
 id: TO:0000283
 name: biological process related trait
-def: "A plant trait (TO:0000387) which is a quality of a biological process (GO:0008150) that occurs in a plant anatomical entity (PO:0025131), a cellular component (GO:0005575), or during a plant structure development stage (PO:0009012)." [GR:pj, TO:cooperl]
+alt_id: TO:0000349
+def: "A plant trait (TO:0000387) which is a quality of a biological process (GO:0008150) that occurs in a plant anatomical entity (PO:0025131), a cellular component (GO:0005575), or during a plant structure development stage (PO:0009012)." [GO:0008150, GR:pj, TO:cooperl]
+synonym: "physiological process related trait" EXACT []
 xref: https://github.com/Planteome/plant-trait-ontology/issues/378
 is_a: TO:0000387 ! plant trait
 
@@ -3199,8 +3201,8 @@ is_a: TO:0000261 ! insect damage resistance
 [Term]
 id: TO:0000349
 name: physiological process related trait
-def: "Trait to assay the physiological processes in a plant." [GR:pj]
-is_a: TO:0000283 ! biological process related trait
+def: "OBSOLETE: Trait to assay the physiological processes in a plant." [GR:pj, TO:cooperl]
+is_obsolete: true
 
 [Term]
 id: TO:0000350
@@ -5328,9 +5330,11 @@ is_a: TO:0000281 ! metabolite content related trait
 [Term]
 id: TO:0000599
 name: enzyme activity trait
-def: "Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic." [GO:GO\:0003824]
+def: "A biochemical trait which is a quality of an enzymatic reaction." []
+comment: Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic. {xref="GO:0003824"}
 synonym: "enzymatic activity" RELATED []
 synonym: "enzyme catalytic activity" RELATED []
+xref: TO:cooperl
 is_a: TO:0000277 ! biochemical trait
 intersection_of: PATO:0001236 ! process quality
 intersection_of: inheres_in GO:0003824 ! catalytic activity
