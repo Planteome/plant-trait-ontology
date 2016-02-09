@@ -17,7 +17,7 @@ import: http://purl.obolibrary.org/obo/to/imports/go_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/pato_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/ro_import.owl
 ontology: to
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/TO_0000980> \"\")\n)
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nAnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/TO_0000349> \"physiological process related trait\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/TO_0000349> \"TO:0000349\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/TO_0000980> \"\")\nAnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> \"GR:pj\"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> \"TO:cooperl\"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/TO_0000349> \"OBSOLETE: Trait to assay the physiological processes in a plant.\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/TO_0000349> \"plant_trait_ontology\"^^xsd:string)\n)
 
 [Term]
 id: TO:0000001
@@ -2591,7 +2591,7 @@ name: biological process related trait
 alt_id: TO:0000349
 def: "A plant trait (TO:0000387) which is a quality of a biological process (GO:0008150) that occurs in a plant anatomical entity (PO:0025131), a cellular component (GO:0005575), or during a plant structure development stage (PO:0009012)." [GO:0008150, GR:pj, TO:cooperl]
 synonym: "physiological process related trait" EXACT []
-xref: https://github.com/Planteome/plant-trait-ontology/issues/378
+xref: TO_GIT:378
 is_a: TO:0000387 ! plant trait
 
 [Term]
@@ -3196,12 +3196,6 @@ name: sogatodes resistance
 def: "Causal agent: Sogatodes orizicola (Muir), Sagotella furcifera and Sogatodes cubanus. Sogatodes orizicola is also a vector for the Rice black streaked dwarf fijivirus and rice hoja blanca  virus (RHBV)." [GR:pj]
 synonym: "SAGRS" RELATED []
 is_a: TO:0000261 ! insect damage resistance
-
-[Term]
-id: TO:0000349
-name: physiological process related trait
-def: "OBSOLETE: Trait to assay the physiological processes in a plant." [GR:pj, TO:cooperl]
-is_obsolete: true
 
 [Term]
 id: TO:0000350
@@ -5545,7 +5539,7 @@ id: TO:0000621
 name: inflorescence development trait
 def: "Traits associated with observing effects on the development of the inflorescence and its parts." [GR:pj]
 is_a: TO:0000654 ! shoot system growth and development trait
-intersection_of: PATO:0000001 ! quality
+intersection_of: PATO:0001236 ! process quality
 intersection_of: inheres_in GO:0010229 ! inflorescence development
 
 [Term]
@@ -5554,7 +5548,7 @@ name: flower development trait
 def: "Traits associated with observing effects on the development of the flower and its parts." [GR:pj]
 synonym: "floret development trait" RELATED []
 is_a: TO:0000621 ! inflorescence development trait
-intersection_of: PATO:0000001 ! quality
+intersection_of: PATO:0001236 ! process quality
 intersection_of: inheres_in GO:0009908 ! flower development
 
 [Term]
@@ -9962,7 +9956,7 @@ xref: TO_GIT:256
 is_a: TO:0000283 ! biological process related trait
 is_a: TO:0000929 ! fruit growth and development trait
 is_a: TO:0002728 ! fruit quality trait
-intersection_of: PATO:0000001 ! quality
+intersection_of: PATO:0001236 ! process quality
 intersection_of: inheres_in GO:0009835 ! fruit ripening
 
 [Term]
@@ -11408,7 +11402,7 @@ id: TO:0006022
 name: floral organ development trait
 def: "Traits associated with observing effects on the development of the floral organ and its parts." [GR:pj]
 is_a: TO:0000622 ! flower development trait
-intersection_of: PATO:0000001 ! quality
+intersection_of: PATO:0001236 ! process quality
 intersection_of: inheres_in GO:0048437 ! floral organ development
 
 [Term]
@@ -12873,7 +12867,7 @@ id: TO:0020110
 name: gynoecium development trait
 def: "Traits associated with observing effects on the development of the gynoecium." [TO:contributors]
 is_a: TO:0000928 ! plant structure growth and development trait
-intersection_of: PATO:0000001 ! quality
+intersection_of: PATO:0001236 ! process quality
 intersection_of: inheres_in GO:0048467 ! gynoecium development
 created_by: jaiswalp
 creation_date: 2011-08-19T04:29:46Z
