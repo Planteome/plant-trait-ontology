@@ -2587,12 +2587,15 @@ is_obsolete: true
 
 [Term]
 id: TO:0000283
-name: biological process related trait
+name: biological process trait
 alt_id: TO:0000349
-def: "A plant trait (TO:0000387) which is a quality of a biological process (GO:0008150) that occurs in a plant anatomical entity (PO:0025131), a cellular component (GO:0005575), or during a plant structure development stage (PO:0009012)." [GO:0008150, GR:pj, TO:cooperl]
-synonym: "physiological process related trait" EXACT []
+def: "A plant trait (TO:0000387) which is a process quality (PATO:0001236) of a biological process (GO:0008150) which occurs in a plant anatomical entity (PO:0025131), a cellular component (GO:0005575), or during a plant structure development stage (PO:0009012)." [GO:0008150, GR:pj, TO:cooperl]
+comment: Refers to process quality (PATO:0001236): A quality which inheres in an process.
+synonym: "physiological process trait" EXACT []
 xref: TO_GIT:378
 is_a: TO:0000387 ! plant trait
+intersection_of: PATO:0001236 ! process quality
+intersection_of: inheres_in GO:0008150 ! biological_process
 
 [Term]
 id: TO:0000284
@@ -2921,7 +2924,7 @@ name: photosynthetic ability
 def: "The photosynthesis ability determined on a plant or the plant part under stress." [GR:pj]
 comment: Methods may include actual measurements on photosynthesis, pigment content or the content and composition of enzymes associated with photosynthesis.
 synonym: "PHOTOSYNAB" RELATED []
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 
 [Term]
 id: TO:0000317
@@ -4523,7 +4526,7 @@ name: nitrogen recycling
 def: "It is a measure of reduced net ammonium production in response to the receipt of photosynthate." [GR:pj]
 synonym: "NIRCYC" RELATED []
 synonym: "nitrogen conservation" RELATED []
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 
 [Term]
 id: TO:0000507
@@ -6408,7 +6411,7 @@ intersection_of: inheres_in PO:0020047 ! microsporocyte
 id: TO:0000727
 name: sporogenesis
 def: "The formation of spores." [GR:pj]
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 
 [Term]
 id: TO:0000728
@@ -6459,7 +6462,7 @@ name: lignin biosynthesis trait
 def: "Traits associated with the biosynthesis of lignin in a plant or plant part." [GR:pj]
 synonym: "lignin biosynthesis" RELATED []
 xref: GO:GO\:0009809
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 
 [Term]
 id: TO:0000734
@@ -9309,7 +9312,7 @@ def: "A biological process trait (TO:0000283) which is a quality of a gibberelli
 comment: refers to gibberellic acid (CHEBI:28833)
 synonym: "gibberellin biosynthesis" BROAD []
 xref: TO_GIT:383
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 created_by: ethan_johnson
 
 [Term]
@@ -9445,7 +9448,7 @@ name: photosynthetic rate
 def: "The total amount of carbon fixed by the plant per unit time and is measured by determining the changes in CO2 concentration over a plant leaf in a glass enclosure." [GR:pj]
 synonym: "gross photosynthetic rate" RELATED []
 synonym: "leaf photosynthetic rate" RELATED []
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 
 [Term]
 id: TO:0001016
@@ -9465,7 +9468,7 @@ id: TO:0001018
 name: transpiration rate
 def: "The rate of  transpiration." [GR:pj]
 xref: GO:GO\:0010148
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 intersection_of: PATO:0000161 ! rate
 intersection_of: inheres_in GO:0010148 ! transpiration
 
@@ -9527,7 +9530,7 @@ is_a: TO:0001024 ! phosphorus content
 id: TO:0001026
 name: respiration rate
 def: "The total amount of carbon lost metabolically by the plant per unit time and is measured by determining the increase in CO2 concentration over a plant leaf in a glass enclosure." [GR:pj]
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 intersection_of: PATO:0000161 ! rate
 intersection_of: inheres_in GO:0007585 ! respiratory gaseous exchange
 
@@ -9535,7 +9538,7 @@ intersection_of: inheres_in GO:0007585 ! respiratory gaseous exchange
 id: TO:0001027
 name: net photosynthetic rate
 def: "It is measured as the difference between gross photosynthesis (the total amount of carbon fixed by the plant per unit time) and the respiration (the total amount of carbon lost metabolically during that same time)." [GR:pj]
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 
 [Term]
 id: TO:0001028
@@ -9972,7 +9975,7 @@ comment: Fruit ripening (GO:0009835) is an aging process that has as participant
 synonym: "fruit ripening" RELATED []
 xref: GO:0009835
 xref: TO_GIT:256
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 is_a: TO:0000929 ! fruit growth and development trait
 is_a: TO:0002728 ! fruit quality trait
 intersection_of: PATO:0001236 ! process quality
@@ -10164,7 +10167,7 @@ is_a: TO:0000482 ! chemical stress sensitivity
 id: TO:0002658
 name: starch grain synthesis
 def: "An assay to determine if the starch grains are formed in the plant or plant part. Often associated with the starch biosynthesis and branching of the starch." [GR:pj]
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 
 [Term]
 id: TO:0002659
@@ -11996,7 +11999,7 @@ creation_date: 2011-12-09T02:09:52Z
 [Term]
 id: TO:0012006
 name: fluorescence related trait
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 created_by: jaiswalp
 creation_date: 2011-12-09T02:12:03Z
 
@@ -12747,7 +12750,7 @@ creation_date: 2011-08-19T04:02:53Z
 id: TO:0020095
 name: stomatal process related trait
 def: "Trait associated with any of the stomatal opening, closure, conductance, resistance process." [TO:contributors]
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:06:44Z
 
@@ -12755,7 +12758,7 @@ creation_date: 2011-08-19T04:06:44Z
 id: TO:0020096
 name: mineral and ion transport trait
 def: "Trait associated with directed movement of minerals and ions into, out of, within or between cells." [TO:contributors]
-is_a: TO:0000283 ! biological process related trait
+is_a: TO:0000283 ! biological process trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:08:23Z
 
