@@ -1,6 +1,7 @@
 format-version: 1.2
-date: 08:02:2016 17:47
-saved-by: cooperl
+date: 19:02:2016 16:37
+saved-by: meiera
+auto-generated-by: TermGenie 1.0
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
 subsetdef: Glycine_max "Terms_used_for_soybean"
@@ -1699,9 +1700,12 @@ id: TO:0000187
 name: anther color
 def: "A stamen morphology trait (TO:0000215) which is the color of the anther (PO:0009066)." [] {comment="TO:austinmeier"}
 synonym: "ANTCL" RELATED []
+is_a: PATO:0000014 {is_inferred="true"} ! color
 is_a: TO:0000215 ! stamen morphology trait
+is_a: TO:1000022 {is_inferred="true"} ! anther morphology trait
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009066 ! anther
+relationship: inheres_in PO:0009066 {is_inferred="true"} ! anther
 
 [Term]
 id: TO:0000188
@@ -1938,10 +1942,12 @@ id: TO:0000210
 name: anther number
 def: "Variation in the number of anthers in androecium." [GR:pj]
 synonym: "ANTNB" RELATED []
-is_a: TO:0000215 ! stamen morphology trait
+is_a: TO:0000225 {is_inferred="true"} ! stamen number
 is_a: TO:0006038 ! floral organ number
+is_a: TO:1000022 {is_inferred="true"} ! anther morphology trait
 intersection_of: PATO:0001555 ! has number of
 intersection_of: inheres_in PO:0009066 ! anther
+relationship: inheres_in PO:0009066 {is_inferred="true"} ! anther
 
 [Term]
 id: TO:0000211
@@ -1972,9 +1978,12 @@ id: TO:0000214
 name: anther shape
 def: "Variation in the shape of anthers compared to the normal or reference type." [GR:pj]
 synonym: "ANTSHP" RELATED []
+is_a: PATO:0000052 {is_inferred="true"} ! shape
 is_a: TO:0000215 ! stamen morphology trait
+is_a: TO:1000022 {is_inferred="true"} ! anther morphology trait
 intersection_of: PATO:0000052 ! shape
 intersection_of: inheres_in PO:0009066 ! anther
+relationship: inheres_in PO:0009066 {is_inferred="true"} ! anther
 
 [Term]
 id: TO:0000215
@@ -4711,9 +4720,11 @@ id: TO:0000531
 name: anther length
 def: "a stamen length (TO:0002609) which is the length of the anther (PO:0009066)." [TO:austinmeier]
 synonym: "ANTLG" RELATED []
-is_a: TO:0000215 ! stamen morphology trait
+is_a: TO:0002609 {is_inferred="true"} ! stamen length
+is_a: TO:1000022 {is_inferred="true"} ! anther morphology trait
 intersection_of: PATO:0000122 ! length
 intersection_of: inheres_in PO:0009066 ! anther
+relationship: inheres_in PO:0009066 {is_inferred="true"} ! anther
 
 [Term]
 id: TO:0000532
@@ -13343,6 +13354,16 @@ intersection_of: inheres_in PO:0009072 ! plant ovary
 relationship: inheres_in PO:0009072 {is_inferred="true"} ! plant ovary
 created_by: cooperl
 creation_date: 2016-01-06T01:44:00Z
+
+[Term]
+id: TO:1000022
+name: anther morphology trait
+def: "A collective plant organ structure trait (TO:0000842) which is the quality of an anther (PO:0009066)." [TO:austinmeier]
+is_a: TO:0000842 ! collective plant organ structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009066 ! anther
+created_by: meiera
+creation_date: 2016-02-20T00:23:55Z
 
 [Typedef]
 id: evaluation_location
