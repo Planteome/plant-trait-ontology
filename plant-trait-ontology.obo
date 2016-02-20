@@ -1701,7 +1701,6 @@ name: anther color
 def: "A stamen morphology trait (TO:0000215) which is the color of the anther (PO:0009066)." [] {comment="TO:austinmeier"}
 synonym: "ANTCL" RELATED []
 is_a: PATO:0000014 {is_inferred="true"} ! color
-is_a: TO:0000215 ! stamen morphology trait
 is_a: TO:1000022 {is_inferred="true"} ! anther morphology trait
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009066 ! anther
@@ -1942,12 +1941,12 @@ id: TO:0000210
 name: anther number
 def: "Variation in the number of anthers in androecium." [GR:pj]
 synonym: "ANTNB" RELATED []
-is_a: TO:0000225 {is_inferred="true"} ! stamen number
 is_a: TO:0006038 ! floral organ number
 is_a: TO:1000022 {is_inferred="true"} ! anther morphology trait
 intersection_of: PATO:0001555 ! has number of
 intersection_of: inheres_in PO:0009066 ! anther
 relationship: inheres_in PO:0009066 {is_inferred="true"} ! anther
+relationship: part_of TO:0000225 ! stamen number
 
 [Term]
 id: TO:0000211
@@ -1979,7 +1978,6 @@ name: anther shape
 def: "Variation in the shape of anthers compared to the normal or reference type." [GR:pj]
 synonym: "ANTSHP" RELATED []
 is_a: PATO:0000052 {is_inferred="true"} ! shape
-is_a: TO:0000215 ! stamen morphology trait
 is_a: TO:1000022 {is_inferred="true"} ! anther morphology trait
 intersection_of: PATO:0000052 ! shape
 intersection_of: inheres_in PO:0009066 ! anther
@@ -4720,11 +4718,11 @@ id: TO:0000531
 name: anther length
 def: "a stamen length (TO:0002609) which is the length of the anther (PO:0009066)." [TO:austinmeier]
 synonym: "ANTLG" RELATED []
-is_a: TO:0002609 {is_inferred="true"} ! stamen length
 is_a: TO:1000022 {is_inferred="true"} ! anther morphology trait
 intersection_of: PATO:0000122 ! length
 intersection_of: inheres_in PO:0009066 ! anther
 relationship: inheres_in PO:0009066 {is_inferred="true"} ! anther
+relationship: part_of TO:0002609 ! stamen length
 
 [Term]
 id: TO:0000532
@@ -13362,6 +13360,7 @@ def: "A collective plant organ structure trait (TO:0000842) which is the quality
 is_a: TO:0000842 ! collective plant organ structure morphology trait
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: inheres_in PO:0009066 ! anther
+relationship: part_of TO:0000215 ! stamen morphology trait
 created_by: meiera
 creation_date: 2016-02-20T00:23:55Z
 
