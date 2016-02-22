@@ -1975,13 +1975,15 @@ is_a: TO:0000148 ! viral disease resistance
 [Term]
 id: TO:0000214
 name: anther shape
-def: "Variation in the shape of anthers compared to the normal or reference type." [GR:pj]
+def: "An anther morphology trait (TO:1000022) which is the shape of an anther (PO:0009066)." []
+comment: Refers to shape (PATO:0000052)
 synonym: "ANTSHP" RELATED []
 is_a: PATO:0000052 {is_inferred="true"} ! shape
 is_a: TO:1000022 {is_inferred="true"} ! anther morphology trait
 intersection_of: PATO:0000052 ! shape
 intersection_of: inheres_in PO:0009066 ! anther
 relationship: inheres_in PO:0009066 {is_inferred="true"} ! anther
+created_by: ethan_johnson
 
 [Term]
 id: TO:0000215
@@ -4716,13 +4718,15 @@ intersection_of: part_of PO:0006018 ! leaf adaxial epidermis
 [Term]
 id: TO:0000531
 name: anther length
-def: "a stamen length (TO:0002609) which is the length of the anther (PO:0009066)." [TO:austinmeier]
+def: "An anther morphology trait (TO:1000022) which is the length of the anther (PO:0009066)." []
+comment: Refers to length (PATO:0000122)
 synonym: "ANTLG" RELATED []
 is_a: TO:1000022 {is_inferred="true"} ! anther morphology trait
 intersection_of: PATO:0000122 ! length
 intersection_of: inheres_in PO:0009066 ! anther
 relationship: inheres_in PO:0009066 {is_inferred="true"} ! anther
 relationship: part_of TO:0002609 ! stamen length
+created_by: ethan_johnson
 
 [Term]
 id: TO:0000532
@@ -13280,6 +13284,7 @@ synonym: "plant ovary colour" EXACT [TO:TermGenie]
 synonym: "plant ovary relative color" EXACT [TO:TermGenie]
 is_a: PATO:0000014 {is_inferred="true"} ! color
 is_a: TO:0000839 {is_inferred="true"} ! plant structure morphology trait
+is_a: TO:1000021 ! plant ovary morphology
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009072 ! plant ovary
 relationship: inheres_in PO:0009072 {is_inferred="true"} ! plant ovary
