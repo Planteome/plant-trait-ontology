@@ -9264,6 +9264,8 @@ name: root system morphology trait
 def: "A collective plant organ structure morphology trait (TO:0000842) which is a quality of a root system (PO:0025025)." [PO:0025025] {created_by="ethan_johnson"}
 xref: TO_GIT:359
 is_a: TO:0000842 ! collective plant organ structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0025025 ! root system
 created_by: Ethan_Johnson
 
 [Term]
@@ -9344,6 +9346,8 @@ name: androecium morphology trait
 def: "A collective phyllome structure morphology trait (TO:0000845) that is a quality of the androecium (PO:0009061)." []
 xref: TO_GIT:386
 is_a: TO:0000845 ! collective phyllome structure morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009061 ! androecium
 created_by: ethan_johnson
 
 [Term]
@@ -13289,16 +13293,14 @@ creation_date: 2016-01-05T11:04:25Z
 id: TO:1000016
 name: plant ovary color
 def: "A plant ovary morphology (TO:10000021) which is the color of a plant ovary (PO:0009072)." [TO:TermGenie]
-synonym: "plant ovary colour" EXACT [TO:TermGenie]
-synonym: "plant ovary relative color" EXACT [TO:TermGenie]
-is_a: PATO:0000014 {is_inferred="true"} ! color
-is_a: TO:0000839 {is_inferred="true"} ! plant structure morphology trait
+synonym: "plant ovary colour" EXACT []
+synonym: "plant ovary relative color" NARROW []
+is_a: PATO:0000014 ! color
 is_a: TO:1000021 ! plant ovary morphology
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009072 ! plant ovary
-relationship: inheres_in PO:0009072 {is_inferred="true"} ! plant ovary
 created_by: marieangelique.laporte
-creation_date: 2016-01-05T13:42:20Z
+creation_date: 2016-01-05
 
 [Term]
 id: TO:1000017
