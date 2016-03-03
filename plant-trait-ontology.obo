@@ -17,7 +17,6 @@ import: http://purl.obolibrary.org/obo/to/imports/go_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/pato_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/ro_import.owl
 ontology: to
-
 owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nAnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/TO_0000349> \"physiological process related trait\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/TO_0000349> \"TO:0000349\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/TO_0000980> \"\")\nAnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> \"GR:pj\"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> \"TO:cooperl\"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/TO_0000349> \"OBSOLETE: Trait to assay the physiological processes in a plant.\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/TO_0000349> \"plant_trait_ontology\"^^xsd:string)\n)
 
 [Term]
@@ -1794,7 +1793,7 @@ intersection_of: occurs_in PO:0009011 ! plant structure
 [Term]
 id: TO:0000196
 name: amylose content
-def: "Amount of amylose present in the plant or plant part." [ICIS:1251, IRRI:SES, ISBN:198506732]
+def: "Amount of amylose present in the plant or plant part." [CHEBI:28102]
 comment: It is a water-dispersible component of starch and is a polymer of alpha(1,4)-linked glucose units.
 synonym: "Amy" RELATED []
 synonym: "AMYCN" RELATED []
@@ -2665,7 +2664,7 @@ relationship: part_of TO:0000336 ! total amylase activity
 [Term]
 id: TO:0000289
 name: carotene content
-def: "The carotene content in a plant or plant part." [ISBN:198506732]
+def: "The carotene content in a plant or plant part." [CHEBI:23042]
 comment: These are any group of naturally occurring tetraterpenes (carotenoids) that are synthesized only in plants and differ from xanthophyll by not having oxygen in their molecule.
 is_a: TO:0000496 ! carotenoid content
 intersection_of: PATO:0000025 ! composition
@@ -2675,7 +2674,7 @@ intersection_of: occurs_in PO:0009011 ! plant structure
 [Term]
 id: TO:0000290
 name: flavonoid content
-def: "The flavonoid content in a plant or plant part." [GR:pj]
+def: "The flavonoid content in a plant or plant part." [CHEBI:47916]
 comment: Flavonoids are water soluble polyphenolic molecules containing 15 carbon atoms. Flavonoids belong to the polyphenol family and have antioxidant activity.
 is_a: TO:0000674 ! phytochemical compound content
 intersection_of: PATO:0000025 ! composition
@@ -2685,7 +2684,7 @@ intersection_of: occurs_in PO:0009011 ! plant structure
 [Term]
 id: TO:0000291
 name: carbohydrate content
-def: "Trait associated with the carbohydrate content, concentration and/or yield from the plant or plant part." [GR:pj]
+def: "Trait associated with the carbohydrate content, concentration and/or yield from the plant or plant part." [CHEBI:16646]
 synonym: "CARBCN" RELATED []
 is_a: TO:0000281 ! metabolite content related trait
 intersection_of: PATO:0000025 ! composition
@@ -2737,7 +2736,7 @@ is_a: TO:0000250 ! vigor related trait
 [Term]
 id: TO:0000297
 name: glucosamine content
-def: "Amount of glucosamine present in the plant or plant part." [GR:pj, ISBN:198506732]
+def: "Amount of glucosamine present in the plant or plant part." [CHEBI:5417]
 comment: It is one of the most abundant natural polysaccharide.
 synonym: "2-amino-2-deoxyglucopyranose content" RELATED []
 synonym: "GLUCNCN" RELATED []
@@ -4454,7 +4453,7 @@ intersection_of: inheres_in CHEBI:28966 ! chlorophyll
 [Term]
 id: TO:0000496
 name: carotenoid content
-def: "The carotenoid content in a plant or plant part. Includes naturally occurring tetra terpenes that are synthesized only in plants." [ISBN:198506732]
+def: "The carotenoid content in a plant or plant part. Includes naturally occurring tetra terpenes that are synthesized only in plants." []
 synonym: "CRTCN" RELATED []
 is_a: TO:0000494 ! pigment content
 is_a: TO:0000674 ! phytochemical compound content
@@ -4825,7 +4824,7 @@ intersection_of: relative_to PATO:0000921 ! width
 [Term]
 id: TO:0000543
 name: leaf nitrogen content
-def: "A leaf composition trait (TO:0000493) which is the amount of nitrogen present in the leaf tissue in the form of minerals and metabolites." [GR:pj, TO:moorel]
+def: "A leaf composition trait (TO:0000493) which is the amount of nitrogen present in the leaf tissue in the form of minerals and metabolites." [CHEBI:51143]
 synonym: "LFNICN" RELATED []
 is_a: TO:0000493 ! leaf composition trait
 intersection_of: PATO:0000025 ! composition
@@ -6574,7 +6573,7 @@ subset: Solanaceae_spp
 xref: TO_GIT:56
 is_a: TO:0000741 ! tuber morphology trait
 intersection_of: PATO:0001241 ! physical object quality
-intersection_of: inheres_in PO:0004547 ! subterranean shoot axis tuber
+intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
 creation_date: 2012-04-19T10:46:10Z
 
@@ -6589,7 +6588,7 @@ xref: PATO:0000052
 xref: TO_GIT:56
 is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 intersection_of: PATO:0000052 ! shape
-intersection_of: inheres_in PO:0004547 ! subterranean shoot axis tuber
+intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
 creation_date: 2012-04-19T10:48:44Z
 
@@ -6604,7 +6603,7 @@ xref: PATO:0000117
 xref: TO_GIT:56
 is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 intersection_of: PATO:0000117 ! size
-intersection_of: inheres_in PO:0004547 ! subterranean shoot axis tuber
+intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
 creation_date: 2012-04-19T10:51:20Z
 
@@ -6631,7 +6630,7 @@ xref: PATO:0000125
 xref: TO_GIT:56
 is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 intersection_of: PATO:0000125 ! mass
-intersection_of: inheres_in PO:0004547 ! subterranean shoot axis tuber
+intersection_of: inheres_in PO:0004547 ! subterranean tuber
 created_by: moorel
 creation_date: 2012-04-19T10:56:34Z
 
@@ -12710,7 +12709,7 @@ creation_date: 2011-08-19T03:47:00Z
 [Term]
 id: TO:0020089
 name: iron content
-def: "The total iron ion content measured in a plant or a plant part." [TO:contributors]
+def: "The total iron ion content measured in a plant or a plant part." [CHEBI:23377]
 is_a: TO:0000465 ! mineral and ion content related trait
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:18248 ! iron atom
@@ -12721,7 +12720,7 @@ creation_date: 2011-08-19T04:02:53Z
 [Term]
 id: TO:0020090
 name: zinc content
-def: "The total zinc ion content measured in a plant or a plant part." [TO:contributors]
+def: "The total zinc ion content measured in a plant or a plant part." [CHEBI:27364]
 is_a: TO:0000465 ! mineral and ion content related trait
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:27363 ! zinc atom
@@ -12732,7 +12731,7 @@ creation_date: 2011-08-19T04:02:53Z
 [Term]
 id: TO:0020091
 name: manganese content
-def: "The total manganese ion content measured in a plant or a plant part." [TO:contributors]
+def: "The total manganese ion content measured in a plant or a plant part." [CHEBI:25154]
 is_a: TO:0000465 ! mineral and ion content related trait
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:18291 ! manganese atom
@@ -12743,7 +12742,7 @@ creation_date: 2011-08-19T04:02:53Z
 [Term]
 id: TO:0020092
 name: copper content
-def: "The total copper ion content measured in a plant or a plant part." [TO:contributors]
+def: "The total copper ion content measured in a plant or a plant part." [CHEBI:28694]
 is_a: TO:0000465 ! mineral and ion content related trait
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:28694 ! copper atom
@@ -12765,7 +12764,7 @@ creation_date: 2011-08-19T04:02:53Z
 [Term]
 id: TO:0020094
 name: nitrate content
-def: "The total nitrate content measured in a plant or a plant part." [TO:contributors]
+def: "The total nitrate content measured in a plant or a plant part." [CHEBI:48107]
 is_a: TO:0020093 ! nitrogen content
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:17632 ! nitrate
@@ -12835,7 +12834,7 @@ creation_date: 2011-08-19T04:13:47Z
 [Term]
 id: TO:0020102
 name: phosphate content
-def: "The total phosphate content measured in a plant or a plant part." [TO:contributors]
+def: "The total phosphate content measured in a plant or a plant part." [CHEBI:26020]
 synonym: "phosphate ion content" EXACT []
 is_a: TO:0000465 ! mineral and ion content related trait
 intersection_of: PATO:0000025 ! composition
