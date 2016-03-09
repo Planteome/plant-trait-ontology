@@ -1793,16 +1793,17 @@ intersection_of: occurs_in PO:0009011 ! plant structure
 [Term]
 id: TO:0000196
 name: amylose content
-def: "Amount of amylose present in the plant or plant part." [CHEBI:28102, ICIS:1251, IRRI:SES, ISBN:198506732]
-comment: It is a water-dispersible component of starch and is a polymer of alpha(1,4)-linked glucose units.
+def: "A polysaccharide content trait (TO:0006007) which is the amount of amylose (CHEBI:28102) present in a plant structure (PO:0009011)" [ICIS:1251, IRRI:SES, ISBN:198506732]
+comment: Amylose is a helical polymer made of α-D-glucose units, bound to each other through α(1→4) glycosidic bonds. This polysaccharide is one of the two components of starch, making up approximately 20-30% of the structure. The other component is amylopectin, which makes up 70–80% of the structure. (REF: Wikipedia)
 synonym: "Amy" RELATED []
 synonym: "AMYCN" RELATED []
-is_a: TO:0000489 ! carbohydrate composition related trait
-is_a: TO:0000667 ! cooking or brewing quality
+xref: CHEBI:28102
 is_a: TO:0006007 ! polysaccharide content
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:28102 ! amylose
 intersection_of: occurs_in PO:0009011 ! plant structure
+relationship: part_of TO:0000489 ! carbohydrate composition related trait
+relationship: part_of TO:0000667 ! cooking or brewing quality
 
 [Term]
 id: TO:0000197
