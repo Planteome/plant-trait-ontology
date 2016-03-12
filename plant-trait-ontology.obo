@@ -2585,7 +2585,7 @@ is_a: TO:0000296 ! vegetative vigor
 
 [Term]
 id: TO:0000281
-name: metabolite content related trait
+name: metabolite content trait
 def: "The trait associated with an assay to determine the affected metabolite's profile." [GR:pj]
 is_a: TO:0000277 ! biochemical trait
 
@@ -2687,9 +2687,10 @@ intersection_of: occurs_in PO:0009011 ! plant structure
 [Term]
 id: TO:0000291
 name: carbohydrate content
-def: "Trait associated with the carbohydrate content, concentration and/or yield from the plant or plant part." [CHEBI:16646]
+def: "A metabolite content trait (TO:0000281) which is the amount of carbohydrate (CHEBI:16646)  in a plant structure (PO:0009011)." [GR:pj, TO:cooperl]
 synonym: "CARBCN" RELATED []
-is_a: TO:0000281 ! metabolite content related trait
+xref: CHEBI:16646
+is_a: TO:0000281 ! metabolite content trait
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:16646 ! carbohydrate
 intersection_of: occurs_in PO:0009011 ! plant structure
@@ -3412,7 +3413,7 @@ id: TO:0000372
 name: amylose to amylopectin ratio
 def: "Ratio of amount of amylose to amylopectin content." [GR:pj]
 synonym: "AMYAMYPCTRO" RELATED []
-is_a: TO:0000291 ! carbohydrate content
+is_a: TO:0006007 ! polysaccharide content
 intersection_of: PATO:0001470 ! proportionality to
 intersection_of: inheres_in CHEBI:28102 ! amylose
 intersection_of: relative_to CHEBI:28057 ! amylopectin
@@ -4285,7 +4286,7 @@ is_a: TO:0000306 ! root thickness
 id: TO:0000476
 name: growth hormone content
 def: "Measures the growth hormone content in a plant or plant part." [GR:pj]
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:37845 ! growth hormone
 
@@ -5338,7 +5339,7 @@ name: protein content
 def: "The total protein content measured in a plant or a plant part." [GR:pj37]
 synonym: "PROTCN" RELATED []
 synonym: "total protein content" RELATED []
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 
 [Term]
 id: TO:0000599
@@ -5397,7 +5398,7 @@ intersection_of: relative_to TO:0000609 ! potassium content
 id: TO:0000604
 name: fat and essential oil content
 def: "Measures the fat and essential oil content in a plant or plant part." [GR:pj]
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 
 [Term]
 id: TO:0000605
@@ -5405,7 +5406,7 @@ name: hydrogen peroxide content
 def: "An assay to determine the content of hydrogen peroxide or the peroxide reactive ions." [GR:pj]
 synonym: "H2O2 content" RELATED []
 synonym: "H2O2CN" RELATED []
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 is_a: TO:0002657 ! oxidative stress
 intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:16240 ! hydrogen peroxide
@@ -5456,7 +5457,7 @@ name: malt-extract percentage
 def: "It is a measure of the sugars and nitrogenous compounds available for yeast nutrition." [GR_REF:8025]
 synonym: "malt-extract percent" RELATED []
 synonym: "MALTEXTPCENT" RELATED []
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 is_a: TO:0000488 ! seed composition based quality trait
 is_a: TO:0000667 ! cooking or brewing quality
 
@@ -5912,7 +5913,7 @@ is_a: TO:0000931 ! seed quality trait
 id: TO:0000668
 name: mycotoxin content
 def: "Measuring amount of toxins found in the host plant after the infection by a fungal pathogen. The toxin is produced by the pathogen." [GR:pj]
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:25442 ! mycotoxin
 
@@ -5958,7 +5959,7 @@ is_a: TO:0000664 ! fungal blight disease resistance
 id: TO:0000674
 name: phytochemical compound content
 def: "They are non-nutritive plant chemicals that have protective or disease preventive properties." [GR:pj]
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 
 [Term]
 id: TO:0000675
@@ -6464,7 +6465,7 @@ intersection_of: inheres_in GO:0000278 ! mitotic cell cycle
 id: TO:0000731
 name: lignin content
 def: "Measures the lignin content in a plant or plant part." [GR:pj]
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:6457 ! lignin
 
@@ -9011,7 +9012,7 @@ id: TO:0000955
 name: cyanide content
 def: "A metabolite content related trait (TO:0000281) which is the amount of cyanide (CHEBI:17514) occurring in a plant anatomical entity (PO:0025131)." []
 xref: CHEBI:17514
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 
 [Term]
 id: TO:0000958
@@ -9513,7 +9514,7 @@ id: TO:0001020
 name: exudate sap volume
 def: "Volume of the sap exudate collected from the cut parts of a plant." [GR:pj]
 synonym: "Sap per tiller" RELATED []
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 
 [Term]
 id: TO:0001021
@@ -10333,7 +10334,7 @@ intersection_of: inheres_in CHEBI:22676 ! auxin
 id: TO:0002673
 name: amino acid content
 def: "The amino acid content in a plant or plant part." [GR:pj]
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:33709 ! amino acid
 
@@ -11305,7 +11306,7 @@ id: TO:0006003
 name: oligosaccharide content
 def: "Amount of oligosaccharides present in the plant or its parts." [GR:pj]
 comment: Oligosaccharide is a carbohydrate polymer that on hydrolysis yields a small number of monosaccharide molecules.
-is_a: TO:0000333 ! sugar content
+is_a: TO:0000291 ! carbohydrate content
 intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:50699 ! oligosaccharide
 
@@ -11329,7 +11330,7 @@ intersection_of: inheres_in CHEBI:28757 ! fructose
 id: TO:0006006
 name: monosaccharide content
 def: "Amount of monosaccharide present in the plant or plant part." [GR:pj]
-is_a: TO:0000333 ! sugar content
+is_a: TO:0000291 ! carbohydrate content
 intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:35381 ! monosaccharide
 
@@ -11337,7 +11338,7 @@ intersection_of: inheres_in CHEBI:35381 ! monosaccharide
 id: TO:0006007
 name: polysaccharide content
 def: "Amount of polysaccharide present in the plant or plant part." [GR:pj]
-is_a: TO:0000333 ! sugar content
+is_a: TO:0000291 ! carbohydrate content
 intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:18154 ! polysaccharide
 
@@ -12584,7 +12585,7 @@ id: TO:0020076
 name: phenolic compound content
 def: "Amount of phenolics present in the plant part, whole plant or product." [T-CAP:Victoria_Corollo_Blake]
 comment: In barley its evaluated in ex malt.
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:29:58Z
 
@@ -12636,7 +12637,7 @@ def: "The trait  takes into account energy losses occurring in the animal in fae
 comment: Units: Kcal/kg.
 synonym: "metabolised energy" EXACT []
 synonym: "stover related traits" BROAD [GCP:GCP_324.000003]
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 created_by: jaiswalp
 creation_date: 2011-08-19T03:17:28Z
 
@@ -12645,7 +12646,7 @@ id: TO:0020082
 name: stover nitrogen content
 def: "A trait to measure percent nitrogen concentration in the stover sample used for predicting crude protein (CP) content of stover by multiplication with a factor of 6.25 (CP = N x 6.25). This concentration is one of the criteria to assess the quality of fodder. Value derived from the analysis of stover using Near Infrared Reflectance Spectrophotometry (NIRS)." [GCP:GCP_324.0000016, ICRISAT:Vincent_Vadez, ILRI:Michael_Blummel]
 synonym: "stover related traits" BROAD [GCP:GCP_324.000003]
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 created_by: jaiswalp
 creation_date: 2011-08-19T03:20:23Z
 
@@ -12706,7 +12707,7 @@ def: "A metabolite content related trait (TO:0000281) which is the concentration
 comment: This trait is usually highly correlated with total soluble sugar content (TO:0000340). Often determined in fresh tissue.
 synonym: "total dissolved solids content" RELATED []
 xref: TO_GIT:100
-is_a: TO:0000281 ! metabolite content related trait
+is_a: TO:0000281 ! metabolite content trait
 created_by: jaiswalp
 creation_date: 2011-08-19T03:47:00Z
 
