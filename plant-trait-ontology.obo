@@ -708,11 +708,10 @@ relationship: part_of TO:0000352 ! plant dry weight
 
 [Term]
 id: TO:0000079
-name: lemma and palea morphology trait
-def: "An inflorescence bract morphology trait (TO:0000816) which is a quality of a lemma (PO:0009037) and palea (PO:0009038) and their parts." [GR:pj, PO:0009037, PO:0009038, TO:moorel]
-synonym: "lemma and palea related trait" RELATED []
-xref: TO_GIT:106
-is_a: TO:0000816 ! inflorescence bract morphology trait
+name: flower bract morphology trait
+def: "A bract morphology trait (TO:0000815) which is a quality of a flower bract (PO:0009034)." [GR:pj, PO:0009034, TO:cooperl, TO:moorel]
+xref: TO_GIT:xyz
+is_a: TO:0000815 ! bract morphology trait
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: inheres_in PO:0009034 ! flower bract
 
@@ -1255,7 +1254,7 @@ name: apiculus color
 def: "Color of the apiculus." [IRRI:SES]
 synonym: "ApC" RELATED []
 synonym: "APICL" RELATED []
-is_a: TO:0000079 ! lemma and palea morphology trait
+is_a: TO:0000754 ! cardinal organ part morphology trait
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0006033 ! paleal apiculus
 relationship: part_of TO:0000536 ! floret color
@@ -1919,7 +1918,7 @@ relationship: inheres_in PO:0000003 {is_inferred="true"} ! whole plant
 id: TO:0000208
 name: lemma number
 def: "A lemma and palea morphology trait (TO:0000079) which is the number of lemma (PO:0009037) in the grass flower (PO:0009001) (floret)." [GR:pj, PO:0009001, PO:0009037, TO:moorel]
-is_a: TO:0000079 ! lemma and palea morphology trait
+is_a: TO:0000079 ! flower bract morphology trait
 is_a: TO:0002613 ! reproductive homeotic development trait
 is_a: TO:0006026 ! floral bract number
 intersection_of: PATO:0001555 ! has number of
@@ -1930,7 +1929,7 @@ id: TO:0000209
 name: palea number
 def: "A lemma and palea morphology trait (TO:0000079) which is the number of palea (PO:0009038) in the grass flower (floret)." [GR:pj, PO:0009038, TO:moorel]
 synonym: "PALNB" RELATED []
-is_a: TO:0000079 ! lemma and palea morphology trait
+is_a: TO:0000079 ! flower bract morphology trait
 is_a: TO:0002613 ! reproductive homeotic development trait
 is_a: TO:0006026 ! floral bract number
 intersection_of: PATO:0001555 ! has number of
@@ -2227,7 +2226,7 @@ comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to th
 synonym: "SLmL" RELATED []
 synonym: "STLEMLG" RELATED []
 xref: PATO:0000122
-is_a: TO:0000079 ! lemma and palea morphology trait
+is_a: TO:0000079 ! flower bract morphology trait
 intersection_of: PATO:0000122 ! length
 intersection_of: inheres_in PO:0009040 ! sterile lemma
 
@@ -2423,7 +2422,7 @@ synonym: "LmPC" RELATED []
 synonym: "PALCL" RELATED []
 synonym: "palea color" RELATED []
 xref: PATO:0000014
-is_a: TO:0000079 ! lemma and palea morphology trait
+is_a: TO:0000079 ! flower bract morphology trait
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009034 ! flower bract
 relationship: part_of TO:0000536 ! floret color
@@ -3645,7 +3644,7 @@ comment: Refer to color PATO:0000014: A composite chromatic quality composed of 
 synonym: "SLmC" RELATED []
 synonym: "STLEMCL" RELATED []
 xref: PATO:0000014
-is_a: TO:0000079 ! lemma and palea morphology trait
+is_a: TO:0000079 ! flower bract morphology trait
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009040 ! sterile lemma
 relationship: part_of TO:0000536 ! floret color
@@ -3795,7 +3794,7 @@ def: "A lemma and palea morphology trait (TO:0000079) which is the extent of pub
 comment: Refer to pubescent hair (PATO:0001320): A pilosity quality of being covered with short hairs or soft down.
 synonym: "LmPb" RELATED []
 xref: PATO:0001320
-is_a: TO:0000079 ! lemma and palea morphology trait
+is_a: TO:0000079 ! flower bract morphology trait
 intersection_of: PATO:0001320 ! pubescent hair
 intersection_of: inheres_in PO:0009034 ! flower bract
 
@@ -4274,7 +4273,7 @@ name: glume opening
 def: "Angle of opening of glumes is measured on each floret, assessment based on mean angle of glume opening." [GR:pj, IRRI:SES]
 synonym: "glume angle" RELATED []
 synonym: "opening of glume of male sterile lines" RELATED []
-is_a: TO:0000079 ! lemma and palea morphology trait
+is_a: TO:0000869 ! glume morphology trait
 
 [Term]
 id: TO:0000475
@@ -4739,7 +4738,7 @@ name: apiculus hair length
 def: "Length of the apiculus hair." [GR:pj]
 synonym: "APIHLG" RELATED []
 synonym: "APIHRLG" RELATED []
-is_a: TO:0000079 ! lemma and palea morphology trait
+is_a: TO:0000754 ! cardinal organ part morphology trait
 
 [Term]
 id: TO:0000534
@@ -5490,7 +5489,7 @@ name: lemma shape
 def: "A lemma and palea morphology trait (TO:0000079) which is the shape of the lemma (PO:0009037) in a floret." [GR:pj, PO:0009037, TO:moorel]
 comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 xref: PATO:0000052
-is_a: TO:0000079 ! lemma and palea morphology trait
+is_a: TO:0000079 ! flower bract morphology trait
 intersection_of: PATO:0000052 ! shape
 intersection_of: inheres_in PO:0009037 ! lemma
 
@@ -5786,7 +5785,7 @@ def: "A lemma and palea morphology trait (TO:0000079) which is the length of the
 comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
 synonym: "LEMLG" RELATED []
 xref: PATO:0000122
-is_a: TO:0000079 ! lemma and palea morphology trait
+is_a: TO:0000079 ! flower bract morphology trait
 intersection_of: PATO:0000122 ! length
 intersection_of: inheres_in PO:0009037 ! lemma
 
@@ -10780,7 +10779,7 @@ def: "A lemma and palea morphology trait (TO:0000079) which is the shape of the 
 comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 synonym: "STLEMSHP" RELATED []
 xref: PATO:0000052
-is_a: TO:0000079 ! lemma and palea morphology trait
+is_a: TO:0000079 ! flower bract morphology trait
 intersection_of: PATO:0000052 ! shape
 intersection_of: inheres_in PO:0009040 ! sterile lemma
 
@@ -10791,7 +10790,7 @@ def: "A lemma morphology trait (TO:0000079) which is the width of the sterile le
 comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "STLEMWD" RELATED []
 xref: PATO:0000921
-is_a: TO:0000079 ! lemma and palea morphology trait
+is_a: TO:0000079 ! flower bract morphology trait
 intersection_of: PATO:0000921 ! width
 intersection_of: inheres_in PO:0009040 ! sterile lemma
 
