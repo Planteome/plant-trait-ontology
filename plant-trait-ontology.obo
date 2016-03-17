@@ -1,5 +1,5 @@
 format-version: 1.2
-date: 16:03:2016 17:32
+date: 16:03:2016 17:43
 saved-by: cooperl
 auto-generated-by: TermGenie 1.0
 subsetdef: Allium_porrum "Terms_used_for_leek"
@@ -1932,11 +1932,12 @@ id: TO:0000209
 name: palea number
 def: "A lemma and palea morphology trait (TO:0000079) which is the number of palea (PO:0009038) in the grass flower (floret)." [GR:pj, PO:0009038, TO:moorel]
 synonym: "PALNB" RELATED []
-is_a: TO:0000079 ! flower bract morphology trait
 is_a: TO:0002613 ! reproductive homeotic development trait
 is_a: TO:0006026 ! floral bract number
+is_a: TO:1000024 {is_inferred="true"} ! palea morphology trait
 intersection_of: PATO:0001555 ! has number of
 intersection_of: inheres_in PO:0009038 ! palea
+relationship: inheres_in PO:0009038 {is_inferred="true"} ! palea
 
 [Term]
 id: TO:0000210
@@ -13403,6 +13404,16 @@ intersection_of: PATO:0001241 ! physical object quality
 intersection_of: inheres_in PO:0009037 ! lemma
 created_by: cooperl
 creation_date: 2016-03-17T00:20:40Z
+
+[Term]
+id: TO:1000024
+name: palea morphology trait
+def: "A flower bract morphology trait (TO:0000079) which is the quality of a palea (PO:0009038)." [TO:cooperl]
+is_a: TO:0000079 ! flower bract morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009038 ! palea
+created_by: cooperl
+creation_date: 2016-03-17
 
 [Typedef]
 id: evaluation_location
