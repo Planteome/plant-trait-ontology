@@ -1,5 +1,7 @@
 format-version: 1.2
+date: 16:03:2016 17:43
 saved-by: cooperl
+auto-generated-by: TermGenie 1.0
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
 subsetdef: Glycine_max "Terms_used_for_soybean"
@@ -1918,22 +1920,24 @@ relationship: inheres_in PO:0000003 {is_inferred="true"} ! whole plant
 id: TO:0000208
 name: lemma number
 def: "A lemma and palea morphology trait (TO:0000079) which is the number of lemma (PO:0009037) in the grass flower (PO:0009001) (floret)." [GR:pj, PO:0009001, PO:0009037, TO:moorel]
-is_a: TO:0000079 ! flower bract morphology trait
 is_a: TO:0002613 ! reproductive homeotic development trait
 is_a: TO:0006026 ! floral bract number
+is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 intersection_of: PATO:0001555 ! has number of
 intersection_of: inheres_in PO:0009037 ! lemma
+relationship: inheres_in PO:0009037 {is_inferred="true"} ! lemma
 
 [Term]
 id: TO:0000209
 name: palea number
 def: "A lemma and palea morphology trait (TO:0000079) which is the number of palea (PO:0009038) in the grass flower (floret)." [GR:pj, PO:0009038, TO:moorel]
 synonym: "PALNB" RELATED []
-is_a: TO:0000079 ! flower bract morphology trait
 is_a: TO:0002613 ! reproductive homeotic development trait
 is_a: TO:0006026 ! floral bract number
+is_a: TO:1000024 {is_inferred="true"} ! palea morphology trait
 intersection_of: PATO:0001555 ! has number of
 intersection_of: inheres_in PO:0009038 ! palea
+relationship: inheres_in PO:0009038 {is_inferred="true"} ! palea
 
 [Term]
 id: TO:0000210
@@ -3644,9 +3648,11 @@ comment: Refer to color PATO:0000014: A composite chromatic quality composed of 
 synonym: "SLmC" RELATED []
 synonym: "STLEMCL" RELATED []
 xref: PATO:0000014
-is_a: TO:0000079 ! flower bract morphology trait
+is_a: TO:0000264 {is_inferred="true"} ! lemma and palea color
+is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009040 ! sterile lemma
+relationship: inheres_in PO:0009040 {is_inferred="true"} ! sterile lemma
 relationship: part_of TO:0000536 ! floret color
 
 [Term]
@@ -5489,9 +5495,11 @@ name: lemma shape
 def: "A lemma and palea morphology trait (TO:0000079) which is the shape of the lemma (PO:0009037) in a floret." [GR:pj, PO:0009037, TO:moorel]
 comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 xref: PATO:0000052
-is_a: TO:0000079 ! flower bract morphology trait
+is_a: PATO:0000052 {is_inferred="true"} ! shape
+is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 intersection_of: PATO:0000052 ! shape
 intersection_of: inheres_in PO:0009037 ! lemma
+relationship: inheres_in PO:0009037 {is_inferred="true"} ! lemma
 
 [Term]
 id: TO:0000615
@@ -5785,9 +5793,11 @@ def: "A lemma and palea morphology trait (TO:0000079) which is the length of the
 comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
 synonym: "LEMLG" RELATED []
 xref: PATO:0000122
-is_a: TO:0000079 ! flower bract morphology trait
+is_a: TO:0000817 {is_inferred="true"} ! inflorescence bract length
+is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 intersection_of: PATO:0000122 ! length
 intersection_of: inheres_in PO:0009037 ! lemma
+relationship: inheres_in PO:0009037 {is_inferred="true"} ! lemma
 
 [Term]
 id: TO:0000651
@@ -10790,9 +10800,11 @@ def: "A lemma morphology trait (TO:0000079) which is the width of the sterile le
 comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "STLEMWD" RELATED []
 xref: PATO:0000921
-is_a: TO:0000079 ! flower bract morphology trait
+is_a: PATO:0000921 {is_inferred="true"} ! width
+is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 intersection_of: PATO:0000921 ! width
 intersection_of: inheres_in PO:0009040 ! sterile lemma
+relationship: inheres_in PO:0009040 {is_inferred="true"} ! sterile lemma
 
 [Term]
 id: TO:0002728
@@ -13382,6 +13394,26 @@ intersection_of: inheres_in PO:0009066 ! anther
 relationship: part_of TO:0000215 ! stamen morphology trait
 created_by: meiera
 creation_date: 2016-02-20T00:23:55Z
+
+[Term]
+id: TO:1000023
+name: lemma morphology trait
+def: "A flower bract morphology trait (TO:0000079) which is the quality of a lemma (PO:0009037)." [TO:cooperl]
+is_a: TO:0000079 ! flower bract morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009037 ! lemma
+created_by: cooperl
+creation_date: 2016-03-17T00:20:40Z
+
+[Term]
+id: TO:1000024
+name: palea morphology trait
+def: "A flower bract morphology trait (TO:0000079) which is the quality of a palea (PO:0009038)." [TO:cooperl]
+is_a: TO:0000079 ! flower bract morphology trait
+intersection_of: PATO:0001241 ! physical object quality
+intersection_of: inheres_in PO:0009038 ! palea
+created_by: cooperl
+creation_date: 2016-03-17
 
 [Typedef]
 id: evaluation_location
