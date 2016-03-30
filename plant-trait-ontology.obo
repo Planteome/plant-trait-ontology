@@ -4289,10 +4289,12 @@ is_a: TO:0000306 ! root thickness
 [Term]
 id: TO:0000476
 name: growth hormone content
-def: "Measures the growth hormone content in a plant or plant part." [GR:pj]
+def: "A metabolite content trait (TO:0000281) which is the composition of plant hormone (CHEBI:37848) in a plant structure (PO:0009011)." [GR:pj]
+xref: CHEBI:37848
 is_a: TO:0000281 ! metabolite content trait
-intersection_of: PATO:0000070 ! amount
-intersection_of: inheres_in CHEBI:37845 ! growth hormone
+intersection_of: PATO:0000025 ! composition
+intersection_of: inheres_in CHEBI:37848 ! plant hormone
+intersection_of: occurs_in PO:0009011 ! plant structure
 
 [Term]
 id: TO:0000477
@@ -10286,12 +10288,13 @@ is_a: TO:0001024 ! phosphorus content
 [Term]
 id: TO:0002667
 name: abscisic acid content
-def: "Measures the abscisic acid content in a plant or plant part." [CHEBI:22152]
+def: "Measures the abscisic acid content in a plant or plant part." [CHEBI:62431]
 synonym: "ABA content" RELATED []
 synonym: "ABACN" RELATED []
+xref: CHEBI:62431
 is_a: TO:0000476 ! growth hormone content
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in CHEBI:22152 ! 2-cis-abscisic acid
+intersection_of: inheres_in CHEBI:62431 ! abscisic acids
 intersection_of: occurs_in PO:0009011 ! plant structure
 
 [Term]
@@ -10332,12 +10335,14 @@ is_a: TO:0002669 ! diterpenoid phytoalexin content
 [Term]
 id: TO:0002672
 name: auxin content
-def: "Measures the auxin content in a plant or plant part." [GR:pj, PMID:16908506]
+def: "A growth hormone content (TO:0000476) which is the composition of auxin (CHEBI:22676) in a plant structure (PO:0009011)." [GR:pj, PMID:16908506]
 comment: The most important auxin produced by plants is indole-3-acetic acid (IAA).
 synonym: "AUXCN" RELATED []
+xref: CHEBI:22676
 is_a: TO:0000476 ! growth hormone content
-intersection_of: PATO:0000070 ! amount
+intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:22676 ! auxin
+intersection_of: occurs_in PO:0009011 ! plant structure
 
 [Term]
 id: TO:0002673
@@ -11318,7 +11323,7 @@ name: oligosaccharide content
 def: "Amount of oligosaccharides present in the plant or its parts." [GR:pj]
 comment: Oligosaccharide is a carbohydrate polymer that on hydrolysis yields a small number of monosaccharide molecules.
 is_a: TO:0000291 ! carbohydrate content
-intersection_of: PATO:0000070 ! amount
+intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:50699 ! oligosaccharide
 
 [Term]
@@ -11356,7 +11361,8 @@ intersection_of: inheres_in CHEBI:18154 ! polysaccharide
 [Term]
 id: TO:0006008
 name: carbohydrate derivative content
-def: "Total amount of carbohydrate derivatives present in the plant or plant part." [CHEBI:63299]
+def: "A carbohydrate content (TO:0000291) which is the composition of carbohydrate derivatives (CHEBI:63299) in a plant structure (PO:0009011)." []
+xref: CHEBI:63299
 is_a: TO:0000291 ! carbohydrate content
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:63299 ! carbohydrate derivative
@@ -12611,7 +12617,8 @@ creation_date: 2011-08-19T01:33:35Z
 [Term]
 id: TO:0020078
 name: zeaxanthin content
-def: "The zeaxanthin content in a plant or plant part." [CHEBI:27547]
+def: "A xanthophyll content (TO:0000301) which is the composition of zeaxanthin (CHEBI:27547) in a plant structure (PO:0009011)." []
+xref: CHEBI:27547
 is_a: TO:0000301 ! xanthophyll content
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:27547 ! zeaxanthin
@@ -12622,11 +12629,12 @@ creation_date: 2011-08-19T02:49:07Z
 [Term]
 id: TO:0020079
 name: beta-cryptoxanthin content
-def: "The beta-cryptoxanthin content in a plant or plant part." [CHEBI:10362]
+xref: CHEBI:10362
 is_a: TO:0000301 ! xanthophyll content
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:10362 ! beta-cryptoxanthin
 intersection_of: occurs_in PO:0009011 ! plant structure
+property_value: RO:0002581 "A xanthophyll content (TO:0000301) which is the composition of beta-cryptoxanthin (CHEBI:10362) in a plant structure (PO:0009011)." xsd:string
 created_by: jaiswalp
 creation_date: 2011-08-19T02:53:13Z
 
@@ -12749,7 +12757,8 @@ creation_date: 2011-08-19T04:02:53Z
 [Term]
 id: TO:0020091
 name: manganese content
-def: "The total manganese ion content measured in a plant or a plant part." [CHEBI:25154]
+def: "A mineral and ion content related trait (TO:0000465) which is the composition of manganese (CHEBI:25154) in a plant structure (PO:0009011)." []
+xref: CHEBI:25154
 is_a: TO:0000465 ! mineral and ion content related trait
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:18291 ! manganese atom
@@ -12772,10 +12781,11 @@ creation_date: 2011-08-19T04:02:53Z
 [Term]
 id: TO:0020093
 name: nitrogen content
-def: "The total nitrogen content measured in a plant or a plant part." [CHEBI:51143]
+def: "A mineral and ion content related trait (TO:0000465) which is the composition of nitrogen (CHEBI:51143) in a plant structure (PO:0009011)." []
+xref: CHEBI:51143
 is_a: TO:0000465 ! mineral and ion content related trait
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in CHEBI:25555 ! nitrogen atom
+intersection_of: inheres_in CHEBI:51143 ! nitrogen molecular entity
 intersection_of: occurs_in PO:0009011 ! plant structure
 created_by: jaiswalp
 creation_date: 2011-08-19T04:02:53Z
@@ -12783,7 +12793,8 @@ creation_date: 2011-08-19T04:02:53Z
 [Term]
 id: TO:0020094
 name: nitrate content
-def: "The total nitrate content measured in a plant or a plant part." [CHEBI:48107]
+def: "A mineral and ion content related trait (TO:0000465) which is the composition of nitrate (CHEBI:17632) in a plant structure (PO:0009011)." []
+xref: CHEBI:17632
 is_a: TO:0020093 ! nitrogen content
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:17632 ! nitrate
@@ -12853,8 +12864,9 @@ creation_date: 2011-08-19T04:13:47Z
 [Term]
 id: TO:0020102
 name: phosphate content
-def: "The total phosphate content measured in a plant or a plant part." [CHEBI:26020]
+def: "A mineral and ion content related trait (TO:0000465) which is the composition of phosphate (CHEBI:26020) in a plant structure (PO:0009011)." [CHEBI:26020]
 synonym: "phosphate ion content" EXACT []
+xref: CHEBI:26020
 is_a: TO:0000465 ! mineral and ion content related trait
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:26020 ! phosphate
@@ -12890,9 +12902,10 @@ creation_date: 2011-08-19T04:21:39Z
 [Term]
 id: TO:0020106
 name: Indole-3-acetic acid content
-def: "Measures the IAA content in a plant or plant part." [CHEBI:16411]
+def: "An auxin content (TO:0002672) which is the composition of indole-3-acetic acid (CHEBI:16411) in a plant structure (PO:0009011)." []
 synonym: "IAA content" EXACT []
 synonym: "Indole-3-acetic acid (IAA) content" EXACT []
+xref: CHEBI:16411
 is_a: TO:0002672 ! auxin content
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:16411 ! indole-3-acetic acid
@@ -12991,7 +13004,8 @@ creation_date: 2011-08-19T04:37:43Z
 [Term]
 id: TO:0020118
 name: neoxanthin content
-def: "The neoxanthin content in a plant or plant part." [CHEBI:25501]
+def: "A xanthophyll content (TO:0000301) which is the composition of neoxanthin (CHEBI:25501) in a plant structure (PO:0009011)." []
+xref: CHEBI:25501
 is_a: TO:0000301 ! xanthophyll content
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:25501 ! neoxanthin
@@ -13002,7 +13016,8 @@ creation_date: 2011-08-19T04:39:32Z
 [Term]
 id: TO:0020119
 name: violaxanthin content
-def: "The violaxanthin content in a plant or plant part." [CHEBI:27295]
+def: "A xanthophyll content (TO:0000301) which is the composition of violaxanthin (CHEBI:27295) in a plant structure (PO:0009011)." []
+xref: CHEBI:27295
 is_a: TO:0000301 ! xanthophyll content
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:27295 ! violaxanthin
