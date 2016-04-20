@@ -17,7 +17,7 @@ import: http://purl.obolibrary.org/obo/to/imports/go_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/pato_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/ro_import.owl
 ontology: to
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nAnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/TO_0000349> \"physiological process related trait\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/TO_0000349> \"TO:0000349\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/TO_0000980> \"\")\nAnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> \"GR:pj\"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> \"TO:cooperl\"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/TO_0000349> \"OBSOLETE: Trait to assay the physiological processes in a plant.\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/TO_0000349> \"plant_trait_ontology\"^^xsd:string)\n)
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nAnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/TO_0000349> \"physiological process related trait\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/TO_0000349> \"TO:0000349\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/TO_0000980> \"\")\nAnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> \"GR:pj\"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> \"TO:cooperl\"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/TO_0000349> \"OBSOLETE: Trait to assay the physiological processes in a plant.\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/TO_0000349> \"plant_trait_ontology\"^^xsd:string)\nAnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/TO_0000241> \"\")\n)
 
 [Term]
 id: TO:0000001
@@ -4030,14 +4030,14 @@ is_a: TO:0000347 ! weed damage
 
 [Term]
 id: TO:0000445
-name: seed number
+name: fruit seed number
 alt_id: TO:0000139
 def: "A fruit morphology trait (TO:0002629) which is the number of seeds (PO:0009010) in a fruit (PO:0009001)." [GR:pj, PO:0009001, PO:0009010, PO:0009049]
 synonym: "SDNB" RELATED []
-synonym: "seeds per panicle" RELATED []
 is_a: TO:0002629 ! fruit morphology trait
 intersection_of: PATO:0001555 ! has number of
 intersection_of: inheres_in PO:0009010 ! seed
+intersection_of: occurs_in PO:0009001 ! fruit
 
 [Term]
 id: TO:0000446
@@ -4126,7 +4126,7 @@ id: TO:0000455
 name: seed set percent
 synonym: "percent seed set" RELATED []
 synonym: "SDSPCENT" RELATED []
-is_a: TO:0000445 ! seed number
+is_a: TO:0000445 ! fruit seed number
 
 [Term]
 id: TO:0000456
@@ -8492,7 +8492,7 @@ xref: TO_GIT:182
 is_a: TO:0000371 ! yield trait
 relationship: has_part TO:0000181 ! seed weight
 relationship: has_part TO:0000391 ! seed size
-relationship: has_part TO:0000445 ! seed number
+relationship: has_part TO:0000445 ! fruit seed number
 created_by: moorel
 creation_date: 2013-01-28T13:14:23Z
 
@@ -8819,6 +8819,7 @@ creation_date: 2014-06-27T08:27:30Z
 id: TO:0000936
 name: infructescence yield trait
 def: "A shoot system yield trait (TO:0000327) which is a quality of an infructescence (PO:0006342), or the number born on a plant." [TO:cooperl]
+synonym: "seeds per panicle" RELATED []
 xref: TO_GIT:285
 is_a: TO:0000327 ! shoot system yield trait
 created_by: cooperl
