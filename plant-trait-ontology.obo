@@ -17,7 +17,7 @@ import: http://purl.obolibrary.org/obo/to/imports/go_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/pato_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/ro_import.owl
 ontology: to
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nAnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/TO_0000349> \"physiological process related trait\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/TO_0000349> \"TO:0000349\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/TO_0000980> \"\")\nAnnotationAssertion(Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> \"GR:pj\"^^xsd:string) Annotation(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> \"TO:cooperl\"^^xsd:string) <http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/TO_0000349> \"OBSOLETE: Trait to assay the physiological processes in a plant.\"^^xsd:string)\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/TO_0000349> \"plant_trait_ontology\"^^xsd:string)\nAnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/TO_0000241> \"\")\n)
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/TO_0000980> \"\")\nAnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/TO_0000241> \"\")\n)
 
 [Term]
 id: TO:0000001
@@ -1257,7 +1257,7 @@ synonym: "ApC" RELATED []
 synonym: "APICL" RELATED []
 is_a: TO:0000754 ! cardinal organ part morphology trait
 intersection_of: PATO:0000014 ! color
-intersection_of: inheres_in PO:0006033 ! paleal apiculus
+intersection_of: inheres_in PO:0006033 ! palea apiculus
 relationship: part_of TO:0000536 ! floret color
 
 [Term]
@@ -1798,7 +1798,7 @@ synonym: "Amy" RELATED []
 synonym: "AMYCN" RELATED []
 xref: CHEBI:28102
 is_a: TO:0006007 ! polysaccharide content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:28102 ! amylose
 intersection_of: occurs_in PO:0009011 ! plant structure
 relationship: part_of TO:0000489 ! carbohydrate composition related trait
@@ -2590,6 +2590,8 @@ id: TO:0000281
 name: metabolite content trait
 def: "The trait associated with an assay to determine the affected metabolite's profile." [GR:pj]
 is_a: TO:0000277 ! biochemical trait
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:25212 ! metabolite
 
 [Term]
 id: TO:0000282
@@ -2661,6 +2663,8 @@ synonym: "endoamylase" RELATED []
 synonym: "glycogenase" RELATED []
 synonym: "taka-amylase A" RELATED []
 is_a: TO:0000703 ! amylase activity trait
+intersection_of: PATO:0001236 ! process quality
+intersection_of: inheres_in GO:0004556 ! alpha-amylase activity
 relationship: part_of TO:0000336 ! total amylase activity
 
 [Term]
@@ -2671,7 +2675,7 @@ comment: Carotenes are a group of naturally occurring tetraterpenes (carotenoids
 xref: CHEBI:23042
 xref: TO_GIT:24
 is_a: TO:0000496 ! carotenoid content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:23042 ! carotene
 intersection_of: occurs_in PO:0009011 ! plant structure
 
@@ -2682,7 +2686,7 @@ def: "A phytochemical compound content trait (TO:0000674) which is the amount of
 comment: Flavonoids are water soluble polyphenolic molecules containing 15 carbon atoms. Flavonoids belong to the polyphenol family and have antioxidant activity.
 xref: CHEBI:47916
 is_a: TO:0000674 ! phytochemical compound content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:47916 ! flavonoid
 intersection_of: occurs_in PO:0009011 ! plant structure
 
@@ -2693,7 +2697,7 @@ def: "A metabolite content trait (TO:0000281) which is the amount of carbohydrat
 synonym: "CARBCN" RELATED []
 xref: CHEBI:16646
 is_a: TO:0000281 ! metabolite content trait
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:16646 ! carbohydrate
 intersection_of: occurs_in PO:0009011 ! plant structure
 
@@ -2711,6 +2715,8 @@ name: chlorophyll-a content
 def: "Measures the chlorophyll-a (Chl-a) content in a green tissue. It is a type of chlorophyll present as green pigment in plants." [GR:pj]
 synonym: "chl-a" RELATED []
 is_a: TO:0000495 ! chlorophyll content
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:18230 ! chlorophyll a
 
 [Term]
 id: TO:0000294
@@ -2729,6 +2735,8 @@ id: TO:0000295
 name: chlorophyll-b content
 def: "Measures the chlorophyll-b (Chl-b) content in a green tissue. It is a type of chlorophyll present as green pigment in plants." [GR:pj]
 is_a: TO:0000495 ! chlorophyll content
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:27888 ! chlorophyll b
 
 [Term]
 id: TO:0000296
@@ -2751,7 +2759,7 @@ xref: GR:PJ
 xref: ISBN:198506732
 is_a: TO:0006003 ! oligosaccharide content
 is_a: TO:0006008 ! carbohydrate derivative content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:5417 ! glucosamine
 intersection_of: occurs_in PO:0009011 ! plant structure
 
@@ -2899,6 +2907,8 @@ synonym: "maxinvert L 1000" RELATED []
 synonym: "saccharase" RELATED []
 synonym: "sucrase" RELATED []
 is_a: TO:0000599 ! enzyme activity trait
+intersection_of: PATO:0001236 ! process quality
+intersection_of: inheres_in GO:0004564 ! beta-fructofuranosidase activity
 
 [Term]
 id: TO:0000312
@@ -2920,6 +2930,8 @@ name: perodidase-71 content
 def: "Catalysis of the reaction: donor + hydrogen peroxide = oxidized donor + 2 H2O." [EC:1.11.1.7, GO:0004601]
 synonym: "P71CN" RELATED []
 is_a: TO:0000598 ! protein content
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:8027
 
 [Term]
 id: TO:0000314
@@ -3076,6 +3088,8 @@ synonym: "sucrosephosphate-UDP glucosyltransferase" RELATED []
 synonym: "UDP-glucose-fructose-phosphate glucosyltransferase" RELATED []
 synonym: "uridine diphosphoglucose-fructose phosphate glucosyltransferase" RELATED []
 is_a: TO:0000599 ! enzyme activity trait
+intersection_of: PATO:0001236 ! process quality
+intersection_of: inheres_in GO:0046524 ! sucrose-phosphate synthase activity
 
 [Term]
 id: TO:0000332
@@ -3136,6 +3150,8 @@ name: beta-amylase activity
 def: "Catalysis of the hydrolysis of 1,4-alpha-glucosidic linkages in polysaccharides to remove successive maltose units from the non-reducing ends of the chains." [EC:3.2.1.2, GO:0016161]
 synonym: "BETAAMYASEACT" RELATED []
 is_a: TO:0000703 ! amylase activity trait
+intersection_of: PATO:0001236 ! process quality
+intersection_of: inheres_in GO:0016161 ! beta-amylase activity
 relationship: part_of TO:0000336 ! total amylase activity
 
 [Term]
@@ -4294,7 +4310,7 @@ name: growth hormone content
 def: "A metabolite content trait (TO:0000281) which is the amount of plant hormone (CHEBI:37848) in a plant structure (PO:0009011)." [GR:pj]
 xref: CHEBI:37848
 is_a: TO:0000281 ! metabolite content trait
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:37848 ! plant hormone
 intersection_of: occurs_in PO:0009011 ! plant structure
 
@@ -5350,6 +5366,8 @@ def: "The total protein content measured in a plant or a plant part." [GR:pj37]
 synonym: "PROTCN" RELATED []
 synonym: "total protein content" RELATED []
 is_a: TO:0000281 ! metabolite content trait
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:36080 ! protein
 
 [Term]
 id: TO:0000599
@@ -5391,6 +5409,8 @@ synonym: "FATCN" RELATED []
 synonym: "lipid content" RELATED []
 is_a: TO:0000491 ! fat and essential oil composition related trait
 is_a: TO:0000604 ! fat and essential oil content
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:17855
 
 [Term]
 id: TO:0000603
@@ -5934,10 +5954,12 @@ intersection_of: inheres_in CHEBI:25442 ! mycotoxin
 
 [Term]
 id: TO:0000669
-name: deoxynivalenol concentration
+name: deoxynivalenol content
 def: "Measuring amount of mycotoxin deoxynivalenol found in the host plant after the infection by a fungus Fusarium sp." [GR:pj, PMID:12897863]
 synonym: "DONCONC" RELATED []
 is_a: TO:0000668 ! mycotoxin content
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:10022
 
 [Term]
 id: TO:0000670
@@ -6125,12 +6147,12 @@ is_a: TO:0000685 ! fruit tenderness
 
 [Term]
 id: TO:0000690
-name: Maysin content
+name: maysin content
 def: "Measures the maysin content in a plant or plant part." [GR:pj]
 comment: Maysin is a coagulable globulin protein produced by the maize plant. It has insecticide properties.
 synonym: "MAYSINCN" RELATED []
 is_a: TO:0000598 ! protein content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:70206 ! maysin
 
 [Term]
@@ -6181,7 +6203,7 @@ def: "Amount of starch present in the plant or plant part." [GR:pj]
 synonym: "STARCHCN" RELATED []
 is_a: TO:0000489 ! carbohydrate composition related trait
 is_a: TO:0006007 ! polysaccharide content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:28017 ! starch
 
 [Term]
@@ -6256,6 +6278,8 @@ name: acid phosphatase activity
 def: "Catalysis of the reaction: an orthophosphoric monoester + H2O = an alcohol + phosphate." [EC:3.1.3.2, GO:0003993]
 synonym: "ACIDPASEACT" RELATED []
 is_a: TO:0000704 ! phosphatase activity trait
+intersection_of: PATO:0001236 ! process quality
+intersection_of: inheres_in GO:0003993 ! acid phosphatase activity
 
 [Term]
 id: TO:0000706
@@ -6592,7 +6616,7 @@ subset: Solanaceae_spp
 xref: TO_GIT:56
 is_a: TO:0000741 ! tuber morphology trait
 intersection_of: PATO:0001241 ! physical object quality
-intersection_of: inheres_in PO:0004547 ! subterranean tuber
+intersection_of: inheres_in PO:0004547 ! subterranean shoot axis tuber
 created_by: moorel
 creation_date: 2012-04-19T10:46:10Z
 
@@ -6607,7 +6631,7 @@ xref: PATO:0000052
 xref: TO_GIT:56
 is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 intersection_of: PATO:0000052 ! shape
-intersection_of: inheres_in PO:0004547 ! subterranean tuber
+intersection_of: inheres_in PO:0004547 ! subterranean shoot axis tuber
 created_by: moorel
 creation_date: 2012-04-19T10:48:44Z
 
@@ -6622,7 +6646,7 @@ xref: PATO:0000117
 xref: TO_GIT:56
 is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 intersection_of: PATO:0000117 ! size
-intersection_of: inheres_in PO:0004547 ! subterranean tuber
+intersection_of: inheres_in PO:0004547 ! subterranean shoot axis tuber
 created_by: moorel
 creation_date: 2012-04-19T10:51:20Z
 
@@ -6649,7 +6673,7 @@ xref: PATO:0000125
 xref: TO_GIT:56
 is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 intersection_of: PATO:0000125 ! mass
-intersection_of: inheres_in PO:0004547 ! subterranean tuber
+intersection_of: inheres_in PO:0004547 ! subterranean shoot axis tuber
 created_by: moorel
 creation_date: 2012-04-19T10:56:34Z
 
@@ -8783,7 +8807,7 @@ synonym: "D-mannose content " NARROW []
 synonym: "man content " RELATED []
 xref: TO_GIT:259
 is_a: TO:0000307 ! hexose content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:37684 ! mannose
 created_by: cooperl
 creation_date: 2014-04-30T11:28:13Z
@@ -9029,6 +9053,8 @@ name: cyanide content
 def: "A metabolite content related trait (TO:0000281) which is the amount of cyanide (CHEBI:17514) occurring in a plant anatomical entity (PO:0025131)." []
 xref: CHEBI:17514
 is_a: TO:0000281 ! metabolite content trait
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:17514
 
 [Term]
 id: TO:0000958
@@ -9358,6 +9384,8 @@ def: "A carbohydrate content trait (TO:0000291) which is the amount of cellulose
 comment: Refers to crystalline cellulose (CHEBI:62968): A (1→4)-β-D-glucan (cellulose) in crystalline form with a structure consisting of several hundred to over ten thousand D-glucose residues joined by β(1→4) glycosidic linkages.
 xref: TO_GIT:384
 is_a: TO:0000291 ! carbohydrate content
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:18246
 created_by: ethan_johnson
 
 [Term]
@@ -10179,6 +10207,9 @@ name: endosperm storage protein content
 def: "Assay for the amount of seed storage protein present in the endosperm." [GR:pj]
 is_a: TO:0000490 ! protein composition related trait
 is_a: TO:0000598 ! protein content
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in GO:0045735
+intersection_of: occurs_in PO:0009089 ! endosperm
 
 [Term]
 id: TO:0002654
@@ -10300,7 +10331,7 @@ synonym: "ABA content" RELATED []
 synonym: "ABACN" RELATED []
 xref: CHEBI:62431
 is_a: TO:0000476 ! growth hormone content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:62431 ! abscisic acids
 intersection_of: occurs_in PO:0009011 ! plant structure
 
@@ -10320,6 +10351,8 @@ name: diterpenoid phytoalexin content
 def: "Measures the diterpenoid phytoalexin content in a plant or plant part." [GR:pj]
 comment: Diterpenoid phytoalexins are polycyclic diterpenes involved in pathogen response.
 is_a: TO:0000290 ! flavonoid content
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:60952
 
 [Term]
 id: TO:0002670
@@ -10347,7 +10380,7 @@ comment: The most important auxin produced by plants is indole-3-acetic acid (IA
 synonym: "AUXCN" RELATED []
 xref: CHEBI:22676
 is_a: TO:0000476 ! growth hormone content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:22676 ! auxin
 intersection_of: occurs_in PO:0009011 ! plant structure
 
@@ -10375,6 +10408,8 @@ synonym: "GA content" RELATED []
 synonym: "GACN" RELATED []
 synonym: "gibberellin content" RELATED []
 is_a: TO:0000476 ! growth hormone content
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:28833
 
 [Term]
 id: TO:0002676
@@ -10558,6 +10593,8 @@ def: "The alpha-carotene content in a plant or plant part." [GR:pj]
 comment: The alpha-carotene is the second most common form of carotenoid.
 synonym: "alpha-carotenoid content" EXACT []
 is_a: TO:0002697 ! cyclic carotene content
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:28425
 
 [Term]
 id: TO:0002697
@@ -11330,7 +11367,7 @@ name: oligosaccharide content
 def: "Amount of oligosaccharides present in the plant or its parts." [GR:pj]
 comment: Oligosaccharide is a carbohydrate polymer that on hydrolysis yields a small number of monosaccharide molecules.
 is_a: TO:0000291 ! carbohydrate content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:50699 ! oligosaccharide
 
 [Term]
@@ -11371,7 +11408,7 @@ name: carbohydrate derivative content
 def: "A carbohydrate content (TO:0000291) which is the amount of carbohydrate derivatives (CHEBI:63299) in a plant structure (PO:0009011)." []
 xref: CHEBI:63299
 is_a: TO:0000291 ! carbohydrate content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:63299 ! carbohydrate derivative
 intersection_of: occurs_in PO:0009011 ! plant structure
 
@@ -12040,6 +12077,9 @@ name: leaf chlorophyll content
 def: "A chlorophyll content trait (TO:0000495) which is a quality of a leaf (PO:0025034)." [PO:0025034, TO:cooperl]
 xref: TO_GIT:275
 is_a: TO:0000495 ! chlorophyll content
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:28966 ! chlorophyll
+intersection_of: occurs_in PO:0025034 ! leaf
 created_by: jaiswalp
 creation_date: 2011-12-09T01:52:17Z
 
@@ -12549,6 +12589,8 @@ id: TO:0020068
 name: beta-glucan content
 def: "Amount of beta-glucan present in the plant part or product (e.g. malt). Beta-Glucans are polysaccharides of D-glucose linked by beta-glycosidic bonds that vary by molecular mass, solubility, viscosity and 3D configuration." [T-CAP:Victoria_Corollo_Blake]
 is_a: TO:0000291 ! carbohydrate content
+intersection_of: PATO:0000070 ! amount
+intersection_of: inheres_in CHEBI:28793
 created_by: jaiswalp
 creation_date: 2011-08-19T01:03:01Z
 
@@ -12642,7 +12684,7 @@ name: zeaxanthin content
 def: "A xanthophyll content (TO:0000301) which is the amount of zeaxanthin (CHEBI:27547) in a plant structure (PO:0009011)." []
 xref: CHEBI:27547
 is_a: TO:0000301 ! xanthophyll content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:27547 ! zeaxanthin
 intersection_of: occurs_in PO:0009011 ! plant structure
 created_by: jaiswalp
@@ -12653,7 +12695,7 @@ id: TO:0020079
 name: beta-cryptoxanthin content
 xref: CHEBI:10362
 is_a: TO:0000301 ! xanthophyll content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:10362 ! beta-cryptoxanthin
 intersection_of: occurs_in PO:0009011 ! plant structure
 property_value: RO:0002581 "A xanthophyll content (TO:0000301) which is the amount of beta-cryptoxanthin (CHEBI:10362) in a plant structure (PO:0009011)." xsd:string
@@ -12929,7 +12971,7 @@ synonym: "IAA content" EXACT []
 synonym: "Indole-3-acetic acid (IAA) content" EXACT []
 xref: CHEBI:16411
 is_a: TO:0002672 ! auxin content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:16411 ! indole-3-acetic acid
 intersection_of: occurs_in PO:0009011 ! plant structure
 created_by: jaiswalp
@@ -13029,7 +13071,7 @@ name: neoxanthin content
 def: "A xanthophyll content (TO:0000301) which is the amount of neoxanthin (CHEBI:25501) in a plant structure (PO:0009011)." []
 xref: CHEBI:25501
 is_a: TO:0000301 ! xanthophyll content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:25501 ! neoxanthin
 intersection_of: occurs_in PO:0009011 ! plant structure
 created_by: jaiswalp
@@ -13041,7 +13083,7 @@ name: violaxanthin content
 def: "A xanthophyll content (TO:0000301) which is the amount of violaxanthin (CHEBI:27295) in a plant structure (PO:0009011)." []
 xref: CHEBI:27295
 is_a: TO:0000301 ! xanthophyll content
-intersection_of: PATO:0000025 ! composition
+intersection_of: PATO:0000070 ! amount
 intersection_of: inheres_in CHEBI:27295 ! violaxanthin
 intersection_of: occurs_in PO:0009011 ! plant structure
 created_by: jaiswalp
