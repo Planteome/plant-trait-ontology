@@ -48,7 +48,7 @@ target/to.obo: $(SRC)
 	ontology-release-runner --catalog-xml catalog-v001.xml $< --reasoner elk --simple --skip-format owx --outdir target --run-obo-basic-dag-check
 target/to.owl: target/to.obo
 
-to.owl: target/to.owl
+to.obo: target/to.obo
 	cp $< $@
 to.owl: target/to.owl
 	cp $< $@
