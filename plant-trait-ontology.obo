@@ -3022,7 +3022,7 @@ id: TO:0000325
 name: soluble protein content
 def: "Amount of the soluble protein present in the plant or the plant part." [GR:pj]
 synonym: "SPROTCN" RELATED []
-is_a: TO:0000490 ! protein composition related trait
+is_a: TO:0000490 ! seed protein composition trait
 is_a: TO:0000598 ! protein content
 
 [Term]
@@ -3752,7 +3752,7 @@ id: TO:0000410
 name: polished rice protein content
 def: "Total protein content of the polished rice." [GR:pj]
 synonym: "POLRPROTCN" RELATED []
-is_a: TO:0000490 ! protein composition related trait
+is_a: TO:0000490 ! seed protein composition trait
 is_a: TO:0000598 ! protein content
 
 [Term]
@@ -3791,7 +3791,7 @@ name: white rice protein content
 synonym: "polished rice protein" RELATED []
 synonym: "protein content for polished rice" RELATED []
 synonym: "WHTRPROTCN" RELATED []
-is_a: TO:0000490 ! protein composition related trait
+is_a: TO:0000490 ! seed protein composition trait
 is_a: TO:0000598 ! protein content
 
 [Term]
@@ -4431,10 +4431,12 @@ intersection_of: inheres_in CHEBI:16646 ! carbohydrate
 
 [Term]
 id: TO:0000490
-name: protein composition related trait
+name: seed protein composition trait
+def: "A seed composition based quality trait (TO:0000488) which is the amount of protein (CHEBI_36080) in a seed (PO:0009010)." []
 is_a: TO:0000488 ! seed composition based quality trait
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:36080 ! protein
+intersection_of: occurs_in PO:0009010 ! seed
 
 [Term]
 id: TO:0000491
@@ -5476,7 +5478,7 @@ comment: As seen in degree of modification of grain to malt in barley.
 synonym: "Soluble protein to total protein content ratio" RELATED []
 synonym: "STPROTRO" RELATED []
 is_a: TO:0000325 ! soluble protein content
-is_a: TO:0000490 ! protein composition related trait
+is_a: TO:0000490 ! seed protein composition trait
 is_a: TO:0000598 ! protein content
 
 [Term]
@@ -10203,7 +10205,7 @@ is_a: TO:0002650 ! phototropism
 id: TO:0002653
 name: endosperm storage protein content
 def: "Assay for the amount of seed storage protein present in the endosperm." [GR:pj]
-is_a: TO:0000490 ! protein composition related trait
+is_a: TO:0000490 ! seed protein composition trait
 is_a: TO:0000598 ! protein content
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in GO:0045735
