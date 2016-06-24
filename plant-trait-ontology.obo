@@ -2625,7 +2625,7 @@ synonym: "AGPACT" RELATED []
 synonym: "glucose 1-phosphate adenylyltransferase" RELATED []
 synonym: "glucose-1-phosphate adenylyltransferase activity" RELATED []
 is_a: TO:0000599 ! enzyme activity trait
-intersection_of: PATO:0001236 ! process quality
+intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0008878 ! glucose-1-phosphate adenylyltransferase activity
 
 [Term]
@@ -2663,8 +2663,8 @@ synonym: "endoamylase" RELATED []
 synonym: "glycogenase" RELATED []
 synonym: "taka-amylase A" RELATED []
 is_a: TO:0000703 ! amylase activity trait
-intersection_of: PATO:0001236 ! process quality
-intersection_of: inheres_in GO:0004556 ! alpha-amylase activity
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in TO:0000288 ! alpha-amylase activity
 relationship: part_of TO:0000336 ! total amylase activity
 
 [Term]
@@ -2907,7 +2907,7 @@ synonym: "maxinvert L 1000" RELATED []
 synonym: "saccharase" RELATED []
 synonym: "sucrase" RELATED []
 is_a: TO:0000599 ! enzyme activity trait
-intersection_of: PATO:0001236 ! process quality
+intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0004564 ! beta-fructofuranosidase activity
 
 [Term]
@@ -3088,7 +3088,7 @@ synonym: "sucrosephosphate-UDP glucosyltransferase" RELATED []
 synonym: "UDP-glucose-fructose-phosphate glucosyltransferase" RELATED []
 synonym: "uridine diphosphoglucose-fructose phosphate glucosyltransferase" RELATED []
 is_a: TO:0000599 ! enzyme activity trait
-intersection_of: PATO:0001236 ! process quality
+intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0046524 ! sucrose-phosphate synthase activity
 
 [Term]
@@ -3150,8 +3150,8 @@ name: beta-amylase activity
 def: "Catalysis of the hydrolysis of 1,4-alpha-glucosidic linkages in polysaccharides to remove successive maltose units from the non-reducing ends of the chains." [EC:3.2.1.2, GO:0016161]
 synonym: "BETAAMYASEACT" RELATED []
 is_a: TO:0000703 ! amylase activity trait
-intersection_of: PATO:0001236 ! process quality
-intersection_of: inheres_in GO:0016161 ! beta-amylase activity
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in TO:0000338 ! beta-amylase activity
 relationship: part_of TO:0000336 ! total amylase activity
 
 [Term]
@@ -5378,7 +5378,7 @@ synonym: "enzymatic activity" RELATED []
 synonym: "enzyme catalytic activity" RELATED []
 xref: TO_GIT:380
 is_a: TO:0000277 ! biochemical trait
-intersection_of: PATO:0001236 ! process quality
+intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0003824 ! catalytic activity
 
 [Term]
@@ -6228,7 +6228,7 @@ name: sucrose synthase activity trait
 def: "Catalysis of the reaction: UDP-glucose + D-fructose = UDP + sucrose." [GO:GO\:0016157]
 synonym: "SUSACT" RELATED []
 is_a: TO:0000599 ! enzyme activity trait
-intersection_of: PATO:0001236 ! process quality
+intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0016157 ! sucrose synthase activity
 
 [Term]
@@ -6260,7 +6260,7 @@ id: TO:0000703
 name: amylase activity trait
 def: "Catalysis of the hydrolysis of amylose or an amylose derivative." [GR:pj]
 is_a: TO:0000599 ! enzyme activity trait
-intersection_of: PATO:0001236 ! process quality
+intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0016160 ! amylase activity
 
 [Term]
@@ -6269,7 +6269,7 @@ name: phosphatase activity trait
 def: "Catalysis of the hydrolysis of phosphoric monoesters, releasing inorganic phosphate." [GO:GO\:0016791]
 synonym: "phosphoric monoester hydrolase activity" RELATED []
 is_a: TO:0000599 ! enzyme activity trait
-intersection_of: PATO:0001236 ! process quality
+intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0016791 ! phosphatase activity
 
 [Term]
@@ -6278,8 +6278,8 @@ name: acid phosphatase activity
 def: "Catalysis of the reaction: an orthophosphoric monoester + H2O = an alcohol + phosphate." [EC:3.1.3.2, GO:0003993]
 synonym: "ACIDPASEACT" RELATED []
 is_a: TO:0000704 ! phosphatase activity trait
-intersection_of: PATO:0001236 ! process quality
-intersection_of: inheres_in GO:0003993 ! acid phosphatase activity
+intersection_of: PATO:0000001 ! quality
+intersection_of: inheres_in TO:0000705 ! acid phosphatase activity
 
 [Term]
 id: TO:0000706
@@ -12607,7 +12607,7 @@ id: TO:0020070
 name: beta-glucanase activity trait
 def: "Activity of beta-glucanase ((1,3-1,4)-beta-D-glucan, 4-glucanohydrolase), (EC:3.2.1.73) in the hydrolysis of beta-glucans." [GO:0042972, GO:\:0052736, T-CAP:Victoria_Corollo_Blake]
 is_a: TO:0000599 ! enzyme activity trait
-intersection_of: PATO:0001236 ! process quality
+intersection_of: PATO:0000001 ! quality
 intersection_of: inheres_in GO:0052736 ! beta-glucanase activity
 created_by: jaiswalp
 creation_date: 2011-08-19T01:10:26Z
@@ -12618,8 +12618,6 @@ name: beta-glucanase thermostability
 def: "The ability of beta-glucanase to remain active under mashing (boiling grain in water) conditions during beer making." [T-CAP:Victoria_Corollo_Blake]
 comment: Beta-glucanase [(1-3,1-4)-beta-D-glucan, 4-glucanohydrolase], (E.C:3.2.1.73).
 is_a: TO:0000597 ! quality trait
-is_a: TO:0000599 ! enzyme activity trait
-is_a: TO:0020070 ! beta-glucanase activity trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:18:25Z
 
@@ -12630,7 +12628,6 @@ def: "Activity of beta-glucanase in the barley wort (the boiled grain and water)
 comment: Beta-glucanase [(1-3,1-4)-beta-D-glucan, 4-glucanohydrolase], (E.C:3.2.1.73).
 synonym: "residual beta-glucanase" BROAD []
 is_a: TO:0000597 ! quality trait
-is_a: TO:0000599 ! enzyme activity trait
 is_a: TO:0020070 ! beta-glucanase activity trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:20:23Z
