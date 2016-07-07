@@ -1,6 +1,6 @@
 ## TO editors documentation
 
-These notes are for the EDITORS of to
+These notes are for the EDITORS of the Plant Trait Ontology
 
 The release files are:
 
