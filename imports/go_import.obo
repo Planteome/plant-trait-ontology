@@ -4,179 +4,275 @@ ontology: to/imports/go_import
 [Term]
 id: GO:0000003
 name: reproduction
+def: "The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms." [GOC:go_curators, GOC:isa_complete, GOC:jl, ISBN:0198506732]
+synonym: "reproductive physiological process" EXACT []
 is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0000278
 name: mitotic cell cycle
+def: "Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent." [GOC:mah, ISBN:0815316194, Reactome:69278]
 is_a: GO:0007049 ! cell cycle
+intersection_of: GO:0007049 ! cell cycle
+intersection_of: BFO:0000051 GO:0007067 ! mitotic nuclear division
+relationship: BFO:0000051 GO:0007067 ! mitotic nuclear division
+
+[Term]
+id: GO:0000280
+name: nuclear division
+def: "The division of a cell nucleus into two nuclei, with DNA and other nuclear contents distributed between the daughter nuclei." [GOC:mah]
+synonym: "karyokinesis" RELATED []
+is_a: GO:0048285 ! organelle fission
 
 [Term]
 id: GO:0003006
 name: developmental process involved in reproduction
+def: "A developmental process in which a progressive change in the state of some part of an organism specifically contributes to its ability to form offspring." [GOC:dph, GOC:isa_complete]
+synonym: "puberty" NARROW [GOC:dph]
+synonym: "reproductive developmental process" RELATED [GOC:dph, GOC:tb]
 is_a: GO:0022414 ! reproductive process
 is_a: GO:0032502 ! developmental process
+intersection_of: GO:0032502 ! developmental process
+intersection_of: BFO:0000050 GO:0000003 ! reproduction
+relationship: BFO:0000050 GO:0000003 ! reproduction
 
 [Term]
 id: GO:0003674
 name: molecular_function
+def: "Elemental activities, such as catalysis or binding, describing the actions of a gene product at the molecular level. A given gene product may exhibit one or more molecular functions." [GOC:go_curators]
+synonym: "molecular function" EXACT []
 
 [Term]
 id: GO:0003824
 name: catalytic activity
+def: "Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic." [GOC:vw, ISBN:0198506732]
+synonym: "enzyme activity" EXACT [GOC:dph, GOC:tb]
 is_a: GO:0003674 ! molecular_function
-relationship: part_of GO:0008152 ! metabolic process
-
-[Term]
-id: GO:0003993
-name: acid phosphatase activity
-is_a: GO:0016791 ! phosphatase activity
-
-[Term]
-id: GO:0004356
-name: glutamate-ammonia ligase activity
-is_a: GO:0016211 ! ammonia ligase activity
 
 [Term]
 id: GO:0004553
 name: hydrolase activity, hydrolyzing O-glycosyl compounds
+def: "Catalysis of the hydrolysis of any O-glycosyl bond." [GOC:mah]
+synonym: "O-glucosyl hydrolase activity" EXACT []
 is_a: GO:0016798 ! hydrolase activity, acting on glycosyl bonds
-
-[Term]
-id: GO:0004556
-name: alpha-amylase activity
-is_a: GO:0016160 ! amylase activity
-
-[Term]
-id: GO:0004564
-name: beta-fructofuranosidase activity
-is_a: GO:0004553 ! hydrolase activity, hydrolyzing O-glycosyl compounds
-
-[Term]
-id: GO:0004601
-name: peroxidase activity
-is_a: GO:0016209 ! antioxidant activity
-is_a: GO:0016684 ! oxidoreductase activity, acting on peroxide as acceptor
-
-[Term]
-id: GO:0004619
-name: phosphoglycerate mutase activity
-is_a: GO:0016868 ! intramolecular transferase activity, phosphotransferases
 
 [Term]
 id: GO:0005575
 name: cellular_component
+def: "The part of a cell or its extracellular environment in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together." [GOC:go_curators, NIF_Subcellular:sao-1337158144]
+synonym: "cell or subcellular entity" EXACT []
+synonym: "cellular component" EXACT []
+synonym: "subcellular entity" RELATED [NIF_Subcellular:nlx_subcell_100315]
 
 [Term]
 id: GO:0005622
 name: intracellular
+def: "The living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [ISBN:0198506732]
+synonym: "internal to cell" EXACT []
+synonym: "nucleocytoplasm" RELATED [GOC:mah]
+synonym: "protoplasm" EXACT []
+synonym: "protoplast" RELATED [GOC:mah]
 is_a: GO:0044464 ! cell part
 
 [Term]
 id: GO:0005623
 name: cell
+def: "The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:go_curators]
 is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: GO:0005737
 name: cytoplasm
+def: "All of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures." [ISBN:0198547684]
 is_a: GO:0044424 ! intracellular part
 
 [Term]
 id: GO:0006725
 name: cellular aromatic compound metabolic process
+def: "The chemical reactions and pathways involving aromatic compounds, any organic compound characterized by one or more planar rings, each of which contains conjugated double bonds and delocalized pi electrons, as carried out by individual cells." [GOC:ai, ISBN:0198506732]
+synonym: "aromatic compound metabolism" EXACT []
+synonym: "aromatic hydrocarbon metabolic process" NARROW []
+synonym: "aromatic hydrocarbon metabolism" NARROW []
 is_a: GO:0044237 ! cellular metabolic process
 
 [Term]
 id: GO:0006793
 name: phosphorus metabolic process
+def: "The chemical reactions and pathways involving the nonmetallic element phosphorus or compounds that contain phosphorus, usually in the form of a phosphate group (PO4)." [GOC:ai]
+synonym: "phosphorus metabolism" EXACT []
 is_a: GO:0044237 ! cellular metabolic process
 
 [Term]
 id: GO:0006796
 name: phosphate-containing compound metabolic process
+def: "The chemical reactions and pathways involving the phosphate group, the anion or salt of any phosphoric acid." [GOC:ai]
+synonym: "phosphate metabolic process" RELATED []
+synonym: "phosphate metabolism" EXACT []
 is_a: GO:0006793 ! phosphorus metabolic process
 
 [Term]
 id: GO:0006810
 name: transport
+def: "The directed movement of substances (such as macromolecules, small molecules, ions) or cellular components (such as complexes and organelles) into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter, pore or motor protein." [GOC:dos, GOC:dph, GOC:jl, GOC:mah]
+synonym: "auxiliary transport protein activity" RELATED [GOC:mah]
+synonym: "small molecule transport" NARROW []
+synonym: "solute:solute exchange" NARROW []
+synonym: "transport accessory protein activity" RELATED [GOC:mah]
 is_a: GO:0051234 ! establishment of localization
 
 [Term]
 id: GO:0006833
 name: water transport
+def: "The directed movement of water (H2O) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 is_a: GO:0042044 ! fluid transport
 
 [Term]
 id: GO:0006950
 name: response to stress
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a disturbance in organismal or cellular homeostasis, usually, but not necessarily, exogenous (e.g. temperature, humidity, ionizing radiation)." [GOC:mah]
+synonym: "response to abiotic stress" RELATED []
+synonym: "response to biotic stress" RELATED []
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
 id: GO:0006970
 name: response to osmotic stress
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus indicating an increase or decrease in the concentration of solutes outside the organism or cell." [GOC:jl]
+synonym: "osmotic response" EXACT []
+synonym: "osmotic stress response" EXACT []
 is_a: GO:0006950 ! response to stress
 is_a: GO:0009628 ! response to abiotic stimulus
 
 [Term]
+id: GO:0006996
+name: organelle organization
+def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of an organelle within a cell. An organelle is an organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:mah]
+synonym: "organelle organisation" EXACT [GOC:curators]
+synonym: "organelle organization and biogenesis" RELATED [GOC:dph, GOC:jl, GOC:mah]
+is_a: GO:0016043 ! cellular component organization
+
+[Term]
 id: GO:0007049
 name: cell cycle
+def: "The progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events. Canonically, the cell cycle comprises the replication and segregation of genetic material followed by the division of the cell, but in endocycles or syncytial cells nuclear replication or nuclear division may not be followed by cell division." [GOC:go_curators, GOC:mtg_cell_cycle]
+synonym: "cell-division cycle" EXACT []
 is_a: GO:0044763 ! single-organism cellular process
 
 [Term]
+id: GO:0007067
+name: mitotic nuclear division
+def: "A cell cycle process comprising the steps by which the nucleus of a eukaryotic cell divides; the process involves condensation of chromosomal DNA into a highly compacted form. Canonically, mitosis produces two daughter nuclei whose chromosome complement is identical to that of the mother cell." [GOC:dph, GOC:ma, GOC:mah, ISBN:0198547684]
+synonym: "mitosis" EXACT []
+is_a: GO:0000280 ! nuclear division
+is_a: GO:1903047 ! mitotic cell cycle process
+intersection_of: GO:0000280 ! nuclear division
+intersection_of: BFO:0000050 GO:0000278 ! mitotic cell cycle
+relationship: BFO:0000050 GO:0000278 ! mitotic cell cycle
+
+[Term]
+id: GO:0007126
+name: meiotic nuclear division
+def: "One of the two nuclear divisions that occur as part of the meiotic cell cycle." [GOC:dph, GOC:mah, PMID:9334324]
+synonym: "meiosis" BROAD []
+is_a: GO:0000280 ! nuclear division
+is_a: GO:1903046 ! meiotic cell cycle process
+intersection_of: GO:0000280 ! nuclear division
+intersection_of: BFO:0000050 GO:0051321 ! meiotic cell cycle
+relationship: BFO:0000050 GO:0051321 ! meiotic cell cycle
+
+[Term]
 id: GO:0007275
-name: multicellular organismal development
+name: multicellular organism development
+def: "The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult)." [GOC:dph, GOC:ems, GOC:isa_complete, GOC:tb]
 is_a: GO:0044707 ! single-multicellular organism process
 is_a: GO:0044767 ! single-organism developmental process
+is_a: GO:0048856 ! anatomical structure development
 
 [Term]
 id: GO:0007568
 name: aging
+def: "A developmental process that is a deterioration and loss of function over time. Aging includes loss of functions such as resistance to disease, homeostasis, and fertility, as well as wear and tear. Aging includes cellular senescence, but is more inclusive. May precede death and may succeed developmental maturation (GO:0021700)." [GOC:PO_curators]
+synonym: "ageing" EXACT []
 is_a: GO:0044767 ! single-organism developmental process
 
 [Term]
 id: GO:0007585
 name: respiratory gaseous exchange
+def: "The process of gaseous exchange between an organism and its environment. In plants, microorganisms, and many small animals, air or water makes direct contact with the organism's cells or tissue fluids, and the processes of diffusion supply the organism with dioxygen (O2) and remove carbon dioxide (CO2). In larger animals the efficiency of gaseous exchange is improved by specialized respiratory organs, such as lungs and gills, which are ventilated by breathing mechanisms." [ISBN:0198506732]
+synonym: "breathing" BROAD []
+synonym: "respiration" BROAD []
 is_a: GO:0044707 ! single-multicellular organism process
 
 [Term]
 id: GO:0008150
 name: biological_process
+def: "Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end." [GOC:go_curators, GOC:isa_complete]
+synonym: "biological process" EXACT []
+synonym: "physiological process" EXACT []
 
 [Term]
 id: GO:0008152
 name: metabolic process
+def: "The chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation." [GOC:go_curators, ISBN:0198547684]
+synonym: "metabolic process resulting in cell growth" NARROW []
+synonym: "metabolism" EXACT []
+synonym: "metabolism resulting in cell growth" NARROW []
 is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0008194
 name: UDP-glycosyltransferase activity
+def: "Catalysis of the transfer of a glycosyl group from a UDP-sugar to a small hydrophobic molecule." [InterPro:IPR004224, PMID:11846783]
 is_a: GO:0016757 ! transferase activity, transferring glycosyl groups
 
 [Term]
 id: GO:0008878
 name: glucose-1-phosphate adenylyltransferase activity
+def: "Catalysis of the reaction: alpha-D-glucose 1-phosphate + ATP = ADP-glucose + diphosphate." [EC:2.7.7.27, RHEA:12123]
+synonym: "adenosine diphosphate glucose pyrophosphorylase activity" EXACT [EC:2.7.7.27]
+synonym: "adenosine diphosphoglucose pyrophosphorylase activity" EXACT [EC:2.7.7.27]
+synonym: "ADGase activity" EXACT []
+synonym: "ADP glucose pyrophosphorylase activity" EXACT [EC:2.7.7.27]
+synonym: "ADP-glucose diphosphorylase activity" EXACT [EC:2.7.7.27]
+synonym: "ADP-glucose pyrophosphorylase activity" EXACT [EC:2.7.7.27]
+synonym: "ADP-glucose synthase activity" EXACT [EC:2.7.7.27]
+synonym: "ADP-glucose synthetase activity" EXACT [EC:2.7.7.27]
+synonym: "ADP:alpha-D-glucose-1-phosphate adenylyltransferase activity" EXACT [EC:2.7.7.27]
+synonym: "ADPG pyrophosphorylase activity" EXACT []
+synonym: "ATP:alpha-D-glucose-1-phosphate adenylyltransferase activity" EXACT [EC:2.7.7.27]
+synonym: "ATP:alpha-glucose-1-phosphate adenylyl transferase activity" EXACT []
+synonym: "glucose 1-phosphate adenylyltransferase activity" EXACT [EC:2.7.7.27]
 is_a: GO:0070566 ! adenylyltransferase activity
 
 [Term]
 id: GO:0009058
 name: biosynthetic process
+def: "The chemical reactions and pathways resulting in the formation of substances; typically the energy-requiring part of metabolism in which simpler substances are transformed into more complex ones." [GOC:curators, ISBN:0198547684]
+synonym: "anabolism" EXACT []
+synonym: "biosynthesis" EXACT []
+synonym: "formation" EXACT []
+synonym: "synthesis" EXACT []
 is_a: GO:0008152 ! metabolic process
 
 [Term]
 id: GO:0009536
 name: plastid
+def: "Any member of a family of organelles found in the cytoplasm of plants and some protists, which are membrane-bounded and contain DNA. Plant plastids develop from a common type, the proplastid." [GOC:jl, ISBN:0198547684]
 is_a: GO:0043231 ! intracellular membrane-bounded organelle
 is_a: GO:0044444 ! cytoplasmic part
 
 [Term]
 id: GO:0009628
 name: response to abiotic stimulus
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of an abiotic (non-living) stimulus." [GOC:hb]
+synonym: "response to abiotic stress" NARROW []
 is_a: GO:0050896 ! response to stimulus
 
 [Term]
 id: GO:0009698
 name: phenylpropanoid metabolic process
+def: "The chemical reactions and pathways involving aromatic derivatives of trans-cinnamic acid." [GOC:jl]
+synonym: "phenylpropanoid metabolism" EXACT []
 is_a: GO:0006725 ! cellular aromatic compound metabolic process
 is_a: GO:0019748 ! secondary metabolic process
 is_a: GO:0044763 ! single-organism cellular process
@@ -185,6 +281,11 @@ is_a: GO:1901360 ! organic cyclic compound metabolic process
 [Term]
 id: GO:0009699
 name: phenylpropanoid biosynthetic process
+def: "The chemical reactions and pathways resulting in the formation of aromatic derivatives of trans-cinnamic acid." [GOC:jl]
+synonym: "phenylpropanoid anabolism" EXACT []
+synonym: "phenylpropanoid biosynthesis" EXACT []
+synonym: "phenylpropanoid formation" EXACT []
+synonym: "phenylpropanoid synthesis" EXACT []
 is_a: GO:0009698 ! phenylpropanoid metabolic process
 is_a: GO:0019438 ! aromatic compound biosynthetic process
 is_a: GO:0044550 ! secondary metabolite biosynthetic process
@@ -193,624 +294,758 @@ is_a: GO:1901362 ! organic cyclic compound biosynthetic process
 [Term]
 id: GO:0009791
 name: post-embryonic development
+def: "The process whose specific outcome is the progression of the organism over time, from the completion of embryonic development to the mature structure. See embryonic development." [GOC:go_curators]
 is_a: GO:0044707 ! single-multicellular organism process
-is_a: GO:0044767 ! single-organism developmental process
-relationship: part_of GO:0007275 ! multicellular organismal development
+relationship: BFO:0000050 GO:0007275 ! multicellular organism development
 
 [Term]
 id: GO:0009808
 name: lignin metabolic process
+def: "The chemical reactions and pathways involving lignins, a class of polymers of phenylpropanoid units." [GOC:lr, GOC:yl]
+synonym: "lignin metabolism" EXACT []
 is_a: GO:0009698 ! phenylpropanoid metabolic process
 
 [Term]
 id: GO:0009809
 name: lignin biosynthetic process
+def: "The chemical reactions and pathways resulting in the formation of lignins, a class of polymers formed by the dehydrogenetive radical polymerization of various phenylpropanoid monomers." [GOC:tair_curators, ISBN:0198547684]
+synonym: "lignin anabolism" EXACT []
+synonym: "lignin biosynthesis" EXACT []
+synonym: "lignin formation" EXACT []
+synonym: "lignin synthesis" EXACT []
 is_a: GO:0009699 ! phenylpropanoid biosynthetic process
 is_a: GO:0009808 ! lignin metabolic process
 
 [Term]
 id: GO:0009835
 name: fruit ripening
+def: "An aging process that has as participant a fruit. Ripening causes changes in one or more characteristics of a fruit (color, aroma, flavor, texture, hardness, cell wall structure) and may make it more attractive to animals and aid in seed dispersal." [GOC:lr]
+synonym: "fruit maturation" RELATED [GOC:PO_curators]
+synonym: "fruit senescence" RELATED [GOC:PO_curators]
+is_a: GO:0003006 ! developmental process involved in reproduction
 is_a: GO:0007568 ! aging
 is_a: GO:0044702 ! single organism reproductive process
 is_a: GO:0071695 ! anatomical structure maturation
-relationship: part_of GO:0007275 ! multicellular organismal development
-relationship: part_of GO:0010154 ! fruit development
-
-[Term]
-id: GO:0009838
-name: abscission
-is_a: GO:0032502 ! developmental process
-relationship: part_of GO:0007275 ! multicellular organismal development
+relationship: BFO:0000050 GO:0007275 ! multicellular organism development
+relationship: BFO:0000050 GO:0010154 ! fruit development
 
 [Term]
 id: GO:0009888
 name: tissue development
+def: "The process whose specific outcome is the progression of a tissue over time, from its formation to the mature structure." [ISBN:0471245208]
+synonym: "histogenesis" EXACT []
+synonym: "histogenesis and organogenesis" BROAD []
 is_a: GO:0048856 ! anatomical structure development
 
 [Term]
 id: GO:0009908
 name: flower development
+def: "The process whose specific outcome is the progression of the flower over time, from its formation to the mature structure. The flower is the reproductive structure in a plant, and its development begins with the transition of the vegetative or inflorescence meristem into a floral meristem." [GOC:tb, ISBN:0879015322]
 is_a: GO:0090567 ! reproductive shoot system development
 
 [Term]
 id: GO:0009987
 name: cellular process
+def: "Any process that is carried out at the cellular level, but not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." [GOC:go_curators, GOC:isa_complete]
+synonym: "cell growth and/or maintenance" NARROW []
+synonym: "cell physiology" EXACT []
+synonym: "cellular physiological process" EXACT []
 is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0010118
 name: stomatal movement
+def: "The process of opening or closing of stomata, which is directly related to the stomatal conductance (measuring rate of passage of either water vapor or carbon dioxide (CO2) through stomata)." [GOC:sm]
 is_a: GO:0044763 ! single-organism cellular process
 
 [Term]
 id: GO:0010148
 name: transpiration
+def: "Release of water by the plant into the air as water vapor mainly through leaves." [GOC:sm, ISBN:0879015322]
 is_a: GO:0006833 ! water transport
 
 [Term]
 id: GO:0010150
 name: leaf senescence
+def: "The process that occurs in a leaf near the end of its active life that is associated with the dismantling of cell components and membranes, loss of functional chloroplasts, and an overall decline in metabolism." [ISBN:0387987819]
 is_a: GO:0010260 ! organ senescence
-relationship: part_of GO:0048366 ! leaf development
+relationship: BFO:0000050 GO:0048366 ! leaf development
 
 [Term]
 id: GO:0010154
 name: fruit development
+def: "The process whose specific outcome is the progression of the fruit over time, from its formation to the mature structure. The fruit is a reproductive body of a seed plant." [GOC:sm]
 is_a: GO:0048608 ! reproductive structure development
 
 [Term]
 id: GO:0010229
 name: inflorescence development
+def: "The process whose specific outcome is the progression of an inflorescence over time, from its formation to the mature structure." [GOC:tb]
 is_a: GO:0090567 ! reproductive shoot system development
 
 [Term]
 id: GO:0010260
 name: organ senescence
+def: "The process that occurs in an organ near the end of its active life that is associated with the dismantling of cell components and membranes, and an overall decline in metabolism. An example of this process is found in Arabidopsis thaliana." [GOC:mtg_sensu, GOC:sm]
 is_a: GO:0007568 ! aging
-relationship: part_of GO:0048513 ! organ development
+relationship: BFO:0000050 GO:0048513 ! animal organ development
 
 [Term]
-id: GO:0015930
-name: glutamate synthase activity
-is_a: GO:0016638 ! oxidoreductase activity, acting on the CH-NH2 group of donors
-
-[Term]
-id: GO:0016040
-name: glutamate synthase (NADH) activity
-is_a: GO:0045181 ! glutamate synthase activity, NAD(P)H as acceptor
+id: GO:0016043
+name: cellular component organization
+def: "A process that results in the assembly, arrangement of constituent parts, or disassembly of a cellular component." [GOC:ai, GOC:jl, GOC:mah]
+synonym: "cell organisation" EXACT []
+synonym: "cell organization and biogenesis" RELATED [GOC:mah]
+synonym: "cellular component organisation at cellular level" EXACT [GOC:mah]
+synonym: "cellular component organisation in other organism" EXACT [GOC:mah]
+synonym: "cellular component organization at cellular level" EXACT []
+synonym: "cellular component organization in other organism" EXACT []
+is_a: GO:0009987 ! cellular process
+is_a: GO:0071840 ! cellular component organization or biogenesis
 
 [Term]
 id: GO:0016157
 name: sucrose synthase activity
+def: "Catalysis of the reaction: UDP-glucose + D-fructose = UDP + sucrose." [EC:2.4.1.13]
+synonym: "NDP-glucose:D-fructose 2-alpha-D-glucosyltransferase activity" EXACT [EC:2.4.1.13]
+synonym: "sucrose synthetase activity" EXACT [EC:2.4.1.13]
+synonym: "sucrose-UDP glucosyltransferase activity" EXACT [EC:2.4.1.13]
+synonym: "sucrose-uridine diphosphate glucosyltransferase activity" EXACT [EC:2.4.1.13]
+synonym: "UDP-glucose-fructose glucosyltransferase activity" EXACT [EC:2.4.1.13]
+synonym: "UDPglucose-fructose glucosyltransferase activity" EXACT [EC:2.4.1.13]
+synonym: "uridine diphosphoglucose-fructose glucosyltransferase activity" EXACT [EC:2.4.1.13]
 is_a: GO:0035251 ! UDP-glucosyltransferase activity
 
 [Term]
 id: GO:0016160
 name: amylase activity
+def: "Catalysis of the hydrolysis of amylose or an amylose derivative." [GOC:ai]
 is_a: GO:0004553 ! hydrolase activity, hydrolyzing O-glycosyl compounds
-
-[Term]
-id: GO:0016161
-name: beta-amylase activity
-is_a: GO:0016160 ! amylase activity
-
-[Term]
-id: GO:0016209
-name: antioxidant activity
-is_a: GO:0003674 ! molecular_function
-
-[Term]
-id: GO:0016211
-name: ammonia ligase activity
-is_a: GO:0016880 ! acid-ammonia (or amide) ligase activity
 
 [Term]
 id: GO:0016311
 name: dephosphorylation
+def: "The process of removing one or more phosphoric (ester or anhydride) residues from a molecule." [ISBN:0198506732]
 is_a: GO:0006796 ! phosphate-containing compound metabolic process
-
-[Term]
-id: GO:0016491
-name: oxidoreductase activity
-is_a: GO:0003824 ! catalytic activity
-relationship: part_of GO:0055114 ! oxidation-reduction process
-
-[Term]
-id: GO:0016638
-name: oxidoreductase activity, acting on the CH-NH2 group of donors
-is_a: GO:0016491 ! oxidoreductase activity
-
-[Term]
-id: GO:0016639
-name: oxidoreductase activity, acting on the CH-NH2 group of donors, NAD or NADP as acceptor
-is_a: GO:0016638 ! oxidoreductase activity, acting on the CH-NH2 group of donors
-
-[Term]
-id: GO:0016684
-name: oxidoreductase activity, acting on peroxide as acceptor
-is_a: GO:0016491 ! oxidoreductase activity
 
 [Term]
 id: GO:0016740
 name: transferase activity
+def: "Catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2." [ISBN:0198506732]
 is_a: GO:0003824 ! catalytic activity
 
 [Term]
 id: GO:0016757
 name: transferase activity, transferring glycosyl groups
+def: "Catalysis of the transfer of a glycosyl group from one compound (donor) to another (acceptor)." [GOC:jl, ISBN:0198506732]
+synonym: "glycosyltransferase activity" EXACT []
+synonym: "transferase activity, transferring other glycosyl groups" NARROW []
+synonym: "transglycosidase activity" EXACT []
+synonym: "transglycosylase activity" EXACT []
 is_a: GO:0016740 ! transferase activity
 
 [Term]
 id: GO:0016758
 name: transferase activity, transferring hexosyl groups
+def: "Catalysis of the transfer of a hexosyl group from one compound (donor) to another (acceptor)." [GOC:jl]
+synonym: "hexosyltransferase activity" EXACT []
 is_a: GO:0016757 ! transferase activity, transferring glycosyl groups
 
 [Term]
 id: GO:0016772
 name: transferase activity, transferring phosphorus-containing groups
+def: "Catalysis of the transfer of a phosphorus-containing group from one compound (donor) to another (acceptor)." [GOC:jl, ISBN:0198506732]
 is_a: GO:0016740 ! transferase activity
 
 [Term]
 id: GO:0016779
 name: nucleotidyltransferase activity
+def: "Catalysis of the transfer of a nucleotidyl group to a reactant." [ISBN:0198506732]
 is_a: GO:0016772 ! transferase activity, transferring phosphorus-containing groups
 
 [Term]
 id: GO:0016787
 name: hydrolase activity
+def: "Catalysis of the hydrolysis of various bonds, e.g. C-O, C-N, C-C, phosphoric anhydride bonds, etc. Hydrolase is the systematic name for any enzyme of EC class 3." [ISBN:0198506732]
 is_a: GO:0003824 ! catalytic activity
 
 [Term]
 id: GO:0016788
 name: hydrolase activity, acting on ester bonds
+def: "Catalysis of the hydrolysis of any ester bond." [GOC:jl]
+synonym: "esterase activity" EXACT []
 is_a: GO:0016787 ! hydrolase activity
 
 [Term]
 id: GO:0016791
 name: phosphatase activity
+def: "Catalysis of the hydrolysis of phosphoric monoesters, releasing inorganic phosphate." [EC:3.1.3, EC:3.1.3.41, GOC:curators, GOC:pg]
+synonym: "4-nitrophenylphosphatase activity" NARROW []
+synonym: "4-nitrophenylphosphate phosphohydrolase activity" NARROW [EC:3.1.3.41]
+synonym: "ecto-p-nitrophenyl phosphatase activity" NARROW [EC:3.1.3.41]
+synonym: "K-pNPPase activity" NARROW [EC:3.1.3.41]
+synonym: "nitrophenyl phosphatase activity" NARROW [EC:3.1.3.41]
+synonym: "NPPase activity" NARROW [EC:3.1.3.41]
+synonym: "p-nitrophenylphosphatase activity" NARROW [EC:3.1.3.41]
+synonym: "p-nitrophenylphosphate phosphohydrolase activity" NARROW [EC:3.1.3.41]
+synonym: "para-nitrophenyl phosphatase activity" NARROW [EC:3.1.3.41]
+synonym: "phosphatase" RELATED []
+synonym: "phosphoric monoester hydrolase activity" EXACT []
+synonym: "PNPPase activity" NARROW [EC:3.1.3.41]
 is_a: GO:0042578 ! phosphoric ester hydrolase activity
-relationship: part_of GO:0016311 ! dephosphorylation
+relationship: BFO:0000050 GO:0016311 ! dephosphorylation
 
 [Term]
 id: GO:0016798
 name: hydrolase activity, acting on glycosyl bonds
+def: "Catalysis of the hydrolysis of any glycosyl bond." [GOC:jl]
+synonym: "glycosidase activity" EXACT []
+synonym: "glycosylase" NARROW []
+synonym: "N-glycosylase" NARROW []
 is_a: GO:0016787 ! hydrolase activity
-
-[Term]
-id: GO:0016853
-name: isomerase activity
-is_a: GO:0003824 ! catalytic activity
-
-[Term]
-id: GO:0016866
-name: intramolecular transferase activity
-is_a: GO:0016853 ! isomerase activity
-
-[Term]
-id: GO:0016868
-name: intramolecular transferase activity, phosphotransferases
-is_a: GO:0016866 ! intramolecular transferase activity
-
-[Term]
-id: GO:0016874
-name: ligase activity
-is_a: GO:0003824 ! catalytic activity
-
-[Term]
-id: GO:0016879
-name: ligase activity, forming carbon-nitrogen bonds
-is_a: GO:0016874 ! ligase activity
-
-[Term]
-id: GO:0016880
-name: acid-ammonia (or amide) ligase activity
-is_a: GO:0016879 ! ligase activity, forming carbon-nitrogen bonds
 
 [Term]
 id: GO:0019438
 name: aromatic compound biosynthetic process
+def: "The chemical reactions and pathways resulting in the formation of aromatic compounds, any substance containing an aromatic carbon ring." [GOC:ai]
+synonym: "aromatic compound anabolism" EXACT []
+synonym: "aromatic compound biosynthesis" EXACT []
+synonym: "aromatic compound formation" EXACT []
+synonym: "aromatic compound synthesis" EXACT []
+synonym: "aromatic hydrocarbon biosynthesis" NARROW []
+synonym: "aromatic hydrocarbon biosynthetic process" NARROW []
 is_a: GO:0006725 ! cellular aromatic compound metabolic process
 is_a: GO:0044249 ! cellular biosynthetic process
 
 [Term]
 id: GO:0019748
 name: secondary metabolic process
+def: "The chemical reactions and pathways resulting in many of the chemical changes of compounds that are not necessarily required for growth and maintenance of cells, and are often unique to a taxon. In multicellular organisms secondary metabolism is generally carried out in specific cell types, and may be useful for the organism as a whole. In unicellular organisms, secondary metabolism is often used for the production of antibiotics or for the utilization and acquisition of unusual nutrients." [GOC:go_curators]
+synonym: "secondary metabolism" EXACT []
+synonym: "secondary metabolite metabolic process" EXACT []
+synonym: "secondary metabolite metabolism" EXACT []
 is_a: GO:0044710 ! single-organism metabolic process
 
 [Term]
 id: GO:0021700
 name: developmental maturation
+def: "A developmental process, independent of morphogenetic (shape) change, that is required for an anatomical structure, cell or cellular component to attain its fully functional state." [GO_REF:0000021, GOC:cls, GOC:dgh, GOC:dph, GOC:jid, GOC:mtg_15jun06]
 is_a: GO:0044767 ! single-organism developmental process
 
 [Term]
 id: GO:0022402
 name: cell cycle process
-is_a: GO:0044763 ! single-organism cellular process
+def: "The cellular process that ensures successive accurate and complete genome replication and chromosome segregation." [GOC:isa_complete, GOC:mtg_cell_cycle]
+is_a: GO:0009987 ! cellular process
 intersection_of: GO:0009987 ! cellular process
-intersection_of: part_of GO:0007049 ! cell cycle
-relationship: part_of GO:0007049 ! cell cycle
+intersection_of: BFO:0000050 GO:0007049 ! cell cycle
+relationship: BFO:0000050 GO:0007049 ! cell cycle
 
 [Term]
 id: GO:0022414
 name: reproductive process
+def: "A biological process that directly contributes to the process of producing new individuals by one or two organisms. The new individuals inherit some proportion of their genetic material from the parent or parents." [GOC:dph, GOC:isa_complete]
 is_a: GO:0008150 ! biological_process
+intersection_of: GO:0008150 ! biological_process
+intersection_of: BFO:0000050 GO:0000003 ! reproduction
+relationship: BFO:0000050 GO:0000003 ! reproduction
 
 [Term]
 id: GO:0022622
 name: root system development
+def: "The process whose specific outcome is the progression of the root system over time, from its formation to the mature structure." [GOC:isa_complete]
 is_a: GO:0048731 ! system development
 
 [Term]
 id: GO:0032501
 name: multicellular organismal process
+def: "Any biological process, occurring at the level of a multicellular organism, pertinent to its function." [GOC:curators, GOC:dph, GOC:isa_complete, GOC:tb]
+synonym: "organismal physiological process" EXACT []
 is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0032502
 name: developmental process
+def: "A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition." [GOC:isa_complete]
+synonym: "development" NARROW []
 is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0035251
 name: UDP-glucosyltransferase activity
+def: "Catalysis of the transfer of a glucosyl group from UDP-glucose to an acceptor molecule." [http://www.chem.qmul.ac.uk/iubmb/enzyme/reaction/polysacc/UDPsugar.html]
 is_a: GO:0008194 ! UDP-glycosyltransferase activity
 is_a: GO:0046527 ! glucosyltransferase activity
 
 [Term]
 id: GO:0042044
 name: fluid transport
+def: "The directed movement of substances that are in liquid form in normal living conditions into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 is_a: GO:0044765 ! single-organism transport
 
 [Term]
 id: GO:0042578
 name: phosphoric ester hydrolase activity
+def: "Catalysis of the reaction: RPO-R' + H2O = RPOOH + R'H. This reaction is the hydrolysis of any phosphoric ester bond, any ester formed from orthophosphoric acid, O=P(OH)3." [GOC:jl]
 is_a: GO:0016788 ! hydrolase activity, acting on ester bonds
 
 [Term]
 id: GO:0043036
 name: starch grain
+def: "Plant storage body for amylose and amylopectin, 1-100um in diameter. Also contains small amounts of enzymes, amino acids, lipids and nucleic acids. The shape of the grain varies widely amongst species, but is often spherical or disk-shaped." [GOC:jl, PMID:11217978]
+synonym: "starch granule" EXACT []
 is_a: GO:0044435 ! plastid part
 
 [Term]
 id: GO:0043226
 name: organelle
+def: "Organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, and prokaryotic structures such as anammoxosomes and pirellulosomes. Excludes the plasma membrane." [GOC:go_curators]
 is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: GO:0043227
 name: membrane-bounded organelle
+def: "Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane." [GOC:go_curators]
+synonym: "membrane-enclosed organelle" EXACT []
 is_a: GO:0043226 ! organelle
 
 [Term]
 id: GO:0043229
 name: intracellular organelle
+def: "Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:go_curators]
 is_a: GO:0043226 ! organelle
 is_a: GO:0044424 ! intracellular part
 
 [Term]
 id: GO:0043231
 name: intracellular membrane-bounded organelle
+def: "Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane and occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane." [GOC:go_curators]
+synonym: "intracellular membrane-enclosed organelle" EXACT []
 is_a: GO:0043227 ! membrane-bounded organelle
 is_a: GO:0043229 ! intracellular organelle
 
 [Term]
 id: GO:0044237
 name: cellular metabolic process
+def: "The chemical reactions and pathways by which individual cells transform chemical substances." [GOC:go_curators]
+synonym: "cellular metabolism" EXACT []
+synonym: "intermediary metabolism" RELATED [GOC:mah]
 is_a: GO:0008152 ! metabolic process
 is_a: GO:0009987 ! cellular process
 
 [Term]
 id: GO:0044249
 name: cellular biosynthetic process
+def: "The chemical reactions and pathways resulting in the formation of substances, carried out by individual cells." [GOC:jl]
+synonym: "cellular anabolism" EXACT []
+synonym: "cellular biosynthesis" EXACT []
+synonym: "cellular formation" EXACT []
+synonym: "cellular synthesis" EXACT []
 is_a: GO:0009058 ! biosynthetic process
 is_a: GO:0044237 ! cellular metabolic process
 
 [Term]
 id: GO:0044422
 name: organelle part
+def: "Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane." [GOC:jl]
 is_a: GO:0005575 ! cellular_component
 intersection_of: GO:0005575 ! cellular_component
-intersection_of: part_of GO:0043226 ! organelle
-relationship: part_of GO:0043226 ! organelle
+intersection_of: BFO:0000050 GO:0043226 ! organelle
+relationship: BFO:0000050 GO:0043226 ! organelle
 
 [Term]
 id: GO:0044424
 name: intracellular part
+def: "Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [GOC:jl]
 is_a: GO:0044464 ! cell part
 intersection_of: GO:0005575 ! cellular_component
-intersection_of: part_of GO:0005622 ! intracellular
-relationship: part_of GO:0005622 ! intracellular
+intersection_of: BFO:0000050 GO:0005622 ! intracellular
+relationship: BFO:0000050 GO:0005622 ! intracellular
 
 [Term]
 id: GO:0044435
 name: plastid part
+def: "Any constituent part of a plastid, a member of a family of organelles found in the cytoplasm of plants and some protists, which are membrane-bounded and contain DNA. Plant plastids develop from a common type, the proplastid." [GOC:jl]
 is_a: GO:0044444 ! cytoplasmic part
 is_a: GO:0044446 ! intracellular organelle part
 intersection_of: GO:0005575 ! cellular_component
-intersection_of: part_of GO:0009536 ! plastid
-relationship: part_of GO:0009536 ! plastid
+intersection_of: BFO:0000050 GO:0009536 ! plastid
+relationship: BFO:0000050 GO:0009536 ! plastid
 
 [Term]
 id: GO:0044444
 name: cytoplasmic part
+def: "Any constituent part of the cytoplasm, all of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures." [GOC:jl]
+synonym: "cytoplasm component" EXACT []
 is_a: GO:0044424 ! intracellular part
 intersection_of: GO:0005575 ! cellular_component
-intersection_of: part_of GO:0005737 ! cytoplasm
-relationship: part_of GO:0005737 ! cytoplasm
+intersection_of: BFO:0000050 GO:0005737 ! cytoplasm
+relationship: BFO:0000050 GO:0005737 ! cytoplasm
 
 [Term]
 id: GO:0044446
 name: intracellular organelle part
+def: "A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane." [GOC:jl]
 is_a: GO:0044422 ! organelle part
 is_a: GO:0044424 ! intracellular part
-relationship: part_of GO:0043229 ! intracellular organelle
+relationship: BFO:0000050 GO:0043229 ! intracellular organelle
 
 [Term]
 id: GO:0044464
 name: cell part
+def: "Any constituent part of a cell, the basic structural and functional unit of all organisms." [GOC:jl]
+synonym: "cellular subcomponent" EXACT [NIF_Subcellular:sao628508602]
+synonym: "protoplast" RELATED [GOC:mah]
 is_a: GO:0005575 ! cellular_component
 intersection_of: GO:0005575 ! cellular_component
-intersection_of: part_of GO:0005623 ! cell
-relationship: part_of GO:0005623 ! cell
+intersection_of: BFO:0000050 GO:0005623 ! cell
+relationship: BFO:0000050 GO:0005623 ! cell
 
 [Term]
 id: GO:0044550
 name: secondary metabolite biosynthetic process
+def: "The chemical reactions and pathways resulting in the formation of secondary metabolites, the compounds that are not necessarily required for growth and maintenance of cells, and are often unique to a taxon." [GOC:jl]
+synonym: "secondary metabolite biosynthesis" EXACT []
 is_a: GO:0019748 ! secondary metabolic process
 is_a: GO:0044711 ! single-organism biosynthetic process
 
 [Term]
 id: GO:0044699
 name: single-organism process
+def: "A biological process that involves only one organism." [GOC:jl]
+synonym: "single organism process" EXACT []
 is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0044702
 name: single organism reproductive process
+def: "A biological process that directly contributes to the process of producing new individuals, involving a single organism." [GOC:jl]
 is_a: GO:0022414 ! reproductive process
 is_a: GO:0044699 ! single-organism process
 
 [Term]
 id: GO:0044707
 name: single-multicellular organism process
+def: "A biological process occurring within a single, multicellular organism." [GOC:jl]
 is_a: GO:0032501 ! multicellular organismal process
 is_a: GO:0044699 ! single-organism process
 
 [Term]
 id: GO:0044710
 name: single-organism metabolic process
+def: "A metabolic process - chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances - which involves a single organism." [GOC:jl]
 is_a: GO:0008152 ! metabolic process
 is_a: GO:0044699 ! single-organism process
 
 [Term]
 id: GO:0044711
 name: single-organism biosynthetic process
+def: "A biosynthetic process - chemical reactions and pathways resulting in the formation of substances - involving a single organism." [GOC:jl]
 is_a: GO:0009058 ! biosynthetic process
 is_a: GO:0044710 ! single-organism metabolic process
 
 [Term]
 id: GO:0044763
 name: single-organism cellular process
+def: "Any process that is carried out at the cellular level, occurring within a single organism." [GOC:jl]
 is_a: GO:0009987 ! cellular process
 is_a: GO:0044699 ! single-organism process
 
 [Term]
 id: GO:0044765
 name: single-organism transport
+def: "The directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore, involving a single organism." [GOC:jl]
 is_a: GO:0006810 ! transport
 is_a: GO:1902578 ! single-organism localization
 
 [Term]
 id: GO:0044767
 name: single-organism developmental process
+def: "A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition, involving only one organism." [GOC:jl]
 is_a: GO:0032502 ! developmental process
 is_a: GO:0044699 ! single-organism process
 
 [Term]
-id: GO:0045181
-name: glutamate synthase activity, NAD(P)H as acceptor
-is_a: GO:0015930 ! glutamate synthase activity
-is_a: GO:0016639 ! oxidoreductase activity, acting on the CH-NH2 group of donors, NAD or NADP as acceptor
-
-[Term]
-id: GO:0046524
-name: sucrose-phosphate synthase activity
-is_a: GO:0035251 ! UDP-glucosyltransferase activity
-
-[Term]
 id: GO:0046527
 name: glucosyltransferase activity
+def: "Catalysis of the transfer of a glucosyl group to an acceptor molecule, typically another carbohydrate or a lipid." [ISBN:0198506732]
 is_a: GO:0016758 ! transferase activity, transferring hexosyl groups
+
+[Term]
+id: GO:0048285
+name: organelle fission
+def: "The creation of two or more organelles by division of one organelle." [GOC:jid]
+is_a: GO:0006996 ! organelle organization
 
 [Term]
 id: GO:0048364
 name: root development
+def: "The process whose specific outcome is the progression of the root over time, from its formation to the mature structure. The root is the water- and mineral-absorbing part of a plant which is usually underground, does not bear leaves, tends to grow downwards and is typically derived from the radicle of the embryo." [GOC:jid, PO:0009005]
 is_a: GO:0044767 ! single-organism developmental process
-is_a: GO:0048513 ! organ development
-relationship: part_of GO:0022622 ! root system development
+is_a: GO:0099402 ! plant organ development
+relationship: BFO:0000050 GO:0022622 ! root system development
 
 [Term]
 id: GO:0048366
 name: leaf development
+def: "The process whose specific outcome is the progression of the leaf over time, from its formation to the mature structure." [GOC:go_curators]
 is_a: GO:0048827 ! phyllome development
 
 [Term]
 id: GO:0048367
 name: shoot system development
+def: "The process whose specific outcome is the progression of the shoot system over time, from its formation to the mature structure." [GOC:go_curators]
+synonym: "shoot development" EXACT []
 is_a: GO:0044767 ! single-organism developmental process
 is_a: GO:0048731 ! system development
 
 [Term]
 id: GO:0048437
 name: floral organ development
+def: "The process whose specific outcome is the progression of the floral organ over time, from its formation to the mature structure." [GOC:go_curators, GOC:PO_curators, PO:0025395]
 is_a: GO:0003006 ! developmental process involved in reproduction
-is_a: GO:0044702 ! single organism reproductive process
-is_a: GO:0048569 ! post-embryonic organ development
-relationship: part_of GO:0009908 ! flower development
+is_a: GO:0099402 ! plant organ development
+relationship: BFO:0000050 GO:0009908 ! flower development
 
 [Term]
 id: GO:0048438
 name: floral whorl development
+def: "The process whose specific outcome is the progression of a floral whorl over time, from its formation to the mature structure. A floral whorl is a circular arrangement of parts of a flower arising from a stem of a plant." [GOC:dph, GOC:go_curators, GOC:PO_curators, GOC:tb, PO:0025023]
+synonym: "collective phyllome structure development" BROAD [GOC:PO_curators, PO:0025023]
 is_a: GO:0003006 ! developmental process involved in reproduction
 is_a: GO:0044702 ! single organism reproductive process
 is_a: GO:0044767 ! single-organism developmental process
 is_a: GO:0048856 ! anatomical structure development
-relationship: part_of GO:0009908 ! flower development
+relationship: BFO:0000050 GO:0009908 ! flower development
 
 [Term]
 id: GO:0048467
 name: gynoecium development
+def: "The process whose specific outcome is the progression of the gynoecium over time, from its formation to the mature structure. The gynoecium is the collective name for the carpels of a flower." [GOC:go_curators, PO:0008062]
+synonym: "pistil development" EXACT []
 is_a: GO:0048438 ! floral whorl development
 
 [Term]
 id: GO:0048513
-name: organ development
+name: animal organ development
+def: "Development of a tissue or tissues that work together to perform a specific function or functions. Development pertains to the process whose specific outcome is the progression of a structure over time, from its formation to the mature structure. Organs are commonly observed as visibly distinct structures, but may also exist as loosely associated clusters of cells that work together to perform a specific function or functions." [GOC:dph, GOC:jid]
+synonym: "development of an organ" EXACT []
+synonym: "organogenesis" EXACT []
 is_a: GO:0048856 ! anatomical structure development
-relationship: part_of GO:0048731 ! system development
-
-[Term]
-id: GO:0048569
-name: post-embryonic organ development
-is_a: GO:0044767 ! single-organism developmental process
-is_a: GO:0048513 ! organ development
+relationship: BFO:0000050 GO:0048731 ! system development
 
 [Term]
 id: GO:0048608
 name: reproductive structure development
+def: "The reproductive developmental process whose specific outcome is the progression of structures that will be used in the process of creating new individuals from one or more parents, from their formation to the mature structures." [GOC:dph, GOC:isa_complete, GOC:jid]
 is_a: GO:0003006 ! developmental process involved in reproduction
 is_a: GO:0048856 ! anatomical structure development
-relationship: part_of GO:0061458 ! reproductive system development
+relationship: BFO:0000050 GO:0061458 ! reproductive system development
 
 [Term]
 id: GO:0048731
 name: system development
+def: "The process whose specific outcome is the progression of an organismal system over time, from its formation to the mature structure. A system is a regularly interacting or interdependent group of organs or tissues that work together to carry out a given biological process." [GOC:dph, GOC:jid]
 is_a: GO:0048856 ! anatomical structure development
-relationship: part_of GO:0007275 ! multicellular organismal development
+relationship: BFO:0000050 GO:0007275 ! multicellular organism development
 
 [Term]
 id: GO:0048827
 name: phyllome development
-is_a: GO:0048856 ! anatomical structure development
-relationship: part_of GO:0048367 ! shoot system development
+def: "The process whose specific outcome is the progression of a phyllome over time, from its formation to the mature structure. A phyllome is a collective term for all the different types of leaves appearing on plants." [GOC:devbiol, GOC:tb, PO:0006001]
+is_a: GO:0099402 ! plant organ development
+relationship: BFO:0000050 GO:0048367 ! shoot system development
 
 [Term]
 id: GO:0048856
 name: anatomical structure development
+def: "The biological process whose specific outcome is the progression of an anatomical structure from an initial condition to its mature state. This process begins with the formation of the structure and ends with the mature structure, whatever form that may be including its natural destruction. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome." [GO_REF:0000021, GOC:mtg_15jun06]
+synonym: "development of an anatomical structure" EXACT []
 is_a: GO:0032502 ! developmental process
 
 [Term]
 id: GO:0050896
 name: response to stimulus
+def: "Any process that results in a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus. The process begins with detection of the stimulus and ends with a change in state or activity or the cell or organism." [GOC:ai, GOC:bf]
+synonym: "physiological response to stimulus" EXACT []
 is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0051179
 name: localization
+def: "Any process in which a cell, a substance, or a cellular entity, such as a protein complex or organelle, is transported, tethered to or otherwise maintained in a specific location. In the case of substances, localization may also be achieved via selective degradation." [GOC:ai, GOC:dos]
+synonym: "establishment and maintenance of cellular component location" NARROW []
+synonym: "establishment and maintenance of localization" EXACT []
+synonym: "establishment and maintenance of position" EXACT []
+synonym: "establishment and maintenance of substance location" NARROW []
+synonym: "establishment and maintenance of substrate location" NARROW []
+synonym: "localisation" EXACT [GOC:mah]
 is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0051234
 name: establishment of localization
+def: "Any process that localizes a substance or cellular component. This may occur via movement, tethering or selective degradation." [GOC:ai, GOC:dos]
+synonym: "establishment of localisation" EXACT [GOC:mah]
 is_a: GO:0051179 ! localization
 
 [Term]
 id: GO:0051321
 name: meiotic cell cycle
+def: "Progression through the phases of the meiotic cell cycle, in which canonically a cell replicates to produce four offspring with half the chromosomal content of the progenitor cell via two nuclear divisions." [GOC:ai]
+synonym: "meiosis" BROAD []
 is_a: GO:0007049 ! cell cycle
-relationship: part_of GO:0000003 ! reproduction
+is_a: GO:0044702 ! single organism reproductive process
+intersection_of: GO:0007049 ! cell cycle
+intersection_of: BFO:0000051 GO:0007126 ! meiotic nuclear division
+relationship: BFO:0000050 GO:0000003 ! reproduction
+relationship: BFO:0000051 GO:0007126 ! meiotic nuclear division
 
 [Term]
 id: GO:0052736
 name: beta-glucanase activity
+def: "Catalysis of the hydrolysis of linkages in beta-D-glucans; beta-glucans are polysaccharides of D-glucose monomers linked by beta-glycosidic bonds." [Wikipedia:Beta-glucan]
+synonym: "beta-D-glucanase activity" EXACT []
 is_a: GO:0004553 ! hydrolase activity, hydrolyzing O-glycosyl compounds
-
-[Term]
-id: GO:0055114
-name: oxidation-reduction process
-is_a: GO:0044710 ! single-organism metabolic process
-
-[Term]
-id: GO:0060866
-name: leaf abscission
-is_a: GO:0009838 ! abscission
 
 [Term]
 id: GO:0061458
 name: reproductive system development
+def: "The progression of the reproductive system over time from its formation to the mature structure. The reproductive system consists of the organs that function in reproduction." [GOC:dph]
 is_a: GO:0048731 ! system development
 
 [Term]
 id: GO:0070566
 name: adenylyltransferase activity
+def: "Catalysis of the transfer of an adenylyl group to an acceptor." [GOC:mah]
 is_a: GO:0016779 ! nucleotidyltransferase activity
 
 [Term]
 id: GO:0071695
 name: anatomical structure maturation
+def: "A developmental process, independent of morphogenetic (shape) change, that is required for an anatomical structure to attain its fully functional state." [GOC:mah]
 is_a: GO:0021700 ! developmental maturation
-relationship: part_of GO:0048856 ! anatomical structure development
+relationship: BFO:0000050 GO:0048856 ! anatomical structure development
 
 [Term]
 id: GO:0071704
 name: organic substance metabolic process
+def: "The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon." [CHEBI:50860, GOC:mah]
+synonym: "organic molecular entity metabolic process" EXACT []
+synonym: "organic molecular entity metabolism" EXACT []
+synonym: "organic substance metabolism" EXACT []
 is_a: GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0071840
+name: cellular component organization or biogenesis
+def: "A process that results in the biosynthesis of constituent macromolecules, assembly, arrangement of constituent parts, or disassembly of a cellular component." [GOC:mah]
+synonym: "cellular component organisation or biogenesis" EXACT [GOC:mah]
+synonym: "cellular component organisation or biogenesis at cellular level" EXACT [GOC:mah]
+synonym: "cellular component organization or biogenesis at cellular level" EXACT []
+is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0090332
 name: stomatal closure
+def: "The process of closing of stomata, pores in the epidermis of leaves and stems bordered by two guard cells and serving in gas exchange." [GOC:tb]
 is_a: GO:0010118 ! stomatal movement
 
 [Term]
 id: GO:0090567
 name: reproductive shoot system development
+def: "The process whose specific outcome is the progression of a reproductive shoot system over time, from its formation to the mature structure." [GOC:pj]
 is_a: GO:0009791 ! post-embryonic development
 is_a: GO:0044702 ! single organism reproductive process
 is_a: GO:0048367 ! shoot system development
 is_a: GO:0048608 ! reproductive structure development
 
 [Term]
+id: GO:0099402
+name: plant organ development
+def: "Development of a plant organ, a multi-tissue plant structure that forms a functional unit." [GOC:dos]
+synonym: "development of a plant organ" EXACT []
+is_a: GO:0048856 ! anatomical structure development
+relationship: BFO:0000050 GO:0048731 ! system development
+
+[Term]
+id: GO:0099568
+name: cytoplasmic region
+def: "Any (proper) part of the cytoplasm of a single cell of sufficient size to still be considered cytoplasm\"" [GOC:dos]
+is_a: GO:0005737 ! cytoplasm
+is_a: GO:0044444 ! cytoplasmic part
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: BFO:0000050 GO:0005737 ! cytoplasm
+relationship: BFO:0000050 GO:0005737 ! cytoplasm
+
+[Term]
 id: GO:1901360
 name: organic cyclic compound metabolic process
+def: "The chemical reactions and pathways involving organic cyclic compound." [GOC:TermGenie]
+synonym: "organic cyclic compound metabolism" EXACT [GOC:TermGenie]
 is_a: GO:0071704 ! organic substance metabolic process
 
 [Term]
 id: GO:1901362
 name: organic cyclic compound biosynthetic process
+def: "The chemical reactions and pathways resulting in the formation of organic cyclic compound." [GOC:TermGenie]
+synonym: "organic cyclic compound anabolism" EXACT [GOC:TermGenie]
+synonym: "organic cyclic compound biosynthesis" EXACT [GOC:TermGenie]
+synonym: "organic cyclic compound formation" EXACT [GOC:TermGenie]
+synonym: "organic cyclic compound synthesis" EXACT [GOC:TermGenie]
 is_a: GO:1901360 ! organic cyclic compound metabolic process
 is_a: GO:1901576 ! organic substance biosynthetic process
 
 [Term]
 id: GO:1901576
 name: organic substance biosynthetic process
+def: "The chemical reactions and pathways resulting in the formation of an organic substance, any molecular entity containing carbon." [GOC:pr, GOC:TermGenie]
+synonym: "organic molecular entity anabolism" EXACT [GOC:TermGenie]
+synonym: "organic molecular entity biosynthesis" EXACT [GOC:TermGenie]
+synonym: "organic molecular entity biosynthetic process" EXACT []
+synonym: "organic molecular entity formation" EXACT [GOC:TermGenie]
+synonym: "organic molecular entity synthesis" EXACT [GOC:TermGenie]
+synonym: "organic substance anabolism" EXACT []
+synonym: "organic substance biosynthesis" EXACT []
+synonym: "organic substance formation" EXACT []
+synonym: "organic substance synthesis" EXACT []
 is_a: GO:0009058 ! biosynthetic process
 is_a: GO:0071704 ! organic substance metabolic process
 
 [Term]
 id: GO:1902578
 name: single-organism localization
+def: "A localization which involves only one organism." [GO_REF:0000089, GOC:jl, PMID:1234]
+synonym: "single organism localization" EXACT [GOC:TermGenie]
 is_a: GO:0044699 ! single-organism process
 is_a: GO:0051179 ! localization
 
 [Term]
 id: GO:1903046
 name: meiotic cell cycle process
+def: "A process that is part of the meiotic cell cycle." [GO_REF:0000060, GOC:mtg_cell_cycle, GOC:TermGenie]
 is_a: GO:0022402 ! cell cycle process
+is_a: GO:0022414 ! reproductive process
 intersection_of: GO:0009987 ! cellular process
-intersection_of: part_of GO:0051321 ! meiotic cell cycle
-relationship: part_of GO:0051321 ! meiotic cell cycle
+intersection_of: BFO:0000050 GO:0051321 ! meiotic cell cycle
+disjoint_from: GO:1903047 ! mitotic cell cycle process
+relationship: BFO:0000050 GO:0051321 ! meiotic cell cycle
 
 [Term]
 id: GO:1903047
 name: mitotic cell cycle process
+def: "A process that is part of the mitotic cell cycle." [GO_REF:0000060, GOC:mtg_cell_cycle, GOC:TermGenie]
 is_a: GO:0022402 ! cell cycle process
 intersection_of: GO:0009987 ! cellular process
-intersection_of: part_of GO:0000278 ! mitotic cell cycle
-relationship: part_of GO:0000278 ! mitotic cell cycle
+intersection_of: BFO:0000050 GO:0000278 ! mitotic cell cycle
+relationship: BFO:0000050 GO:0000278 ! mitotic cell cycle
 
 [Typedef]
-id: part_of
-name: part of
-xref: BFO:0000050
+id: BFO:0000050
+is_transitive: true
+inverse_of: BFO:0000051
+
+[Typedef]
+id: BFO:0000051
 is_transitive: true
 

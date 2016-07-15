@@ -1,63 +1,59 @@
-
+OBO=http://purl.obolibrary.org/obo
+ONT=to
+BASE=$(OBO)/$(ONT)
+#SRC=plant-trait-ontology.obo.owl
 SRC=plant-trait-ontology.obo
+RELEASEDIR=.
+ROBOT= robot
+OWLTOOLS= owltools
 
-all: plant-trait-ontology-reasoned.obo to.obo to.owl
+
+all: all_imports $(ONT).owl $(ONT).obo
 test: all
 prepare_release: all
 
-include Makefile-ROBOT
 
-MODS= ro chebi po pato eo go
-all_imports: $(patsubst %, imports/%_import.obo, $(MODS))
+# $(ONT).owl: $(SRC)
+# 	$(ROBOT) merge -i $< reason -r ELK -s true annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
+# $(ONT).obo: $(ONT).owl
+# 	$(ROBOT) convert -i $< -o $(ONT).obo
 
-imports/seed.tsv: $(SRC)
-	./util/dump-referenced-ids.pl $(SRC) > $@.tmp && mv $@.tmp $@
 
-imports/%_mirrored.owl:
-	wget --no-check-certificate $(OBO)/$*.owl -O $@ && touch $@
-.PRECIOUS: imports/%_mirrored.owl
+plant-trait-ontology.obo.owl: $(SRC)
+	$(ROBOT) convert -i $<  -o $@
 
-imports/ro_filtered.owl: imports/ro_mirrored.owl
-	owltools $< --merge-imports-closure --remove-tbox --remove-annotation-assertions -r -l -d --set-ontology-id $(OBO)/$*.owl -o $@
+plant-trait-ontology-reasoned.owl: $(SRC)
+	$(ROBOT) reason -i $< -r ELK -o $@
+plant-trait-ontology-reasoned.obo: plant-trait-ontology-reasoned.owl
+	$(ROBOT) convert -i $< -f OBO -o $@
 
-imports/%_filtered.owl: imports/%_mirrored.owl
-	owltools $< --make-subset-by-properties -f BFO:0000050 --extract-mingraph --set-ontology-id $(OBO)/$*.owl -o $@
-#	./robot filter -T imports/ro_filter.tsv -i $< -o $@
-.PRECIOUS: imports/%_filtered.owl
+target/$(ONT).obo: $(SRC)
+	ontology-release-runner --catalog-xml catalog-v001.xml $< --reasoner elk --simple --skip-format owx --outdir target 
+	#--run-obo-basic-dag-check throws an error
+target/$(ONT).owl: target/$(ONT).obo
 
-imports/%_import.owl: imports/%_filtered.owl robot imports/seed.tsv
-	./robot extract -m BOT -i $< -T imports/seed.tsv \
-	   annotate -O $(OBO)/to/$@ -o $@
-.PRECIOUS: imports/%_filtered.owl
-
-imports/%_import.obo: imports/%_import.owl robot
-	./robot convert -i $< -f OBO -o $@
-
-plant-trait-ontology.obo.owl: plant-trait-ontology.obo robot
-	./robot convert -i $<  -o $@
-
-plant-trait-ontology-reasoned.owl: plant-trait-ontology.obo robot
-	./robot reason -i $< -r ELK -o $@
-plant-trait-ontology-reasoned.obo: plant-trait-ontology-reasoned.owl robot
-	./robot convert -i $< -f OBO -o $@
-
-reasoner-report.txt: plant-trait-ontology.obo
-	owltools --use-catalog $< --run-reasoner -r elk -u > $@.tmp && egrep '(INFERENCE|UNSAT)' $@.tmp > $@
-
-target/to.obo: $(SRC)
-	ontology-release-runner --catalog-xml catalog-v001.xml $< --reasoner elk --simple --skip-format owx --outdir target --run-obo-basic-dag-check
-target/to.owl: target/to.obo
-
-to.obo: target/to.obo
+$(ONT).obo: target/$(ONT).obo
 	cp $< $@
-to.owl: target/to.owl
+$(ONT).owl: target/$(ONT).owl
 	cp $< $@
 
-subsets/to-basic.obo: target/to.obo
-	owltools --use-catalog $< --remove-imports-declarations  --make-subset-by-properties -f // --set-ontology-id $(OBO)/to/subsets/to-basic.owl -o -f obo $@
+IMPORTS = chebi pato eo po go
+IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS))
 
-# REPORTING
-# See: https://github.com/Planteome/plant-trait-ontology/issues/302
-pato-viol.tsv: $(SRC)
-	blip-findall  -i $< -r pato "subclass(X,Y),genus(X,XQ),genus(Y,YQ),\+subclassRT(XQ,YQ)" -select "x(X,Y,XQ,YQ)" -label -no_pred > $@
+# Make this target to regenerate ALL
+all_imports: $(IMPORTS_OWL)
 
+# Use ROBOT, driven entirely by terms lists NOT from source ontology
+imports/%_import.owl: mirror/%.owl imports/%_terms.txt
+	$(ROBOT) extract -i $< -T imports/$*_terms.txt --method BOT -O  $(BASE)/$@ -o $@
+.PRECIOUS: imports/%_import.owl
+
+imports/%_import.obo: imports/%_import.owl
+	$(OWLTOOLS) $(USECAT) $< -o -f obo $@
+
+# clone remote ontology locally, perfoming some excision of relations and annotations
+mirror/%.owl: $(SRC)
+	$(OWLTOOLS) $(OBO)/$*.owl --remove-annotation-assertions -l -s -d --remove-dangling-annotations  -o $@
+.PRECIOUS: mirror/%.owl
+
+release: $(ONT).owl $(ONT).obo
