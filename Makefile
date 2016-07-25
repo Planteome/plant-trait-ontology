@@ -13,8 +13,11 @@ test: all
 prepare_release: all
 
 
-# $(ONT).owl: $(SRC)
-# 	$(ROBOT) merge -i $< reason -r ELK -s true annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
+# $(SRC).owl: $(SRC)
+# 	$(ROBOT) convert -i $<  -o $@
+# $(ONT).owl: $(SRC).owl
+# 	$(ROBOT)  reason -i $< -r ELK relax reduce -r ELK annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
+# 	#$(ROBOT) merge -i $< reason -r ELK -s true annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 # $(ONT).obo: $(ONT).owl
 # 	$(ROBOT) convert -i $< -o $(ONT).obo
 
