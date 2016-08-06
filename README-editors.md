@@ -70,8 +70,8 @@ Finally type
 
 IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
 
- * https://github.com/obophenotype/to/releases
- * https://github.com/obophenotype/to/releases/new
+ * https://github.com/Planteome/plant-trait-ontology/releases/
+ * https://github.com/Planteome/plant-trait-ontology/releases/new
 
 The value of the "Tag version" field MUST be
 
