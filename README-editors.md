@@ -6,6 +6,7 @@ The release files are:
 
  * [to.obo](to.obo)
  * [to.owl](to.owl)
+ * to.basic
 
 These are made using the Makefile (see below)
 
