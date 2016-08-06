@@ -12,33 +12,12 @@ all: all_imports $(ONT).owl $(ONT).obo
 test: all
 prepare_release: all
 
-
-# $(SRC).owl: $(SRC)
-# 	$(ROBOT) convert -i $<  -o $@
-# $(ONT).owl: $(SRC).owl
-# 	$(ROBOT)  reason -i $< -r ELK relax reduce -r ELK annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
-# 	#$(ROBOT) merge -i $< reason -r ELK -s true annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
-# $(ONT).obo: $(ONT).owl
-# 	$(ROBOT) convert -i $< -o $(ONT).obo
+$(ONT).owl: $(SRC)
+	$(ROBOT)  reason -i $< -r ELK relax reduce -r ELK annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
+$(ONT).obo: $(ONT).owl
+	$(ROBOT) convert -i $< -f obo -o $(ONT).obo.tmp && mv $(ONT).obo.tmp $@
 
 
-plant-trait-ontology.obo.owl: $(SRC)
-	$(ROBOT) convert -i $<  -o $@
-
-plant-trait-ontology-reasoned.owl: $(SRC)
-	$(ROBOT) reason -i $< -r ELK -o $@
-plant-trait-ontology-reasoned.obo: plant-trait-ontology-reasoned.owl
-	$(ROBOT) convert -i $< -f OBO -o $@
-
-target/$(ONT).obo: $(SRC)
-	ontology-release-runner --catalog-xml catalog-v001.xml $< --reasoner elk --simple --skip-format owx --outdir target 
-	#--run-obo-basic-dag-check throws an error
-target/$(ONT).owl: target/$(ONT).obo
-
-$(ONT).obo: target/$(ONT).obo
-	cp $< $@
-$(ONT).owl: target/$(ONT).owl
-	cp $< $@
 
 IMPORTS = chebi pato eo po go
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS))
