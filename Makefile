@@ -60,7 +60,7 @@ mirror/%.obo: $(SRC)
 	wget --no-check-certificate $(OBO)/$*.obo -O $@ && touch $@
 .PRECIOUS: mirror/%.obo
 mirror/%.owl: mirror/%.obo
-	$(OWLTOOLS) $< --remove-annotation-assertions -l -s -d --remove-dangling-annotations --set-ontology-id $(OBO)/$*.owl  -o $@
+	$(OWLTOOLS) --no-debug $< --remove-annotation-assertions -l -s -d --remove-dangling-annotations --set-ontology-id $(OBO)/$*.owl  -o $@
 .PRECIOUS: mirror/%.owl
 
 release: $(ONT).owl $(ONT).obo
