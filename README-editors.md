@@ -6,7 +6,7 @@ The release files are:
 
  * [to.obo](to.obo)
  * [to.owl](to.owl)
- * [https://github.com/Planteome/plant-trait-ontology/blob/master/subsets/to-basic.obo](to-basic.obo)
+ * [to-basic.obo](to-basic.obo)
 
 These are made using the Makefile (see below)
 
