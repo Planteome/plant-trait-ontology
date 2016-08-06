@@ -9,7 +9,7 @@ OWLTOOLS= owltools
 
 
 all: all_imports $(ONT).owl $(ONT).obo
-test: all
+test: $(ONT).owl $(ONT).obo
 prepare_release: all
 
 $(ONT).owl: $(SRC)
