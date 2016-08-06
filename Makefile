@@ -8,7 +8,7 @@ ROBOT= robot
 OWLTOOLS= owltools
 
 
-all: all_imports $(ONT).owl $(ONT).obo
+all: all_imports $(ONT).owl $(ONT).obo subsets/$(ONT)-basic.obo
 test: $(ONT).owl $(ONT).obo
 prepare_release: all
 
@@ -17,7 +17,8 @@ $(ONT).owl: $(SRC)
 $(ONT).obo: $(ONT).owl
 	$(ROBOT) convert -i $< -f obo -o $(ONT).obo.tmp && mv $(ONT).obo.tmp $@
 
-
+subsets/$(ONT)-basic.obo: $(ONT).owl
+	owltools --use-catalog $< --remove-imports-declarations --make-subset-by-properties -f BFO:0000050 --remove-dangling --remove-axioms -t EquivalentClasses --set-ontology-id $(OBO)/subsets/$(ONT)-basic.owl -o -f obo $@.tmp && mv $@.tmp $@
 
 IMPORTS = chebi pato eo po go
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS))
@@ -43,3 +44,4 @@ mirror/%.owl: mirror/%.obo
 .PRECIOUS: mirror/%.owl
 
 release: $(ONT).owl $(ONT).obo
+
