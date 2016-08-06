@@ -1425,6 +1425,32 @@ synonym: "Lamé curve" EXACT []
 is_a: PATO:0002006 ! 2-D shape
 
 [Term]
+id: PATO:0002326
+name: angle
+def: "An orientation inhering in a bearer by virtue of the bearer's placement at an angle." [PATOC:GVG]
+is_a: PATO:0000133 ! orientation
+
+[Term]
+id: PATO:0002327
+name: increased angle to
+def: "An angle which is relatively high." [PATOC:GVG]
+is_a: PATO:0001475 ! increased position
+is_a: PATO:0002326 ! angle
+intersection_of: PATO:0002326 ! angle
+intersection_of: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
+id: PATO:0002328
+name: decreased angle to
+def: "An angle which is relatively low." [PATOC:GVG]
+is_a: PATO:0001476 ! decreased position
+is_a: PATO:0002326 ! angle
+intersection_of: PATO:0002326 ! angle
+intersection_of: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+
+[Term]
 id: PATO:0002381
 name: waxiness
 def: "A composition quality inhering in an bearer by virtue of the presence of long chain aliphatic lipids on the surface of an organism." [PATOC:lm]
