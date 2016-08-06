@@ -64,6 +64,10 @@ Commit and push these files.
 
 And type a brief description of the release in the editor window
 
+Finally type
+
+    git push origin master
+
 IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
 
  * https://github.com/obophenotype/to/releases
