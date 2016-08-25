@@ -1257,7 +1257,7 @@ synonym: "APICL" RELATED []
 is_a: TO:0000754 ! cardinal organ part morphology trait
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0006033 ! palea apiculus
-relationship: part_of TO:0000536 ! floret color
+relationship: part_of TO:0000536 ! spikelet floret color
 
 [Term]
 id: TO:0000141
@@ -1269,7 +1269,7 @@ xref: PATO:0000014
 is_a: TO:0002718 ! awn morphology trait
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0025349 ! awn
-relationship: part_of TO:0000536 ! floret color
+relationship: part_of TO:0000536 ! spikelet floret color
 
 [Term]
 id: TO:0000142
@@ -2427,7 +2427,7 @@ xref: PATO:0000014
 is_a: TO:0000079 ! flower bract morphology trait
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009034 ! flower bract
-relationship: part_of TO:0000536 ! floret color
+relationship: part_of TO:0000536 ! spikelet floret color
 
 [Term]
 id: TO:0000265
@@ -2517,8 +2517,8 @@ is_a: TO:0000261 ! insect damage resistance
 
 [Term]
 id: TO:0000274
-name: floret morphology trait
-def: "A flower morphology trait (TO:0000499) which is a quality of a grass floret and its parts." [GR:pj, TO:moorel]
+name: spikelet floret morphology trait
+def: "A flower morphology trait (TO:0000499) which is a quality of a spikelet floret (PO:0009082)." [GR:pj, TO:cooperl, TO:moorel]
 synonym: "floret related trait" RELATED []
 xref: TO_GIT:105
 is_a: TO:0000499 ! flower morphology trait
@@ -3445,6 +3445,7 @@ synonym: "Head morphology trait" NARROW []
 synonym: "inflorescence structure trait" RELATED []
 xref: TO_GIT:92
 xref: TO_GIT:97
+is_a: TO:0000373 ! inflorescence morphology trait
 is_a: TO:0000786 ! reproductive shoot system morphology trait
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: inheres_in PO:0009049 ! inflorescence
@@ -4146,8 +4147,7 @@ def: "A spikelet morphology trait (TO:0000657) which is the average number of sp
 synonym: "number of spikelets per panicle" RELATED []
 synonym: "spikelet number per panicle" RELATED []
 synonym: "SPKNB" RELATED []
-is_a: TO:0000371 ! yield trait
-is_a: TO:0000657 ! spikelet morphology trait
+is_a: TO:0000373 ! inflorescence morphology trait
 intersection_of: PATO:0001555 ! has number of
 intersection_of: inheres_in PO:0009051 ! spikelet
 
@@ -4772,12 +4772,12 @@ intersection_of: inheres_in PO:0020142 ! stem internode
 
 [Term]
 id: TO:0000536
-name: floret color
-def: "A floret morphology trait (TO:0000274) which is the color of the floret." [GR:pj]
+name: spikelet floret color
+def: "A spikelet floret morphology trait (TO:0000274) which is the color of a spikelet floret (PO:0009082)." [GR:pj, PATO:0000014, PO:0009082, TO:cooperl]
 comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "FLCL" RELATED []
-xref: PATO:0000014
-is_a: TO:0000274 ! floret morphology trait
+xref: TO_GIT:105
+is_a: TO:0000274 ! spikelet floret morphology trait
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009082 ! spikelet floret
 
@@ -5960,8 +5960,7 @@ id: TO:0000670
 name: floret number
 def: "The number of flowers present on a inflorescence branch or in the inflorescence itself." [GR:pj]
 synonym: "FLNB" RELATED []
-is_a: TO:0000274 ! floret morphology trait
-is_a: TO:0000622 ! flower development trait
+is_a: TO:0002736 ! flower number trait
 
 [Term]
 id: TO:0000671
@@ -7924,34 +7923,30 @@ creation_date: 2012-07-16T12:53:17Z
 
 [Term]
 id: TO:0000853
-name: floret shape
-def: "A floret morphology trait (TO:0000274) which is the shape of a floret." [TO:moorel]
+name: spikelet floret shape
+def: "A spikelet floret morphology trait (TO:0000274) which is the shape of a spikelet floret (PO:0009082)." [PATO: 0000052, PO:0009082, TO:cooperl, TO:moorel]
 comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
-xref: PATO:0000052
 xref: TO_GIT:105
-is_a: TO:0000274 ! floret morphology trait
+is_a: TO:0000274 ! spikelet floret morphology trait
 created_by: moorel
-creation_date: 2012-07-16T13:05:08Z
 
 [Term]
 id: TO:0000854
-name: floret size
-def: "A floret morphology trait (TO:0000274) which is the size of a floret." [TO:moorel]
+name: spikelet floret size
+def: "A spikelet floret morphology trait (TO:0000274) which is the size of a spikelet floret (PO:0009082)." [PATO:0000117, PO:0009082, TO:cooperl, TO:moorel]
 comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
-xref: PATO:0000117
 xref: TO_GIT:105
-is_a: TO:0000274 ! floret morphology trait
+is_a: TO:0000274 ! spikelet floret morphology trait
 created_by: moorel
 creation_date: 2012-07-16T13:08:42Z
 
 [Term]
 id: TO:0000855
-name: floret diameter
-def: "A floret morphology trait (TO:0000274) which is the diameter of a floret." [TO:moorel]
-comment: Refer to diameter (PATO:0001334):A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
-xref: PATO:0001334
+name: spikelet floret diameter
+def: "A spikelet floret morphology trait (TO:0000274) which is the diameter of a spikelet floret (PO:0009082)." [PATO:0001334, PO:0009082, TO:cooperl, TO:moorel]
+comment: Refer to diameter (PATO:0001334): A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
 xref: TO_GIT:105
-is_a: TO:0000274 ! floret morphology trait
+is_a: TO:0000274 ! spikelet floret morphology trait
 created_by: moorel
 creation_date: 2012-07-16T13:11:57Z
 
@@ -10927,7 +10922,7 @@ id: TO:0002736
 name: flower number trait
 def: "A flower morphology trait (TO:0000499) which is the number of flowers (PO:0009046)." [GR:pj, PO:0009046, TO:moorel]
 xref: PATO:0001555
-is_a: TO:0000786 ! reproductive shoot system morphology trait
+is_a: TO:0000373 ! inflorescence morphology trait
 intersection_of: PATO:0001555 ! has number of
 intersection_of: inheres_in PO:0009046 ! flower
 
@@ -13471,7 +13466,7 @@ creation_date: 2016-02-20T00:23:55Z
 [Term]
 id: TO:1000023
 name: lemma morphology trait
-def: "A flower bract morphology trait (TO:0000079) which is the quality of a lemma (PO:0009037)." [TO:cooperl]
+def: "A flower bract morphology trait (TO:0000079) which is the quality of a lemma (PO:0009037)." [PO:0009037, TO:cooperl]
 xref: TO_GIT:390
 is_a: TO:0000079 ! flower bract morphology trait
 intersection_of: PATO:0001241 ! physical object quality
@@ -13482,7 +13477,7 @@ creation_date: 2016-03-16
 [Term]
 id: TO:1000024
 name: palea morphology trait
-def: "A flower bract morphology trait (TO:0000079) which is the quality of a palea (PO:0009038)." [TO:cooperl]
+def: "A flower bract morphology trait (TO:0000079) which is the quality of a palea (PO:0009038)." [PO:0009038, TO:cooperl]
 xref: TO_GIT:390
 is_a: TO:0000079 ! flower bract morphology trait
 intersection_of: PATO:0001241 ! physical object quality
