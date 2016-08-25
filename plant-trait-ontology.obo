@@ -708,11 +708,12 @@ relationship: part_of TO:0000352 ! plant dry weight
 [Term]
 id: TO:0000079
 name: flower bract morphology trait
-def: "A bract morphology trait (TO:0000815) which is a quality of a flower bract (PO:0009034)." [GR:pj, PO:0009034, TO:cooperl, TO:moorel]
+def: "A bract morphology trait (TO:0000815) which is a quality of a flower bract (PO:0009034)." [GR:pj, PO:0009034, TO:cooperl]
 xref: TO_GIT:390
 is_a: TO:0000815 ! bract morphology trait
 intersection_of: PATO:0001241 ! physical object quality
 intersection_of: inheres_in PO:0009034 ! flower bract
+created_by: cooperl
 
 [Term]
 id: TO:0000080
@@ -2222,11 +2223,11 @@ is_obsolete: true
 [Term]
 id: TO:0000240
 name: sterile lemma length
-def: "A lemma and palea morphology trait (TO:0000079) which is the length of the sterile lemma (PO:0009040). The measurement is made on each of the two sterile lemmas." [IRRI:SES, PO:0009040, TO:moorel]
+def: "A lemma morphology trait (TO:1000023) which is the length of a sterile lemma (PO:0009040)." [IRRI:SES, PATO:0000122, PO:0009040, TO:cooperl, TO:moorel]
 comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
 synonym: "SLmL" RELATED []
 synonym: "STLEMLG" RELATED []
-xref: PATO:0000122
+xref: TO_GIT:390
 is_a: TO:1000023 ! lemma morphology trait
 intersection_of: PATO:0000122 ! length
 intersection_of: inheres_in PO:0009040 ! sterile lemma
@@ -2927,7 +2928,7 @@ def: "Catalysis of the reaction: donor + hydrogen peroxide = oxidized donor + 2 
 synonym: "P71CN" RELATED []
 is_a: TO:0000598 ! protein content
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in CHEBI:8027
+intersection_of: inheres_in CHEBI:8027 ! Peroxidase
 
 [Term]
 id: TO:0000314
@@ -3655,11 +3656,10 @@ relationship: part_of TO:0000397 ! grain size
 [Term]
 id: TO:0000400
 name: sterile lemma color
-def: "A lemma and palea morphology trait (TO:0000079) which is the color of the sterile lemma  (PO:0009040)." [IRRI:SES, PO:0009040, TO:moorel]
+def: "A lemma morphology trait (TO:1000023) which is the color of the sterile lemma (PO:0009040)." [IRRI:SES, PATO:0000014, PO:0009040, TO:cooperl, TO:moorel]
 comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "SLmC" RELATED []
 synonym: "STLEMCL" RELATED []
-xref: PATO:0000014
 is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 intersection_of: PATO:0000014 ! color
 intersection_of: inheres_in PO:0009040 ! sterile lemma
@@ -5404,7 +5404,7 @@ synonym: "lipid content" RELATED []
 is_a: TO:0000491 ! fat and essential oil composition related trait
 is_a: TO:0000604 ! fat and essential oil content
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in CHEBI:17855
+intersection_of: inheres_in CHEBI:17855 ! triglyceride
 
 [Term]
 id: TO:0000603
@@ -5511,9 +5511,9 @@ is_a: TO:0002728 ! fruit quality trait
 [Term]
 id: TO:0000614
 name: lemma shape
-def: "A lemma and palea morphology trait (TO:0000079) which is the shape of the lemma (PO:0009037) in a floret." [GR:pj, PO:0009037, TO:moorel]
+def: "A lemma morphology trait (TO:1000023) which is the shape of the lemma (PO:0009037)." [GR:pj, PATO:0000052, PO:0009037, TO:cooperl, TO:moorel]
 comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
-xref: PATO:0000052
+xref: TO_GIT:390
 is_a: PATO:0000052 {is_inferred="true"} ! shape
 is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 intersection_of: PATO:0000052 ! shape
@@ -5809,10 +5809,10 @@ intersection_of: inheres_in PO:0009053 ! peduncle
 [Term]
 id: TO:0000650
 name: lemma length
-def: "A lemma and palea morphology trait (TO:0000079) which is the length of the lemma (PO:0009037)." [GR:pj, PO:0009037, TO:moorel]
+def: "A lemma morphology trait (TO:1000023) which is the length of the lemma (PO:0009037)." [GR:pj, PATO:0000122, PO:0009037, TO:moorel]
 comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
 synonym: "LEMLG" RELATED []
-xref: PATO:0000122
+xref: TO_GIT:390
 is_a: TO:0000817 {is_inferred="true"} ! inflorescence bract length
 is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 intersection_of: PATO:0000122 ! length
@@ -5953,7 +5953,7 @@ def: "Measuring amount of mycotoxin deoxynivalenol found in the host plant after
 synonym: "DONCONC" RELATED []
 is_a: TO:0000668 ! mycotoxin content
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in CHEBI:10022
+intersection_of: inheres_in CHEBI:10022 ! Vomitoxin
 
 [Term]
 id: TO:0000670
@@ -9048,7 +9048,7 @@ def: "A metabolite content related trait (TO:0000281) which is the amount of cya
 xref: CHEBI:17514
 is_a: TO:0000281 ! metabolite content trait
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in CHEBI:17514
+intersection_of: inheres_in CHEBI:17514 ! cyanide
 
 [Term]
 id: TO:0000958
@@ -9379,7 +9379,7 @@ comment: Refers to crystalline cellulose (CHEBI:62968): A (1→4)-β-D-glucan (c
 xref: TO_GIT:384
 is_a: TO:0000291 ! carbohydrate content
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in CHEBI:18246
+intersection_of: inheres_in CHEBI:18246 ! (1->4)-beta-D-glucan
 created_by: ethan_johnson
 
 [Term]
@@ -10202,7 +10202,7 @@ def: "Assay for the amount of seed storage protein present in the endosperm." [G
 is_a: TO:0000490 ! seed protein composition trait
 is_a: TO:0000598 ! protein content
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in GO:0045735
+intersection_of: inheres_in GO:0045735 ! nutrient reservoir activity
 intersection_of: occurs_in PO:0009089 ! endosperm
 
 [Term]
@@ -10346,7 +10346,7 @@ def: "Measures the diterpenoid phytoalexin content in a plant or plant part." [G
 comment: Diterpenoid phytoalexins are polycyclic diterpenes involved in pathogen response.
 is_a: TO:0000290 ! flavonoid content
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in CHEBI:60952
+intersection_of: inheres_in CHEBI:60952 ! diterpene phytoalexin
 
 [Term]
 id: TO:0002670
@@ -10403,7 +10403,7 @@ synonym: "GACN" RELATED []
 synonym: "gibberellin content" RELATED []
 is_a: TO:0000476 ! growth hormone content
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in CHEBI:28833
+intersection_of: inheres_in CHEBI:28833 ! gibberellin A3
 
 [Term]
 id: TO:0002676
@@ -10588,7 +10588,7 @@ comment: The alpha-carotene is the second most common form of carotenoid.
 synonym: "alpha-carotenoid content" EXACT []
 is_a: TO:0002697 ! cyclic carotene content
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in CHEBI:28425
+intersection_of: inheres_in CHEBI:28425 ! alpha-carotene
 
 [Term]
 id: TO:0002697
@@ -10828,10 +10828,10 @@ is_a: TO:0000933 ! plant phenological trait
 [Term]
 id: TO:0002726
 name: sterile lemma shape
-def: "A lemma and palea morphology trait (TO:0000079) which is the shape of the sterile lemma (PO:0009040)." [GR:pj, PO:0009040, TO:moorel]
+def: "A lemma morphology trait (TO:1000023) which is the shape of a sterile lemma (PO:0009040)." [GR:pj, PATO:0000052, PO:0009040, TO:cooperl, TO:moorel]
 comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 synonym: "STLEMSHP" RELATED []
-xref: PATO:0000052
+xref: TO_GIT:390
 is_a: TO:1000023 ! lemma morphology trait
 intersection_of: PATO:0000052 ! shape
 intersection_of: inheres_in PO:0009040 ! sterile lemma
@@ -10839,10 +10839,10 @@ intersection_of: inheres_in PO:0009040 ! sterile lemma
 [Term]
 id: TO:0002727
 name: sterile lemma width
-def: "A lemma morphology trait (TO:0000079) which is the width of the sterile lemma (PO:0009040). Measured in the widest portion of the sterile lemma." [GR:pj, PO:0009040, TO:moorel]
-comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
+def: "A lemma morphology trait (TO:0000079) which is the width of a sterile lemma (PO:0009040)." [GR:pj, PATO:0000921, PO:0009040, TO:cooperl]
+comment: Measured in the widest portion of the sterile lemma.\n\nRefer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "STLEMWD" RELATED []
-xref: PATO:0000921
+xref: TO_GIT:390
 is_a: PATO:0000921 {is_inferred="true"} ! width
 is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 intersection_of: PATO:0000921 ! width
@@ -12584,7 +12584,7 @@ name: beta-glucan content
 def: "Amount of beta-glucan present in the plant part or product (e.g. malt). Beta-Glucans are polysaccharides of D-glucose linked by beta-glycosidic bonds that vary by molecular mass, solubility, viscosity and 3D configuration." [T-CAP:Victoria_Corollo_Blake]
 is_a: TO:0000291 ! carbohydrate content
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in CHEBI:28793
+intersection_of: inheres_in CHEBI:28793 ! beta-D-glucan
 created_by: jaiswalp
 creation_date: 2011-08-19T01:03:01Z
 
