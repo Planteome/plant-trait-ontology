@@ -10,7 +10,6 @@ subsetdef: Triticum_aestivum "Terms_used_for_wheat"
 subsetdef: Zea_mays "Terms_used_for_maize_or_corn"
 default-namespace: plant_trait_ontology
 ontology: subsets/to-basic
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#created_by>))\n\n\nAnnotationAssertion(rdfs:comment <http://purl.obolibrary.org/obo/TO_0000241> \"\")\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#created_by> <http://purl.obolibrary.org/obo/TO_0000980> \"\")\n)
 
 [Term]
 id: TO:0000001
@@ -41,6 +40,12 @@ name: reversible male sterility
 def: "Trait of a plant in which the action of the cytotoxic gene used to introduce male sterility is suppressed by the application of a chemical to the plant. Reversion of the sterility allows the RMS parent to be self-fertilized, a step that overcomes the need to remove fertile sib plants prior to making the hybrid cross." [PMID:10645437]
 synonym: "RMS" RELATED []
 is_a: TO:0000111 ! genetically engineered male sterility
+
+[Term]
+id: TO:0000005
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000341
 
 [Term]
 id: TO:0000006
@@ -609,10 +614,11 @@ relationship: part_of TO:0000352 ! plant dry weight
 [Term]
 id: TO:0000079
 name: flower bract morphology trait
-def: "A bract morphology trait (TO:0000815) which is a quality of a flower bract (PO:0009034)." [GR:pj, PO:0009034, TO:cooperl, TO:moorel]
+def: "A bract morphology trait (TO:0000815) which is a quality of a flower bract (PO:0009034)." [GR:pj, PO:0009034, TO:cooperl]
 xref: TO_GIT:390
 is_a: TO:0000815 ! bract morphology trait
 is_a: TO:0000862 ! floral organ morphology trait
+created_by: cooperl
 
 [Term]
 id: TO:0000080
@@ -1114,13 +1120,19 @@ is_a: TO:0002629 ! fruit morphology trait
 is_a: TO:0002728 ! fruit quality trait
 
 [Term]
+id: TO:0000139
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000445
+
+[Term]
 id: TO:0000140
 name: apiculus color
 def: "Color of the apiculus." [IRRI:SES]
 synonym: "ApC" RELATED []
 synonym: "APICL" RELATED []
 is_a: TO:0000754 ! cardinal organ part morphology trait
-relationship: part_of TO:0000536 ! floret color
+relationship: part_of TO:0000536 ! spikelet floret color
 
 [Term]
 id: TO:0000141
@@ -1130,7 +1142,7 @@ comment: Refer to color PATO:0000014: A composite chromatic quality composed of 
 synonym: "AWNCL" RELATED []
 xref: PATO:0000014
 is_a: TO:0002718 ! awn morphology trait
-relationship: part_of TO:0000536 ! floret color
+relationship: part_of TO:0000536 ! spikelet floret color
 
 [Term]
 id: TO:0000142
@@ -1206,6 +1218,12 @@ xref: PATO:0000921
 xref: TO_GIT:194
 is_a: TO:0000391 ! seed size
 relationship: part_of TO:0000391 ! seed size
+
+[Term]
+id: TO:0000150
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000587
 
 [Term]
 id: TO:0000151
@@ -1701,19 +1719,21 @@ is_a: TO:1000012 {is_inferred="true"} ! whole plant size
 [Term]
 id: TO:0000208
 name: lemma number
-def: "A lemma and palea morphology trait (TO:0000079) which is the number of lemma (PO:0009037) in the grass flower (PO:0009001) (floret)." [GR:pj, PO:0009001, PO:0009037, TO:moorel]
-is_a: TO:0002613 ! reproductive homeotic development trait
+def: "A spikelet floret morphology trait (TO:0000274) which is the number of lemma (PO:0009037) in a spikelet floret (PO:0009082)." [GR:pj, PATO:0001555, PO:0009037, PO:0009082, TO:cooperl, TO:moorel]
+is_a: TO:0000274 ! spikelet floret morphology trait
+is_a: TO:0002736 ! flower number trait
 is_a: TO:0006026 ! floral bract number
-is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
+is_a: TO:1000023 ! lemma morphology trait
 
 [Term]
 id: TO:0000209
 name: palea number
-def: "A lemma and palea morphology trait (TO:0000079) which is the number of palea (PO:0009038) in the grass flower (floret)." [GR:pj, PO:0009038, TO:moorel]
+def: "A spikelet floret morphology trait (TO:0000274) which is the number of  palea (PO:0009038) in a spikelet floret (PO:0009082)." [GR:pj, PATO:0001555, PO:0009038, PO:0009082, TO:cooperl, TO:moorel]
 synonym: "PALNB" RELATED []
-is_a: TO:0002613 ! reproductive homeotic development trait
+is_a: TO:0000274 ! spikelet floret morphology trait
+is_a: TO:0002736 ! flower number trait
 is_a: TO:0006026 ! floral bract number
-is_a: TO:1000024 {is_inferred="true"} ! palea morphology trait
+is_a: TO:1000024 ! palea morphology trait
 
 [Term]
 id: TO:0000210
@@ -1965,11 +1985,11 @@ is_obsolete: true
 [Term]
 id: TO:0000240
 name: sterile lemma length
-def: "A lemma and palea morphology trait (TO:0000079) which is the length of the sterile lemma (PO:0009040). The measurement is made on each of the two sterile lemmas." [IRRI:SES, PO:0009040, TO:moorel]
+def: "A lemma morphology trait (TO:1000023) which is the length of a sterile lemma (PO:0009040)." [IRRI:SES, PATO:0000122, PO:0009040, TO:cooperl, TO:moorel]
 comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
 synonym: "SLmL" RELATED []
 synonym: "STLEMLG" RELATED []
-xref: PATO:0000122
+xref: TO_GIT:390
 is_a: TO:0000650 ! lemma length
 
 [Term]
@@ -2136,6 +2156,12 @@ xref: PATO:0000052
 is_a: TO:0000847 ! panicle morphology trait
 
 [Term]
+id: TO:0000263
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000050
+
+[Term]
 id: TO:0000264
 name: lemma and palea color
 def: "A lemma and palea morphology trait (TO:0000079) which is the color of the lemma (PO:0009037) and the palea (PO:0009038)." [GR:pj, IRRI:SES, PO:0009037, PO:0009038, TO:moorel]
@@ -2148,7 +2174,7 @@ synonym: "PALCL" RELATED []
 synonym: "palea color" RELATED []
 xref: PATO:0000014
 is_a: TO:0000079 ! flower bract morphology trait
-relationship: part_of TO:0000536 ! floret color
+relationship: part_of TO:0000536 ! spikelet floret color
 
 [Term]
 id: TO:0000265
@@ -2232,8 +2258,8 @@ is_a: TO:0000261 ! insect damage resistance
 
 [Term]
 id: TO:0000274
-name: floret morphology trait
-def: "A flower morphology trait (TO:0000499) which is a quality of a grass floret and its parts." [GR:pj, TO:moorel]
+name: spikelet floret morphology trait
+def: "A flower morphology trait (TO:0000499) which is a quality of a spikelet floret (PO:0009082)." [GR:pj, TO:cooperl, TO:moorel]
 synonym: "floret related trait" RELATED []
 xref: TO_GIT:105
 is_a: TO:0000499 ! flower morphology trait
@@ -2542,6 +2568,12 @@ synonym: "male fertility restoration in F1 hybrids" RELATED []
 synonym: "MALERF" RELATED []
 is_a: TO:0000371 ! yield trait
 is_a: TO:0000497 ! fertility restoration trait
+
+[Term]
+id: TO:0000309
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000576
 
 [Term]
 id: TO:0000310
@@ -2884,6 +2916,12 @@ synonym: "SAGRS" RELATED []
 is_a: TO:0000261 ! insect damage resistance
 
 [Term]
+id: TO:0000349
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000283
+
+[Term]
 id: TO:0000350
 name: cms-hl type
 def: "Abortion of microspore development at bi-nucleate stage." [GR:pj, IRRI:SES]
@@ -2995,6 +3033,12 @@ id: TO:0000362
 name: rot disease
 def: "OBSOLETE." []
 is_obsolete: true
+
+[Term]
+id: TO:0000363
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000373
 
 [Term]
 id: TO:0000364
@@ -3250,6 +3294,12 @@ synonym: "dessication related trait" RELATED []
 is_a: TO:0000237 ! water stress trait
 
 [Term]
+id: TO:0000395
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000146
+
+[Term]
 id: TO:0000396
 name: grain yield trait
 def: "A fruit yield trait (TO:0000871) that is the amount of grain." [ICIS:1003, IRRI:SES, TO:contributors, TO:cooperl]
@@ -3285,11 +3335,10 @@ relationship: part_of TO:0000397 ! grain size
 [Term]
 id: TO:0000400
 name: sterile lemma color
-def: "A lemma and palea morphology trait (TO:0000079) which is the color of the sterile lemma  (PO:0009040)." [IRRI:SES, PO:0009040, TO:moorel]
+def: "A lemma morphology trait (TO:1000023) which is the color of the sterile lemma (PO:0009040)." [IRRI:SES, PATO:0000014, PO:0009040, TO:cooperl, TO:moorel]
 comment: Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "SLmC" RELATED []
 synonym: "STLEMCL" RELATED []
-xref: PATO:0000014
 is_a: TO:0000264 ! lemma and palea color
 is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 
@@ -3601,6 +3650,12 @@ synonym: "MALEST" RELATED []
 is_a: TO:0000485 ! sterility related trait
 
 [Term]
+id: TO:0000438
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000447
+
+[Term]
 id: TO:0000439
 name: fungal disease resistance
 def: "The resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a fungal pathogen infection as compared to the susceptible and/or the reference plants of the same species." [GR:pj]
@@ -3750,7 +3805,6 @@ def: "A spikelet morphology trait (TO:0000657) which is the average number of sp
 synonym: "number of spikelets per panicle" RELATED []
 synonym: "spikelet number per panicle" RELATED []
 synonym: "SPKNB" RELATED []
-is_a: TO:0000371 ! yield trait
 is_a: TO:0000582 ! inflorescence number
 is_a: TO:0000657 ! spikelet morphology trait
 
@@ -4070,6 +4124,12 @@ xref: TO_GIT:57
 is_a: TO:0000786 ! reproductive shoot system morphology trait
 
 [Term]
+id: TO:0000500
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000267
+
+[Term]
 id: TO:0000501
 name: spikelet weight
 def: "A spikelet morphology trait (TO:0000657) which is the weight of a spikelet (PO:0009051)." [GR:pj, PO:0009051, TO:moorel]
@@ -4134,6 +4194,12 @@ synonym: "PENRTLG" RELATED []
 is_a: TO:0000227 ! root length
 
 [Term]
+id: TO:0000509
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000589
+
+[Term]
 id: TO:0000510
 name: penetrated to total root ratio
 def: "A ratio of penetrated to total number of roots in a plant." [GR:pj]
@@ -4191,6 +4257,12 @@ def: "Elongation of the shoot under submergence condition against a reference wi
 synonym: "RELSHELSUB" RELATED []
 is_a: TO:0000114 ! flooding related trait
 is_a: TO:0000739 ! shoot axis morphology trait
+
+[Term]
+id: TO:0000518
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000269
 
 [Term]
 id: TO:0000519
@@ -4298,6 +4370,12 @@ synonym: "APIHRLG" RELATED []
 is_a: TO:0000754 ! cardinal organ part morphology trait
 
 [Term]
+id: TO:0000533
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000382
+
+[Term]
 id: TO:0000534
 name: culm color
 def: "Variation in the color of the culm of a grass plant." [GR:pj]
@@ -4306,13 +4384,19 @@ is_a: TO:0000056 ! stem color
 is_a: TO:0000756 ! stem internode morphology trait
 
 [Term]
+id: TO:0000535
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000339
+
+[Term]
 id: TO:0000536
-name: floret color
-def: "A floret morphology trait (TO:0000274) which is the color of the floret." [GR:pj]
+name: spikelet floret color
+def: "A spikelet floret morphology trait (TO:0000274) which is the color of a spikelet floret (PO:0009082)." [GR:pj, PATO:0000014, PO:0009082, TO:cooperl]
 comment: Refer to color (PATO:0000014): A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "FLCL" RELATED []
-xref: PATO:0000014
-is_a: TO:0000274 ! floret morphology trait
+xref: TO_GIT:105
+is_a: TO:0000274 ! spikelet floret morphology trait
 is_a: TO:0000537 ! flower color
 
 [Term]
@@ -4734,6 +4818,18 @@ xref: TO_GIT:244
 is_a: TO:0000920 ! infructescence morphology trait
 
 [Term]
+id: TO:0000584
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000373
+
+[Term]
+id: TO:0000585
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000373
+
+[Term]
 id: TO:0000586
 name: seminal root length
 def: "A root length (TO:0000227) that is the length of one or more seminal roots (PO:0000046)." [GR:pj37, TO:seymour_megan\nTO\:austin_meier]
@@ -4750,6 +4846,12 @@ def: "A seed quality trait (TO:0000931) which is the quality of the endosperm (P
 synonym: "End" RELATED []
 synonym: "endosperm quality (sensu Poaceae)" RELATED []
 is_a: TO:0000931 ! seed quality trait
+
+[Term]
+id: TO:0000588
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000162
 
 [Term]
 id: TO:0000589
@@ -4972,9 +5074,9 @@ is_a: TO:0002728 ! fruit quality trait
 [Term]
 id: TO:0000614
 name: lemma shape
-def: "A lemma and palea morphology trait (TO:0000079) which is the shape of the lemma (PO:0009037) in a floret." [GR:pj, PO:0009037, TO:moorel]
+def: "A lemma morphology trait (TO:1000023) which is the shape of the lemma (PO:0009037)." [GR:pj, PATO:0000052, PO:0009037, TO:cooperl, TO:moorel]
 comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
-xref: PATO:0000052
+xref: TO_GIT:390
 is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 
 [Term]
@@ -5153,6 +5255,12 @@ synonym: "RELSHDWT" RELATED []
 is_a: TO:0000552 ! shoot dry weight
 
 [Term]
+id: TO:0000637
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000804
+
+[Term]
 id: TO:0000638
 name: spike width
 synonym: "SPIKEWD" RELATED []
@@ -5247,10 +5355,10 @@ is_a: TO:0000776 ! peduncle morphology trait
 [Term]
 id: TO:0000650
 name: lemma length
-def: "A lemma and palea morphology trait (TO:0000079) which is the length of the lemma (PO:0009037)." [GR:pj, PO:0009037, TO:moorel]
+def: "A lemma morphology trait (TO:1000023) which is the length of the lemma (PO:0009037)." [GR:pj, PATO:0000122, PO:0009037, TO:moorel]
 comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to the distance between two points.
 synonym: "LEMLG" RELATED []
-xref: PATO:0000122
+xref: TO_GIT:390
 is_a: TO:0000817 {is_inferred="true"} ! inflorescence bract length
 is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 
@@ -5387,8 +5495,7 @@ id: TO:0000670
 name: floret number
 def: "The number of flowers present on a inflorescence branch or in the inflorescence itself." [GR:pj]
 synonym: "FLNB" RELATED []
-is_a: TO:0000274 ! floret morphology trait
-is_a: TO:0000622 ! flower development trait
+is_a: TO:0002736 ! flower number trait
 
 [Term]
 id: TO:0000671
@@ -5464,6 +5571,12 @@ xref: TO_GIT:243
 is_a: TO:0000783 ! inflorescence axis size
 is_a: TO:0000921 ! infructescence axis morphology trait
 relationship: part_of TO:0000433 ! ear diameter
+
+[Term]
+id: TO:0000679
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000802
 
 [Term]
 id: TO:0000680
@@ -7137,34 +7250,30 @@ creation_date: 2012-07-16T12:53:17Z
 
 [Term]
 id: TO:0000853
-name: floret shape
-def: "A floret morphology trait (TO:0000274) which is the shape of a floret." [TO:moorel]
+name: spikelet floret shape
+def: "A spikelet floret morphology trait (TO:0000274) which is the shape of a spikelet floret (PO:0009082)." [PATO: 0000052, PO:0009082, TO:cooperl, TO:moorel]
 comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
-xref: PATO:0000052
 xref: TO_GIT:105
-is_a: TO:0000274 ! floret morphology trait
+is_a: TO:0000274 ! spikelet floret morphology trait
 created_by: moorel
-creation_date: 2012-07-16T13:05:08Z
 
 [Term]
 id: TO:0000854
-name: floret size
-def: "A floret morphology trait (TO:0000274) which is the size of a floret." [TO:moorel]
+name: spikelet floret size
+def: "A spikelet floret morphology trait (TO:0000274) which is the size of a spikelet floret (PO:0009082)." [PATO:0000117, PO:0009082, TO:cooperl, TO:moorel]
 comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
-xref: PATO:0000117
 xref: TO_GIT:105
-is_a: TO:0000274 ! floret morphology trait
+is_a: TO:0000274 ! spikelet floret morphology trait
 created_by: moorel
 creation_date: 2012-07-16T13:08:42Z
 
 [Term]
 id: TO:0000855
-name: floret diameter
-def: "A floret morphology trait (TO:0000274) which is the diameter of a floret." [TO:moorel]
-comment: Refer to diameter (PATO:0001334):A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
-xref: PATO:0001334
+name: spikelet floret diameter
+def: "A spikelet floret morphology trait (TO:0000274) which is the diameter of a spikelet floret (PO:0009082)." [PATO:0001334, PO:0009082, TO:cooperl, TO:moorel]
+comment: Refer to diameter (PATO:0001334): A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
 xref: TO_GIT:105
-is_a: TO:0000274 ! floret morphology trait
+is_a: TO:0000274 ! spikelet floret morphology trait
 created_by: moorel
 creation_date: 2012-07-16T13:11:57Z
 
@@ -9633,6 +9742,12 @@ def: "The shape of the plant root system." [GR:pj]
 is_a: TO:0000043 ! root morphology trait
 
 [Term]
+id: TO:0002711
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0020088
+
+[Term]
 id: TO:0002712
 name: stay green trait
 def: "A whole plant growth and development trait (TO:0000947) which is the color of plant and the photosynthetic organs remain green compared to turning yellow and or brown at the time of senescing." [GR:pj]
@@ -9750,19 +9865,19 @@ is_a: TO:0000933 ! plant phenological trait
 [Term]
 id: TO:0002726
 name: sterile lemma shape
-def: "A lemma and palea morphology trait (TO:0000079) which is the shape of the sterile lemma (PO:0009040)." [GR:pj, PO:0009040, TO:moorel]
+def: "A lemma morphology trait (TO:1000023) which is the shape of a sterile lemma (PO:0009040)." [GR:pj, PATO:0000052, PO:0009040, TO:cooperl, TO:moorel]
 comment: Refer to shape PATO:0000052: A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 synonym: "STLEMSHP" RELATED []
-xref: PATO:0000052
+xref: TO_GIT:390
 is_a: TO:0000614 ! lemma shape
 
 [Term]
 id: TO:0002727
 name: sterile lemma width
-def: "A lemma morphology trait (TO:0000079) which is the width of the sterile lemma (PO:0009040). Measured in the widest portion of the sterile lemma." [GR:pj, PO:0009040, TO:moorel]
-comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
+def: "A lemma morphology trait (TO:0000079) which is the width of a sterile lemma (PO:0009040)." [GR:pj, PATO:0000921, PO:0009040, TO:cooperl]
+comment: Measured in the widest portion of the sterile lemma.\n\nRefer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "STLEMWD" RELATED []
-xref: PATO:0000921
+xref: TO_GIT:390
 is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 
 [Term]
@@ -9840,6 +9955,7 @@ name: flower number trait
 def: "A flower morphology trait (TO:0000499) which is the number of flowers (PO:0009046)." [GR:pj, PO:0009046, TO:moorel]
 xref: PATO:0001555
 is_a: TO:0000499 ! flower morphology trait
+is_a: TO:0000582 ! inflorescence number
 
 [Term]
 id: TO:0002737
@@ -9857,8 +9973,8 @@ synonym: "FLNBPPN" RELATED []
 synonym: "floret number per panicle" RELATED []
 synonym: "florets per inflorescence" RELATED []
 synonym: "florets per panicle" EXACT []
+is_a: TO:0000274 ! spikelet floret morphology trait
 is_a: TO:0000670 ! floret number
-is_a: TO:0002736 ! flower number trait
 
 [Term]
 id: TO:0002739
@@ -9866,6 +9982,12 @@ name: fruit surface area
 def: "Average whole fruit surface area." [GR:pj]
 synonym: "FRUTSURFAR" RELATED []
 is_a: TO:0002728 ! fruit quality trait
+
+[Term]
+id: TO:0002740
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0002741
 
 [Term]
 id: TO:0002741
@@ -9972,6 +10094,12 @@ synonym: "panicle branch arrangement" RELATED []
 is_a: TO:0000050 ! inflorescence branching
 
 [Term]
+id: TO:0002752
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0002751
+
+[Term]
 id: TO:0002753
 name: arrangement of inflorescence primary branch
 def: "An inflorescence branch arrangement (TO:0002751) trait which is the arrangement of primary branches in an inflorescence (PO:0009049)." [GR:pj, PO:0009049, TO:moorel]
@@ -10035,6 +10163,12 @@ synonym: "GRNB" RELATED []
 synonym: "kernel number" RELATED []
 xref: PATO:0001555
 is_a: TO:0000396 ! grain yield trait
+
+[Term]
+id: TO:0002760
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0000734
 
 [Term]
 id: TO:0002761
@@ -11756,6 +11890,12 @@ created_by: jaiswalp
 creation_date: 2011-08-19T04:31:40Z
 
 [Term]
+id: TO:0020113
+property_value: IAO:0000231 IAO:0000227
+is_obsolete: true
+replaced_by: TO:0006060
+
+[Term]
 id: TO:0020114
 name: shoot phosphorus content
 def: "Amount of phosphorus in the shoot." [TO:contributors]
@@ -12132,7 +12272,7 @@ creation_date: 2016-02-20T00:23:55Z
 [Term]
 id: TO:1000023
 name: lemma morphology trait
-def: "A flower bract morphology trait (TO:0000079) which is the quality of a lemma (PO:0009037)." [TO:cooperl]
+def: "A flower bract morphology trait (TO:0000079) which is the quality of a lemma (PO:0009037)." [PO:0009037, TO:cooperl]
 xref: TO_GIT:390
 is_a: TO:0000079 ! flower bract morphology trait
 created_by: cooperl
@@ -12141,7 +12281,7 @@ creation_date: 2016-03-16
 [Term]
 id: TO:1000024
 name: palea morphology trait
-def: "A flower bract morphology trait (TO:0000079) which is the quality of a palea (PO:0009038)." [TO:cooperl]
+def: "A flower bract morphology trait (TO:0000079) which is the quality of a palea (PO:0009038)." [PO:0009038, TO:cooperl]
 xref: TO_GIT:390
 is_a: TO:0000079 ! flower bract morphology trait
 created_by: cooperl

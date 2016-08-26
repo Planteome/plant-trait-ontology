@@ -401,7 +401,7 @@ is_a: GO:0006833 ! water transport
 id: GO:0010150
 name: leaf senescence
 def: "The process that occurs in a leaf near the end of its active life that is associated with the dismantling of cell components and membranes, loss of functional chloroplasts, and an overall decline in metabolism." [ISBN:0387987819]
-is_a: GO:0010260 ! organ senescence
+is_a: GO:0090693 ! plant organ senescence
 relationship: BFO:0000050 GO:0048366 ! leaf development
 
 [Term]
@@ -415,13 +415,6 @@ id: GO:0010229
 name: inflorescence development
 def: "The process whose specific outcome is the progression of an inflorescence over time, from its formation to the mature structure." [GOC:tb]
 is_a: GO:0090567 ! reproductive shoot system development
-
-[Term]
-id: GO:0010260
-name: organ senescence
-def: "The process that occurs in an organ near the end of its active life that is associated with the dismantling of cell components and membranes, and an overall decline in metabolism. An example of this process is found in Arabidopsis thaliana." [GOC:mtg_sensu, GOC:sm]
-is_a: GO:0007568 ! aging
-relationship: BFO:0000050 GO:0048513 ! animal organ development
 
 [Term]
 id: GO:0016043
@@ -884,15 +877,6 @@ synonym: "pistil development" EXACT []
 is_a: GO:0048438 ! floral whorl development
 
 [Term]
-id: GO:0048513
-name: animal organ development
-def: "Development of a tissue or tissues that work together to perform a specific function or functions. Development pertains to the process whose specific outcome is the progression of a structure over time, from its formation to the mature structure. Organs are commonly observed as visibly distinct structures, but may also exist as loosely associated clusters of cells that work together to perform a specific function or functions." [GOC:dph, GOC:jid]
-synonym: "development of an organ" EXACT []
-synonym: "organogenesis" EXACT []
-is_a: GO:0048856 ! anatomical structure development
-relationship: BFO:0000050 GO:0048731 ! system development
-
-[Term]
 id: GO:0048608
 name: reproductive structure development
 def: "The reproductive developmental process whose specific outcome is the progression of structures that will be used in the process of creating new individuals from one or more parents, from their formation to the mature structures." [GOC:dph, GOC:isa_complete, GOC:jid]
@@ -1019,6 +1003,13 @@ is_a: GO:0048367 ! shoot system development
 is_a: GO:0048608 ! reproductive structure development
 
 [Term]
+id: GO:0090693
+name: plant organ senescence
+def: "The process that occurs in a plant organ near the end of its active life that is associated with the dismantling of cell components and membranes, and an overall decline in metabolism." [GOC:tb]
+is_a: GO:0007568 ! aging
+relationship: BFO:0000050 GO:0099402 ! plant organ development
+
+[Term]
 id: GO:0099402
 name: plant organ development
 def: "Development of a plant organ, a multi-tissue plant structure that forms a functional unit." [GOC:dos]
@@ -1100,6 +1091,7 @@ relationship: BFO:0000050 GO:0000278 ! mitotic cell cycle
 
 [Typedef]
 id: BFO:0000050
+is_symmetric: true
 is_transitive: true
 inverse_of: BFO:0000051
 
