@@ -73,6 +73,17 @@ synonym: "O-glucosyl hydrolase activity" EXACT []
 is_a: GO:0016798 ! hydrolase activity, acting on glycosyl bonds
 
 [Term]
+id: GO:0004556
+name: alpha-amylase activity
+def: "Catalysis of the endohydrolysis of (1->4)-alpha-D-glucosidic linkages in polysaccharides containing three or more alpha-(1->4)-linked D-glucose units." [EC:3.2.1.1]
+synonym: "1,4-alpha-D-glucan glucanohydrolase activity" EXACT [EC:3.2.1.1]
+synonym: "alpha amylase activity" EXACT [EC:3.2.1.1]
+synonym: "endoamylase activity" EXACT [EC:3.2.1.1]
+synonym: "glycogenase activity" BROAD [EC:3.2.1.1]
+synonym: "taka-amylase A" RELATED [EC:3.2.1.1]
+is_a: GO:0016160 ! amylase activity
+
+[Term]
 id: GO:0004564
 name: beta-fructofuranosidase activity
 def: "Catalysis of the reaction: a fructofuranosylated fructofuranosyl acceptor + H2O = a non fructofuranosylated fructofuranosyl acceptor + a beta-D-fructofuranoside." [EC:3.2.1.26, MetaCyc:RXN-9985]
@@ -194,7 +205,7 @@ is_a: GO:0044763 ! single-organism cellular process
 [Term]
 id: GO:0007067
 name: mitotic nuclear division
-def: "A cell cycle process comprising the steps by which the nucleus of a eukaryotic cell divides; the process involves condensation of chromosomal DNA into a highly compacted form. Canonically, mitosis produces two daughter nuclei whose chromosome complement is identical to that of the mother cell." [GOC:dph, GOC:ma, GOC:mah, ISBN:0198547684]
+def: "A mitotic cell cycle process comprising the steps by which the nucleus of a eukaryotic cell divides; the process involves condensation of chromosomal DNA into a highly compacted form. Canonically, mitosis produces two daughter nuclei whose chromosome complement is identical to that of the mother cell." [GOC:dph, GOC:ma, GOC:mah, ISBN:0198547684]
 synonym: "mitosis" EXACT []
 is_a: GO:0000280 ! nuclear division
 is_a: GO:1903047 ! mitotic cell cycle process
@@ -447,6 +458,16 @@ id: GO:0016160
 name: amylase activity
 def: "Catalysis of the hydrolysis of amylose or an amylose derivative." [GOC:ai]
 is_a: GO:0004553 ! hydrolase activity, hydrolyzing O-glycosyl compounds
+
+[Term]
+id: GO:0016161
+name: beta-amylase activity
+def: "Catalysis of the reaction: (1,4-alpha-D-glucosyl)(n+1) + H2O = (1,4-alpha-D-glucosyl)(n-1) + alpha-maltose. This reaction is the hydrolysis of 1,4-alpha-glucosidic linkages in polysaccharides so as to remove successive maltose units from the non-reducing ends of the chains." [EC:3.2.1.2]
+synonym: "1,4-alpha-D-glucan maltohydrolase activity" EXACT [EC:3.2.1.2]
+synonym: "beta amylase activity" EXACT [EC:3.2.1.2]
+synonym: "glycogenase activity" BROAD [EC:3.2.1.2]
+synonym: "saccharogen amylase activity" EXACT [EC:3.2.1.2]
+is_a: GO:0016160 ! amylase activity
 
 [Term]
 id: GO:0016311
@@ -1091,7 +1112,6 @@ relationship: BFO:0000050 GO:0000278 ! mitotic cell cycle
 
 [Typedef]
 id: BFO:0000050
-is_symmetric: true
 is_transitive: true
 inverse_of: BFO:0000051
 
