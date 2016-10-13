@@ -14,7 +14,7 @@ For more details on ontology management, please see the OBO tutorial:
 
  * https://github.com/jamesaoverton/obo-tutorial
 
-## Editors Version
+## Editors' Version
 
 Do you have an ID range in the idranges file (to-idranges.owl),
 in this directory). If not, get one from the head curator. 
