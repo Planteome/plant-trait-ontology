@@ -1,4 +1,4 @@
-## TO editors documentation
+## TO Editors' documentation
 
 These notes are for the EDITORS of the Plant Trait Ontology
 
