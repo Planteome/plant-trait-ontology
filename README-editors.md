@@ -50,24 +50,12 @@ committed and pushed, and the travis build passes.
 
 to release, change into this directory, and type
 
-    make
-
-If this looks good type:
-
-    make prepare_release
+    make all
 
 This generates derived files such as to.owl and to.obo. The versionIRI
 will be added.
 
-Commit and push these files.
-
-    git commit -a
-
-And type a brief description of the release in the editor window
-
-Finally type
-
-    git push origin master
+Commit and push these files to the repository
 
 IMMEDIATELY AFTERWARDS (do *not* make further modifications) go here:
 
