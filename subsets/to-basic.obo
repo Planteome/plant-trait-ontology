@@ -269,7 +269,7 @@ is_a: TO:0000247 ! other nutrient sensitivity
 id: TO:0000035
 name: incompatibility trait
 is_a: TO:0000392 ! sterility or fertility trait
-is_a: TO:0000839 ! plant structure morphology trait
+is_a: TO:0000398 ! whole plant morphology trait
 
 [Term]
 id: TO:0000036
@@ -391,7 +391,6 @@ synonym: "culm strength" RELATED []
 synonym: "CULMSTR" RELATED []
 synonym: "STEMSTR" RELATED []
 xref: PATO:0001230
-is_a: TO:0000168 ! abiotic stress trait
 is_a: TO:0000361 ! stem morphology trait
 is_a: TO:0000597 ! quality trait
 
@@ -689,7 +688,7 @@ synonym: "AROMA" RELATED []
 synonym: "odour" RELATED []
 synonym: "scent" EXACT []
 synonym: "Sct" RELATED []
-is_a: TO:0000488 ! seed composition based quality trait
+is_a: TO:0000488 ! seed composition quality trait
 is_a: TO:0002694 ! fruit flavor trait
 
 [Term]
@@ -740,7 +739,6 @@ name: root pulling force
 synonym: "rpf" RELATED []
 synonym: "RTPF" RELATED []
 is_a: TO:0000043 ! root morphology trait
-is_a: TO:0000168 ! abiotic stress trait
 
 [Term]
 id: TO:0000094
@@ -927,7 +925,6 @@ def: "Determined as the dry mass of roots per unit soil volume at a given soil s
 synonym: "rmd" RELATED []
 synonym: "RTMD" RELATED []
 is_a: TO:0000043 ! root morphology trait
-is_a: TO:0000168 ! abiotic stress trait
 
 [Term]
 id: TO:0000116
@@ -1480,7 +1477,6 @@ synonym: "percent sterility" RELATED []
 synonym: "seed setting" RELATED []
 synonym: "SpFert" RELATED []
 synonym: "SPKFRT" RELATED []
-is_a: TO:0000420 ! fertility related trait
 is_a: TO:0000657 ! spikelet morphology trait
 
 [Term]
@@ -1898,7 +1894,7 @@ is_a: TO:0000043 ! root morphology trait
 [Term]
 id: TO:0000228
 name: moisture content related trait
-is_a: TO:0000488 ! seed composition based quality trait
+is_a: TO:0000488 ! seed composition quality trait
 
 [Term]
 id: TO:0000229
@@ -1940,7 +1936,6 @@ name: root volume
 def: "Is an indirect measure of root mass or density. Quantified in terms of cubic centimeters by water displacement method." [GR:pj, GR_REF:6917]
 synonym: "RTVOL" RELATED []
 is_a: TO:0000043 ! root morphology trait
-is_a: TO:0000168 ! abiotic stress trait
 
 [Term]
 id: TO:0000234
@@ -2113,7 +2108,6 @@ name: root branching
 def: "The extent of the root branching as determined under variable treatments and environments." [GR:pj]
 synonym: "rbr" RELATED []
 synonym: "RTBR" RELATED []
-is_a: TO:0000168 ! abiotic stress trait
 is_a: TO:0002710 ! root shape
 
 [Term]
@@ -2306,7 +2300,6 @@ synonym: "RTWT" RELATED []
 synonym: "total root weight" RELATED []
 synonym: "TRW" RELATED []
 is_a: TO:0000043 ! root morphology trait
-is_a: TO:0000168 ! abiotic stress trait
 
 [Term]
 id: TO:0000280
@@ -2380,7 +2373,7 @@ is_a: TO:0002730 ! grain shape
 [Term]
 id: TO:0000288
 name: alpha-amylase activity trait
-def: "Catalysis of the endohydrolysis of 1,4-a-D-glucosidic linkages in polysaccharides containing three or more 1,4-a-linked D-glucose units." [EC:3.2.1.1, GO:0004556]
+def: "An amylase activity trait (TO:0000703) which is the quality of the endohydrolysis of 1,4-a-D-glucosidic linkages in polysaccharides containing three or more 1,4-a-linked D-glucose units." [EC:3.2.1.1, GO:0004556]
 synonym: "alpha amylase" RELATED []
 synonym: "ALPHAAMYASEACT" RELATED []
 synonym: "Amy" RELATED []
@@ -2388,7 +2381,7 @@ synonym: "endoamylase" RELATED []
 synonym: "glycogenase" RELATED []
 synonym: "taka-amylase A" RELATED []
 is_a: TO:0000703 ! amylase activity trait
-relationship: part_of TO:0000336 ! total amylase activity
+relationship: part_of TO:0000336 ! total amylase activity trait
 
 [Term]
 id: TO:0000289
@@ -2712,7 +2705,6 @@ id: TO:0000325
 name: soluble protein content
 def: "Amount of the soluble protein present in the plant or the plant part." [GR:pj]
 synonym: "SPROTCN" RELATED []
-is_a: TO:0000490 ! seed protein composition trait
 is_a: TO:0000598 ! protein content
 
 [Term]
@@ -2811,7 +2803,7 @@ is_a: TO:0002748 ! ligule morphology trait
 
 [Term]
 id: TO:0000336
-name: total amylase activity
+name: total amylase activity trait
 def: "A combined activity of both the alpha and beta amylase enzymes." [EC:3.2.1.-, GO:0016160, GR:pj]
 synonym: "amylase activity" RELATED []
 synonym: "TAMYASEACT" RELATED []
@@ -2831,10 +2823,10 @@ is_a: TO:0000114 ! flooding related trait
 [Term]
 id: TO:0000338
 name: beta-amylase activity trait
-def: "Catalysis of the hydrolysis of 1,4-alpha-glucosidic linkages in polysaccharides to remove successive maltose units from the non-reducing ends of the chains." [EC:3.2.1.2, GO:0016161]
+def: "An amylase activity trait (TO:0000703) which is the quality of the hydrolysis of 1,4-alpha-glucosidic linkages in polysaccharides to remove successive maltose units from the non-reducing ends of the chains." [EC:3.2.1.2, GO:0016161]
 synonym: "BETAAMYASEACT" RELATED []
 is_a: TO:0000703 ! amylase activity trait
-relationship: part_of TO:0000336 ! total amylase activity
+relationship: part_of TO:0000336 ! total amylase activity trait
 
 [Term]
 id: TO:0000339
@@ -3503,13 +3495,12 @@ created_by: jaiswalp
 id: TO:0000420
 name: fertility related trait
 is_a: TO:0000392 ! sterility or fertility trait
-is_a: TO:0000839 ! plant structure morphology trait
+is_a: TO:0000398 ! whole plant morphology trait
 
 [Term]
 id: TO:0000421
 name: pollen fertility
 synonym: "POFRT" RELATED []
-is_a: TO:0000398 ! whole plant morphology trait
 is_a: TO:0000420 ! fertility related trait
 
 [Term]
@@ -3918,7 +3909,6 @@ name: root penetration index
 def: "Its the fraction of number of penetrated roots over the total number of roots." [GR:jcl, GR:pj]
 synonym: "RTPNID" RELATED []
 is_a: TO:0000043 ! root morphology trait
-is_a: TO:0000168 ! abiotic stress trait
 
 [Term]
 id: TO:0000472
@@ -4047,24 +4037,24 @@ is_a: TO:0000575 ! endosperm morphology trait
 
 [Term]
 id: TO:0000488
-name: seed composition based quality trait
+name: seed composition quality trait
 is_a: TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000489
 name: carbohydrate composition related trait
-is_a: TO:0000488 ! seed composition based quality trait
+is_a: TO:0000488 ! seed composition quality trait
 
 [Term]
 id: TO:0000490
 name: seed protein composition trait
 def: "A seed composition based quality trait (TO:0000488) which is the amount of protein (CHEBI_36080) in a seed (PO:0009010)." []
-is_a: TO:0000488 ! seed composition based quality trait
+is_a: TO:0000488 ! seed composition quality trait
 
 [Term]
 id: TO:0000491
 name: fat and essential oil composition related trait
-is_a: TO:0000488 ! seed composition based quality trait
+is_a: TO:0000488 ! seed composition quality trait
 
 [Term]
 id: TO:0000492
@@ -4205,7 +4195,6 @@ name: penetrated to total root ratio
 def: "A ratio of penetrated to total number of roots in a plant." [GR:pj]
 synonym: "PENTRTRO" RELATED []
 is_a: TO:0000043 ! root morphology trait
-is_a: TO:0000168 ! abiotic stress trait
 
 [Term]
 id: TO:0000511
@@ -4240,7 +4229,6 @@ id: TO:0000515
 name: relative growth rate
 def: "The relative growth of the plant determined after a given treatment as compared to the one determined under normal conditions." [GR:pj]
 synonym: "RELGRATE" RELATED []
-is_a: TO:0000168 ! abiotic stress trait
 is_a: TO:0000250 ! vigor related trait
 
 [Term]
@@ -4271,7 +4259,6 @@ def: "It is calculated from the deepest soil layer where roots were present and 
 synonym: "maximum rooting depth" NARROW []
 synonym: "RTDP" RELATED []
 is_a: TO:0000043 ! root morphology trait
-is_a: TO:0000168 ! abiotic stress trait
 
 [Term]
 id: TO:0000520
@@ -4752,7 +4739,6 @@ synonym: "stem height" RELATED []
 synonym: "STEMLG" RELATED []
 xref: PATO:0000122
 xref: TO_GIT:157
-is_a: TO:0000168 ! abiotic stress trait
 is_a: TO:0000892 ! stem size
 relationship: part_of TO:0000207 ! plant height
 
@@ -5037,6 +5023,7 @@ comment: As seen in degree of modification of grain to malt in barley.
 synonym: "Soluble protein to total protein content ratio" RELATED []
 synonym: "STPROTRO" RELATED []
 is_a: TO:0000325 ! soluble protein content
+is_a: TO:0000490 ! seed protein composition trait
 
 [Term]
 id: TO:0000611
@@ -5045,7 +5032,7 @@ def: "It is a measure of the sugars and nitrogenous compounds available for yeas
 synonym: "malt-extract percent" RELATED []
 synonym: "MALTEXTPCENT" RELATED []
 is_a: TO:0000281 ! metabolite content trait
-is_a: TO:0000488 ! seed composition based quality trait
+is_a: TO:0000488 ! seed composition quality trait
 is_a: TO:0000667 ! cooking or brewing quality
 
 [Term]
@@ -5771,7 +5758,7 @@ is_a: TO:0000696 ! starch content
 [Term]
 id: TO:0000703
 name: amylase activity trait
-def: "Catalysis of the hydrolysis of amylose or an amylose derivative." [GR:pj]
+def: "An enzyme activity trait (TO:0000599) which is the quality of the hydrolysis of amylose or an amylose derivative by amylase." [GR:pj]
 is_a: TO:0000599 ! enzyme activity trait
 
 [Term]
@@ -7251,7 +7238,7 @@ creation_date: 2012-07-16T12:53:17Z
 [Term]
 id: TO:0000853
 name: spikelet floret shape
-def: "A spikelet floret morphology trait (TO:0000274) which is the shape of a spikelet floret (PO:0009082)." [PATO: 0000052, PO:0009082, TO:cooperl, TO:moorel]
+def: "A spikelet floret morphology trait (TO:0000274) which is the shape of a spikelet floret (PO:0009082)." [PATO:0000052, PO:0009082, TO:cooperl, TO:moorel]
 comment: Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer's ratios of distances between its features (points, edges, surfaces and also holes etc).
 xref: TO_GIT:105
 is_a: TO:0000274 ! spikelet floret morphology trait
@@ -9947,7 +9934,7 @@ id: TO:0002735
 name: straighthead
 def: "Malformed inflorescence (panicle in rice), by staying upright/straight at the time of maturity and may carry infertile seeds." [GR:pj, web:http\://plantpathology.tamu.edu/Texlab/Grains/Rice/rices.html]
 comment: For rice: Straighthead is a physiological disorder that causes the entire head to be blank and remain upright at maturity in rice. Straighthead generally occurs in spots scattered throughout a field and is most easily recognized near harvest when normal plants have downturned heads (from the weight of the grain in the panicle). The disease is frequently found on sandy loam soils but seldom on clay soils. Old cotton fields with arsenic residues can have a severe incidence of straighthead. Other, as yet unknown, soil factors are also involved in causing straighthead. Often it is found in fields where excessive non-decayed vegetation has been plowed under just before planting. The disease is characterized by upright heads when the rice matures due to infertile seed. Hulls may be distorted into a crescent shape or "parrot beak". One or both hulls may be missing. Affected plants continue to grow, are a darker green, and often produce shoots from a lower portion of the plant. First year crops of rice grown on "new ground" are more likely to be affected. Some varieties are more tolerant than others. Control measures include planting resistant varieties and draining fields with a history of the disorder just prior to internode elongation.
-is_a: TO:0000168 ! abiotic stress trait
+is_a: TO:0000373 ! inflorescence morphology trait
 
 [Term]
 id: TO:0002736
@@ -11664,7 +11651,7 @@ creation_date: 2011-08-19T03:35:46Z
 id: TO:0020087
 name: root cracking
 def: "A trait measuring the extent of physical cracking of a root caused by genetic, environmental factors or by post-harvest storage and handling of the root or root part." [GR:pj]
-is_a: TO:0000168 ! abiotic stress trait
+is_a: TO:0000043 ! root morphology trait
 created_by: jaiswalp
 creation_date: 2011-08-19T03:44:21Z
 
