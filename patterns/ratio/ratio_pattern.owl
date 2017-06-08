@@ -1,0 +1,41 @@
+Prefix: : <http://purl.obolibrary.org/obo/>
+Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
+Prefix: DOSDP: <http://geneontology.org/foo/>
+Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
+Prefix: TO: <http://purl.obolibrary.org/obo/TO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: EO: <http://purl.obolibrary.org/obo/EO_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: OWL: <http://www.w3.org/2002/07/owl#>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+
+ ## Auto-generated
+
+Ontology: <http://purl.obolibrary.org/obo/patterns/ratio/ratio_pattern.owl>
+AnnotationProperty: IAO:0000115
+AnnotationProperty: to/ratio/divisor
+AnnotationProperty: to/ratio/dividend
+AnnotationProperty: to/ratio/attribute
+AnnotationProperty: DOSDP:applies-pattern
+ObjectProperty: TO_has_dividend_quality ## has dividen quality
+ObjectProperty: TO_has_divisor_quality ## has divisor quality
+## Auto-generated classes
+
+Class: TO:0000346 ## tiller number
+Class: TO:0000078 ## root dry weight
+Class: PATO:0001470 ## proportionality to
+## {"divisor": "TO:0000346", "dividend": "TO:0000078", "attribute": "PATO:0001470"}
+Class: TO:0000579
+ Annotations: rdfs:label "root dry weight to tiller number ratio"
+ Annotations: IAO:0000115 "The proportion of root dry weight in tiller number."
+ EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000078 and TO_has_divisor_quality some TO:0000346 ## proportionality to and 'has dividen quality' some root dry weight and 'has divisor quality' some tiller number
+
+Class: TO:0000540 ## leaf area trait
+Class: TO:0000539 ## large vascular bundle number
+Class: PATO:0001470 ## proportionality to
+## {"divisor": "TO:0000540", "dividend": "TO:0000539", "attribute": "PATO:0001470"}
+Class: TO:0000538
+ Annotations: rdfs:label "large vascular bundle number to leaf area ratio"
+ Annotations: IAO:0000115 "The proportion of large vascular bundle number in leaf area trait."
+ EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000539 and TO_has_divisor_quality some TO:0000540 ## proportionality to and 'has dividen quality' some large vascular bundle number and 'has divisor quality' some leaf area trait
