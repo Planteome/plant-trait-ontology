@@ -1,0 +1,28 @@
+pattern_name: to/phenotype
+classes: []
+
+relations:
+  part of: BFO_0000050
+  inheres in: RO_0000052
+    
+vars: 
+  attribute: "'Thing'"
+  entity: "'Thing'"
+
+name:
+  text: "%s %s"
+  vars:
+    - entity
+    - attribute
+
+def: 
+  text: "A %s that is %s."
+  vars:
+    - entity
+    - attribute
+    
+equivalentTo: 
+  text: "%s and 'inheres in' some %s"
+  vars:
+    - attribute
+    - entity
