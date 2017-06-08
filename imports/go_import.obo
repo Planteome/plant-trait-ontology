@@ -12,10 +12,11 @@ is_a: GO:0008150 ! biological_process
 id: GO:0000278
 name: mitotic cell cycle
 def: "Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent." [GOC:mah, ISBN:0815316194, Reactome:69278]
+synonym: "mitosis" RELATED []
 is_a: GO:0007049 ! cell cycle
 intersection_of: GO:0007049 ! cell cycle
-intersection_of: BFO:0000051 GO:0007067 ! mitotic nuclear division
-relationship: BFO:0000051 GO:0007067 ! mitotic nuclear division
+intersection_of: BFO:0000051 GO:0140014 ! mitotic nuclear division
+relationship: BFO:0000051 GO:0140014 ! mitotic nuclear division
 
 [Term]
 id: GO:0000280
@@ -34,7 +35,6 @@ is_a: GO:0022414 ! reproductive process
 is_a: GO:0032502 ! developmental process
 intersection_of: GO:0032502 ! developmental process
 intersection_of: BFO:0000050 GO:0000003 ! reproduction
-relationship: BFO:0000050 GO:0000003 ! reproduction
 
 [Term]
 id: GO:0003674
@@ -203,28 +203,6 @@ synonym: "cell-division cycle" EXACT []
 is_a: GO:0044763 ! single-organism cellular process
 
 [Term]
-id: GO:0007067
-name: mitotic nuclear division
-def: "A mitotic cell cycle process comprising the steps by which the nucleus of a eukaryotic cell divides; the process involves condensation of chromosomal DNA into a highly compacted form. Canonically, mitosis produces two daughter nuclei whose chromosome complement is identical to that of the mother cell." [GOC:dph, GOC:ma, GOC:mah, ISBN:0198547684]
-synonym: "mitosis" EXACT []
-is_a: GO:0000280 ! nuclear division
-is_a: GO:1903047 ! mitotic cell cycle process
-intersection_of: GO:0000280 ! nuclear division
-intersection_of: BFO:0000050 GO:0000278 ! mitotic cell cycle
-relationship: BFO:0000050 GO:0000278 ! mitotic cell cycle
-
-[Term]
-id: GO:0007126
-name: meiotic nuclear division
-def: "One of the two nuclear divisions that occur as part of the meiotic cell cycle." [GOC:dph, GOC:mah, PMID:9334324]
-synonym: "meiosis" BROAD []
-is_a: GO:0000280 ! nuclear division
-is_a: GO:1903046 ! meiotic cell cycle process
-intersection_of: GO:0000280 ! nuclear division
-intersection_of: BFO:0000050 GO:0051321 ! meiotic cell cycle
-relationship: BFO:0000050 GO:0051321 ! meiotic cell cycle
-
-[Term]
 id: GO:0007275
 name: multicellular organism development
 def: "The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult)." [GOC:dph, GOC:ems, GOC:isa_complete, GOC:tb]
@@ -370,7 +348,6 @@ is_a: GO:0003006 ! developmental process involved in reproduction
 is_a: GO:0007568 ! aging
 is_a: GO:0044702 ! single organism reproductive process
 is_a: GO:0071695 ! anatomical structure maturation
-relationship: BFO:0000050 GO:0007275 ! multicellular organism development
 relationship: BFO:0000050 GO:0010154 ! fruit development
 
 [Term]
@@ -664,7 +641,6 @@ is_a: GO:0043226 ! organelle
 is_a: GO:0044424 ! intracellular part
 intersection_of: GO:0043226 ! organelle
 intersection_of: BFO:0000050 GO:0005622 ! intracellular
-relationship: BFO:0000050 GO:0005622 ! intracellular
 
 [Term]
 id: GO:0043231
@@ -959,13 +935,12 @@ is_a: GO:0051179 ! localization
 id: GO:0051321
 name: meiotic cell cycle
 def: "Progression through the phases of the meiotic cell cycle, in which canonically a cell replicates to produce four offspring with half the chromosomal content of the progenitor cell via two nuclear divisions." [GOC:ai]
-synonym: "meiosis" BROAD []
+synonym: "meiosis" RELATED []
 is_a: GO:0007049 ! cell cycle
 is_a: GO:0044702 ! single organism reproductive process
 intersection_of: GO:0007049 ! cell cycle
-intersection_of: BFO:0000051 GO:0007126 ! meiotic nuclear division
-relationship: BFO:0000050 GO:0000003 ! reproduction
-relationship: BFO:0000051 GO:0007126 ! meiotic nuclear division
+intersection_of: BFO:0000051 GO:0140013 ! meiotic nuclear division
+relationship: BFO:0000051 GO:0140013 ! meiotic nuclear division
 
 [Term]
 id: GO:0052736
@@ -1049,7 +1024,24 @@ is_a: GO:0005737 ! cytoplasm
 is_a: GO:0044444 ! cytoplasmic part
 intersection_of: GO:0005737 ! cytoplasm
 intersection_of: BFO:0000050 GO:0005737 ! cytoplasm
-relationship: BFO:0000050 GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0140013
+name: meiotic nuclear division
+def: "One of the two nuclear divisions that occur as part of the meiotic cell cycle." [PMID:9334324]
+is_a: GO:0000280 ! nuclear division
+is_a: GO:1903046 ! meiotic cell cycle process
+intersection_of: GO:0000280 ! nuclear division
+intersection_of: BFO:0000050 GO:0051321 ! meiotic cell cycle
+
+[Term]
+id: GO:0140014
+name: mitotic nuclear division
+def: "A mitotic cell cycle process comprising the steps by which the nucleus of a eukaryotic cell divides; the process involves condensation of chromosomal DNA into a highly compacted form. Canonically, mitosis produces two daughter nuclei whose chromosome complement is identical to that of the mother cell." [ISBN:0198547684]
+is_a: GO:0000280 ! nuclear division
+is_a: GO:1903047 ! mitotic cell cycle process
+intersection_of: GO:0000280 ! nuclear division
+intersection_of: BFO:0000050 GO:0000278 ! mitotic cell cycle
 
 [Term]
 id: GO:1901360

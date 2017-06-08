@@ -2,6 +2,89 @@ format-version: 1.2
 ontology: to/imports/po_import
 
 [Term]
+id: NCBITaxon:1
+name: root
+synonym: "all" RELATED synonym []
+
+[Term]
+id: NCBITaxon:131221
+name: Streptophytina
+synonym: "Charophyta/Embryophyta group" RELATED synonym []
+synonym: "charophyte/embryophyte group" RELATED synonym []
+is_a: NCBITaxon:35493 ! Streptophyta
+
+[Term]
+id: NCBITaxon:131567
+name: cellular organisms
+synonym: "biota" RELATED synonym []
+is_a: NCBITaxon:1 ! root
+
+[Term]
+id: NCBITaxon:2759
+name: Eukaryota
+synonym: "Eucarya" RELATED synonym []
+synonym: "Eucaryotae" RELATED synonym []
+synonym: "eucaryotes" EXACT genbank_common_name []
+synonym: "Eukarya" RELATED synonym []
+synonym: "Eukaryotae" RELATED synonym []
+synonym: "eukaryotes" EXACT common_name []
+synonym: "eukaryotes" RELATED blast_name []
+is_a: NCBITaxon:131567 ! cellular organisms
+
+[Term]
+id: NCBITaxon:3193
+name: Embryophyta
+synonym: "higher plants" EXACT common_name []
+synonym: "land plants" EXACT common_name []
+synonym: "land plants" RELATED blast_name []
+synonym: "plants" EXACT common_name []
+is_a: NCBITaxon:131221 ! Streptophytina
+
+[Term]
+id: NCBITaxon:33090
+name: Viridiplantae
+synonym: "Chlorobionta" RELATED synonym []
+synonym: "Chlorophyta/Embryophyta group" RELATED synonym []
+synonym: "chlorophyte/embryophyte group" RELATED synonym []
+synonym: "green plants" EXACT common_name []
+synonym: "green plants" RELATED blast_name []
+is_a: NCBITaxon:2759 ! Eukaryota
+
+[Term]
+id: NCBITaxon:3398
+name: Magnoliophyta
+synonym: "Angiospermae" RELATED synonym []
+synonym: "angiosperms" EXACT common_name []
+synonym: "flowering plants" EXACT genbank_common_name []
+synonym: "flowering plants" RELATED blast_name []
+is_a: NCBITaxon:58024 ! Spermatophyta
+
+[Term]
+id: NCBITaxon:35493
+name: Streptophyta
+is_a: NCBITaxon:33090 ! Viridiplantae
+
+[Term]
+id: NCBITaxon:58023
+name: Tracheophyta
+synonym: "vascular plants" EXACT common_name []
+synonym: "vascular plants" RELATED blast_name []
+is_a: NCBITaxon:3193 ! Embryophyta
+
+[Term]
+id: NCBITaxon:58024
+name: Spermatophyta
+synonym: "seed plants" EXACT common_name []
+synonym: "seed plants" RELATED blast_name []
+is_a: NCBITaxon:78536 ! Euphyllophyta
+
+[Term]
+id: NCBITaxon:78536
+name: Euphyllophyta
+synonym: "euphyllophytes" RELATED synonym []
+is_a: NCBITaxon:58023 ! Tracheophyta
+
+[Term]
 id: PO:0000003
 name: whole plant
 def: "A plant structure (PO:0005679) which is a whole organism." [POC:curators]
@@ -29,7 +112,7 @@ synonym: "vine (narrow)" NARROW []
 synonym: "woody clump (narrow)" NARROW [FNA:c1ccca7d-2a98-4a9d-8603-c34b551935e0]
 synonym: "植物体全体 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0009011 ! plant structure
-relationship: RO:0002160 NCBITaxon:33090 {source="cjm"}
+relationship: RO:0002160 NCBITaxon:33090 {source="cjm"} ! Viridiplantae
 
 [Term]
 id: PO:0000004
@@ -252,6 +335,17 @@ synonym: "abscission layer (related)" RELATED []
 synonym: "zona de absici&#243n (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "離層 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0009007 ! portion of plant tissue
+
+[Term]
+id: PO:0000223
+name: shoot axis cortex
+def: "A portion of cortex (PO:0005708) that is part of a shoot axis (PO:0025029)." [ISBN:047124529, POC:curators, POC:Laurel_Cooper]
+synonym: "branch cortex (narrow)" NARROW []
+synonym: "cortex del eje del epiblasto (epiblastema) del tallo (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "portion of shoot axis cortex tissue (exact)" EXACT []
+synonym: "シュート軸皮層 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0005708 ! cortex
+relationship: BFO:0000050 PO:0025029 ! shoot axis
 
 [Term]
 id: PO:0000225
@@ -606,6 +700,22 @@ synonym: "師部、師管 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki
 is_a: PO:0009015 ! portion of vascular tissue
 
 [Term]
+id: PO:0005597
+name: cambium
+def: "A lateral meristem (PO:0020145) that has as part a single layer of cambial initial cells (PO:0000295) and their derivatives, arranged orderly in radial files." [ISBN:047125208]
+synonym: "cambium (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "形成層 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0020145 ! lateral meristem
+
+[Term]
+id: PO:0005598
+name: vascular cambium
+def: "A cambium (PO:0005597) that is located between and gives rise to secondary xylem (PO:0005848) and secondary phloem (PO:0005043)." [ISBN:047125208]
+synonym: "cambium vascular (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "維管束形成層 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0005597 ! cambium
+
+[Term]
 id: PO:0005679
 name: epidermis
 def: "A portion of plant tissue (PO:0009007) composed of epidermal cells (PO:0004013) that develops from the protoderm (PO:0006210) and covers the surface of a plant structure (PO:0009011)." [POC:curators]
@@ -619,6 +729,26 @@ synonym: "portion of epidermal tissue (exact)" EXACT []
 synonym: "表皮 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0009007 ! portion of plant tissue
 relationship: RO:0002202 PO:0006210 ! protoderm
+
+[Term]
+id: PO:0005708
+name: cortex
+def: "A maximal portion of ground tissue (PO:0025059) between the vascular system (PO:0000034) and the epidermis (PO:0005679) in a plant." [POC:curators]
+synonym: "cortex (corteza) (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "portion of cortex tissue (exact)" EXACT []
+synonym: "皮層 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0025059 ! portion of ground tissue
+
+[Term]
+id: PO:0005848
+name: secondary xylem
+def: "A portion of xylem (PO:0005352) tissue that develops from a vascular cambium (PO:0005598)." [ISBN:0471245194]
+synonym: "portion of secondary xylem tissue (exact)" EXACT []
+synonym: "wood (exact)" EXACT []
+synonym: "xilema secundario (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "二次木部 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0005352 ! xylem
+is_a: PO:0025409 ! secondary vascular tissue
 
 [Term]
 id: PO:0006001
@@ -733,8 +863,8 @@ synonym: "rhizodermis (related)" RELATED []
 synonym: "根表皮 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0005679 ! epidermis
 intersection_of: PO:0005679 ! epidermis
-intersection_of: BFO:0000050 NCBITaxon:1
-relationship: BFO:0000050 NCBITaxon:1
+intersection_of: BFO:0000050 NCBITaxon:1 ! root
+relationship: BFO:0000050 NCBITaxon:1 ! root
 
 [Term]
 id: PO:0006039
@@ -935,6 +1065,13 @@ synonym: "A-vegetative stage in rice (related)" RELATED [GRO:0007139]
 synonym: "vegetative in Arabidopsis (related)" RELATED [TAIR:0000305]
 is_a: PO:0028002 ! sporophyte development stage
 relationship: BFO:0000062 PO:0001097 ! plant zygote stage
+
+[Term]
+id: PO:0007520
+name: root development stage
+def: "Stages of development of a root defined by characteristic morphological, structural, histological or other visible features." [GR:Anuradha_Pujar]
+synonym: "root development stage (related)" RELATED []
+is_a: PO:0025339 ! plant organ development stage
 
 [Term]
 id: PO:0008001
@@ -1592,6 +1729,18 @@ relationship: BFO:0000051 PO:0025277 ! pollen sac
 relationship: RO:0002202 PO:0006089 ! anther primordium
 
 [Term]
+id: PO:0009072
+name: plant ovary
+def: "A plant structure (PO:0009011) that is the basal portion of a carpel (PO:0009030) or group of fused carpels (gynoecium; PO:0009062) and encloses the plant ovule(s) (PO:0020003)." [APweb:Glossary, TAIR_curator:Leonore_Reiser]
+synonym: "ovario vegetal (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "Poaceae ovary (narrow)" NARROW []
+synonym: "Zea ovary (narrow)" NARROW []
+synonym: "子房 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0009011 ! plant structure
+relationship: BFO:0000050 PO:0009030 ! carpel
+relationship: RO:0002160 NCBITaxon:3398 {source="GO:0035670"} ! Magnoliophyta
+
+[Term]
 id: PO:0009073
 name: stigma
 def: "A cardinal organ part (PO:0025001), usually apical, that is part of a carpel (PO:0009030) or group of fused carpels on which the pollen (PO:0025281) germinates." [APweb:Glossary, POC:Laurel_Cooper, TAIR_curator:Leonore_Reiser]
@@ -1742,6 +1891,18 @@ is_a: PO:0025004 ! plant axis
 is_a: PO:0025099 ! embryo plant structure
 
 [Term]
+id: PO:0019022
+name: arilloid
+def: "A cardinal part of multi-tissue plant structure (PO:0025498) that is a fleshy outgrowth of a seed (PO:0009010)." [ISBN:9780881928501]
+synonym: "arilli (exact)" EXACT [FNA:a00de34e-9450-4e2a-bbed-9d2cd90ed843]
+synonym: "arillode (narrow)" NARROW [FNA:2343b950-6cbd-4879-b15d-db6804ace6a0]
+synonym: "arillus (exact)" EXACT [FNA:a8b68c3e-3987-4e3b-b776-d180b8d99767]
+synonym: "arilodio (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "種皮附属物,　アリロイド (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0025498 ! cardinal part of multi-tissue plant structure
+relationship: BFO:0000050 PO:0009010 ! seed
+
+[Term]
 id: PO:0020003
 name: plant ovule
 def: "A plant organ (PO:0009008) that has as parts a nucellus (PO:0020020) in which a female gametophyte (PO:0025279) is located, one or two integuments (PO:0020021), and a funicle (PO:0020006)." [POC:curators]
@@ -1806,6 +1967,15 @@ is_a: PO:0025396 ! phyllome lamina
 relationship: BFO:0000050 PO:0025034 ! leaf
 
 [Term]
+id: PO:0020041
+name: stipule
+def: "A cardinal organ part that is an appendage at the base of a vascular leaf." [POC:curators]
+synonym: "est&#237pula (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "托葉 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0025001 ! cardinal organ part
+relationship: BFO:0000050 PO:0009025 ! vascular leaf
+
+[Term]
 id: PO:0020043
 name: compound leaf
 def: "A leaf having two or more distinct leaflets that are evident as such from early in development." [APweb:Glossary]
@@ -1858,6 +2028,14 @@ synonym: "peciolulo (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolf
 synonym: "小葉柄 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0025066 ! stalk
 relationship: BFO:0000050 PO:0020049 ! leaflet
+
+[Term]
+id: PO:0020060
+name: caruncle
+def: "An arilloid that is an outgrowth of a seed next to the micropyle." [ISBN:9780881928501]
+synonym: "car&#250ncula (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "種枕（種阜） (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0019022 ! arilloid
 
 [Term]
 id: PO:0020063
@@ -2016,6 +2194,17 @@ is_a: PO:0009013 ! portion of meristem tissue
 relationship: BFO:0000051 PO:0006210 ! protoderm
 
 [Term]
+id: PO:0020145
+name: lateral meristem
+def: "A portion of meristem (PO:0009013) tissue located parallel to the sides of a shoot axis (PO:0025029) or root (PO:0009005) that participates in lateral growth." [ISBN:047125208]
+synonym: "lateral growth meristem (exact)" EXACT []
+synonym: "meristema lateral (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "secondary meristem (related)" RELATED []
+synonym: "側 分裂組織 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0009013 ! portion of meristem tissue
+relationship: BFO:0000050 PO:0025004 ! plant axis
+
+[Term]
 id: PO:0020148
 name: shoot apical meristem
 def: "A shoot system meristem (PO:0006079) formed at the apex of the shoot axis (PO:0025029), including those originating from an axillary bud meristem (PO:0000232)." [POC:Laurel_Cooper, UMSL_curator:fz]
@@ -2170,6 +2359,16 @@ def: "A phyllome (PO:0006001) that is not associated with a reproductive structu
 synonym: "hoja (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "葉 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0006001 ! phyllome
+
+[Term]
+id: PO:0025059
+name: portion of ground tissue
+def: "Any portion of plant tissue (PO:0009007) other than epidermis (PO:0005679) or vascular tissue (PO:0009015)." [ISBN:0471244554, ISBN:0716710072]
+synonym: "fundamental tissue (exact)" EXACT [ISBN:0471244554]
+synonym: "porci&#243n del tejido fundamental (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "基本組織の一部 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0009007 ! portion of plant tissue
+relationship: RO:0002202 PO:0025594 ! ground meristem
 
 [Term]
 id: PO:0025060
@@ -2379,6 +2578,18 @@ synonym: "葉針(spine leaf?) (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yama
 is_a: PO:0009025 ! vascular leaf
 
 [Term]
+id: PO:0025178
+name: stem epidermis
+def: "A portion of shoot axis epidermis (PO:0000112) that is part of a stem (PO:0009047)." [POC:Laurel_Cooper, POC:Ramona_Walls]
+synonym: "culm epidermis (related)" RELATED []
+synonym: "epidermis del tallo (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "茎表皮 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0000112 ! shoot axis epidermis
+intersection_of: PO:0025178 ! stem epidermis
+intersection_of: BFO:0000050 PO:0020100 ! hypocotyl
+relationship: BFO:0000050 PO:0020100 ! hypocotyl
+
+[Term]
 id: PO:0025179
 name: branch epidermis
 def: "A portion of shoot axis epidermis (PO:0006035) that is part of a branch (PO:0025073)." [POC:Ramona_Walls]
@@ -2388,6 +2599,17 @@ is_a: PO:0000112 ! shoot axis epidermis
 intersection_of: PO:0000112 ! shoot axis epidermis
 intersection_of: BFO:0000050 PO:0025073 ! branch
 relationship: BFO:0000050 PO:0025073 ! branch
+
+[Term]
+id: PO:0025183
+name: leaf stomatal complex
+def: "A phyllome stomatal complex (PO:0025215) that is part of a leaf." [POC:Laurel_Cooper, POC:Ramona_Walls]
+synonym: "complejo estom&#225tico de la hoja (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "leaf epidermal stomatal complex (exact)" EXACT []
+synonym: "leaf epidermis stomatal complex (exact)" EXACT []
+synonym: "葉気孔装置 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0006016 ! leaf epidermis
+is_a: PO:0025215 ! phyllome stomatal complex
 
 [Term]
 id: PO:0025184
@@ -2455,6 +2677,17 @@ synonym: "フィロム維管系 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Ya
 is_a: PO:0000034 ! vascular system
 relationship: BFO:0000050 PO:0006001 ! phyllome
 relationship: BFO:0000050 PO:0025205 ! shoot system vascular system
+
+[Term]
+id: PO:0025215
+name: phyllome stomatal complex
+def: "A stomatal complex (PO:0002000) that is part of a phyllome (PO:0006001)." [POC:Ramona_Walls]
+synonym: "complejo estom&#225tico del filoma (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "phyllome epidermal stomatal complex (exact)" EXACT []
+synonym: "phyllome epidermis stomatal complex (exact)" EXACT []
+synonym: "フィロム 気孔装置  (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0002000 ! stomatal complex
+is_a: PO:0025157 ! phyllome epidermis
 
 [Term]
 id: PO:0025222
@@ -2607,6 +2840,16 @@ is_a: PO:0020037 ! mesocotyl
 relationship: RO:0002202 PO:0025294 ! embryo mesocotyl
 
 [Term]
+id: PO:0025332
+name: disk flower
+def: "A small flower (PO:0009046) in the center of a head-type (capitulum) inflorescence (PO:0009049)." [ISBN:9781842464229]
+synonym: "disc floret (exact)" EXACT [FNA:cec71a8a-8600-4a30-a593-46b2b3dbf892]
+synonym: "disk floret (exact)" EXACT []
+synonym: "flor del disco (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "中心花 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0009046 ! flower
+
+[Term]
 id: PO:0025337
 name: life of whole plant stage
 def: "A maximal whole plant development stage." [POC:curators]
@@ -2622,6 +2865,15 @@ synonym: "etapa de desarrollo de una estructura colectiva de la planta (Spanish,
 synonym: "集合的植物構造の発生過程 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0009012 ! plant structure development stage
 relationship: BFO:0000057 PO:0025007 ! collective plant organ structure
+
+[Term]
+id: PO:0025339
+name: plant organ development stage
+def: "A multi-tissue plant structure development stage (PO:0025571) that has as primary participant a plant organ (PO:0009008) ." [POC:curators, POC:Laurel_Cooper]
+synonym: "etapa de desarrollo de un &#243rgano (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "organ development stage (broad)" BROAD []
+synonym: "植物器官発生過程 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0025571 ! multi-tissue plant structure development stage
 
 [Term]
 id: PO:0025348
@@ -2684,12 +2936,33 @@ intersection_of: BFO:0000050 PO:0006001 ! phyllome
 relationship: BFO:0000050 PO:0006001 ! phyllome
 
 [Term]
+id: PO:0025409
+name: secondary vascular tissue
+def: "A portion of vascular tissue (PO:0009015) that develops from a vascular cambium (PO:0005598)." [ISBN:0471245208]
+synonym: "tejido vascular secundario (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "二次維管組織 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0009015 ! portion of vascular tissue
+intersection_of: PO:0009015 ! portion of vascular tissue
+intersection_of: RO:0002202 PO:0005598 ! vascular cambium
+relationship: RO:0002202 PO:0005598 ! vascular cambium
+
+[Term]
 id: PO:0025413
 name: primary leaf vein
 def: "A leaf lamina vein (PO:0020138) that connects directly to a petiole vascular system (PO:0000052) or a shoot axis vascular system (PO:0000039)." [POC:curators]
 synonym: "vena primaria de la hoja (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "一次葉脈 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0020138 ! leaf lamina vein
+
+[Term]
+id: PO:0025423
+name: plant tissue development stage
+def: "A plant structure development stage (PO:0009012) that has as primary participant a portion of plant tissue (PO:0009007)." [POC:Ramona_Walls]
+synonym: "etapa de desarrollo de tejido vegetal (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "tissue development stage (broad)" BROAD []
+synonym: "植物細胞発生過程 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0009012 ! plant structure development stage
+relationship: BFO:0000057 PO:0009007 ! portion of plant tissue
 
 [Term]
 id: PO:0025430
@@ -2739,6 +3012,19 @@ name: seedling cotyledon
 def: "A cotyledon (PO:0020030) that is part of a whole plant (PO:0000003) in the seedling development stage (PO:0007131)." [POC:curators]
 is_a: PO:0020030 ! cotyledon
 relationship: RO:0002202 PO:0025470 ! plant embryo cotyledon
+
+[Term]
+id: PO:0025476
+name: tuberous root tuber
+def: "A root (PO:0009005) that develops from a tuberous root (PO:0025523) and is further radially enlarged for storage." [POC:curators, POC:Laurel_Cooper]
+synonym: "ra&#237z tubercular (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "root tuber (exact)" EXACT []
+synonym: "storage root (exact)" EXACT []
+synonym: "tuber root (related)" RELATED []
+synonym: "塊茎根の塊茎(Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0009005 ! root
+is_a: PO:0025522 ! tuber
+relationship: RO:0002202 PO:0025523 ! tuberous root
 
 [Term]
 id: PO:0025477
@@ -2890,11 +3176,38 @@ intersection_of: PO:0025060 ! lamina
 intersection_of: BFO:0000050 PO:0009008 ! plant organ
 
 [Term]
+id: PO:0025514
+name: phyllome lamina lobe
+def: "A cardinal organ part (PO:0025001) that is a projection on a phyllome margin (PO:0025018) for which the corresponding phyllome sinus (PO:0025383) extends one quarter or more of the distance to the center of the long axis of the phyllome lamina (PO:0025396)." [JSTOR:2441319]
+synonym: "フィロム葉身裂片 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0025001 ! cardinal organ part
+relationship: BFO:0000050 PO:0025396 ! phyllome lamina
+
+[Term]
+id: PO:0025517
+name: leaf lamina lobe
+def: "A phyllome lobe (PO:0025514) that is a projection on a leaf lamina margin (PO:0025009) for which the corresponding leaf sinus (PO:0025384) extends one quarter or more of the distance to the center of the long axis of the leaf lamina (PO:0020039)." [JSTOR:2441319]
+synonym: "lóbulo de la lámina de la hoja (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "葉身裂片(Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0025514 ! phyllome lamina lobe
+intersection_of: PO:0025514 ! phyllome lamina lobe
+intersection_of: BFO:0000050 PO:0025034 ! leaf
+relationship: BFO:0000050 PO:0025034 ! leaf
+
+[Term]
 id: PO:0025522
 name: tuber
 def: "A plant axis (PO:0025004) that is radially enlarged." [POC:curators]
 synonym: "塊茎 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0025004 ! plant axis
+
+[Term]
+id: PO:0025523
+name: tuberous root
+def: "A root (PO:0009005) that is radially enlarged relative to other lateral roots (PO:0020121) or shoot-borne roots (PO:0000042) on the same plant, but not as enlarged as a tuberous root tuber (PO:0025476)." [POC:curators]
+synonym: "raiz tuberosa (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
+synonym: "塊茎根 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+is_a: PO:0009005 ! root
 
 [Term]
 id: PO:0025527
@@ -2916,6 +3229,12 @@ def: "A shoot system development stage (PO:0025527) that has as primary particip
 is_a: PO:0025527 ! shoot system development stage
 
 [Term]
+id: PO:0025571
+name: multi-tissue plant structure development stage
+def: "A plant structure development stage (PO:0009012) that has as primary participant a multi-tissue plant structure (PO:0025496)." [POC:Laurel_Cooper]
+is_a: PO:0009012 ! plant structure development stage
+
+[Term]
 id: PO:0025593
 name: shoot-borne internode root
 def: "A shoot-borne root (PO:0000042) that arises from a shoot axis internode (PO:0005005)." [POC:Laurel_Cooper]
@@ -2923,6 +3242,12 @@ synonym: "adventitious root (broad)" BROAD []
 synonym: "internode root  (related)" RELATED []
 is_a: PO:0000042 ! shoot-borne root
 relationship: RO:0002202 PO:0005005 ! shoot axis internode
+
+[Term]
+id: PO:0025594
+name: ground meristem
+def: "A portion of meristem tissue (PO:0009013) that gives rise to a portion of ground tissue (PO:0025059)." [POC:curators, POC:Laurel_Cooper]
+is_a: PO:0009013 ! portion of meristem tissue
 
 [Term]
 id: PO:0025597
@@ -2973,6 +3298,12 @@ id: PO:0025606
 name: native plant cell
 def: "A plant cell (PO:0009002) that is either part of a multicellular whole plant (PO:0000003) 'in vivo' or a unicellular organism 'in natura' (i.e. part of a natural environment)." [POC:Laurel_Cooper]
 is_a: PO:0009002 ! plant cell
+
+[Term]
+id: PO:0025612
+name: stem cortex
+def: "A portion of shoot axis cortex (PO:0000223) that is part of a stem (PO:0009047)." [POC:Laurel_Cooper]
+is_a: PO:0000223 ! shoot axis cortex
 
 [Term]
 id: PO:0028002
