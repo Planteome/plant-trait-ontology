@@ -1,0 +1,34 @@
+pattern_name: to/responsivityNoEO
+classes:
+  sensitivity toward: PATO_0000085
+  whole plant: PO_0000003
+  plant treatment: EO_0001001
+
+relations:
+  inheres in: RO_0000052
+  realized in response to: RO_0009501
+  has exposure stimulus: RO_0002244
+    
+vars: 
+  stressor: "'Thing'"
+
+name:
+  text: "responsivity to %s"
+  vars:
+    - stressor
+    
+annotations: 
+  - property: oio:hasExactSynonym
+    text: "%s"
+    vars:
+      - iri name
+
+def: 
+  text: "The plant responsivity to %s"
+  vars:
+    - stressor
+    
+equivalentTo: 
+  text: "'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some %s) and 'inheres in' some 'whole plant'"
+  vars:
+    - stressor
