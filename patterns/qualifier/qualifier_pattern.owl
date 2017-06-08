@@ -1,0 +1,49 @@
+Prefix: : <http://purl.obolibrary.org/obo/>
+Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
+Prefix: DOSDP: <http://geneontology.org/foo/>
+Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: EO: <http://purl.obolibrary.org/obo/EO_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: TO: <http://purl.obolibrary.org/obo/TO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+
+ ## Auto-generated
+
+Ontology: <http://purl.obolibrary.org/obo/patterns/qualifer/>
+AnnotationProperty: IAO:0000115
+AnnotationProperty: to/eq/qualifier
+AnnotationProperty: to/eq/entity
+AnnotationProperty: to/eq/attribute
+AnnotationProperty: DOSDP:applies-pattern
+ObjectProperty: RO_0000052 ## inheres in
+ObjectProperty: RO_0000086 ## has_quality
+## Auto-generated classes
+
+Class: PATO:0001824 ## dry
+Class: PO:0009005 ## root
+Class: PATO:0000128 ## weight
+## {"qualifier": "PATO:0001824", "entity": "PO:0009005", "attribute": "PATO:0000128"}
+Class: TO:0000279
+ Annotations: rdfs:label "root weight"
+ Annotations: IAO:0000115 "The weight of a dry root."
+ EquivalentTo: PATO:0000128 and RO_0000052 some (PO:0009005 and RO_0000086 some PATO:0001824) ## weight and 'inheres in' some (root and 'has_quality' some dry)
+
+Class: PATO:0001824 ## dry
+Class: PO:0009047 ## stem
+Class: PATO:0000128 ## weight
+## {"qualifier": "PATO:0001824", "entity": "PO:0009047", "attribute": "PATO:0000128"}
+Class: TO:0000952
+ Annotations: rdfs:label "stem weight"
+ Annotations: IAO:0000115 "The weight of a dry stem."
+ EquivalentTo: PATO:0000128 and RO_0000052 some (PO:0009047 and RO_0000086 some PATO:0001824) ## weight and 'inheres in' some (stem and 'has_quality' some dry)
+
+Class: PATO:0001701 ## mature
+Class: PO:0025034 ## leaf
+Class: PATO:0001241 ## physical object quality
+## {"qualifier": "PATO:0001701", "entity": "PO:0025034", "attribute": "PATO:0001241"}
+Class: TO:0000831
+ Annotations: rdfs:label "adult leaf morphology trait"
+ Annotations: IAO:0000115 "The physical object quality of a mature leaf."
+ EquivalentTo: PATO:0001241 and RO_0000052 some (PO:0025034 and RO_0000086 some PATO:0001701) ## physical object quality and 'inheres in' some (leaf and 'has_quality' some mature)
