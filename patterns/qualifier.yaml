@@ -1,14 +1,16 @@
 pattern_name: to/eq
-classes: []
+classes:
+  plant structure: PO_0009011
+  quality: PATO_0000001
 
 relations:
   has_quality: RO_0000086
   inheres in: RO_0000052
     
 vars: 
-  attribute: "'Thing'"
-  entity: "'Thing'"
-  qualifier: "'Thing'"
+  attribute: "'quality'"
+  entity: "'plant structure'"
+  qualifier: "'quality'"
 
 name:
   text: "%s %s"
@@ -16,13 +18,13 @@ name:
     - entity
     - attribute
 
-def: 
-  text: "The %s of a %s %s."
-  vars:
-    - attribute
-    - qualifier
-    - entity
-    
+#def: 
+#  text: "The %s of a %s %s."
+#  vars:
+#    - attribute
+#    - qualifier
+#    - entity
+#    
 equivalentTo: 
   text: "%s and 'inheres in' some (%s and 'has_quality' some %s)"
   vars:

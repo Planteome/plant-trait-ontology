@@ -3,6 +3,9 @@ classes:
   sensitivity toward: PATO_0000085
   whole plant: PO_0000003
   plant treatment: EO_0001001
+  taxon: NCBITaxon_1
+  chemical entity: CHEBI_24431
+  environmental material: ENVO_00010483
 
 relations:
   inheres in: RO_0000052
@@ -10,24 +13,24 @@ relations:
   has exposure stimulus: RO_0002244
     
 vars: 
-  stressor: "'Thing'"
+  stressor: "'taxon' or 'chemical entity' or 'environmental material'"
 
 name:
-  text: "responsivity to %s"
+  text: "response to %s trait"
   vars:
     - stressor
     
-annotations: 
-  - property: oio:hasExactSynonym
-    text: "%s"
-    vars:
-      - iri name
-
-def: 
-  text: "The plant responsivity to %s"
-  vars:
-    - stressor
-    
+#annotations: 
+#  - property: oio:hasExactSynonym
+#    text: "%s"
+#    vars:
+#      - iri name
+#
+#def: 
+#  text: "The plant responsivity to %s"
+#  vars:
+#    - stressor
+#    
 equivalentTo: 
   text: "'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some %s) and 'inheres in' some 'whole plant'"
   vars:

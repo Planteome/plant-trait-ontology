@@ -1,13 +1,15 @@
 pattern_name: to/morphology
-classes: []
+classes:
+  plant structure: PO_0009011
+  quality: PATO_0000001
 
 relations:
   part of: BFO_0000050
   inheres in: RO_0000052
     
 vars: 
-  attribute: "'Thing'"
-  entity: "'Thing'"
+  attribute: "'quality'"
+  entity: "'plant structure'"
 
 name:
   text: "%s %s"
@@ -15,11 +17,11 @@ name:
     - entity
     - attribute
 
-def: 
-  text: "The morphological quality of a %s."
-  vars:
-    - entity
-    
+#def: 
+#  text: "The morphological quality of a %s."
+#  vars:
+#    - entity
+#    
 equivalentTo: 
   text: "%s and 'inheres in' some %s"
   vars:

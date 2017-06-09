@@ -1,14 +1,16 @@
 pattern_name: to/ratio
-classes: http://www.w3.org/2002/07/owl#Thing
+classes:
+  plant trait: TO_0000387
+  quality: PATO_0000001
 
 relations:
   has dividend quality: TO_has_dividend_quality
   has divisor quality: TO_has_divisor_quality
     
 vars: 
-  dividend: "'Thing'"
-  divisor: "'Thing'"
-  attribute: "'Thing'"
+  dividend: "'quality' or 'plant trait'"
+  divisor: "'quality'  or 'plant trait'"
+  attribute: "'quality'"
 
 name:
   text: "%s to %s ratio"
@@ -16,12 +18,12 @@ name:
     - dividend
     - divisor
 
-def: 
-  text: "The proportion of %s in %s."
-  vars:
-    - dividend
-    - divisor
-    
+#def: 
+#  text: "The proportion of %s in %s."
+#  vars:
+#    - dividend
+#    - divisor
+#    
 equivalentTo: 
   text: "%s and 'has dividend quality' some %s and 'has divisor quality' some %s"
   vars:
