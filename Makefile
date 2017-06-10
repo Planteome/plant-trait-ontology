@@ -61,43 +61,43 @@ patterns/eq/%_pattern.owl: patterns/eq/%.tsv
 	patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/eq/$*.tsv -p patterns/eq.yaml -n $@ > $@
 
 patterns/eq/%_pattern.obo: patterns/eq/%_pattern.owl
-	$(OWLTOOLS) $< -o -f obo $@
+	$(ROBOT) convert -i $< -f obo -o $@
 
 patterns/morphology/%_pattern.owl: patterns/morphology/%.tsv
 	patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/morphology/$*.tsv -p patterns/morphology.yaml -n $@ > $@
 
 patterns/morphology/%_pattern.obo: patterns/morphology/%_pattern.owl
-	$(OWLTOOLS) $< -o -f obo $@
+	$(ROBOT) convert -i $< -f obo -o $@
 
 patterns/responsivity/%_pattern.owl: patterns/responsivity/%.tsv
 	patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/responsivity/$*.tsv -p patterns/responsivity.yaml -n $@ > $@
 
 patterns/responsivity/%_pattern.obo: patterns/responsivity/%_pattern.owl
-	$(OWLTOOLS) $< -o -f obo $@
+	$(ROBOT) convert -i $< -f obo -o $@
 
 patterns/composition/%_pattern.owl: patterns/composition/%.tsv
 	patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/composition/$*.tsv -p patterns/composition.yaml -n $@ > $@
 
 patterns/composition/%_pattern.obo: patterns/composition/%_pattern.owl
-	$(OWLTOOLS) $< -o -f obo $@
+	$(ROBOT) convert -i $< -f obo -o $@
 
 patterns/phenotype/%_pattern.owl: patterns/phenotype/%.tsv
 	patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/phenotype/$*.tsv -p patterns/phenotype.yaml -n $@ > $@
 
 patterns/phenotype/%_pattern.obo: patterns/phenotype/%_pattern.owl
-	$(OWLTOOLS) $< -o -f obo $@
+	$(ROBOT) convert -i $< -f obo -o $@
 
 patterns/ratio/%_pattern.owl: patterns/ratio/%.tsv
 	patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/ratio/$*.tsv -p patterns/ratio.yaml -n $@ > $@
 
 patterns/ratio/%_pattern.obo: patterns/ratio/%_pattern.owl
-	$(OWLTOOLS) $< -o -f obo $@
+	$(ROBOT) convert -i $< -f obo -o $@
 
 patterns/responsivityNoEO/%_pattern.owl: patterns/responsivityNoEO/%.tsv
 	patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/responsivityNoEO/$*.tsv -p patterns/responsivityNoEO.yaml -n $@ > $@
 
 patterns/responsivityNoEO/%_pattern.obo: patterns/responsivityNoEO/%_pattern.owl
-	$(OWLTOOLS) $< -o -f obo $@
+	$(ROBOT) convert -i $< -f obo -o $@
 
 
 #merge pattern files
@@ -111,7 +111,7 @@ PATTERNS += $(patsubst %.tsv, --input %_pattern.owl, $(wildcard patterns/respons
 
 merge:
 	$(ROBOT) merge $(PATTERNS) --output patterns/merge_patterns.owl
-	$(OWLTOOLS) patterns/merge_patterns.owl -o -f obo patterns/merge_patterns.obo
+	$(ROBOT) convert -i patterns/merge_patterns.owl -f -o obo patterns/merge_patterns.obo
 
 #print var function
 print-%:
