@@ -111,7 +111,7 @@ PATTERNS += $(patsubst %.tsv, --input %_pattern.owl, $(wildcard patterns/respons
 
 merge:
 	$(ROBOT) merge $(PATTERNS) --output patterns/merge_patterns.owl
-	$(ROBOT) convert -i patterns/merge_patterns.owl -f -o obo patterns/merge_patterns.obo
+	$(ROBOT) convert -i patterns/merge_patterns.owl -f obo -o patterns/merge_patterns.obo
 
 #print var function
 print-%:

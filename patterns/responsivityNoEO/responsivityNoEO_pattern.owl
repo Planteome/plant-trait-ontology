@@ -2,14 +2,14 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: TO: <http://purl.obolibrary.org/obo/TO_>
 Prefix: EO: <http://purl.obolibrary.org/obo/EO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
 Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
 Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: TO: <http://purl.obolibrary.org/obo/TO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
 
  ## Auto-generated
 
@@ -17,14 +17,14 @@ Ontology: <http://purl.obolibrary.org/obo/patterns/responsivityNoEO/responsivity
 AnnotationProperty: IAO:0000115
 AnnotationProperty: to/responsivityNoEO/stressor
 AnnotationProperty: DOSDP:applies-pattern
-Class: ENVO_00010483 ## environmental material
-Class: EO_0001001 ## plant treatment
-Class: NCBITaxon_1 ## taxon
 Class: PO_0000003 ## whole plant
 Class: PATO_0000085 ## sensitivity toward
 Class: CHEBI_24431 ## chemical entity
-ObjectProperty: RO_0000052 ## inheres in
+Class: EO_0001001 ## plant treatment
+Class: ENVO_00010483 ## environmental material
+Class: NCBITaxon_1 ## taxon
 ObjectProperty: RO_0009501 ## realized in response to
+ObjectProperty: RO_0000052 ## inheres in
 ObjectProperty: RO_0002244 ## has exposure stimulus
 ## Auto-generated classes
 
@@ -33,12 +33,6 @@ Class: CHEBI:27744 ## glyphosate
 Class: TO:0005006
  Annotations: rdfs:label "response to glyphosate trait"
  EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:27744) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some glyphosate) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:49637 ## hydrogen atom
-## {"stressor": "CHEBI:49637"}
-Class: TO:0000012
- Annotations: rdfs:label "response to hydrogen atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:49637) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some hydrogen atom) and 'inheres in' some 'whole plant'
 
 Class: CHEBI:52136 ## phosphinothricin
 ## {"stressor": "CHEBI:52136"}
@@ -87,213 +81,3 @@ Class: NCBITaxon:87749 ## Monographella albescens
 Class: TO:0000378
  Annotations: rdfs:label "response to Monographella albescens trait"
  EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some NCBITaxon:87749) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Monographella albescens) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:17632 ## nitrate
-## {"stressor": "CHEBI:17632"}
-Class: TO:0020098
- Annotations: rdfs:label "response to nitrate trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:17632) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some nitrate) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:18153 ## ethene
-## {"stressor": "CHEBI:18153"}
-Class: TO:0000173
- Annotations: rdfs:label "response to ethene trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:18153) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some ethene) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:18248 ## iron atom
-## {"stressor": "CHEBI:18248"}
-Class: TO:0000224
- Annotations: rdfs:label "response to iron atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:18248) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some iron atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:18291 ## manganese atom
-## {"stressor": "CHEBI:18291"}
-Class: TO:0000073
- Annotations: rdfs:label "response to manganese atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:18291) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some manganese atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:18292 ## jasmonic acid
-## {"stressor": "CHEBI:18292"}
-Class: TO:0000172
- Annotations: rdfs:label "response to jasmonic acid trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:18292) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some jasmonic acid) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:22152 ## 2-cis-abscisic acid
-## {"stressor": "CHEBI:22152"}
-Class: TO:0000615
- Annotations: rdfs:label "response to 2-cis-abscisic acid trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:22152) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some 2-cis-abscisic acid) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:22676 ## auxin
-## {"stressor": "CHEBI:22676"}
-Class: TO:0000163
- Annotations: rdfs:label "response to auxin trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:22676) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some auxin) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:22984 ## calcium atom
-## {"stressor": "CHEBI:22984"}
-Class: TO:0000006
- Annotations: rdfs:label "response to calcium atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:22984) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some calcium atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:23116 ## chlorine atom
-## {"stressor": "CHEBI:23116"}
-Class: TO:0000029
- Annotations: rdfs:label "response to chlorine atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:23116) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some chlorine atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:23530 ## cytokinin
-## {"stressor": "CHEBI:23530"}
-Class: TO:0000167
- Annotations: rdfs:label "response to cytokinin trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:23530) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some cytokinin) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:24061 ## fluorine atom
-## {"stressor": "CHEBI:24061"}
-Class: TO:0000038
- Annotations: rdfs:label "response to fluorine atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:24061) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some fluorine atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:24527 ## herbicide
-## {"stressor": "CHEBI:24527"}
-Class: TO:0000058
- Annotations: rdfs:label "response to herbicide trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:24527) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some herbicide) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:24781 ## imidazolinone
-## {"stressor": "CHEBI:24781"}
-Class: TO:0000711
- Annotations: rdfs:label "response to imidazolinone trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:24781) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some imidazolinone) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:24852 ## insecticide
-## {"stressor": "CHEBI:24852"}
-Class: TO:0000182
- Annotations: rdfs:label "response to insecticide trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:24852) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some insecticide) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:24859 ## iodine atom
-## {"stressor": "CHEBI:24859"}
-Class: TO:0000033
- Annotations: rdfs:label "response to iodine atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:24859) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some iodine atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:24866 ## salt
-## {"stressor": "CHEBI:24866"}
-Class: TO:0000429
- Annotations: rdfs:label "response to salt trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:24866) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some salt) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:25107 ## magnesium atom
-## {"stressor": "CHEBI:25107"}
-Class: TO:0000010
- Annotations: rdfs:label "response to magnesium atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:25107) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some magnesium atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:25555 ## nitrogen atom
-## {"stressor": "CHEBI:25555"}
-Class: TO:0000011
- Annotations: rdfs:label "response to nitrogen atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:25555) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some nitrogen atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:25805 ## oxygen atom
-## {"stressor": "CHEBI:25805"}
-Class: TO:0000015
- Annotations: rdfs:label "response to oxygen atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:25805) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some oxygen atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:25944 ## pesticide
-## {"stressor": "CHEBI:25944"}
-Class: TO:0002649
- Annotations: rdfs:label "response to pesticide trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:25944) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some pesticide) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:26216 ## potassium atom
-## {"stressor": "CHEBI:26216"}
-Class: TO:0000008
- Annotations: rdfs:label "response to potassium atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:26216) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some potassium atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:26833 ## sulfur atom
-## {"stressor": "CHEBI:26833"}
-Class: TO:0000007
- Annotations: rdfs:label "response to sulfur atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:26833) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some sulfur atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:27363 ## zinc atom
-## {"stressor": "CHEBI:27363"}
-Class: TO:0000351
- Annotations: rdfs:label "response to zinc atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:27363) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some zinc atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:27560 ## boron atom
-## {"stressor": "CHEBI:27560"}
-Class: TO:0000018
- Annotations: rdfs:label "response to boron atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:27560) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some boron atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:27568 ## selenium atom
-## {"stressor": "CHEBI:27568"}
-Class: TO:0000032
- Annotations: rdfs:label "response to selenium atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:27568) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some selenium atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:27573 ## silicon atom
-## {"stressor": "CHEBI:27573"}
-Class: TO:0000031
- Annotations: rdfs:label "response to silicon atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:27573) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some silicon atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:27594 ## carbon atom
-## {"stressor": "CHEBI:27594"}
-Class: TO:0000001
- Annotations: rdfs:label "response to carbon atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:27594) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some carbon atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:27638 ## cobalt atom
-## {"stressor": "CHEBI:27638"}
-Class: TO:0000016
- Annotations: rdfs:label "response to cobalt atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:27638) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some cobalt atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:28073 ## chromium atom
-## {"stressor": "CHEBI:28073"}
-Class: TO:0000034
- Annotations: rdfs:label "response to chromium atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:28073) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some chromium atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:28659 ## phosphorus atom
-## {"stressor": "CHEBI:28659"}
-Class: TO:0000102
- Annotations: rdfs:label "response to phosphorus atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:28659) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some phosphorus atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:28685 ## molybdenum atom
-## {"stressor": "CHEBI:28685"}
-Class: TO:0000025
- Annotations: rdfs:label "response to molybdenum atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:28685) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some molybdenum atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:28694 ## copper atom
-## {"stressor": "CHEBI:28694"}
-Class: TO:0000021
- Annotations: rdfs:label "response to copper atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:28694) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some copper atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:28984 ## aluminium atom
-## {"stressor": "CHEBI:28984"}
-Class: TO:0000354
- Annotations: rdfs:label "response to aluminium atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:28984) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some aluminium atom) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:37527 ## acid
-## {"stressor": "CHEBI:37527"}
-Class: TO:0000479
- Annotations: rdfs:label "response to acid trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:37527) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some acid) and 'inheres in' some 'whole plant'
-
-Class: CHEBI:49637 ## hydrogen atom
-## {"stressor": "CHEBI:49637"}
-Class: TO:0000012
- Annotations: rdfs:label "response to hydrogen atom trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:49637) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some hydrogen atom) and 'inheres in' some 'whole plant'
