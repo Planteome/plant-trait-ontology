@@ -2158,7 +2158,7 @@ is_a: TO:0000580 ! cytoplasmic male sterility
 [Term]
 id: TO:0000233
 name: root volume
-def: "Is an indirect measure of root mass or density. Quantified in terms of cubic centimeters by water displacement method." [Gramene:pankaj_jaiswal, GR_REF:6917]
+def: "Is an indirect measure of root mass or density. Quantified in terms of cubic centimeters by water displacement method." [GR_REF:6917, Gramene:pankaj_jaiswal]
 synonym: "RTVOL" RELATED []
 is_a: TO:0000043 ! root morphology trait
 intersection_of: PATO:0000918 ! volume
@@ -6025,7 +6025,7 @@ xref: PATO:0001334
 xref: TO_GIT:243
 is_a: TO:0000921 ! infructescence axis morphology trait
 intersection_of: PATO:0001334 ! diameter
-intersection_of: inheres_in PO:0006505 ! central spike of ear inflorescence
+intersection_of: inheres_in PO:0006505 ! first order ear inflorescence axis
 relationship: part_of TO:0000433 ! ear diameter
 
 [Term]
@@ -7704,7 +7704,7 @@ def: "A cardinal organ part morphology trait (TO:0000754) which is a quality of 
 xref: TO_GIT:142
 is_a: TO:0000754 ! cardinal organ part morphology trait
 intersection_of: PATO:0001241 ! physical object quality
-intersection_of: inheres_in PO:0025005 ! organ margin
+intersection_of: inheres_in PO:0025005 ! plant organ margin
 created_by: moorel
 creation_date: 2012-07-03T12:54:18Z
 
@@ -9375,6 +9375,48 @@ intersection_of: inheres_in PO:0009061 ! androecium
 created_by: ethan_johnson
 
 [Term]
+id: TO:0000996
+name: flag leaf area
+namespace: plant-trait-ontology
+def: "A flag leaf anatomy and morphology trait (TO:0000832) which is the area of the flag leaf (PO:0020103)." [PMID:26841834] {created_by="TO:cooperl"}
+xref: TO_GIT:415
+is_a: TO:0000832 ! flag leaf morphology trait
+intersection_of: PATO:0001323 ! area
+intersection_of: inheres_in PO:0020103 ! flag leaf
+creation_date: 2017-07-10
+
+[Term]
+id: TO:0000997
+name: polished grain length
+namespace: plant-trait-ontology
+def: "A grain length (TO:0000734) measured on a dehulled, polished grain." [PMID:26841834] {created_by="TO:cooperl"}
+synonym: "white rice grain length (narrow)" NARROW []
+xref: TO_GIT:415
+is_a: TO:0000734 ! grain length
+created_by: TO:cooperl
+creation_date: 2017-07-10
+
+[Term]
+id: TO:0000998
+name: polished grain width
+namespace: plant-trait-ontology
+def: "A grain width (TO:0000975) which is the width of the dehulled, polished grain." [PMID:26841834] {created_by="TO:cooperl"}
+synonym: "white rice grain width (narrow)" NARROW []
+xref: TO_GIT:415
+is_a: TO:0000975 ! grain width
+creation_date: 2017-07-10
+
+[Term]
+id: TO:0000999
+name: polished grain length to width ratio
+namespace: plant-trait-ontology
+def: "A grain length to width ratio (TO:0002731) measured on a dehulled, polished grain." [PMID:26841834] {created_by="TO:cooperl"}
+synonym: "white rice grain length to width ratio (narrow)" NARROW []
+xref: TO_GIT:415
+is_a: TO:0002731 ! grain length to width ratio
+creation_date: 2017-07-10
+
+[Term]
 id: TO:0001000
 name: glume cover
 def: "A glume morphology trait (TO:0000869) which is amount the glume (PO:0009039) covers the caryopsis. Often measured as percentage." [Gramene:pankaj_jaiswal, PO:0009039, TO:moorel]
@@ -10092,7 +10134,7 @@ is_a: TO:0000871 ! fruit yield trait
 [Term]
 id: TO:0002641
 name: acid detergent fiber
-def: "The percentage of highly indigestible or slowly digestible fiber in a feed or forage. Acid detergent fiber contains cellulose as well as silica and lignin which are associated with low digestibility." [Gramene:pankaj_jaiswal, GrainGenes_trait:Acid_Detergent_Fiber, web:http\://www.foragetesting.org/lab_procedure/sectionB/4/part4.1.htm]
+def: "The percentage of highly indigestible or slowly digestible fiber in a feed or forage. Acid detergent fiber contains cellulose as well as silica and lignin which are associated with low digestibility." [GrainGenes_trait:Acid_Detergent_Fiber, Gramene:pankaj_jaiswal, web:http\://www.foragetesting.org/lab_procedure/sectionB/4/part4.1.htm]
 comment: The method typically uses acidified quaternary detergent solution to dissolve cell solubles, hemicellulose and soluble minerals leaving a residue of cellulose, lignin, and heat damaged protein and a portion of cell wall protein and minerals (ash). Acid detergent fiber is determined gravimetrically as the residue remaining after extraction. The lower the acid detergent fiber, the more digestible the feed is and the higher the energy value of the feed.
 synonym: "ACIDDETFIBR" RELATED []
 synonym: "ADF" RELATED []
@@ -10107,14 +10149,14 @@ is_a: TO:0000597 ! quality trait
 [Term]
 id: TO:0002643
 name: carbon isotope discrimination
-def: "It is a measure of the C isotopic composition in plant material relative to the value of the same ratio in the air of the environment where the plant is grown." [Gramene:pankaj_jaiswal, GrainGenes_trait:Carbon_isotope_discrimination, PMID:11756262]
+def: "It is a measure of the C isotopic composition in plant material relative to the value of the same ratio in the air of the environment where the plant is grown." [GrainGenes_trait:Carbon_isotope_discrimination, Gramene:pankaj_jaiswal, PMID:11756262]
 synonym: "CBISOTPDISC" RELATED []
 is_a: TO:0000465 ! mineral and ion content related trait
 
 [Term]
 id: TO:0002644
 name: dry matter digestibility
-def: "Expressed as a percent, is a measure of the dry matter content of forage or feed that is retained in the animal body." [GR:iyt, Gramene:pankaj_jaiswal, GrainGenes_trait:Dry_matter_digestibility]
+def: "Expressed as a percent, is a measure of the dry matter content of forage or feed that is retained in the animal body." [GR:iyt, GrainGenes_trait:Dry_matter_digestibility, Gramene:pankaj_jaiswal]
 synonym: "DMATTDIGAB" RELATED []
 is_a: TO:0000597 ! quality trait
 
@@ -10129,7 +10171,7 @@ is_a: TO:0000685 ! fruit tenderness
 [Term]
 id: TO:0002646
 name: flour particle size
-def: "Size of flour particles determined after grinding the grains. The size depends on the length and type of grinding." [Gramene:pankaj_jaiswal, GrainGenes_trait:Particle_size]
+def: "Size of flour particles determined after grinding the grains. The size depends on the length and type of grinding." [GrainGenes_trait:Particle_size, Gramene:pankaj_jaiswal]
 comment: It affects the water absorption, dough handling characteristics and loaf volume while cooking.
 synonym: "FLRPARTSZ" RELATED []
 is_a: TO:0000667 ! cooking or brewing quality
@@ -10137,14 +10179,14 @@ is_a: TO:0000667 ! cooking or brewing quality
 [Term]
 id: TO:0002647
 name: starch digestibility
-def: "Expressed as a percent, is a measure of the starch content of forage or feed that is retained in the animal body." [Gramene:pankaj_jaiswal, GrainGenes_trait:Starch_digestibility]
+def: "Expressed as a percent, is a measure of the starch content of forage or feed that is retained in the animal body." [GrainGenes_trait:Starch_digestibility, Gramene:pankaj_jaiswal]
 synonym: "STARCHDIG" RELATED []
 is_a: TO:0000597 ! quality trait
 
 [Term]
 id: TO:0002648
 name: water absorption by seed
-def: "A measure of the relative water absorption after soaking a known amount (weight) of seed." [Gramene:pankaj_jaiswal, GrainGenes_trait:Water_absorption]
+def: "A measure of the relative water absorption after soaking a known amount (weight) of seed." [GrainGenes_trait:Water_absorption, Gramene:pankaj_jaiswal]
 synonym: "WABSORPSD" RELATED []
 is_a: TO:0000931 ! seed quality trait
 
@@ -13481,6 +13523,10 @@ id: from_country
 name: from country
 
 [Typedef]
+id: has_absolute_phenotype
+name: has absolute phenotype
+
+[Typedef]
 id: has_dividend_entity
 name: has dividend entity
 
@@ -13502,14 +13548,6 @@ name: has part
 xref: BFO:0000051
 
 [Typedef]
-id: has_relative_phenotype
-name: has relative phenotype
-
-[Typedef]
-id: has_absolute_phenotype
-name: has absolute phenotype
-
-[Typedef]
 id: has_phenotype_score
 name: has phenotype score
 
@@ -13520,6 +13558,10 @@ name: has phenotype variable
 [Typedef]
 id: has_ratio_quality
 name: has ratio quality
+
+[Typedef]
+id: has_relative_phenotype
+name: has relative phenotype
 
 [Typedef]
 id: inheres_in
