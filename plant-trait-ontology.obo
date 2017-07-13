@@ -5438,18 +5438,14 @@ is_a: TO:0000465 ! mineral and ion content trait
 [Term]
 id: TO:0000608
 name: sodium content
-def: "The total sodium ion content measured in a plant or a plant part." [Gramene:pankaj_jaiswal]
+def: "A mineral and ion content trait (TO:0000465) which is the sodium cation (CHEBI:29101) composition in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
 is_a: TO:0000465 ! mineral and ion content trait
-intersection_of: PATO:0000070 ! amount
-intersection_of: inheres_in CHEBI:26708 ! sodium atom
 
 [Term]
 id: TO:0000609
 name: potassium content
-def: "The total potassium ion content measured in a plant or a plant part." [Gramene:pankaj_jaiswal]
+def: "A mineral and ion content trait (TO:0000465) which is the potassium cation (CHEBI:29103) composition in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
 is_a: TO:0000465 ! mineral and ion content trait
-intersection_of: PATO:0000070 ! amount
-intersection_of: inheres_in CHEBI:26216 ! potassium atom
 
 [Term]
 id: TO:0000610
@@ -9606,13 +9602,9 @@ is_a: TO:0001021 ! days to inflorescence exsertion
 [Term]
 id: TO:0001024
 name: phosphorus content
-def: "A mineral and ion content trait (TO:0000465) which is the amount of phosphorous (CHEBI:28659) in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
+def: "A mineral and ion content trait (TO:0000465) which is the phosphorus cation (CHEBI:33467) composition in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
 synonym: "PHOCN" RELATED []
-xref: CHEBI:28659
 is_a: TO:0000465 ! mineral and ion content trait
-intersection_of: PATO:0000070 ! amount
-intersection_of: inheres_in CHEBI:28659 ! phosphorus atom
-intersection_of: occurs_in PO:0009011 ! plant structure
 created_by: jaiswalp
 
 [Term]
@@ -12235,14 +12227,14 @@ is_a: TO:0000396 ! grain yield trait
 
 [Term]
 id: TO:0020003
-name: shoot potassium content
-def: "The percent content of potassium ion measured in the shoots of the plant." [GR:cwt, ICRIS:019]
+name: shoot system potassium content
+def: "A potassium content trait (TO:0000609) which is the potassium cation (CHEBI:29103) composition in a shoot system (PO:0009006)." [GR:cwt, ICRIS:019, TO:cooperl]
 is_a: TO:0000609 ! potassium content
 
 [Term]
 id: TO:0020004
-name: shoot sodium content
-def: "The percent sodium ion content measured in the shoot." [GR:cwt, ICRIS:018]
+name: shoot system sodium content
+def: "A sodium content trait (TO:0000608) which is the sodium cation (CHEBI:29101) composition in a shoot system (PO:0009006)." [GR:cwt, ICRIS:018, TO:cooperl]
 is_a: TO:0000608 ! sodium content
 
 [Term]
@@ -13085,8 +13077,8 @@ creation_date: 2011-08-19T04:31:40Z
 
 [Term]
 id: TO:0020114
-name: shoot phosphorus content
-def: "Amount of phosphorus in the shoot." [TO:contributors]
+name: shoot system phosphorus content
+def: "A phosphorus content trait (TO:0001024) which is the phosphorus cation (CHEBI:33467) composition in a shoot system (PO:0009006)." [TO:contributors]
 is_a: TO:0001024 ! phosphorus content
 created_by: jaiswalp
 creation_date: 2011-08-19T04:35:33Z
@@ -13636,6 +13628,14 @@ synonym: "root I content (related)" RELATED []
 is_a: TO:0001046 ! iodine content trait
 
 [Term]
+id: TO:1000036
+name: root system potassium content
+def: "A potassium content trait (TO:0000609) which is the potassium cation (CHEBI:29103) composition in a root system (PO:0025025)." [PMID:26841834, TO:cooperl]
+synonym: "root K content (related)" RELATED []
+xref: TO_GIT:412
+is_a: TO:0000609 ! potassium content
+
+[Term]
 id: TO:1000037
 name: root system lithium content
 def: "A lithium content trait (TO:0006042) which is the lithium cation (CHEBI:49713) composition in a root system (PO:0025025)." [PMID:26841834, TO:cooperl]
@@ -13674,6 +13674,14 @@ def: "A nickel content trait (TO:0006051) which is the nickel cation (CHEBI:2551
 synonym: "root Ni content (related)" RELATED []
 xref: TO_GIT:412
 is_a: TO:0006051 ! nickel content
+
+[Term]
+id: TO:1000043
+name: root system phosphorus content
+def: "A phosphorus content trait TO:0001024 which is the phosphorus cation (CHEBI:33467) composition in a root system (PO:0025025)." [PMID:26841834, TO:cooperl]
+synonym: "root P content (related)" RELATED []
+xref: TO_GIT:412
+is_a: TO:0001024 ! phosphorus content
 
 [Term]
 id: TO:1000044
@@ -13742,7 +13750,7 @@ is_a: TO:0000995 ! aluminium content trait
 [Term]
 id: TO:1000052
 name: shoot system arsenic content
-def: "An arsenic  content trait (TO:0006054) which is the arsenic cation (CHEBI:35829) composition in a shoot system (PO:0009006)." [PMID:26841834, TO:cooperl]
+def: "An arsenic content trait (TO:0006054) which is the arsenic cation (CHEBI:35829) composition in a shoot system (PO:0009006)." [PMID:26841834, TO:cooperl]
 synonym: "shoot As content (related)" RELATED []
 xref: TO_GIT:412
 is_a: TO:0006054 ! arsenic content
@@ -13894,7 +13902,7 @@ is_a: TO:0006055 ! selenium content
 [Term]
 id: TO:1000071
 name: shoot system silicon content
-def: "A A silicon content trait (TO:0001048) which is the  silicon cation (CHEBI:30584) composition in a shoot system (PO:0009006)." [PMID:26841834, TO:cooperl]
+def: "A silicon content trait (TO:0001048) which is the  silicon cation (CHEBI:30584) composition in a shoot system (PO:0009006)." [PMID:26841834, TO:cooperl]
 synonym: "shoot Si content (related)" RELATED []
 xref: TO_GIT:412
 is_a: TO:0001048 ! silicon content trait
@@ -13914,6 +13922,14 @@ def: "A zinc content trait (TO:0020090) which is the zinc ion (CHEBI:27365) comp
 synonym: "shoot Zn content (related)" RELATED []
 xref: TO_GIT:412
 is_a: TO:0020090 ! zinc content
+
+[Term]
+id: TO:1000041
+name: root system sodium content
+def: "A sodium content trait (TO:0000608) which is the sodium cation (CHEBI:29101) composition in a root system (PO:0025025)." PMID:26841834, TO:cooperl]
+synonym: "root Na content" RELATED []
+xref: TO_GIT:412
+is_a: TO:0000608 ! sodium content
 
 [Typedef]
 id: evaluation_location
