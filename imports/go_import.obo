@@ -12,10 +12,11 @@ is_a: GO:0008150 ! biological_process
 id: GO:0000278
 name: mitotic cell cycle
 def: "Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent." [GOC:mah, ISBN:0815316194, Reactome:69278]
+synonym: "mitosis" RELATED []
 is_a: GO:0007049 ! cell cycle
 intersection_of: GO:0007049 ! cell cycle
-intersection_of: BFO:0000051 GO:0007067 ! mitotic nuclear division
-relationship: BFO:0000051 GO:0007067 ! mitotic nuclear division
+intersection_of: BFO:0000051 GO:0140014 ! mitotic nuclear division
+relationship: BFO:0000051 GO:0140014 ! mitotic nuclear division
 
 [Term]
 id: GO:0000280
@@ -34,12 +35,11 @@ is_a: GO:0022414 ! reproductive process
 is_a: GO:0032502 ! developmental process
 intersection_of: GO:0032502 ! developmental process
 intersection_of: BFO:0000050 GO:0000003 ! reproduction
-relationship: BFO:0000050 GO:0000003 ! reproduction
 
 [Term]
 id: GO:0003674
 name: molecular_function
-def: "Elemental activities, such as catalysis or binding, describing the actions of a gene product at the molecular level. A given gene product may exhibit one or more molecular functions." [GOC:go_curators]
+def: "The actions of a single gene product or complex at the molecular level consisting of a single biochemical activity or multiple causally linked biochemical activities. A given gene product may exhibit one or more molecular functions." [GOC:go_curators]
 synonym: "molecular function" EXACT []
 
 [Term]
@@ -101,6 +101,16 @@ synonym: "saccharase activity" RELATED []
 is_a: GO:0004553 ! hydrolase activity, hydrolyzing O-glycosyl compounds
 
 [Term]
+id: GO:0005215
+name: transporter activity
+def: "Enables the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells." [GOC:ai, GOC:dgf]
+synonym: "small-molecule carrier or transporter" NARROW []
+is_a: GO:0003674 ! molecular_function
+intersection_of: GO:0003674 ! molecular_function
+intersection_of: BFO:0000050 GO:0006810 ! transport
+relationship: BFO:0000050 GO:0006810 ! transport
+
+[Term]
 id: GO:0005575
 name: cellular_component
 def: "The part of a cell, extracellular environment or virus in which a gene product is located. A gene product may be located in one or more parts of a cell and its location may be as specific as a particular macromolecular complex, that is, a stable, persistent association of macromolecules that function together." [GOC:go_curators, NIF_Subcellular:sao-1337158144]
@@ -131,6 +141,22 @@ def: "All of the contents of a cell excluding the plasma membrane and nucleus, b
 is_a: GO:0044424 ! intracellular part
 
 [Term]
+id: GO:0005886
+name: plasma membrane
+def: "The membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins." [ISBN:0716731363]
+synonym: "bacterial inner membrane" NARROW []
+synonym: "cell membrane" EXACT []
+synonym: "cellular membrane" EXACT [NIF_Subcellular:sao6433132645]
+synonym: "cytoplasmic membrane" EXACT []
+synonym: "inner endospore membrane" NARROW []
+synonym: "juxtamembrane" BROAD []
+synonym: "plasma membrane lipid bilayer" NARROW [GOC:mah]
+synonym: "plasmalemma" EXACT []
+is_a: GO:0016020 ! membrane
+is_a: GO:0044464 ! cell part
+relationship: BFO:0000050 GO:0071944 ! cell periphery
+
+[Term]
 id: GO:0006725
 name: cellular aromatic compound metabolic process
 def: "The chemical reactions and pathways involving aromatic compounds, any organic compound characterized by one or more planar rings, each of which contains conjugated double bonds and delocalized pi electrons, as carried out by individual cells." [GOC:ai, ISBN:0198506732]
@@ -158,10 +184,9 @@ is_a: GO:0006793 ! phosphorus metabolic process
 id: GO:0006810
 name: transport
 def: "The directed movement of substances (such as macromolecules, small molecules, ions) or cellular components (such as complexes and organelles) into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter, pore or motor protein." [GOC:dos, GOC:dph, GOC:jl, GOC:mah]
-synonym: "auxiliary transport protein activity" RELATED [GOC:mah]
+synonym: "single-organism transport" RELATED []
 synonym: "small molecule transport" NARROW []
 synonym: "solute:solute exchange" NARROW []
-synonym: "transport accessory protein activity" RELATED [GOC:mah]
 is_a: GO:0051234 ! establishment of localization
 
 [Term]
@@ -193,6 +218,8 @@ name: organelle organization
 def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of an organelle within a cell. An organelle is an organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:mah]
 synonym: "organelle organisation" EXACT [GOC:curators]
 synonym: "organelle organization and biogenesis" RELATED [GOC:dph, GOC:jl, GOC:mah]
+synonym: "single organism organelle organization" EXACT [GOC:TermGenie]
+synonym: "single-organism organelle organization" RELATED []
 is_a: GO:0016043 ! cellular component organization
 
 [Term]
@@ -200,36 +227,13 @@ id: GO:0007049
 name: cell cycle
 def: "The progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events. Canonically, the cell cycle comprises the replication and segregation of genetic material followed by the division of the cell, but in endocycles or syncytial cells nuclear replication or nuclear division may not be followed by cell division." [GOC:go_curators, GOC:mtg_cell_cycle]
 synonym: "cell-division cycle" EXACT []
-is_a: GO:0044763 ! single-organism cellular process
-
-[Term]
-id: GO:0007067
-name: mitotic nuclear division
-def: "A mitotic cell cycle process comprising the steps by which the nucleus of a eukaryotic cell divides; the process involves condensation of chromosomal DNA into a highly compacted form. Canonically, mitosis produces two daughter nuclei whose chromosome complement is identical to that of the mother cell." [GOC:dph, GOC:ma, GOC:mah, ISBN:0198547684]
-synonym: "mitosis" EXACT []
-is_a: GO:0000280 ! nuclear division
-is_a: GO:1903047 ! mitotic cell cycle process
-intersection_of: GO:0000280 ! nuclear division
-intersection_of: BFO:0000050 GO:0000278 ! mitotic cell cycle
-relationship: BFO:0000050 GO:0000278 ! mitotic cell cycle
-
-[Term]
-id: GO:0007126
-name: meiotic nuclear division
-def: "One of the two nuclear divisions that occur as part of the meiotic cell cycle." [GOC:dph, GOC:mah, PMID:9334324]
-synonym: "meiosis" BROAD []
-is_a: GO:0000280 ! nuclear division
-is_a: GO:1903046 ! meiotic cell cycle process
-intersection_of: GO:0000280 ! nuclear division
-intersection_of: BFO:0000050 GO:0051321 ! meiotic cell cycle
-relationship: BFO:0000050 GO:0051321 ! meiotic cell cycle
+is_a: GO:0009987 ! cellular process
 
 [Term]
 id: GO:0007275
 name: multicellular organism development
 def: "The biological process whose specific outcome is the progression of a multicellular organism over time from an initial condition (e.g. a zygote or a young adult) to a later condition (e.g. a multicellular animal or an aged adult)." [GOC:dph, GOC:ems, GOC:isa_complete, GOC:tb]
-is_a: GO:0044707 ! single-multicellular organism process
-is_a: GO:0044767 ! single-organism developmental process
+is_a: GO:0032501 ! multicellular organismal process
 is_a: GO:0048856 ! anatomical structure development
 
 [Term]
@@ -237,7 +241,7 @@ id: GO:0007568
 name: aging
 def: "A developmental process that is a deterioration and loss of function over time. Aging includes loss of functions such as resistance to disease, homeostasis, and fertility, as well as wear and tear. Aging includes cellular senescence, but is more inclusive. May precede death and may succeed developmental maturation (GO:0021700)." [GOC:PO_curators]
 synonym: "ageing" EXACT []
-is_a: GO:0044767 ! single-organism developmental process
+is_a: GO:0032502 ! developmental process
 
 [Term]
 id: GO:0007585
@@ -245,7 +249,7 @@ name: respiratory gaseous exchange
 def: "The process of gaseous exchange between an organism and its environment. In plants, microorganisms, and many small animals, air or water makes direct contact with the organism's cells or tissue fluids, and the processes of diffusion supply the organism with dioxygen (O2) and remove carbon dioxide (CO2). In larger animals the efficiency of gaseous exchange is improved by specialized respiratory organs, such as lungs and gills, which are ventilated by breathing mechanisms." [ISBN:0198506732]
 synonym: "breathing" BROAD []
 synonym: "respiration" BROAD []
-is_a: GO:0044707 ! single-multicellular organism process
+is_a: GO:0032501 ! multicellular organismal process
 
 [Term]
 id: GO:0008150
@@ -253,6 +257,8 @@ name: biological_process
 def: "Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end." [GOC:go_curators, GOC:isa_complete]
 synonym: "biological process" EXACT []
 synonym: "physiological process" EXACT []
+synonym: "single organism process" RELATED []
+synonym: "single-organism process" RELATED []
 
 [Term]
 id: GO:0008152
@@ -261,6 +267,7 @@ def: "The chemical reactions and pathways, including anabolism and catabolism, b
 synonym: "metabolic process resulting in cell growth" NARROW []
 synonym: "metabolism" EXACT []
 synonym: "metabolism resulting in cell growth" NARROW []
+synonym: "single-organism metabolic process" RELATED []
 is_a: GO:0008150 ! biological_process
 
 [Term]
@@ -294,7 +301,8 @@ name: biosynthetic process
 def: "The chemical reactions and pathways resulting in the formation of substances; typically the energy-requiring part of metabolism in which simpler substances are transformed into more complex ones." [GOC:curators, ISBN:0198547684]
 synonym: "anabolism" EXACT []
 synonym: "biosynthesis" EXACT []
-synonym: "formation" EXACT []
+synonym: "formation" RELATED []
+synonym: "single-organism biosynthetic process" RELATED []
 synonym: "synthesis" EXACT []
 is_a: GO:0008152 ! metabolic process
 
@@ -319,7 +327,6 @@ def: "The chemical reactions and pathways involving aromatic derivatives of tran
 synonym: "phenylpropanoid metabolism" EXACT []
 is_a: GO:0006725 ! cellular aromatic compound metabolic process
 is_a: GO:0019748 ! secondary metabolic process
-is_a: GO:0044763 ! single-organism cellular process
 is_a: GO:1901360 ! organic cyclic compound metabolic process
 
 [Term]
@@ -339,7 +346,7 @@ is_a: GO:1901362 ! organic cyclic compound biosynthetic process
 id: GO:0009791
 name: post-embryonic development
 def: "The process whose specific outcome is the progression of the organism over time, from the completion of embryonic development to the mature structure. See embryonic development." [GOC:go_curators]
-is_a: GO:0044707 ! single-multicellular organism process
+is_a: GO:0032501 ! multicellular organismal process
 relationship: BFO:0000050 GO:0007275 ! multicellular organism development
 
 [Term]
@@ -368,9 +375,7 @@ synonym: "fruit maturation" RELATED [GOC:PO_curators]
 synonym: "fruit senescence" RELATED [GOC:PO_curators]
 is_a: GO:0003006 ! developmental process involved in reproduction
 is_a: GO:0007568 ! aging
-is_a: GO:0044702 ! single organism reproductive process
 is_a: GO:0071695 ! anatomical structure maturation
-relationship: BFO:0000050 GO:0007275 ! multicellular organism development
 relationship: BFO:0000050 GO:0010154 ! fruit development
 
 [Term]
@@ -394,13 +399,14 @@ def: "Any process that is carried out at the cellular level, but not necessarily
 synonym: "cell growth and/or maintenance" NARROW []
 synonym: "cell physiology" EXACT []
 synonym: "cellular physiological process" EXACT []
+synonym: "single-organism cellular process" RELATED []
 is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0010118
 name: stomatal movement
 def: "The process of opening or closing of stomata, which is directly related to the stomatal conductance (measuring rate of passage of either water vapor or carbon dioxide (CO2) through stomata)." [GOC:sm]
-is_a: GO:0044763 ! single-organism cellular process
+is_a: GO:0009987 ! cellular process
 
 [Term]
 id: GO:0010148
@@ -426,6 +432,12 @@ id: GO:0010229
 name: inflorescence development
 def: "The process whose specific outcome is the progression of an inflorescence over time, from its formation to the mature structure." [GOC:tb]
 is_a: GO:0090567 ! reproductive shoot system development
+
+[Term]
+id: GO:0016020
+name: membrane
+def: "A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it." [GOC:dos, GOC:mah, ISBN:0815316194]
+is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: GO:0016043
@@ -571,13 +583,13 @@ def: "The chemical reactions and pathways resulting in many of the chemical chan
 synonym: "secondary metabolism" EXACT []
 synonym: "secondary metabolite metabolic process" EXACT []
 synonym: "secondary metabolite metabolism" EXACT []
-is_a: GO:0044710 ! single-organism metabolic process
+is_a: GO:0008152 ! metabolic process
 
 [Term]
 id: GO:0021700
 name: developmental maturation
 def: "A developmental process, independent of morphogenetic (shape) change, that is required for an anatomical structure, cell or cellular component to attain its fully functional state." [GO_REF:0000021, GOC:cls, GOC:dgh, GOC:dph, GOC:jid, GOC:mtg_15jun06]
-is_a: GO:0044767 ! single-organism developmental process
+is_a: GO:0032502 ! developmental process
 
 [Term]
 id: GO:0022402
@@ -592,6 +604,7 @@ relationship: BFO:0000050 GO:0007049 ! cell cycle
 id: GO:0022414
 name: reproductive process
 def: "A biological process that directly contributes to the process of producing new individuals by one or two organisms. The new individuals inherit some proportion of their genetic material from the parent or parents." [GOC:dph, GOC:isa_complete]
+synonym: "single organism reproductive process" RELATED []
 is_a: GO:0008150 ! biological_process
 intersection_of: GO:0008150 ! biological_process
 intersection_of: BFO:0000050 GO:0000003 ! reproduction
@@ -608,6 +621,7 @@ id: GO:0032501
 name: multicellular organismal process
 def: "Any biological process, occurring at the level of a multicellular organism, pertinent to its function." [GOC:curators, GOC:dph, GOC:isa_complete, GOC:tb]
 synonym: "organismal physiological process" EXACT []
+synonym: "single-multicellular organism process" RELATED []
 is_a: GO:0008150 ! biological_process
 
 [Term]
@@ -615,7 +629,17 @@ id: GO:0032502
 name: developmental process
 def: "A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition." [GOC:isa_complete]
 synonym: "development" NARROW []
+synonym: "single-organism developmental process" RELATED []
 is_a: GO:0008150 ! biological_process
+
+[Term]
+id: GO:0032838
+name: plasma membrane bounded cell projection cytoplasm
+def: "All of the contents of a plasma membrane bounded cell projection, excluding the plasma membrane surrounding the projection." [GOC:krc, GOC:mah]
+is_a: GO:0099568 ! cytoplasmic region
+is_a: GO:0120038 ! plasma membrane bounded cell projection part
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: BFO:0000050 GO:0120025 ! plasma membrane bounded cell projection
 
 [Term]
 id: GO:0035251
@@ -625,16 +649,31 @@ is_a: GO:0008194 ! UDP-glycosyltransferase activity
 is_a: GO:0046527 ! glucosyltransferase activity
 
 [Term]
+id: GO:0035618
+name: root hair
+def: "A long, thin projection from a root epidermal cell that contains F-actin and tubulin, and a cell wall." [http://www.jstor.org/stable/4354264, PO:0000256]
+is_a: GO:0120025 ! plasma membrane bounded cell projection
+
+[Term]
 id: GO:0042044
 name: fluid transport
 def: "The directed movement of substances that are in liquid form in normal living conditions into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
-is_a: GO:0044765 ! single-organism transport
+is_a: GO:0006810 ! transport
 
 [Term]
 id: GO:0042578
 name: phosphoric ester hydrolase activity
 def: "Catalysis of the reaction: RPO-R' + H2O = RPOOH + R'H. This reaction is the hydrolysis of any phosphoric ester bond, any ester formed from orthophosphoric acid, O=P(OH)3." [GOC:jl]
 is_a: GO:0016788 ! hydrolase activity, acting on ester bonds
+
+[Term]
+id: GO:0042995
+name: cell projection
+def: "A prolongation or process extending from a cell, e.g. a flagellum or axon." [GOC:jl, http://www.cogsci.princeton.edu/~wn/]
+synonym: "cell process" BROAD []
+synonym: "cellular process" BROAD []
+synonym: "cellular projection" EXACT []
+is_a: GO:0044464 ! cell part
 
 [Term]
 id: GO:0043036
@@ -664,7 +703,6 @@ is_a: GO:0043226 ! organelle
 is_a: GO:0044424 ! intracellular part
 intersection_of: GO:0043226 ! organelle
 intersection_of: BFO:0000050 GO:0005622 ! intracellular
-relationship: BFO:0000050 GO:0005622 ! intracellular
 
 [Term]
 id: GO:0043231
@@ -713,6 +751,15 @@ intersection_of: BFO:0000050 GO:0005622 ! intracellular
 relationship: BFO:0000050 GO:0005622 ! intracellular
 
 [Term]
+id: GO:0044425
+name: membrane part
+def: "Any constituent part of a membrane, a double layer of lipid molecules that encloses all cells, and, in eukaryotes, many organelles; may be a single or double lipid bilayer; also includes associated proteins." [GOC:jl]
+is_a: GO:0005575 ! cellular_component
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: BFO:0000050 GO:0016020 ! membrane
+relationship: BFO:0000050 GO:0016020 ! membrane
+
+[Term]
 id: GO:0044435
 name: plastid part
 def: "Any constituent part of a plastid, a member of a family of organelles found in the cytoplasm of plants and some protists, which are membrane-bounded and contain DNA. Plant plastids develop from a common type, the proplastid." [GOC:jl]
@@ -741,6 +788,25 @@ is_a: GO:0044424 ! intracellular part
 relationship: BFO:0000050 GO:0043229 ! intracellular organelle
 
 [Term]
+id: GO:0044459
+name: plasma membrane part
+def: "Any constituent part of the plasma membrane, the membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins." [GOC:jl]
+is_a: GO:0044425 ! membrane part
+is_a: GO:0044464 ! cell part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: BFO:0000050 GO:0005886 ! plasma membrane
+relationship: BFO:0000050 GO:0005886 ! plasma membrane
+
+[Term]
+id: GO:0044463
+name: cell projection part
+def: "Any constituent part of a cell projection, a prolongation or process extending from a cell, e.g. a flagellum or axon." [GOC:jl]
+is_a: GO:0044464 ! cell part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: BFO:0000050 GO:0042995 ! cell projection
+relationship: BFO:0000050 GO:0042995 ! cell projection
+
+[Term]
 id: GO:0044464
 name: cell part
 def: "Any constituent part of a cell, the basic structural and functional unit of all organisms." [GOC:jl]
@@ -756,64 +822,8 @@ id: GO:0044550
 name: secondary metabolite biosynthetic process
 def: "The chemical reactions and pathways resulting in the formation of secondary metabolites, the compounds that are not necessarily required for growth and maintenance of cells, and are often unique to a taxon." [GOC:jl]
 synonym: "secondary metabolite biosynthesis" EXACT []
-is_a: GO:0019748 ! secondary metabolic process
-is_a: GO:0044711 ! single-organism biosynthetic process
-
-[Term]
-id: GO:0044699
-name: single-organism process
-def: "A biological process that involves only one organism." [GOC:jl]
-synonym: "single organism process" EXACT []
-is_a: GO:0008150 ! biological_process
-
-[Term]
-id: GO:0044702
-name: single organism reproductive process
-def: "A biological process that directly contributes to the process of producing new individuals, involving a single organism." [GOC:jl]
-is_a: GO:0022414 ! reproductive process
-is_a: GO:0044699 ! single-organism process
-
-[Term]
-id: GO:0044707
-name: single-multicellular organism process
-def: "A biological process occurring within a single, multicellular organism." [GOC:jl]
-is_a: GO:0032501 ! multicellular organismal process
-is_a: GO:0044699 ! single-organism process
-
-[Term]
-id: GO:0044710
-name: single-organism metabolic process
-def: "A metabolic process - chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances - which involves a single organism." [GOC:jl]
-is_a: GO:0008152 ! metabolic process
-is_a: GO:0044699 ! single-organism process
-
-[Term]
-id: GO:0044711
-name: single-organism biosynthetic process
-def: "A biosynthetic process - chemical reactions and pathways resulting in the formation of substances - involving a single organism." [GOC:jl]
 is_a: GO:0009058 ! biosynthetic process
-is_a: GO:0044710 ! single-organism metabolic process
-
-[Term]
-id: GO:0044763
-name: single-organism cellular process
-def: "Any process that is carried out at the cellular level, occurring within a single organism." [GOC:jl]
-is_a: GO:0009987 ! cellular process
-is_a: GO:0044699 ! single-organism process
-
-[Term]
-id: GO:0044765
-name: single-organism transport
-def: "The directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore, involving a single organism." [GOC:jl]
-is_a: GO:0006810 ! transport
-is_a: GO:1902578 ! single-organism localization
-
-[Term]
-id: GO:0044767
-name: single-organism developmental process
-def: "A biological process whose specific outcome is the progression of an integrated living unit: an anatomical structure (which may be a subcellular structure, cell, tissue, or organ), or organism over time from an initial condition to a later condition, involving only one organism." [GOC:jl]
-is_a: GO:0032502 ! developmental process
-is_a: GO:0044699 ! single-organism process
+is_a: GO:0019748 ! secondary metabolic process
 
 [Term]
 id: GO:0045735
@@ -856,7 +866,6 @@ is_a: GO:0006996 ! organelle organization
 id: GO:0048364
 name: root development
 def: "The process whose specific outcome is the progression of the root over time, from its formation to the mature structure. The root is the water- and mineral-absorbing part of a plant which is usually underground, does not bear leaves, tends to grow downwards and is typically derived from the radicle of the embryo." [GOC:jid, PO:0009005]
-is_a: GO:0044767 ! single-organism developmental process
 is_a: GO:0099402 ! plant organ development
 relationship: BFO:0000050 GO:0022622 ! root system development
 
@@ -871,7 +880,6 @@ id: GO:0048367
 name: shoot system development
 def: "The process whose specific outcome is the progression of the shoot system over time, from its formation to the mature structure." [GOC:go_curators]
 synonym: "shoot development" EXACT []
-is_a: GO:0044767 ! single-organism developmental process
 is_a: GO:0048731 ! system development
 
 [Term]
@@ -888,8 +896,6 @@ name: floral whorl development
 def: "The process whose specific outcome is the progression of a floral whorl over time, from its formation to the mature structure. A floral whorl is a circular arrangement of parts of a flower arising from a stem of a plant." [GOC:dph, GOC:go_curators, GOC:PO_curators, GOC:tb, PO:0025023]
 synonym: "collective phyllome structure development" BROAD [GOC:PO_curators, PO:0025023]
 is_a: GO:0003006 ! developmental process involved in reproduction
-is_a: GO:0044702 ! single organism reproductive process
-is_a: GO:0044767 ! single-organism developmental process
 is_a: GO:0048856 ! anatomical structure development
 relationship: BFO:0000050 GO:0009908 ! flower development
 
@@ -946,6 +952,8 @@ synonym: "establishment and maintenance of position" EXACT []
 synonym: "establishment and maintenance of substance location" NARROW []
 synonym: "establishment and maintenance of substrate location" NARROW []
 synonym: "localisation" EXACT [GOC:mah]
+synonym: "single organism localization" RELATED [GOC:TermGenie]
+synonym: "single-organism localization" RELATED []
 is_a: GO:0008150 ! biological_process
 
 [Term]
@@ -959,13 +967,12 @@ is_a: GO:0051179 ! localization
 id: GO:0051321
 name: meiotic cell cycle
 def: "Progression through the phases of the meiotic cell cycle, in which canonically a cell replicates to produce four offspring with half the chromosomal content of the progenitor cell via two nuclear divisions." [GOC:ai]
-synonym: "meiosis" BROAD []
+synonym: "meiosis" RELATED []
 is_a: GO:0007049 ! cell cycle
-is_a: GO:0044702 ! single organism reproductive process
+is_a: GO:0022414 ! reproductive process
 intersection_of: GO:0007049 ! cell cycle
-intersection_of: BFO:0000051 GO:0007126 ! meiotic nuclear division
-relationship: BFO:0000050 GO:0000003 ! reproduction
-relationship: BFO:0000051 GO:0007126 ! meiotic nuclear division
+intersection_of: BFO:0000051 GO:0140013 ! meiotic nuclear division
+relationship: BFO:0000051 GO:0140013 ! meiotic nuclear division
 
 [Term]
 id: GO:0052736
@@ -1012,6 +1019,12 @@ synonym: "cellular component organization or biogenesis at cellular level" EXACT
 is_a: GO:0008150 ! biological_process
 
 [Term]
+id: GO:0071944
+name: cell periphery
+def: "The part of a cell encompassing the cell cortex, the plasma membrane, and any external encapsulating structures." [GOC:mah]
+is_a: GO:0044464 ! cell part
+
+[Term]
 id: GO:0090332
 name: stomatal closure
 def: "The process of closing of stomata, pores in the epidermis of leaves and stems bordered by two guard cells and serving in gas exchange." [GOC:tb]
@@ -1022,7 +1035,6 @@ id: GO:0090567
 name: reproductive shoot system development
 def: "The process whose specific outcome is the progression of a reproductive shoot system over time, from its formation to the mature structure." [GOC:pj]
 is_a: GO:0009791 ! post-embryonic development
-is_a: GO:0044702 ! single organism reproductive process
 is_a: GO:0048367 ! shoot system development
 is_a: GO:0048608 ! reproductive structure development
 
@@ -1032,6 +1044,16 @@ name: plant organ senescence
 def: "The process that occurs in a plant organ near the end of its active life that is associated with the dismantling of cell components and membranes, and an overall decline in metabolism." [GOC:tb]
 is_a: GO:0007568 ! aging
 relationship: BFO:0000050 GO:0099402 ! plant organ development
+
+[Term]
+id: GO:0098590
+name: plasma membrane region
+def: "A membrane that is a (regional) part of the plasma membrane." [GOC:dos]
+synonym: "region of plasma membrane" EXACT []
+is_a: GO:0016020 ! membrane
+is_a: GO:0044459 ! plasma membrane part
+intersection_of: GO:0016020 ! membrane
+intersection_of: BFO:0000050 GO:0005886 ! plasma membrane
 
 [Term]
 id: GO:0099402
@@ -1049,7 +1071,42 @@ is_a: GO:0005737 ! cytoplasm
 is_a: GO:0044444 ! cytoplasmic part
 intersection_of: GO:0005737 ! cytoplasm
 intersection_of: BFO:0000050 GO:0005737 ! cytoplasm
-relationship: BFO:0000050 GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0120025
+name: plasma membrane bounded cell projection
+def: "A prolongation or process extending from a cell and that is bounded by plasma membrane, e.g. a cilium, lamellipodium, or axon." [GOC:krc]
+is_a: GO:0042995 ! cell projection
+intersection_of: GO:0042995 ! cell projection
+intersection_of: BFO:0000051 GO:0098590 ! plasma membrane region
+relationship: BFO:0000051 GO:0098590 ! plasma membrane region
+
+[Term]
+id: GO:0120038
+name: plasma membrane bounded cell projection part
+def: "Any constituent part of a plasma membrane bounded cell projection, a prolongation or process extending from a cell, e.g. a cilium or axon." [GOC:krc]
+is_a: GO:0044463 ! cell projection part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: BFO:0000050 GO:0120025 ! plasma membrane bounded cell projection
+relationship: BFO:0000050 GO:0120025 ! plasma membrane bounded cell projection
+
+[Term]
+id: GO:0140013
+name: meiotic nuclear division
+def: "One of the two nuclear divisions that occur as part of the meiotic cell cycle." [PMID:9334324]
+is_a: GO:0000280 ! nuclear division
+is_a: GO:1903046 ! meiotic cell cycle process
+intersection_of: GO:0000280 ! nuclear division
+intersection_of: BFO:0000050 GO:0051321 ! meiotic cell cycle
+
+[Term]
+id: GO:0140014
+name: mitotic nuclear division
+def: "A mitotic cell cycle process comprising the steps by which the nucleus of a eukaryotic cell divides; the process involves condensation of chromosomal DNA into a highly compacted form. Canonically, mitosis produces two daughter nuclei whose chromosome complement is identical to that of the mother cell." [ISBN:0198547684]
+is_a: GO:0000280 ! nuclear division
+is_a: GO:1903047 ! mitotic cell cycle process
+intersection_of: GO:0000280 ! nuclear division
+intersection_of: BFO:0000050 GO:0000278 ! mitotic cell cycle
 
 [Term]
 id: GO:1901360
@@ -1084,14 +1141,6 @@ synonym: "organic substance formation" EXACT []
 synonym: "organic substance synthesis" EXACT []
 is_a: GO:0009058 ! biosynthetic process
 is_a: GO:0071704 ! organic substance metabolic process
-
-[Term]
-id: GO:1902578
-name: single-organism localization
-def: "A localization which involves only one organism." [GO_REF:0000089, GOC:jl, PMID:1234]
-synonym: "single organism localization" EXACT [GOC:TermGenie]
-is_a: GO:0044699 ! single-organism process
-is_a: GO:0051179 ! localization
 
 [Term]
 id: GO:1903046

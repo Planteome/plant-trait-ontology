@@ -20,7 +20,7 @@ $(ONT).obo: $(ONT).owl
 subsets/$(ONT)-basic.obo: $(ONT).owl
 	owltools --use-catalog $< --remove-imports-declarations --make-subset-by-properties -f BFO:0000050 --remove-dangling --remove-axioms -t EquivalentClasses --set-ontology-id $(OBO)/subsets/$(ONT)-basic.owl -o -f obo $@.tmp && mv $@.tmp $@
 
-IMPORTS = chebi pato eo po go
+IMPORTS = chebi pato peco po go
 IMPORTS_OWL = $(patsubst %, imports/%_import.owl,$(IMPORTS)) $(patsubst %, imports/%_import.obo,$(IMPORTS))
 
 # Make this target to regenerate ALL

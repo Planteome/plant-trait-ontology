@@ -2,6 +2,39 @@ format-version: 1.2
 ontology: to/imports/po_import
 
 [Term]
+id: NCBITaxon:1
+name: root
+synonym: "all" RELATED synonym []
+
+[Term]
+id: NCBITaxon:131567
+name: cellular organisms
+synonym: "biota" RELATED synonym []
+is_a: NCBITaxon:1 ! root
+
+[Term]
+id: NCBITaxon:2759
+name: Eukaryota
+synonym: "Eucarya" RELATED synonym []
+synonym: "Eucaryotae" RELATED synonym []
+synonym: "eucaryotes" EXACT genbank_common_name []
+synonym: "Eukarya" RELATED synonym []
+synonym: "Eukaryotae" RELATED synonym []
+synonym: "eukaryotes" EXACT common_name []
+synonym: "eukaryotes" RELATED blast_name []
+is_a: NCBITaxon:131567 ! cellular organisms
+
+[Term]
+id: NCBITaxon:33090
+name: Viridiplantae
+synonym: "Chlorobionta" RELATED synonym []
+synonym: "Chlorophyta/Embryophyta group" RELATED synonym []
+synonym: "chlorophyte/embryophyte group" RELATED synonym []
+synonym: "green plants" EXACT common_name []
+synonym: "green plants" RELATED blast_name []
+is_a: NCBITaxon:2759 ! Eukaryota
+
+[Term]
 id: PO:0000003
 name: whole plant
 def: "A plant structure (PO:0005679) which is a whole organism." [POC:curators]
@@ -29,7 +62,7 @@ synonym: "vine (narrow)" NARROW []
 synonym: "woody clump (narrow)" NARROW [FNA:c1ccca7d-2a98-4a9d-8603-c34b551935e0]
 synonym: "植物体全体 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0009011 ! plant structure
-relationship: RO:0002160 NCBITaxon:33090 {source="cjm"}
+relationship: RO:0002160 NCBITaxon:33090 {source="cjm"} ! Viridiplantae
 
 [Term]
 id: PO:0000004
@@ -733,8 +766,8 @@ synonym: "rhizodermis (related)" RELATED []
 synonym: "根表皮 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0005679 ! epidermis
 intersection_of: PO:0005679 ! epidermis
-intersection_of: BFO:0000050 NCBITaxon:1
-relationship: BFO:0000050 NCBITaxon:1
+intersection_of: BFO:0000050 NCBITaxon:1 ! root
+relationship: BFO:0000050 NCBITaxon:1 ! root
 
 [Term]
 id: PO:0006039
