@@ -11,9 +11,9 @@ subsetdef: Zea_mays "Terms_used_for_maize_or_corn"
 default-namespace: plant_trait_ontology
 import: http://purl.obolibrary.org/obo/po.owl
 import: http://purl.obolibrary.org/obo/to/imports/chebi_import.owl
-import: http://purl.obolibrary.org/obo/to/imports/peco_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/go_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/pato_import.owl
+import: http://purl.obolibrary.org/obo/to/imports/peco_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/ro_import.owl
 ontology: to
 
@@ -43,7 +43,7 @@ synonym: "alkali sensitivity" RELATED []
 synonym: "AlkS" RELATED []
 is_a: TO:0000481 ! alkali sensitivity
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in PECO:0007062 ! basic pH soil environment
+intersection_of: inheres_in PECO:0007062 ! basic pH soil environment treatment
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -672,7 +672,7 @@ name: light sensitivity
 def: "Response shown by the plant in terms of sensitivity to light stress (quality and quantity of light)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000161 ! radiation response trait
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in PECO:0007196 ! light regimen
+intersection_of: inheres_in PECO:0007196 ! light treatment
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -781,15 +781,15 @@ is_a: TO:0000439 ! fungal disease resistance
 
 [Term]
 id: TO:0000087
-name: aroma
+name: grain aroma trait
 def: "The aroma of the cooked/uncooked grains." [Gramene:pankaj_jaiswal, ICIS:1252, IRRI:SES]
 comment: It is often associated with the accumulation of the aromatic compound 2-acetyl-1-pyrroline.
 synonym: "AROMA" RELATED []
 synonym: "odour" RELATED []
 synonym: "scent" EXACT []
 synonym: "Sct" RELATED []
-is_a: TO:0000488 ! seed composition quality trait
-is_a: TO:0002694 ! fruit flavor trait
+is_a: TO:0000162 ! grain quality trait
+relationship: part_of TO:0002694 ! fruit flavor trait
 
 [Term]
 id: TO:0000088
@@ -799,7 +799,7 @@ synonym: "RYMV" RELATED []
 synonym: "RYMVRS" RELATED []
 is_a: TO:0000148 ! viral disease resistance
 intersection_of: PATO:0001046 ! resistance to
-intersection_of: inheres_in PECO:0007318 ! rice yellow mottle virus
+intersection_of: inheres_in PECO:0007318 ! rice yellow mottle virus treatment
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -947,7 +947,7 @@ synonym: "deep water stress" RELATED []
 synonym: "DWSTR" RELATED []
 is_a: TO:0000237 ! water stress trait
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in PECO:0007396 ! flood prone region
+intersection_of: inheres_in PECO:0007396 ! flood prone region treatment
 
 [Term]
 id: TO:0000104
@@ -1423,7 +1423,7 @@ synonym: "Pr light sensitivity" RELATED []
 synonym: "RLTSN" RELATED []
 is_a: TO:0000265 ! light quality sensitivity
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in PECO:0007207 ! red light regimen
+intersection_of: inheres_in PECO:0007207 ! red light treatment
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -1433,7 +1433,7 @@ def: "Sensitivity response observed in an environment illuminated with blue ligh
 synonym: "BLTSN" RELATED []
 is_a: TO:0000265 ! light quality sensitivity
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in PECO:0007218 ! blue light regimen
+intersection_of: inheres_in PECO:0007218 ! blue light treatment
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -1446,7 +1446,7 @@ synonym: "UV resistance" RELATED []
 synonym: "UVRS" RELATED []
 is_a: TO:0000265 ! light quality sensitivity
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in PECO:0007222 ! UV light regimen
+intersection_of: inheres_in PECO:0007222 ! UV light treatment
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -1619,7 +1619,7 @@ name: acid soil sensitivity
 def: "Plant sensitivity to soils with acidic conditions (pH<7)." [Gramene:pankaj_jaiswal, TO:moorel]
 is_a: TO:0000479 ! acid sensitivity
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in PECO:0007059 ! acidic pH soil environment
+intersection_of: inheres_in PECO:0007059 ! acidic pH soil environment treatment
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -1712,7 +1712,7 @@ synonym: "DRS" RELATED []
 synonym: "DRSN" RELATED []
 is_a: TO:0000394 ! drought related trait
 intersection_of: PATO:0000085 ! sensitivity toward
-intersection_of: inheres_in PECO:0007404 ! drought environment
+intersection_of: inheres_in PECO:0007404 ! drought environment treatment
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -2382,7 +2382,7 @@ def: "Tolerance to warm temperatures if plant is exposed to above than permissiv
 synonym: "HTol" RELATED []
 is_a: TO:0000432 ! temperature response trait
 intersection_of: PATO:0000515 ! tolerant to
-intersection_of: inheres_in PECO:0007173 ! warm/hot temperature regimen
+intersection_of: inheres_in PECO:0007173 ! warm/hot temperature treatment
 
 [Term]
 id: TO:0000260
@@ -2821,7 +2821,7 @@ synonym: "COLDTL" RELATED []
 synonym: "CTol" RELATED []
 is_a: TO:0000432 ! temperature response trait
 intersection_of: PATO:0000515 ! tolerant to
-intersection_of: inheres_in PECO:0007174 ! cold temperature regimen
+intersection_of: inheres_in PECO:0007174 ! cold temperature treatment
 
 [Term]
 id: TO:0000304
@@ -3551,7 +3551,7 @@ def: "Causal agent: rice ragged stunt virus (RRSV). Symptoms: plants are stunted
 synonym: "RSVRS" RELATED []
 is_a: TO:0000148 ! viral disease resistance
 intersection_of: PATO:0001046 ! resistance to
-intersection_of: inheres_in PECO:0007195 ! rice ragged stunt virus
+intersection_of: inheres_in PECO:0007195 ! rice ragged stunt virus treatment
 intersection_of: occurs_in PO:0000003 ! whole plant
 
 [Term]
@@ -10812,7 +10812,7 @@ name: Meloidogyne incognita resistance
 def: "Causal agent: Meloidogyne incognita. Symptom: resistant to damage caused by the pathogen Meloidogyne incognita (root knot nematode). It  produces characteristic galls (swellings) on roots." [Gramene:pankaj_jaiswal]
 is_a: TO:0000384 ! nematode damage resistance
 intersection_of: PATO:0001046 ! resistance to
-intersection_of: inheres_in PECO:0007372 ! Meloidogyne incognita
+intersection_of: inheres_in PECO:0007372 ! Meloidogyne incognita treatment
 
 [Term]
 id: TO:0002705
@@ -10826,7 +10826,7 @@ name: Meloidogyne javanica resistance
 def: "Causal agent: Meloidogyne javanica. Symptom: resistant to damage caused by the pathogen Meloidogyne javanica (root knot nematode). It  produces characteristic galls (swellings) on roots." [Gramene:pankaj_jaiswal]
 is_a: TO:0000384 ! nematode damage resistance
 intersection_of: PATO:0001046 ! resistance to
-intersection_of: inheres_in PECO:0007371 ! Meloidogyne javanica
+intersection_of: inheres_in PECO:0007371 ! Meloidogyne javanica treatment
 
 [Term]
 id: TO:0002707
@@ -11426,7 +11426,7 @@ xref: CAS:57-11-4
 xref: CHEBI:28842
 is_a: TO:0000604 ! fat and essential oil content
 intersection_of: PATO:0000025 ! composition
-intersection_of: inheres_in CHEBI:28842 ! stearic acid
+intersection_of: inheres_in CHEBI:28842 ! octadecanoic acid
 
 [Term]
 id: TO:0005004
