@@ -457,7 +457,6 @@ synonym: "CULMSTR" RELATED []
 synonym: "STEMSTR" RELATED []
 xref: PATO:0001230
 is_a: TO:0000361 ! stem morphology trait
-is_a: TO:0000597 ! quality trait
 intersection_of: PATO:0001230 ! strength
 intersection_of: inheres_in PO:0009047 ! stem
 
@@ -3055,7 +3054,6 @@ name: tillering ability
 def: "Degree of tillering is affected by variety, spacing of plants in the field, season of planting, and environmental conditions e.g. nitrogen levels." [Gramene:pankaj_jaiswal, ICIS:1009, ISBN:9712200299]
 synonym: "Ti" RELATED []
 synonym: "TIAB" RELATED []
-is_a: TO:0000371 ! yield trait
 is_a: TO:0000654 ! shoot system growth and development trait
 
 [Term]
@@ -3287,7 +3285,6 @@ synonym: "HET" RELATED []
 synonym: "heterosis in f1 hybrid" RELATED []
 synonym: "hybrid vigor" RELATED []
 is_a: TO:0000250 ! vigor related trait
-is_a: TO:0000371 ! yield trait
 
 [Term]
 id: TO:0000356
@@ -5368,8 +5365,6 @@ synonym: "enzymatic activity" RELATED []
 synonym: "enzyme catalytic activity" RELATED []
 xref: TO_GIT:380
 is_a: TO:0000277 ! biochemical trait
-intersection_of: PATO:0000001 ! quality
-intersection_of: inheres_in GO:0003824 ! catalytic activity
 
 [Term]
 id: TO:0000600
@@ -6253,8 +6248,6 @@ name: phosphatase activity trait
 def: "Catalysis of the hydrolysis of phosphoric monoesters, releasing inorganic phosphate." [GO:GO\:0016791]
 synonym: "phosphoric monoester hydrolase activity" RELATED []
 is_a: TO:0000599 ! enzyme activity trait
-intersection_of: PATO:0000001 ! quality
-intersection_of: inheres_in GO:0016791 ! phosphatase activity
 
 [Term]
 id: TO:0000705
@@ -6268,10 +6261,9 @@ intersection_of: inheres_in GO:0003993 ! acid phosphatase activity
 [Term]
 id: TO:0000706
 name: hull color
-def: "Describes the color of hull." [Gramene:pankaj_jaiswal]
-comment: Hull is the dry outer covering of a grass fruit/grain. The hull is comprised of dry lemma and palea, the two parts of a grass floret.
+def: "A collective phyllome structure morphology trait (TO:0000845) that is the color of a caryopsis hull (PO:0006000)." [Gramene:pankaj_jaiswal] {comment="TO:cooperl"}
+comment: A caryopsis hull (PO:0006000) is the dry outer covering of a caryopsis fruit (PO:0030104; grain). The caryopsis hull is comprised of a dry lemma and palea, which enclose a spiklet  floret (PO:0009082).
 synonym: "HULCL" RELATED []
-is_a: TO:0000597 ! quality trait
 
 [Term]
 id: TO:0000707
