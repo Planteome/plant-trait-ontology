@@ -2993,7 +2993,7 @@ name: phenotypic acceptability
 def: "Breeding objectives for each variety and trait varies. The evaluation should reflect the overall acceptability of the variety." [ICIS:1005, IRRI:SES]
 synonym: "overall liking" RELATED []
 synonym: "PAcp" RELATED []
-is_a: TO:0000597 ! quality trait
+is_a: TO:0000597 ! plant quality trait
 
 [Term]
 id: TO:0000323
@@ -5265,7 +5265,7 @@ def: "A seed quality trait (TO:0000931) which is the quality of the endosperm (P
 synonym: "End" RELATED []
 synonym: "endosperm quality (sensu Poaceae)" RELATED []
 is_a: TO:0000931 ! seed quality trait
-intersection_of: TO:0000597 ! quality trait
+intersection_of: TO:0000597 ! plant quality trait
 intersection_of: inheres_in PO:0009089 ! endosperm
 
 [Term]
@@ -5341,9 +5341,9 @@ is_obsolete: true
 
 [Term]
 id: TO:0000597
-name: quality trait
-def: "A plant trait (TO:0000387) that is the commercial and /or economical value of the plant product, or its overall improvement." [Gramene:pankaj_jaiswal, TO:cooperl]
-comment: Quality traits are often also classified as belonging to another upper level class such as: morphology trait (TO:0000017), biochemical trait (TO:0000277), growth and development trait (TO:0000357), stature or vigor trait (TO:0000133) and so on.
+name: plant quality trait
+def: "A plant trait (TO:0000387) that contributes to the overall utility, nutritional, or economic value of a plant, plant structure (PO:0009011) or plant product" [Gramene:pankaj_jaiswal, ISBN: 9781118313718, TO:cooperl]
+comment: Quality traits of a plant, plant structure or plant product vary from crop production to food consumption factors and may include organoleptic properties (flavor, aroma, appearance, texture, etc), storability, processing qualities and nutritional aspects. Market quality standards for crops are based on complex interaction of social, economic and biological factors and are highly crop-specific (Acquaah, 2012).\n\nPlant traits from other upper level classes may contribute to (as part_of children) to specific plant quality traits.
 xref: TO_GIT:260
 is_a: TO:0000387 ! plant trait
 created_by: jaiswalp
@@ -8768,7 +8768,7 @@ id: TO:0000931
 name: seed quality trait
 def: "A quality trait (TO:0000597) which is the commercial and /or economical value of a seed (PO:0009010) , or its overall improvement." [TO:cooperl]
 xref: TO_GIT:209
-is_a: TO:0000597 ! quality trait
+is_a: TO:0000597 ! plant quality trait
 created_by: cooperl
 creation_date: 2014-03-17T11:41:08Z
 
@@ -9706,7 +9706,7 @@ created_by: cooperl
 id: TO:0001042
 name: root quality trait
 def: "A quality trait (TO:0000597) which is the quality of roots (PO:0009005)." [TO:cooperl]
-is_a: TO:0000597 ! quality trait
+is_a: TO:0000597 ! plant quality trait
 created_by: cooperl
 
 [Term]
@@ -10299,7 +10299,7 @@ is_a: TO:0002642 ! dietary fiber related trait
 id: TO:0002642
 name: dietary fiber related trait
 def: "The traits assayed for content and quality of food/forage based on pre or post digestive processes." [Gramene:pankaj_jaiswal]
-is_a: TO:0000597 ! quality trait
+is_a: TO:0000597 ! plant quality trait
 
 [Term]
 id: TO:0002643
@@ -10313,7 +10313,7 @@ id: TO:0002644
 name: dry matter digestibility
 def: "Expressed as a percent, is a measure of the dry matter content of forage or feed that is retained in the animal body." [GrainGenes_trait:Dry_matter_digestibility, Gramene:iyt, Gramene:pankaj_jaiswal]
 synonym: "DMATTDIGAB" RELATED []
-is_a: TO:0000597 ! quality trait
+is_a: TO:0000597 ! plant quality trait
 
 [Term]
 id: TO:0002645
@@ -10336,7 +10336,7 @@ id: TO:0002647
 name: starch digestibility
 def: "Expressed as a percent, is a measure of the starch content of forage or feed that is retained in the animal body." [GrainGenes_trait:Starch_digestibility, Gramene:pankaj_jaiswal]
 synonym: "STARCHDIG" RELATED []
-is_a: TO:0000597 ! quality trait
+is_a: TO:0000597 ! plant quality trait
 
 [Term]
 id: TO:0002648
@@ -11033,8 +11033,8 @@ id: TO:0002728
 name: fruit quality trait
 def: "A quality trait (TO:0000597) which is the commercial and /or economical value of a fruit (PO:0009001) , or its overall improvement." [Gramene:pankaj_jaiswal, TO:cooperl]
 xref: TO_GIT:263
-is_a: TO:0000597 ! quality trait
-intersection_of: TO:0000597 ! quality trait
+is_a: TO:0000597 ! plant quality trait
+intersection_of: TO:0000597 ! plant quality trait
 intersection_of: inheres_in PO:0009001 ! fruit
 
 [Term]
@@ -12756,7 +12756,7 @@ id: TO:0020071
 name: beta-glucanase thermostability
 def: "The ability of beta-glucanase to remain active under mashing (boiling grain in water) conditions during beer making." [T-CAP:Victoria_Corollo_Blake]
 comment: Beta-glucanase [(1-3,1-4)-beta-D-glucan, 4-glucanohydrolase], (E.C:3.2.1.73).
-is_a: TO:0000597 ! quality trait
+is_a: TO:0000597 ! plant quality trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:18:25Z
 
@@ -12766,7 +12766,7 @@ name: residual beta-glucanase activity trait
 def: "Activity of beta-glucanase in the barley wort (the boiled grain and water) during the beer making process." [T-CAP:Victoria_Corollo_Blake]
 comment: Beta-glucanase [(1-3,1-4)-beta-D-glucan, 4-glucanohydrolase], (E.C:3.2.1.73).
 synonym: "residual beta-glucanase" BROAD []
-is_a: TO:0000597 ! quality trait
+is_a: TO:0000597 ! plant quality trait
 is_a: TO:0020070 ! beta-glucanase activity trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:20:23Z
@@ -12776,7 +12776,7 @@ id: TO:0020073
 name: barley wort protein concentration
 def: "Concentration of protein in the wort after boiling the grain with water (mashing) in the beer making process." [T-CAP:Victoria_Corollo_Blake]
 synonym: "wort protein" BROAD []
-is_a: TO:0000597 ! quality trait
+is_a: TO:0000597 ! plant quality trait
 is_a: TO:0000598 ! protein content
 created_by: jaiswalp
 creation_date: 2011-08-19T01:24:05Z
@@ -12785,7 +12785,7 @@ creation_date: 2011-08-19T01:24:05Z
 id: TO:0020074
 name: barley wort color
 def: "Color of the solution derived from boiling barley grain with water during the beer making process." [T-CAP:Victoria_Corollo_Blake]
-is_a: TO:0000597 ! quality trait
+is_a: TO:0000597 ! plant quality trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:27:42Z
 
@@ -12793,7 +12793,7 @@ creation_date: 2011-08-19T01:27:42Z
 id: TO:0020075
 name: barley malt protein
 def: "Percent protein in the malt prior to mashing (boiling the grain with water to produce a wort) in the beer making process." [T-CAP:Victoria_Corollo_Blake]
-is_a: TO:0000597 ! quality trait
+is_a: TO:0000597 ! plant quality trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:29:00Z
 
