@@ -878,10 +878,10 @@ def: "Amount of amylopectin present in the plant or plant part." [ISBN:198506732
 comment: It is a polysaccharide present in starch. Amylopectin is a polymer of alpha(1,4)-linked glucose units, as is amylose (see amylose). Unlike amylose, amylopectin contains branches of 2430 glucose units connected to the main chain by an alpha(1,6) linkage.
 synonym: "AMYPCTCN" RELATED []
 is_a: TO:0000489 ! carbohydrate composition related trait
-is_a: TO:0000667 ! cooking or brewing quality
 is_a: TO:0006007 ! polysaccharide content
 intersection_of: PATO:0000025 ! composition
 intersection_of: inheres_in CHEBI:28057 ! amylopectin
+relationship: part_of TO:0000667 ! cooking or brewing quality
 
 [Term]
 id: TO:0000098
@@ -1950,7 +1950,7 @@ def: "Scored by gel consistency type in mm." [ICIS:1255, IRRI:SES]
 synonym: "GelC" RELATED []
 synonym: "GELCON" RELATED []
 is_a: TO:0000489 ! carbohydrate composition related trait
-is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000212
@@ -3448,8 +3448,10 @@ intersection_of: inheres_in PO:0009049 ! inflorescence
 [Term]
 id: TO:0000374
 name: breakdown viscosity
+def: "A cooking quality trait that is the tendency of gelatinized starch granules to break during cooking, especially at high temperature." [PMCID:PMC434838, TO:cooperl]
+comment: Breakdown is usually associated with the tendency of gelatinized starch granules to break during holding at high temperature, accompanied with continuous shearing (Han and Hamaker 2001). Breakdown is usually calculated from a resulting viscogram by subtracting trough from peak viscosity. The increase in rice flour breakdown viscosity, although not always significant (P < 0.05), suggests a greater protection of the starch granule integrity. This probably is due to the increased affinity of proteins to interact with starch, as a result of protein denaturation. The resulting formation of protein–starch complexes tends to increase rice flour peak viscosity. {xref="PMCID:PMC434838"}
 synonym: "BRKVIS" RELATED []
-is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000375
@@ -3467,14 +3469,14 @@ is_a: TO:0002731 ! grain length to width ratio
 id: TO:0000376
 name: consistency viscosity
 synonym: "CONVIS" RELATED []
-is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000377
 name: cooked grain elongation
 synonym: "CKKEL" RELATED []
 synonym: "cooked kernel elongation" RELATED []
-is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000378
@@ -3488,7 +3490,7 @@ is_a: TO:0000439 ! fungal disease resistance
 id: TO:0000379
 name: cool paste viscosity
 synonym: "CPVIS" RELATED []
-is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000380
@@ -3729,13 +3731,13 @@ is_obsolete: true
 id: TO:0000408
 name: hot paste viscosity
 synonym: "HPVIS" RELATED []
-is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000409
 name: peak viscosity
 synonym: "PVIS" RELATED []
-is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000410
@@ -3765,7 +3767,7 @@ def: "Determined by deducting the peak viscosity from the cool paste viscosity."
 synonym: "setback" RELATED []
 synonym: "SETBK" RELATED []
 synonym: "SETBKVIS" RELATED []
-is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000413
@@ -4187,7 +4189,7 @@ name: gelatinization temperature
 def: "Is an indication of gelatinization temperature. Observed by placing six milled-grains/kernels in 10ml 1.7% KOH in a shallow container and arrange them so that they do not touch. Let them stand for 23hrs at 30C temperature and score for spreading. Measure for Alkali digestion is inversely proportional to the gelatinization temperature, e.g. if alkali digestion is low, the gelatinization temperature is high." [Gramene:pankaj_jaiswal, ICIS:1256, IRRI:SES]
 synonym: "GELTZTMP" RELATED []
 is_a: TO:0000489 ! carbohydrate composition related trait
-is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000463
@@ -5469,7 +5471,7 @@ synonym: "malt-extract percent" RELATED []
 synonym: "MALTEXTPCENT" RELATED []
 is_a: TO:0000281 ! metabolite content trait
 is_a: TO:0000488 ! seed composition quality trait
-is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0001070 ! brewing quality trait
 
 [Term]
 id: TO:0000612
@@ -5685,7 +5687,7 @@ id: TO:0000635
 name: popping expansion volume
 synonym: "popcorn volume" RELATED []
 synonym: "POPEXPVOL" RELATED []
-is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000636
@@ -5808,7 +5810,7 @@ relationship: inheres_in PO:0009037 {is_inferred="true"} ! lemma
 id: TO:0000651
 name: flour color
 synonym: "FLRCL" RELATED []
-is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000652
@@ -5921,6 +5923,7 @@ is_a: TO:0000449 ! grain yield per plant
 id: TO:0000667
 name: cooking or brewing quality
 def: "The quality trait of the seed or the products derived from it." [Gramene:pankaj_jaiswal]
+xref: TO_GIT:108
 is_a: TO:0000931 ! seed quality trait
 
 [Term]
@@ -9867,6 +9870,28 @@ is_a: TO:0000470 ! vascular tissue morphology trait
 property_value: http://purl.org/dc/elements/1.1/date 2017-08-17T21:15:56Z xsd:dateTime
 
 [Term]
+id: TO:0001068
+name: processing quality trait
+def: "A plant quality trait (TO:0000597) that is the utility of a plant, plant structure (PO:0009011) or plant product for post-harvest chemical, biological or mechanical transformation into a desired end product." [TO:cooperl]
+is_a: TO:0000597 ! plant quality trait
+property_value: http://purl.org/dc/elements/1.1/date 2017-12-07T23:52:42Z xsd:dateTime
+created_by: Laurel_Cooper
+creation_date: 2017-12-07
+
+[Term]
+id: TO:0001069
+name: cooking quality trait
+is_a: TO:0001068 ! processing quality trait
+property_value: http://purl.org/dc/elements/1.1/date 2017-12-08T00:41:11Z xsd:dateTime
+
+[Term]
+id: TO:0001070
+name: brewing quality trait
+def: "A processing quality (TO:0001068) that is the utility of a plant, plant structure (PO:0009011) or plant product for post-harvest brewing of fermented endproducts." [TO:Cooperl]
+is_a: TO:0001068 ! processing quality trait
+property_value: http://purl.org/dc/elements/1.1/date 2017-12-08T00:41:25Z xsd:dateTime
+
+[Term]
 id: TO:0002600
 name: floral organ size
 def: "A floral organ morphology trait (TO:0000862) which is the size of a floral organ (PO:0025395)." [Gramene:pankaj_jaiswal, PO:0025395, TO:moorel]
@@ -10319,8 +10344,7 @@ id: TO:0002645
 name: malt tenderness
 def: "Percentage of soft malt, measured from micro malting 50g of barley." [GrainGenes_trait:Malt_tenderness, PMID:12677407]
 synonym: "MALTTENDER" RELATED []
-is_a: TO:0000667 ! cooking or brewing quality
-is_a: TO:0000685 ! fruit tenderness
+is_a: TO:0001070 ! brewing quality trait
 
 [Term]
 id: TO:0002646
@@ -10328,7 +10352,7 @@ name: flour particle size
 def: "Size of flour particles determined after grinding the grains. The size depends on the length and type of grinding." [GrainGenes_trait:Particle_size, Gramene:pankaj_jaiswal]
 comment: It affects the water absorption, dough handling characteristics and loaf volume while cooking.
 synonym: "FLRPARTSZ" RELATED []
-is_a: TO:0000667 ! cooking or brewing quality
+is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0002647
@@ -12755,7 +12779,7 @@ id: TO:0020071
 name: beta-glucanase thermostability
 def: "The ability of beta-glucanase to remain active under mashing (boiling grain in water) conditions during beer making." [T-CAP:Victoria_Corollo_Blake]
 comment: Beta-glucanase [(1-3,1-4)-beta-D-glucan, 4-glucanohydrolase], (E.C:3.2.1.73).
-is_a: TO:0000597 ! plant quality trait
+is_a: TO:0001070 ! brewing quality trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:18:25Z
 
@@ -12775,8 +12799,8 @@ id: TO:0020073
 name: barley wort protein concentration
 def: "Concentration of protein in the wort after boiling the grain with water (mashing) in the beer making process." [T-CAP:Victoria_Corollo_Blake]
 synonym: "wort protein" BROAD []
-is_a: TO:0000597 ! plant quality trait
 is_a: TO:0000598 ! protein content
+is_a: TO:0001070 ! brewing quality trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:24:05Z
 
@@ -12784,7 +12808,7 @@ creation_date: 2011-08-19T01:24:05Z
 id: TO:0020074
 name: barley wort color
 def: "Color of the solution derived from boiling barley grain with water during the beer making process." [T-CAP:Victoria_Corollo_Blake]
-is_a: TO:0000597 ! plant quality trait
+is_a: TO:0001070 ! brewing quality trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:27:42Z
 
@@ -12792,7 +12816,7 @@ creation_date: 2011-08-19T01:27:42Z
 id: TO:0020075
 name: barley malt protein
 def: "Percent protein in the malt prior to mashing (boiling the grain with water to produce a wort) in the beer making process." [T-CAP:Victoria_Corollo_Blake]
-is_a: TO:0000597 ! plant quality trait
+is_a: TO:0001070 ! brewing quality trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:29:00Z
 
