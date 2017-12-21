@@ -131,6 +131,22 @@ def: "All of the contents of a cell excluding the plasma membrane and nucleus, b
 is_a: GO:0044424 ! intracellular part
 
 [Term]
+id: GO:0005886
+name: plasma membrane
+def: "The membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins." [ISBN:0716731363]
+synonym: "bacterial inner membrane" NARROW []
+synonym: "cell membrane" EXACT []
+synonym: "cellular membrane" EXACT [NIF_Subcellular:sao6433132645]
+synonym: "cytoplasmic membrane" EXACT []
+synonym: "inner endospore membrane" NARROW []
+synonym: "juxtamembrane" BROAD []
+synonym: "plasma membrane lipid bilayer" NARROW [GOC:mah]
+synonym: "plasmalemma" EXACT []
+is_a: GO:0016020 ! membrane
+is_a: GO:0044464 ! cell part
+relationship: BFO:0000050 GO:0071944 ! cell periphery
+
+[Term]
 id: GO:0006725
 name: cellular aromatic compound metabolic process
 def: "The chemical reactions and pathways involving aromatic compounds, any organic compound characterized by one or more planar rings, each of which contains conjugated double bonds and delocalized pi electrons, as carried out by individual cells." [GOC:ai, ISBN:0198506732]
@@ -408,6 +424,12 @@ def: "The process whose specific outcome is the progression of an inflorescence 
 is_a: GO:0090567 ! reproductive shoot system development
 
 [Term]
+id: GO:0016020
+name: membrane
+def: "A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it." [GOC:dos, GOC:mah, ISBN:0815316194]
+is_a: GO:0005575 ! cellular_component
+
+[Term]
 id: GO:0016043
 name: cellular component organization
 def: "A process that results in the assembly, arrangement of constituent parts, or disassembly of a cellular component." [GOC:ai, GOC:jl, GOC:mah]
@@ -601,11 +623,26 @@ synonym: "single-organism developmental process" RELATED []
 is_a: GO:0008150 ! biological_process
 
 [Term]
+id: GO:0032838
+name: plasma membrane bounded cell projection cytoplasm
+def: "All of the contents of a plasma membrane bounded cell projection, excluding the plasma membrane surrounding the projection." [GOC:krc, GOC:mah]
+is_a: GO:0099568 ! cytoplasmic region
+is_a: GO:0120038 ! plasma membrane bounded cell projection part
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: BFO:0000050 GO:0120025 ! plasma membrane bounded cell projection
+
+[Term]
 id: GO:0035251
 name: UDP-glucosyltransferase activity
 def: "Catalysis of the transfer of a glucosyl group from UDP-glucose to an acceptor molecule." [http://www.chem.qmul.ac.uk/iubmb/enzyme/reaction/polysacc/UDPsugar.html]
 is_a: GO:0008194 ! UDP-glycosyltransferase activity
 is_a: GO:0046527 ! glucosyltransferase activity
+
+[Term]
+id: GO:0035618
+name: root hair
+def: "A long, thin projection from a root epidermal cell that contains F-actin and tubulin, and a cell wall." [http://www.jstor.org/stable/4354264, PO:0000256]
+is_a: GO:0120025 ! plasma membrane bounded cell projection
 
 [Term]
 id: GO:0042044
@@ -618,6 +655,15 @@ id: GO:0042578
 name: phosphoric ester hydrolase activity
 def: "Catalysis of the reaction: RPO-R' + H2O = RPOOH + R'H. This reaction is the hydrolysis of any phosphoric ester bond, any ester formed from orthophosphoric acid, O=P(OH)3." [GOC:jl]
 is_a: GO:0016788 ! hydrolase activity, acting on ester bonds
+
+[Term]
+id: GO:0042995
+name: cell projection
+def: "A prolongation or process extending from a cell, e.g. a flagellum or axon." [GOC:jl, http://www.cogsci.princeton.edu/~wn/]
+synonym: "cell process" BROAD []
+synonym: "cellular process" BROAD []
+synonym: "cellular projection" EXACT []
+is_a: GO:0044464 ! cell part
 
 [Term]
 id: GO:0043036
@@ -695,6 +741,15 @@ intersection_of: BFO:0000050 GO:0005622 ! intracellular
 relationship: BFO:0000050 GO:0005622 ! intracellular
 
 [Term]
+id: GO:0044425
+name: membrane part
+def: "Any constituent part of a membrane, a double layer of lipid molecules that encloses all cells, and, in eukaryotes, many organelles; may be a single or double lipid bilayer; also includes associated proteins." [GOC:jl]
+is_a: GO:0005575 ! cellular_component
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: BFO:0000050 GO:0016020 ! membrane
+relationship: BFO:0000050 GO:0016020 ! membrane
+
+[Term]
 id: GO:0044435
 name: plastid part
 def: "Any constituent part of a plastid, a member of a family of organelles found in the cytoplasm of plants and some protists, which are membrane-bounded and contain DNA. Plant plastids develop from a common type, the proplastid." [GOC:jl]
@@ -721,6 +776,25 @@ def: "A constituent part of an intracellular organelle, an organized structure o
 is_a: GO:0044422 ! organelle part
 is_a: GO:0044424 ! intracellular part
 relationship: BFO:0000050 GO:0043229 ! intracellular organelle
+
+[Term]
+id: GO:0044459
+name: plasma membrane part
+def: "Any constituent part of the plasma membrane, the membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins." [GOC:jl]
+is_a: GO:0044425 ! membrane part
+is_a: GO:0044464 ! cell part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: BFO:0000050 GO:0005886 ! plasma membrane
+relationship: BFO:0000050 GO:0005886 ! plasma membrane
+
+[Term]
+id: GO:0044463
+name: cell projection part
+def: "Any constituent part of a cell projection, a prolongation or process extending from a cell, e.g. a flagellum or axon." [GOC:jl]
+is_a: GO:0044464 ! cell part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: BFO:0000050 GO:0042995 ! cell projection
+relationship: BFO:0000050 GO:0042995 ! cell projection
 
 [Term]
 id: GO:0044464
@@ -935,6 +1009,12 @@ synonym: "cellular component organization or biogenesis at cellular level" EXACT
 is_a: GO:0008150 ! biological_process
 
 [Term]
+id: GO:0071944
+name: cell periphery
+def: "The part of a cell encompassing the cell cortex, the plasma membrane, and any external encapsulating structures." [GOC:mah]
+is_a: GO:0044464 ! cell part
+
+[Term]
 id: GO:0090332
 name: stomatal closure
 def: "The process of closing of stomata, pores in the epidermis of leaves and stems bordered by two guard cells and serving in gas exchange." [GOC:tb]
@@ -956,6 +1036,16 @@ is_a: GO:0007568 ! aging
 relationship: BFO:0000050 GO:0099402 ! plant organ development
 
 [Term]
+id: GO:0098590
+name: plasma membrane region
+def: "A membrane that is a (regional) part of the plasma membrane." [GOC:dos]
+synonym: "region of plasma membrane" EXACT []
+is_a: GO:0016020 ! membrane
+is_a: GO:0044459 ! plasma membrane part
+intersection_of: GO:0016020 ! membrane
+intersection_of: BFO:0000050 GO:0005886 ! plasma membrane
+
+[Term]
 id: GO:0099402
 name: plant organ development
 def: "Development of a plant organ, a multi-tissue plant structure that forms a functional unit." [GOC:dos]
@@ -971,6 +1061,24 @@ is_a: GO:0005737 ! cytoplasm
 is_a: GO:0044444 ! cytoplasmic part
 intersection_of: GO:0005737 ! cytoplasm
 intersection_of: BFO:0000050 GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0120025
+name: plasma membrane bounded cell projection
+def: "A prolongation or process extending from a cell and that is bounded by plasma membrane, e.g. a cilium, lamellipodium, or axon." [GOC:krc]
+is_a: GO:0042995 ! cell projection
+intersection_of: GO:0042995 ! cell projection
+intersection_of: BFO:0000051 GO:0098590 ! plasma membrane region
+relationship: BFO:0000051 GO:0098590 ! plasma membrane region
+
+[Term]
+id: GO:0120038
+name: plasma membrane bounded cell projection part
+def: "Any constituent part of a plasma membrane bounded cell projection, a prolongation or process extending from a cell, e.g. a cilium or axon." [GOC:krc]
+is_a: GO:0044463 ! cell projection part
+intersection_of: GO:0005575 ! cellular_component
+intersection_of: BFO:0000050 GO:0120025 ! plasma membrane bounded cell projection
+relationship: BFO:0000050 GO:0120025 ! plasma membrane bounded cell projection
 
 [Term]
 id: GO:0140013
