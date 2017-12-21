@@ -1,0 +1,106 @@
+Prefix: : <http://purl.obolibrary.org/obo/>
+Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
+Prefix: DOSDP: <http://geneontology.org/foo/>
+Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: TO: <http://purl.obolibrary.org/obo/TO_>
+Prefix: EO: <http://purl.obolibrary.org/obo/EO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+
+ ## Auto-generated
+
+Ontology: <http://purl.obolibrary.org/obo/patterns/ratio/ratio_pattern.owl>
+AnnotationProperty: IAO:0000115
+AnnotationProperty: to/ratio/dividend
+AnnotationProperty: to/ratio/divisor
+AnnotationProperty: to/ratio/attribute
+AnnotationProperty: DOSDP:applies-pattern
+Class: TO_0000387 ## plant trait
+Class: PATO_0000001 ## quality
+ObjectProperty: TO_has_divisor_quality ## has divisor quality
+ObjectProperty: TO_has_dividend_quality ## has dividend quality
+## Auto-generated classes
+
+Class: TO:0000078 ## root dry weight
+Class: TO:0000346 ## tiller number
+Class: PATO:0001470 ## proportionality to
+## {"dividend": "TO:0000078", "divisor": "TO:0000346", "attribute": "PATO:0001470"}
+Class: TO:0000579
+ Annotations: rdfs:label "root dry weight to tiller number ratio"
+ EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000078 and TO_has_divisor_quality some TO:0000346 ## proportionality to and 'has dividend quality' some root dry weight and 'has divisor quality' some tiller number
+
+Class: TO:0000539 ## large vascular bundle number
+Class: TO:0000540 ## leaf area trait
+Class: PATO:0001470 ## proportionality to
+## {"dividend": "TO:0000539", "divisor": "TO:0000540", "attribute": "PATO:0001470"}
+Class: TO:0000538
+ Annotations: rdfs:label "large vascular bundle number to leaf area ratio"
+ EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000539 and TO_has_divisor_quality some TO:0000540 ## proportionality to and 'has dividend quality' some large vascular bundle number and 'has divisor quality' some leaf area trait
+
+Class: TO:0000608 ## sodium content
+Class: TO:0000609 ## potassium content
+Class: PATO:0001470 ## proportionality to
+## {"dividend": "TO:0000608", "divisor": "TO:0000609", "attribute": "PATO:0001470"}
+Class: TO:0000525
+ Annotations: rdfs:label "sodium to potassium content ratio"
+ EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000608 and TO_has_divisor_quality some TO:0000609 ## proportionality to and 'has dividend quality' some sodium content and 'has divisor quality' some potassium content
+
+Class: TO:0006044 ## magnesium concentration
+Class: TO:0000609 ## potassium content
+Class: PATO:0001470 ## proportionality to
+## {"dividend": "TO:0006044", "divisor": "TO:0000609", "attribute": "PATO:0001470"}
+Class: TO:0000603
+ Annotations: rdfs:label "magnesium to potassium content ratio"
+ EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0006044 and TO_has_divisor_quality some TO:0000609 ## proportionality to and 'has dividend quality' some magnesium concentration and 'has divisor quality' some potassium content
+
+Class: TO:0000196 ## amylose content
+Class: TO:0000097 ## amylopectin content
+Class: PATO:0001470 ## proportionality to
+## {"dividend": "TO:0000196", "divisor": "TO:0000097", "attribute": "PATO:0001470"}
+Class: TO:0000372
+ Annotations: rdfs:label "amylose to amylopectin ratio"
+ EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000196 and TO_has_divisor_quality some TO:0000097 ## proportionality to and 'has dividend quality' some amylose content and 'has divisor quality' some amylopectin content
+
+Class: TO:0000227 ## root length
+Class: TO:0000576 ## stem length
+Class: PATO:0001470 ## proportionality to
+## {"dividend": "TO:0000227", "divisor": "TO:0000576", "attribute": "PATO:0001470"}
+Class: TO:0000278
+ Annotations: rdfs:label "root to shoot ratio"
+ EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000227 and TO_has_divisor_quality some TO:0000576 ## proportionality to and 'has dividend quality' some root length and 'has divisor quality' some stem length
+
+Class: TO:0000078 ## root dry weight
+Class: TO:0000346 ## tiller number
+Class: PATO:0001470 ## proportionality to
+## {"dividend": "TO:0000078", "divisor": "TO:0000346", "attribute": "PATO:0001470"}
+Class: TO:0000579
+ Annotations: rdfs:label "root dry weight to tiller number ratio"
+ EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000078 and TO_has_divisor_quality some TO:0000346 ## proportionality to and 'has dividend quality' some root dry weight and 'has divisor quality' some tiller number
+
+Class: TO:0000081 ## deep root dry weight
+Class: TO:0000078 ## root dry weight
+Class: PATO:0001470 ## proportionality to
+## {"dividend": "TO:0000081", "divisor": "TO:0000078", "attribute": "PATO:0001470"}
+Class: TO:0001011
+ Annotations: rdfs:label "deep root weight ratio"
+ EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000081 and TO_has_divisor_quality some TO:0000078 ## proportionality to and 'has dividend quality' some deep root dry weight and 'has divisor quality' some root dry weight
+
+Class: TO:0000539 ## large vascular bundle number
+Class: TO:0000540 ## leaf area trait
+Class: PATO:0001470 ## proportionality to
+## {"dividend": "TO:0000539", "divisor": "TO:0000540", "attribute": "PATO:0001470"}
+Class: TO:0000538
+ Annotations: rdfs:label "large vascular bundle number to leaf area ratio"
+ EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000539 and TO_has_divisor_quality some TO:0000540 ## proportionality to and 'has dividend quality' some large vascular bundle number and 'has divisor quality' some leaf area trait
+
+Class: TO:0000540 ## leaf area trait
+Class: TO:0000456 ## spikelet number
+Class: PATO:0001470 ## proportionality to
+## {"dividend": "TO:0000540", "divisor": "TO:0000456", "attribute": "PATO:0001470"}
+Class: TO:0000452
+ Annotations: rdfs:label "leaf area to spikelet number ratio"
+ EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000540 and TO_has_divisor_quality some TO:0000456 ## proportionality to and 'has dividend quality' some leaf area trait and 'has divisor quality' some spikelet number

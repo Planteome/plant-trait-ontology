@@ -1,0 +1,30 @@
+pattern_name: to/composition
+classes: 
+  composition: PATO:0000025
+  chemical entity: CHEBI:24431
+  plant structure: PO:0009011
+
+relations:
+  part of: BFO:0000050
+  inheres in: RO:0000052
+
+vars: 
+  entity: "'chemical entity'"
+  plant_part: "'plant structure'"
+
+name:
+  text: "%s composition"
+  vars:
+    - entity
+
+#def: 
+#  text: "The %s composition in a %s"
+#  vars:
+#    - entity
+#    - plant_part
+#
+equivalentTo: 
+  text: "'composition' and 'inheres in' some (%s and 'part of' some %s)"
+  vars:
+    - entity
+    - plant_part

@@ -1,0 +1,37 @@
+pattern_name: to/responsivityNoEO
+classes:
+  sensitivity toward: PATO:0000085
+  whole plant: PO:0000003
+  plant treatment: EO:0001001
+  taxon: NCBITaxon:1
+  chemical entity: CHEBI:24431
+  environmental material: ENVO:00010483
+
+relations:
+  inheres in: RO:0000052
+  realized in response to: RO:0009501
+  has exposure stimulus: RO:0002244
+    
+vars: 
+  stressor: "'taxon' or 'chemical entity' or 'environmental material'"
+
+name:
+  text: "response to %s trait"
+  vars:
+    - stressor
+    
+#annotations: 
+#  - property: oio:hasExactSynonym
+#    text: "%s"
+#    vars:
+#      - iri name
+#
+#def: 
+#  text: "The plant responsivity to %s"
+#  vars:
+#    - stressor
+#    
+equivalentTo: 
+  text: "'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some %s) and 'inheres in' some 'whole plant'"
+  vars:
+    - stressor

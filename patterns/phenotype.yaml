@@ -1,0 +1,30 @@
+pattern_name: to/phenotype
+classes:
+  plant structure: PO:0009011
+  quality: PATO:0000001
+
+relations:
+  part of: BFO:0000050
+  inheres in: RO:0000052
+    
+vars: 
+  attribute: "'quality'"
+  entity: "'plant structure'"
+
+name:
+  text: "%s %s"
+  vars:
+    - entity
+    - attribute
+
+#def: 
+#  text: "A %s that is %s."
+#  vars:
+#    - entity
+#    - attribute
+#   
+equivalentTo: 
+  text: "%s and 'inheres in' some %s"
+  vars:
+    - attribute
+    - entity

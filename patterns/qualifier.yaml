@@ -1,0 +1,33 @@
+pattern_name: to/eq
+classes:
+  plant structure: PO:0009011
+  quality: PATO:0000001
+
+relations:
+  has_quality: RO:0000086
+  inheres in: RO:0000052
+    
+vars: 
+  attribute: "'quality'"
+  entity: "'plant structure'"
+  qualifier: "'quality'"
+
+name:
+  text: "%s %s"
+  vars:
+    - entity
+    - attribute
+
+#def: 
+#  text: "The %s of a %s %s."
+#  vars:
+#    - attribute
+#    - qualifier
+#    - entity
+#    
+equivalentTo: 
+  text: "%s and 'inheres in' some (%s and 'has:quality' some %s)"
+  vars:
+    - attribute
+    - entity
+    - qualifier

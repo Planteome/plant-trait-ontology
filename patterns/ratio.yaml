@@ -1,0 +1,32 @@
+pattern_name: to/ratio
+classes:
+  plant trait: TO:0000387
+  quality: PATO:0000001
+
+relations:
+  has dividend quality: TO_has_dividend_quality
+  has divisor quality: TO_has_divisor_quality
+    
+vars:
+  attribute: "'quality'"
+  dividend: "'quality' or 'plant trait'"
+  divisor: "'quality'  or 'plant trait'"
+
+name:
+  text: "%s to %s ratio"
+  vars:
+    - dividend
+    - divisor
+
+#def: 
+#  text: "The proportion of %s in %s."
+#  vars:
+#    - dividend
+#    - divisor
+#    
+equivalentTo: 
+  text: "%s and 'has dividend quality' some %s and 'has divisor quality' some %s"
+  vars:
+    - attribute
+    - dividend
+    - divisor
