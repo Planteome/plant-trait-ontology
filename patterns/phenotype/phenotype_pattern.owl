@@ -2,13 +2,14 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: EO: <http://purl.obolibrary.org/obo/EO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
 Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
 Prefix: TO: <http://purl.obolibrary.org/obo/TO_>
-Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
 Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: EO: <http://purl.obolibrary.org/obo/EO_>
 Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
 
  ## Auto-generated
@@ -18,218 +19,188 @@ AnnotationProperty: IAO:0000115
 AnnotationProperty: to/phenotype/attribute
 AnnotationProperty: to/phenotype/entity
 AnnotationProperty: DOSDP:applies-pattern
-Class: PO_0009011 ## plant structure
-Class: PATO_0000001 ## quality
-ObjectProperty: BFO_0000050 ## part of
-ObjectProperty: RO_0000052 ## inheres in
+Class: PATO:0000001 ## quality
+Class: PO:0009011 ## plant structure
+ObjectProperty: RO:0000052 ## inheres in
+ObjectProperty: BFO:0000050 ## part of
 ## Auto-generated classes
 
 Class: PATO:0000402 ## branched
 Class: PO:0009005 ## root
-## {"entity": "PO:0009005", "attribute": "PATO:0000402"}
+## {"attribute": "PATO:0000402", "entity": "PO:0009005"}
 Class: TO:0000257
- Annotations: rdfs:label "root branching"
- EquivalentTo: PATO:0000402 and RO_0000052 some PO:0009005 ## branched and 'inheres in' some root
+ EquivalentTo: PATO:0000402 and RO:0000052 some PO:0009005 ## branched and 'inheres in' some root
 
 Class: PATO:0000402 ## branched
 Class: PO:0009049 ## inflorescence
-## {"entity": "PO:0009049", "attribute": "PATO:0000402"}
+## {"attribute": "PATO:0000402", "entity": "PO:0009049"}
 Class: TO:0000050
- Annotations: rdfs:label "inflorescence branching"
- EquivalentTo: PATO:0000402 and RO_0000052 some PO:0009049 ## branched and 'inheres in' some inflorescence
+ EquivalentTo: PATO:0000402 and RO:0000052 some PO:0009049 ## branched and 'inheres in' some inflorescence
 
 Class: PATO:0001883 ## clavate
 Class: PO:0000282 ## trichome
-## {"entity": "PO:0000282", "attribute": "PATO:0001883"}
+## {"attribute": "PATO:0001883", "entity": "PO:0000282"}
 Class: TO:0000916
- Annotations: rdfs:label "trichome clavate"
- EquivalentTo: PATO:0001883 and RO_0000052 some PO:0000282 ## clavate and 'inheres in' some trichome
+ EquivalentTo: PATO:0001883 and RO:0000052 some PO:0000282 ## clavate and 'inheres in' some trichome
 
 Class: PATO:0001259 ## dark purple
 Class: PO:0025291 ## seedling hypocotyl
-## {"entity": "PO:0025291", "attribute": "PATO:0001259"}
+## {"attribute": "PATO:0001259", "entity": "PO:0025291"}
 Class: TO:0000763
- Annotations: rdfs:label "seedling hypocotyl dark purple"
- EquivalentTo: PATO:0001259 and RO_0000052 some PO:0025291 ## dark purple and 'inheres in' some seedling hypocotyl
+ EquivalentTo: PATO:0001259 and RO:0000052 some PO:0025291 ## dark purple and 'inheres in' some seedling hypocotyl
 
 Class: PATO:0000622 ## erect
 Class: PO:0025034 ## leaf
-## {"entity": "PO:0025034", "attribute": "PATO:0000622"}
+## {"attribute": "PATO:0000622", "entity": "PO:0025034"}
 Class: TO:0000872
- Annotations: rdfs:label "leaf erect"
- EquivalentTo: PATO:0000622 and RO_0000052 some PO:0025034 ## erect and 'inheres in' some leaf
+ EquivalentTo: PATO:0000622 and RO:0000052 some PO:0025034 ## erect and 'inheres in' some leaf
 
 Class: PATO:0001861 ## fasciculated
 Class: PO:0020136 ## ear inflorescence
-## {"entity": "PO:0020136", "attribute": "PATO:0001861"}
+## {"attribute": "PATO:0001861", "entity": "PO:0020136"}
 Class: TO:0000715
- Annotations: rdfs:label "fascicled ear"
- EquivalentTo: PATO:0001861 and RO_0000052 some PO:0020136 ## fasciculated and 'inheres in' some ear inflorescence
+ EquivalentTo: PATO:0001861 and RO:0000052 some PO:0020136 ## fasciculated and 'inheres in' some ear inflorescence
 
 Class: PATO:0001362 ## fragile
 Class: PO:0009047 ## stem
-## {"entity": "PO:0009047", "attribute": "PATO:0001362"}
+## {"attribute": "PATO:0001362", "entity": "PO:0009047"}
 Class: TO:0000200
- Annotations: rdfs:label "brittle culm"
- EquivalentTo: PATO:0001362 and RO_0000052 some PO:0009047 ## fragile and 'inheres in' some stem
+ EquivalentTo: PATO:0001362 and RO:0000052 some PO:0009047 ## fragile and 'inheres in' some stem
 
 Class: PATO:0001362 ## fragile
 Class: PO:0009089 ## endosperm
-## {"entity": "PO:0009089", "attribute": "PATO:0001362"}
+## {"attribute": "PATO:0001362", "entity": "PO:0009089"}
 Class: TO:0000713
- Annotations: rdfs:label "brittle endosperm"
- EquivalentTo: PATO:0001362 and RO_0000052 some PO:0009089 ## fragile and 'inheres in' some endosperm
+ EquivalentTo: PATO:0001362 and RO:0000052 some PO:0009089 ## fragile and 'inheres in' some endosperm
 
 Class: PATO:0001540 ## glutinous
 Class: PO:0009089 ## endosperm
-## {"entity": "PO:0009089", "attribute": "PATO:0001540"}
+## {"attribute": "PATO:0001540", "entity": "PO:0009089"}
 Class: TO:0000098
- Annotations: rdfs:label "glutinous endosperm"
- EquivalentTo: PATO:0001540 and RO_0000052 some PO:0009089 ## glutinous and 'inheres in' some endosperm
+ EquivalentTo: PATO:0001540 and RO:0000052 some PO:0009089 ## glutinous and 'inheres in' some endosperm
 
 Class: PATO:0000320 ## green
 Class: PO:0025291 ## seedling hypocotyl
-## {"entity": "PO:0025291", "attribute": "PATO:0000320"}
+## {"attribute": "PATO:0000320", "entity": "PO:0025291"}
 Class: TO:0000760
- Annotations: rdfs:label "seedling hypocotyl green"
- EquivalentTo: PATO:0000320 and RO_0000052 some PO:0025291 ## green and 'inheres in' some seedling hypocotyl
+ EquivalentTo: PATO:0000320 and RO:0000052 some PO:0025291 ## green and 'inheres in' some seedling hypocotyl
 
 Class: PATO:0000585 ## hypotrophic
 Class: PO:0009089 ## endosperm
-## {"entity": "PO:0009089", "attribute": "PATO:0000585"}
+## {"attribute": "PATO:0000585", "entity": "PO:0009089"}
 Class: TO:0000100
- Annotations: rdfs:label "shrunken endosperm"
- EquivalentTo: PATO:0000585 and RO_0000052 some PO:0009089 ## hypotrophic and 'inheres in' some endosperm
+ EquivalentTo: PATO:0000585 and RO:0000052 some PO:0009089 ## hypotrophic and 'inheres in' some endosperm
 
 Class: PATO:0000586 ## increased size
 Class: PO:0009009 ## plant embryo
-## {"entity": "PO:0009009", "attribute": "PATO:0000586"}
+## {"attribute": "PATO:0000586", "entity": "PO:0009009"}
 Class: TO:0000113
- Annotations: rdfs:label "giant embryo"
- EquivalentTo: PATO:0000586 and RO_0000052 some PO:0009009 ## increased size and 'inheres in' some plant embryo
+ EquivalentTo: PATO:0000586 and RO:0000052 some PO:0009009 ## increased size and 'inheres in' some plant embryo
 
 Class: PATO:0000328 ## low saturation
 Class: PO:0009089 ## endosperm
-## {"entity": "PO:0009089", "attribute": "PATO:0000328"}
+## {"attribute": "PATO:0000328", "entity": "PO:0009089"}
 Class: TO:0000105
- Annotations: rdfs:label "dull endosperm"
- EquivalentTo: PATO:0000328 and RO_0000052 some PO:0009089 ## low saturation and 'inheres in' some endosperm
+ EquivalentTo: PATO:0000328 and RO:0000052 some PO:0009089 ## low saturation and 'inheres in' some endosperm
 
 Class: PATO:0001533 ## multi-colored
 Class: PO:0025034 ## leaf
-## {"entity": "PO:0025034", "attribute": "PATO:0001533"}
+## {"attribute": "PATO:0001533", "entity": "PO:0025034"}
 Class: TO:0000069
- Annotations: rdfs:label "variegated leaf"
- EquivalentTo: PATO:0001533 and RO_0000052 some PO:0025034 ## multi-colored and 'inheres in' some leaf
+ EquivalentTo: PATO:0001533 and RO:0000052 some PO:0025034 ## multi-colored and 'inheres in' some leaf
 
 Class: PATO:0000631 ## prostrate
 Class: PO:0025034 ## leaf
-## {"entity": "PO:0025034", "attribute": "PATO:0000631"}
+## {"attribute": "PATO:0000631", "entity": "PO:0025034"}
 Class: TO:0000873
- Annotations: rdfs:label "leaf prostrate"
- EquivalentTo: PATO:0000631 and RO_0000052 some PO:0025034 ## prostrate and 'inheres in' some leaf
+ EquivalentTo: PATO:0000631 and RO:0000052 some PO:0025034 ## prostrate and 'inheres in' some leaf
 
 Class: PATO:0001320 ## pubescent hair
 Class: PO:0009034 ## flower bract
-## {"entity": "PO:0009034", "attribute": "PATO:0001320"}
+## {"attribute": "PATO:0001320", "entity": "PO:0009034"}
 Class: TO:0000417
- Annotations: rdfs:label "lemma and palea pubescence"
- EquivalentTo: PATO:0001320 and RO_0000052 some PO:0009034 ## pubescent hair and 'inheres in' some flower bract
+ EquivalentTo: PATO:0001320 and RO:0000052 some PO:0009034 ## pubescent hair and 'inheres in' some flower bract
 
 Class: PATO:0001320 ## pubescent hair
 Class: PO:0020039 ## leaf lamina
-## {"entity": "PO:0020039", "attribute": "PATO:0001320"}
+## {"attribute": "PATO:0001320", "entity": "PO:0020039"}
 Class: TO:0000055
- Annotations: rdfs:label "leaf lamina pubescence"
- EquivalentTo: PATO:0001320 and RO_0000052 some PO:0020039 ## pubescent hair and 'inheres in' some leaf lamina
+ EquivalentTo: PATO:0001320 and RO:0000052 some PO:0020039 ## pubescent hair and 'inheres in' some leaf lamina
 
 Class: PATO:0000951 ## purple
 Class: PO:0025291 ## seedling hypocotyl
-## {"entity": "PO:0025291", "attribute": "PATO:0000951"}
+## {"attribute": "PATO:0000951", "entity": "PO:0025291"}
 Class: TO:0000762
- Annotations: rdfs:label "seedling hypocotyl purple"
- EquivalentTo: PATO:0000951 and RO_0000052 some PO:0025291 ## purple and 'inheres in' some seedling hypocotyl
+ EquivalentTo: PATO:0000951 and RO:0000052 some PO:0025291 ## purple and 'inheres in' some seedling hypocotyl
 
 Class: PATO:0000700 ## rough
 Class: PO:0009089 ## endosperm
-## {"entity": "PO:0009089", "attribute": "PATO:0000700"}
+## {"attribute": "PATO:0000700", "entity": "PO:0009089"}
 Class: TO:0000717
- Annotations: rdfs:label "rough endosperm"
- EquivalentTo: PATO:0000700 and RO_0000052 some PO:0009089 ## rough and 'inheres in' some endosperm
+ EquivalentTo: PATO:0000700 and RO:0000052 some PO:0009089 ## rough and 'inheres in' some endosperm
 
 Class: PATO:0001206 ## serrated
 Class: PO:0020128 ## leaf margin
-## {"entity": "PO:0020128", "attribute": "PATO:0001206"}
+## {"attribute": "PATO:0001206", "entity": "PO:0020128"}
 Class: TO:0006063
- Annotations: rdfs:label "leaf margin serrated"
- EquivalentTo: PATO:0001206 and RO_0000052 some PO:0020128 ## serrated and 'inheres in' some leaf margin
+ EquivalentTo: PATO:0001206 and RO:0000052 some PO:0020128 ## serrated and 'inheres in' some leaf margin
 
 Class: PATO:0001499 ## spherical
 Class: PO:0009009 ## plant embryo
-## {"entity": "PO:0009009", "attribute": "PATO:0001499"}
+## {"attribute": "PATO:0001499", "entity": "PO:0009009"}
 Class: TO:0000194
- Annotations: rdfs:label "globular embryo"
- EquivalentTo: PATO:0001499 and RO_0000052 some PO:0009009 ## spherical and 'inheres in' some plant embryo
+ EquivalentTo: PATO:0001499 and RO:0000052 some PO:0009009 ## spherical and 'inheres in' some plant embryo
 
 Class: PATO:0001810 ## wrinkled
 Class: PO:0009010 ## seed
-## {"entity": "PO:0009010", "attribute": "PATO:0001810"}
+## {"attribute": "PATO:0001810", "entity": "PO:0009010"}
 Class: TO:0000718
- Annotations: rdfs:label "wrinkled seed"
- EquivalentTo: PATO:0001810 and RO_0000052 some PO:0009010 ## wrinkled and 'inheres in' some seed
+ EquivalentTo: PATO:0001810 and RO:0000052 some PO:0009010 ## wrinkled and 'inheres in' some seed
 
 Class: PATO:0000462 ## absent
 Class: PO:0009009 ## plant embryo
-## {"entity": "PO:0009009", "attribute": "PATO:0000462"}
+## {"attribute": "PATO:0000462", "entity": "PO:0009009"}
 Class: TO:0000189
- Annotations: rdfs:label "embryoless"
- EquivalentTo: PATO:0000462 and RO_0000052 some PO:0009009 ## absent and 'inheres in' some plant embryo
+ EquivalentTo: PATO:0000462 and RO:0000052 some PO:0009009 ## absent and 'inheres in' some plant embryo
 
 Class: PATO:0000462 ## absent
 Class: PO:0009089 ## endosperm
-## {"entity": "PO:0009089", "attribute": "PATO:0000462"}
+## {"attribute": "PATO:0000462", "entity": "PO:0009089"}
 Class: TO:0000231
- Annotations: rdfs:label "endospermless"
- EquivalentTo: PATO:0000462 and RO_0000052 some PO:0009089 ## absent and 'inheres in' some endosperm
+ EquivalentTo: PATO:0000462 and RO:0000052 some PO:0009089 ## absent and 'inheres in' some endosperm
 
 Class: PATO:0000462 ## absent
 Class: PO:0020031 ## radicle
-## {"entity": "PO:0020031", "attribute": "PATO:0000462"}
+## {"attribute": "PATO:0000462", "entity": "PO:0020031"}
 Class: TO:0000234
- Annotations: rdfs:label "radicleless"
- EquivalentTo: PATO:0000462 and RO_0000052 some PO:0020031 ## absent and 'inheres in' some radicle
+ EquivalentTo: PATO:0000462 and RO:0000052 some PO:0020031 ## absent and 'inheres in' some radicle
 
 Class: PATO:0000462 ## absent
 Class: PO:0000043 ## crown root
-## {"entity": "PO:0000043", "attribute": "PATO:0000462"}
+## {"attribute": "PATO:0000462", "entity": "PO:0000043"}
 Class: TO:0000230
- Annotations: rdfs:label "crown rootless"
- EquivalentTo: PATO:0000462 and RO_0000052 some PO:0000043 ## absent and 'inheres in' some crown root
+ EquivalentTo: PATO:0000462 and RO:0000052 some PO:0000043 ## absent and 'inheres in' some crown root
 
 Class: PATO:0000462 ## absent
 Class: PO:0000046 ## seminal root
-## {"entity": "PO:0000046", "attribute": "PATO:0000462"}
+## {"attribute": "PATO:0000462", "entity": "PO:0000046"}
 Class: TO:0000714
- Annotations: rdfs:label "seminal rootless"
- EquivalentTo: PATO:0000462 and RO_0000052 some PO:0000046 ## absent and 'inheres in' some seminal root
+ EquivalentTo: PATO:0000462 and RO:0000052 some PO:0000046 ## absent and 'inheres in' some seminal root
 
 Class: PATO:0000462 ## absent
 Class: PO:0009005 ## root
-## {"entity": "PO:0009005", "attribute": "PATO:0000462"}
+## {"attribute": "PATO:0000462", "entity": "PO:0009005"}
 Class: TO:0000198
- Annotations: rdfs:label "rootless"
- EquivalentTo: PATO:0000462 and RO_0000052 some PO:0009005 ## absent and 'inheres in' some root
+ EquivalentTo: PATO:0000462 and RO:0000052 some PO:0009005 ## absent and 'inheres in' some root
 
 Class: PATO:0000462 ## absent
 Class: PO:0020105 ## ligule
-## {"entity": "PO:0020105", "attribute": "PATO:0000462"}
+## {"attribute": "PATO:0000462", "entity": "PO:0020105"}
 Class: TO:0000235
- Annotations: rdfs:label "liguleless"
- EquivalentTo: PATO:0000462 and RO_0000052 some PO:0020105 ## absent and 'inheres in' some ligule
+ EquivalentTo: PATO:0000462 and RO:0000052 some PO:0020105 ## absent and 'inheres in' some ligule
 
 Class: PATO:0000462 ## absent
 Class: PO:0020106 ## leaf sheath auricle
-## {"entity": "PO:0020106", "attribute": "PATO:0000462"}
+## {"attribute": "PATO:0000462", "entity": "PO:0020106"}
 Class: TO:0000226
- Annotations: rdfs:label "auricleless"
- EquivalentTo: PATO:0000462 and RO_0000052 some PO:0020106 ## absent and 'inheres in' some leaf sheath auricle
+ EquivalentTo: PATO:0000462 and RO:0000052 some PO:0020106 ## absent and 'inheres in' some leaf sheath auricle

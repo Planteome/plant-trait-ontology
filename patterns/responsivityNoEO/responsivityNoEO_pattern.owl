@@ -2,14 +2,16 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
-Prefix: TO: <http://purl.obolibrary.org/obo/TO_>
-Prefix: EO: <http://purl.obolibrary.org/obo/EO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
 Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
 Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: PECO: <http://purl.obolibrary.org/obo/PECO_>
+Prefix: TO: <http://purl.obolibrary.org/obo/TO_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
 
  ## Auto-generated
 
@@ -17,67 +19,58 @@ Ontology: <http://purl.obolibrary.org/obo/patterns/responsivityNoEO/responsivity
 AnnotationProperty: IAO:0000115
 AnnotationProperty: to/responsivityNoEO/stressor
 AnnotationProperty: DOSDP:applies-pattern
-Class: PO_0000003 ## whole plant
-Class: PATO_0000085 ## sensitivity toward
-Class: CHEBI_24431 ## chemical entity
-Class: EO_0001001 ## plant treatment
-Class: ENVO_00010483 ## environmental material
-Class: NCBITaxon_1 ## taxon
-ObjectProperty: RO_0009501 ## realized in response to
-ObjectProperty: RO_0000052 ## inheres in
-ObjectProperty: RO_0002244 ## has exposure stimulus
+Class: PO:0000003 ## whole plant
+Class: ENVO:00010483 ## environmental material
+Class: PATO:0000085 ## sensitivity toward
+Class: CHEBI:24431 ## chemical entity
+Class: PECO:0001001 ## plant treatment
+Class: NCBITaxon:1 ## taxon
+ObjectProperty: RO:0000052 ## inheres in
+ObjectProperty: RO:0009501 ## realized in response to
+ObjectProperty: RO:0002244 ## has exposure stimulus
 ## Auto-generated classes
 
 Class: CHEBI:27744 ## glyphosate
 ## {"stressor": "CHEBI:27744"}
 Class: TO:0005006
- Annotations: rdfs:label "response to glyphosate trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:27744) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some glyphosate) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some CHEBI:27744) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some glyphosate) and 'inheres in' some 'whole plant'
 
 Class: CHEBI:52136 ## phosphinothricin
 ## {"stressor": "CHEBI:52136"}
 Class: TO:0005007
- Annotations: rdfs:label "response to phosphinothricin trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some CHEBI:52136) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some phosphinothricin) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some CHEBI:52136) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some phosphinothricin) and 'inheres in' some 'whole plant'
 
 Class: NCBITaxon:62688 ## Blumeria graminis f. sp. hordei
 ## {"stressor": "NCBITaxon:62688"}
 Class: TO:0020060
- Annotations: rdfs:label "response to Blumeria graminis f. sp. hordei trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some NCBITaxon:62688) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Blumeria graminis f. sp. hordei) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:62688) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Blumeria graminis f. sp. hordei) and 'inheres in' some 'whole plant'
 
 Class: NCBITaxon:62690 ## Blumeria graminis f. sp. tritici
 ## {"stressor": "NCBITaxon:62690"}
 Class: TO:0020061
- Annotations: rdfs:label "response to Blumeria graminis f. sp. tritici trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some NCBITaxon:62690) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Blumeria graminis f. sp. tritici) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:62690) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Blumeria graminis f. sp. tritici) and 'inheres in' some 'whole plant'
 
 Class: NCBITaxon:45130 ## Bipolaris sorokiniana
 ## {"stressor": "NCBITaxon:45130"}
 Class: TO:0020052
- Annotations: rdfs:label "response to Bipolaris sorokiniana trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some NCBITaxon:45130) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Bipolaris sorokiniana) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:45130) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Bipolaris sorokiniana) and 'inheres in' some 'whole plant'
 
 Class: NCBITaxon:45130 ## Bipolaris sorokiniana
 ## {"stressor": "NCBITaxon:45130"}
 Class: TO:0020053
- Annotations: rdfs:label "response to Bipolaris sorokiniana trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some NCBITaxon:45130) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Bipolaris sorokiniana) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:45130) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Bipolaris sorokiniana) and 'inheres in' some 'whole plant'
 
 Class: NCBITaxon:50385 ## Diabrotica
 ## {"stressor": "NCBITaxon:50385"}
 Class: TO:0005010
- Annotations: rdfs:label "response to Diabrotica trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some NCBITaxon:50385) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Diabrotica) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:50385) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Diabrotica) and 'inheres in' some 'whole plant'
 
 Class: NCBITaxon:29002 ## cercospora
 ## {"stressor": "NCBITaxon:29002"}
 Class: TO:0002702
- Annotations: rdfs:label "response to cercospora trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some NCBITaxon:29002) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some cercospora) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:29002) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some cercospora) and 'inheres in' some 'whole plant'
 
 Class: NCBITaxon:87749 ## Monographella albescens
 ## {"stressor": "NCBITaxon:87749"}
 Class: TO:0000378
- Annotations: rdfs:label "response to Monographella albescens trait"
- EquivalentTo: PATO_0000085 and RO_0009501 some (EO_0001001 and RO_0002244 some NCBITaxon:87749) and RO_0000052 some PO_0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Monographella albescens) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:87749) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Monographella albescens) and 'inheres in' some 'whole plant'

@@ -60,8 +60,8 @@ PATTERNS_RESPONSIVITYNOEO_OWL = $(patsubst %.tsv, %_pattern.owl, $(wildcard patt
 all_patterns: $(PATTERNS_RATIO_OWL) $(PATTERNS_PHENOTYPE_OWL) $(PATTERNS_COMPOSITION_OWL) $(PATTERNS_MORPH_OWL) $(PATTERNS_EQ_OWL) $(PATTERNS_RESPONSIVITY_OWL) $(PATTERNS_RESPONSIVITYNOEO_OWL)
 
 patterns/eq/%_pattern.owl: patterns/eq/%.tsv
-	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/eq/$*.tsv
-	#patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/eq/$*.tsv -p patterns/eq.yaml -n $@ > $@
+	#dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/eq/$*.tsv
+	patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/eq/$*.tsv -p patterns/eq.yaml -n $@ > $@
 
 patterns/eq/%_pattern.obo: patterns/eq/%_pattern.owl
 	$(ROBOT) convert -i $< -f obo -o $@
