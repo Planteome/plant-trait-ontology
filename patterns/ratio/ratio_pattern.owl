@@ -1,96 +1,73 @@
-Prefix: : <http://purl.obolibrary.org/obo/>
-Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
-Prefix: DOSDP: <http://geneontology.org/foo/>
-Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: TO: <http://purl.obolibrary.org/obo/TO_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: EO: <http://purl.obolibrary.org/obo/EO_>
-Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix(:=<owlapi:ontology#ont1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
- ## Auto-generated
 
-Ontology: <http://purl.obolibrary.org/obo/patterns/ratio/ratio_pattern.owl>
-AnnotationProperty: IAO:0000115
-AnnotationProperty: to/ratio/dividend
-AnnotationProperty: to/ratio/attribute
-AnnotationProperty: to/ratio/divisor
-AnnotationProperty: DOSDP:applies-pattern
-Class: PATO:0000001 ## quality
-Class: TO:0000387 ## plant trait
-ObjectProperty: TO_has_dividend_quality ## has dividend quality
-ObjectProperty: TO_has_divisor_quality ## has divisor quality
-## Auto-generated classes
+Ontology(<owlapi:ontology#ont1>
 
-Class: TO:0000078 ## root dry weight
-Class: PATO:0001470 ## proportionality to
-Class: TO:0000346 ## tiller number
-## {"divisor": "TO:0000346", "attribute": "PATO:0001470", "dividend": "TO:0000078"}
-Class: TO:0000579
- EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000078 and TO_has_divisor_quality some TO:0000346 ## proportionality to and 'has dividend quality' some root dry weight and 'has divisor quality' some tiller number
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001470>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000078>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000081>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000097>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000196>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000227>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000278>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000346>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000372>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000452>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000456>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000525>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000538>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000539>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000540>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000576>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000579>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000603>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000608>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000609>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0001011>))
+Declaration(Class(<http://purl.obolibrary.org/obo/TO_0006044>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/TO_has_dividend_quality>))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/TO_has_divisor_quality>))
 
-Class: TO:0000539 ## large vascular bundle number
-Class: PATO:0001470 ## proportionality to
-Class: TO:0000540 ## leaf area trait
-## {"divisor": "TO:0000540", "attribute": "PATO:0001470", "dividend": "TO:0000539"}
-Class: TO:0000538
- EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000539 and TO_has_divisor_quality some TO:0000540 ## proportionality to and 'has dividend quality' some large vascular bundle number and 'has divisor quality' some leaf area trait
+############################
+#   Classes
+############################
 
-Class: TO:0000608 ## sodium content
-Class: PATO:0001470 ## proportionality to
-Class: TO:0000609 ## potassium content
-## {"divisor": "TO:0000609", "attribute": "PATO:0001470", "dividend": "TO:0000608"}
-Class: TO:0000525
- EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000608 and TO_has_divisor_quality some TO:0000609 ## proportionality to and 'has dividend quality' some sodium content and 'has divisor quality' some potassium content
+# Class: <http://purl.obolibrary.org/obo/TO_0000278> (<http://purl.obolibrary.org/obo/TO_0000278>)
 
-Class: TO:0006044 ## magnesium concentration
-Class: PATO:0001470 ## proportionality to
-Class: TO:0000609 ## potassium content
-## {"divisor": "TO:0000609", "attribute": "PATO:0001470", "dividend": "TO:0006044"}
-Class: TO:0000603
- EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0006044 and TO_has_divisor_quality some TO:0000609 ## proportionality to and 'has dividend quality' some magnesium concentration and 'has divisor quality' some potassium content
+EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0000278> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_dividend_quality> <http://purl.obolibrary.org/obo/TO_0000227>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_divisor_quality> <http://purl.obolibrary.org/obo/TO_0000576>)))
 
-Class: TO:0000196 ## amylose content
-Class: PATO:0001470 ## proportionality to
-Class: TO:0000097 ## amylopectin content
-## {"divisor": "TO:0000097", "attribute": "PATO:0001470", "dividend": "TO:0000196"}
-Class: TO:0000372
- EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000196 and TO_has_divisor_quality some TO:0000097 ## proportionality to and 'has dividend quality' some amylose content and 'has divisor quality' some amylopectin content
+# Class: <http://purl.obolibrary.org/obo/TO_0000372> (<http://purl.obolibrary.org/obo/TO_0000372>)
 
-Class: TO:0000227 ## root length
-Class: PATO:0001470 ## proportionality to
-Class: TO:0000576 ## stem length
-## {"divisor": "TO:0000576", "attribute": "PATO:0001470", "dividend": "TO:0000227"}
-Class: TO:0000278
- EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000227 and TO_has_divisor_quality some TO:0000576 ## proportionality to and 'has dividend quality' some root length and 'has divisor quality' some stem length
+EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0000372> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_dividend_quality> <http://purl.obolibrary.org/obo/TO_0000196>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_divisor_quality> <http://purl.obolibrary.org/obo/TO_0000097>)))
 
-Class: TO:0000078 ## root dry weight
-Class: PATO:0001470 ## proportionality to
-Class: TO:0000346 ## tiller number
-## {"divisor": "TO:0000346", "attribute": "PATO:0001470", "dividend": "TO:0000078"}
-Class: TO:0000579
- EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000078 and TO_has_divisor_quality some TO:0000346 ## proportionality to and 'has dividend quality' some root dry weight and 'has divisor quality' some tiller number
+# Class: <http://purl.obolibrary.org/obo/TO_0000452> (<http://purl.obolibrary.org/obo/TO_0000452>)
 
-Class: TO:0000081 ## deep root dry weight
-Class: PATO:0001470 ## proportionality to
-Class: TO:0000078 ## root dry weight
-## {"divisor": "TO:0000078", "attribute": "PATO:0001470", "dividend": "TO:0000081"}
-Class: TO:0001011
- EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000081 and TO_has_divisor_quality some TO:0000078 ## proportionality to and 'has dividend quality' some deep root dry weight and 'has divisor quality' some root dry weight
+EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0000452> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_dividend_quality> <http://purl.obolibrary.org/obo/TO_0000540>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_divisor_quality> <http://purl.obolibrary.org/obo/TO_0000456>)))
 
-Class: TO:0000539 ## large vascular bundle number
-Class: PATO:0001470 ## proportionality to
-Class: TO:0000540 ## leaf area trait
-## {"divisor": "TO:0000540", "attribute": "PATO:0001470", "dividend": "TO:0000539"}
-Class: TO:0000538
- EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000539 and TO_has_divisor_quality some TO:0000540 ## proportionality to and 'has dividend quality' some large vascular bundle number and 'has divisor quality' some leaf area trait
+# Class: <http://purl.obolibrary.org/obo/TO_0000525> (<http://purl.obolibrary.org/obo/TO_0000525>)
 
-Class: TO:0000540 ## leaf area trait
-Class: PATO:0001470 ## proportionality to
-Class: TO:0000456 ## spikelet number
-## {"divisor": "TO:0000456", "attribute": "PATO:0001470", "dividend": "TO:0000540"}
-Class: TO:0000452
- EquivalentTo: PATO:0001470 and TO_has_dividend_quality some TO:0000540 and TO_has_divisor_quality some TO:0000456 ## proportionality to and 'has dividend quality' some leaf area trait and 'has divisor quality' some spikelet number
+EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0000525> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_dividend_quality> <http://purl.obolibrary.org/obo/TO_0000608>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_divisor_quality> <http://purl.obolibrary.org/obo/TO_0000609>)))
+
+# Class: <http://purl.obolibrary.org/obo/TO_0000538> (<http://purl.obolibrary.org/obo/TO_0000538>)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0000538> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_dividend_quality> <http://purl.obolibrary.org/obo/TO_0000539>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_divisor_quality> <http://purl.obolibrary.org/obo/TO_0000540>)))
+
+# Class: <http://purl.obolibrary.org/obo/TO_0000579> (<http://purl.obolibrary.org/obo/TO_0000579>)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0000579> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_dividend_quality> <http://purl.obolibrary.org/obo/TO_0000078>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_divisor_quality> <http://purl.obolibrary.org/obo/TO_0000346>)))
+
+# Class: <http://purl.obolibrary.org/obo/TO_0000603> (<http://purl.obolibrary.org/obo/TO_0000603>)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0000603> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_dividend_quality> <http://purl.obolibrary.org/obo/TO_0006044>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_divisor_quality> <http://purl.obolibrary.org/obo/TO_0000609>)))
+
+# Class: <http://purl.obolibrary.org/obo/TO_0001011> (<http://purl.obolibrary.org/obo/TO_0001011>)
+
+EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0001011> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0001470> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_dividend_quality> <http://purl.obolibrary.org/obo/TO_0000081>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/TO_has_divisor_quality> <http://purl.obolibrary.org/obo/TO_0000078>)))
+
+
+)
