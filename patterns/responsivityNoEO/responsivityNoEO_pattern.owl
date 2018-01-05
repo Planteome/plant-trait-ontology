@@ -2,16 +2,16 @@ Prefix: : <http://purl.obolibrary.org/obo/>
 Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
 Prefix: DOSDP: <http://geneontology.org/foo/>
 Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
 Prefix: PECO: <http://purl.obolibrary.org/obo/PECO_>
 Prefix: TO: <http://purl.obolibrary.org/obo/TO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
 Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
 
  ## Auto-generated
 
@@ -19,12 +19,12 @@ Ontology: <http://purl.obolibrary.org/obo/patterns/responsivityNoEO/responsivity
 AnnotationProperty: IAO:0000115
 AnnotationProperty: to/responsivityNoEO/stressor
 AnnotationProperty: DOSDP:applies-pattern
-Class: PO:0000003 ## whole plant
-Class: ENVO:00010483 ## environmental material
-Class: PATO:0000085 ## sensitivity toward
-Class: CHEBI:24431 ## chemical entity
 Class: PECO:0001001 ## plant treatment
+Class: PATO:0000085 ## sensitivity toward
 Class: NCBITaxon:1 ## taxon
+Class: PO:0000003 ## whole plant
+Class: CHEBI:24431 ## chemical entity
+Class: ENVO:00010483 ## environmental material
 ObjectProperty: RO:0000052 ## inheres in
 ObjectProperty: RO:0009501 ## realized in response to
 ObjectProperty: RO:0002244 ## has exposure stimulus
@@ -33,44 +33,44 @@ ObjectProperty: RO:0002244 ## has exposure stimulus
 Class: CHEBI:27744 ## glyphosate
 ## {"stressor": "CHEBI:27744"}
 Class: TO:0005006
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some CHEBI:27744) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some glyphosate) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some CHEBI:27744) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some glyphosate)
 
 Class: CHEBI:52136 ## phosphinothricin
 ## {"stressor": "CHEBI:52136"}
 Class: TO:0005007
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some CHEBI:52136) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some phosphinothricin) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some CHEBI:52136) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some phosphinothricin)
 
 Class: NCBITaxon:62688 ## Blumeria graminis f. sp. hordei
 ## {"stressor": "NCBITaxon:62688"}
 Class: TO:0020060
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:62688) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Blumeria graminis f. sp. hordei) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:62688) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Blumeria graminis f. sp. hordei)
 
 Class: NCBITaxon:62690 ## Blumeria graminis f. sp. tritici
 ## {"stressor": "NCBITaxon:62690"}
 Class: TO:0020061
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:62690) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Blumeria graminis f. sp. tritici) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:62690) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Blumeria graminis f. sp. tritici)
 
 Class: NCBITaxon:45130 ## Bipolaris sorokiniana
 ## {"stressor": "NCBITaxon:45130"}
 Class: TO:0020052
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:45130) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Bipolaris sorokiniana) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:45130) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Bipolaris sorokiniana)
 
 Class: NCBITaxon:45130 ## Bipolaris sorokiniana
 ## {"stressor": "NCBITaxon:45130"}
 Class: TO:0020053
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:45130) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Bipolaris sorokiniana) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:45130) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Bipolaris sorokiniana)
 
 Class: NCBITaxon:50385 ## Diabrotica
 ## {"stressor": "NCBITaxon:50385"}
 Class: TO:0005010
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:50385) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Diabrotica) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:50385) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Diabrotica)
 
 Class: NCBITaxon:29002 ## cercospora
 ## {"stressor": "NCBITaxon:29002"}
 Class: TO:0002702
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:29002) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some cercospora) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:29002) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some cercospora)
 
 Class: NCBITaxon:87749 ## Monographella albescens
 ## {"stressor": "NCBITaxon:87749"}
 Class: TO:0000378
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:87749) and RO:0000052 some PO:0000003 ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Monographella albescens) and 'inheres in' some 'whole plant'
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:87749) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Monographella albescens)
