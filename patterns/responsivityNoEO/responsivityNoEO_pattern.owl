@@ -1,76 +1,76 @@
-Prefix(:=<owlapi:ontology#ont1#>)
-Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
-Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
-Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
-Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix: : <http://purl.obolibrary.org/obo/>
+Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
+Prefix: DOSDP: <http://geneontology.org/foo/>
+Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
+Prefix: PECO: <http://purl.obolibrary.org/obo/PECO_>
+Prefix: TO: <http://purl.obolibrary.org/obo/TO_>
+Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
+Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
+Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
+Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
+Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
+Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
+Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
+Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
 
+ ## Auto-generated
 
-Ontology(<owlapi:ontology#ont1>
+Ontology: <http://purl.obolibrary.org/obo/patterns/responsivityNoEO/responsivityNoEO_pattern.owl>
+AnnotationProperty: IAO:0000115
+AnnotationProperty: to/responsivityNoEO/stressor
+AnnotationProperty: DOSDP:applies-pattern
+Class: PECO:0001001 ## plant treatment
+Class: PATO:0000085 ## sensitivity toward
+Class: NCBITaxon:1 ## taxon
+Class: PO:0000003 ## whole plant
+Class: CHEBI:24431 ## chemical entity
+Class: ENVO:00010483 ## environmental material
+ObjectProperty: RO:0000052 ## inheres in
+ObjectProperty: RO:0009501 ## realized in response to
+ObjectProperty: RO:0002244 ## has exposure stimulus
+## Auto-generated classes
 
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_27744>))
-Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_52136>))
-Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_29002>))
-Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_45130>))
-Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_50385>))
-Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_62688>))
-Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_62690>))
-Declaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_87749>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0000085>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PECO_0001001>))
-Declaration(Class(<http://purl.obolibrary.org/obo/PO_0000003>))
-Declaration(Class(<http://purl.obolibrary.org/obo/TO_0000378>))
-Declaration(Class(<http://purl.obolibrary.org/obo/TO_0002702>))
-Declaration(Class(<http://purl.obolibrary.org/obo/TO_0005006>))
-Declaration(Class(<http://purl.obolibrary.org/obo/TO_0005007>))
-Declaration(Class(<http://purl.obolibrary.org/obo/TO_0005010>))
-Declaration(Class(<http://purl.obolibrary.org/obo/TO_0020052>))
-Declaration(Class(<http://purl.obolibrary.org/obo/TO_0020053>))
-Declaration(Class(<http://purl.obolibrary.org/obo/TO_0020060>))
-Declaration(Class(<http://purl.obolibrary.org/obo/TO_0020061>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002244>))
-Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0009501>))
+Class: CHEBI:27744 ## glyphosate
+## {"stressor": "CHEBI:27744"}
+Class: TO:0005006
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some CHEBI:27744) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some glyphosate)
 
-############################
-#   Classes
-############################
+Class: CHEBI:52136 ## phosphinothricin
+## {"stressor": "CHEBI:52136"}
+Class: TO:0005007
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some CHEBI:52136) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some phosphinothricin)
 
-# Class: <http://purl.obolibrary.org/obo/TO_0000378> (<http://purl.obolibrary.org/obo/TO_0000378>)
+Class: NCBITaxon:62688 ## Blumeria graminis f. sp. hordei
+## {"stressor": "NCBITaxon:62688"}
+Class: TO:0020060
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:62688) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Blumeria graminis f. sp. hordei)
 
-EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0000378> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000085> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/PO_0000003>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0009501> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> <http://purl.obolibrary.org/obo/NCBITaxon_87749>)))))
+Class: NCBITaxon:62690 ## Blumeria graminis f. sp. tritici
+## {"stressor": "NCBITaxon:62690"}
+Class: TO:0020061
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:62690) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Blumeria graminis f. sp. tritici)
 
-# Class: <http://purl.obolibrary.org/obo/TO_0002702> (<http://purl.obolibrary.org/obo/TO_0002702>)
+Class: NCBITaxon:45130 ## Bipolaris sorokiniana
+## {"stressor": "NCBITaxon:45130"}
+Class: TO:0020052
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:45130) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Bipolaris sorokiniana)
 
-EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0002702> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000085> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/PO_0000003>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0009501> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> <http://purl.obolibrary.org/obo/NCBITaxon_29002>)))))
+Class: NCBITaxon:45130 ## Bipolaris sorokiniana
+## {"stressor": "NCBITaxon:45130"}
+Class: TO:0020053
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:45130) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Bipolaris sorokiniana)
 
-# Class: <http://purl.obolibrary.org/obo/TO_0005006> (<http://purl.obolibrary.org/obo/TO_0005006>)
+Class: NCBITaxon:50385 ## Diabrotica
+## {"stressor": "NCBITaxon:50385"}
+Class: TO:0005010
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:50385) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Diabrotica)
 
-EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0005006> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000085> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/PO_0000003>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0009501> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> <http://purl.obolibrary.org/obo/CHEBI_27744>)))))
+Class: NCBITaxon:29002 ## cercospora
+## {"stressor": "NCBITaxon:29002"}
+Class: TO:0002702
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:29002) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some cercospora)
 
-# Class: <http://purl.obolibrary.org/obo/TO_0005007> (<http://purl.obolibrary.org/obo/TO_0005007>)
-
-EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0005007> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000085> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/PO_0000003>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0009501> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> <http://purl.obolibrary.org/obo/CHEBI_52136>)))))
-
-# Class: <http://purl.obolibrary.org/obo/TO_0005010> (<http://purl.obolibrary.org/obo/TO_0005010>)
-
-EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0005010> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000085> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/PO_0000003>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0009501> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> <http://purl.obolibrary.org/obo/NCBITaxon_50385>)))))
-
-# Class: <http://purl.obolibrary.org/obo/TO_0020052> (<http://purl.obolibrary.org/obo/TO_0020052>)
-
-EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0020052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000085> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/PO_0000003>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0009501> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> <http://purl.obolibrary.org/obo/NCBITaxon_45130>)))))
-
-# Class: <http://purl.obolibrary.org/obo/TO_0020053> (<http://purl.obolibrary.org/obo/TO_0020053>)
-
-EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0020053> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000085> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/PO_0000003>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0009501> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> <http://purl.obolibrary.org/obo/NCBITaxon_45130>)))))
-
-# Class: <http://purl.obolibrary.org/obo/TO_0020060> (<http://purl.obolibrary.org/obo/TO_0020060>)
-
-EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0020060> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000085> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/PO_0000003>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0009501> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> <http://purl.obolibrary.org/obo/NCBITaxon_62688>)))))
-
-# Class: <http://purl.obolibrary.org/obo/TO_0020061> (<http://purl.obolibrary.org/obo/TO_0020061>)
-
-EquivalentClasses(<http://purl.obolibrary.org/obo/TO_0020061> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000085> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> <http://purl.obolibrary.org/obo/PO_0000003>) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0009501> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> <http://purl.obolibrary.org/obo/NCBITaxon_62690>)))))
-
-
-)
+Class: NCBITaxon:87749 ## Monographella albescens
+## {"stressor": "NCBITaxon:87749"}
+Class: TO:0000378
+ EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:87749) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Monographella albescens)
