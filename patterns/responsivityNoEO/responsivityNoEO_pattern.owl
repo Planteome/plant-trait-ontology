@@ -1,76 +1,361 @@
-Prefix: : <http://purl.obolibrary.org/obo/>
-Prefix: IAO: <http://purl.obolibrary.org/obo/IAO_>
-Prefix: DOSDP: <http://geneontology.org/foo/>
-Prefix: oio: <http://www.geneontology.org/formats/oboInOwl#>
-Prefix: PECO: <http://purl.obolibrary.org/obo/PECO_>
-Prefix: TO: <http://purl.obolibrary.org/obo/TO_>
-Prefix: NCBITaxon: <http://purl.obolibrary.org/obo/NCBITaxon_>
-Prefix: GO: <http://purl.obolibrary.org/obo/GO_>
-Prefix: PATO: <http://purl.obolibrary.org/obo/PATO_>
-Prefix: PO: <http://purl.obolibrary.org/obo/PO_>
-Prefix: RO: <http://purl.obolibrary.org/obo/RO_>
-Prefix: CHEBI: <http://purl.obolibrary.org/obo/CHEBI_>
-Prefix: BFO: <http://purl.obolibrary.org/obo/BFO_>
-Prefix: ENVO: <http://purl.obolibrary.org/obo/ENVO_>
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/to/patterns/responsivityNoEO_pattern.owl#"
+     xml:base="http://purl.obolibrary.org/obo/to/patterns/responsivityNoEO_pattern.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/to/patterns/responsivityNoEO_pattern.owl"/>
+    
 
- ## Auto-generated
 
-Ontology: <http://purl.obolibrary.org/obo/patterns/responsivityNoEO/responsivityNoEO_pattern.owl>
-AnnotationProperty: IAO:0000115
-AnnotationProperty: to/responsivityNoEO/stressor
-AnnotationProperty: DOSDP:applies-pattern
-Class: PECO:0001001 ## plant treatment
-Class: PATO:0000085 ## sensitivity toward
-Class: NCBITaxon:1 ## taxon
-Class: PO:0000003 ## whole plant
-Class: CHEBI:24431 ## chemical entity
-Class: ENVO:00010483 ## environmental material
-ObjectProperty: RO:0000052 ## inheres in
-ObjectProperty: RO:0009501 ## realized in response to
-ObjectProperty: RO:0002244 ## has exposure stimulus
-## Auto-generated classes
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-Class: CHEBI:27744 ## glyphosate
-## {"stressor": "CHEBI:27744"}
-Class: TO:0005006
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some CHEBI:27744) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some glyphosate)
+    
 
-Class: CHEBI:52136 ## phosphinothricin
-## {"stressor": "CHEBI:52136"}
-Class: TO:0005007
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some CHEBI:52136) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some phosphinothricin)
 
-Class: NCBITaxon:62688 ## Blumeria graminis f. sp. hordei
-## {"stressor": "NCBITaxon:62688"}
-Class: TO:0020060
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:62688) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Blumeria graminis f. sp. hordei)
+    <!-- http://purl.obolibrary.org/obo/RO_0002244 -->
 
-Class: NCBITaxon:62690 ## Blumeria graminis f. sp. tritici
-## {"stressor": "NCBITaxon:62690"}
-Class: TO:0020061
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:62690) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Blumeria graminis f. sp. tritici)
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002244"/>
+    
 
-Class: NCBITaxon:45130 ## Bipolaris sorokiniana
-## {"stressor": "NCBITaxon:45130"}
-Class: TO:0020052
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:45130) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Bipolaris sorokiniana)
 
-Class: NCBITaxon:45130 ## Bipolaris sorokiniana
-## {"stressor": "NCBITaxon:45130"}
-Class: TO:0020053
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:45130) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Bipolaris sorokiniana)
+    <!-- http://purl.obolibrary.org/obo/RO_0009501 -->
 
-Class: NCBITaxon:50385 ## Diabrotica
-## {"stressor": "NCBITaxon:50385"}
-Class: TO:0005010
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:50385) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Diabrotica)
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0009501"/>
+    
 
-Class: NCBITaxon:29002 ## cercospora
-## {"stressor": "NCBITaxon:29002"}
-Class: TO:0002702
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:29002) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some cercospora)
 
-Class: NCBITaxon:87749 ## Monographella albescens
-## {"stressor": "NCBITaxon:87749"}
-Class: TO:0000378
- EquivalentTo: PATO:0000085 and RO:0009501 some (PECO:0001001 and RO:0002244 some NCBITaxon:87749) ## 'sensitivity toward' and 'realized in response to' some ('plant treatment' and 'has exposure stimulus' some Monographella albescens)
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_27744 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27744"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_52136 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_52136"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_29002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_29002"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_45130 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_45130"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_50385 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_50385"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_62688 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_62688"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_62690 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_62690"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCBITaxon_87749 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_87749"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000085 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000085"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PECO_0001001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0001001"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TO_0000378 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000378">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000085"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009501"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PECO_0001001"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002244"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_87749"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TO_0002702 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0002702">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000085"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009501"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PECO_0001001"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002244"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_29002"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TO_0005006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0005006">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000085"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009501"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PECO_0001001"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002244"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27744"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TO_0005007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0005007">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000085"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009501"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PECO_0001001"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002244"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_52136"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TO_0005010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0005010">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000085"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009501"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PECO_0001001"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002244"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_50385"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TO_0020052 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0020052">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000085"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009501"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PECO_0001001"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002244"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_45130"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TO_0020053 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0020053">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000085"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009501"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PECO_0001001"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002244"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_45130"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TO_0020060 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0020060">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000085"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009501"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PECO_0001001"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002244"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_62688"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TO_0020061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0020061">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000085"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0009501"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PECO_0001001"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002244"/>
+                                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_62690"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6) https://github.com/owlcs/owlapi -->
+

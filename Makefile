@@ -61,6 +61,7 @@ all_patterns: $(PATTERNS_RATIO_OWL) $(PATTERNS_PHENOTYPE_OWL) $(PATTERNS_COMPOSI
 
 patterns/eq/%_pattern.owl: patterns/eq/%.tsv
 	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/eq/$*.tsv
+	robot annotate -O "http://purl.obolibrary.org/obo/to/patterns/$*_pattern.owl" -i $@ -o $@
 	#patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/eq/$*.tsv -p patterns/eq.yaml -n $@ > $@
 
 patterns/eq/%_pattern.obo: patterns/eq/%_pattern.owl
@@ -68,6 +69,7 @@ patterns/eq/%_pattern.obo: patterns/eq/%_pattern.owl
 
 patterns/morphology/%_pattern.owl: patterns/morphology/%.tsv
 	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/morphology/$*.tsv
+	robot annotate -O "http://purl.obolibrary.org/obo/to/patterns/$*_pattern.owl" -i $@ -o $@
 	#patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/morphology/$*.tsv -p patterns/morphology.yaml -n $@ > $@
 
 patterns/morphology/%_pattern.obo: patterns/morphology/%_pattern.owl
@@ -75,6 +77,7 @@ patterns/morphology/%_pattern.obo: patterns/morphology/%_pattern.owl
 
 patterns/responsivity/%_pattern.owl: patterns/responsivity/%.tsv
 	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/responsivity/$*.tsv
+	robot annotate -O "http://purl.obolibrary.org/obo/to/patterns/$*_pattern.owl" -i $@ -o $@
 	#patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/responsivity/$*.tsv -p patterns/responsivity.yaml -n $@ > $@
 
 patterns/responsivity/%_pattern.obo: patterns/responsivity/%_pattern.owl
@@ -82,6 +85,7 @@ patterns/responsivity/%_pattern.obo: patterns/responsivity/%_pattern.owl
 
 patterns/composition/%_pattern.owl: patterns/composition/%.tsv
 	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/composition/$*.tsv
+	robot annotate -O "http://purl.obolibrary.org/obo/to/patterns/$*_pattern.owl" -i $@ -o $@
 	#patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/composition/$*.tsv -p patterns/composition.yaml -n $@ > $@
 
 patterns/composition/%_pattern.obo: patterns/composition/%_pattern.owl
@@ -89,6 +93,7 @@ patterns/composition/%_pattern.obo: patterns/composition/%_pattern.owl
 
 patterns/phenotype/%_pattern.owl: patterns/phenotype/%.tsv
 	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/phenotype/$*.tsv
+	robot annotate -O "http://purl.obolibrary.org/obo/to/patterns/$*_pattern.owl" -i $@ -o $@
 	#patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/phenotype/$*.tsv -p patterns/phenotype.yaml -n $@ > $@
 
 patterns/phenotype/%_pattern.obo: patterns/phenotype/%_pattern.owl
@@ -96,6 +101,7 @@ patterns/phenotype/%_pattern.obo: patterns/phenotype/%_pattern.owl
 
 patterns/ratio/%_pattern.owl: patterns/ratio/%.tsv
 	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/ratio/$*.tsv
+	robot annotate -O "http://purl.obolibrary.org/obo/to/patterns/$*_pattern.owl" -i $@ -o $@
 	#patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/ratio/$*.tsv -p patterns/ratio.yaml -n $@ > $@
 
 patterns/ratio/%_pattern.obo: patterns/ratio/%_pattern.owl
@@ -103,6 +109,7 @@ patterns/ratio/%_pattern.obo: patterns/ratio/%_pattern.owl
 
 patterns/responsivityNoEO/%_pattern.owl: patterns/responsivityNoEO/%.tsv
 	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/responsivityNoEO/$*.tsv
+	robot annotate -O "http://purl.obolibrary.org/obo/to/patterns/$*_pattern.owl" -i $@ -o $@
 	#patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/responsivityNoEO/$*.tsv -p patterns/responsivityNoEO.yaml -n $@ > $@
 
 patterns/responsivityNoEO/%_pattern.obo: patterns/responsivityNoEO/%_pattern.owl
