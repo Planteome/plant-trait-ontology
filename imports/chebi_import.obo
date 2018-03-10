@@ -168,9 +168,9 @@ is_a: CHEBI:33579 ! main group molecular entity
 [Term]
 id: CHEBI:139114
 name: carotenoid  psi-end group
-def: "Any carotenoid derivative with a psi-end group" []
+def: "Any carotenoid derivative with a psi-end group." []
 synonym: "a carotenoid psi-end group" RELATED [UniProt]
-is_a: CHEBI:26873 ! terpenoid
+is_a: CHEBI:23044 ! carotenoid
 
 [Term]
 id: CHEBI:139120
@@ -182,16 +182,19 @@ is_a: CHEBI:23044 ! carotenoid
 [Term]
 id: CHEBI:139291
 name: chlorophyll(1-)
+def: "A cyclic tetrapyrrole anion that is the carbanion obtained by removal of the acidic proton from position 21 of any chlorophyll. Major species at pH 7.3" []
 synonym: "a chlorophyll" RELATED [UniProt]
-is_a: CHEBI:28965 ! dicarboxylic acid dianion
 is_a: CHEBI:58941 ! cyclic tetrapyrrole anion
+relationship: is_conjugate_base_of CHEBI:28966 ! chlorophyll
 
 [Term]
 id: CHEBI:139292
 name: chlorophyllide(2-)
+def: "A cyclic tetrapyrrole anion obtained by removal of the acidic proton from position 21 as well as deprotonation of the carboxy group of any chlorophyllide. Major species at pH 7.3" []
 synonym: "a chlorophyllide" RELATED [UniProt]
 is_a: CHEBI:35757 ! monocarboxylic acid anion
 is_a: CHEBI:58941 ! cyclic tetrapyrrole anion
+relationship: is_conjugate_base_of CHEBI:38206 ! chlorophyllide
 
 [Term]
 id: CHEBI:139300
@@ -216,6 +219,18 @@ synonym: "carbamic acid, ion(1-)" RELATED [ChemIDplus]
 synonym: "Karbamat" RELATED [ChEBI]
 is_a: CHEBI:37022 ! amino-acid anion
 relationship: is_conjugate_base_of CHEBI:28616 ! carbamic acid
+
+[Term]
+id: CHEBI:139588
+name: alpha-hydroxy ketone
+def: "An alpha-oxyketone that has a hydroxy group as the alpha-oxy moiety." []
+synonym: "alpha-hydroxy ketones" RELATED [ChEBI]
+synonym: "alpha-hydroxy-ketone" RELATED [ChEBI]
+synonym: "alpha-hydroxy-ketones" RELATED [ChEBI]
+synonym: "alpha-hydroxyketone" RELATED [ChEBI]
+synonym: "alpha-hydroxyketones" RELATED [ChEBI]
+is_a: CHEBI:30879 ! alcohol
+is_a: CHEBI:52396 ! alpha-oxyketone
 
 [Term]
 id: CHEBI:15339
@@ -422,8 +437,8 @@ synonym: "LYCOPENE" EXACT [PDBeChem]
 synonym: "Lycopene" EXACT [KEGG_COMPOUND]
 synonym: "lycopene" EXACT [UniProt]
 synonym: "psi,psi-carotene" EXACT IUPAC_NAME [IUPAC]
-is_a: CHEBI:139114 ! carotenoid  psi-end group
 is_a: CHEBI:35162 ! acyclic carotene
+relationship: BFO:0000051 CHEBI:139114 ! carotenoid  psi-end group
 relationship: RO:0000087 CHEBI:22586 ! antioxidant
 relationship: RO:0000087 CHEBI:76924 ! plant metabolite
 
@@ -1710,6 +1725,20 @@ is_a: CHEBI:25806 ! oxygen molecular entity
 is_a: CHEBI:33608 ! hydrogen molecular entity
 is_a: CHEBI:37577 ! heteroatomic molecular entity
 relationship: BFO:0000051 CHEBI:43176 ! hydroxy group
+
+[Term]
+id: CHEBI:2468
+name: secondary alpha-hydroxy ketone
+def: "An alpha-hydroxy ketone in which the carbonyl group and the hydroxy group are linked by a carbon bearing one hydrogen and one organyl group. Secondary alpha-hydroxy ketones are also known as acyloins, and are formally derived from reductive coupling of two carboxylic acid groups." []
+synonym: "acyloin" RELATED [ChEBI]
+synonym: "acyloins" RELATED [ChEBI]
+synonym: "secondary alpha-hydroxy ketones" RELATED [ChEBI]
+synonym: "secondary alpha-hydroxy-ketone" RELATED [ChEBI]
+synonym: "secondary alpha-hydroxy-ketones" RELATED [ChEBI]
+synonym: "secondary alpha-hydroxyketone" RELATED [ChEBI]
+synonym: "secondary alpha-hydroxyketones" RELATED [ChEBI]
+is_a: CHEBI:139588 ! alpha-hydroxy ketone
+is_a: CHEBI:35681 ! secondary alcohol
 
 [Term]
 id: CHEBI:24688
@@ -3345,10 +3374,12 @@ is_a: CHEBI:38716 ! carboxylic acid dianion
 [Term]
 id: CHEBI:28966
 name: chlorophyll
+def: "A family of magnesium porphyrins, defined by the presence of a fifth ring beyond the four pyrrole-like rings. The rings can have various side chains which usually include a long phytol chain." []
 synonym: "Chlorophyll" EXACT [KEGG_COMPOUND]
 synonym: "chlorophyll" EXACT [JCBN]
 synonym: "chlorophylls" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:25111 ! magnesium porphyrin
+relationship: is_conjugate_acid_of CHEBI:139291 ! chlorophyll(1-)
 
 [Term]
 id: CHEBI:28984
@@ -4612,6 +4643,7 @@ is_a: CHEBI:5686 ! heterocyclic compound
 [Term]
 id: CHEBI:33671
 name: heteropolycyclic compound
+def: "A polycyclic compound in which at least one of the rings contains at least one non-carbon atom." []
 synonym: "heteropolycyclic compounds" EXACT IUPAC_NAME [IUPAC]
 synonym: "polyheterocyclic compounds" RELATED [ChEBI]
 is_a: CHEBI:33635 ! polycyclic compound
@@ -5271,6 +5303,16 @@ id: CHEBI:35662
 name: terpenoid fundamental parent
 synonym: "terpenoid fundamental parents" RELATED [ChEBI]
 is_a: CHEBI:35507 ! natural product fundamental parent
+
+[Term]
+id: CHEBI:35681
+name: secondary alcohol
+def: "A secondary alcohol is a compound in which a hydroxy group, -OH, is attached to a saturated carbon atom which has two other carbon atoms attached to it." []
+synonym: "a secondary alcohol" RELATED [UniProt]
+synonym: "R-CHOH-R'" RELATED [KEGG_COMPOUND]
+synonym: "Secondary alcohol" EXACT [KEGG_COMPOUND]
+synonym: "secondary alcohols" RELATED [ChEBI]
+is_a: CHEBI:30879 ! alcohol
 
 [Term]
 id: CHEBI:35692
@@ -6077,6 +6119,7 @@ def: "Chlorophylls lacking the terpenoid side chain such as phytyl or farnesyl."
 synonym: "Chlorophyllid" RELATED [ChEBI]
 synonym: "chlorophyllides" RELATED [ChEBI]
 is_a: CHEBI:28966 ! chlorophyll
+relationship: is_conjugate_acid_of CHEBI:139292 ! chlorophyllide(2-)
 
 [Term]
 id: CHEBI:38209
@@ -6933,6 +6976,20 @@ synonym: "pharmaceuticals" RELATED [ChEBI]
 is_a: CHEBI:33232 ! application
 
 [Term]
+id: CHEBI:52395
+name: oxyketone
+def: "A compound with the general formula R2C=O (R=/=H) where one or more of the R groups contains an oxy (-O-) group." []
+synonym: "oxyketones" RELATED [ChEBI]
+is_a: CHEBI:17087 ! ketone
+
+[Term]
+id: CHEBI:52396
+name: alpha-oxyketone
+def: "An oxyketone with the general formula R2C(=O) (R=/=H) where one or more of the R groups contains an oxy (-O-) group and the oxy and carbonyl groups are bonded to the same carbon atom." []
+synonym: "alpha-oxyketones" RELATED [ChEBI]
+is_a: CHEBI:52395 ! oxyketone
+
+[Term]
 id: CHEBI:52625
 name: inorganic hydroxy compound
 synonym: "inorganic hydroxides" RELATED [ChEBI]
@@ -7310,6 +7367,7 @@ id: CHEBI:62431
 name: abscisic acids
 def: "Any apo carotenoid sesquiterpenoid that is 3-methylpenta-2,4-dienoic acid substituted at position 5 by a 1-hydroxy-2,6,6-trimethyl-4-oxocyclohex-2-en-1-yl group and in which the acyclic double bond between positions 4 and 5 has E-configuration." []
 synonym: "(4E)-5-(1-hydroxy-2,6,6-trimethyl-4-oxocyclohex-2-en-1-yl)-3-methylpenta-2,4-dienoic acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "abscisic acid" RELATED [ChEBI]
 is_a: CHEBI:134397 ! tertiary allylic alcohol
 is_a: CHEBI:36758 ! apo carotenoid sesquiterpenoid
 is_a: CHEBI:79020 ! alpha,beta-unsaturated monocarboxylic acid
@@ -7683,6 +7741,7 @@ id: CHEBI:70206
 name: maysin
 def: "A  flavone C-glycoside that is  luteolin attached to a disaccharide residue at position 6. It has been isolated from natural product Petrorhagia velutina and Zea mays and exhibits insecticidal and neuroprotective activities." []
 synonym: "(6R)-2,6-anhydro-1-deoxy-5-O-(6-deoxy-alpha-D-mannopyranosyl)-6-[2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-4-oxo-4H-chromen-6-yl]-D-xylo-hex-3-ulose" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:2468 ! secondary alpha-hydroxy ketone
 is_a: CHEBI:38684 ! tetrahydroxyflavone
 is_a: CHEBI:63353 ! disaccharide derivative
 is_a: CHEBI:83280 ! flavone C-glycoside

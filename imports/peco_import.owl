@@ -41,6 +41,12 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+    
+
+
     <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
@@ -62,13 +68,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0001001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007359"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant experimental condition (PECO:0007359) or set of conditions describing the application of an abiotic (PECO:0007191) or biotic plant treatment (PECO:0007357) or the combinatorial application thereof.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant experimental condition (PECO:0007359) or set of conditions describing the application of an abiotic (PECO:0007191) or biotic plant exposure (PECO:0007357) or the combinatorial application thereof.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0001001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant experimental condition (PECO:0007359) or set of conditions describing the application of an abiotic (PECO:0007191) or biotic plant treatment (PECO:0007357) or the combinatorial application thereof.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant experimental condition (PECO:0007359) or set of conditions describing the application of an abiotic (PECO:0007191) or biotic plant exposure (PECO:0007357) or the combinatorial application thereof.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -78,13 +85,49 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0001003">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007189"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical treatment (PECO:0007189) involving the application of organic chemical(s).</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic chemical treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical exposure (PECO:0007189) involving the application of organic chemical(s).</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic chemical treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic chemical exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0001003"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical treatment (PECO:0007189) involving the application of organic chemical(s).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical exposure (PECO:0007189) involving the application of organic chemical(s).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PECO_0001004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0001004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007189"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical exposure (PECO:0007189) involving the application of inorganic chemical(s).</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inorganic chemical treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inorganic chemical exposure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0001004"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical exposure (PECO:0007189) involving the application of inorganic chemical(s).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PECO_0001009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0001009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0001004"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An inorganic chemical exposure (PECO:0001004) involving the application of an anion or a mixture of anions (CHEBI:22563).</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inorganic anion treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inorganic anion exposure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0001009"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An inorganic chemical exposure (PECO:0001004) involving the application of an anion or a mixture of anions (CHEBI:22563).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:22563</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -94,13 +137,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0001019">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0001003"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organic chemical treatment (PECO:0001003) involving the application of a gas or mixture of gases.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic gas treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organic chemical exposure (PECO:0001003) involving the application of a gas or mixture of gases.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic gas treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organic gas exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0001019"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organic chemical treatment (PECO:0001003) involving the application of a gas or mixture of gases.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An organic chemical exposure (PECO:0001003) involving the application of a gas or mixture of gases.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -110,13 +154,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0001036">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007189"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical treatment (PECO:0007189) that induces stress.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical stress treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical exposure (PECO:0007189) that induces stress.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical stress treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical stress exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0001036"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical treatment (PECO:0007189) that induces stress.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical exposure (PECO:0007189) that induces stress.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -126,13 +171,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0001038">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0001036"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical stress treatment (PECO:0001036) involving use of osmotic stress-inducing chemicals.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">osmotic stress treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical stress exposure (PECO:0001036) involving use of osmotic stress-inducing chemicals.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">osmotic stress treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">osmotic stress exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0001038"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical stress treatment (PECO:0001036) involving use of osmotic stress-inducing chemicals.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical stress exposure (PECO:0001036) involving use of osmotic stress-inducing chemicals.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -143,7 +189,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007043">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007241"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatment involving the exposure of plant to molecular forms of nutrient as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">non-mineral nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">non-mineral nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">non-mineral nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007043"/>
@@ -158,13 +205,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007045">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007240"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant macronutrient treatment (PECO:0007240)  involving the use of the primary plant macronutrients nitrogen (N), phosphorus (P), and potassium (K).</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">primary plant macronutrient treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant macronutrient exposure (PECO:0007240)  involving the use of the primary plant macronutrients nitrogen (N), phosphorus (P), and potassium (K).</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">primary plant macronutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">primary plant macronutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007045"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant macronutrient treatment (PECO:0007240)  involving the use of the primary plant macronutrients nitrogen (N), phosphorus (P), and potassium (K).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant macronutrient exposure (PECO:0007240)  involving the use of the primary plant macronutrients nitrogen (N), phosphorus (P), and potassium (K).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -176,7 +224,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007046">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007240"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatment involving the use of macronutrients (Ca, Mg, S) as supplement to study various types of responses. These macronutrients are used less often as fertilizers than the primary elements.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">secondary macronutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">secondary macronutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">secondary macronutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007046"/>
@@ -192,7 +241,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007047">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007241"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatment involving the exposure of plant to elemental forms of nutrient as supplement to study various types of responses. These are not considered essential elements.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007047"/>
@@ -208,7 +258,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007049">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007147"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving growing plants and exposing them to soil growth media with varying contents.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soil environment treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soil environment treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soil environment exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007049"/>
@@ -224,7 +275,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007055">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007107"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatment involving the exposure of plant to the pathogen Cochliobolus spp.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cochliobolus spp. treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cochliobolus spp. treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cochliobolus spp. exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007055"/>
@@ -241,7 +293,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007058">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007049"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving growing plants in varying pH levels of soil growth media.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soil pH environment treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soil pH environment treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soil pH environment exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007058"/>
@@ -258,7 +311,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007058"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007134"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving an exposure to acidic pH levels of soil growth media.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acidic pH soil environment treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acidic pH soil environment treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acidic pH soil environment exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007059"/>
@@ -275,7 +329,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007058"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007133"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving an exposure to basic pH levels of soil growth media.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">basic pH soil environment treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">basic pH soil environment treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">basic pH soil environment exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007062"/>
@@ -290,13 +345,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007064">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0001001"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant treatment (PECO:0001001) involving exposure to the various factors that comprise a geographical/regional location.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ecological environment treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant exposure (PECO:0001001) involving exposure to the various factors that comprise a geographical/regional location.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ecological environment treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ecological environment exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007064"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant treatment (PECO:0001001) involving exposure to the various factors that comprise a geographical/regional location.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant exposure (PECO:0001001) involving exposure to the various factors that comprise a geographical/regional location.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -307,16 +363,17 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007066">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007165"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone treatment (PECO:0007165) involving the use of cytokinin (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone exposure (PECO:0007165) involving the use of cytokinin (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cytokinin treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-benzylaminopurine</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N-benzyl-adenine</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verdan senescence</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cytokinin treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cytokinin exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007066"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone treatment (PECO:0007165) involving the use of cytokinin (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone exposure (PECO:0007165) involving the use of cytokinin (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -327,13 +384,14 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007068">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0001019"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007165"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone treatment (PECO:0007165) involving the use of ethylene (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ethylene treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone exposure (PECO:0007165) involving the use of ethylene (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ethylene treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ethylene exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007068"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone treatment (PECO:0007165) involving the use of ethylene (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone exposure (PECO:0007165) involving the use of ethylene (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -343,13 +401,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007074">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007165"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone treatment (PECO:0007165) involving the use of auxin (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auxin treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone exposure (PECO:0007165) involving the use of auxin (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auxin treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">auxin exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007074"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone treatment (PECO:0007165) involving the use of auxin (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone exposure (PECO:0007165) involving the use of auxin (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -359,14 +418,15 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007080">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007165"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone treatment (PECO:0007165) involving the use of JA (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone exposure (PECO:0007165) involving the use of JA (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jasmonic acid treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JA regimen</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jasmonic acid treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jasmonic acid exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007080"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone treatment (PECO:0007165) involving the use of JA (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone exposure (PECO:0007165) involving the use of JA (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -376,13 +436,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007085">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007241"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant nutrient treatment (PECO:0007241) involving the use of a fertilizer, a combination of plant nutrients.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fertilizer treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant nutrient exposure (PECO:0007241) involving the use of a fertilizer, a combination of plant nutrients.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fertilizer treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fertilizer exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007085"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant nutrient treatment (PECO:0007241) involving the use of a fertilizer, a combination of plant nutrients.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant nutrient exposure (PECO:0007241) involving the use of a fertilizer, a combination of plant nutrients.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -393,7 +454,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007086">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007085"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatment involving the use of inorganic fertilizer and its components as supplements to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical fertilizer treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical fertilizer treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical fertilizer exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007086"/>
@@ -409,7 +471,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007102">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007086"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatment involving the use of nitrogen fertilizer and its components as supplements to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrogen fertilizer treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrogen fertilizer treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrogen fertilizer exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007102"/>
@@ -424,14 +487,15 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007105">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007165"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone treatment (PECO:0007165) involving the use of abscisic acid (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone exposure (PECO:0007165) involving the use of abscisic acid (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abscisic acid treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ABA regimen</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abscisic acid treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abscisic acid exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007105"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone treatment (PECO:0007165) involving the use of abscisic acid (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone exposure (PECO:0007165) involving the use of abscisic acid (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -441,14 +505,15 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007107">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007233"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fungal plant treatment (PECO:0007233) involving the exposure of plant to the pathogen belonging to Ascomycetes class.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fungal plant exposure (PECO:0007233) involving the exposure of plant to the pathogen belonging to Ascomycetes class.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ascomycota treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ascomycetes</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ascomycota treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ascomycota exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007107"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fungal plant treatment (PECO:0007233) involving the exposure of plant to the pathogen belonging to Ascomycetes class.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fungal plant exposure (PECO:0007233) involving the exposure of plant to the pathogen belonging to Ascomycetes class.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:ivy</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBI_taxid:4890</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -460,7 +525,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007109">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007210"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatment involving the exposure of plant to the pathogenic single strand RNA positive stand virus.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ssRNA positive-strand virus with no DNA stage treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ssRNA positive-strand virus with no DNA stage treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ssRNA positive-strand virus with no DNA stage exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007109"/>
@@ -476,8 +542,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007110">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007210"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatment involving the exposure of plant to the pathogenic double stranded RNA virus.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dsRNA virus treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dsRNA nonenveloped viruses</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dsRNA virus treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dsRNA virus exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007110"/>
@@ -494,9 +561,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007114">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007333"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatment involving the exposure of plant to the pest of lepidoptera class.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lepidoptera treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">butterfly</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">moth</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lepidoptera treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lepidoptera exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007114"/>
@@ -512,14 +580,15 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007116">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007333"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An insect plant treatment (PECO:0007333) involving the exposure of a plant to an insect(s) of the Hemiptera order.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An insect plant exposure (PECO:0007333) involving the exposure of a plant to an insect(s) of the Hemiptera order.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hemiptera insect plant treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bug</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hemiptera insect plant treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hemiptera insect plant exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007116"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An insect plant treatment (PECO:0007333) involving the exposure of a plant to an insect(s) of the Hemiptera order.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An insect plant exposure (PECO:0007333) involving the exposure of a plant to an insect(s) of the Hemiptera order.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBI_taxid:7524</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
@@ -532,7 +601,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007118">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007107"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatment involving the exposure of plant to the pathogen Gibberella spp.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibberella spp. treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibberella spp. treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibberella spp. exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007118"/>
@@ -548,14 +618,15 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007119">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007333"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An insect plant treatment (PECO:0007333) involving the exposure of a plant to an insect(s) of the Diptera order.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An insect plant exposure (PECO:0007333) involving the exposure of a plant to an insect(s) of the Diptera order.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dipteran insect plant treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fly</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dipteran insect plant treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dipteran insect plant exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007119"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An insect plant treatment (PECO:0007333) involving the exposure of a plant to an insect(s) of the Diptera order.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An insect plant exposure (PECO:0007333) involving the exposure of a plant to an insect(s) of the Diptera order.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBI_taxid:7147</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -567,8 +638,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007120">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007333"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatment involving the exposure of plant to the pest commonly called as beetles or Coleoptera.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coleoptera treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beetle</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coleoptera treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coleoptera exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007120"/>
@@ -585,8 +657,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007127">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007337"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatment involving the exposure of plant to the pest Meloidogyne spp. It is a causal agent for rice root knot nematode disease.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meloidogyne spp. treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">root-knot nematode</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meloidogyne spp. treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meloidogyne spp. exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007127"/>
@@ -603,8 +676,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007133">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007171"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving an exposure to basic pH levels of the growth media.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">basic pH growth media environment treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">basic pH environment</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">basic pH growth media environment treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">basic pH growth media environment exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007133"/>
@@ -620,8 +694,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007134">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007171"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving an exposure to acidic pH levels of the growth media.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acidic pH growth media environment treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acidic pH environment</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acidic pH growth media environment treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acidic pH growth media environment exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007134"/>
@@ -637,7 +712,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007135">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007107"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving an exposure of plant to the pathogen Magnaporthe spp.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnaporthe spp. treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnaporthe spp. treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnaporthe spp. exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007135"/>
@@ -653,13 +729,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007147">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007191"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abiotic plant treatment (PECO:0007191) involving the use of a solid or liquid substrate for growing plants or tissue-cultured plant samples.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant growth medium treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abiotic plant exposure (PECO:0007191) involving the use of a solid or liquid substrate for growing plants or tissue-cultured plant samples.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant growth medium treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant growth medium exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007147"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abiotic plant treatment (PECO:0007191) involving the use of a solid or liquid substrate for growing plants or tissue-cultured plant samples.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abiotic plant exposure (PECO:0007191) involving the use of a solid or liquid substrate for growing plants or tissue-cultured plant samples.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -670,14 +747,15 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007151">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007316"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical plant treatment (PECO:0007316) involving an exposure with a radiation type, intensity or quantity.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical plant exposure (PECO:0007316) involving an exposure with a radiation type, intensity or quantity.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light regimen</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007151"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical plant treatment (PECO:0007316) involving an exposure with a radiation type, intensity or quantity.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical plant exposure (PECO:0007316) involving an exposure with a radiation type, intensity or quantity.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -689,7 +767,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007154">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007151"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving an exposure to a given type of radiation. Often it is in the form of electromagnetic and ionizing radiation such as light (infrared, visible or ultraviolet), x-rays, gamma rays, etc.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation quality treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation quality treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">radiation quality exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007154"/>
@@ -704,13 +783,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007165">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007189"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical treatment (PECO:0007189) involving the use of growth hormones to study various types of responses on their extrinsic and/or intrinsic application.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">growth hormone treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical exposure (PECO:0007189) involving the use of growth hormones to study various types of responses on their extrinsic and/or intrinsic application.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">growth hormone treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">growth hormone exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007165"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical treatment (PECO:0007189) involving the use of growth hormones to study various types of responses on their extrinsic and/or intrinsic application.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical exposure (PECO:0007189) involving the use of growth hormones to study various types of responses on their extrinsic and/or intrinsic application.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -720,13 +800,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007167">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007189"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical treatment (PECO:0007189) involving the application of a pesticide; a chemical entity or mixture of chemical entities.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pesticide treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical exposure (PECO:0007189) involving the application of a pesticide; a chemical entity or mixture of chemical entities.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pesticide treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pesticide exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007167"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical treatment (PECO:0007189) involving the application of a pesticide; a chemical entity or mixture of chemical entities.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical exposure (PECO:0007189) involving the application of a pesticide; a chemical entity or mixture of chemical entities.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -737,7 +818,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007171">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007189"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plants to varying levels of pH of the growth media.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pH treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pH treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pH exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007171"/>
@@ -753,7 +835,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007173">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007175"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving an exposure to above optimal temperature, which may depend on the study type or the regional environment.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">warm/hot temperature treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">warm/hot temperature treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">warm/hot temperature exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007173"/>
@@ -769,7 +852,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007174">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007175"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving an exposure to cold or sub-optimal temperature, which may depend on the study type or the regional environment.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cold temperature treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cold temperature treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cold temperature exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007174"/>
@@ -784,13 +868,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007175">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007316"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical plant treatment (PECO:0007316) involving an exposure to varying degree of temperature, which may depend on regional environment.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temperature environment treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical plant exposure (PECO:0007316) involving an exposure to varying degree of temperature, which may depend on regional environment.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temperature environment treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temperature environment exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007175"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical plant treatment (PECO:0007316) involving an exposure to varying degree of temperature, which may depend on regional environment.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical plant exposure (PECO:0007316) involving an exposure to varying degree of temperature, which may depend on regional environment.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -801,7 +886,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007180">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007074"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007183"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An auxin treatment (PECO:0007074) involving use of 2,4-D growth hormone/herbicide to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An auxin exposure (PECO:0007074) involving use of 2,4-D growth hormone/herbicide to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2,4-dichlorophenoxyacetic acid treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2,4-D regimen</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amidox</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B-Selektonon</oboInOwl:hasRelatedSynonym>
@@ -812,12 +898,12 @@
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weed Tox</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weedar 64A</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weedone-2,4-DP</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2,4-dichlorophenoxyacetic acid treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2,4-dichlorophenoxyacetic acid exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007180"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An auxin treatment (PECO:0007074) involving use of 2,4-D growth hormone/herbicide to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An auxin exposure (PECO:0007074) involving use of 2,4-D growth hormone/herbicide to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAS:94-75-7</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -882,13 +968,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007183">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007167"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pesticide treatment (PECO:0007167) involving the application of a herbicide; a chemical entity or mixture of chemical entities.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">herbicide treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pesticide exposure (PECO:0007167) involving the application of a herbicide; a chemical entity or mixture of chemical entities.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">herbicide treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">herbicide exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007183"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pesticide treatment (PECO:0007167) involving the application of a herbicide; a chemical entity or mixture of chemical entities.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pesticide exposure (PECO:0007167) involving the application of a herbicide; a chemical entity or mixture of chemical entities.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -898,13 +985,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007185">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007189"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical treatment (PECO:0007189) involving use of salts as supplement to liquid and soil growth media to study various types of responses on their application.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">salt treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical exposure (PECO:0007189) involving use of salts as supplement to liquid and soil growth media to study various types of responses on their application.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">salt treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">salt exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007185"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical treatment (PECO:0007189) involving use of salts as supplement to liquid and soil growth media to study various types of responses on their application.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chemical exposure (PECO:0007189) involving use of salts as supplement to liquid and soil growth media to study various types of responses on their application.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -914,14 +1002,15 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007189">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007191"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abiotic plant treatment (PECO:0007191) involving the application of chemical(s).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abiotic plant exposure (PECO:0007191) involving the application of chemical(s).</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other chemical regimen</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chemical exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007189"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abiotic plant treatment (PECO:0007191) involving the application of chemical(s).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abiotic plant exposure (PECO:0007191) involving the application of chemical(s).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -932,13 +1021,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007191">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0001001"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant treatment (PECO:0001001) involving the application of chemical or non-biological factors.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abiotic plant treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant exposure (PECO:0001001) involving the application of chemical or non-biological factors.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abiotic plant treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abiotic plant exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007191"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant treatment (PECO:0001001) involving the application of chemical or non-biological factors.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant exposure (PECO:0001001) involving the application of chemical or non-biological factors.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -950,10 +1040,11 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007195">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007110"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the rice ragged stunt virus. It is a causal agent for rice ragged stunt disease.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice ragged stunt virus treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RRSV</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice ragged stunt oryzavirus</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice ragged stunt virus</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice ragged stunt virus treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice ragged stunt virus exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007195"/>
@@ -970,12 +1061,13 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007196">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007154"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving day light as the light of the sun or the artificial light in a growth chamber.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artificial daylight</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artificial light</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">day light</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">natural light</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sun light</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007196"/>
@@ -990,13 +1082,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007198">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007316"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical plant treatment (PECO:0007316) involving an exposure of varying amounts of water and watering frequencies, which may depend on regional environment.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water environment treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical plant exposure (PECO:0007316) involving an exposure of varying amounts of water and watering frequencies, which may depend on regional environment.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water environment treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water environment exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007198"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical plant treatment (PECO:0007316) involving an exposure of varying amounts of water and watering frequencies, which may depend on regional environment.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A physical plant exposure (PECO:0007316) involving an exposure of varying amounts of water and watering frequencies, which may depend on regional environment.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -1008,8 +1101,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007207">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007221"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment using red light either exclusively or as part of a supplemental light treatment involving red color light in the wavelength range of 780-622 nM.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">red light treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pr light</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">red light treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">red light exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007207"/>
@@ -1024,13 +1118,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007210">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007357"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biotic plant treatment (PECO:0007357) involving exposure of a plant to a virus or a combination of two or more viruses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">virus plant treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biotic plant exposure (PECO:0007357) involving exposure of a plant to a virus or a combination of two or more viruses.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">virus plant treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">virus plant exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007210"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biotic plant treatment (PECO:0007357) involving exposure of a plant to a virus or a combination of two or more viruses.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biotic plant exposure (PECO:0007357) involving exposure of a plant to a virus or a combination of two or more viruses.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBI_taxid:10239</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
@@ -1043,10 +1138,11 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007211">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007055"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pathogen Cochliobolus miyabeanus. It is a causal agent for rice Brown Spot diseaseand/or Seedling Blight (Fungal) disease.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cochliobolus miyabeanus treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bipolaris oryzae</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dreschlera oryzae</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helminthosporium oryzae</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cochliobolus miyabeanus treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cochliobolus miyabeanus exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007211"/>
@@ -1063,7 +1159,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007212">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007357"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the mycoplasma pest.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mycoplasma treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mycoplasma treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mycoplasma exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007212"/>
@@ -1080,7 +1177,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007218">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007221"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment using blue light either exclusively or as part of a supplemental light treatment involving blue color light in the wavelength range of 492-455 nM.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blue light treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blue light treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blue light exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007218"/>
@@ -1096,7 +1194,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007221">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007196"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment using visible light in the wavelength range of 380-780 nM.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visible light treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visible light treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visible light exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007221"/>
@@ -1112,7 +1211,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007222">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007196"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment using UV-B light either exclusively or as part of a supplemental light involving electromagnetic radiation in the wavelength range of 315-10nm.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UV light treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UV light treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UV light exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007222"/>
@@ -1128,7 +1228,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007225">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007047"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to fluorine as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fluorine nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fluorine nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fluorine nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007225"/>
@@ -1144,11 +1245,12 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007226">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007135"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pathogen Magnaporthe grisea. It is a causal agent for rice various forms of Blast diseases such as Collar Blast, Leaf Blast, Neck Blast, Panicle Blast and Nodal Blast disease.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnaporthe grisea treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piricularia grisea</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pyricularia grisea</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pyricularia oryzae</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice blast fungus</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnaporthe grisea treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnaporthe grisea exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007226"/>
@@ -1165,7 +1267,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007228">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007047"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to chromium as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromium nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromium nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromium nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007228"/>
@@ -1179,11 +1282,12 @@
     <!-- http://purl.obolibrary.org/obo/PECO_0007229 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007229">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007118"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007341"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pathogen Gibberella fujikuroi.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibberella fujikuroi treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fusarium fujikuroi</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fusarium moniliforme</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibberella fujikuroi treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibberella fujikuroi exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007229"/>
@@ -1200,7 +1304,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007230">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007047"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to iodine as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iodine nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iodine nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iodine nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007230"/>
@@ -1216,7 +1321,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007232">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007047"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to selenium as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">selenium nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">selenium nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">selenium nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007232"/>
@@ -1231,13 +1337,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007233">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007357"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biotic plant treatment (PECO:0007357) involving exposure of a plant to a fungus or a combination of fungi.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fungal plant treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biotic plant exposure (PECO:0007357) involving exposure of a plant to a fungus or a combination of fungi.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fungal plant treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fungal plant exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007233"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biotic plant treatment (PECO:0007357) involving exposure of a plant to a fungus or a combination of fungi.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biotic plant exposure (PECO:0007357) involving exposure of a plant to a fungus or a combination of fungi.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:ivy</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBI_taxid:4751</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -1249,7 +1356,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007235">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007047"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to silicon as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silicon nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silicon nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silicon nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007235"/>
@@ -1265,8 +1373,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007239">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007241"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to elements that are required in tiny quantities for growth, as supplement to study various types of responses.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">micronutrient treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trace element regimen</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">micronutrient treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">micronutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007239"/>
@@ -1281,13 +1390,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007240">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007241"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant nutrient treatment (PECO:0007241) involving the use of a plant macronutrient or combination of plant macronutrients.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant macronutrient treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant nutrient exposure (PECO:0007241) involving the use of a plant macronutrient or combination of plant macronutrients.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant macronutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant macronutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007240"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant nutrient treatment (PECO:0007241) involving the use of a plant macronutrient or combination of plant macronutrients.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant nutrient exposure (PECO:0007241) involving the use of a plant macronutrient or combination of plant macronutrients.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -1298,14 +1408,15 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007241">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007189"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant chemical treatment (PECO:0007189) involving a plant nutrient or a combination of plant nutrients.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant chemical exposure (PECO:0007189) involving a plant nutrient or a combination of plant nutrients.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fertilizer regimen</oboInOwl:hasBroadSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007241"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant chemical treatment (PECO:0007189) involving a plant nutrient or a combination of plant nutrients.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant chemical exposure (PECO:0007189) involving a plant nutrient or a combination of plant nutrients.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -1317,7 +1428,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007242">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007239"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to micronutrient iron as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iron nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iron nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iron nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007242"/>
@@ -1333,7 +1445,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007244">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007239"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to micronutrient chlorine as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorine nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorine nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorine nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007244"/>
@@ -1349,7 +1462,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007253">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007239"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to micronutrient molybdenum as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molybdenum nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molybdenum nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molybdenum nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007253"/>
@@ -1365,7 +1479,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007261">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007239"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to micronutrient copper as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copper nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copper nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copper nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007261"/>
@@ -1381,7 +1496,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007273">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007239"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to micronutrient boron as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boron nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boron nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boron nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007273"/>
@@ -1397,7 +1513,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007276">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007047"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to cobalt as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cobalt nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cobalt nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cobalt nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007276"/>
@@ -1413,7 +1530,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007278">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007043"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to oxygen to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxygen treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxygen treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxygen exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007278"/>
@@ -1428,13 +1546,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007284">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007045"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A primary plant macronutrient treatment (PECO:0007045) involving the application of nitrogen.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrogen macronutrient treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A primary plant macronutrient exposure (PECO:0007045) involving the application of nitrogen.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrogen macronutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrogen macronutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007284"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A primary plant macronutrient treatment (PECO:0007045) involving the application of nitrogen.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A primary plant macronutrient exposure (PECO:0007045) involving the application of nitrogen.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -1446,7 +1565,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007288">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007046"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to macronutrient magnesium as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnesium nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnesium nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnesium nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007288"/>
@@ -1462,8 +1582,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007289">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007119"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pest rice whorl maggot.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydrellia philippina treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice whorl maggot</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydrellia philippina treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydrellia philippina exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007289"/>
@@ -1479,7 +1600,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007293">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007045"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to macronutrient potassium as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">potassium nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">potassium nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">potassium nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007293"/>
@@ -1495,7 +1617,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007295">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007046"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to macronutrient sulfur as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sulfur nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sulfur nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sulfur nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007295"/>
@@ -1511,8 +1634,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007296">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007120"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pest Dicladispa armigera.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dicladispa armigera treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice hispa</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dicladispa armigera treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dicladispa armigera exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007296"/>
@@ -1529,7 +1653,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007297">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007046"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to macronutrient calcium as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">calcium nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007297"/>
@@ -1545,9 +1670,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007300">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007116"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pest paddy bug.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leptocorisa oratorius treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paddy bug</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice bug</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leptocorisa oratorius treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leptocorisa oratorius exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007300"/>
@@ -1563,7 +1689,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007303">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007043"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to carbon source as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carbon nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007303"/>
@@ -1579,10 +1706,11 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007305">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007114"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pest Cnaphalocrocis medinalis.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cnaphalocrocis medinalis treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">defloiator</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leaffolder</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice leaffolder</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cnaphalocrocis medinalis treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cnaphalocrocis medinalis exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007305"/>
@@ -1598,7 +1726,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007306">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007047"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to aluminium as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aluminum nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aluminum nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aluminum nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007306"/>
@@ -1614,8 +1743,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007308">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007116"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pest green leaf hopper.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nephotettix spp treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">green leafhopper</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nephotettix spp treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nephotettix spp exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007308"/>
@@ -1632,7 +1762,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007309">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007239"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to micronutrient zinc as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zinc nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zinc nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zinc nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007309"/>
@@ -1647,13 +1778,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007316">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007191"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abiotic plant treatment (PECO:0007191) involving the application of a physical factor such as temperature, moisture, gravity, wind, radiation, etc. or a combination thereof.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">physical plant treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abiotic plant exposure (PECO:0007191) involving the application of a physical factor such as temperature, moisture, gravity, wind, radiation, etc. or a combination thereof.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">physical plant treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">physical plant exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007316"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abiotic plant treatment (PECO:0007191) involving the application of a physical factor such as temperature, moisture, gravity, wind, radiation, etc. or a combination thereof.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An abiotic plant exposure (PECO:0007191) involving the application of a physical factor such as temperature, moisture, gravity, wind, radiation, etc. or a combination thereof.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1664,8 +1796,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007318">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007109"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the rice yellow mottle virus. It is a causal agent for rice yellow mottle disease.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice yellow mottle virus treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RYMV</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice yellow mottle virus treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rice yellow mottle virus exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007318"/>
@@ -1682,9 +1815,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007333">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007349"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A metazoan plant treatment  (PECO:0007349) involving exposure of a plant to an insect or a mixture of insects.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insect plant treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insect</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">true insects</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insect plant treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insect plant exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007333"/>
@@ -1702,9 +1836,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007337">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007349"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the nematode pests.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nematoda treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">round worm</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">roundworm</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nematoda treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nematoda exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007337"/>
@@ -1716,18 +1851,38 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PECO_0007341 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007341">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007118"/>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pathogenic Fusarium spp. It is a causal agent for rice Water Mold disease also called as Seed Rot Disease or Seedling Damping-off Disease.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fusarium treatment</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fusarium spp.</oboInOwl:hasRelatedSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fusarium exposure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007341"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pathogenic Fusarium spp. It is a causal agent for rice Water Mold disease also called as Seed Rot Disease or Seedling Damping-off Disease.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:ivy</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBI_taxid:5506</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PECO_0007349 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007349">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007357"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biotic plant treatment (PECO:0007357) involving exposure of a plant to a metazoan organism (animal).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biotic plant exposure (PECO:0007357) involving exposure of a plant to a metazoan organism (animal).</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metazoan plant treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Animalia</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metazoan plant treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metazoan plant exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007349"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biotic plant treatment (PECO:0007357) involving exposure of a plant to a metazoan organism (animal).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A biotic plant exposure (PECO:0007357) involving exposure of a plant to a metazoan organism (animal).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NCBI_taxid:33208</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
@@ -1739,13 +1894,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007357">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0001001"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant treatment (PECO:0001001) involving the application of a biotic or biological factor such as a microbe, insect, animal, or plant or a combination thereof.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biotic plant treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant exposure (PECO:0001001) involving the application of a biotic or biological factor such as a microbe, insect, animal, or plant or a combination thereof.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biotic plant treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biotic plant exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007357"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant treatment (PECO:0001001) involving the application of a biotic or biological factor such as a microbe, insect, animal, or plant or a combination thereof.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant exposure (PECO:0001001) involving the application of a biotic or biological factor such as a microbe, insect, animal, or plant or a combination thereof.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -1755,7 +1911,7 @@
     <!-- http://purl.obolibrary.org/obo/PECO_0007359 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007359">
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant treatment (PECO:0001001) and/or study type (PECO:0007231) applied to a whole plant (PO:0000003), a plant structure (PO:00090119), and/or a plant population as part of an experiment to evaluate the plant response.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant exposure (PECO:0001001) and/or study type (PECO:0007231) applied to a whole plant (PO:0000003), a plant structure (PO:00090119), and/or a plant population as part of an experiment to evaluate the plant response.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant treatment ontology</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment ontology</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant experimental condition</rdfs:label>
@@ -1763,7 +1919,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007359"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant treatment (PECO:0001001) and/or study type (PECO:0007231) applied to a whole plant (PO:0000003), a plant structure (PO:00090119), and/or a plant population as part of an experiment to evaluate the plant response.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant exposure (PECO:0001001) and/or study type (PECO:0007231) applied to a whole plant (PO:0000003), a plant structure (PO:00090119), and/or a plant population as part of an experiment to evaluate the plant response.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -1775,9 +1931,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007362">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007107"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pathogen Balansia oryzae-sativae. It is a causal agent for rice Udbatta diesase which is also called as Black Choke Disease, False Ergot Disease, Incense Rod Disease.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balansia oryzae-sativae treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ephelis japonica</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ephelis oryzae</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balansia oryzae-sativae treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balansia oryzae-sativae exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007362"/>
@@ -1794,12 +1951,13 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007363">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007135"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pathogen Magnaporthe salvinii. It is a causal agent for rice stem rot disease and Seedling Blight (Fungal) Disease.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnaporthe salvinii treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helminthosporium sigmoideum</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helminthosporium sigmoideum var.irregulare.</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leptosphaeria salvinii</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nakataea sigmoidae</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sclerotium oryzae</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnaporthe salvinii treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnaporthe salvinii exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007363"/>
@@ -1816,8 +1974,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007371">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007127"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pest Meloidogyne oryzae. It is a causal agent for rice root knot nematode disease.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meloidogyne javanica treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">root-knot nematode</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meloidogyne javanica treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meloidogyne javanica exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007371"/>
@@ -1834,8 +1993,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007372">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007127"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to the pest Meloidogyne oryzae. It is a causal agent for rice root knot nematode disease.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meloidogyne incognita treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">southern root-knot nematode</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meloidogyne incognita treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meloidogyne incognita exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007372"/>
@@ -1852,7 +2012,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007387">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007239"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to micronutrient manganese as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manganese nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manganese nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manganese nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007387"/>
@@ -1868,9 +2029,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007396">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007064"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A treatment in terms of plant&apos;s exposure to the regional conditions found in the vicinity of the water bodies like, sea, river, lake etc. Growth conditions may include aerobic to anaerobic soil,  salinity or toxicity in tidal areas. Treatment may include standing or flash flooding.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flood prone region treatment</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deep water</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flooding</oboInOwl:hasRelatedSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flood prone region treatment</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flood prone region exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007396"/>
@@ -1886,7 +2048,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007397">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007045"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The treatment involving exposure of plant to macronutrient phosphorus as supplement to study various types of responses.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phosphorus nutrient treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phosphorus nutrient treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phosphorus nutrient exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007397"/>
@@ -1901,7 +2064,8 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007404">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007198"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drought environment treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drought environment treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drought environment exposure</rdfs:label>
     </owl:Class>
     
 
@@ -1909,8 +2073,10 @@
     <!-- http://purl.obolibrary.org/obo/PECO_0007406 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007406">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0001009"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007102"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrate treatment</rdfs:label>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrate treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nitrate exposure</rdfs:label>
     </owl:Class>
     
 
@@ -1919,13 +2085,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007409">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007165"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone treatment (PECO:0007165) involving the use of brassinosteroid (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brassinosteroid treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone exposure (PECO:0007165) involving the use of brassinosteroid (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brassinosteroid treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brassinosteroid exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007409"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone treatment (PECO:0007165) involving the use of brassinosteroid (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A growth hormone exposure (PECO:0007165) involving the use of brassinosteroid (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:moorel</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1935,13 +2102,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007632">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007167"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pesticide treatment (PECO:0007167) involving the application of an insecticide; a chemical entity or mixture of chemical entities.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insecticide treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pesticide exposure (PECO:0007167) involving the application of an insecticide; a chemical entity or mixture of chemical entities.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insecticide treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insecticide exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007632"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pesticide treatment (PECO:0007167) involving the application of an insecticide; a chemical entity or mixture of chemical entities.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pesticide exposure (PECO:0007167) involving the application of an insecticide; a chemical entity or mixture of chemical entities.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1951,13 +2119,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PECO_0007633">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PECO_0007183"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An herbicide treatment (PECO:0007183) involving the use of an imidazolinone herbicide.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">imidazolinone treatment</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An herbicide exposure (PECO:0007183) involving the use of an imidazolinone herbicide.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">imidazolinone treatment</oboInOwl:hasNarrowSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">imidazolinone exposure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PECO_0007633"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An herbicide treatment (PECO:0007183) involving the use of an imidazolinone herbicide.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An herbicide exposure (PECO:0007183) involving the use of an imidazolinone herbicide.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:moorel</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">web:http://corn.agronomy.wisc.edu/AAdvice/1994/A001.html</oboInOwl:hasDbXref>
     </owl:Axiom>

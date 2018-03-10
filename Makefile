@@ -54,10 +54,10 @@ PATTERNS_MORPH_OWL = $(patsubst %.tsv, %_pattern.owl, $(wildcard patterns/morpho
 PATTERNS_COMPOSITION_OWL = $(patsubst %.tsv, %_pattern.owl, $(wildcard patterns/composition/*.tsv)) $(patsubst %.tsv, %_pattern.obo, $(wildcard patterns/composition/*.tsv))
 PATTERNS_PHENOTYPE_OWL = $(patsubst %.tsv, %_pattern.owl, $(wildcard patterns/phenotype/*.tsv)) $(patsubst %.tsv, %_pattern.obo, $(wildcard patterns/phenotype/*.tsv))
 PATTERNS_RATIO_OWL = $(patsubst %.tsv, %_pattern.owl, $(wildcard patterns/ratio/*.tsv)) $(patsubst %.tsv, %_pattern.obo, $(wildcard patterns/ratio/*.tsv))
-PATTERNS_RESPONSIVITY_OWL = $(patsubst %.tsv, %_pattern.owl, $(wildcard patterns/responsivity/*.tsv)) $(patsubst %.tsv, %_pattern.obo, $(wildcard patterns/responsivity/*.tsv))
-PATTERNS_RESPONSIVITYNOEO_OWL = $(patsubst %.tsv, %_pattern.owl, $(wildcard patterns/responsivityNoEO/*.tsv)) $(patsubst %.tsv, %_pattern.obo, $(wildcard patterns/responsivityNoEO/*.tsv))
+#PATTERNS_RESPONSIVITY_OWL = $(patsubst %.tsv, %_pattern.owl, $(wildcard patterns/responsivity/*.tsv)) $(patsubst %.tsv, %_pattern.obo, $(wildcard patterns/responsivity/*.tsv))
+#PATTERNS_RESPONSIVITYNOEO_OWL = $(patsubst %.tsv, %_pattern.owl, $(wildcard patterns/responsivityNoEO/*.tsv)) $(patsubst %.tsv, %_pattern.obo, $(wildcard patterns/responsivityNoEO/*.tsv))
 
-all_patterns: $(PATTERNS_RATIO_OWL) $(PATTERNS_PHENOTYPE_OWL) $(PATTERNS_COMPOSITION_OWL) $(PATTERNS_MORPH_OWL) $(PATTERNS_EQ_OWL) $(PATTERNS_RESPONSIVITY_OWL) $(PATTERNS_RESPONSIVITYNOEO_OWL)
+all_patterns: $(PATTERNS_RATIO_OWL) $(PATTERNS_PHENOTYPE_OWL) $(PATTERNS_COMPOSITION_OWL) $(PATTERNS_MORPH_OWL) $(PATTERNS_EQ_OWL) #$(PATTERNS_RESPONSIVITY_OWL) $(PATTERNS_RESPONSIVITYNOEO_OWL)
 
 patterns/eq/%_pattern.owl: patterns/eq/%.tsv
 	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/eq/$*.tsv
@@ -75,13 +75,13 @@ patterns/morphology/%_pattern.owl: patterns/morphology/%.tsv
 patterns/morphology/%_pattern.obo: patterns/morphology/%_pattern.owl
 	$(ROBOT) convert -i $< -f obo -o $@
 
-patterns/responsivity/%_pattern.owl: patterns/responsivity/%.tsv
-	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/responsivity/$*.tsv
-	robot annotate -O "http://purl.obolibrary.org/obo/to/patterns/$*_pattern.owl" -i $@ -o $@
+#patterns/responsivity/%_pattern.owl: patterns/responsivity/%.tsv
+#	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/responsivity/$*.tsv
+#	robot annotate -O "http://purl.obolibrary.org/obo/to/patterns/$*_pattern.owl" -i $@ -o $@
 	#patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/responsivity/$*.tsv -p patterns/responsivity.yaml -n $@ > $@
 
-patterns/responsivity/%_pattern.obo: patterns/responsivity/%_pattern.owl
-	$(ROBOT) convert -i $< -f obo -o $@
+#patterns/responsivity/%_pattern.obo: patterns/responsivity/%_pattern.owl
+#	$(ROBOT) convert -i $< -f obo -o $@
 
 patterns/composition/%_pattern.owl: patterns/composition/%.tsv
 	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/composition/$*.tsv
@@ -107,23 +107,23 @@ patterns/ratio/%_pattern.owl: patterns/ratio/%.tsv
 patterns/ratio/%_pattern.obo: patterns/ratio/%_pattern.owl
 	$(ROBOT) convert -i $< -f obo -o $@
 
-patterns/responsivityNoEO/%_pattern.owl: patterns/responsivityNoEO/%.tsv
-	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/responsivityNoEO/$*.tsv
-	robot annotate -O "http://purl.obolibrary.org/obo/to/patterns/$*_pattern.owl" -i $@ -o $@
+#patterns/responsivityNoEO/%_pattern.owl: patterns/responsivityNoEO/%.tsv
+#	dosdp-tools --outfile=$@ --obo-prefixes=true --template=patterns/$*.yaml generate --infile=patterns/responsivityNoEO/$*.tsv
+#	robot annotate -O "http://purl.obolibrary.org/obo/to/patterns/$*_pattern.owl" -i $@ -o $@
 	#patterns/apply-pattern.py -P patterns/curie_map.yaml -i patterns/responsivityNoEO/$*.tsv -p patterns/responsivityNoEO.yaml -n $@ > $@
 
-patterns/responsivityNoEO/%_pattern.obo: patterns/responsivityNoEO/%_pattern.owl
-	$(ROBOT) convert -i $< -f obo -o $@
+#patterns/responsivityNoEO/%_pattern.obo: patterns/responsivityNoEO/%_pattern.owl
+#	$(ROBOT) convert -i $< -f obo -o $@
 
 
 #merge pattern files
 PATTERNS = $(patsubst %.tsv, --input %_pattern.owl, $(wildcard patterns/eq/*.tsv)) 
 PATTERNS += $(patsubst %.tsv, --input %_pattern.owl, $(wildcard patterns/morphology/*.tsv)) 
-PATTERNS += $(patsubst %.tsv, --input %_pattern.owl, $(wildcard patterns/responsivity/*.tsv)) 
+#PATTERNS += $(patsubst %.tsv, --input %_pattern.owl, $(wildcard patterns/responsivity/*.tsv)) 
 PATTERNS += $(patsubst %.tsv, --input %_pattern.owl, $(wildcard patterns/composition/*.tsv)) 
 PATTERNS += $(patsubst %.tsv, --input %_pattern.owl, $(wildcard patterns/phenotype/*.tsv)) 
 PATTERNS += $(patsubst %.tsv, --input %_pattern.owl, $(wildcard patterns/ratio/*.tsv)) 
-PATTERNS += $(patsubst %.tsv, --input %_pattern.owl, $(wildcard patterns/responsivityNoEO/*.tsv))
+#PATTERNS += $(patsubst %.tsv, --input %_pattern.owl, $(wildcard patterns/responsivityNoEO/*.tsv))
 
 merge:
 	$(ROBOT) merge --input patterns/empty_pattern.owl $(PATTERNS) --output patterns/merge_patterns.owl
