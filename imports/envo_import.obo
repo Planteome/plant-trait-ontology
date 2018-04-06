@@ -1,0 +1,33 @@
+format-version: 1.2
+ontology: to/imports/envo_import
+
+[Term]
+id: BFO:0000001
+name: entity
+
+[Term]
+id: BFO:0000002
+name: continuant
+def: "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts." []
+is_a: BFO:0000001 ! entity
+
+[Term]
+id: BFO:0000004
+name: independent continuant
+def: "A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything." []
+def: "b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/017-002"}
+is_a: BFO:0000002 ! continuant
+
+[Term]
+id: BFO:0000040
+name: material entity
+def: "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time." []
+is_a: BFO:0000004 ! independent continuant
+
+[Term]
+id: ENVO:00010483
+name: environmental material
+def: "A portion of environmental material is a fiat object which forms the medium or part of the medium of an environmental system." [DOI:10.1186/2041-1480-4-43, MA:ma, ORCID:0000-0002-4366-3088, URL:http\://ontology.buffalo.edu/smith/articles/niches.html]
+synonym: "portion of environmental material" EXACT []
+is_a: BFO:0000040 ! material entity
+
