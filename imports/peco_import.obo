@@ -1,5 +1,3500 @@
 format-version: 1.2
 ontology: to/imports/peco_import
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000015>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/BFO_0000040>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_22676>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_23530>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24431>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24527>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24852>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_25944>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_27027>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33281>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33287>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/CHEBI_37845>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0003674>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0008150>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/GO_0048018>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PECO_0001001>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PECO_0007041>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PECO_0007066>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PECO_0007074>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PECO_0007085>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PECO_0007165>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PECO_0007167>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PECO_0007183>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PECO_0007239>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PECO_0007632>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000050>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000051>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/BFO_0000066>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000056>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000087>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002013>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002014>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002015>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002019>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002025>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002211>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002212>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002213>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002215>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002233>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002244>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002327>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002331>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002333>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002352>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002411>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002418>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002448>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002449>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002450>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002566>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002578>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002629>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0002630>))\nDeclaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))\n\n############################\n#   Object Properties\n############################\n\n# Object Property: <http://purl.obolibrary.org/obo/RO_0002333> (<http://purl.obolibrary.org/obo/RO_0002333>)\n\nSubObjectPropertyOf(<http://purl.obolibrary.org/obo/RO_0002333> ObjectInverseOf(<http://purl.obolibrary.org/obo/RO_0002215>))\n\n\n\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/BFO_0000002> (continuant)\n\nDisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000002> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000003>))\n\n# Class: <http://purl.obolibrary.org/obo/BFO_0000003> (occurrent)\n\nDisjointClasses(<http://purl.obolibrary.org/obo/BFO_0000003> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000050> <http://purl.obolibrary.org/obo/BFO_0000002>))\n\n# Class: <http://purl.obolibrary.org/obo/PECO_0007041> (antibiotic exposure)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/PECO_0007041> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_33281>)))))\n\n# Class: <http://purl.obolibrary.org/obo/PECO_0007066> (cytokinin exposure)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/PECO_0007066> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_23530>)))))\n\n# Class: <http://purl.obolibrary.org/obo/PECO_0007074> (auxin exposure)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/PECO_0007074> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_22676>)))))\n\n# Class: <http://purl.obolibrary.org/obo/PECO_0007085> (fertilizer exposure)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/PECO_0007085> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_33287>)))))\n\n# Class: <http://purl.obolibrary.org/obo/PECO_0007165> (growth hormone exposure)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/PECO_0007165> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_37845>)))))\n\n# Class: <http://purl.obolibrary.org/obo/PECO_0007167> (pesticide exposure)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/PECO_0007167> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_25944>)))))\n\n# Class: <http://purl.obolibrary.org/obo/PECO_0007183> (herbicide exposure)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/PECO_0007183> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_24527>)))))\n\n# Class: <http://purl.obolibrary.org/obo/PECO_0007239> (micronutrient exposure)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/PECO_0007239> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_27027>)))))\n\n# Class: <http://purl.obolibrary.org/obo/PECO_0007632> (insecticide exposure)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/PECO_0007632> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PECO_0001001> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002244> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/CHEBI_24431> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000087> <http://purl.obolibrary.org/obo/CHEBI_24852>)))))\n\n\nSubClassOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002566> <http://purl.obolibrary.org/obo/BFO_0000040>) ObjectUnionOf(ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000015>)) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002215> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000056> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0002418> <http://purl.obolibrary.org/obo/BFO_0000015>)))))\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002211> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002448>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002411> <http://purl.obolibrary.org/obo/RO_0002233>) <http://purl.obolibrary.org/obo/RO_0002566>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002411> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002566>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002629> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002450>)\nSubObjectPropertyOf(ObjectPropertyChain(<http://purl.obolibrary.org/obo/RO_0002327> <http://purl.obolibrary.org/obo/RO_0002630> <http://purl.obolibrary.org/obo/RO_0002333>) <http://purl.obolibrary.org/obo/RO_0002449>)\nDLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> \"true\"^^xsd:boolean) Annotation(rdfs:comment \"MF(X)-directly_regulates->MF(Y)-enabled_by->GP(Z) => MF(Y)-has_input->GP(Y) e.g. if 'protein kinase activity'(X) directly_regulates 'protein binding activity (Y)and this is enabled by GP(Z) then X has_input Z\"^^xsd:string) Annotation(rdfs:label \"infer input from direct reg\"^^xsd:string) Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<http://purl.obolibrary.org/obo/ro.owl#z>) Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>) Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0003674> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0003674> Variable(<http://purl.obolibrary.org/obo/ro.owl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<http://purl.obolibrary.org/obo/ro.owl#x>) Variable(<http://purl.obolibrary.org/obo/ro.owl#z>))))\nDLSafeRule(Annotation(rdfs:comment \"GP(X)-enables->MF(Y)-has_part->MF(Z) => GP(X) enables MF(Z),\ne.g.  if GP X enables ATPase coupled transporter activity' and 'ATPase coupled transporter activity' has_part 'ATPase activity' then GP(X) enables 'ATPase activity'\") Annotation(rdfs:label \"enabling an MF enables its parts\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000051> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0003674> Variable(<urn:swrl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> \"true\"^^xsd:boolean) Annotation(rdfs:comment \"GP(X)-enables->MF(Y)-part_of->BP(Z) => GP(X) involved_in BP(Z) e.g. if X enables 'protein kinase activity' and Y 'part of' 'signal tranduction' then X involved in 'signal transduction'\"^^xsd:string) Annotation(rdfs:label \"involved in BP\"^^xsd:string) Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0008150> Variable(<urn:swrl#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002331> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Annotation(rdfs:label \"From ligand activity to has_ligand\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0048018> Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#z>) Variable(<urn:swrl#x>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002019> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>))))\nDLSafeRule(Annotation(rdfs:comment \"This rule is dubious: added as a quick fix for expected inference in GO-CAM.  The problem is most acute for transmembrane proteins, such as receptors or cell adhesion molecules, which have some subfunctions inside the cell (e.g. kinase activity) and some subfunctions outside (e.g. ligand binding).  Correct annotation of where these functions occurs leads to incorrect inference about the location of the whole protein.  This should probably be weakened to \\\"... -> overlaps\\\"\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000066> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/BFO_0000050> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Annotation(rdfs:comment \"If a molecular function (X) has a regulatory subfunction, then any gene product which is an input to that subfunction has an activity that directly_regulates X.  Note:  this is intended for cases where the regaultory subfunction is protein binding, so it could be tightened with an additional clause to specify this.\") Annotation(rdfs:label \"inferring direct reg edge from input to regulatory subfunction\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#A>) Variable(<urn:swrl#B>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002013> Variable(<urn:swrl#D>) Variable(<urn:swrl#C>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002352> Variable(<urn:swrl#B>) Variable(<urn:swrl#C>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#A>) Variable(<urn:swrl#D>))))\nDLSafeRule(Annotation(rdfs:label \"inferring direct neg reg edge from input to regulatory subfunction\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#A>) Variable(<urn:swrl#B>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002014> Variable(<urn:swrl#D>) Variable(<urn:swrl#C>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002352> Variable(<urn:swrl#B>) Variable(<urn:swrl#C>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002630> Variable(<urn:swrl#A>) Variable(<urn:swrl#D>))))\nDLSafeRule(Annotation(rdfs:label \"inferring direct positive reg edge from input to regulatory subfunction\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002015> Variable(<urn:swrl#D>) Variable(<urn:swrl#C>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002333> Variable(<urn:swrl#A>) Variable(<urn:swrl#B>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002352> Variable(<urn:swrl#B>) Variable(<urn:swrl#C>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002629> Variable(<urn:swrl#A>) Variable(<urn:swrl#D>))))\nDLSafeRule(Annotation(rdfs:label \"From has_ligand to ligand activity\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002019> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002327> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#z>) Variable(<urn:swrl#x>)) ClassAtom(<http://purl.obolibrary.org/obo/GO_0048018> Variable(<urn:swrl#z>))))\nDLSafeRule(Annotation(rdfs:label \"effector input is compound function input\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<urn:swrl#eff>) Variable(<urn:swrl#in>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<urn:swrl#mf>) Variable(<urn:swrl#in>))))\nDLSafeRule(Annotation(rdfs:label \"Input of effector is input of its parent MF\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<urn:swrl#mf>) Variable(<urn:swrl#in>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002233> Variable(<urn:swrl#eff>) Variable(<urn:swrl#in>))))\nDLSafeRule(Annotation(rdfs:comment \"if effector directly regulates X,  its parent MF directly regulates X\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#mf>) Variable(<urn:swrl#mf2>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002578> Variable(<urn:swrl#eff>) Variable(<urn:swrl#mf2>))))\nDLSafeRule(Annotation(rdfs:comment \"if effector directly positively regulates X,  its parent MF directly positively regulates X\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002629> Variable(<urn:swrl#mf>) Variable(<urn:swrl#mf2>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002629> Variable(<urn:swrl#eff>) Variable(<urn:swrl#mf2>))))\nDLSafeRule(Annotation(rdfs:label \"if effector directly negatively regulates X,  its parent MF directly negatively regulates X\") Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002025> Variable(<urn:swrl#mf>) Variable(<urn:swrl#eff>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002630> Variable(<urn:swrl#mf>) Variable(<urn:swrl#mf2>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002630> Variable(<urn:swrl#eff>) Variable(<urn:swrl#mf2>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002213> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\nDLSafeRule(Body(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002213> Variable(<urn:swrl#x>) Variable(<urn:swrl#y>)) ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#y>) Variable(<urn:swrl#z>)))Head(ObjectPropertyAtom(<http://purl.obolibrary.org/obo/RO_0002212> Variable(<urn:swrl#x>) Variable(<urn:swrl#z>))))\n)
+
+[Term]
+id: BFO:0000001
+name: entity
+
+[Term]
+id: BFO:0000002
+name: continuant
+def: "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts." []
+is_a: BFO:0000001 ! entity
+disjoint_from: BFO:0000003 ! occurrent
+
+[Term]
+id: BFO:0000003
+name: occurrent
+def: "An entity that has temporal parts and that happens, unfolds or develops through time." []
+is_a: BFO:0000001 ! entity
+
+[Term]
+id: BFO:0000004
+name: independent continuant
+def: "A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything." []
+def: "b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/017-002"}
+is_a: BFO:0000002 ! continuant
+disjoint_from: BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: BFO:0000015
+name: process
+def: "An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t." []
+def: "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/083-003"}
+is_a: BFO:0000003 ! occurrent
+
+[Term]
+id: BFO:0000019
+name: quality
+is_a: BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: BFO:0000020
+name: specifically dependent continuant
+def: "A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same." []
+def: "b is a relational specifically dependent continuant = Def. b is a specifically dependent continuant and there are n &gt; 1 independent continuants c1, � cn which are not spatial regions are such that for all 1  i &lt; j  n, ci  and cj share no common parts, are such that for each 1  i  n, b s-depends_on ci at every time t during the course of b�s existence (axiom label in BFO2 Reference: [131-004])" []
+def: "b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b�s existence. (axiom label in BFO2 Reference: [050-003])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/050-003"}
+is_a: BFO:0000002 ! continuant
+
+[Term]
+id: BFO:0000040
+name: material entity
+def: "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time." []
+is_a: BFO:0000004 ! independent continuant
+
+[Term]
+id: CHEBI:10545
+name: electron
+def: "Elementary particle not affected by the strong force having a spin 1/2, a negative elementary charge and a rest mass of 0.000548579903(13) u, or 0.51099906(15) MeV." []
+synonym: "beta" RELATED [IUPAC]
+synonym: "beta(-)" RELATED [ChEBI]
+synonym: "beta-particle" RELATED [IUPAC]
+synonym: "e" RELATED [IUPAC]
+synonym: "e(-)" RELATED [UniProt]
+synonym: "e-" RELATED [KEGG_COMPOUND]
+synonym: "electron" EXACT [KEGG_COMPOUND]
+synonym: "electron" EXACT IUPAC_NAME [IUPAC]
+synonym: "electron" EXACT [ChEBI]
+synonym: "negatron" RELATED [IUPAC]
+is_a: CHEBI:36338 ! lepton
+
+[Term]
+id: CHEBI:134361
+name: allylic alcohol
+def: "An alcohol where the hydroxy group is attached to a saturated carbon atom adjacent to a double bond (R groups may be H, organyl, etc.)." []
+synonym: "allylic alcohols" RELATED [ChEBI]
+is_a: CHEBI:30879 ! alcohol
+is_a: CHEBI:78840 ! olefinic compound
+
+[Term]
+id: CHEBI:134397
+name: tertiary allylic alcohol
+synonym: "tertiary allylic alcohols" RELATED [ChEBI]
+is_a: CHEBI:134361 ! allylic alcohol
+is_a: CHEBI:26878 ! tertiary alcohol
+
+[Term]
+id: CHEBI:136184
+name: jasmonic acid anion
+def: "A 5-oxo monocarboxylic acid anion obtained by deprotonation of the carboxy group of any diastereomer of jasmonic acid; major species at pH 7.3." []
+synonym: "a jasmonate" RELATED [UniProt]
+synonym: "jasmonate anion" RELATED [ChEBI]
+synonym: "{3-oxo-2-[(2Z)-pent-2-en-1-yl]cyclopentyl}acetate" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:35975 ! 5-oxo monocarboxylic acid anion
+relationship: RO:0000087 CHEBI:24937 ! jasmonates
+
+[Term]
+id: CHEBI:138103
+name: inorganic acid
+def: "A Bronsted acid derived from one or more inorganic compounds. Inorganic acids (also known as mineral acids) form hydrons and conjugate base ions when dissolved in water." []
+synonym: "inorganic acids" RELATED [ChEBI]
+synonym: "mineral acid" RELATED [ChEBI]
+synonym: "mineral acids" RELATED [ChEBI]
+is_a: CHEBI:39141 ! Bronsted acid
+
+[Term]
+id: CHEBI:138625
+name: (+)-jasmonic acid anion
+def: "A jasmonate anion resulting from the removal of a proton from the carboxy group of (+)-jasmonic acid; major species at pH 7.3." []
+synonym: "(1S,2S)-jasmonic acid anion" RELATED [ChEBI]
+synonym: "(3S,7S)-jasmonate" RELATED [UniProt]
+synonym: "{(1S,2S)-3-oxo-2-[(2 Z)-pent-2-en-1-yl]cyclopentyl}acetate" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:136184 ! jasmonic acid anion
+relationship: is_conjugate_base_of CHEBI:139300 ! (+)-jasmonic acid
+
+[Term]
+id: CHEBI:138675
+name: gas molecular entity
+def: "Any main group molecular entity that is gaseous at standard temperature and pressure (STP; 0degreeC and 100 kPa)." []
+synonym: "gas molecular entities" RELATED [ChEBI]
+synonym: "gaseous molecular entities" RELATED [ChEBI]
+synonym: "gaseous molecular entity" RELATED [ChEBI]
+is_a: CHEBI:33579 ! main group molecular entity
+
+[Term]
+id: CHEBI:139300
+name: (+)-jasmonic acid
+def: "An oxo monocarboxylic acid that is (3-oxocyclopentyl)acetic acid substituted by a (2Z)-pent-2-en-1-yl group at position 2 of the cyclopentane ring." []
+synonym: "(1S,2S)-jasmonic acid" RELATED [ChEBI]
+synonym: "{(1S,2S)-3-oxo-2-[(2 Z)-pent-2-en-1-yl]cyclopentyl}acetic acid" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:35871 ! oxo monocarboxylic acid
+is_a: CHEBI:36140 ! cyclopentanones
+relationship: is_conjugate_acid_of CHEBI:138625 ! (+)-jasmonic acid anion
+relationship: is_enantiomer_of CHEBI:18292 ! jasmonic acid
+relationship: RO:0000087 CHEBI:24937 ! jasmonates
+
+[Term]
+id: CHEBI:15339
+name: acceptor
+def: "A molecular entity that can accept an electron, a pair of electrons, an atom or a group from another molecular entity." []
+synonym: "A" RELATED [KEGG_COMPOUND]
+synonym: "accepteur" RELATED [ChEBI]
+synonym: "Acceptor" EXACT [KEGG_COMPOUND]
+synonym: "acceptor" EXACT [UniProt]
+synonym: "Akzeptor" RELATED [ChEBI]
+synonym: "Hydrogen-acceptor" RELATED [KEGG_COMPOUND]
+synonym: "Oxidized donor" RELATED [KEGG_COMPOUND]
+is_a: CHEBI:51086 ! chemical role
+
+[Term]
+id: CHEBI:15366
+name: acetic acid
+def: "A simple monocarboxylic acid containing two carbons." []
+synonym: "ACETIC ACID" EXACT [PDBeChem]
+synonym: "Acetic acid" EXACT [KEGG_COMPOUND]
+synonym: "acetic acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "acide acetique" RELATED [ChemIDplus]
+synonym: "AcOH" RELATED [ChEBI]
+synonym: "CH3-COOH" RELATED [IUPAC]
+synonym: "CH3CO2H" RELATED [ChEBI]
+synonym: "E 260" RELATED [ChEBI]
+synonym: "E-260" RELATED [ChEBI]
+synonym: "E260" RELATED [ChEBI]
+synonym: "Essigsaeure" RELATED [ChEBI]
+synonym: "Ethanoic acid" RELATED [KEGG_COMPOUND]
+synonym: "ethoic acid" RELATED [ChEBI]
+synonym: "Ethylic acid" RELATED [ChemIDplus]
+synonym: "HOAc" RELATED [ChEBI]
+synonym: "INS No. 260" RELATED [ChEBI]
+synonym: "MeCO2H" RELATED [ChEBI]
+synonym: "MeCOOH" RELATED [ChEBI]
+synonym: "Methanecarboxylic acid" RELATED [ChemIDplus]
+is_a: CHEBI:25384 ! monocarboxylic acid
+relationship: is_conjugate_acid_of CHEBI:30089 ! acetate
+relationship: RO:0000087 CHEBI:48356 ! protic solvent
+relationship: RO:0000087 CHEBI:64049 ! food acidity regulator
+relationship: RO:0000087 CHEBI:65256 ! antimicrobial food preservative
+relationship: RO:0000087 CHEBI:83056 ! Daphnia magna metabolite
+
+[Term]
+id: CHEBI:15377
+name: water
+def: "An oxygen hydride consisting of an oxygen atom that is covalently bonded to two hydrogen atoms." []
+synonym: "[OH2]" RELATED [IUPAC]
+synonym: "acqua" RELATED [ChEBI]
+synonym: "agua" RELATED [ChEBI]
+synonym: "aqua" RELATED [ChEBI]
+synonym: "BOUND WATER" RELATED [PDBeChem]
+synonym: "dihydridooxygen" RELATED [IUPAC]
+synonym: "dihydrogen oxide" RELATED [IUPAC]
+synonym: "eau" RELATED [ChEBI]
+synonym: "H2O" RELATED [UniProt]
+synonym: "H2O" RELATED [KEGG_COMPOUND]
+synonym: "HOH" RELATED [ChEBI]
+synonym: "hydrogen hydroxide" RELATED [ChEBI]
+synonym: "oxidane" EXACT IUPAC_NAME [IUPAC]
+synonym: "Wasser" RELATED [ChEBI]
+synonym: "WATER" EXACT [PDBeChem]
+synonym: "Water" EXACT [KEGG_COMPOUND]
+synonym: "water" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33693 ! oxygen hydride
+is_a: CHEBI:37176 ! mononuclear parent hydride
+is_a: CHEBI:52625 ! inorganic hydroxy compound
+relationship: is_conjugate_acid_of CHEBI:16234 ! hydroxide
+relationship: is_conjugate_base_of CHEBI:29412 ! oxonium
+relationship: RO:0000087 CHEBI:48360 ! amphiprotic solvent
+relationship: RO:0000087 CHEBI:75771 ! mouse metabolite
+relationship: RO:0000087 CHEBI:75772 ! Saccharomyces cerevisiae metabolite
+relationship: RO:0000087 CHEBI:76413 ! greenhouse gas
+relationship: RO:0000087 CHEBI:76971 ! Escherichia coli metabolite
+relationship: RO:0000087 CHEBI:77746 ! human metabolite
+
+[Term]
+id: CHEBI:15734
+name: primary alcohol
+def: "A primary alcohol is a compound in which a hydroxy group, -OH, is attached to a saturated carbon atom which has either three hydrogen atoms attached to it or only one other carbon atom and two hydrogen atoms attached to it." []
+synonym: "1-Alcohol" RELATED [KEGG_COMPOUND]
+synonym: "a primary alcohol" RELATED [UniProt]
+synonym: "Primary alcohol" EXACT [KEGG_COMPOUND]
+synonym: "primary alcohols" RELATED [ChEBI]
+is_a: CHEBI:30879 ! alcohol
+
+[Term]
+id: CHEBI:16234
+name: hydroxide
+synonym: "HO-" RELATED [KEGG_COMPOUND]
+synonym: "hydridooxygenate(1-)" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydroxide" EXACT IUPAC_NAME [IUPAC]
+synonym: "HYDROXIDE ION" RELATED [PDBeChem]
+synonym: "Hydroxide ion" RELATED [KEGG_COMPOUND]
+synonym: "OH(-)" RELATED [UniProt]
+synonym: "OH(-)" RELATED [IUPAC]
+synonym: "OH-" RELATED [KEGG_COMPOUND]
+synonym: "oxidanide" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33693 ! oxygen hydride
+relationship: is_conjugate_base_of CHEBI:15377 ! water
+relationship: RO:0000087 CHEBI:75771 ! mouse metabolite
+
+[Term]
+id: CHEBI:17087
+name: ketone
+def: "A compound in which a carbonyl group is bonded to two carbon atoms: R2C=O (neither R may be H)." []
+synonym: "a ketone" RELATED [UniProt]
+synonym: "cetone" RELATED [ChEBI]
+synonym: "Keton" RELATED [ChEBI]
+synonym: "Ketone" EXACT [KEGG_COMPOUND]
+synonym: "ketones" EXACT IUPAC_NAME [IUPAC]
+synonym: "ketones" RELATED [ChEBI]
+synonym: "R-CO-R'" RELATED [KEGG_COMPOUND]
+is_a: CHEBI:36586 ! carbonyl compound
+
+[Term]
+id: CHEBI:17497
+name: glycolic acid
+def: "A 2-hydroxy monocarboxylic acid that is acetic acid where the methyl group has been hydroxylated." []
+synonym: "2-Hydroxyacetic acid" RELATED [ChemIDplus]
+synonym: "2-Hydroxyethanoic acid" RELATED [NIST_Chemistry_WebBook]
+synonym: "alpha-Hydroxyacetic acid" RELATED [HMDB]
+synonym: "alpha-hydroxyacetic acid" RELATED [NIST_Chemistry_WebBook]
+synonym: "GLYCOLIC ACID" EXACT [PDBeChem]
+synonym: "Glycolic acid" EXACT [KEGG_COMPOUND]
+synonym: "Glycollic acid" RELATED [ChemIDplus]
+synonym: "HOCH2COOH" RELATED [NIST_Chemistry_WebBook]
+synonym: "Hydroxyacetic acid" RELATED [KEGG_COMPOUND]
+synonym: "hydroxyacetic acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "Hydroxyethanoic acid" RELATED [ChemIDplus]
+is_a: CHEBI:15734 ! primary alcohol
+is_a: CHEBI:49302 ! 2-hydroxy monocarboxylic acid
+relationship: has_functional_parent CHEBI:15366 ! acetic acid
+relationship: is_conjugate_acid_of CHEBI:29805 ! glycolate
+relationship: RO:0000087 CHEBI:25212 ! metabolite
+relationship: RO:0000087 CHEBI:50176 ! keratolytic drug
+
+[Term]
+id: CHEBI:17632
+name: nitrate
+def: "A nitrogen oxoanion formed by loss of a proton from nitric acid. Principal species present at pH 7.3." []
+synonym: "[NO3](-)" RELATED [IUPAC]
+synonym: "nitrate" EXACT [UniProt]
+synonym: "nitrate" EXACT IUPAC_NAME [IUPAC]
+synonym: "NITRATE ION" RELATED [PDBeChem]
+synonym: "nitrate(1-)" RELATED [ChemIDplus]
+synonym: "NO3" RELATED [ChEBI]
+synonym: "NO3(-)" RELATED [IUPAC]
+synonym: "trioxidonitrate(1-)" EXACT IUPAC_NAME [IUPAC]
+synonym: "trioxonitrate(1-)" EXACT IUPAC_NAME [IUPAC]
+synonym: "trioxonitrate(V)" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33458 ! nitrogen oxoanion
+is_a: CHEBI:62764 ! reactive nitrogen species
+is_a: CHEBI:79389 ! monovalent inorganic anion
+relationship: is_conjugate_base_of CHEBI:48107 ! nitric acid
+
+[Term]
+id: CHEBI:17891
+name: donor
+def: "A molecular entity that can transfer (\"donate\") an electron, a pair of electrons, an atom or a group to another molecular entity." []
+synonym: "Donator" RELATED [ChEBI]
+synonym: "donneur" RELATED [ChEBI]
+synonym: "Donor" EXACT [KEGG_COMPOUND]
+synonym: "donor" EXACT [UniProt]
+is_a: CHEBI:51086 ! chemical role
+
+[Term]
+id: CHEBI:18059
+name: lipid
+def: "'Lipids' is a loosely defined term for substances of biological origin that are soluble in nonpolar solvents. They consist of saponifiable lipids, such as glycerides (fats and oils) and phospholipids, as well as nonsaponifiable lipids, principally steroids." []
+synonym: "Lipid" EXACT [KEGG_COMPOUND]
+synonym: "lipids" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:18292
+name: jasmonic acid
+def: "An oxo monocarboxylic acid that is (3-oxocyclopentyl)acetic acid substituted by a (2Z)-pent-2-en-1-yl group at position 2 of the cyclopentane ring." []
+synonym: "(-)-Jasmonic acid" RELATED [KEGG_COMPOUND]
+synonym: "(-)-jasmonic acid" RELATED [ChEBI]
+synonym: "(1R,2R)-3-oxo-2-(2Z)-2-penten-ylcyclopentanacetic acid" RELATED [ChEBI]
+synonym: "(1R,2R)-3-oxo-2-(pent-2Z-enyl)-cyclopentaneacetic acid" RELATED [LIPID_MAPS]
+synonym: "2-{(1R,2R)-3-oxo-2-[(Z)-pent-2-enyl]cyclopentyl}acetate" RELATED [IUBMB]
+synonym: "Jasmonate" RELATED [KEGG_COMPOUND]
+synonym: "Jasmonic acid" EXACT [KEGG_COMPOUND]
+synonym: "{(1R,2R)-3-oxo-2-[(2Z)-pent-2-en-1-yl]cyclopentyl}acetic acid" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:35871 ! oxo monocarboxylic acid
+relationship: is_conjugate_acid_of CHEBI:58431 ! jasmonate(1-)
+relationship: is_enantiomer_of CHEBI:139300 ! (+)-jasmonic acid
+relationship: RO:0000087 CHEBI:24937 ! jasmonates
+relationship: RO:0000087 CHEBI:76924 ! plant metabolite
+
+[Term]
+id: CHEBI:18310
+name: alkane
+def: "An acyclic branched or unbranched hydrocarbon having the general formula CnH2n+2, and therefore consisting entirely of hydrogen atoms and saturated carbon atoms." []
+synonym: "alcane" RELATED [IUPAC]
+synonym: "alcanes" RELATED [IUPAC]
+synonym: "alcano" RELATED [IUPAC]
+synonym: "alcanos" RELATED [IUPAC]
+synonym: "Alkan" RELATED [ChEBI]
+synonym: "Alkane" EXACT [KEGG_COMPOUND]
+synonym: "alkane" EXACT IUPAC_NAME [IUPAC]
+synonym: "alkanes" EXACT IUPAC_NAME [IUPAC]
+synonym: "an alkane" RELATED [UniProt]
+synonym: "RH" RELATED [KEGG_COMPOUND]
+is_a: CHEBI:24632 ! hydrocarbon
+is_a: CHEBI:33653 ! aliphatic compound
+
+[Term]
+id: CHEBI:19351
+name: (2,4-dichlorophenoxy)acetate
+def: "A chlorophenoxyacetate anion that is the conjugate base of  (2,4-dichlorophenoxy)acetic acid, obtained by deprotonation of the carboxy group." []
+synonym: "(2,4-dichlorophenoxy)acetate" EXACT IUPAC_NAME [IUPAC]
+synonym: "(2,4-dichlorophenoxy)acetate" EXACT [UniProt]
+synonym: "2,4-D" RELATED [UM-BBD]
+synonym: "2,4-dichlorophenoxyacetate" RELATED [ChEBI]
+is_a: CHEBI:23151 ! chlorophenoxyacetate anion
+relationship: is_conjugate_base_of CHEBI:28854 ! 2,4-D
+
+[Term]
+id: CHEBI:20432
+name: imidazolone
+synonym: "imidazolones" RELATED [ChEBI]
+is_a: CHEBI:24780 ! imidazoles
+
+[Term]
+id: CHEBI:22152
+name: 2-cis-abscisic acid
+def: "A member of the class of abscisic acids in which the double bond betweeen positions 2 and 3 has cis- (natural) geometry." []
+synonym: "(2Z,4E)-5-(1-hydroxy-2,6,6-trimethyl-4-oxocyclohex-2-en-1-yl)-3-methylpenta-2,4-dienoic acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "abscisic acid" RELATED [ChEBI]
+synonym: "Abscisinsaeure" RELATED [ChEBI]
+synonym: "Abszisinsaeure" RELATED [ChEBI]
+synonym: "acide abscissique" RELATED [ChEBI]
+synonym: "acido abscisico" RELATED [ChEBI]
+is_a: CHEBI:62431 ! abscisic acids
+relationship: is_conjugate_acid_of CHEBI:62071 ! 2-cis-abscisate
+relationship: RO:0000087 CHEBI:73191 ! abscisic acid receptor agonist
+
+[Term]
+id: CHEBI:22563
+name: anion
+def: "A monoatomic or polyatomic species having one or more elementary charges of the electron." []
+synonym: "Anion" EXACT [ChEBI]
+synonym: "anion" EXACT [ChEBI]
+synonym: "anion" EXACT IUPAC_NAME [IUPAC]
+synonym: "Anionen" RELATED [ChEBI]
+synonym: "aniones" RELATED [ChEBI]
+synonym: "anions" RELATED [IUPAC]
+is_a: CHEBI:24870 ! ion
+
+[Term]
+id: CHEBI:22676
+name: auxin
+def: "Any of a group of compounds, both naturally occurring and synthetic, that induce cell elongation in plant stems (from Greek alphaupsilonxialphanuomega, \"to grow\")." []
+synonym: "auxins" RELATED [ChEBI]
+is_a: CHEBI:37848 ! plant hormone
+
+[Term]
+id: CHEBI:22695
+name: base
+def: "A molecular entity having an available pair of electrons capable of forming a covalent bond with a hydron (Bronsted base) or with the vacant orbital of some other molecular entity (Lewis base)." []
+synonym: "Base" EXACT [ChEBI]
+synonym: "base" EXACT IUPAC_NAME [IUPAC]
+synonym: "base" EXACT [ChEBI]
+synonym: "Base1" RELATED [KEGG_COMPOUND]
+synonym: "Base2" RELATED [KEGG_COMPOUND]
+synonym: "Basen" RELATED [ChEBI]
+synonym: "bases" RELATED [ChEBI]
+synonym: "Nucleobase" RELATED [KEGG_COMPOUND]
+is_a: CHEBI:51086 ! chemical role
+
+[Term]
+id: CHEBI:22712
+name: benzenes
+def: "Any benzenoid aromatic compound consisting of the benzene skeleton and its substituted derivatives." []
+is_a: CHEBI:33836 ! benzenoid aromatic compound
+
+[Term]
+id: CHEBI:22921
+name: brassinosteroid
+synonym: "brassinosteroids" RELATED [ChEBI]
+is_a: CHEBI:26124 ! phytosteroid
+
+[Term]
+id: CHEBI:23019
+name: carbonyl group
+synonym: ">C=O" RELATED [IUPAC]
+synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
+synonym: "carbonyl group" EXACT [UniProt]
+synonym: "carbonyl group" EXACT [ChEBI]
+is_a: CHEBI:51422 ! organodiyl group
+
+[Term]
+id: CHEBI:23116
+name: chlorine atom
+synonym: "17Cl" RELATED [IUPAC]
+synonym: "Chlor" RELATED [ChEBI]
+synonym: "chlore" RELATED [ChEBI]
+synonym: "chlorine" EXACT IUPAC_NAME [IUPAC]
+synonym: "chlorine" RELATED [ChEBI]
+synonym: "chlorum" RELATED [ChEBI]
+synonym: "Cl" RELATED [IUPAC]
+synonym: "cloro" RELATED [ChEBI]
+is_a: CHEBI:24473 ! halogen
+relationship: RO:0000087 CHEBI:27027 ! micronutrient
+
+[Term]
+id: CHEBI:23117
+name: chlorine molecular entity
+def: "A halogen molecular entity containing one or more atoms of chlorine." []
+is_a: CHEBI:24471 ! halogen molecular entity
+relationship: BFO:0000051 CHEBI:23116 ! chlorine atom
+
+[Term]
+id: CHEBI:23132
+name: chlorobenzenes
+def: "Any organochlorine compound containing a benzene ring which is substituted by one or more chlorines." []
+is_a: CHEBI:22712 ! benzenes
+is_a: CHEBI:36683 ! organochlorine compound
+
+[Term]
+id: CHEBI:23151
+name: chlorophenoxyacetate anion
+def: "A monocarboxylic acid anion obtained by deprotonation of the carboxy group of any chlorophenoxyacetic acid." []
+is_a: CHEBI:35757 ! monocarboxylic acid anion
+relationship: has_functional_parent CHEBI:38846 ! phenoxyacetate
+
+[Term]
+id: CHEBI:23152
+name: chlorophenoxyacetic acid
+def: "A monocarboxylic acid that is phenoxyacetic acid in which at least one of the phenyl hydrogens is replaced by chlorine." []
+synonym: "chlorophenoxyacetic acids" RELATED [ChEBI]
+is_a: CHEBI:23132 ! chlorobenzenes
+is_a: CHEBI:25384 ! monocarboxylic acid
+is_a: CHEBI:35618 ! aromatic ether
+relationship: has_functional_parent CHEBI:8075 ! phenoxyacetic acid
+
+[Term]
+id: CHEBI:23367
+name: molecular entity
+def: "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity." []
+synonym: "entidad molecular" RELATED [IUPAC]
+synonym: "entidades moleculares" RELATED [IUPAC]
+synonym: "entite moleculaire" RELATED [IUPAC]
+synonym: "molecular entities" RELATED [IUPAC]
+synonym: "molecular entity" EXACT IUPAC_NAME [IUPAC]
+synonym: "molekulare Entitaet" RELATED [ChEBI]
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:23530
+name: cytokinin
+def: "A phytohormone that promote cell division, or cytokinesis, in plant roots and shoots." []
+is_a: CHEBI:37848 ! plant hormone
+
+[Term]
+id: CHEBI:23582
+name: defoliant
+def: "A herbicide which when sprayed or dusted on plants causes its leaves to fall off." []
+synonym: "defoliants" RELATED [ChEBI]
+synonym: "Defoliationsmittel" RELATED [ChEBI]
+synonym: "Entlaubungsmittel" RELATED [ChEBI]
+is_a: CHEBI:24527 ! herbicide
+
+[Term]
+id: CHEBI:23677
+name: diazole
+def: "An azole that is either one of a pair of heterocyclic organic compounds comprising three carbon atoms and two nitrogen atoms arranged in a ring." []
+synonym: "diazoles" RELATED [ChEBI]
+is_a: CHEBI:68452 ! azole
+
+[Term]
+id: CHEBI:23697
+name: dichlorobenzene
+def: "Any member of the class of chlorobenzenes carrying two chloro groups at unspecified positions." []
+synonym: "Dichlorbenzol" RELATED [ChEBI]
+synonym: "dichlorobenzene" EXACT [ChEBI]
+synonym: "dichlorobenzene" EXACT IUPAC_NAME [IUPAC]
+synonym: "dichlorobenzenes" RELATED [ChEBI]
+is_a: CHEBI:23132 ! chlorobenzenes
+
+[Term]
+id: CHEBI:23888
+name: drug
+def: "Any substance which when absorbed into a living organism may modify one or more of its functions. The term is generally accepted for a substance taken for a therapeutic purpose, but is also commonly used for abused substances." []
+synonym: "drugs" RELATED [ChEBI]
+synonym: "medicine" RELATED [ChEBI]
+is_a: CHEBI:52217 ! pharmaceutical
+
+[Term]
+id: CHEBI:23924
+name: enzyme inhibitor
+def: "A compound or agent that combines with an enzyme in such a manner as to prevent the normal substrate-enzyme combination and the catalytic reaction." []
+synonym: "enzyme inhibitor" EXACT IUPAC_NAME [IUPAC]
+synonym: "enzyme inhibitors" RELATED [ChEBI]
+synonym: "inhibidor enzimatico" RELATED [ChEBI]
+synonym: "inhibidores enzimaticos" RELATED [ChEBI]
+synonym: "inhibiteur enzymatique" RELATED [ChEBI]
+synonym: "inhibiteurs enzymatiques" RELATED [ChEBI]
+is_a: CHEBI:35222 ! inhibitor
+is_a: CHEBI:52206 ! biochemical role
+
+[Term]
+id: CHEBI:24431
+name: chemical entity
+def: "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances." []
+synonym: "chemical entity" EXACT [UniProt]
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: CHEBI:24432
+name: biological role
+def: "A role played by the molecular entity or part thereof within a biological context." []
+synonym: "biological function" RELATED [ChEBI]
+is_a: CHEBI:50906 ! role
+
+[Term]
+id: CHEBI:24433
+name: group
+def: "A defined linked collection of atoms or a single atom within a molecular entity." []
+synonym: "group" EXACT IUPAC_NAME [IUPAC]
+synonym: "groupe" RELATED [IUPAC]
+synonym: "grupo" RELATED [IUPAC]
+synonym: "grupos" RELATED [IUPAC]
+synonym: "Gruppe" RELATED [ChEBI]
+synonym: "Rest" RELATED [ChEBI]
+is_a: CHEBI:24431 ! chemical entity
+relationship: BFO:0000051 CHEBI:33250 ! atom
+
+[Term]
+id: CHEBI:24471
+name: halogen molecular entity
+synonym: "halogen compounds" RELATED [ChEBI]
+synonym: "halogen molecular entities" RELATED [ChEBI]
+synonym: "halogen molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33675 ! p-block molecular entity
+relationship: BFO:0000051 CHEBI:24473 ! halogen
+
+[Term]
+id: CHEBI:24473
+name: halogen
+synonym: "group 17 elements" RELATED [ChEBI]
+synonym: "group VII elements" RELATED [ChEBI]
+synonym: "halogen" EXACT IUPAC_NAME [IUPAC]
+synonym: "Halogene" RELATED [ChEBI]
+synonym: "halogene" RELATED [ChEBI]
+synonym: "halogenes" RELATED [ChEBI]
+synonym: "halogeno" RELATED [ChEBI]
+synonym: "halogenos" RELATED [ChEBI]
+synonym: "halogens" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:25585 ! nonmetal atom
+is_a: CHEBI:33560 ! p-block element atom
+
+[Term]
+id: CHEBI:24527
+name: herbicide
+def: "A substance used to destroy plant pests." []
+synonym: "herbicides" RELATED [ChEBI]
+synonym: "Herbizid" RELATED [ChEBI]
+synonym: "Unkrautbekaempfungsmittel" RELATED [ChEBI]
+synonym: "Unkrautvertilgungsmittel" RELATED [ChEBI]
+synonym: "Wildkrautbekaempfungsmittel" RELATED [ChEBI]
+is_a: CHEBI:25944 ! pesticide
+
+[Term]
+id: CHEBI:24532
+name: organic heterocyclic compound
+def: "A cyclic compound having as ring members atoms of carbon and at least of one other element." []
+synonym: "organic heterocycle" RELATED [ChEBI]
+synonym: "organic heterocyclic compounds" RELATED [ChEBI]
+is_a: CHEBI:33285 ! heteroorganic entity
+is_a: CHEBI:33832 ! organic cyclic compound
+is_a: CHEBI:5686 ! heterocyclic compound
+
+[Term]
+id: CHEBI:24621
+name: hormone
+def: "Originally referring to an endogenous compound that is formed in specialized organ or group of cells and carried to another organ or group of cells, in the same organism, upon which it has a specific regulatory function, the term is now commonly used to include non-endogenous, semi-synthetic and fully synthetic analogues of such compounds." []
+synonym: "endocrine" RELATED [ChEBI]
+synonym: "hormones" RELATED [ChEBI]
+is_a: CHEBI:33280 ! molecular messenger
+is_a: CHEBI:48705 ! agonist
+
+[Term]
+id: CHEBI:24632
+name: hydrocarbon
+def: "A compound consisting of carbon and hydrogen only." []
+synonym: "hidrocarburo" RELATED [IUPAC]
+synonym: "hidrocarburos" RELATED [IUPAC]
+synonym: "hydrocarbon" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydrocarbons" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydrocarbure" RELATED [IUPAC]
+synonym: "Kohlenwasserstoff" RELATED [ChEBI]
+synonym: "Kohlenwasserstoffe" RELATED [ChEBI]
+is_a: CHEBI:33245 ! organic fundamental parent
+
+[Term]
+id: CHEBI:24651
+name: hydroxides
+def: "Hydroxides are chemical compounds containing a hydroxy group or salts containing hydroxide (OH(-))." []
+is_a: CHEBI:25806 ! oxygen molecular entity
+is_a: CHEBI:33608 ! hydrogen molecular entity
+is_a: CHEBI:37577 ! heteroatomic molecular entity
+relationship: BFO:0000051 CHEBI:43176 ! hydroxy group
+
+[Term]
+id: CHEBI:24669
+name: hydroxy carboxylic acid
+def: "Any carboxylic acid with at least one hydroxy group." []
+synonym: "hydroxy carboxylic acids" RELATED [ChEBI]
+synonym: "hydroxycarboxylic acid" RELATED [ChEBI]
+synonym: "hydroxycarboxylic acids" RELATED [ChEBI]
+is_a: CHEBI:33575 ! carboxylic acid
+is_a: CHEBI:33822 ! organic hydroxy compound
+
+[Term]
+id: CHEBI:24780
+name: imidazoles
+def: "A five-membered organic heterocycle containing two nitrogen atoms at positions 1 and 3, or any of its derivatives; compounds containing an imidazole skeleton." []
+is_a: CHEBI:23677 ! diazole
+
+[Term]
+id: CHEBI:24781
+name: imidazolinone
+synonym: "imidazolinone" EXACT [ChEBI]
+is_a: CHEBI:20432 ! imidazolone
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
+
+[Term]
+id: CHEBI:24833
+name: oxoacid
+def: "A compound which contains oxygen, at least one other element, and at least one hydrogen bound to oxygen, and which produces a conjugate base by loss of positive hydrogen ion(s) (hydrons)." []
+synonym: "oxacids" RELATED [ChEBI]
+synonym: "oxiacids" RELATED [ChEBI]
+synonym: "oxo acid" RELATED [ChEBI]
+synonym: "oxoacid" EXACT IUPAC_NAME [IUPAC]
+synonym: "oxoacids" EXACT IUPAC_NAME [IUPAC]
+synonym: "oxy-acids" RELATED [ChEBI]
+synonym: "oxyacids" RELATED [ChEBI]
+is_a: CHEBI:24651 ! hydroxides
+relationship: RO:0000087 CHEBI:39141 ! Bronsted acid
+
+[Term]
+id: CHEBI:24834
+name: inorganic anion
+synonym: "inorganic anions" RELATED [ChEBI]
+is_a: CHEBI:22563 ! anion
+is_a: CHEBI:36914 ! inorganic ion
+
+[Term]
+id: CHEBI:24835
+name: inorganic molecular entity
+def: "A molecular entity that contains no carbon." []
+synonym: "anorganische Verbindungen" RELATED [ChEBI]
+synonym: "inorganic compounds" RELATED [ChEBI]
+synonym: "inorganic entity" RELATED [ChEBI]
+synonym: "inorganic molecular entities" RELATED [ChEBI]
+synonym: "inorganics" RELATED [ChEBI]
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:24852
+name: insecticide
+def: "Strictly, a substance intended to kill members of the class Insecta.  In common usage, any substance used for preventing, destroying, repelling or controlling insects." []
+synonym: "insecticides" RELATED [ChEBI]
+is_a: CHEBI:25944 ! pesticide
+
+[Term]
+id: CHEBI:24866
+name: salt
+def: "A salt is an assembly of cations and anions." []
+synonym: "ionic compound" RELATED [ChEBI]
+synonym: "ionic compounds" RELATED [ChEBI]
+synonym: "sal" RELATED [ChEBI]
+synonym: "sales" RELATED [ChEBI]
+synonym: "salt" EXACT IUPAC_NAME [IUPAC]
+synonym: "salts" RELATED [ChEBI]
+synonym: "Salz" RELATED [ChEBI]
+synonym: "Salze" RELATED [ChEBI]
+synonym: "sel" RELATED [ChEBI]
+synonym: "sels" RELATED [ChEBI]
+is_a: CHEBI:37577 ! heteroatomic molecular entity
+relationship: BFO:0000051 CHEBI:22563 ! anion
+relationship: BFO:0000051 CHEBI:36916 ! cation
+
+[Term]
+id: CHEBI:24870
+name: ion
+def: "A molecular entity having a net electric charge." []
+synonym: "Ion" EXACT [ChEBI]
+synonym: "ion" EXACT [ChEBI]
+synonym: "ion" EXACT IUPAC_NAME [IUPAC]
+synonym: "Ionen" RELATED [ChEBI]
+synonym: "iones" RELATED [ChEBI]
+synonym: "ions" RELATED [ChEBI]
+is_a: CHEBI:23367 ! molecular entity
+
+[Term]
+id: CHEBI:24913
+name: isoprenoid
+def: "Any lipid formally derived from isoprene (2-methylbuta-1,3-diene), the skeleton of which can generally be discerned in repeated occurrence in the molecule. The skeleton of isoprenoids may differ from strict additivity of isoprene units by loss or shift of a fragment, commonly a methyl group. The class includes both hydrocarbons and oxygenated derivatives." []
+synonym: "isoprenoid" EXACT [ChEBI]
+synonym: "isoprenoids" EXACT IUPAC_NAME [IUPAC]
+synonym: "isoprenoids" RELATED [ChEBI]
+is_a: CHEBI:18059 ! lipid
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:24937
+name: jasmonates
+def: "The jasmonates (JAs) are a group of plant hormones which help regulate plant growth and development." []
+is_a: CHEBI:37848 ! plant hormone
+
+[Term]
+id: CHEBI:25212
+name: metabolite
+def: "Any intermediate or product resulting from metabolism. The term 'metabolite' subsumes the classes commonly known as primary and secondary metabolites." []
+synonym: "metabolite" EXACT IUPAC_NAME [IUPAC]
+synonym: "metabolites" RELATED [ChEBI]
+synonym: "primary metabolites" RELATED [ChEBI]
+synonym: "secondary metabolites" RELATED [ChEBI]
+is_a: CHEBI:52206 ! biochemical role
+
+[Term]
+id: CHEBI:25367
+name: molecule
+def: "Any polyatomic entity that is an electrically neutral entity consisting of more than one atom." []
+synonym: "molecula" RELATED [IUPAC]
+synonym: "molecule" EXACT [IUPAC]
+synonym: "molecules" RELATED [IUPAC]
+synonym: "Molekuel" RELATED [ChEBI]
+synonym: "neutral molecular compounds" RELATED [IUPAC]
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:25384
+name: monocarboxylic acid
+def: "An oxoacid containing a single carboxy group." []
+synonym: "monocarboxylic acid" EXACT [UniProt]
+synonym: "monocarboxylic acids" RELATED [ChEBI]
+is_a: CHEBI:33575 ! carboxylic acid
+relationship: is_conjugate_acid_of CHEBI:35757 ! monocarboxylic acid anion
+
+[Term]
+id: CHEBI:25555
+name: nitrogen atom
+synonym: "7N" RELATED [IUPAC]
+synonym: "azote" RELATED [IUPAC]
+synonym: "N" RELATED [IUPAC]
+synonym: "nitrogen" EXACT IUPAC_NAME [IUPAC]
+synonym: "nitrogen" RELATED [ChEBI]
+synonym: "nitrogeno" RELATED [ChEBI]
+synonym: "Stickstoff" RELATED [ChEBI]
+is_a: CHEBI:25585 ! nonmetal atom
+is_a: CHEBI:33300 ! pnictogen
+relationship: RO:0000087 CHEBI:33937 ! macronutrient
+
+[Term]
+id: CHEBI:25585
+name: nonmetal atom
+synonym: "Nichtmetall" RELATED [ChEBI]
+synonym: "Nichtmetalle" RELATED [ChEBI]
+synonym: "no metal" RELATED [ChEBI]
+synonym: "no metales" RELATED [ChEBI]
+synonym: "non-metal" RELATED [ChEBI]
+synonym: "non-metaux" RELATED [ChEBI]
+synonym: "nonmetal" EXACT IUPAC_NAME [IUPAC]
+synonym: "nonmetal" RELATED [ChEBI]
+synonym: "nonmetals" RELATED [ChEBI]
+is_a: CHEBI:33250 ! atom
+
+[Term]
+id: CHEBI:25696
+name: organic anion
+def: "Any organic ion with a net negative charge." []
+synonym: "organic anions" RELATED [ChEBI]
+is_a: CHEBI:22563 ! anion
+is_a: CHEBI:25699 ! organic ion
+
+[Term]
+id: CHEBI:25698
+name: ether
+def: "An organooxygen compound with formula ROR, where R is not hydrogen." []
+synonym: "ether" EXACT IUPAC_NAME [IUPAC]
+synonym: "ethers" EXACT IUPAC_NAME [IUPAC]
+synonym: "ethers" RELATED [ChEBI]
+is_a: CHEBI:36963 ! organooxygen compound
+
+[Term]
+id: CHEBI:25699
+name: organic ion
+synonym: "organic ions" RELATED [ChEBI]
+is_a: CHEBI:24870 ! ion
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:25741
+name: oxide
+def: "An oxide is a chemical compound of oxygen with other chemical elements." []
+synonym: "oxide" EXACT [ChEBI]
+synonym: "oxides" RELATED [ChEBI]
+is_a: CHEBI:25806 ! oxygen molecular entity
+is_a: CHEBI:37577 ! heteroatomic molecular entity
+
+[Term]
+id: CHEBI:25754
+name: oxo carboxylic acid
+def: "Any compound that has an aldehydic or ketonic group as well as a carboxylic acid group in the same molecule." []
+synonym: "oxo acids" RELATED [IUPAC]
+synonym: "oxo carboxylic acids" EXACT IUPAC_NAME [IUPAC]
+synonym: "oxo carboxylic acids" RELATED [ChEBI]
+is_a: CHEBI:33575 ! carboxylic acid
+
+[Term]
+id: CHEBI:25805
+name: oxygen atom
+synonym: "8O" RELATED [IUPAC]
+synonym: "O" RELATED [IUPAC]
+synonym: "oxigeno" RELATED [ChEBI]
+synonym: "oxygen" EXACT IUPAC_NAME [IUPAC]
+synonym: "oxygen" RELATED [ChEBI]
+synonym: "oxygene" RELATED [ChEBI]
+synonym: "Sauerstoff" RELATED [ChEBI]
+is_a: CHEBI:25585 ! nonmetal atom
+is_a: CHEBI:33303 ! chalcogen
+relationship: RO:0000087 CHEBI:33937 ! macronutrient
+
+[Term]
+id: CHEBI:25806
+name: oxygen molecular entity
+synonym: "oxygen molecular entities" RELATED [ChEBI]
+synonym: "oxygen molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33304 ! chalcogen molecular entity
+relationship: BFO:0000051 CHEBI:25805 ! oxygen atom
+
+[Term]
+id: CHEBI:25944
+name: pesticide
+def: "Strictly, a substance intended to kill pests. In common usage, any substance used for controlling, preventing, or destroying animal, microbiological or plant pests." []
+synonym: "pesticide" EXACT IUPAC_NAME [IUPAC]
+synonym: "pesticides" RELATED [ChEBI]
+synonym: "Pestizid" RELATED [ChEBI]
+synonym: "Pestizide" RELATED [ChEBI]
+is_a: CHEBI:33232 ! application
+
+[Term]
+id: CHEBI:26124
+name: phytosteroid
+synonym: "phytosteroids" RELATED [ChEBI]
+is_a: CHEBI:35350 ! hydroxy steroid
+
+[Term]
+id: CHEBI:26155
+name: plant growth regulator
+def: "A chemical, natural or artificial, that can affect the rate of growth of a plant." []
+synonym: "plant growth regulators" RELATED [ChEBI]
+is_a: CHEBI:39317 ! growth regulator
+
+[Term]
+id: CHEBI:26658
+name: sesquiterpenoid
+def: "Any terpenoid derived from a sesquiterpene. The term includes compounds in which the C15 skeleton of the parent sesquiterpene has been rearranged or modified by the removal of one or more skeletal atoms (generally methyl groups)." []
+synonym: "sesquiterpenoides" RELATED [ChEBI]
+synonym: "sesquiterpenoids" RELATED [ChEBI]
+is_a: CHEBI:26873 ! terpenoid
+relationship: has_parent_hydride CHEBI:35189 ! sesquiterpene
+
+[Term]
+id: CHEBI:26841
+name: synthetic auxin
+def: "A synthetic compound exhibiting auxin activity." []
+synonym: "synthetic auxins" RELATED [ChEBI]
+is_a: CHEBI:22676 ! auxin
+is_a: CHEBI:35703 ! xenobiotic
+
+[Term]
+id: CHEBI:26873
+name: terpenoid
+def: "Any isoprenoid that is a natural product or related compound formally derived from isoprene units. Terpenoids may contain oxygen in various functional groups. This class is subdivided according to the number of carbon atoms in the parent terpene. The skeleton of terpenoids may differ from strict additivity of isoprene units by the loss or shift of a fragment, generally a methyl group." []
+synonym: "Terpenoid" EXACT [ChEBI]
+synonym: "terpenoide" RELATED [IUPAC]
+synonym: "terpenoides" RELATED [IUPAC]
+synonym: "terpenoids" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:24913 ! isoprenoid
+relationship: has_parent_hydride CHEBI:35186 ! terpene
+
+[Term]
+id: CHEBI:26878
+name: tertiary alcohol
+def: "A tertiary alcohol is a compound in which a hydroxy group, -OH, is attached to a saturated carbon atom which has three other carbon atoms attached to it." []
+synonym: "tertiary alcohol" EXACT [ChEBI]
+synonym: "tertiary alcohols" RELATED [ChEBI]
+is_a: CHEBI:30879 ! alcohol
+
+[Term]
+id: CHEBI:27027
+name: micronutrient
+def: "Any nutrient required in small quantities by organisms throughout their life in order to orchestrate a range of physiological functions." []
+synonym: "micronutrients" RELATED [ChEBI]
+synonym: "trace elements" RELATED [ChEBI]
+is_a: CHEBI:33284 ! nutrient
+
+[Term]
+id: CHEBI:27594
+name: carbon atom
+synonym: "6C" RELATED [IUPAC]
+synonym: "C" RELATED [IUPAC]
+synonym: "C" RELATED [KEGG_COMPOUND]
+synonym: "Carbon" RELATED [KEGG_COMPOUND]
+synonym: "carbon" EXACT IUPAC_NAME [IUPAC]
+synonym: "carbon" RELATED [ChEBI]
+synonym: "carbone" RELATED [ChEBI]
+synonym: "carbonium" RELATED [ChEBI]
+synonym: "carbono" RELATED [ChEBI]
+synonym: "Kohlenstoff" RELATED [ChEBI]
+is_a: CHEBI:25585 ! nonmetal atom
+is_a: CHEBI:33306 ! carbon group element atom
+relationship: RO:0000087 CHEBI:33937 ! macronutrient
+
+[Term]
+id: CHEBI:28854
+name: 2,4-D
+def: "A chlorophenoxyacetic acid that is phenoxyacetic acid in which the ring hydrogens at postions 2 and 4 are substituted by chlorines." []
+synonym: "(2,4-dichlorophenoxy)acetic acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "(2,4-Dichlorphenoxy)essigsaeure" RELATED [ChEBI]
+synonym: "2,4-D" EXACT [KEGG_COMPOUND]
+synonym: "2,4-D acid" RELATED [ChemIDplus]
+synonym: "2,4-Dichlorophenoxyacetate" RELATED [KEGG_COMPOUND]
+synonym: "2,4-Dichlorophenoxyacetic acid" RELATED [KEGG_COMPOUND]
+synonym: "2,4-Dichlorphenoxyessigsaeure" RELATED [ChEBI]
+synonym: "acide 2,4-dichloro phenoxyacetique" RELATED [ChemIDplus]
+synonym: "Hedonal" RELATED [NIST_Chemistry_WebBook]
+synonym: "Trinoxol" RELATED [NIST_Chemistry_WebBook]
+is_a: CHEBI:23152 ! chlorophenoxyacetic acid
+is_a: CHEBI:23697 ! dichlorobenzene
+relationship: is_conjugate_acid_of CHEBI:19351 ! (2,4-dichlorophenoxy)acetate
+relationship: RO:0000087 CHEBI:23582 ! defoliant
+relationship: RO:0000087 CHEBI:26841 ! synthetic auxin
+relationship: RO:0000087 CHEBI:33286 ! agrochemical
+relationship: RO:0000087 CHEBI:77484 ! EC 1.1.1.25 (shikimate dehydrogenase) inhibitor
+relationship: RO:0000087 CHEBI:78298 ! environmental contaminant
+
+[Term]
+id: CHEBI:29067
+name: carboxylic acid anion
+def: "The conjugate base formed when the carboxy group of a carboxylic acid is deprotonated." []
+synonym: "a carboxylate" RELATED [UniProt]
+synonym: "carboxylic acid anions" RELATED [ChEBI]
+synonym: "carboxylic anions" RELATED [ChEBI]
+is_a: CHEBI:25696 ! organic anion
+is_a: CHEBI:35406 ! oxoanion
+relationship: is_conjugate_base_of CHEBI:33575 ! carboxylic acid
+
+[Term]
+id: CHEBI:29362
+name: ethylene group
+synonym: "-CH2-CH2-" RELATED [IUPAC]
+synonym: "ethane-1,2-diyl" EXACT IUPAC_NAME [IUPAC]
+synonym: "ethano" RELATED [IUPAC]
+synonym: "ethylene" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33471 ! hydrocarbylene group
+relationship: is_substituent_group_from CHEBI:42266 ! ethane
+
+[Term]
+id: CHEBI:29412
+name: oxonium
+synonym: "[OH3](+)" RELATED [MolBase]
+synonym: "aquahydrogen(1+)" EXACT IUPAC_NAME [IUPAC]
+synonym: "H3O(+)" RELATED [IUPAC]
+synonym: "Hydronium cation" RELATED [NIST_Chemistry_WebBook]
+synonym: "Hydronium ion" RELATED [ChemIDplus]
+synonym: "oxidanium" EXACT IUPAC_NAME [IUPAC]
+synonym: "oxonium" EXACT IUPAC_NAME [IUPAC]
+synonym: "trihydridooxygen(1+)" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33693 ! oxygen hydride
+is_a: CHEBI:50313 ! onium cation
+relationship: is_conjugate_acid_of CHEBI:15377 ! water
+
+[Term]
+id: CHEBI:29805
+name: glycolate
+def: "A hydroxy monocarboxylic acid anion that is acetate where the methyl group has been hydroxylated." []
+synonym: "glycolate" EXACT [UniProt]
+synonym: "hydroxyacetate" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:36059 ! hydroxy monocarboxylic acid anion
+relationship: has_functional_parent CHEBI:30089 ! acetate
+relationship: is_conjugate_base_of CHEBI:17497 ! glycolic acid
+relationship: RO:0000087 CHEBI:77746 ! human metabolite
+relationship: RO:0000087 CHEBI:84735 ! algal metabolite
+
+[Term]
+id: CHEBI:30089
+name: acetate
+def: "A monocarboxylic acid anion resulting from the removal of a proton from the carboxy group of acetic acid." []
+synonym: "acetate" EXACT IUPAC_NAME [IUPAC]
+synonym: "acetate" EXACT [UniProt]
+synonym: "ACETATE ION" RELATED [PDBeChem]
+synonym: "acetic acid, ion(1-)" RELATED [ChemIDplus]
+synonym: "Azetat" RELATED [ChEBI]
+synonym: "CH3-COO(-)" RELATED [IUPAC]
+synonym: "Ethanoat" RELATED [ChEBI]
+synonym: "ethanoate" RELATED [ChEBI]
+synonym: "MeCO2 anion" RELATED [NIST_Chemistry_WebBook]
+is_a: CHEBI:35757 ! monocarboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:15366 ! acetic acid
+relationship: RO:0000087 CHEBI:75772 ! Saccharomyces cerevisiae metabolite
+relationship: RO:0000087 CHEBI:77746 ! human metabolite
+
+[Term]
+id: CHEBI:30212
+name: photon
+def: "Particle of zero charge, zero rest mass, spin quantum number 1, energy hnu and momentum hnu/c (h is the Planck constant, nu the frequency of radiation and c the speed of light), carrier of electromagnetic force." []
+synonym: "foton" RELATED [ChEBI]
+synonym: "gamma" RELATED [IUPAC]
+synonym: "hnu" RELATED [UniProt]
+synonym: "hnu" RELATED [IUPAC]
+synonym: "Lichtquant" RELATED [ChEBI]
+synonym: "Light" RELATED [KEGG_COMPOUND]
+synonym: "light quantum" RELATED [ChEBI]
+synonym: "photon" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:36341 ! boson
+
+[Term]
+id: CHEBI:30879
+name: alcohol
+def: "A compound in which a hydroxy group, -OH, is attached to a saturated carbon atom." []
+synonym: "Alcohol" EXACT [KEGG_COMPOUND]
+synonym: "alcohols" EXACT IUPAC_NAME [IUPAC]
+synonym: "an alcohol" RELATED [UniProt]
+is_a: CHEBI:33822 ! organic hydroxy compound
+
+[Term]
+id: CHEBI:33232
+name: application
+def: "Intended use of the molecular entity or part thereof by humans." []
+is_a: CHEBI:50906 ! role
+
+[Term]
+id: CHEBI:33233
+name: fundamental particle
+def: "A particle not known to have substructure." []
+synonym: "elementary particle" EXACT IUPAC_NAME [IUPAC]
+synonym: "elementary particles" RELATED [ChEBI]
+is_a: CHEBI:36342 ! subatomic particle
+
+[Term]
+id: CHEBI:33242
+name: inorganic hydride
+synonym: "inorganic hydrides" RELATED [ChEBI]
+is_a: CHEBI:24835 ! inorganic molecular entity
+is_a: CHEBI:33692 ! hydrides
+
+[Term]
+id: CHEBI:33245
+name: organic fundamental parent
+def: "An organic fundamental parent is a structure used as a basis for substitutive names in organic nomenclature, containing, in addition to one or more hydrogen atoms, a single atom of an element, a number of atoms (alike or different) linked together to form an unbranched chain, a monocyclic or polycyclic ring system, or a ring assembly or ring/chain system." []
+synonym: "organic fundamental parents" RELATED [ChEBI]
+synonym: "organic parent hydrides" RELATED [ChEBI]
+is_a: CHEBI:37175 ! organic hydride
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:33246
+name: inorganic group
+def: "Any substituent group which does not contain carbon." []
+synonym: "inorganic groups" RELATED [ChEBI]
+is_a: CHEBI:24433 ! group
+
+[Term]
+id: CHEBI:33247
+name: organic group
+def: "Any substituent group or skeleton containing carbon." []
+synonym: "organic groups" RELATED [ChEBI]
+is_a: CHEBI:24433 ! group
+relationship: is_substituent_group_from CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:33249
+name: organyl group
+def: "Any organic substituent group, regardless of functional type, having one free valence at a carbon atom." []
+synonym: "groupe organyle" RELATED [IUPAC]
+synonym: "grupo organilo" RELATED [IUPAC]
+synonym: "grupos organilo" RELATED [IUPAC]
+synonym: "organyl group" EXACT IUPAC_NAME [IUPAC]
+synonym: "organyl groups" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:51447 ! organic univalent group
+
+[Term]
+id: CHEBI:33250
+name: atom
+def: "A chemical entity constituting the smallest component of an element having the chemical properties of the element." []
+synonym: "atom" EXACT IUPAC_NAME [IUPAC]
+synonym: "atome" RELATED [IUPAC]
+synonym: "atomo" RELATED [IUPAC]
+synonym: "atoms" RELATED [ChEBI]
+synonym: "atomus" RELATED [ChEBI]
+synonym: "element" RELATED [ChEBI]
+synonym: "elements" RELATED [ChEBI]
+is_a: CHEBI:24431 ! chemical entity
+relationship: BFO:0000051 CHEBI:10545 ! electron
+relationship: BFO:0000051 CHEBI:33252 ! atomic nucleus
+
+[Term]
+id: CHEBI:33252
+name: atomic nucleus
+def: "A nucleus is the positively charged central portion of an atom, excluding the orbital electrons." []
+synonym: "Atomkern" RELATED [ChEBI]
+synonym: "Kern" RELATED [ChEBI]
+synonym: "noyau" RELATED [IUPAC]
+synonym: "noyau atomique" RELATED [ChEBI]
+synonym: "nuclei" RELATED [ChEBI]
+synonym: "nucleo" RELATED [IUPAC]
+synonym: "nucleo atomico" RELATED [ChEBI]
+synonym: "nucleus" EXACT IUPAC_NAME [IUPAC]
+synonym: "nucleus atomi" RELATED [ChEBI]
+is_a: CHEBI:36347 ! nuclear particle
+relationship: BFO:0000051 CHEBI:33253 ! nucleon
+
+[Term]
+id: CHEBI:33253
+name: nucleon
+def: "Heavy nuclear particle: proton or neutron." []
+synonym: "nucleon" EXACT IUPAC_NAME [IUPAC]
+synonym: "nucleon" EXACT [IUPAC]
+synonym: "nucleons" RELATED [ChEBI]
+synonym: "Nukleon" RELATED [ChEBI]
+synonym: "Nukleonen" RELATED [ChEBI]
+is_a: CHEBI:36339 ! baryon
+is_a: CHEBI:36347 ! nuclear particle
+
+[Term]
+id: CHEBI:33273
+name: polyatomic anion
+def: "An anion consisting of more than one atom." []
+synonym: "polyatomic anions" RELATED [ChEBI]
+is_a: CHEBI:22563 ! anion
+is_a: CHEBI:36358 ! polyatomic ion
+
+[Term]
+id: CHEBI:33280
+name: molecular messenger
+synonym: "chemical messenger" RELATED [ChEBI]
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:33281
+name: antimicrobial agent
+def: "A substance that kills or slows the growth of microorganisms, including bacteria, viruses, fungi and protozoans." []
+synonym: "antibiotic" RELATED [ChEBI]
+synonym: "antibiotics" RELATED [ChEBI]
+synonym: "Antibiotika" RELATED [ChEBI]
+synonym: "Antibiotikum" RELATED [ChEBI]
+synonym: "antibiotique" RELATED [IUPAC]
+synonym: "antimicrobial" RELATED [ChEBI]
+synonym: "antimicrobial agents" RELATED [ChEBI]
+synonym: "antimicrobials" RELATED [ChEBI]
+synonym: "microbicide" RELATED [ChEBI]
+synonym: "microbicides" RELATED [ChEBI]
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:33284
+name: nutrient
+def: "A nutrient is a food component that an organism uses to survive and grow." []
+synonym: "nutrients" RELATED [ChEBI]
+is_a: CHEBI:78295 ! food component
+
+[Term]
+id: CHEBI:33285
+name: heteroorganic entity
+def: "A heteroorganic entity is an organic molecular entity in which carbon atoms or organic groups are bonded directly to one or more heteroatoms." []
+synonym: "heteroorganic entities" RELATED [ChEBI]
+synonym: "organoelement compounds" RELATED [ChEBI]
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:33286
+name: agrochemical
+def: "An agrochemical is a substance that is used in agriculture or horticulture." []
+synonym: "agrichemical" RELATED [ChEBI]
+synonym: "agrichemicals" RELATED [ChEBI]
+synonym: "agricultural chemicals" RELATED [ChEBI]
+synonym: "agrochemicals" RELATED [ChEBI]
+is_a: CHEBI:33232 ! application
+
+[Term]
+id: CHEBI:33287
+name: fertilizer
+def: "A fertilizer is any substance that is added to soil or water to assist the growth of plants." []
+synonym: "fertiliser" RELATED [ChEBI]
+synonym: "fertilizers" RELATED [ChEBI]
+is_a: CHEBI:33286 ! agrochemical
+
+[Term]
+id: CHEBI:33300
+name: pnictogen
+def: "Any p-block element atom that is in group 15 of the periodic table: nitrogen, phosphorus, arsenic, antimony and bismuth." []
+synonym: "group 15 elements" RELATED [ChEBI]
+synonym: "group V elements" RELATED [ChEBI]
+synonym: "nitrogenoideos" RELATED [ChEBI]
+synonym: "nitrogenoides" RELATED [ChEBI]
+synonym: "pnictogene" RELATED [ChEBI]
+synonym: "pnictogenes" RELATED [ChEBI]
+synonym: "pnictogens" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33560 ! p-block element atom
+
+[Term]
+id: CHEBI:33302
+name: pnictogen molecular entity
+def: "A p-block molecular entity containing any pnictogen." []
+synonym: "pnictogen molecular entities" RELATED [ChEBI]
+synonym: "pnictogen molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33675 ! p-block molecular entity
+relationship: BFO:0000051 CHEBI:33300 ! pnictogen
+
+[Term]
+id: CHEBI:33303
+name: chalcogen
+def: "Any p-block element belonging to the group 16 family of the periodic table." []
+synonym: "anfigeno" RELATED [ChEBI]
+synonym: "anfigenos" RELATED [ChEBI]
+synonym: "calcogeno" RELATED [ChEBI]
+synonym: "calcogenos" RELATED [ChEBI]
+synonym: "chalcogen" EXACT IUPAC_NAME [IUPAC]
+synonym: "chalcogene" RELATED [ChEBI]
+synonym: "chalcogenes" RELATED [ChEBI]
+synonym: "chalcogens" EXACT IUPAC_NAME [IUPAC]
+synonym: "Chalkogen" RELATED [ChEBI]
+synonym: "Chalkogene" RELATED [ChEBI]
+synonym: "group 16 elements" RELATED [ChEBI]
+synonym: "group VI elements" RELATED [ChEBI]
+is_a: CHEBI:33560 ! p-block element atom
+
+[Term]
+id: CHEBI:33304
+name: chalcogen molecular entity
+def: "Any p-block molecular entity containing a chalcogen." []
+synonym: "chalcogen compounds" RELATED [ChEBI]
+synonym: "chalcogen molecular entities" RELATED [ChEBI]
+synonym: "chalcogen molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33675 ! p-block molecular entity
+relationship: BFO:0000051 CHEBI:33303 ! chalcogen
+
+[Term]
+id: CHEBI:33306
+name: carbon group element atom
+synonym: "carbon group element" RELATED [ChEBI]
+synonym: "carbon group elements" RELATED [ChEBI]
+synonym: "carbonoides" RELATED [ChEBI]
+synonym: "cristallogene" RELATED [ChEBI]
+synonym: "cristallogenes" RELATED [ChEBI]
+synonym: "group 14 elements" EXACT IUPAC_NAME [IUPAC]
+synonym: "group IV elements" RELATED [ChEBI]
+is_a: CHEBI:33560 ! p-block element atom
+
+[Term]
+id: CHEBI:33318
+name: main group element atom
+def: "An atom belonging to one of the main groups (found in the s- and p- blocks) of the periodic table." []
+synonym: "Hauptgruppenelement" RELATED [ChEBI]
+synonym: "Hauptgruppenelemente" RELATED [ChEBI]
+synonym: "main group element" RELATED [ChEBI]
+synonym: "main group elements" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33250 ! atom
+
+[Term]
+id: CHEBI:33408
+name: pnictogen oxoacid
+synonym: "pnictogen oxoacids" RELATED [ChEBI]
+is_a: CHEBI:24833 ! oxoacid
+is_a: CHEBI:33302 ! pnictogen molecular entity
+relationship: RO:0000087 CHEBI:138103 ! inorganic acid
+
+[Term]
+id: CHEBI:33455
+name: nitrogen oxoacid
+synonym: "nitrogen oxoacids" RELATED [ChEBI]
+synonym: "oxoacids of nitrogen" RELATED [ChEBI]
+is_a: CHEBI:33408 ! pnictogen oxoacid
+is_a: CHEBI:51143 ! nitrogen molecular entity
+
+[Term]
+id: CHEBI:33458
+name: nitrogen oxoanion
+synonym: "nitrogen oxoanion" EXACT [ChEBI]
+synonym: "nitrogen oxoanions" RELATED [ChEBI]
+synonym: "oxoanions of nitrogen" RELATED [ChEBI]
+is_a: CHEBI:33459 ! pnictogen oxoanion
+is_a: CHEBI:51143 ! nitrogen molecular entity
+
+[Term]
+id: CHEBI:33459
+name: pnictogen oxoanion
+synonym: "pnictogen oxoanion" EXACT [ChEBI]
+synonym: "pnictogen oxoanions" RELATED [ChEBI]
+is_a: CHEBI:33302 ! pnictogen molecular entity
+is_a: CHEBI:35406 ! oxoanion
+
+[Term]
+id: CHEBI:33471
+name: hydrocarbylene group
+def: "A bivalent group formed by removing two hydrogen atoms from a hydrocarbon, the free valencies of which are not engaged in a double bond." []
+synonym: "groupe hydrocarbylene" RELATED [IUPAC]
+synonym: "grupo hidrocarbileno" RELATED [IUPAC]
+synonym: "grupos hidrocarbileno" RELATED [IUPAC]
+synonym: "hydrocarbylene group" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydrocarbylene groups" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:51422 ! organodiyl group
+relationship: is_substituent_group_from CHEBI:24632 ! hydrocarbon
+
+[Term]
+id: CHEBI:33559
+name: s-block element atom
+synonym: "s-block element" RELATED [ChEBI]
+synonym: "s-block elements" RELATED [ChEBI]
+is_a: CHEBI:33250 ! atom
+
+[Term]
+id: CHEBI:33560
+name: p-block element atom
+def: "Any main group element atom belonging to the p-block of the periodic table." []
+synonym: "p-block element" RELATED [ChEBI]
+synonym: "p-block elements" RELATED [ChEBI]
+is_a: CHEBI:33318 ! main group element atom
+
+[Term]
+id: CHEBI:33575
+name: carboxylic acid
+def: "A carbon oxoacid acid carrying at least one -C(=O)OH group and having the structure RC(=O)OH, where R is any any monovalent functional group. Carboxylic acids are the most common type of organic acid." []
+synonym: "acide carboxylique" RELATED [IUPAC]
+synonym: "acides carboxyliques" RELATED [IUPAC]
+synonym: "acido carboxilico" RELATED [IUPAC]
+synonym: "acidos carboxilicos" RELATED [IUPAC]
+synonym: "Carbonsaeure" RELATED [ChEBI]
+synonym: "Carbonsaeuren" RELATED [ChEBI]
+synonym: "carboxylic acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "carboxylic acids" EXACT IUPAC_NAME [IUPAC]
+synonym: "Karbonsaeure" RELATED [ChEBI]
+synonym: "RC(=O)OH" RELATED [IUPAC]
+is_a: CHEBI:35605 ! carbon oxoacid
+is_a: CHEBI:36586 ! carbonyl compound
+is_a: CHEBI:64709 ! organic acid
+relationship: BFO:0000051 CHEBI:46883 ! carboxy group
+relationship: is_conjugate_acid_of CHEBI:29067 ! carboxylic acid anion
+
+[Term]
+id: CHEBI:33579
+name: main group molecular entity
+def: "A molecular entity containing one or more atoms from any of groups 1, 2, 13, 14, 15, 16, 17, and 18 of the periodic table." []
+synonym: "main group compounds" RELATED [ChEBI]
+synonym: "main group molecular entities" RELATED [ChEBI]
+is_a: CHEBI:23367 ! molecular entity
+relationship: BFO:0000051 CHEBI:33318 ! main group element atom
+
+[Term]
+id: CHEBI:33582
+name: carbon group molecular entity
+synonym: "carbon group molecular entities" RELATED [ChEBI]
+synonym: "carbon group molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33675 ! p-block molecular entity
+relationship: BFO:0000051 CHEBI:33306 ! carbon group element atom
+
+[Term]
+id: CHEBI:33595
+name: cyclic compound
+def: "Any molecule that consists of a series of atoms joined together to form a ring." []
+synonym: "cyclic compounds" RELATED [ChEBI]
+is_a: CHEBI:25367 ! molecule
+
+[Term]
+id: CHEBI:33597
+name: homocyclic compound
+def: "A cyclic compound having as ring members atoms of the same element only." []
+synonym: "homocyclic compound" EXACT IUPAC_NAME [IUPAC]
+synonym: "homocyclic compounds" EXACT IUPAC_NAME [IUPAC]
+synonym: "isocyclic compounds" RELATED [IUPAC]
+is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
+id: CHEBI:33598
+name: carbocyclic compound
+def: "A homocyclic compound in which all of the ring members are carbon atoms." []
+synonym: "carbocycle" RELATED [ChEBI]
+synonym: "carbocyclic compound" EXACT IUPAC_NAME [IUPAC]
+synonym: "carbocyclic compounds" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33597 ! homocyclic compound
+is_a: CHEBI:33832 ! organic cyclic compound
+
+[Term]
+id: CHEBI:33608
+name: hydrogen molecular entity
+synonym: "hydrogen compounds" RELATED [ChEBI]
+synonym: "hydrogen molecular entities" RELATED [ChEBI]
+is_a: CHEBI:33674 ! s-block molecular entity
+relationship: BFO:0000051 CHEBI:49637 ! hydrogen atom
+
+[Term]
+id: CHEBI:33635
+name: polycyclic compound
+synonym: "polycyclic compounds" RELATED [ChEBI]
+is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
+id: CHEBI:33653
+name: aliphatic compound
+def: "Any acyclic or cyclic, saturated or unsaturated carbon compound, excluding aromatic compounds." []
+synonym: "aliphatic compounds" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:33654
+name: alicyclic compound
+def: "An aliphatic compound having a carbocyclic ring structure which may be saturated or unsaturated, but may not be a benzenoid or other aromatic system." []
+synonym: "alicyclic compounds" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33598 ! carbocyclic compound
+is_a: CHEBI:33653 ! aliphatic compound
+
+[Term]
+id: CHEBI:33655
+name: aromatic compound
+def: "A cyclically conjugated molecular entity with a stability (due to delocalization) significantly greater than that of a hypothetical localized structure (e.g. Kekule structure) is said to possess aromatic character." []
+synonym: "aromatic compounds" EXACT IUPAC_NAME [IUPAC]
+synonym: "aromatic molecular entity" EXACT IUPAC_NAME [IUPAC]
+synonym: "aromatics" RELATED [ChEBI]
+synonym: "aromatische Verbindungen" RELATED [ChEBI]
+is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
+id: CHEBI:33659
+name: organic aromatic compound
+synonym: "organic aromatic compounds" RELATED [ChEBI]
+is_a: CHEBI:33655 ! aromatic compound
+is_a: CHEBI:33832 ! organic cyclic compound
+
+[Term]
+id: CHEBI:33674
+name: s-block molecular entity
+def: "An s-block molecular entity is a molecular entity containing one or more atoms of an s-block element." []
+synonym: "s-block compounds" RELATED [ChEBI]
+synonym: "s-block molecular entities" RELATED [ChEBI]
+synonym: "s-block molecular entity" EXACT [ChEBI]
+is_a: CHEBI:33579 ! main group molecular entity
+relationship: BFO:0000051 CHEBI:33559 ! s-block element atom
+
+[Term]
+id: CHEBI:33675
+name: p-block molecular entity
+def: "A main group molecular entity that contains one or more atoms of a p-block element." []
+synonym: "p-block compounds" RELATED [ChEBI]
+synonym: "p-block molecular entities" RELATED [ChEBI]
+synonym: "p-block molecular entitiy" RELATED [ChEBI]
+is_a: CHEBI:33579 ! main group molecular entity
+relationship: BFO:0000051 CHEBI:33560 ! p-block element atom
+
+[Term]
+id: CHEBI:33692
+name: hydrides
+def: "Hydrides are chemical compounds of hydrogen with other chemical elements." []
+is_a: CHEBI:33608 ! hydrogen molecular entity
+is_a: CHEBI:37577 ! heteroatomic molecular entity
+
+[Term]
+id: CHEBI:33693
+name: oxygen hydride
+synonym: "hydrides of oxygen" RELATED [ChEBI]
+synonym: "oxygen hydride" EXACT [ChEBI]
+synonym: "oxygen hydrides" RELATED [ChEBI]
+is_a: CHEBI:36902 ! chalcogen hydride
+
+[Term]
+id: CHEBI:33822
+name: organic hydroxy compound
+def: "An organic compound having at least one hydroxy group attached to a carbon atom." []
+synonym: "hydroxy compounds" EXACT IUPAC_NAME [IUPAC]
+synonym: "organic alcohol" RELATED [ChEBI]
+synonym: "organic hydroxy compounds" RELATED [ChEBI]
+is_a: CHEBI:24651 ! hydroxides
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:33832
+name: organic cyclic compound
+def: "Any organic molecule that consists of atoms connected in the form of a ring." []
+synonym: "organic cyclic compounds" RELATED [ChEBI]
+is_a: CHEBI:33595 ! cyclic compound
+is_a: CHEBI:72695 ! organic molecule
+
+[Term]
+id: CHEBI:33833
+name: heteroarene
+def: "A heterocyclic compound formally derived from an arene by replacement of one or more methine (-C=) and/or vinylene (-CH=CH-) groups by trivalent or divalent heteroatoms, respectively, in such a way as to maintain the continuous pi-electron system characteristic of aromatic systems and a number of out-of-plane pi-electrons corresponding to the Hueckel rule (4n+2)." []
+synonym: "hetarenes" RELATED [IUPAC]
+synonym: "heteroarenes" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:24532 ! organic heterocyclic compound
+is_a: CHEBI:33659 ! organic aromatic compound
+
+[Term]
+id: CHEBI:33836
+name: benzenoid aromatic compound
+synonym: "benzenoid aromatic compounds" RELATED [ChEBI]
+synonym: "benzenoid compound" RELATED [ChEBI]
+is_a: CHEBI:33598 ! carbocyclic compound
+is_a: CHEBI:33659 ! organic aromatic compound
+
+[Term]
+id: CHEBI:33893
+name: reagent
+def: "A substance used in a chemical reaction to detect, measure, examine, or produce other substances." []
+synonym: "reactif" RELATED [IUPAC]
+synonym: "reactivo" RELATED [IUPAC]
+synonym: "reagent" EXACT IUPAC_NAME [IUPAC]
+synonym: "reagents" RELATED [ChEBI]
+is_a: CHEBI:33232 ! application
+
+[Term]
+id: CHEBI:33937
+name: macronutrient
+synonym: "macronutrients" RELATED [ChEBI]
+is_a: CHEBI:33284 ! nutrient
+
+[Term]
+id: CHEBI:35186
+name: terpene
+def: "A hydrocarbon of biological origin having carbon skeleton formally derived from isoprene [CH2=C(CH3)CH=CH2]." []
+synonym: "Terpen" RELATED [ChEBI]
+synonym: "terpene" EXACT [IUPAC]
+synonym: "terpenes" EXACT IUPAC_NAME [IUPAC]
+synonym: "terpenes" RELATED [IUPAC]
+synonym: "terpeno" RELATED [IUPAC]
+synonym: "terpenos" RELATED [IUPAC]
+is_a: CHEBI:24632 ! hydrocarbon
+is_a: CHEBI:24913 ! isoprenoid
+
+[Term]
+id: CHEBI:35189
+name: sesquiterpene
+def: "A C15 terpene." []
+synonym: "Sesquiterpen" RELATED [ChEBI]
+synonym: "sesquiterpenes" EXACT IUPAC_NAME [IUPAC]
+synonym: "sesquiterpenes" RELATED [IUPAC]
+synonym: "sesquiterpeno" RELATED [IUPAC]
+synonym: "sesquiterpenos" RELATED [IUPAC]
+is_a: CHEBI:35186 ! terpene
+
+[Term]
+id: CHEBI:35219
+name: plant growth retardant
+synonym: "plant growth inhibitor" RELATED [ChEBI]
+synonym: "plant growth inhibitors" RELATED [ChEBI]
+synonym: "plant growth retardants" RELATED [ChEBI]
+is_a: CHEBI:26155 ! plant growth regulator
+
+[Term]
+id: CHEBI:35222
+name: inhibitor
+def: "A substance that diminishes the rate of a chemical reaction." []
+synonym: "inhibidor" RELATED [ChEBI]
+synonym: "inhibiteur" RELATED [ChEBI]
+synonym: "inhibitor" EXACT IUPAC_NAME [IUPAC]
+synonym: "inhibitors" RELATED [ChEBI]
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:35341
+name: steroid
+def: "Any of naturally occurring compounds and synthetic analogues, based on the cyclopenta[a]phenanthrene carbon skeleton, partially or completely hydrogenated; there are usually methyl groups at C-10 and C-13, and often an alkyl group at C-17. By extension, one or more bond scissions, ring expansions and/or ring contractions of the skeleton may have occurred. Natural steroids are derived biogenetically from squalene, so may be considered as triterpenoids." []
+synonym: "a steroid" RELATED [UniProt]
+synonym: "Steroid" EXACT [KEGG_COMPOUND]
+synonym: "steroids" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:18059 ! lipid
+is_a: CHEBI:51958 ! organic polycyclic compound
+
+[Term]
+id: CHEBI:35350
+name: hydroxy steroid
+synonym: "hydroxy steroids" RELATED [ChEBI]
+synonym: "Hydroxysteroid" RELATED [KEGG_COMPOUND]
+synonym: "hydroxysteroids" RELATED [ChEBI]
+is_a: CHEBI:33822 ! organic hydroxy compound
+is_a: CHEBI:35341 ! steroid
+
+[Term]
+id: CHEBI:35352
+name: organonitrogen compound
+def: "Any heteroorganic entity containing at least one carbon-nitrogen bond." []
+synonym: "organonitrogen compounds" EXACT IUPAC_NAME [IUPAC]
+synonym: "organonitrogens" RELATED [ChEBI]
+is_a: CHEBI:33285 ! heteroorganic entity
+is_a: CHEBI:51143 ! nitrogen molecular entity
+
+[Term]
+id: CHEBI:35406
+name: oxoanion
+def: "An oxoanion is an anion derived from an oxoacid by loss of hydron(s) bound to oxygen." []
+synonym: "oxoacid anions" RELATED [ChEBI]
+synonym: "oxoanion" EXACT [ChEBI]
+synonym: "oxoanions" RELATED [ChEBI]
+is_a: CHEBI:25741 ! oxide
+is_a: CHEBI:33273 ! polyatomic anion
+
+[Term]
+id: CHEBI:35605
+name: carbon oxoacid
+synonym: "carbon oxoacids" RELATED [ChEBI]
+synonym: "oxoacids of carbon" RELATED [ChEBI]
+is_a: CHEBI:24833 ! oxoacid
+is_a: CHEBI:36963 ! organooxygen compound
+
+[Term]
+id: CHEBI:35618
+name: aromatic ether
+def: "Any ether in which the oxygen is attached to at least one aryl substituent." []
+is_a: CHEBI:25698 ! ether
+is_a: CHEBI:33659 ! organic aromatic compound
+
+[Term]
+id: CHEBI:35703
+name: xenobiotic
+def: "A xenobiotic (Greek, xenos \"foreign\"; bios \"life\") is a compound that is foreign to a living organism. Principal xenobiotics include: drugs, carcinogens and various compounds that have been introduced into the environment by artificial means." []
+synonym: "Xenobiotic" EXACT [KEGG_COMPOUND]
+synonym: "xenobiotic" EXACT IUPAC_NAME [IUPAC]
+synonym: "xenobiotic compounds" RELATED [ChEBI]
+synonym: "xenobiotics" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:35757
+name: monocarboxylic acid anion
+def: "A carboxylic acid anion formed when the carboxy group of a monocarboxylic acid is deprotonated." []
+synonym: "a monocarboxylate" RELATED [UniProt]
+synonym: "Carboxylate" RELATED [KEGG_COMPOUND]
+synonym: "Monocarboxylate" RELATED [KEGG_COMPOUND]
+synonym: "monocarboxylates" RELATED [ChEBI]
+synonym: "monocarboxylic acid anions" RELATED [ChEBI]
+is_a: CHEBI:29067 ! carboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:25384 ! monocarboxylic acid
+
+[Term]
+id: CHEBI:35868
+name: hydroxy monocarboxylic acid
+def: "Any monocarboxylic acid which also contains a separate (alcoholic or phenolic) hydroxy substituent." []
+synonym: "hydroxy acid" RELATED [ChEBI]
+synonym: "hydroxy monocarboxylic acids" RELATED [ChEBI]
+is_a: CHEBI:24669 ! hydroxy carboxylic acid
+is_a: CHEBI:25384 ! monocarboxylic acid
+
+[Term]
+id: CHEBI:35871
+name: oxo monocarboxylic acid
+def: "Any monocarboxylic acid having at least one additional oxo functional group." []
+synonym: "oxo monocarboxylic acids" RELATED [ChEBI]
+is_a: CHEBI:25384 ! monocarboxylic acid
+is_a: CHEBI:25754 ! oxo carboxylic acid
+relationship: is_conjugate_acid_of CHEBI:35902 ! oxo monocarboxylic acid anion
+
+[Term]
+id: CHEBI:35902
+name: oxo monocarboxylic acid anion
+synonym: "oxo monocarboxylic acid anions" RELATED [ChEBI]
+is_a: CHEBI:35757 ! monocarboxylic acid anion
+is_a: CHEBI:35903 ! oxo carboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:35871 ! oxo monocarboxylic acid
+
+[Term]
+id: CHEBI:35903
+name: oxo carboxylic acid anion
+def: "Any carboxylic acid anion containing at least one oxo group." []
+synonym: "oxo carboxylic acid anions" RELATED [ChEBI]
+is_a: CHEBI:29067 ! carboxylic acid anion
+
+[Term]
+id: CHEBI:35975
+name: 5-oxo monocarboxylic acid anion
+synonym: "5-oxo monocarboxylic acid anions" RELATED [ChEBI]
+is_a: CHEBI:35902 ! oxo monocarboxylic acid anion
+
+[Term]
+id: CHEBI:36059
+name: hydroxy monocarboxylic acid anion
+def: "Any monocarboxylic acid anion carrying at least one hydroxy substituent." []
+synonym: "hydroxy monocarboxylic acid anions" RELATED [ChEBI]
+synonym: "hydroxymonocarboxylic acid anion" RELATED [ChEBI]
+synonym: "hydroxymonocarboxylic acid anions" RELATED [ChEBI]
+is_a: CHEBI:35757 ! monocarboxylic acid anion
+
+[Term]
+id: CHEBI:36132
+name: alicyclic ketone
+def: "A cyclic ketone in which the carbocyclic ring structure which may be saturated or unsaturated, but may not be a benzenoid or other aromatic system." []
+synonym: "alicyclic ketone" EXACT [IUPAC]
+synonym: "alicyclic ketones" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:3992 ! cyclic ketone
+relationship: has_parent_hydride CHEBI:33654 ! alicyclic compound
+
+[Term]
+id: CHEBI:36140
+name: cyclopentanones
+def: "Any alicyclic ketone that consists of a cyclopentane skeleton substituted by at least one oxo group." []
+is_a: CHEBI:36132 ! alicyclic ketone
+
+[Term]
+id: CHEBI:36338
+name: lepton
+def: "Lepton is a fermion that does not experience the strong force (strong interaction). The term is derived from the Greek lambdaepsilonpitauomicronsigma (small, thin)." []
+synonym: "leptons" RELATED [ChEBI]
+is_a: CHEBI:33233 ! fundamental particle
+is_a: CHEBI:36340 ! fermion
+
+[Term]
+id: CHEBI:36339
+name: baryon
+def: "Baryon is a fermion that does experience the strong force (strong interaction). The term is derived from the Greek betaalpharhoupsilonsigma (heavy)." []
+synonym: "baryons" RELATED [ChEBI]
+is_a: CHEBI:36340 ! fermion
+is_a: CHEBI:36344 ! hadron
+
+[Term]
+id: CHEBI:36340
+name: fermion
+def: "Particle of half-integer spin quantum number following Fermi-Dirac statistics. Fermions are named after Enrico Fermi." []
+synonym: "fermion" EXACT IUPAC_NAME [IUPAC]
+synonym: "fermions" RELATED [ChEBI]
+is_a: CHEBI:36342 ! subatomic particle
+
+[Term]
+id: CHEBI:36341
+name: boson
+def: "Particle of integer spin quantum number following Bose-Einstein statistics. Bosons are named after Satyendra Nath Bose." []
+synonym: "boson" EXACT IUPAC_NAME [IUPAC]
+synonym: "bosons" RELATED [ChEBI]
+is_a: CHEBI:36342 ! subatomic particle
+
+[Term]
+id: CHEBI:36342
+name: subatomic particle
+def: "A particle smaller than an atom." []
+synonym: "subatomic particles" RELATED [ChEBI]
+
+[Term]
+id: CHEBI:36343
+name: composite particle
+def: "A subatomic particle known to have substructure (i.e. consisting of smaller particles)." []
+synonym: "composite particles" RELATED [ChEBI]
+is_a: CHEBI:36342 ! subatomic particle
+
+[Term]
+id: CHEBI:36344
+name: hadron
+def: "Hadron is a subatomic particle which experiences the strong force." []
+synonym: "hadrons" RELATED [ChEBI]
+is_a: CHEBI:36343 ! composite particle
+
+[Term]
+id: CHEBI:36347
+name: nuclear particle
+def: "A nucleus or any of its constituents in any of their energy states." []
+synonym: "nuclear particle" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:36342 ! subatomic particle
+
+[Term]
+id: CHEBI:36357
+name: polyatomic entity
+def: "Any molecular entity consisting of more than one atom." []
+synonym: "polyatomic entities" RELATED [ChEBI]
+is_a: CHEBI:23367 ! molecular entity
+relationship: BFO:0000051 CHEBI:24433 ! group
+
+[Term]
+id: CHEBI:36358
+name: polyatomic ion
+def: "An ion consisting of more than one atom." []
+synonym: "polyatomic ions" RELATED [ChEBI]
+is_a: CHEBI:24870 ! ion
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:36586
+name: carbonyl compound
+def: "Any compound containing the carbonyl group, C=O. The term is commonly used in the restricted sense of aldehydes and ketones, although it actually includes carboxylic acids and derivatives." []
+synonym: "carbonyl compounds" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:36587 ! organic oxo compound
+is_a: CHEBI:36963 ! organooxygen compound
+relationship: BFO:0000051 CHEBI:23019 ! carbonyl group
+
+[Term]
+id: CHEBI:36587
+name: organic oxo compound
+def: "Organic compounds containing an oxygen atom, =O, doubly bonded to carbon or another element." []
+synonym: "organic oxo compounds" RELATED [ChEBI]
+synonym: "oxo compounds" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:72695 ! organic molecule
+relationship: BFO:0000051 CHEBI:46629 ! oxo group
+
+[Term]
+id: CHEBI:36683
+name: organochlorine compound
+def: "An organochlorine compound is a compound containing at least one carbon-chlorine bond." []
+synonym: "chloroorganic compounds" RELATED [ChEBI]
+synonym: "chlororganische Verbindungen" RELATED [ChEBI]
+synonym: "organochloride compound" RELATED [ChEBI]
+synonym: "organochloride compounds" RELATED [ChEBI]
+synonym: "organochlorine compound" EXACT [ChEBI]
+synonym: "organochlorine compounds" RELATED [ChEBI]
+is_a: CHEBI:23117 ! chlorine molecular entity
+is_a: CHEBI:36684 ! organohalogen compound
+
+[Term]
+id: CHEBI:36684
+name: organohalogen compound
+def: "A compound containing at least one carbon-halogen bond." []
+synonym: "organohalogen compounds" RELATED [ChEBI]
+is_a: CHEBI:33285 ! heteroorganic entity
+is_a: CHEBI:37578 ! halide
+
+[Term]
+id: CHEBI:36758
+name: apo carotenoid sesquiterpenoid
+synonym: "apo carotenoid sesquiterpenoids" RELATED [ChEBI]
+synonym: "apocarotenoid sesquiterpenoid" RELATED [ChEBI]
+synonym: "apocarotenoid sesquiterpenoids" RELATED [ChEBI]
+is_a: CHEBI:26658 ! sesquiterpenoid
+is_a: CHEBI:53183 ! apo carotenoid
+
+[Term]
+id: CHEBI:36902
+name: chalcogen hydride
+synonym: "chalcogen hydride" EXACT [ChEBI]
+synonym: "chalcogen hydrides" RELATED [ChEBI]
+is_a: CHEBI:33242 ! inorganic hydride
+is_a: CHEBI:33304 ! chalcogen molecular entity
+
+[Term]
+id: CHEBI:36914
+name: inorganic ion
+synonym: "inorganic ions" RELATED [ChEBI]
+is_a: CHEBI:24835 ! inorganic molecular entity
+is_a: CHEBI:24870 ! ion
+
+[Term]
+id: CHEBI:36916
+name: cation
+def: "A monoatomic or polyatomic species having one or more elementary charges of the proton." []
+synonym: "Cation" EXACT [KEGG_COMPOUND]
+synonym: "cation" EXACT IUPAC_NAME [IUPAC]
+synonym: "cation" EXACT [ChEBI]
+synonym: "cationes" RELATED [ChEBI]
+synonym: "cations" RELATED [ChEBI]
+synonym: "Kation" RELATED [ChEBI]
+synonym: "Kationen" RELATED [ChEBI]
+is_a: CHEBI:24870 ! ion
+
+[Term]
+id: CHEBI:36962
+name: organochalcogen compound
+def: "An organochalcogen compound is a compound containing at least one carbon-chalcogen bond." []
+synonym: "organochalcogen compound" EXACT [ChEBI]
+synonym: "organochalcogen compounds" RELATED [ChEBI]
+is_a: CHEBI:33285 ! heteroorganic entity
+is_a: CHEBI:33304 ! chalcogen molecular entity
+
+[Term]
+id: CHEBI:36963
+name: organooxygen compound
+def: "An organochalcogen compound containing at least one carbon-oxygen bond." []
+synonym: "organooxygen compound" EXACT [ChEBI]
+synonym: "organooxygen compounds" RELATED [ChEBI]
+is_a: CHEBI:25806 ! oxygen molecular entity
+is_a: CHEBI:36962 ! organochalcogen compound
+
+[Term]
+id: CHEBI:37175
+name: organic hydride
+synonym: "organic hydrides" RELATED [ChEBI]
+is_a: CHEBI:33692 ! hydrides
+
+[Term]
+id: CHEBI:37176
+name: mononuclear parent hydride
+synonym: "mononuclear hydride" RELATED [ChEBI]
+synonym: "mononuclear hydrides" RELATED [IUPAC]
+synonym: "mononuclear parent hydrides" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33692 ! hydrides
+
+[Term]
+id: CHEBI:37527
+name: acid
+def: "An acid is a molecular entity capable of donating a hydron (Bronsted acid) or capable of forming a covalent bond with an electron pair (Lewis acid)." []
+synonym: "Acid" EXACT [KEGG_COMPOUND]
+synonym: "acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "acide" RELATED [IUPAC]
+synonym: "acido" RELATED [ChEBI]
+synonym: "acids" RELATED [ChEBI]
+synonym: "an acid" RELATED [UniProt]
+synonym: "Saeure" RELATED [ChEBI]
+synonym: "Saeuren" RELATED [ChEBI]
+is_a: CHEBI:51086 ! chemical role
+
+[Term]
+id: CHEBI:37577
+name: heteroatomic molecular entity
+def: "A molecular entity consisting of two or more chemical elements." []
+synonym: "chemical compound" RELATED [ChEBI]
+synonym: "heteroatomic molecular entities" RELATED [ChEBI]
+is_a: CHEBI:36357 ! polyatomic entity
+
+[Term]
+id: CHEBI:37578
+name: halide
+def: "Any heteroatomic molecular entity that is a chemical compound of halogen with other chemical elements." []
+synonym: "halides" RELATED [ChEBI]
+is_a: CHEBI:24471 ! halogen molecular entity
+is_a: CHEBI:37577 ! heteroatomic molecular entity
+
+[Term]
+id: CHEBI:37845
+name: growth hormone
+def: "A hormone that specifically regulates growth." []
+synonym: "GH" RELATED [KEGG_COMPOUND]
+synonym: "growth hormones" RELATED [ChEBI]
+synonym: "Somatotropin" RELATED [KEGG_COMPOUND]
+synonym: "Wachstumshormon" RELATED [ChEBI]
+is_a: CHEBI:24621 ! hormone
+
+[Term]
+id: CHEBI:37848
+name: plant hormone
+def: "A plant growth regulator that modulates the formation of stems, leaves and flowers, as well as the development and ripening of fruit. The term includes endogenous and non-endogenous compounds (e.g. active compounds produced by bacteria on the leaf surface) as well as semi-synthetic and fully synthetic compounds." []
+synonym: "phytohormone" RELATED [ChEBI]
+synonym: "phytohormones" RELATED [ChEBI]
+synonym: "plant growth factor" RELATED [ChEBI]
+synonym: "plant growth factors" RELATED [ChEBI]
+synonym: "plant growth hormone" RELATED [ChEBI]
+synonym: "plant growth hormones" RELATED [ChEBI]
+synonym: "plant hormones" RELATED [ChEBI]
+is_a: CHEBI:24621 ! hormone
+is_a: CHEBI:26155 ! plant growth regulator
+
+[Term]
+id: CHEBI:38101
+name: organonitrogen heterocyclic compound
+def: "Any organonitrogen compound containing a cyclic component with nitrogen and at least one other element as ring member atoms." []
+synonym: "heterocyclic organonitrogen compounds" RELATED [ChEBI]
+synonym: "organonitrogen heterocyclic compounds" RELATED [ChEBI]
+is_a: CHEBI:24532 ! organic heterocyclic compound
+is_a: CHEBI:35352 ! organonitrogen compound
+
+[Term]
+id: CHEBI:38179
+name: monocyclic heteroarene
+synonym: "monocyclic heteroarenes" RELATED [ChEBI]
+is_a: CHEBI:33833 ! heteroarene
+
+[Term]
+id: CHEBI:38846
+name: phenoxyacetate
+def: "A monocarboxylic acid anion that is the conjugate base of phenoxyacetic acid." []
+synonym: "phenoxyacetate" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:35757 ! monocarboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:8075 ! phenoxyacetic acid
+relationship: RO:0000087 CHEBI:76967 ! human xenobiotic metabolite
+
+[Term]
+id: CHEBI:39141
+name: Bronsted acid
+def: "A molecular entity capable of donating a hydron to an acceptor (Bronsted base)." []
+synonym: "acide de Bronsted" RELATED [IUPAC]
+synonym: "Bronsted acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "Bronsted-Saeure" RELATED [ChEBI]
+synonym: "donneur d'hydron" RELATED [IUPAC]
+synonym: "hydron donor" RELATED [IUPAC]
+is_a: CHEBI:17891 ! donor
+is_a: CHEBI:37527 ! acid
+
+[Term]
+id: CHEBI:39142
+name: Bronsted base
+def: "A molecular entity capable of accepting a hydron from a donor (Bronsted acid)." []
+synonym: "accepteur d'hydron" RELATED [IUPAC]
+synonym: "base de Bronsted" RELATED [IUPAC]
+synonym: "Bronsted base" EXACT IUPAC_NAME [IUPAC]
+synonym: "Bronsted-Base" RELATED [ChEBI]
+synonym: "hydron acceptor" RELATED [IUPAC]
+is_a: CHEBI:15339 ! acceptor
+is_a: CHEBI:22695 ! base
+
+[Term]
+id: CHEBI:39317
+name: growth regulator
+def: "Any chemical substance that inhibits the life-cycle of an organism." []
+synonym: "growth regulators" RELATED [ChEBI]
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:3992
+name: cyclic ketone
+synonym: "Cyclic ketone" EXACT [KEGG_COMPOUND]
+synonym: "cyclic ketones" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:17087 ! ketone
+
+[Term]
+id: CHEBI:42266
+name: ethane
+def: "An alkane comprising of two carbon atoms." []
+synonym: "Aethan" RELATED [ChEBI]
+synonym: "bimethyl" RELATED [NIST_Chemistry_WebBook]
+synonym: "C2H6" RELATED [ChEBI]
+synonym: "CH3-CH3" RELATED [IUPAC]
+synonym: "dimethyl" RELATED [NIST_Chemistry_WebBook]
+synonym: "Ethan" RELATED [ChEBI]
+synonym: "ETHANE" EXACT [PDBeChem]
+synonym: "ethane" EXACT IUPAC_NAME [IUPAC]
+synonym: "ethyl hydride" RELATED [NIST_Chemistry_WebBook]
+synonym: "methylmethane" RELATED [NIST_Chemistry_WebBook]
+synonym: "R-170" RELATED [ChEBI]
+is_a: CHEBI:138675 ! gas molecular entity
+is_a: CHEBI:18310 ! alkane
+relationship: RO:0000087 CHEBI:76924 ! plant metabolite
+relationship: RO:0000087 CHEBI:78433 ! refrigerant
+
+[Term]
+id: CHEBI:43176
+name: hydroxy group
+synonym: "-OH" RELATED [IUPAC]
+synonym: "hydroxy" EXACT IUPAC_NAME [IUPAC]
+synonym: "HYDROXY GROUP" EXACT [PDBeChem]
+synonym: "hydroxy group" EXACT [UniProt]
+synonym: "hydroxyl" RELATED [ChEBI]
+synonym: "hydroxyl group" RELATED [ChEBI]
+synonym: "oxidanyl" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33246 ! inorganic group
+
+[Term]
+id: CHEBI:46629
+name: oxo group
+synonym: "=O" RELATED [IUPAC]
+synonym: "oxo" EXACT IUPAC_NAME [IUPAC]
+synonym: "OXO GROUP" EXACT [PDBeChem]
+is_a: CHEBI:33246 ! inorganic group
+
+[Term]
+id: CHEBI:46787
+name: solvent
+def: "A liquid that can dissolve other substances (solutes) without any change in their chemical composition." []
+synonym: "Loesungsmittel" RELATED [ChEBI]
+synonym: "solvant" RELATED [ChEBI]
+synonym: "solvents" RELATED [ChEBI]
+is_a: CHEBI:33232 ! application
+is_a: CHEBI:51086 ! chemical role
+
+[Term]
+id: CHEBI:46883
+name: carboxy group
+synonym: "-C(O)OH" RELATED [IUPAC]
+synonym: "-CO2H" RELATED [ChEBI]
+synonym: "-COOH" RELATED [IUPAC]
+synonym: "carboxy" EXACT IUPAC_NAME [IUPAC]
+synonym: "CARBOXY GROUP" EXACT [PDBeChem]
+synonym: "carboxyl group" RELATED [ChEBI]
+is_a: CHEBI:33249 ! organyl group
+
+[Term]
+id: CHEBI:48107
+name: nitric acid
+def: "A nitrogen oxoacid of formula HNO3 in which the nitrogen atom is bonded to a hydroxy group and by equivalent bonds to the remaining two oxygen atoms." []
+synonym: "[NO2(OH)]" RELATED [IUPAC]
+synonym: "acide azotique" RELATED [ChEBI]
+synonym: "acide nitrique" RELATED [ChemIDplus]
+synonym: "azotic acid" RELATED [ChemIDplus]
+synonym: "HNO3" RELATED [IUPAC]
+synonym: "HONO2" RELATED [NIST_Chemistry_WebBook]
+synonym: "hydrogen nitrate" RELATED [NIST_Chemistry_WebBook]
+synonym: "hydrogen trioxonitrate(1-)" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydroxidodioxidonitrogen" EXACT IUPAC_NAME [IUPAC]
+synonym: "Nitric acid" EXACT [KEGG_COMPOUND]
+synonym: "Salpetersaeure" RELATED [ChemIDplus]
+synonym: "trioxonitric acid" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:33455 ! nitrogen oxoacid
+relationship: is_conjugate_acid_of CHEBI:17632 ! nitrate
+relationship: RO:0000087 CHEBI:33893 ! reagent
+relationship: RO:0000087 CHEBI:48356 ! protic solvent
+
+[Term]
+id: CHEBI:48354
+name: polar solvent
+def: "A solvent that is composed of polar molecules. Polar solvents can dissolve ionic compounds or ionisable covalent compounds." []
+synonym: "polar solvent" EXACT IUPAC_NAME [IUPAC]
+synonym: "polar solvents" RELATED [ChEBI]
+is_a: CHEBI:46787 ! solvent
+
+[Term]
+id: CHEBI:48356
+name: protic solvent
+def: "A polar solvent that is capable of acting as a hydron (proton) donor." []
+synonym: "protogenic solvent" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:39141 ! Bronsted acid
+is_a: CHEBI:48354 ! polar solvent
+
+[Term]
+id: CHEBI:48359
+name: protophilic solvent
+synonym: "HBA solvent" RELATED [ChEBI]
+synonym: "hydrogen bond acceptor solvent" RELATED [ChEBI]
+synonym: "protophilic solvent" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:39142 ! Bronsted base
+is_a: CHEBI:48354 ! polar solvent
+
+[Term]
+id: CHEBI:48360
+name: amphiprotic solvent
+synonym: "amphiprotic solvent" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:48356 ! protic solvent
+is_a: CHEBI:48359 ! protophilic solvent
+
+[Term]
+id: CHEBI:48705
+name: agonist
+def: "Substance which binds to cell receptors normally responding to naturally occurring substances and which produces a response of its own." []
+synonym: "agonist" EXACT IUPAC_NAME [IUPAC]
+synonym: "agonista" RELATED [ChEBI]
+synonym: "agoniste" RELATED [ChEBI]
+synonym: "agonists" RELATED [ChEBI]
+is_a: CHEBI:52210 ! pharmacological role
+
+[Term]
+id: CHEBI:49302
+name: 2-hydroxy monocarboxylic acid
+synonym: "2-hydroxy acid" RELATED [ChEBI]
+synonym: "2-hydroxy monocarboxylic acids" RELATED [ChEBI]
+is_a: CHEBI:35868 ! hydroxy monocarboxylic acid
+
+[Term]
+id: CHEBI:49637
+name: hydrogen atom
+synonym: "1H" RELATED [IUPAC]
+synonym: "H" RELATED [IUPAC]
+synonym: "hidrogeno" RELATED [ChEBI]
+synonym: "hydrogen" EXACT IUPAC_NAME [IUPAC]
+synonym: "hydrogen" RELATED [ChEBI]
+synonym: "hydrogene" RELATED [ChEBI]
+synonym: "Wasserstoff" RELATED [ChEBI]
+is_a: CHEBI:24835 ! inorganic molecular entity
+is_a: CHEBI:25585 ! nonmetal atom
+is_a: CHEBI:33559 ! s-block element atom
+relationship: RO:0000087 CHEBI:33937 ! macronutrient
+
+[Term]
+id: CHEBI:50176
+name: keratolytic drug
+def: "A drug that softens, separates, and causes desquamation of the cornified epithelium or horny layer of skin. Keratolytic drugs are used to expose mycelia of infecting fungi or to treat corns, warts, and certain other skin diseases." []
+synonym: "desquamating agent" RELATED [ChEBI]
+synonym: "keratolytic agent" RELATED [ChEBI]
+synonym: "keratolytic drugs" RELATED [ChEBI]
+synonym: "skin-peeling agent" RELATED [ChEBI]
+is_a: CHEBI:50177 ! dermatologic drug
+
+[Term]
+id: CHEBI:50177
+name: dermatologic drug
+def: "A drug used to treat or prevent skin disorders or for the routine care of skin." []
+synonym: "dermatologic agent" RELATED [ChEBI]
+synonym: "dermatologic drugs" RELATED [ChEBI]
+synonym: "dermatological agent" RELATED [ChEBI]
+is_a: CHEBI:23888 ! drug
+
+[Term]
+id: CHEBI:50312
+name: onium compound
+synonym: "onium compound" EXACT [ChEBI]
+synonym: "onium compounds" EXACT IUPAC_NAME [IUPAC]
+synonym: "onium compounds" RELATED [ChEBI]
+is_a: CHEBI:37577 ! heteroatomic molecular entity
+
+[Term]
+id: CHEBI:50313
+name: onium cation
+def: "Mononuclear cations derived by addition of a hydron to a mononuclear parent hydride of the pnictogen, chalcogen and halogen families." []
+synonym: "onium cations" EXACT IUPAC_NAME [IUPAC]
+synonym: "onium cations" RELATED [ChEBI]
+synonym: "onium ion" RELATED [ChEBI]
+synonym: "onium ions" RELATED [ChEBI]
+is_a: CHEBI:50312 ! onium compound
+
+[Term]
+id: CHEBI:50860
+name: organic molecular entity
+def: "Any molecular entity that contains carbon." []
+synonym: "organic compounds" RELATED [ChEBI]
+synonym: "organic entity" RELATED [ChEBI]
+synonym: "organic molecular entities" RELATED [ChEBI]
+is_a: CHEBI:33582 ! carbon group molecular entity
+relationship: BFO:0000051 CHEBI:27594 ! carbon atom
+
+[Term]
+id: CHEBI:50906
+name: role
+def: "A role is particular behaviour which a material entity may exhibit." []
+
+[Term]
+id: CHEBI:51086
+name: chemical role
+def: "A role played by the molecular entity or part thereof within a chemical context." []
+is_a: CHEBI:50906 ! role
+
+[Term]
+id: CHEBI:51143
+name: nitrogen molecular entity
+synonym: "nitrogen compounds" RELATED [ChEBI]
+synonym: "nitrogen molecular entities" RELATED [ChEBI]
+synonym: "Nitrogenous compounds" RELATED [KEGG_COMPOUND]
+is_a: CHEBI:33302 ! pnictogen molecular entity
+relationship: BFO:0000051 CHEBI:25555 ! nitrogen atom
+
+[Term]
+id: CHEBI:51422
+name: organodiyl group
+def: "Any organic substituent group, regardless of functional type, having two free valences at carbon atom(s)." []
+synonym: "organodiyl groups" RELATED [ChEBI]
+is_a: CHEBI:51446 ! organic divalent group
+
+[Term]
+id: CHEBI:51446
+name: organic divalent group
+is_a: CHEBI:33247 ! organic group
+
+[Term]
+id: CHEBI:51447
+name: organic univalent group
+synonym: "organic monovalent group" RELATED [ChEBI]
+is_a: CHEBI:33247 ! organic group
+
+[Term]
+id: CHEBI:51958
+name: organic polycyclic compound
+synonym: "organic polycyclic compounds" RELATED [ChEBI]
+is_a: CHEBI:33635 ! polycyclic compound
+is_a: CHEBI:33832 ! organic cyclic compound
+
+[Term]
+id: CHEBI:52206
+name: biochemical role
+def: "A biological role played by the molecular entity or part thereof within a biochemical context." []
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:52210
+name: pharmacological role
+def: "A biological role which describes how a drug interacts within a biological system and how the interactions affect its medicinal properties." []
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:52211
+name: physiological role
+is_a: CHEBI:24432 ! biological role
+
+[Term]
+id: CHEBI:52217
+name: pharmaceutical
+def: "Any substance introduced into a living organism with therapeutic or diagnostic purpose." []
+synonym: "farmaco" RELATED [ChEBI]
+synonym: "medicament" RELATED [ChEBI]
+synonym: "pharmaceuticals" RELATED [ChEBI]
+is_a: CHEBI:33232 ! application
+
+[Term]
+id: CHEBI:52625
+name: inorganic hydroxy compound
+synonym: "inorganic hydroxides" RELATED [ChEBI]
+is_a: CHEBI:24651 ! hydroxides
+is_a: CHEBI:24835 ! inorganic molecular entity
+
+[Term]
+id: CHEBI:53183
+name: apo carotenoid
+def: "A compound arising from loss of part of the carotene skeleton (excluding retinoids)" []
+synonym: "apo carotenoids" RELATED [ChEBI]
+synonym: "apocarotenoid" RELATED [ChEBI]
+synonym: "apocarotenoids" RELATED [ChEBI]
+is_a: CHEBI:24913 ! isoprenoid
+
+[Term]
+id: CHEBI:5686
+name: heterocyclic compound
+def: "A cyclic compound having as ring members atoms of at least two different elements." []
+synonym: "compuesto heterociclico" RELATED [IUPAC]
+synonym: "compuestos heterociclicos" RELATED [IUPAC]
+synonym: "heterocycle" RELATED [ChEBI]
+synonym: "Heterocyclic compound" EXACT [KEGG_COMPOUND]
+synonym: "heterocyclic compounds" RELATED [ChEBI]
+is_a: CHEBI:33595 ! cyclic compound
+
+[Term]
+id: CHEBI:58431
+name: jasmonate(1-)
+def: "A 5-oxo monocarboxylic acid anion resulting from the removal of a proton from the carboxy group of jasmonic acid. The major species at pH 7.3." []
+synonym: "jasmonate" RELATED [UniProt]
+synonym: "{(1R,2R)-3-oxo-2-[(2Z)-pent-2-en-1-yl]cyclopentyl}acetate" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:136184 ! jasmonic acid anion
+relationship: is_conjugate_base_of CHEBI:18292 ! jasmonic acid
+relationship: RO:0000087 CHEBI:76924 ! plant metabolite
+
+[Term]
+id: CHEBI:62071
+name: 2-cis-abscisate
+def: "A monocarboxylic acid anion that is the conjugate base of cis-abscisic acid; major species at pH 7.3." []
+synonym: "2-cis-abscisate anion" RELATED [ChEBI]
+synonym: "2-cis-abscisate(1-)" RELATED [ChEBI]
+synonym: "2-cis-abscisic acid anion" RELATED [ChEBI]
+synonym: "abscisate" RELATED [ChEBI]
+synonym: "abscisate anion" RELATED [ChEBI]
+synonym: "abscisate(1-)" RELATED [ChEBI]
+synonym: "abscisic acid anion" RELATED [ChEBI]
+is_a: CHEBI:35757 ! monocarboxylic acid anion
+is_a: CHEBI:62432 ! abscisates
+relationship: is_conjugate_base_of CHEBI:22152 ! 2-cis-abscisic acid
+
+[Term]
+id: CHEBI:62431
+name: abscisic acids
+def: "Any apo carotenoid sesquiterpenoid that is 3-methylpenta-2,4-dienoic acid substituted at position 5 by a 1-hydroxy-2,6,6-trimethyl-4-oxocyclohex-2-en-1-yl group and in which the acyclic double bond between positions 4 and 5 has E-configuration." []
+synonym: "(4E)-5-(1-hydroxy-2,6,6-trimethyl-4-oxocyclohex-2-en-1-yl)-3-methylpenta-2,4-dienoic acid" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:134397 ! tertiary allylic alcohol
+is_a: CHEBI:36758 ! apo carotenoid sesquiterpenoid
+is_a: CHEBI:79020 ! alpha,beta-unsaturated monocarboxylic acid
+relationship: is_conjugate_acid_of CHEBI:62432 ! abscisates
+
+[Term]
+id: CHEBI:62432
+name: abscisates
+def: "A monocarboxylic acid anion obtained by removal of a proton from the carboxy group of any member of the class of abscisic acids." []
+synonym: "abscisate" RELATED [UniProt]
+is_a: CHEBI:35757 ! monocarboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:62431 ! abscisic acids
+
+[Term]
+id: CHEBI:62764
+name: reactive nitrogen species
+def: "A family of nitrogen molecular entities which are highly reactive and derived from nitric oxide (.NO) and superoxide (O2.(-)) produced via the enzymatic activity of inducible nitric oxide synthase 2 (NOS2) and NADPH oxidase respectively." []
+synonym: "RNI" RELATED [SUBMITTER]
+synonym: "RNS" RELATED [SUBMITTER]
+is_a: CHEBI:51143 ! nitrogen molecular entity
+
+[Term]
+id: CHEBI:64047
+name: food additive
+def: "Any substance which is added to food to preserve or enhance its flavour and/or appearance." []
+synonym: "food additives" RELATED [ChEBI]
+is_a: CHEBI:33232 ! application
+is_a: CHEBI:78295 ! food component
+
+[Term]
+id: CHEBI:64049
+name: food acidity regulator
+def: "A food additive that is used to change or otherwise control the acidity or alkalinity of foods. They may be acids, bases, neutralising agents or buffering agents." []
+synonym: "acidity regulator" RELATED [ChEBI]
+synonym: "acidity regulators" RELATED [ChEBI]
+synonym: "food acidity regulators" RELATED [ChEBI]
+synonym: "pH control agent" RELATED [ChEBI]
+synonym: "pH control agents" RELATED [ChEBI]
+is_a: CHEBI:64047 ! food additive
+
+[Term]
+id: CHEBI:64709
+name: organic acid
+def: "Any organic molecular entity that is acidic and contains carbon in covalent linkage." []
+synonym: "organic acids" RELATED [ChEBI]
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:65255
+name: food preservative
+def: "Substances which are added to food in order to prevent decomposition caused by  microbial growth or by undesirable chemical changes." []
+synonym: "food preservatives" RELATED [ChEBI]
+is_a: CHEBI:64047 ! food additive
+
+[Term]
+id: CHEBI:65256
+name: antimicrobial food preservative
+def: "A food preservative which prevents decomposition of food by preventing the growth of fungi or bacteria. In European countries, E-numbers for permitted food preservatives are from E200 to E299, divided into sorbates (E200-209), benzoates (E210-219), sulfites (E220-229), phenols and formates (E230-239), nitrates (E240-259), acetates (E260-269), lactates (E270-279), propionates (E280-289) and others (E290-299)." []
+synonym: "antimicrobial food preservatives" RELATED [ChEBI]
+synonym: "antimicrobial preservative" RELATED [ChEBI]
+synonym: "antimicrobial preservatives" RELATED [ChEBI]
+is_a: CHEBI:33281 ! antimicrobial agent
+is_a: CHEBI:65255 ! food preservative
+
+[Term]
+id: CHEBI:68452
+name: azole
+def: "Any monocyclic heteroarene consisting of a five-membered ring containing nitrogen. Azoles can also contain one or more other non-carbon atoms, such as nitrogen, sulfur or oxygen." []
+synonym: "azoles" RELATED [ChEBI]
+is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
+is_a: CHEBI:38179 ! monocyclic heteroarene
+
+[Term]
+id: CHEBI:72695
+name: organic molecule
+def: "Any molecule that consists of at least one carbon atom as part of the electrically neutral entity." []
+synonym: "organic compound" RELATED [ChEBI]
+synonym: "organic compounds" RELATED [ChEBI]
+synonym: "organic molecules" RELATED [ChEBI]
+is_a: CHEBI:25367 ! molecule
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:73191
+name: abscisic acid receptor agonist
+def: "An agonist that binds to and activates abscisic acid receptors." []
+synonym: "ABA agonist" RELATED [ChEBI]
+synonym: "ABA agonists" RELATED [ChEBI]
+synonym: "ABA receptor agonist" RELATED [ChEBI]
+synonym: "ABA receptor agonists" RELATED [ChEBI]
+synonym: "abscisic acid receptor agonists" RELATED [ChEBI]
+is_a: CHEBI:48705 ! agonist
+
+[Term]
+id: CHEBI:75763
+name: eukaryotic metabolite
+def: "Any  metabolite produced during a metabolic reaction in eukaryotes, the taxon that include members of the fungi, plantae and animalia kingdoms." []
+synonym: "eukaryotic metabolites" RELATED [ChEBI]
+is_a: CHEBI:25212 ! metabolite
+
+[Term]
+id: CHEBI:75767
+name: animal metabolite
+def: "Any eukaryotic metabolite produced during a metabolic reaction in animals that include diverse creatures from sponges, insects to mammals." []
+synonym: "animal metabolites" RELATED [ChEBI]
+is_a: CHEBI:75763 ! eukaryotic metabolite
+
+[Term]
+id: CHEBI:75768
+name: mammalian metabolite
+def: "Any animal metabolite produced during a metabolic reaction in mammals." []
+synonym: "mammalian metabolites" RELATED [ChEBI]
+is_a: CHEBI:75767 ! animal metabolite
+
+[Term]
+id: CHEBI:75771
+name: mouse metabolite
+def: "Any mammalian metabolite produced during a metabolic reaction in a mouse (Mus musculus)." []
+synonym: "mouse metabolites" RELATED [ChEBI]
+synonym: "Mus musculus metabolite" RELATED [ChEBI]
+synonym: "Mus musculus metabolites" RELATED [ChEBI]
+is_a: CHEBI:75768 ! mammalian metabolite
+
+[Term]
+id: CHEBI:75772
+name: Saccharomyces cerevisiae metabolite
+def: "Any  fungal metabolite produced during a metabolic reaction in Baker's yeast (Saccharomyces cerevisiae)." []
+synonym: "baker's yeast metabolite" RELATED [ChEBI]
+synonym: "baker's yeast metabolites" RELATED [ChEBI]
+synonym: "baker's yeast secondary metabolite" RELATED [ChEBI]
+synonym: "baker's yeast secondary metabolites" RELATED [ChEBI]
+synonym: "S. cerevisiae metabolite" RELATED [ChEBI]
+synonym: "S. cerevisiae metabolites" RELATED [ChEBI]
+synonym: "S. cerevisiae secondary metabolite" RELATED [ChEBI]
+synonym: "S. cerevisiae secondary metabolites" RELATED [ChEBI]
+synonym: "Saccharomyces cerevisiae metabolites" RELATED [ChEBI]
+synonym: "Saccharomyces cerevisiae secondary metabolites" RELATED [ChEBI]
+is_a: CHEBI:76946 ! fungal metabolite
+
+[Term]
+id: CHEBI:75787
+name: prokaryotic metabolite
+def: "Any metabolite produced during a metabolic reaction in prokaryotes, the taxon that include members of domains such as the bacteria and archaea." []
+synonym: "prokaryotic metabolites" RELATED [ChEBI]
+is_a: CHEBI:25212 ! metabolite
+
+[Term]
+id: CHEBI:76206
+name: xenobiotic metabolite
+def: "Any metabolite produced by metabolism of a xenobiotic compound." []
+synonym: "xenobiotic metabolites" RELATED [ChEBI]
+is_a: CHEBI:25212 ! metabolite
+
+[Term]
+id: CHEBI:76413
+name: greenhouse gas
+def: "A gas in an atmosphere that absorbs and emits radiation within the thermal infrared range, so contributing to the 'greenhouse effect'." []
+synonym: "greenhouse gases" RELATED [ChEBI]
+is_a: CHEBI:51086 ! chemical role
+
+[Term]
+id: CHEBI:76725
+name: EC 1.* (oxidoreductase) inhibitor
+def: "An enzyme inhibitor which interferes with the action of an oxidoreductase (EC 1.*.*.*)." []
+synonym: "EC 1.* (oxidoreductase) inhibitors" RELATED [ChEBI]
+synonym: "EC 1.* inhibitor" RELATED [ChEBI]
+synonym: "EC 1.* inhibitors" RELATED [ChEBI]
+synonym: "oxidoreductase (EC 1.*) inhibitor" RELATED [ChEBI]
+synonym: "oxidoreductase (EC 1.*) inhibitors" RELATED [ChEBI]
+synonym: "oxidoreductase inhibitor" RELATED [ChEBI]
+synonym: "oxidoreductase inhibitors" RELATED [ChEBI]
+is_a: CHEBI:23924 ! enzyme inhibitor
+
+[Term]
+id: CHEBI:76726
+name: EC 1.1.* (oxidoreductase acting on donor CH-OH group) inhibitor
+def: "An oxidoreductase inhibitor which interferes with the action of an oxidoreductase acting on the CH-OH group of donors (EC 1.1.*.*)." []
+synonym: "EC 1.1.* (oxidoreductase acting on donor CH-OH group) inhibitors" RELATED [ChEBI]
+synonym: "EC 1.1.* inhibitor" RELATED [ChEBI]
+synonym: "EC 1.1.* inhibitors" RELATED [ChEBI]
+synonym: "inhibitor of oxidoreductase acting on CH-OH group of donor" RELATED [ChEBI]
+synonym: "inhibitor of oxidoreductase acting on CH-OH group of donors" RELATED [ChEBI]
+synonym: "inhibitors of oxidoreductase acting on CH-OH group of donor" RELATED [ChEBI]
+synonym: "inhibitors of oxidoreductase acting on CH-OH group of donors" RELATED [ChEBI]
+synonym: "oxidoreductase acting on donor CH-OH group (EC 1.1.*) inhibitor" RELATED [ChEBI]
+synonym: "oxidoreductase acting on donor CH-OH group (EC 1.1.*) inhibitors" RELATED [ChEBI]
+synonym: "oxidoreductase acting on donor CH-OH group inhibitor" RELATED [ChEBI]
+synonym: "oxidoreductase acting on donor CH-OH group inhibitors" RELATED [ChEBI]
+is_a: CHEBI:76725 ! EC 1.* (oxidoreductase) inhibitor
+
+[Term]
+id: CHEBI:76835
+name: EC 1.1.1.* (oxidoreductase acting on donor CH-OH group, NAD(+) or NADP(+) acceptor) inhibitor
+def: "An EC 1.1.* (oxidoreductase acting on donor CH-OH group) inhibitor that uses NAD(+) or NADP(+) as acceptor (EC 1.1.1.*)." []
+synonym: "EC 1.1.1.* (oxidoreductase acting on donor CH-OH group, NAD(+) or NADP(+)acceptor) inhibitors" RELATED [ChEBI]
+synonym: "EC 1.1.1.* inhibitor" RELATED [ChEBI]
+synonym: "EC 1.1.1.* inhibitors" RELATED [ChEBI]
+synonym: "oxidoreductase acting on donor CH-OH group, NAD(+) or NADP(+) acceptor (EC 1.1.1.*) inhibitor" RELATED [ChEBI]
+synonym: "oxidoreductase acting on donor CH-OH group, NAD(+) or NADP(+) acceptor (EC 1.1.1.*) inhibitors" RELATED [ChEBI]
+is_a: CHEBI:76726 ! EC 1.1.* (oxidoreductase acting on donor CH-OH group) inhibitor
+
+[Term]
+id: CHEBI:76924
+name: plant metabolite
+def: "Any eukaryotic metabolite produced during a metabolic reaction in plants, the kingdom that include flowering plants, conifers and other gymnosperms." []
+synonym: "plant metabolites" RELATED [ChEBI]
+synonym: "plant secondary metabolites" RELATED [ChEBI]
+is_a: CHEBI:75763 ! eukaryotic metabolite
+
+[Term]
+id: CHEBI:76946
+name: fungal metabolite
+def: "Any eukaryotic metabolite produced during a metabolic reaction in fungi, the kingdom that includes microorganisms such as the yeasts and moulds." []
+synonym: "fungal metabolites" RELATED [ChEBI]
+is_a: CHEBI:75763 ! eukaryotic metabolite
+
+[Term]
+id: CHEBI:76956
+name: Aspergillus metabolite
+def: "Any fungal metabolite produced during a metabolic reaction in the mould, Aspergillus." []
+synonym: "Aspergillus metabolites" RELATED [ChEBI]
+is_a: CHEBI:76946 ! fungal metabolite
+
+[Term]
+id: CHEBI:76967
+name: human xenobiotic metabolite
+def: "Any human metabolite produced by metabolism of a xenobiotic compound in humans." []
+synonym: "human xenobiotic metabolites" RELATED [ChEBI]
+is_a: CHEBI:76206 ! xenobiotic metabolite
+is_a: CHEBI:77746 ! human metabolite
+
+[Term]
+id: CHEBI:76969
+name: bacterial metabolite
+def: "Any prokaryotic metabolite produced during a metabolic reaction in bacteria." []
+is_a: CHEBI:75787 ! prokaryotic metabolite
+
+[Term]
+id: CHEBI:76971
+name: Escherichia coli metabolite
+def: "Any bacterial metabolite produced during a metabolic reaction in Escherichia coli." []
+synonym: "E.coli metabolite" RELATED [ChEBI]
+synonym: "E.coli metabolites" RELATED [ChEBI]
+synonym: "Escherichia coli metabolites" RELATED [ChEBI]
+is_a: CHEBI:76969 ! bacterial metabolite
+
+[Term]
+id: CHEBI:77484
+name: EC 1.1.1.25 (shikimate dehydrogenase) inhibitor
+def: "An EC 1.1.1.* (oxidoreductase acting on donor CH-OH group, NAD(+) or NADP(+) acceptor) inhibitor that interferes with the action of shikimate dehydrogenase (EC 1.1.1.25)." []
+synonym: "5-dehydroshikimate reductase inhibitor" RELATED [ChEBI]
+synonym: "5-dehydroshikimate reductase inhibitors" RELATED [ChEBI]
+synonym: "5-dehydroshikimic reductase inhibitor" RELATED [ChEBI]
+synonym: "5-dehydroshikimic reductase inhibitors" RELATED [ChEBI]
+synonym: "AroE inhibitor" RELATED [ChEBI]
+synonym: "AroE inhibitors" RELATED [ChEBI]
+synonym: "dehydroshikimic reductase inhibitor" RELATED [ChEBI]
+synonym: "dehydroshikimic reductase inhibitors" RELATED [ChEBI]
+synonym: "DHS reductase inhibitor" RELATED [ChEBI]
+synonym: "DHS reductase inhibitors" RELATED [ChEBI]
+synonym: "EC 1.1.1.25 (shikimate dehydrogenase) inhibitors" RELATED [ChEBI]
+synonym: "EC 1.1.1.25 inhibitor" RELATED [ChEBI]
+synonym: "EC 1.1.1.25 inhibitors" RELATED [ChEBI]
+synonym: "shikimate 5-dehydrogenase inhibitor" RELATED [ChEBI]
+synonym: "shikimate 5-dehydrogenase inhibitors" RELATED [ChEBI]
+synonym: "shikimate dehydrogenase (EC 1.1.1.25) inhibitor" RELATED [ChEBI]
+synonym: "shikimate dehydrogenase (EC 1.1.1.25) inhibitors" RELATED [ChEBI]
+synonym: "shikimate dehydrogenase inhibitor" RELATED [ChEBI]
+synonym: "shikimate dehydrogenase inhibitors" RELATED [ChEBI]
+synonym: "shikimate oxidoreductase inhibitor" RELATED [ChEBI]
+synonym: "shikimate oxidoreductase inhibitors" RELATED [ChEBI]
+synonym: "shikimate:NADP(+) 3-oxidoreductase inhibitor" RELATED [ChEBI]
+synonym: "shikimate:NADP(+) 3-oxidoreductase inhibitors" RELATED [ChEBI]
+synonym: "shikimate:NADP(+) 5-oxidoreductase inhibitor" RELATED [ChEBI]
+synonym: "shikimate:NADP(+) 5-oxidoreductase inhibitors" RELATED [ChEBI]
+synonym: "shikimate:NADP(+) oxidoreductase inhibitor" RELATED [ChEBI]
+synonym: "shikimate:NADP(+) oxidoreductase inhibitors" RELATED [ChEBI]
+is_a: CHEBI:76835 ! EC 1.1.1.* (oxidoreductase acting on donor CH-OH group, NAD(+) or NADP(+) acceptor) inhibitor
+
+[Term]
+id: CHEBI:77746
+name: human metabolite
+def: "Any mammalian metabolite  produced during a metabolic reaction in humans (Homo sapiens)." []
+synonym: "H. sapiens metabolite" RELATED [ChEBI]
+synonym: "H. sapiens metabolites" RELATED [ChEBI]
+synonym: "Homo sapiens metabolite" RELATED [ChEBI]
+synonym: "Homo sapiens metabolites" RELATED [ChEBI]
+is_a: CHEBI:75768 ! mammalian metabolite
+
+[Term]
+id: CHEBI:78295
+name: food component
+def: "Any substance that is distributed in foodstuffs. It includes materials derived from plants or animals, such as vitamins or minerals, as well as environmental contaminants." []
+synonym: "dietary component" RELATED [ChEBI]
+synonym: "dietary components" RELATED [ChEBI]
+synonym: "food components" RELATED [ChEBI]
+is_a: CHEBI:52211 ! physiological role
+
+[Term]
+id: CHEBI:78298
+name: environmental contaminant
+def: "Any minor or unwanted substance introduced into the environment that can have undesired effects." []
+synonym: "environmental contaminants" RELATED [ChEBI]
+is_a: CHEBI:51086 ! chemical role
+
+[Term]
+id: CHEBI:78433
+name: refrigerant
+def: "A substance used in a thermodynamic heat pump cycle or refrigeration cycle that undergoes a phase change from a gas to a liquid and back. Refrigerants are used in air-conditioning systems and freezers or refrigerators and are assigned a \"R\" number (by ASHRAE - formerly the American Society of Heating, Refrigerating and Air Conditioning Engineers), which is determined systematically according to their molecular structure." []
+synonym: "refrigerants" RELATED [ChEBI]
+is_a: CHEBI:33232 ! application
+
+[Term]
+id: CHEBI:78840
+name: olefinic compound
+def: "Any organic molecular entity that contains at least one C=C bond." []
+synonym: "olefinic compounds" RELATED [ChEBI]
+is_a: CHEBI:50860 ! organic molecular entity
+
+[Term]
+id: CHEBI:79020
+name: alpha,beta-unsaturated monocarboxylic acid
+def: "A monocarboxylic acid in which the carbon of the carboxy group is directly attached to a C=C or C#C bond." []
+synonym: "2,3-unsaturated monocarboxylic acid" RELATED [ChEBI]
+synonym: "2,3-unsaturated monocarboxylic acids" RELATED [ChEBI]
+synonym: "alpha,beta-unsaturated monocarboxylic acids" RELATED [ChEBI]
+is_a: CHEBI:25384 ! monocarboxylic acid
+
+[Term]
+id: CHEBI:79389
+name: monovalent inorganic anion
+def: "Any inorganic anion with a valency of one." []
+synonym: "monovalent inorganic anions" RELATED [ChEBI]
+is_a: CHEBI:24834 ! inorganic anion
+
+[Term]
+id: CHEBI:8075
+name: phenoxyacetic acid
+def: "A monocarboxylic acid that is the O-phenyl derivative of glycolic acid. A metabolite of 2-phenoxyethanol, it is used in the manufacture of pharmaceuticals, pesticides, fungicides and dyes." []
+synonym: "Glycol acid phenyl ether" RELATED [HMDB]
+synonym: "phenoxacetic acid" RELATED [ChEBI]
+synonym: "Phenoxyacetate" RELATED [KEGG_COMPOUND]
+synonym: "Phenoxyacetic acid" EXACT [KEGG_COMPOUND]
+synonym: "phenoxyacetic acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "Phenoxyessigsaeure" RELATED [ChEBI]
+synonym: "phenoxyethanoic acid" RELATED [NIST_Chemistry_WebBook]
+synonym: "POA" RELATED [ChemIDplus]
+is_a: CHEBI:25384 ! monocarboxylic acid
+is_a: CHEBI:35618 ! aromatic ether
+relationship: has_functional_parent CHEBI:17497 ! glycolic acid
+relationship: is_conjugate_acid_of CHEBI:38846 ! phenoxyacetate
+relationship: RO:0000087 CHEBI:35219 ! plant growth retardant
+relationship: RO:0000087 CHEBI:76956 ! Aspergillus metabolite
+relationship: RO:0000087 CHEBI:76967 ! human xenobiotic metabolite
+
+[Term]
+id: CHEBI:83039
+name: crustacean metabolite
+def: "An animal metabolite produced by arthropods such as crabs, lobsters, crayfish, shrimps and krill." []
+synonym: "crustacean metabolites" RELATED [ChEBI]
+is_a: CHEBI:75767 ! animal metabolite
+
+[Term]
+id: CHEBI:83056
+name: Daphnia magna metabolite
+def: "A Daphnia metabolite produced by the species Daphnia magna." []
+synonym: "Daphnia magna metabolites" RELATED [ChEBI]
+is_a: CHEBI:83057 ! Daphnia metabolite
+
+[Term]
+id: CHEBI:83057
+name: Daphnia metabolite
+def: "A crustacean metabolite produced by the genus of small planktonic arthropods, Daphnia" []
+synonym: "Daphnia metabolites" RELATED [ChEBI]
+is_a: CHEBI:83039 ! crustacean metabolite
+
+[Term]
+id: CHEBI:84735
+name: algal metabolite
+def: "Any eukaryotic metabolite produced during a metabolic reaction in algae including unicellular organisms like chlorella and diatoms to multicellular organisms like giant kelps and brown algae." []
+synonym: "algal metabolites" RELATED [ChEBI]
+is_a: CHEBI:75763 ! eukaryotic metabolite
+
+[Term]
+id: ENVO:00000000
+name: geographic feature
+synonym: "macroscopic spatial feature" EXACT []
+is_a: ENVO:01000813 ! astronomical body part
+
+[Term]
+id: ENVO:00000063
+name: water body
+def: "An accumulation of water of varying size." [https://en.wikipedia.org/wiki/Body_of_water]
+synonym: "aquatic feature" EXACT []
+synonym: "bodies of water" EXACT [Getty:TGN]
+synonym: "body of water" EXACT [Getty:TGN]
+synonym: "body of water" EXACT [ADL:FTT]
+synonym: "hydrographic feature" BROAD [ADL:FTT]
+synonym: "waterbody" EXACT []
+is_a: ENVO:00000000 ! geographic feature
+relationship: BFO:0000050 ENVO:01000819 ! hydrosphere
+relationship: RO:0002473 CHEBI:15377 ! water
+
+[Term]
+id: ENVO:00002006
+name: water
+def: "An environmental material primarily composed of dihydrogen oxide in its liquid form." [MA:ma]
+is_a: ENVO:01000815 ! liquid environmental material
+relationship: RO:0000086 PATO:0001548 ! quality of a liquid
+relationship: RO:0002473 CHEBI:15377 ! water
+
+[Term]
+id: ENVO:00002297
+name: environmental feature
+def: "A material entity which determines an environmental system." [DOI:10.1186/2041-1480-4-43, NM:nm, ORCID:0000-0002-4366-3088]
+is_a: BFO:0000040 ! material entity
+intersection_of: BFO:0000040 ! material entity
+intersection_of: RO:0002508 ENVO:01000254 ! environmental system
+relationship: RO:0002508 ENVO:01000254 ! environmental system
+
+[Term]
+id: ENVO:00010483
+name: environmental material
+def: "A portion of environmental material is a fiat object which forms the medium or part of the medium of an environmental system." [DOI:10.1186/2041-1480-4-43, MA:ma, ORCID:0000-0002-4366-3088, URL:http\://ontology.buffalo.edu/smith/articles/niches.html]
+synonym: "portion of environmental material" EXACT []
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: ENVO:00010504
+name: surface layer
+def: "A surface layer is the uppermost layer of some material entity." [URL:http\://www.merriam-webster.com/dictionary/surface]
+is_a: ENVO:01000281 ! layer
+
+[Term]
+id: ENVO:01000254
+name: environmental system
+def: "A system which has the disposition to environ one or more material entities." [DOI:10.1186/2041-1480-4-43]
+synonym: "environment" EXACT []
+is_a: RO:0002577 ! system
+
+[Term]
+id: ENVO:01000281
+name: layer
+def: "A layer is a quantity of some material which has comparable thickness and usually covers some surface." [Wiktionary:layer]
+is_a: ENVO:00000000 ! geographic feature
+relationship: RO:0000086 PATO:0002124 ! laminar
+
+[Term]
+id: ENVO:01000305
+name: high temperature environment
+def: "A high temperature environment is an environment in which material entities are exposed to increased levels of heat radiation or which have molecules or atoms moving randomly with increased levels of average kinietic energy." []
+is_a: ENVO:01000997 ! environmental system determined by a quality
+intersection_of: ENVO:01000997 ! environmental system determined by a quality
+intersection_of: RO:0000086 PATO:0001305 ! increased temperature
+relationship: RO:0000086 PATO:0001305 ! increased temperature
+
+[Term]
+id: ENVO:01000317
+name: aquatic environment
+def: "An environment whose dynamics are strongly influenced by water." []
+is_a: ENVO:01000997 ! environmental system determined by a quality
+is_a: ENVO:01000998 ! environmental system determined by a material
+intersection_of: ENVO:01000254 ! environmental system
+intersection_of: RO:0002507 ENVO:00002006 ! water
+relationship: RO:0002507 ENVO:00002006 ! water
+
+[Term]
+id: ENVO:01000324
+name: planetary surface
+def: "A planetary surface is a surface layer where the solid or liquid material of a planet comes into contact with atmosphere or outer space." []
+is_a: ENVO:00010504 ! surface layer
+relationship: BFO:0000050 ENVO:01000800 ! planet
+
+[Term]
+id: ENVO:01000325
+name: aquatic layer
+def: "A layer in a water mass, itself composed primarily of water." []
+is_a: ENVO:01000281 ! layer
+intersection_of: ENVO:01000281 ! layer
+intersection_of: RO:0002473 ENVO:00002006 ! water
+relationship: RO:0002473 ENVO:00002006 ! water
+
+[Term]
+id: ENVO:01000635
+name: land
+def: "Land is a planetary surface that is not covered by liquid." [Adpated from https://en.wikipedia.org/wiki/Planetary_surface]
+synonym: "ground" RELATED []
+is_a: ENVO:01000324 ! planetary surface
+relationship: RO:0000086 PATO:0001546 ! quality of a solid
+
+[Term]
+id: ENVO:01000637
+name: outer space
+def: "Outer space is a hard vacuum containing a low density of particles, predominantly a plasma of hydrogen and helium as well as electromagnetic radiation, magnetic fields, neutrinos, dust and cosmic rays that exists between celestial bodies." [https://en.wikipedia.org/wiki/Outer_space]
+synonym: "space" BROAD []
+is_a: ENVO:00002297 ! environmental feature
+
+[Term]
+id: ENVO:01000639
+name: planetary structural layer
+def: "A planetary structural layer is laminar part of a terrestrial planet or other rocky body large enough to have differentiation by density. Planetary layers have differing physicochemical properties and composition." []
+is_a: ENVO:01000281 ! layer
+relationship: BFO:0000050 ENVO:01000800 ! planet
+
+[Term]
+id: ENVO:01000648
+name: magma
+def: "Magma is a mixture of molten or semi-molten rock, volatiles, and solids that is found beneath the uppermost solid layer of a planetary body. Besides molten rock, magma may also contain suspended crystals, dissolved gas and sometimes gas bubbles." [https://en.wikipedia.org/wiki/Magma]
+is_a: ENVO:00010483 ! environmental material
+relationship: RO:0000086 PATO:0001305 ! increased temperature
+relationship: RO:0001025 ENVO:01000639 ! planetary structural layer
+
+[Term]
+id: ENVO:01000799
+name: astronomical body
+def: "An object which is naturally occuring, bound together by gravitational or electromagnetic forces, and surrounded by space." [https://en.wikipedia.org/wiki/Astronomical_object]
+synonym: "celestial body" RELATED []
+is_a: ENVO:01000804 ! astronomical object
+
+[Term]
+id: ENVO:01000800
+name: planet
+def: "A planet is an astronomical body orbiting a star or stellar remnant that is massive enough to be rounded by its own gravity, is not massive enough to cause thermonuclear fusion, and has cleared its neighbouring region of planetesimals." [http://solarsystem.nasa.gov/planets/whatisaplanet, https://en.wikipedia.org/wiki/Planet]
+is_a: ENVO:01000799 ! astronomical body
+
+[Term]
+id: ENVO:01000804
+name: astronomical object
+def: "An object which is composed of one or more gravitationally bound structures that are associated with a position in space." [https://en.wikipedia.org/wiki/Astronomical_object]
+synonym: "celestial object" RELATED []
+is_a: ENVO:00002297 ! environmental feature
+relationship: BFO:0000051 ENVO:01000799 {minCardinality="1"} ! astronomical body
+relationship: RO:0002219 ENVO:01000637 ! outer space
+
+[Term]
+id: ENVO:01000813
+name: astronomical body part
+def: "A material part of an astronomical body." []
+is_a: ENVO:00002297 ! environmental feature
+relationship: BFO:0000050 ENVO:01000799 ! astronomical body
+
+[Term]
+id: ENVO:01000814
+name: solid environmental material
+def: "An environmental material which is in a solid state." []
+is_a: ENVO:01001125 ! ice
+intersection_of: ENVO:00010483 ! environmental material
+intersection_of: RO:0000086 PATO:0001546 ! quality of a solid
+relationship: RO:0000086 PATO:0001546 ! quality of a solid
+
+[Term]
+id: ENVO:01000815
+name: liquid environmental material
+def: "An environmental material which is in a liquid state." []
+is_a: ENVO:01000648 ! magma
+intersection_of: ENVO:00010483 ! environmental material
+intersection_of: RO:0000086 PATO:0001548 ! quality of a liquid
+relationship: RO:0000086 PATO:0001548 ! quality of a liquid
+
+[Term]
+id: ENVO:01000819
+name: hydrosphere
+def: "An astronomical body part which is composed of the combined mass of water found on, under, and over the surface of a planet." [https://en.wikipedia.org/wiki/Hydrosphere]
+is_a: ENVO:01000813 ! astronomical body part
+relationship: RO:0002473 ENVO:00002006 ! water
+
+[Term]
+id: ENVO:01000997
+name: environmental system determined by a quality
+def: "An environmental system which is determined by materials bearing roughly homogeneous qualities." []
+is_a: ENVO:01000254 ! environmental system
+
+[Term]
+id: ENVO:01000998
+name: environmental system determined by a material
+def: "An environmental system within which an environmental material strongly influences the system's composition and properties." []
+is_a: ENVO:01000254 ! environmental system
+intersection_of: ENVO:01000254 ! environmental system
+intersection_of: RO:0002507 ENVO:00010483 ! environmental material
+relationship: RO:0002507 ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01001125
+name: ice
+def: "An ice is an environmental material which is either frozen or which is maintained in a solid state by gravitational forces or pressure." []
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01001308
+name: hydroform
+def: "A hydroform is a geographic feature which is primarily composed of a continuous volume of liquid water held in shape by an environmental process." []
+is_a: ENVO:00000000 ! geographic feature
+intersection_of: ENVO:00000000 ! geographic feature
+intersection_of: RO:0001025 ENVO:00000063 ! water body
+intersection_of: RO:0002473 CHEBI:15377 ! water
+relationship: RO:0001025 ENVO:00000063 ! water body
+relationship: RO:0002473 CHEBI:15377 ! water
+
+[Term]
+id: ENVO:02500000
+name: environmental system process
+def: "A process in which includes the components of an environmental system as participants." []
+is_a: BFO:0000015 ! process
+
+[Term]
+id: ENVO:02500002
+name: flooding
+def: "A general and temporary condition of partial or complete inundation of normally dry land areas from the overflow of inland and/or tidal waters, and/or the unusual and rapid accumulation or runoff of surface waters from any source. A great flow along a watercourse or a flow causing inundation of lands not normally covered by water." [GEMET: http\://www.eionet.europa.eu/gemet/concept/3301]
+is_a: ENVO:02500031 ! hydrological process
+relationship: RO:0000057 ENVO:00000063 ! water body
+relationship: RO:0000057 ENVO:01000635 ! land
+
+[Term]
+id: ENVO:02500031
+name: hydrological process
+is_a: ENVO:02500000 ! environmental system process
+
+[Term]
+id: ENVO:09200000
+name: temperature of environmental material
+def: "The temperature of some environmental material." []
+synonym: "environmental material temperature" EXACT []
+is_a: PATO:0000146 ! temperature
+intersection_of: PATO:0000146 ! temperature
+intersection_of: RO:0000052 ENVO:00010483 ! environmental material
+relationship: RO:0000052 ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:09200014
+name: temperature of water
+def: "The temperature of some water." []
+synonym: "water temperature" EXACT []
+is_a: ENVO:09200000 ! temperature of environmental material
+intersection_of: PATO:0000146 ! temperature
+intersection_of: RO:0000052 ENVO:00002006 ! water
+relationship: RO:0000052 ENVO:00002006 ! water
+
+[Term]
+id: GO:0003674
+name: molecular_function
+is_a: BFO:0000015 ! process
+
+[Term]
+id: GO:0004872
+name: receptor activity
+
+[Term]
+id: GO:0008150
+name: biological_process
+def: "Any process specifically pertinent to the functioning of integrated living units: cells, tissues, organs, and organisms. A process is a collection of molecular events with a defined beginning and end." []
+synonym: "biological process" EXACT []
+synonym: "physiological process" EXACT []
+is_a: BFO:0000015 ! process
+
+[Term]
+id: NCBITaxon:1
+name: root
+synonym: "all" RELATED synonym []
+
+[Term]
+id: NCBITaxon:101162
+name: Bipolaris oryzae
+synonym: "Cochliobolus miyabeanus" RELATED synonym []
+synonym: "Drechslera oryzae" RELATED synonym []
+synonym: "Helminthosporium oryzae" RELATED synonym []
+synonym: "Luttrellia oryzae" RELATED synonym []
+is_a: NCBITaxon:33194 ! Bipolaris
+
+[Term]
+id: NCBITaxon:10239
+name: Viruses
+synonym: "Vira" RELATED synonym []
+synonym: "Viridae" RELATED synonym []
+synonym: "viruses" RELATED blast_name []
+is_a: NCBITaxon:1 ! root
+
+[Term]
+id: NCBITaxon:110618
+name: Nectriaceae
+is_a: NCBITaxon:5125 ! Hypocreales
+
+[Term]
+id: NCBITaxon:117187
+name: Fusarium verticillioides
+synonym: "Fusarium moniliformae" RELATED misspelling []
+synonym: "Fusarium moniliforme" RELATED synonym []
+synonym: "Fusarium verticilloides" RELATED misspelling []
+synonym: "Gibberella moniliforme" RELATED misspelling []
+synonym: "Gibberella moniliformes" RELATED misspelling []
+synonym: "Gibberella moniliformis" RELATED teleomorph []
+is_a: NCBITaxon:171627 ! Fusarium fujikuroi species complex
+
+[Term]
+id: NCBITaxon:119089
+name: Chromadorea
+synonym: "Adenophorea" RELATED synonym []
+is_a: NCBITaxon:6231 ! Nematoda
+
+[Term]
+id: NCBITaxon:1206794
+name: Ecdysozoa
+is_a: NCBITaxon:33317 ! Protostomia
+
+[Term]
+id: NCBITaxon:12137
+name: Sobemovirus
+synonym: "Velvet tobacco mottle virus group" RELATED synonym []
+is_a: NCBITaxon:35278 ! ssRNA positive-strand viruses, no DNA stage
+
+[Term]
+id: NCBITaxon:131567
+name: cellular organisms
+synonym: "biota" RELATED synonym []
+is_a: NCBITaxon:1 ! root
+
+[Term]
+id: NCBITaxon:147538
+name: Pezizomycotina
+synonym: "Euascomycota" RELATED synonym []
+is_a: NCBITaxon:716545 ! saccharomyceta
+
+[Term]
+id: NCBITaxon:147541
+name: Dothideomycetes
+synonym: "bitunicate ascomycetes" RELATED in_part []
+synonym: "Loculoascomycetes" RELATED in_part []
+is_a: NCBITaxon:715962 ! dothideomyceta
+
+[Term]
+id: NCBITaxon:147550
+name: Sordariomycetes
+synonym: "Pyrenomycetes" RELATED in_part []
+is_a: NCBITaxon:715989 ! sordariomyceta
+
+[Term]
+id: NCBITaxon:148303
+name: Magnaporthe
+is_a: NCBITaxon:81093 ! Magnaporthaceae
+
+[Term]
+id: NCBITaxon:148305
+name: Magnaporthe grisea
+synonym: "Magnaportha grisea" RELATED misspelling []
+synonym: "Pyricularia grisea" RELATED genbank_synonym []
+is_a: NCBITaxon:148303 ! Magnaporthe
+
+[Term]
+id: NCBITaxon:165778
+name: Nakataea oryzae
+synonym: "Leptosphaeria salvinii" RELATED synonym []
+synonym: "Magnaporthe salvinii" RELATED genbank_synonym []
+synonym: "Nakatea oryzae" RELATED misspelling []
+synonym: "Phragmoporthe salvinii" RELATED synonym []
+synonym: "Sclerotium oryzae" RELATED synonym []
+is_a: NCBITaxon:228882 ! Nakataea
+
+[Term]
+id: NCBITaxon:171627
+name: Fusarium fujikuroi species complex
+synonym: "Gibberella fujikuroi complex" RELATED synonym []
+is_a: NCBITaxon:5506 ! Fusarium
+
+[Term]
+id: NCBITaxon:189290
+name: Meloidogyne
+is_a: NCBITaxon:33285 ! Meloidogyninae
+
+[Term]
+id: NCBITaxon:197562
+name: Pancrustacea
+is_a: NCBITaxon:197563 ! Mandibulata
+
+[Term]
+id: NCBITaxon:197563
+name: Mandibulata
+synonym: "mandibulates" EXACT common_name []
+is_a: NCBITaxon:6656 ! Arthropoda
+
+[Term]
+id: NCBITaxon:222543
+name: Hypocreomycetidae
+is_a: NCBITaxon:147550 ! Sordariomycetes
+
+[Term]
+id: NCBITaxon:222544
+name: Sordariomycetidae
+is_a: NCBITaxon:147550 ! Sordariomycetes
+
+[Term]
+id: NCBITaxon:228882
+name: Nakataea
+is_a: NCBITaxon:81093 ! Magnaporthaceae
+
+[Term]
+id: NCBITaxon:2759
+name: Eukaryota
+synonym: "Eucarya" RELATED synonym []
+synonym: "Eucaryotae" RELATED synonym []
+synonym: "eucaryotes" EXACT genbank_common_name []
+synonym: "Eukarya" RELATED synonym []
+synonym: "Eukaryotae" RELATED synonym []
+synonym: "eukaryotes" EXACT common_name []
+synonym: "eukaryotes" RELATED blast_name []
+is_a: NCBITaxon:131567 ! cellular organisms
+
+[Term]
+id: NCBITaxon:28556
+name: Pleosporaceae
+synonym: "anamorphic Pleosporaceae" RELATED synonym []
+synonym: "mitosporic Pleosporaceae" RELATED synonym []
+synonym: "Pyrenophoraceae" RELATED synonym []
+is_a: NCBITaxon:715340 ! Pleosporineae
+
+[Term]
+id: NCBITaxon:315429
+name: Meloidogynidae
+is_a: NCBITaxon:33284 ! Tylenchoidea
+
+[Term]
+id: NCBITaxon:31744
+name: Rice yellow mottle virus
+is_a: NCBITaxon:12137 ! Sobemovirus
+
+[Term]
+id: NCBITaxon:33154
+name: Opisthokonta
+synonym: "Fungi/Metazoa group" RELATED synonym []
+synonym: "opisthokonts" RELATED synonym []
+is_a: NCBITaxon:2759 ! Eukaryota
+
+[Term]
+id: NCBITaxon:33194
+name: Bipolaris
+is_a: NCBITaxon:28556 ! Pleosporaceae
+
+[Term]
+id: NCBITaxon:33208
+name: Metazoa
+synonym: "Animalia" RELATED synonym []
+synonym: "animals" RELATED blast_name []
+synonym: "metazoans" EXACT genbank_common_name []
+synonym: "multicellular animals" EXACT common_name []
+is_a: NCBITaxon:33154 ! Opisthokonta
+
+[Term]
+id: NCBITaxon:33213
+name: Bilateria
+is_a: NCBITaxon:6072 ! Eumetazoa
+
+[Term]
+id: NCBITaxon:33283
+name: Tylenchina
+is_a: NCBITaxon:6300 ! Tylenchida
+
+[Term]
+id: NCBITaxon:33284
+name: Tylenchoidea
+is_a: NCBITaxon:33283 ! Tylenchina
+
+[Term]
+id: NCBITaxon:33285
+name: Meloidogyninae
+is_a: NCBITaxon:315429 ! Meloidogynidae
+
+[Term]
+id: NCBITaxon:33317
+name: Protostomia
+is_a: NCBITaxon:33213 ! Bilateria
+
+[Term]
+id: NCBITaxon:35278
+name: ssRNA positive-strand viruses, no DNA stage
+is_a: NCBITaxon:439488 ! ssRNA viruses
+
+[Term]
+id: NCBITaxon:35325
+name: dsRNA viruses
+synonym: "dsRNA nonenveloped viruses" RELATED synonym []
+is_a: NCBITaxon:10239 ! Viruses
+
+[Term]
+id: NCBITaxon:439488
+name: ssRNA viruses
+is_a: NCBITaxon:10239 ! Viruses
+
+[Term]
+id: NCBITaxon:451864
+name: Dikarya
+is_a: NCBITaxon:4751 ! Fungi
+
+[Term]
+id: NCBITaxon:451868
+name: Pleosporomycetidae
+is_a: NCBITaxon:147541 ! Dothideomycetes
+
+[Term]
+id: NCBITaxon:4751
+name: Fungi
+synonym: "fungi" EXACT genbank_common_name []
+synonym: "fungi" RELATED blast_name []
+is_a: NCBITaxon:33154 ! Opisthokonta
+
+[Term]
+id: NCBITaxon:4890
+name: Ascomycota
+synonym: "ascomycetes" EXACT genbank_common_name []
+synonym: "ascomycetes" RELATED blast_name []
+synonym: "sac fungi" EXACT common_name []
+is_a: NCBITaxon:451864 ! Dikarya
+
+[Term]
+id: NCBITaxon:50557
+name: Insecta
+synonym: "true insects" EXACT genbank_common_name []
+is_a: NCBITaxon:6960 ! Hexapoda
+
+[Term]
+id: NCBITaxon:5125
+name: Hypocreales
+synonym: "Pyrenomycetes" RELATED in_part []
+is_a: NCBITaxon:222543 ! Hypocreomycetidae
+
+[Term]
+id: NCBITaxon:5506
+name: Fusarium
+synonym: "Gibberella" RELATED synonym []
+is_a: NCBITaxon:110618 ! Nectriaceae
+
+[Term]
+id: NCBITaxon:6072
+name: Eumetazoa
+is_a: NCBITaxon:33208 ! Metazoa
+
+[Term]
+id: NCBITaxon:6231
+name: Nematoda
+synonym: "Nemata" RELATED synonym []
+synonym: "nematode" EXACT common_name []
+synonym: "nematodes" EXACT common_name []
+synonym: "nematodes" RELATED blast_name []
+synonym: "roundworm" EXACT common_name []
+synonym: "roundworms" EXACT genbank_common_name []
+is_a: NCBITaxon:1206794 ! Ecdysozoa
+
+[Term]
+id: NCBITaxon:6300
+name: Tylenchida
+is_a: NCBITaxon:119089 ! Chromadorea
+
+[Term]
+id: NCBITaxon:6303
+name: Meloidogyne javanica
+synonym: "root-knot nematode" EXACT genbank_common_name []
+is_a: NCBITaxon:654580 ! Meloidogyne incognita group
+
+[Term]
+id: NCBITaxon:6306
+name: Meloidogyne incognita
+synonym: "Meloidogyne incognita acrita" RELATED synonym []
+synonym: "Meloidogyne incognita ssp. acrita" RELATED misspelling []
+synonym: "southern root-knot nematode" EXACT genbank_common_name []
+is_a: NCBITaxon:654580 ! Meloidogyne incognita group
+
+[Term]
+id: NCBITaxon:639021
+name: Magnaporthales
+is_a: NCBITaxon:222544 ! Sordariomycetidae
+
+[Term]
+id: NCBITaxon:654580
+name: Meloidogyne incognita group
+is_a: NCBITaxon:189290 ! Meloidogyne
+
+[Term]
+id: NCBITaxon:6656
+name: Arthropoda
+synonym: "arthropods" EXACT genbank_common_name []
+synonym: "arthropods" RELATED blast_name []
+is_a: NCBITaxon:88770 ! Panarthropoda
+
+[Term]
+id: NCBITaxon:6960
+name: Hexapoda
+synonym: "Atelocerata" RELATED in_part []
+synonym: "insects" EXACT genbank_common_name []
+synonym: "insects" RELATED blast_name []
+synonym: "Tracheata" RELATED in_part []
+synonym: "Uniramia" RELATED in_part []
+is_a: NCBITaxon:197562 ! Pancrustacea
+
+[Term]
+id: NCBITaxon:715340
+name: Pleosporineae
+is_a: NCBITaxon:92860 ! Pleosporales
+
+[Term]
+id: NCBITaxon:715962
+name: dothideomyceta
+is_a: NCBITaxon:716546 ! leotiomyceta
+
+[Term]
+id: NCBITaxon:715989
+name: sordariomyceta
+is_a: NCBITaxon:716546 ! leotiomyceta
+
+[Term]
+id: NCBITaxon:716545
+name: saccharomyceta
+is_a: NCBITaxon:4890 ! Ascomycota
+
+[Term]
+id: NCBITaxon:716546
+name: leotiomyceta
+is_a: NCBITaxon:147538 ! Pezizomycotina
+
+[Term]
+id: NCBITaxon:81093
+name: Magnaporthaceae
+synonym: "anamorphic Magnaporthaceae" RELATED synonym []
+synonym: "mitosporic Magnaporthaceae" RELATED synonym []
+is_a: NCBITaxon:639021 ! Magnaporthales
+
+[Term]
+id: NCBITaxon:88770
+name: Panarthropoda
+is_a: NCBITaxon:1206794 ! Ecdysozoa
+
+[Term]
+id: NCBITaxon:92860
+name: Pleosporales
+is_a: NCBITaxon:451868 ! Pleosporomycetidae
+
+[Term]
+id: PATO:0000001
+name: quality
+def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" []
+synonym: "trait" EXACT []
+is_a: BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: PATO:0000051
+name: morphology
+def: "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure." []
+is_a: BFO:0000019 ! quality
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0000068
+name: qualitative
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0000069
+name: deviation(from_normal)
+def: "A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average." []
+is_a: PATO:0000068 ! qualitative
+
+[Term]
+id: PATO:0000141
+name: structure
+def: "A morphology quality inhering in a bearer by virtue of the bearer's relative position, shape, arrangements and connectivity of an organism's various parts; the pattern underlying its form." []
+synonym: "conformation" BROAD []
+synonym: "relational structural quality" EXACT []
+is_a: PATO:0000051 ! morphology
+
+[Term]
+id: PATO:0000146
+name: temperature
+def: "A physical quality of the thermal energy of a system." []
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0001018
+name: physical quality
+def: "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." []
+synonym: "relational physical quality" EXACT []
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+def: "A quality which inheres in a continuant." []
+synonym: "monadic quality of a continuant" EXACT []
+synonym: "monadic quality of an object" NARROW []
+synonym: "monadic quality of continuant" NARROW []
+synonym: "multiply inhering quality of a physical entity" EXACT []
+synonym: "quality of a continuant" EXACT []
+synonym: "quality of a single physical entity" EXACT []
+synonym: "quality of an object" EXACT []
+synonym: "quality of continuant" EXACT []
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0001305
+name: increased temperature
+def: "A temperature which is relatively high." []
+synonym: "high temperature" EXACT []
+synonym: "hot" EXACT []
+is_a: PATO:0000146 ! temperature
+is_a: PATO:0002305 ! increased object quality
+
+[Term]
+id: PATO:0001546
+name: quality of a solid
+def: "A physical quality inhering in a bearer by virtue of the bearer's exhibiting the physical characteristics of an entity characterized by particles arranged such that their shape and volume are relatively stable." []
+synonym: "solidity" EXACT []
+is_a: PATO:0002198 ! quality of a substance
+
+[Term]
+id: PATO:0001548
+name: quality of a liquid
+def: "A physical quality inhering in an entity exhibiting the physical characteristics of an amorphous (non-crystalline) form of matter between a gas and a solid that has a definite volume, but no definite shape." []
+synonym: "liquidity" EXACT []
+is_a: PATO:0002198 ! quality of a substance
+
+[Term]
+id: PATO:0002124
+name: laminar
+def: "A quality inhering in a bearer by virtue of the bearer's processing the form of a thin plate sheet or layer." []
+is_a: PATO:0000141 ! structure
+
+[Term]
+id: PATO:0002198
+name: quality of a substance
+def: "A quality inhering in a bearer by virtue of its constitution." []
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0002300
+name: increased quality
+def: "A quality that has a value that is increased compared to normal or average." []
+is_a: PATO:0000069 ! deviation(from_normal)
+
+[Term]
+id: PATO:0002305
+name: increased object quality
+def: "A quality of an object that has a value that is increased compared to normal or average." []
+is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0002300 ! increased quality
 
 [Term]
 id: PECO:0001001
@@ -28,6 +3523,8 @@ name: inorganic anion exposure
 def: "An inorganic chemical exposure (PECO:0001004) involving the application of an anion or a mixture of anions (CHEBI:22563)." [CHEBI:22563, PO:cooperl]
 synonym: "inorganic anion treatment" NARROW []
 is_a: PECO:0001004 ! inorganic chemical exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 CHEBI:24834 ! inorganic anion
 
 [Term]
 id: PECO:0001019
@@ -49,6 +3546,13 @@ name: osmotic stress exposure
 def: "A chemical stress exposure (PECO:0001036) involving use of osmotic stress-inducing chemicals." [PO:cooperl]
 synonym: "osmotic stress treatment" NARROW []
 is_a: PECO:0001036 ! chemical stress exposure
+
+[Term]
+id: PECO:0007041
+name: antibiotic exposure
+def: "A chemical exposure (PECO:0007189) involving the use of antibiotic for selection purposes." [GR:pj, TO:moorel]
+synonym: "antibiotic treatment" NARROW []
+is_a: PECO:0007189 ! chemical exposure
 
 [Term]
 id: PECO:0007043
@@ -139,6 +3643,8 @@ def: "A growth hormone exposure (PECO:0007165) involving the use of ethylene (or
 synonym: "ethylene treatment" NARROW []
 is_a: PECO:0001019 ! organic gas exposure
 is_a: PECO:0007165 ! growth hormone exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 CHEBI:29362 ! ethylene group
 
 [Term]
 id: PECO:0007074
@@ -154,6 +3660,8 @@ def: "A growth hormone exposure (PECO:0007165) involving the use of JA (or its h
 synonym: "JA regimen" RELATED []
 synonym: "jasmonic acid treatment" NARROW []
 is_a: PECO:0007165 ! growth hormone exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 CHEBI:18292 ! jasmonic acid
 
 [Term]
 id: PECO:0007085
@@ -183,6 +3691,8 @@ def: "A growth hormone exposure (PECO:0007165) involving the use of abscisic aci
 synonym: "ABA regimen" RELATED []
 synonym: "abscisic acid treatment" NARROW []
 is_a: PECO:0007165 ! growth hormone exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 CHEBI:22152 ! 2-cis-abscisic acid
 
 [Term]
 id: PECO:0007107
@@ -191,6 +3701,8 @@ def: "A fungal plant exposure (PECO:0007233) involving the exposure of plant to 
 synonym: "ascomycetes" RELATED []
 synonym: "Ascomycota treatment" NARROW []
 is_a: PECO:0007233 ! fungal plant exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 NCBITaxon:4890 ! Ascomycota
 
 [Term]
 id: PECO:0007109
@@ -206,6 +3718,8 @@ def: "Treatment involving the exposure of plant to the pathogenic double strande
 synonym: "dsRNA nonenveloped viruses" RELATED []
 synonym: "dsRNA virus treatment" NARROW []
 is_a: PECO:0007210 ! virus plant exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 NCBITaxon:35325 ! dsRNA viruses
 
 [Term]
 id: PECO:0007114
@@ -292,6 +3806,8 @@ def: "A physical plant exposure (PECO:0007316) involving an exposure with a radi
 synonym: "light regimen" RELATED []
 synonym: "radiation treatment" NARROW []
 is_a: PECO:0007316 ! physical plant exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 CHEBI:30212 ! photon
 
 [Term]
 id: PECO:0007154
@@ -359,6 +3875,8 @@ synonym: "Weedar 64A" RELATED [CAS:94-75-7]
 synonym: "Weedone-2,4-DP" RELATED [CAS:94-75-7]
 is_a: PECO:0007074 ! auxin exposure
 is_a: PECO:0007183 ! herbicide exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 CHEBI:19351 ! (2,4-dichlorophenoxy)acetate
 
 [Term]
 id: PECO:0007183
@@ -373,6 +3891,8 @@ name: salt exposure
 def: "A chemical exposure (PECO:0007189) involving use of salts as supplement to liquid and soil growth media to study various types of responses on their application." [GR:pj]
 synonym: "salt treatment" NARROW []
 is_a: PECO:0007189 ! chemical exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 CHEBI:24866 ! salt
 
 [Term]
 id: PECO:0007189
@@ -442,6 +3962,8 @@ synonym: "Cochliobolus miyabeanus treatment" NARROW []
 synonym: "Dreschlera oryzae" RELATED []
 synonym: "Helminthosporium oryzae" RELATED []
 is_a: PECO:0007055 ! Cochliobolus spp. exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 NCBITaxon:101162 ! Bipolaris oryzae
 
 [Term]
 id: PECO:0007212
@@ -488,6 +4010,8 @@ synonym: "Pyricularia grisea" RELATED []
 synonym: "Pyricularia oryzae" RELATED []
 synonym: "rice blast fungus" RELATED []
 is_a: PECO:0007135 ! Magnaporthe spp. exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 NCBITaxon:148305 ! Magnaporthe grisea
 
 [Term]
 id: PECO:0007228
@@ -504,6 +4028,8 @@ synonym: "Fusarium fujikuroi" RELATED []
 synonym: "Fusarium moniliforme" RELATED []
 synonym: "Gibberella fujikuroi treatment" NARROW []
 is_a: PECO:0007341 ! Fusarium exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 NCBITaxon:117187 ! Fusarium verticillioides
 
 [Term]
 id: PECO:0007230
@@ -604,6 +4130,8 @@ name: oxygen exposure
 def: "The treatment involving exposure of plant to oxygen to study various types of responses." [GR:pj]
 synonym: "oxygen treatment" NARROW []
 is_a: PECO:0007043 ! non-mineral nutrient exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 CHEBI:25805 ! oxygen atom
 
 [Term]
 id: PECO:0007284
@@ -718,6 +4246,8 @@ def: "The treatment involving exposure of plant to the rice yellow mottle virus.
 synonym: "rice yellow mottle virus treatment" NARROW []
 synonym: "RYMV" RELATED []
 is_a: PECO:0007109 ! ssRNA positive-strand virus with no DNA stage exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 NCBITaxon:31744 ! Rice yellow mottle virus
 
 [Term]
 id: PECO:0007333
@@ -727,6 +4257,8 @@ synonym: "insect" RELATED []
 synonym: "insect plant treatment" NARROW []
 synonym: "true insects" RELATED []
 is_a: PECO:0007349 ! metazoan plant exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 NCBITaxon:50557 ! Insecta
 
 [Term]
 id: PECO:0007337
@@ -736,6 +4268,8 @@ synonym: "Nematoda treatment" NARROW []
 synonym: "round worm" RELATED []
 synonym: "roundworm" RELATED []
 is_a: PECO:0007349 ! metazoan plant exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 NCBITaxon:6231 ! Nematoda
 
 [Term]
 id: PECO:0007341
@@ -744,6 +4278,8 @@ def: "The treatment involving exposure of plant to the pathogenic Fusarium spp. 
 synonym: "Fusarium spp." RELATED []
 synonym: "Fusarium treatment" NARROW []
 is_a: PECO:0007118 ! Gibberella spp. exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 NCBITaxon:5506 ! Fusarium
 
 [Term]
 id: PECO:0007349
@@ -752,6 +4288,8 @@ def: "A biotic plant exposure (PECO:0007357) involving exposure of a plant to a 
 synonym: "Animalia" RELATED []
 synonym: "metazoan plant treatment" NARROW []
 is_a: PECO:0007357 ! biotic plant exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 NCBITaxon:33208 ! Metazoa
 
 [Term]
 id: PECO:0007357
@@ -787,6 +4325,8 @@ synonym: "Magnaporthe salvinii treatment" NARROW []
 synonym: "Nakataea sigmoidae" RELATED []
 synonym: "Sclerotium oryzae" RELATED []
 is_a: PECO:0007135 ! Magnaporthe spp. exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 NCBITaxon:165778 ! Nakataea oryzae
 
 [Term]
 id: PECO:0007371
@@ -795,6 +4335,8 @@ def: "The treatment involving exposure of plant to the pest Meloidogyne oryzae. 
 synonym: "Meloidogyne javanica treatment" NARROW []
 synonym: "root-knot nematode" RELATED []
 is_a: PECO:0007127 ! Meloidogyne spp. exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 NCBITaxon:6303 ! Meloidogyne javanica
 
 [Term]
 id: PECO:0007372
@@ -803,6 +4345,8 @@ def: "The treatment involving exposure of plant to the pest Meloidogyne oryzae. 
 synonym: "Meloidogyne incognita treatment" NARROW []
 synonym: "southern root-knot nematode" RELATED []
 is_a: PECO:0007127 ! Meloidogyne spp. exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 NCBITaxon:6306 ! Meloidogyne incognita
 
 [Term]
 id: PECO:0007387
@@ -819,6 +4363,8 @@ synonym: "deep water" RELATED []
 synonym: "flood prone region treatment" NARROW []
 synonym: "flooding" RELATED []
 is_a: PECO:0007064 ! ecological environment exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 ENVO:02500002 ! flooding
 
 [Term]
 id: PECO:0007397
@@ -839,6 +4385,8 @@ name: nitrate exposure
 synonym: "nitrate treatment" NARROW []
 is_a: PECO:0001009 ! inorganic anion exposure
 is_a: PECO:0007102 ! nitrogen fertilizer exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 CHEBI:17632 ! nitrate
 
 [Term]
 id: PECO:0007409
@@ -846,6 +4394,17 @@ name: brassinosteroid exposure
 def: "A growth hormone exposure (PECO:0007165) involving the use of brassinosteroid (or its homolog) growth hormone to study various types of responses on its extrinsic and/or intrinsic application." [TO:moorel]
 synonym: "brassinosteroid treatment" NARROW []
 is_a: PECO:0007165 ! growth hormone exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 CHEBI:22921 ! brassinosteroid
+
+[Term]
+id: PECO:0007629
+name: hydrogen exposure
+def: "The treatment involving exposure of plant to molecular or ionic forms of hydrogen to study various types of responses." [GR:pj]
+synonym: "hydrogen treatment" NARROW []
+is_a: PECO:0007043 ! non-mineral nutrient exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 CHEBI:49637 ! hydrogen atom
 
 [Term]
 id: PECO:0007632
@@ -860,4 +4419,482 @@ name: imidazolinone exposure
 def: "An herbicide exposure (PECO:0007183) involving the use of an imidazolinone herbicide." [TO:moorel, web:http\://corn.agronomy.wisc.edu/AAdvice/1994/A001.html]
 synonym: "imidazolinone treatment" NARROW []
 is_a: PECO:0007183 ! herbicide exposure
+intersection_of: PECO:0001001 ! plant exposure
+intersection_of: RO:0002244 CHEBI:24781 ! imidazolinone
+
+[Term]
+id: RO:0002577
+name: system
+def: "A material entity consisting of multiple components that are causally integrated." []
+is_a: BFO:0000040 ! material entity
+
+[Typedef]
+id: BFO:0000050
+is_transitive: true
+is_a: RO:0002131
+inverse_of: BFO:0000051
+
+[Typedef]
+id: BFO:0000051
+is_transitive: true
+is_a: RO:0002131
+
+[Typedef]
+id: BFO:0000062
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+holds_over_chain: BFO:0000050 BFO:0000062
+is_transitive: true
+is_a: RO:0002086
+inverse_of: BFO:0000063
+
+[Typedef]
+id: BFO:0000063
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+holds_over_chain: BFO:0000050 BFO:0000063
+is_transitive: true
+is_a: RO:0002222
+
+[Typedef]
+id: BFO:0000066
+domain: BFO:0000003 ! occurrent
+range: BFO:0000004 ! independent continuant
+holds_over_chain: BFO:0000050 BFO:0000066
+inverse_of: BFO:0000067
+transitive_over: BFO:0000050
+
+[Typedef]
+id: RO:0000052
+is_a: RO:0002314
+inverse_of: RO:0000053
+
+[Typedef]
+id: RO:0000053
+range: BFO:0000020 ! specifically dependent continuant
+
+[Typedef]
+id: RO:0000056
+domain: BFO:0000002 ! continuant
+range: BFO:0000003 ! occurrent
+inverse_of: RO:0000057
+
+[Typedef]
+id: RO:0000057
+domain: BFO:0000003 ! occurrent
+range: BFO:0000002 ! continuant
+holds_over_chain: BFO:0000051 RO:0000057
+
+[Typedef]
+id: RO:0000080
+is_a: RO:0000052
+inverse_of: RO:0000086
+
+[Typedef]
+id: RO:0000086
+range: BFO:0000019 ! quality
+is_a: RO:0000053
+
+[Typedef]
+id: RO:0001015
+is_transitive: true
+inverse_of: RO:0001025
+
+[Typedef]
+id: RO:0001018
+domain: BFO:0000040 ! material entity
+range: BFO:0000004 ! independent continuant
+holds_over_chain: RO:0001025 BFO:0000050
+inverse_of: RO:0001019
+
+[Typedef]
+id: RO:0001025
+is_transitive: true
+
+[Typedef]
+id: RO:0002013
+is_a: RO:0002017
+is_a: RO:0002334
+
+[Typedef]
+id: RO:0002014
+is_a: RO:0002013
+is_a: RO:0002335
+
+[Typedef]
+id: RO:0002015
+is_a: RO:0002013
+is_a: RO:0002336
+
+[Typedef]
+id: RO:0002017
+is_a: RO:0002018
+
+[Typedef]
+id: RO:0002018
+is_a: RO:0002180
+
+[Typedef]
+id: RO:0002019
+domain: GO:0004872 ! receptor activity
+is_a: RO:0002233
+
+[Typedef]
+id: RO:0002022
+is_a: RO:0002334
+inverse_of: RO:0002578
+
+[Typedef]
+id: RO:0002023
+is_a: RO:0002022
+inverse_of: RO:0002630
+
+[Typedef]
+id: RO:0002024
+is_a: RO:0002022
+inverse_of: RO:0002629
+
+[Typedef]
+id: RO:0002025
+is_functional: true
+is_a: RO:0002017
+is_a: RO:0002211
+
+[Typedef]
+id: RO:0002086
+is_transitive: true
+is_a: RO:0002222
+
+[Typedef]
+id: RO:0002087
+is_a: BFO:0000062
+inverse_of: RO:0002090
+
+[Typedef]
+id: RO:0002090
+is_a: BFO:0000063
+
+[Typedef]
+id: RO:0002131
+holds_over_chain: BFO:0000050 BFO:0000050
+holds_over_chain: BFO:0000051 BFO:0000050 {http://purl.obolibrary.org/obo/RO_0002582="true"}
+holds_over_chain: BFO:0000051 RO:0002131
+is_a: RO:0002323
+
+[Typedef]
+id: RO:0002180
+is_a: BFO:0000051
+
+[Typedef]
+id: RO:0002211
+domain: BFO:0000015 ! process
+range: BFO:0000015 ! process
+holds_over_chain: RO:0002578 RO:0002578
+is_transitive: true
+is_a: RO:0002411
+inverse_of: RO:0002334
+
+[Typedef]
+id: RO:0002212
+is_a: RO:0002211
+is_a: RO:0002305
+inverse_of: RO:0002335
+
+[Typedef]
+id: RO:0002213
+holds_over_chain: RO:0002212 RO:0002212
+is_transitive: true
+is_a: RO:0002211
+is_a: RO:0002304
+inverse_of: RO:0002336
+
+[Typedef]
+id: RO:0002215
+domain: BFO:0000004 ! independent continuant
+range: BFO:0000015 ! process
+is_a: RO:0002216
+
+[Typedef]
+id: RO:0002216
+holds_over_chain: RO:0002215 BFO:0000050 {http://purl.obolibrary.org/obo/RO_0002582="true"}
+is_a: RO:0002328
+is_a: RO:0002500
+
+[Typedef]
+id: RO:0002222
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+
+[Typedef]
+id: RO:0002233
+domain: BFO:0000015 ! process
+range: BFO:0000040 ! material entity
+is_a: RO:0000057
+inverse_of: RO:0002352
+
+[Typedef]
+id: RO:0002263
+holds_over_chain: RO:0002327 RO:0002411
+is_a: RO:0002264
+
+[Typedef]
+id: RO:0002264
+holds_over_chain: RO:0002327 RO:0002418
+is_a: RO:0002500
+
+[Typedef]
+id: RO:0002304
+is_a: RO:0002411
+
+[Typedef]
+id: RO:0002305
+is_a: RO:0002411
+
+[Typedef]
+id: RO:0002314
+holds_over_chain: RO:0000052 BFO:0000050 {http://purl.obolibrary.org/obo/RO_0002582="true"}
+is_a: RO:0002502
+transitive_over: BFO:0000050
+
+[Typedef]
+id: RO:0002327
+is_a: RO:0002215
+inverse_of: RO:0002333
+transitive_over: BFO:0000051
+transitive_over: RO:0002017
+
+[Typedef]
+id: RO:0002329
+holds_over_chain: BFO:0000050 RO:0002215 {http://purl.obolibrary.org/obo/RO_0002581="true"}
+is_a: RO:0002328
+
+[Typedef]
+id: RO:0002331
+holds_over_chain: RO:0002327 BFO:0000050
+is_a: RO:0002431
+transitive_over: BFO:0000050
+
+[Typedef]
+id: RO:0002333
+is_a: RO:0002328
+
+[Typedef]
+id: RO:0002334
+domain: BFO:0000015 ! process
+range: BFO:0000015 ! process
+is_transitive: true
+is_a: RO:0002427
+
+[Typedef]
+id: RO:0002335
+is_a: RO:0002334
+
+[Typedef]
+id: RO:0002336
+is_a: RO:0002334
+
+[Typedef]
+id: RO:0002352
+is_a: RO:0000056
+is_a: RO:0002328
+
+[Typedef]
+id: RO:0002404
+is_a: BFO:0000062
+is_a: RO:0002427
+inverse_of: RO:0002411
+
+[Typedef]
+id: RO:0002405
+is_a: RO:0002087
+is_a: RO:0002404
+inverse_of: RO:0002412
+
+[Typedef]
+id: RO:0002410
+is_a: RO:0002609
+
+[Typedef]
+id: RO:0002411
+is_transitive: true
+is_a: BFO:0000063
+is_a: RO:0002418
+
+[Typedef]
+id: RO:0002412
+is_a: RO:0002090
+is_a: RO:0002411
+
+[Typedef]
+id: RO:0002418
+is_transitive: true
+is_a: RO:0002501
+inverse_of: RO:0002427
+
+[Typedef]
+id: RO:0002427
+is_transitive: true
+is_a: RO:0002501
+
+[Typedef]
+id: RO:0002428
+holds_over_chain: RO:0002327 RO:0002211
+holds_over_chain: RO:0002331 RO:0002211
+is_a: RO:0002263
+is_a: RO:0002431
+
+[Typedef]
+id: RO:0002429
+holds_over_chain: RO:0002327 RO:0002213
+holds_over_chain: RO:0002331 RO:0002213
+is_a: RO:0002428
+
+[Typedef]
+id: RO:0002430
+holds_over_chain: RO:0002327 RO:0002212
+holds_over_chain: RO:0002331 RO:0002212
+is_a: RO:0002428
+
+[Typedef]
+id: RO:0002431
+is_a: RO:0002264
+is_a: RO:0002328
+is_a: RO:0002500
+
+[Typedef]
+id: RO:0002432
+holds_over_chain: RO:0002327 BFO:0000066 {http://purl.obolibrary.org/obo/RO_0002581="true"}
+is_a: RO:0002131
+is_a: RO:0002328
+
+[Typedef]
+id: RO:0002434
+domain: BFO:0000040 ! material entity
+range: BFO:0000040 ! material entity
+is_symmetric: true
+
+[Typedef]
+id: RO:0002436
+is_symmetric: true
+is_a: RO:0002434
+
+[Typedef]
+id: RO:0002448
+is_a: RO:0002436
+is_a: RO:0002566
+
+[Typedef]
+id: RO:0002449
+is_a: RO:0002448
+
+[Typedef]
+id: RO:0002450
+is_a: RO:0002448
+
+[Typedef]
+id: RO:0002473
+is_a: BFO:0000051
+
+[Typedef]
+id: RO:0002479
+domain: BFO:0000003 ! occurrent
+range: BFO:0000004 ! independent continuant
+holds_over_chain: BFO:0000051 BFO:0000066 {http://purl.obolibrary.org/obo/RO_0002581="true"}
+
+[Typedef]
+id: RO:0002500
+is_a: RO:0002595
+inverse_of: RO:0002608
+
+[Typedef]
+id: RO:0002501
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+is_a: RO:0002410
+
+[Typedef]
+id: RO:0002506
+domain: BFO:0000040 ! material entity
+range: BFO:0000040 ! material entity
+is_a: RO:0002410
+
+[Typedef]
+id: RO:0002507
+domain: RO:0002577 ! system
+range: BFO:0000040 ! material entity
+is_a: BFO:0000050
+is_a: RO:0002509
+is_a: RO:0002559
+inverse_of: RO:0002508
+
+[Typedef]
+id: RO:0002508
+is_a: RO:0002566
+
+[Typedef]
+id: RO:0002509
+domain: RO:0002577 ! system
+range: BFO:0000040 ! material entity
+holds_over_chain: RO:0002507 BFO:0000050 {http://purl.obolibrary.org/obo/RO_0002582="true"}
+is_a: RO:0002131
+is_a: RO:0002506
+
+[Typedef]
+id: RO:0002559
+is_a: RO:0002506
+inverse_of: RO:0002566
+
+[Typedef]
+id: RO:0002566
+is_a: RO:0002506
+
+[Typedef]
+id: RO:0002578
+is_a: RO:0002211
+is_a: RO:0002412
+
+[Typedef]
+id: RO:0002584
+holds_over_chain: BFO:0000051 RO:0002215
+is_a: RO:0002328
+is_a: RO:0002595
+
+[Typedef]
+id: RO:0002595
+domain: BFO:0000040 ! material entity
+range: BFO:0000015 ! process
+is_a: RO:0002410
+
+[Typedef]
+id: RO:0002596
+holds_over_chain: RO:0002215 RO:0002211
+is_a: RO:0002500
+
+[Typedef]
+id: RO:0002597
+holds_over_chain: RO:0002215 RO:0002212
+is_a: RO:0002596
+
+[Typedef]
+id: RO:0002598
+holds_over_chain: RO:0002215 RO:0002213
+is_a: RO:0002596
+
+[Typedef]
+id: RO:0002608
+is_a: RO:0002410
+
+[Typedef]
+id: RO:0002629
+is_a: RO:0002213
+is_a: RO:0002578
+
+[Typedef]
+id: RO:0002630
+is_a: RO:0002212
+is_a: RO:0002578
+
+[Typedef]
+id: is_conjugate_acid_of
+inverse_of: is_conjugate_base_of
 
