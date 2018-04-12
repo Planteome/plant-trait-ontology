@@ -15,7 +15,7 @@ prepare_release: all
 $(ONT).owl: $(SRC)
 	$(ROBOT)  reason -e none -i $< -r ELK relax reduce -r ELK annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 $(ONT).obo: $(ONT).owl
-	$(ROBOT) convert -i $< -f obo -o $(ONT).obo.tmp && grep -v '^owl-axioms:' $(ONT).obo.tmp > $@ && rm $(ONT).obo.tmp
+	$(ROBOT) convert -i $< -f obo --check false -o $(ONT).obo.tmp && grep -v '^owl-axioms:' $(ONT).obo.tmp > $@ && rm $(ONT).obo.tmp
 
 subsets/$(ONT)-basic.obo: $(ONT).owl
 	owltools --use-catalog $< --remove-imports-declarations --make-subset-by-properties -f BFO:0000050 --remove-dangling --remove-axioms -t EquivalentClasses --set-ontology-id $(OBO)/subsets/$(ONT)-basic.owl -o -f obo $@.tmp && mv $@.tmp $@
@@ -34,7 +34,7 @@ imports/%_import.owl: mirror/%.owl imports/%_terms.txt
 .PRECIOUS: imports/%_import.owl
 
 imports/%_import.obo: imports/%_import.owl
-	$(ROBOT) convert -i $< -f obo -o $@ 
+	$(ROBOT) convert -i $< -f obo --check false -o $@
 
 # clone remote ontology locally, perfoming some excision of relations and annotations
 mirror/%.obo: $(SRC) 
@@ -127,7 +127,7 @@ PATTERNS += $(patsubst %.tsv, --input %_pattern.owl, $(wildcard patterns/ratio/*
 
 merge:
 	$(ROBOT) merge --input patterns/empty_pattern.owl $(PATTERNS) --output patterns/merge_patterns.owl
-	$(ROBOT) convert -i patterns/merge_patterns.owl -f obo -o patterns/merge_patterns.obo
+	$(ROBOT) convert -i patterns/merge_patterns.owl -f obo --check false -o patterns/merge_patterns.obo
 
 #print var function
 print-%:
