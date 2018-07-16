@@ -13,10 +13,6 @@ Or via http://planteome.org/
 
 All releases can be found here:  https://github.com/Planteome/plant-trait-ontology/releases 	
 
-# Ontology Editors Guide
-
-See [README-editors](README-editors.md)
-
 
 
 
