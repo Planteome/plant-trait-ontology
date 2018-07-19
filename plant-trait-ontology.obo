@@ -495,7 +495,7 @@ is_a: TO:0000398 ! whole plant morphology trait
 [Term]
 id: TO:0000065
 name: root color
-def: "The color of the root." [Gramene:pankaj_jaiswal]
+def: "A root morphology trait (TO:0000043) which is the color of a root (PO:0009005)." [Gramene:pankaj_jaiswal]
 synonym: "RTCL (related)" RELATED []
 is_a: TO:0000043 ! root morphology trait
 
@@ -1605,7 +1605,6 @@ id: TO:0000198
 name: rootless
 def: "Absence of roots in the seedling or plant." [Gramene:pankaj_jaiswal]
 synonym: "RTMIN (related)" RELATED []
-is_a: TO:0000043 ! root morphology trait
 is_a: TO:0000656 ! root development trait
 
 [Term]
@@ -1854,7 +1853,7 @@ is_a: TO:0002717 ! leaf sheath auricle morphology trait
 [Term]
 id: TO:0000227
 name: root length
-def: "A root morphology trait (TO:0000043) which is the length of one or more roots (PO:0009005)." [Gramene:jcl\nGR\:pj, TO:austin_meier\nTO\:cooperl]
+def: "A root morphology trait (TO:0000043) which is the length of a root (PO:0009005)." [Gramene:jcl\nGR\:pj, TO:austin_meier\nTO\:cooperl]
 comment: refer to PATO:0000122- A 1-D extent quality which is equal to the distance between two points.
 synonym: "maximum root depth (related)" RELATED []
 synonym: "maximum root length (related)" RELATED []
@@ -1906,7 +1905,8 @@ is_a: TO:0000580 ! cytoplasmic male sterility
 [Term]
 id: TO:0000233
 name: root volume
-def: "Is an indirect measure of root mass or density. Quantified in terms of cubic centimeters by water displacement method." [GR_REF:6917, Gramene:pankaj_jaiswal]
+def: "A root morphology trait (TO:0000043) which is the volume of a root (PO:0009005)." [GR_REF:6917, Gramene:pankaj_jaiswal]
+comment: Root volume is an indirect measure of root mass or density and can be quantified by water displacement method, in cubic centimeters.
 synonym: "RTVOL (related)" RELATED []
 is_a: TO:0000043 ! root morphology trait
 
@@ -2262,7 +2262,8 @@ is_a: TO:0000043 ! root morphology trait
 [Term]
 id: TO:0000279
 name: root weight
-def: "The average dry or fresh weight of the root determined in a study." [Gramene:pankaj_jaiswal]
+def: "A root morphology trait (TO:0000043) which is the weight of a root (PO:0009005)." [Gramene:pankaj_jaiswal]
+comment: Root weight may be measured as the average dry or fresh weight of roots.
 synonym: "RTWT (related)" RELATED []
 synonym: "total root weight (related)" RELATED []
 synonym: "TRW (related)" RELATED []
@@ -2507,7 +2508,8 @@ is_a: TO:0000598 ! protein content
 [Term]
 id: TO:0000306
 name: root thickness
-def: "The average thickness of roots." [Gramene:jcl, Gramene:pankaj_jaiswal]
+def: "A root morphology trait (TO:0000043) which is the thickness of a root (PO:0009005)." [Gramene:jcl, Gramene:pankaj_jaiswal, TO:cooperl]
+comment: Root thickness may be calculated as an average of several roots.
 synonym: "RTTH (related)" RELATED []
 is_a: TO:0000043 ! root morphology trait
 
@@ -9438,13 +9440,13 @@ is_a: TO:0000075 ! light sensitivity
 id: TO:0002651
 name: shoot axis phototropism response trait
 def: "A phototropism response trait (TO:0002650) which is the directional growth of a shoot axis (PO:0025029) in response to light." [Gramene:pankaj_jaiswal, PMID:15598797]
-is_a: TO:0002650 ! phototropism
+is_a: TO:0002650 ! phototropism response trait
 
 [Term]
 id: TO:0002652
 name: root phototropism response trait
 def: "A phototropism response trait (TO:0002650) which which is the directional growth of a root (PO:0009005) in response to light." [Gramene:pankaj_jaiswal, PMID:15598797]
-is_a: TO:0002650 ! phototropism
+is_a: TO:0002650 ! phototropism response trait
 
 [Term]
 id: TO:0002653
@@ -9539,7 +9541,8 @@ is_a: TO:0000326 ! leaf color
 [Term]
 id: TO:0002665
 name: root hair length
-def: "Average maximum length of the root hair present in the root of a plant in a study." [Gramene:pankaj_jaiswal]
+def: "A root morphology trait (TO:0000043) which is the length of a root hair (GO:0035618) present on a root (PO:0009005)." [Gramene:pankaj_jaiswal]
+comment: Root hair length can be calculated as the average maximum length of the root hairs present.
 synonym: "RTHLG (related)" RELATED []
 synonym: "RTHRLG (related)" RELATED []
 is_a: TO:0000043 ! root morphology trait
@@ -9867,7 +9870,7 @@ is_a: TO:0000470 ! vascular tissue morphology trait
 [Term]
 id: TO:0002710
 name: root shape
-def: "The shape of the plant root system." [Gramene:pankaj_jaiswal]
+def: "A root morphology trait (TO:0000043) which is the shape of a root (PO:0009005)." [Gramene:pankaj_jaiswal] {comment="TO:cooperl"}
 is_a: TO:0000043 ! root morphology trait
 
 [Term]
@@ -11121,8 +11124,8 @@ creation_date: 2011-12-09T02:16:09Z
 [Term]
 id: TO:0012009
 name: continuous fluorescence yield
-is_a: TO:0012006 ! fluorescence related trait
 synonym: "F<sub>T</sub> (related)" RELATED []
+is_a: TO:0012006 ! fluorescence related trait
 created_by: jaiswalp
 creation_date: 2011-12-09T02:18:08Z
 
