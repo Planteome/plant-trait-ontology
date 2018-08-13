@@ -4729,11 +4729,11 @@ is_a: TO:0000396 ! grain yield trait
 [Term]
 id: TO:0000590
 name: dehulled grain weight
-def: "A fruit weight (TO:0002746) which is the weight of one or more dehulled grains." [Gramene:pankaj_jaiswal, TO:cooperl]
+def: "A grain weight (TO:0000919) which is the weight of one or more dehulled grains." [Gramene:pankaj_jaiswal, TO:cooperl]
 synonym: "DHULGRWT (related)" RELATED []
 synonym: "GRWT (related)" RELATED []
 xref: TO_GIT:242
-is_a: TO:0002746 ! fruit weight
+is_a: TO:0000919 ! grain weight
 
 [Term]
 id: TO:0000591
@@ -7730,9 +7730,10 @@ creation_date: 2013-06-19T10:18:46Z
 
 [Term]
 id: TO:0000919
-name: kernel weight
-def: "A fruit weight (TO:0002746) which is the weight of one or more kernels." [TO:cooperl]
+name: grain weight
+def: "A fruit weight (TO:0002746) which is the weight of one or more grains (caryopsis fruit PO:0030104)" [TO:cooperl]
 synonym: "20 kernel weight (narrow)" NARROW []
+synonym: "kernel weight (exact)" EXACT []
 synonym: "kwt (related)" RELATED [MaizeGDB:78154]
 xref: TO_GIT:242
 is_a: TO:0002746 ! fruit weight
@@ -7893,9 +7894,9 @@ creation_date: 2014-05-06T16:41:00Z
 [Term]
 id: TO:0000935
 name: kernel weight per ear
-def: "A kernel weight (TO:0000919) which is the total weight of all kernels on the primary ear infructescence (PO:0025597)." [MaizeGDB:Mary_Schaeffer, TO:cooperl]
 xref: OBO_S2F_TO:280
-is_a: TO:0000919 ! kernel weight
+is_a: TO:0000919 ! grain weight
+property_value: IAO:0000231 "A grain weight (TO:0000919) which is the total weight of all kernels on the primary ear infructescence (PO:0025597)." xsd:string {xref="MaizeGDB:Mary_Schaeffer", xref="TO:cooperl"}
 created_by: cooperl
 creation_date: 2014-06-27T08:27:30Z
 
