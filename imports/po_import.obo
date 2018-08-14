@@ -62,7 +62,6 @@ synonym: "vine (narrow)" NARROW []
 synonym: "woody clump (narrow)" NARROW [FNA:c1ccca7d-2a98-4a9d-8603-c34b551935e0]
 synonym: "植物体全体 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0009011 ! plant structure
-relationship: RO:0002160 NCBITaxon:33090 {source="cjm"} ! Viridiplantae
 
 [Term]
 id: PO:0000004
@@ -166,7 +165,7 @@ relationship: BFO:0000050 PO:0009025 ! vascular leaf
 
 [Term]
 id: PO:0000037
-name: shoot apex
+name: shoot axis apex
 def: "A shoot axis (PO:0025029) that is the most distal part of a shoot system (PO:0009006) and has as parts a shoot apical meristem (PO:0020148) and the youngest primordia (PO:0025127)." [POC:curators]
 synonym: "&#225pice del epiblasto (epiblastema) (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "シュート頂、茎頂 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
@@ -189,7 +188,7 @@ relationship: RO:0002202 PO:0025480 ! shoot-borne root primordium
 id: PO:0000043
 name: crown root
 def: "A shoot-borne nodal root (PO:0003005) formed at a stem base (PO:0008039)." [POC:Laurel_Cooper, TAIR_curator:Katica_Ilic]
-synonym: " adventitious root  (broad)" BROAD []
+synonym: "adventitious root  (broad)" BROAD []
 synonym: "ra&#237z en corona (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "冠根 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0003005 ! shoot-borne nodal root
@@ -1630,7 +1629,7 @@ name: higher order inflorescence axis
 def: "An inflorescence axis (PO:0020122) that develops from an inflorescence axillary meristem (PO:0009105) of an inflorescence axis (PO:0020122)." [NYBG:Brandon_Sinn, NYBG:Dario_Cavaliere, POC:Laurel_Cooper]
 synonym: "coflorescence (related)" RELATED []
 synonym: "conflorescencia (Spanish, broad)" BROAD [POC:Maria_Alejandra_Gandolfo]
-synonym: "inflorescence branch (exact)" EXACT [NYBG:Brandon T. Sinn, NYBG:Dario Cavaliere]
+synonym: "inflorescence branch (exact)" EXACT [NYBG:Brandon_Sinn, NYBG:Dario_Cavaliere]
 synonym: "paraclade (broad)" BROAD []
 synonym: "paraclado (Spanish, broad)" BROAD [POC:Maria_Alejandra_Gandolfo]
 synonym: "花序枝 (Japanese, related)" RELATED [NIG:Yukiko_Yamazaki]
@@ -1790,7 +1789,7 @@ is_a: PO:0020142 ! stem internode
 [Term]
 id: PO:0020038
 name: petiole
-def: "A stalk of a leaf." [APweb:Glossary, Gramene:Pankaj_Jaiswal]
+def: "A stalk (PO:0025066) of a vascular leaf (PO:0009025)." [APweb:Glossary, Gramene:Pankaj_Jaiswal]
 synonym: "pec&#237olo (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "葉柄 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0025066 ! stalk
@@ -1854,7 +1853,7 @@ relationship: BFO:0000050 PO:0020043 ! compound leaf
 [Term]
 id: PO:0020050
 name: petiolule
-def: "A stalk of a leaflet." [APweb:Glossary]
+def: "A stalk (PO:0009025) of a leaflet (PO:0020049)." [APweb:Glossary]
 synonym: "peciolulo (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "小葉柄 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0025066 ! stalk
@@ -2027,7 +2026,7 @@ synonym: "SAM (exact)" EXACT []
 synonym: "茎頂分裂組織 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0006079 ! shoot system meristem
 is_a: PO:0020144 ! apical meristem
-relationship: BFO:0000050 PO:0000037 ! shoot apex
+relationship: BFO:0000050 PO:0000037 ! shoot axis apex
 
 [Term]
 id: PO:0025001
@@ -2309,7 +2308,7 @@ synonym: "portion of phyllome primordium tissue (exact)" EXACT []
 synonym: "primordio del filoma (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "フィロム原基（可視的）  (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
 is_a: PO:0025127 ! primordium
-relationship: BFO:0000050 PO:0000037 ! shoot apex
+relationship: BFO:0000050 PO:0000037 ! shoot axis apex
 relationship: RO:0002202 PO:0025430 ! phyllome anlagen
 
 [Term]
@@ -2330,6 +2329,7 @@ name: plant anatomical entity
 def: "An anatomical entity that is or was part of a plant." [CARO:0000000, POC:curators]
 synonym: "entidad anat&#243mica vegetal (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "植物 解剖学（形態）的実体 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
+relationship: RO:0002160 NCBITaxon:33090 {source="cjm"} ! Viridiplantae
 
 [Term]
 id: PO:0025157
@@ -2474,7 +2474,7 @@ name: reproductive shoot apex
 def: "A shoot apex that has as part a reproductive shoot apical meristem." [POC:Ramona_Walls]
 synonym: "&#225pice reproductivo del epiblasto (epiblastema) (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "生殖シュート頂、茎頂 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
-is_a: PO:0000037 ! shoot apex
+is_a: PO:0000037 ! shoot axis apex
 
 [Term]
 id: PO:0025223
@@ -2482,7 +2482,7 @@ name: vegetative shoot apex
 def: "A shoot apex PO:0000037) that has as part a vegetative shoot apical meristem (PO:0008016)." [POC:Laurel_Cooper, POC:Ramona_Walls]
 synonym: "&#225pice vegetativo del epiblasto (epiblastema) (Spanish, exact)" EXACT Spanish [POC:Maria_Alejandra_Gandolfo]
 synonym: "栄養シュート頂、栄養枝頂 (Japanese, exact)" EXACT Japanese [NIG:Yukiko_Yamazaki]
-is_a: PO:0000037 ! shoot apex
+is_a: PO:0000037 ! shoot axis apex
 relationship: BFO:0000051 PO:0008016 ! vegetative shoot apical meristem
 
 [Term]

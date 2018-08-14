@@ -17,6 +17,31 @@ name: independent continuant
 def: "A continuant that is a bearer of quality and realizable entity entities, in which other entities inhere and which itself cannot inhere in anything." []
 def: "b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/017-002"}
 is_a: BFO:0000002 ! continuant
+disjoint_from: BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: BFO:0000019
+name: quality
+is_a: BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: BFO:0000020
+name: specifically dependent continuant
+def: "A continuant that inheres in or is borne by other entities. Every instance of A requires some specific instance of B which must always be the same." []
+def: "b is a relational specifically dependent continuant = Def. b is a specifically dependent continuant and there are n &gt; 1 independent continuants c1, … cn which are not spatial regions are such that for all 1  i &lt; j  n, ci  and cj share no common parts, are such that for each 1  i  n, b s-depends_on ci at every time t during the course of b’s existence (axiom label in BFO2 Reference: [131-004])" []
+def: "b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])" [] {http://purl.obolibrary.org/obo/IAO_0010000="http://purl.obolibrary.org/obo/bfo/axiom/050-003"}
+is_a: BFO:0000002 ! continuant
+
+[Term]
+id: BFO:0000024
+name: fiat object
+name: fiat object part
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: BFO:0000030
+name: object
+is_a: BFO:0000040 ! material entity
 
 [Term]
 id: BFO:0000040
@@ -25,9 +50,283 @@ def: "An independent continuant that is spatially extended whose identity is ind
 is_a: BFO:0000004 ! independent continuant
 
 [Term]
+id: ENVO:00000000
+name: geographic feature
+synonym: "macroscopic spatial feature" EXACT []
+is_a: ENVO:01000813 ! astronomical body part
+
+[Term]
+id: ENVO:00002297
+name: environmental feature
+def: "A material entity which determines an environmental system." [DOI:10.1186/2041-1480-4-43, NM:nm, ORCID:0000-0002-4366-3088]
+is_a: BFO:0000040 ! material entity
+intersection_of: BFO:0000040 ! material entity
+intersection_of: RO:0002508 ENVO:01000254 ! environmental system
+relationship: RO:0002508 ENVO:01000254 ! environmental system
+
+[Term]
 id: ENVO:00010483
 name: environmental material
+def: "A portion of environmental material is a fiat object part which forms the medium or part of the medium of an environmental system." [DOI:10.1186/2041-1480-4-43, MA:ma, ORCID:0000-0002-4366-3088, URL:http\://ontology.buffalo.edu/smith/articles/niches.html]
 def: "A portion of environmental material is a fiat object which forms the medium or part of the medium of an environmental system." [DOI:10.1186/2041-1480-4-43, MA:ma, ORCID:0000-0002-4366-3088, URL:http\://ontology.buffalo.edu/smith/articles/niches.html]
 synonym: "portion of environmental material" EXACT []
+is_a: BFO:0000024 ! fiat object
 is_a: BFO:0000040 ! material entity
+
+[Term]
+id: ENVO:01000254
+name: environmental system
+def: "A system which has the disposition to environ one or more material entities." [DOI:10.1186/2041-1480-4-43]
+synonym: "environment" EXACT []
+is_a: RO:0002577 ! system
+
+[Term]
+id: ENVO:01000281
+name: layer
+def: "A layer is a quantity of some material which is spatially continuous, has comparable thickness, and usually covers some surface." [Wiktionary:layer]
+is_a: ENVO:00000000 ! geographic feature
+relationship: RO:0000086 PATO:0002124 ! laminar
+
+[Term]
+id: ENVO:01000355
+name: vegetation layer
+def: "A layer which is determined by a form of vegetation." []
+synonym: "forest layer" RELATED []
+synonym: "forest stratum" RELATED []
+synonym: "woodland layer" RELATED []
+synonym: "woodland stratum" RELATED []
+is_a: ENVO:01000281 ! layer
+
+[Term]
+id: ENVO:01000637
+name: outer space
+def: "Outer space is a hard vacuum containing a low density of particles, predominantly a plasma of hydrogen and helium as well as electromagnetic radiation, magnetic fields, neutrinos, dust and cosmic rays that exists between celestial bodies." [https://en.wikipedia.org/wiki/Outer_space]
+synonym: "space" BROAD []
+is_a: ENVO:00002297 ! environmental feature
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01000799
+name: astronomical body
+def: "An object which is naturally occuring, bound together by gravitational or electromagnetic forces, and surrounded by space." [https://en.wikipedia.org/wiki/Astronomical_object]
+synonym: "celestial body" RELATED []
+is_a: ENVO:01000804 ! astronomical object
+
+[Term]
+id: ENVO:01000804
+name: astronomical object
+def: "An object which is composed of one or more gravitationally bound structures that are associated with a position in space." [https://en.wikipedia.org/wiki/Astronomical_object]
+synonym: "celestial object" RELATED []
+is_a: BFO:0000030 ! object
+is_a: ENVO:00002297 ! environmental feature
+relationship: BFO:0000051 ENVO:01000799 {minCardinality="1"} ! astronomical body
+relationship: RO:0002219 ENVO:01000637 ! outer space
+
+[Term]
+id: ENVO:01000813
+name: astronomical body part
+def: "A material part of an astronomical body." []
+is_a: BFO:0000024 ! fiat object
+is_a: ENVO:00002297 ! environmental feature
+relationship: BFO:0000050 ENVO:01000799 ! astronomical body
+relationship: RO:0000086 ENVO:01001164 ! geodiversity
+
+[Term]
+id: ENVO:01000998
+name: environmental system determined by a material
+def: "An environmental system within which an environmental material strongly influences the system's composition and properties." []
+is_a: ENVO:01000254 ! environmental system
+intersection_of: ENVO:01000254 ! environmental system
+intersection_of: RO:0002507 ENVO:00010483 ! environmental material
+relationship: RO:0002507 ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01001110
+name: ecosystem
+def: "An environmental system which includes both living and non-living components." [https://en.wikipedia.org/wiki/Ecosystem]
+is_a: ENVO:01000254 ! environmental system
+
+[Term]
+id: ENVO:01001164
+name: geodiversity
+def: "A quality which inheres in a astronomical body or astronomical body part by virtue of the variation in its material composition, participation in geological processes, and the variation in is land- and hydroforms." [https://en.wikipedia.org/wiki/Geodiversity]
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: ENVO:01001241
+name: crop canopy
+def: "A canopy which is composed of the aboveground portion, or crowns, of a community of crop plants." []
+is_a: ENVO:01001242 ! canopy
+relationship: BFO:0000050 ENVO:01001244 ! cropland ecosystem
+
+[Term]
+id: ENVO:01001242
+name: canopy
+def: "A vegetation layer which is formed by a collection of individual plant crowns, themselves constituting part of the aboveground portion of a plant community." [https://en.wikipedia.org/wiki/Canopy_%28biology%29]
+is_a: ENVO:01000355 ! vegetation layer
+
+[Term]
+id: ENVO:01001244
+name: cropland ecosystem
+def: "An ecosystem which is determined by communities of annual crops, perennial woody crops, or by actively tilled land." []
+is_a: ENVO:01001110 ! ecosystem
+
+[Term]
+id: PATO:0000001
+name: quality
+def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" [PATOC:GVG]
+synonym: "trait" EXACT []
+is_a: BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: PATO:0000051
+name: morphology
+def: "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure." []
+is_a: BFO:0000019 ! quality
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0000141
+name: structure
+def: "A morphology quality inhering in a bearer by virtue of the bearer's relative position, shape, arrangements and connectivity of an organism's various parts; the pattern underlying its form." []
+synonym: "conformation" BROAD []
+synonym: "relational structural quality" EXACT []
+is_a: PATO:0000051 ! morphology
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+def: "A quality which inheres in a continuant." [PATOC:GVG]
+synonym: "monadic quality of a continuant" EXACT []
+synonym: "monadic quality of an object" NARROW []
+synonym: "monadic quality of continuant" NARROW []
+synonym: "multiply inhering quality of a physical entity" EXACT []
+synonym: "quality of a continuant" EXACT []
+synonym: "quality of a single physical entity" EXACT []
+synonym: "quality of an object" EXACT []
+synonym: "quality of continuant" EXACT []
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0002124
+name: laminar
+def: "A quality inhering in a bearer by virtue of the bearer's processing the form of a thin plate sheet or layer." []
+is_a: PATO:0000141 ! structure
+
+[Term]
+id: RO:0002577
+name: system
+def: "A material entity consisting of multiple components that are causally integrated." []
+is_a: BFO:0000040 ! material entity
+
+[Typedef]
+id: BFO:0000050
+is_transitive: true
+is_a: RO:0002131
+inverse_of: BFO:0000051
+
+[Typedef]
+id: BFO:0000051
+is_transitive: true
+is_a: RO:0002131
+
+[Typedef]
+id: FOODON:00002420
+holds_over_chain: BFO:0000051 RO:0001000
+
+[Typedef]
+id: RO:0000052
+is_a: RO:0002314
+inverse_of: RO:0000053
+
+[Typedef]
+id: RO:0000053
+range: BFO:0000020 ! specifically dependent continuant
+
+[Typedef]
+id: RO:0000080
+is_a: RO:0000052
+inverse_of: RO:0000086
+
+[Typedef]
+id: RO:0000086
+range: BFO:0000019 ! quality
+is_a: RO:0000053
+
+[Typedef]
+id: RO:0001000
+is_reflexive: true
+inverse_of: RO:0001001
+
+[Typedef]
+id: RO:0002131
+holds_over_chain: BFO:0000050 BFO:0000050
+holds_over_chain: BFO:0000051 BFO:0000050 {http://purl.obolibrary.org/obo/RO_0002582="true"}
+holds_over_chain: BFO:0000051 RO:0002131
+is_a: RO:0002323
+
+[Typedef]
+id: RO:0002163
+is_a: RO:0002323
+
+[Typedef]
+id: RO:0002219
+is_a: RO:0002220
+inverse_of: RO:0002221
+
+[Typedef]
+id: RO:0002220
+domain: BFO:0000004 ! independent continuant
+range: BFO:0000004 ! independent continuant
+is_a: RO:0002163
+
+[Typedef]
+id: RO:0002221
+is_a: RO:0002220
+
+[Typedef]
+id: RO:0002314
+holds_over_chain: RO:0000052 BFO:0000050 {http://purl.obolibrary.org/obo/RO_0002582="true"}
+is_a: RO:0002502
+transitive_over: BFO:0000050
+
+[Typedef]
+id: RO:0002410
+is_a: RO:0002609
+
+[Typedef]
+id: RO:0002506
+domain: BFO:0000040 ! material entity
+range: BFO:0000040 ! material entity
+is_a: RO:0002410
+
+[Typedef]
+id: RO:0002507
+domain: RO:0002577 ! system
+range: BFO:0000040 ! material entity
+is_a: BFO:0000050
+is_a: RO:0002509
+is_a: RO:0002559
+inverse_of: RO:0002508
+
+[Typedef]
+id: RO:0002508
+is_a: RO:0002566
+
+[Typedef]
+id: RO:0002509
+domain: RO:0002577 ! system
+range: BFO:0000040 ! material entity
+holds_over_chain: RO:0002507 BFO:0000050 {http://purl.obolibrary.org/obo/RO_0002582="true"}
+is_a: RO:0002131
+is_a: RO:0002506
+
+[Typedef]
+id: RO:0002559
+is_a: RO:0002506
+inverse_of: RO:0002566
+
+[Typedef]
+id: RO:0002566
+is_a: RO:0002506
 

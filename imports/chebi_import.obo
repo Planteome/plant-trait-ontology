@@ -110,6 +110,15 @@ is_a: CHEBI:76567 ! polyunsaturated fatty acid anion
 relationship: is_conjugate_base_of CHEBI:25048 ! linolenic acid
 
 [Term]
+id: CHEBI:134179
+name: volatile organic compound
+def: "Any organic compound having an initial boiling point less than or equal to 250 degreeC (482 degreeF) measured at a standard atmospheric pressure of 101.3 kPa." []
+synonym: "VOC" RELATED [ChEBI]
+synonym: "VOCs" RELATED [ChEBI]
+synonym: "volatile organic compounds" RELATED [ChEBI]
+is_a: CHEBI:72695 ! organic molecule
+
+[Term]
 id: CHEBI:134361
 name: allylic alcohol
 def: "An alcohol where the hydroxy group is attached to a saturated carbon atom adjacent to a double bond (R groups may be H, organyl, etc.)." []
@@ -120,6 +129,7 @@ is_a: CHEBI:78840 ! olefinic compound
 [Term]
 id: CHEBI:134397
 name: tertiary allylic alcohol
+def: "An allylic alcohol in which the carbon atom that links the double bond to the hydroxy group is also attached to two other carbons (R4,R5 =/= H)." []
 synonym: "tertiary allylic alcohols" RELATED [ChEBI]
 is_a: CHEBI:134361 ! allylic alcohol
 is_a: CHEBI:26878 ! tertiary alcohol
@@ -224,7 +234,7 @@ is_a: CHEBI:23044 ! carotenoid
 id: CHEBI:139120
 name: carotenoid beta-end group
 def: "Any carotenoid derivative with an beta-end group" []
-synonym: "a carotenoid beta-end group" RELATED [UniProt]
+synonym: "a carotenoid beta-end derivative" RELATED [UniProt]
 is_a: CHEBI:23044 ! carotenoid
 
 [Term]
@@ -481,9 +491,9 @@ name: lycopene
 def: "An acyclic carotene commonly obtained from tomatoes and other red fruits." []
 synonym: "(6E,8E,10E,12E,14E,16E,18E,20E,22E,24E,26E)-2,6,10,14,19,23,27,31-octamethyldotriaconta-2,6,8,10,12,14,16,18,20,22,24,26,30-tridecaene" RELATED [ChEBI]
 synonym: "all-trans-lycopene" RELATED [ChemIDplus]
+synonym: "all-trans-lycopene" RELATED [UniProt]
 synonym: "LYCOPENE" EXACT [PDBeChem]
 synonym: "Lycopene" EXACT [KEGG_COMPOUND]
-synonym: "lycopene" EXACT [UniProt]
 synonym: "psi,psi-carotene" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:35162 ! acyclic carotene
 relationship: BFO:0000051 CHEBI:139114 ! carotenoid  psi-end group
@@ -532,6 +542,7 @@ synonym: "C18:1 n-9" RELATED [ChEBI]
 synonym: "cis-9-octadecenoic acid" RELATED [NIST_Chemistry_WebBook]
 synonym: "cis-Delta(9)-octadecenoic acid" RELATED [ChemIDplus]
 synonym: "cis-oleic acid" RELATED [ChEBI]
+synonym: "FA 18:1" RELATED [ChEBI]
 synonym: "Octadec-9-enoic acid" RELATED [ChEMBL]
 synonym: "Oelsaeure" RELATED [ChEBI]
 synonym: "Oleate" RELATED [KEGG_COMPOUND]
@@ -929,6 +940,7 @@ synonym: "spirit of wood" RELATED [HMDB]
 synonym: "wood alcohol" RELATED [ChemIDplus]
 synonym: "wood naphtha" RELATED [ChemIDplus]
 synonym: "wood spirit" RELATED [NIST_Chemistry_WebBook]
+is_a: CHEBI:134179 ! volatile organic compound
 is_a: CHEBI:15734 ! primary alcohol
 is_a: CHEBI:50584 ! alkyl alcohol
 is_a: CHEBI:64708 ! one-carbon compound
@@ -1011,9 +1023,9 @@ name: ethene
 synonym: "Aethen" RELATED [ChEBI]
 synonym: "Aethylen" RELATED [ChEBI]
 synonym: "CH2=CH2" RELATED [IUPAC]
+synonym: "ethene" EXACT [UniProt]
 synonym: "ethene" EXACT IUPAC_NAME [IUPAC]
 synonym: "Ethylene" RELATED [KEGG_COMPOUND]
-synonym: "ethylene" RELATED [UniProt]
 synonym: "H2C=CH2" RELATED [ChEBI]
 synonym: "R-1150" RELATED [ChEBI]
 is_a: CHEBI:138675 ! gas molecular entity
@@ -1818,7 +1830,6 @@ is_a: CHEBI:23677 ! diazole
 [Term]
 id: CHEBI:24781
 name: imidazolinone
-synonym: "imidazolinone" EXACT [ChEBI]
 is_a: CHEBI:20432 ! imidazolone
 is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 
@@ -2481,14 +2492,11 @@ is_a: CHEBI:26079 ! phosphoric acid derivative
 [Term]
 id: CHEBI:26044
 name: phosphinic acids
-synonym: "phosphinic acids" EXACT [ChEBI]
-synonym: "phosphinic acids" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:36360 ! phosphorus oxoacids and derivatives
 
 [Term]
 id: CHEBI:26045
 name: phosphite ion
-synonym: "phosphite ions" RELATED [ChEBI]
 is_a: CHEBI:33461 ! phosphorus oxoanion
 
 [Term]
@@ -2527,8 +2535,6 @@ relationship: RO:0000087 CHEBI:84735 ! algal metabolite
 [Term]
 id: CHEBI:26079
 name: phosphoric acid derivative
-synonym: "phosphoric acid derivatives" RELATED [ChEBI]
-synonym: "phosphoric acids" RELATED [ChEBI]
 is_a: CHEBI:36359 ! phosphorus oxoacid derivative
 relationship: has_functional_parent CHEBI:26078 ! phosphoric acid
 
@@ -2576,7 +2582,6 @@ is_a: CHEBI:33822 ! organic hydroxy compound
 [Term]
 id: CHEBI:26196
 name: polyphenylpropanoid
-synonym: "polyphenylpropanoids" RELATED [ChEBI]
 is_a: CHEBI:26004 ! phenylpropanoid
 
 [Term]
@@ -3190,7 +3195,7 @@ relationship: RO:0000087 CHEBI:27027 ! micronutrient
 [Term]
 id: CHEBI:28102
 name: amylose
-def: "A glucan composed of unbranched chains of D-glucopyranose residues in alpha(1->4) glycosidic linkage." []
+def: "A glucan composed of unbranched chains of D-glucopyranose residues in alpha(1->4) glycosidic linkage. The number of repeated glucose subunits (n) is usually in the range of 300 to 3000, but can be many thousands. One of the two components of starch (the other, 70-80%, being amylopectin). Cf. linear maltodextrin, in which the chain length is typically between 3 and 17 glucose units." []
 synonym: "(1,4-alpha-D-Glucosyl)n" RELATED [KEGG_COMPOUND]
 synonym: "(1,4-alpha-D-Glucosyl)n+1" RELATED [KEGG_COMPOUND]
 synonym: "(1,4-alpha-D-Glucosyl)n-1" RELATED [KEGG_COMPOUND]
@@ -4971,10 +4976,10 @@ is_a: CHEBI:33822 ! organic hydroxy compound
 [Term]
 id: CHEBI:33856
 name: aromatic amino acid
+def: "An amino acid whose structure includes an aromatic ring." []
 synonym: "Aromatic amino acid" EXACT [KEGG_COMPOUND]
 synonym: "aromatic amino acid" EXACT [UniProt]
 synonym: "aromatic amino acids" RELATED [ChEBI]
-synonym: "Aromatic L-amino acid" RELATED [KEGG_COMPOUND]
 is_a: CHEBI:33659 ! organic aromatic compound
 is_a: CHEBI:33709 ! amino acid
 relationship: is_conjugate_acid_of CHEBI:63473 ! aromatic amino-acid anion
@@ -5010,7 +5015,6 @@ is_a: CHEBI:18133 ! hexose
 [Term]
 id: CHEBI:33937
 name: macronutrient
-synonym: "macronutrients" RELATED [ChEBI]
 is_a: CHEBI:33284 ! nutrient
 
 [Term]
@@ -5696,7 +5700,6 @@ relationship: has_functional_parent CHEBI:33457 ! phosphorus oxoacid
 [Term]
 id: CHEBI:36360
 name: phosphorus oxoacids and derivatives
-synonym: "phosphorus oxoacids and derivatives" EXACT [ChEBI]
 is_a: CHEBI:26082 ! phosphorus molecular entity
 
 [Term]
@@ -6271,16 +6274,11 @@ is_a: CHEBI:35757 ! monocarboxylic acid anion
 [Term]
 id: CHEBI:38496
 name: electron-transport chain inhibitor
-synonym: "electron transport chain inhibitors" RELATED [ChEBI]
-synonym: "ETC inhibitor" RELATED [ChEBI]
 is_a: CHEBI:76932 ! pathway inhibitor
 
 [Term]
 id: CHEBI:38497
 name: respiratory-chain inhibitor
-synonym: "respiratory chain inhibitor" RELATED [ChEBI]
-synonym: "respiratory electron-transport chain inhibitor" RELATED [ChEBI]
-synonym: "respiratory-chain inhibitors" RELATED [ChEBI]
 is_a: CHEBI:38496 ! electron-transport chain inhibitor
 
 [Term]
@@ -6387,8 +6385,6 @@ is_a: CHEBI:39128 ! magnesium ion
 [Term]
 id: CHEBI:39128
 name: magnesium ion
-synonym: "magnesium ion" EXACT [ChEBI]
-synonym: "magnesium ions" RELATED [ChEBI]
 is_a: CHEBI:33973 ! elemental magnesium
 
 [Term]
@@ -6688,16 +6684,12 @@ is_a: CHEBI:48354 ! polar solvent
 [Term]
 id: CHEBI:48359
 name: protophilic solvent
-synonym: "HBA solvent" RELATED [ChEBI]
-synonym: "hydrogen bond acceptor solvent" RELATED [ChEBI]
-synonym: "protophilic solvent" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:39142 ! Bronsted base
 is_a: CHEBI:48354 ! polar solvent
 
 [Term]
 id: CHEBI:48360
 name: amphiprotic solvent
-synonym: "amphiprotic solvent" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:48356 ! protic solvent
 is_a: CHEBI:48359 ! protophilic solvent
 
@@ -6809,6 +6801,7 @@ synonym: "organic amino compounds" RELATED [ChEBI]
 is_a: CHEBI:35352 ! organonitrogen compound
 is_a: CHEBI:50860 ! organic molecular entity
 relationship: has_parent_hydride CHEBI:16134 ! ammonia
+relationship: RO:0000087 CHEBI:39142 ! Bronsted base
 
 [Term]
 id: CHEBI:50103
@@ -6840,9 +6833,6 @@ is_a: CHEBI:23888 ! drug
 [Term]
 id: CHEBI:50312
 name: onium compound
-synonym: "onium compound" EXACT [ChEBI]
-synonym: "onium compounds" EXACT IUPAC_NAME [IUPAC]
-synonym: "onium compounds" RELATED [ChEBI]
 is_a: CHEBI:37577 ! heteroatomic molecular entity
 
 [Term]
@@ -7002,7 +6992,6 @@ is_a: CHEBI:33247 ! organic group
 [Term]
 id: CHEBI:51447
 name: organic univalent group
-synonym: "organic monovalent group" RELATED [ChEBI]
 is_a: CHEBI:33247 ! organic group
 
 [Term]
