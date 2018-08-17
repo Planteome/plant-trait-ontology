@@ -4728,58 +4728,60 @@ alt_id: TO:0000509
 def: "A grain weight (TO:0000919) which is the average weight of a grain (caryopsis fruit; PO:0030104), including the caryopsis hull (PO:0006000)." [Gramene:pankaj_jaiswal, TO:cooperl]
 comment: The average grain weight (TO:0000589) can be used to calculate the overall yield or produce from a field.
 xref: TO_GIT:245
-is_a: TO:0000919 ! caryopsis fruit weight
+is_a: TO:0000919 ! grain weight
 
 [Term]
 id: TO:0000590
 name: dehulled grain weight
-def: "A grain weight (TO:0000919) which is the weight of one or more dehulled grains." [Gramene:pankaj_jaiswal, TO:cooperl]
+def: "A grain weight (TO:0000919) which is the weight a dehulled grain (caryopsis fruit;  PO:0030104)." [Gramene:pankaj_jaiswal, TO:cooperl]
+comment: Dehulling is the process of removing the caryopsis hull (PO:0006000), which consists of a dried lemma (PO:0009037) and a dried palea (PO:0009037).
 synonym: "DHULGRWT (related)" RELATED []
-synonym: "GRWT (related)" RELATED []
+synonym: "GRWT (broad)" BROAD []
 xref: TO_GIT:242
-is_a: TO:0000919 ! caryopsis fruit weight
+is_a: TO:0000919 ! grain weight
 
 [Term]
 id: TO:0000591
 name: 100-dehulled grain weight
-def: "Weight of the 100-dehulled grain having pericarp (seed coat)." [Gramene:pankaj_jaiswal]
-synonym: "HDGRWT (related)" RELATED []
-synonym: "HDHULGRWT (related)" RELATED []
-synonym: "hundred dehulled-grain weight (related)" RELATED []
-synonym: "hundred grain weight (related)" RELATED []
+def: "A dehulled grain weight (TO:0000590) which is the weight of a sample of 100 dehulled grains (caryopsis fruit; PO:0030104)." [Gramene:pankaj_jaiswal, TO:cooperl]
+synonym: "HDGRWT (broad)" BROAD []
+synonym: "HDHULGRWT (exact)" EXACT []
+synonym: "hundred dehulled grain weight (exact)" EXACT []
+synonym: "hundred grain weight (broad)" BROAD []
 is_a: TO:0000590 ! dehulled grain weight
 
 [Term]
 id: TO:0000592
 name: 1000-dehulled grain weight
-def: "Weight of the 1000-dehulled grains having pericarp (seed coat)." [Gramene:pankaj_jaiswal]
+def: "A dehulled grain weight (TO:0000590) which is the weight of a sample ofeight of 1000 dehulled grains (caryopsis fruit; PO:0030104) ." [Gramene:pankaj_jaiswal, TO:cooperl]
 synonym: "TDGRWT (related)" RELATED []
-synonym: "TDHULGRWT (related)" RELATED []
-synonym: "thousand dehulled-grain weight (related)" RELATED []
-synonym: "thousand grain weight (related)" RELATED []
+synonym: "TDHULGRWT (exact)" EXACT []
+synonym: "thousand dehulled grain weight (exact)" EXACT []
+synonym: "thousand grain weight (broad)" BROAD []
 is_a: TO:0000590 ! dehulled grain weight
 
 [Term]
 id: TO:0000593
 name: polished grain weight
-def: "A grain weight (TO:0000919) which is the weight of the polished grain, without the caryopsis hull (PO:0006000) or pericarp (PO:0009084)." [Gramene:pankaj_jaiswal]
-synonym: "PLSGRWT (related)" RELATED []
-is_a: TO:0000919 ! caryopsis fruit weight
+def: "A grain weight (TO:0000919) which is the weight of a polished grain (caryopsis fruit; PO:0030104)." [Gramene:pankaj_jaiswal, TO:cooperl]
+comment: Polishing removes the bran, which consists of aleurone layer (PO:0005360) and pericarp; PO:0009084) and the germ (plant embryo; PO:0009009).  In rice, this is what is referred to as 'white rice'.
+synonym: "PLSGRWT (exact)" EXACT []
+is_a: TO:0000919 ! grain weight
 
 [Term]
 id: TO:0000594
 name: 100-polished grain weight
-def: "A polished grain weight (TO:0000593) which is the weight of a sample of 100 polished grains." [Gramene:pankaj_jaiswal]
-synonym: "HPLSGRWT (related)" RELATED []
-synonym: "hundred polished grain weight (related)" RELATED []
+def: "A polished grain weight (TO:0000593) which is the weight of a sample of 100 polished grains." [Gramene:pankaj_jaiswal, TO:cooperl]
+synonym: "HPLSGRWT (exact)" EXACT []
+synonym: "hundred polished grain weight (exact)" EXACT []
 is_a: TO:0000593 ! polished grain weight
 
 [Term]
 id: TO:0000595
 name: 1000-polished grain weight
-def: "A polished grain weight (TO:0000593) which is the weight of a sample of 1000 polished grains." [Gramene:pankaj_jaiswal]
-synonym: "thousand polished grain weight (related)" RELATED []
-synonym: "TPLSGRWT (related)" RELATED []
+def: "A polished grain weight (TO:0000593) which is the weight of a sample of 1000 polished grains." [Gramene:pankaj_jaiswal, TO:cooperl]
+synonym: "thousand polished grain weight (exact)" EXACT []
+synonym: "TPLSGRWT (exact)" EXACT []
 is_a: TO:0000593 ! polished grain weight
 
 [Term]
@@ -7735,10 +7737,10 @@ creation_date: 2013-06-19T10:18:46Z
 
 [Term]
 id: TO:0000919
-name: caryopsis fruit weight
+name: grain weight
 def: "A caryopsis fruit morphology trait (TO:0001079) which is the weight of a caryopsis fruit (grain or kernel; PO:0030104)." [TO:cooperl]
 synonym: "20 kernel weight (narrow)" NARROW []
-synonym: "grain weight (exact)" EXACT []
+synonym: "caryopsis fruit weight (exact)" EXACT []
 synonym: "GRWT (exact)" EXACT []
 synonym: "kernel weight (exact)" EXACT []
 synonym: "kwt (related)" RELATED [MaizeGDB:78154]
@@ -7903,7 +7905,7 @@ creation_date: 2014-05-06T16:41:00Z
 id: TO:0000935
 name: kernel weight per ear
 xref: OBO_S2F_TO:280
-is_a: TO:0000919 ! caryopsis fruit weight
+is_a: TO:0000919 ! grain weight
 property_value: IAO:0000231 "A grain weight (TO:0000919) which is the total weight of all kernels on the primary ear infructescence (PO:0025597)." xsd:string {xref="MaizeGDB:Mary_Schaeffer", xref="TO:cooperl"}
 created_by: cooperl
 creation_date: 2014-06-27T08:27:30Z
@@ -10363,12 +10365,12 @@ is_a: TO:0002629 ! fruit morphology trait
 [Term]
 id: TO:0002747
 name: 10-dehulled grain weight
-def: "Weight of 10-dehulled grain having pericarp (seed coat)." [Gramene:pankaj_jaiswal]
-synonym: "10-grain weight (related)" RELATED []
-synonym: "ten dehulled-grain weight (related)" RELATED []
-synonym: "ten grain weight (related)" RELATED []
+def: "A dehulled grain weight (TO:0000590) which is the weight of a sample of 10 dehulled grains (caryopsis fruit; PO:0030104)" [Gramene:pankaj_jaiswal] {comment="TO:cooperl"}
+synonym: "10 grain weight (broad)" BROAD []
+synonym: "ten dehulled grain weight (exact)" EXACT []
+synonym: "ten grain weight (broad)" RELATED []
 synonym: "TENDHULGRWT (exact)" EXACT []
-synonym: "TENGRWT (related)" RELATED []
+synonym: "TENGRWT (broad)" BROAD []
 is_a: TO:0000590 ! dehulled grain weight
 
 [Term]
