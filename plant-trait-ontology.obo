@@ -21,6 +21,14 @@ import: http://purl.obolibrary.org/obo/to/patterns/merge_patterns.owl
 ontology: to
 
 [Term]
+id: PO:0001108
+name: grain volume
+def: "A caryopsis fruit morphology trait (TO:0001079) which is the volume of a grain (caryopsis fruit (PO:0030104)." [TO:cooperl]
+synonym: "GRVOL (exact)" EXACT []
+synonym: "kernel volume (exact)" EXACT []
+is_a: TO:0001079 ! caryopsis fruit morphology trait
+
+[Term]
 id: TO:0000001
 name: carbon sensitivity
 def: "Sensitivity to the carbon content in the growth medium. It plays an important role in the synthesis of various inorganic and organic metabolites such as carbohydrates, lipids, amino acids and peptides and plays a role in various metabolic processes." [Gramene:pankaj_jaiswal]
@@ -3162,7 +3170,7 @@ comment: For color of the dehulled grain, see pericarp color (TO:0000707).  Refe
 synonym: "GRCL (related)" RELATED []
 synonym: "MGRCL (related)" RELATED []
 xref: PATO:0000014
-is_a: TO:0002617 ! fruit color
+is_a: TO:0001079 ! caryopsis fruit morphology trait
 
 [Term]
 id: TO:0000386
@@ -3249,7 +3257,7 @@ name: grain size
 def: "A fruit size (TO:0002625) which is the size of a dehulled, milled grain without pericarp (PO:0009084)." [Gramene:pankaj_jaiswal, PO:0009084, TO:moorel]
 comment: Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer's physical magnitude. Size categories ranging from small to medium to large.
 synonym: "GRSZ (related)" RELATED []
-is_a: TO:0002625 ! fruit size
+is_a: TO:0001079 ! caryopsis fruit morphology trait
 
 [Term]
 id: TO:0000398
@@ -3289,11 +3297,11 @@ id: TO:0000402
 name: dehulled grain width
 def: "A grain width (TO:0000975) which is the width of the dehulled grain with pericarp (PO:0009084)." [Gramene:pankaj_jaiswal, PO:0009084, TO:moorel]
 comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
-synonym: "dehulled grain curved width (related)" RELATED []
-synonym: "dehulled-grain width (related)" RELATED []
-synonym: "DHULGRWD (related)" RELATED []
-synonym: "GRWD (related)" RELATED []
-synonym: "width of grain without hull (related)" RELATED []
+synonym: "dehulled grain curved width (narrow)" NARROW []
+synonym: "dehulled grain width (exact)" RELATED []
+synonym: "DHULGRWD (exact)" RELATED []
+synonym: "GRWD (broad)" RELATED []
+synonym: "width of grain without hull (exact)" EXACT []
 xref: PATO:0000921
 xref: TO_GIT:123
 is_a: TO:0000975 ! grain width
@@ -3360,12 +3368,11 @@ is_a: TO:0000598 ! protein content
 
 [Term]
 id: TO:0000411
-name: seed length to width ratio
-def: "Ratio of length to width of the seed or fruit caryopsis with hull." [Gramene:pankaj_jaiswal]
-synonym: "grain length to width ratio (related)" RELATED []
-synonym: "GRLGWDRO (related)" RELATED []
+name: grain length to width ratio
+def: "A caryopsis fruit morphology trait (TO:0001079) which is the ratio of grain length (TO:0000734) to grain width (TO:0002762), including the caryopsis hull (PO:0006000)." [Gramene:pankaj_jaiswal] {comment="TO:cooperl"}
+synonym: "GRLGWDRO (exact)" EXACT []
 synonym: "SDLGWDRO (related)" RELATED []
-is_a: TO:0000146 ! seed length
+is_a: TO:0001079 ! caryopsis fruit morphology trait
 
 [Term]
 id: TO:0000412
@@ -5845,7 +5852,7 @@ synonym: "kernel length (related)" RELATED []
 synonym: "length of dehulled grain (related)" RELATED []
 synonym: "length of grain without hull (related)" RELATED []
 xref: PATO:0000122
-is_a: TO:0002626 ! fruit length
+is_a: TO:0001079 ! caryopsis fruit morphology trait
 
 [Term]
 id: TO:0000735
@@ -8275,8 +8282,10 @@ creation_date: 2015-10-19T14:47:51Z
 [Term]
 id: TO:0000975
 name: grain width
-def: "A fruit width (TO:0002627) which is  the variation in the width of a grain (PO:0009001)." [TO:austin_meier]
-is_a: TO:0002627 ! fruit width
+def: "A caryopsis fruit morphology trait (TO:0001079) which is the width of a grain (PO:0009001)." [TO:austin_meier] {comment="TO:cooperl"}
+synonym: "caryopsis width (exact)" EXACT []
+synonym: "kernel width (exact)" EXACT []
+is_a: TO:0001079 ! caryopsis fruit morphology trait
 created_by: meiera
 creation_date: 2015-10-20T15:15:19Z
 
@@ -8447,7 +8456,7 @@ name: polished grain width
 def: "A grain width (TO:0000975) which is the width of the dehulled, polished grain." [PMID:26842267, TO:cooperl]
 synonym: "white rice grain width (narrow)" NARROW []
 xref: TO_GIT:415
-is_a: TO:0000975 ! grain width
+is_a: TO:0000402 ! dehulled grain width
 creation_date: 2017-07-10T10:36:57Z
 
 [Term]
@@ -10214,7 +10223,7 @@ synonym: "dehulled-grain shape (related)" RELATED []
 synonym: "DHULGRSHP (related)" RELATED []
 synonym: "GRSHP (related)" RELATED []
 xref: PATO:0000052
-is_a: TO:0002628 ! fruit shape
+is_a: TO:0001079 ! caryopsis fruit morphology trait
 
 [Term]
 id: TO:0002731
@@ -10315,14 +10324,12 @@ is_a: TO:0002629 ! fruit morphology trait
 
 [Term]
 id: TO:0002743
-name: grain volume
-def: "A fruit volume (TO:0002742) of a grain without hull (dehulled)." [Gramene:pankaj_jaiswal, TO:moorel]
+name: dehulled grain volume
+def: "A grain volume (TO:0001108) which is the volume of a dehulled grain." [Gramene:pankaj_jaiswal, TO:moorel]
 comment: Refer to volume (PATO:0000918): A 3-D extent quality inhering in a bearer by virtue of the bearer's amount of 3-dimensional space it occupies.
-synonym: "dehulled-grain volume (exact)" EXACT []
-synonym: "DHULGRVOL (related)" RELATED []
-synonym: "GRVOL (related)" RELATED []
+synonym: "DHULGRVOL (exact)" EXACT []
 xref: PATO:0000918
-is_a: TO:0002742 ! fruit volume
+is_a: PO:0001108 ! grain volume
 
 [Term]
 id: TO:0002744
@@ -10472,12 +10479,13 @@ is_a: TO:0000734 ! grain length
 
 [Term]
 id: TO:0002762
-name: width of grain with hull
+name: hulled grain width
 def: "A grain width (TO:0000975) with caryopsis hull (PO:0006000)." [Gramene:pankaj_jaiswal, TO:moorel]
 comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
 synonym: "HULGRWD (related)" RELATED []
 synonym: "hulled grain curved width (related)" RELATED []
 synonym: "hulled grain width (related)" RELATED []
+synonym: "width of grain with hull (exact)" EXACT []
 xref: PATO:0000921
 is_a: TO:0000975 ! grain width
 
@@ -10501,11 +10509,11 @@ is_a: TO:0002739 ! fruit surface area
 
 [Term]
 id: TO:0002765
-name: volume of grain with hull
-def: "Volume of the grain with hull (hulled)." [Gramene:pankaj_jaiswal]
-synonym: "HULGRVOL (related)" RELATED []
-synonym: "hulled grain volume (related)" RELATED []
-is_a: TO:0002742 ! fruit volume
+name: hulled grain volume
+def: "A grain volume (TO:0001108) which is the volume of a grain with a caryopsis hull (PO:0006000)." [Gramene:pankaj_jaiswal]
+synonym: "HULGRVOL (exact)" EXACT []
+synonym: "hulled caryopsis volume (related)" RELATED []
+is_a: PO:0001108 ! grain volume
 
 [Term]
 id: TO:0002766
