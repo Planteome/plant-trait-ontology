@@ -12,14 +12,6 @@ default-namespace: plant_trait_ontology
 ontology: subsets/to-basic
 
 [Term]
-id: PO:0001108
-name: grain volume
-def: "A caryopsis fruit morphology trait (TO:0001079) which is the volume of a grain (caryopsis fruit (PO:0030104)." [TO:cooperl]
-synonym: "GRVOL (exact)" EXACT []
-synonym: "kernel volume (exact)" EXACT []
-is_a: TO:0001079 ! caryopsis fruit morphology trait
-
-[Term]
 id: TO:0000001
 name: carbon sensitivity
 def: "Sensitivity to the carbon content in the growth medium. It plays an important role in the synthesis of various inorganic and organic metabolites such as carbohydrates, lipids, amino acids and peptides and plays a role in various metabolic processes." [Gramene:pankaj_jaiswal]
@@ -9048,7 +9040,7 @@ creation_date: 2017-12-07T10:36:57Z
 [Term]
 id: TO:0001069
 name: cooking quality trait
-comment: A processing quality trait (TO:0001068) that is the utility of a plant, plant structure (PO:0009011) or plant product for a food cooking process (FOODON:03450002). {xref="TO:cooperl", xref="FOODON:03450002"}
+comment: A processing quality trait (TO:0001068) that is the utility of a plant, plant structure (PO:0009011) or plant product for a food cooking process (FOODON:03450002). {xref="FOODON:03450002", xref="TO:cooperl"}
 is_a: TO:0001068 ! processing quality trait
 property_value: http://purl.org/dc/elements/1.1/date 2017-12-08T00:41:11Z xsd:dateTime
 
@@ -9317,6 +9309,14 @@ name: hesperidium fruit morphology trait
 def: "A berry fruit morphology trait (TO:0001077) which is a quality of a hesperidium fruit (PO:0030109)." [TO:cooperl]
 synonym: "citrus fruit morphology trait (exact)" EXACT []
 is_a: TO:0001077 ! berry fruit morphology trait
+
+[Term]
+id: TO:0001108
+name: grain volume
+def: "A caryopsis fruit morphology trait (TO:0001079) which is the volume of a grain (caryopsis fruit (PO:0030104)." [TO:cooperl]
+synonym: "GRVOL (exact)" EXACT []
+synonym: "kernel volume (exact)" EXACT []
+is_a: TO:0001079 ! caryopsis fruit morphology trait
 
 [Term]
 id: TO:0002600
@@ -10451,7 +10451,6 @@ def: "A grain volume (TO:0001108) which is the volume of a dehulled grain." [Gra
 comment: Refer to volume (PATO:0000918): A 3-D extent quality inhering in a bearer by virtue of the bearer's amount of 3-dimensional space it occupies.
 synonym: "DHULGRVOL (exact)" EXACT []
 xref: PATO:0000918
-is_a: PO:0001108 ! grain volume
 is_a: TO:0000397 ! grain size
 is_a: TO:0002742 ! fruit volume
 
@@ -10640,7 +10639,6 @@ name: hulled grain volume
 def: "A grain volume (TO:0001108) which is the volume of a grain with a caryopsis hull (PO:0006000)." [Gramene:pankaj_jaiswal]
 synonym: "HULGRVOL (exact)" EXACT []
 synonym: "hulled caryopsis volume (related)" RELATED []
-is_a: PO:0001108 ! grain volume
 
 [Term]
 id: TO:0002766
