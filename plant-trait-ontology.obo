@@ -2388,9 +2388,11 @@ is_a: TO:0000013 ! resistance to disease by mycoplasma-like organism
 
 [Term]
 id: TO:0000293
-name: chlorophyll-a content
-def: "Measures the chlorophyll-a (Chl-a) content in a green tissue. It is a type of chlorophyll present as green pigment in plants." [Gramene:pankaj_jaiswal]
-synonym: "chl-a (related)" RELATED []
+name: chlorophyll a content
+def: "A chlorophyll content trait (TO:0000495) which is the chlorophyll a content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
+synonym: "Chl a (exact)" EXACT []
+synonym: "chl-a (exact)" EXACT []
+synonym: "chlorophyll-a content (exact)" EXACT []
 is_a: TO:0000495 ! chlorophyll content
 
 [Term]
@@ -2405,8 +2407,11 @@ is_a: TO:0002717 ! leaf sheath auricle morphology trait
 
 [Term]
 id: TO:0000295
-name: chlorophyll-b content
-def: "Measures the chlorophyll-b (Chl-b) content in a green tissue. It is a type of chlorophyll present as green pigment in plants." [Gramene:pankaj_jaiswal]
+name: chlorophyll b content
+def: "A chlorophyll content trait (TO:0000495) which is the chlorophyll b content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
+synonym: "chl b content (exact)" EXACT []
+synonym: "chl-b content (exact)" EXACT []
+synonym: "chlorophyll-b content (exact)" EXACT []
 is_a: TO:0000495 ! chlorophyll content
 
 [Term]
@@ -2434,10 +2439,11 @@ is_a: TO:0006008 ! carbohydrate derivative content
 [Term]
 id: TO:0000298
 name: chlorophyll ratio
-def: "Measures the a-a to chlorophyll-b content ratio in a green tissue. Chlorophyll is the green pigment found in plants." [ISBN:198506732]
-comment: The average ratio of chl-a to chl-b is about 3:1.
-synonym: "chl-a to chl-b ratio (related)" RELATED []
-synonym: "chlorophyll content ratio (related)" RELATED []
+def: "A chlorophyll content trait (TO:0000495) which is the ratio of chlorophyll a to chlorophyll b in a plant structure (PO:0009011)." [ISBN:198506732, TO:cooperl]
+comment: The average ratio of chl a to chl b is about 3:1.
+synonym: "chl a to chl b ratio (exact)" EXACT []
+synonym: "chl-a to chl-b ratio (exact)" EXACT []
+synonym: "chlorophyll content ratio (exact)" EXACT []
 synonym: "CHLRO (related)" RELATED []
 is_a: TO:0000495 ! chlorophyll content
 
@@ -2627,11 +2633,11 @@ is_a: TO:0000598 ! protein content
 
 [Term]
 id: TO:0000320
-name: rubisco to chlorophyll ratio
-def: "A ratio of the amount of rubisco protein to that of the chlorophyll content in a plant or plant part." [Gramene:pankaj_jaiswal]
+name: chlorophyll to rubisco ratio
+def: "A chlorophyll content trait (TO:0000495) which is ratio of the amount of RuBisCo protein to that of the chlorophyll content (TO:0000495) in a plant strucure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
 synonym: "RUBISCOCHLRO (related)" RELATED []
-is_a: TO:0000298 ! chlorophyll ratio
 is_a: TO:0000319 ! rubisco content
+is_a: TO:0000495 ! chlorophyll content
 
 [Term]
 id: TO:0000321
@@ -4012,7 +4018,7 @@ is_a: TO:0000281 ! metabolite content trait
 [Term]
 id: TO:0000495
 name: chlorophyll content
-def: "Measures the chlorophyll content in a green tissue. Includes both chlorophyll-a and chlorophyll-b. Chlorophyll is the green pigment found in plants." [Gramene:pankaj_jaiswal]
+def: "A pigment content trait (TO:0000494) which is a measure of the chlorophyll a and/or chlorophyll b content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
 comment: Chlorophyll is the principal photoreceptor in photosynthesis, the light-driven process in which carbon dioxide is fixed to yield carbohydrates and oxygen. Chlorophyll is a cyclic tetrapyrolle, similar in structure to the heme group of globins (hemoglobin, myoglobin) and cytochromes. Chlorophyll differs from heme in a few major respects, most notably that the central metal ion in chlorophyll is magnesium while that in heme is iron.
 synonym: "CHLCN (related)" RELATED []
 is_a: TO:0000494 ! pigment content trait
@@ -8579,7 +8585,7 @@ is_a: TO:0000283 ! biological process trait
 [Term]
 id: TO:0001016
 name: relative chlorophyll content
-def: "The relative chlorophyll content of the plant determined after a given treatment as compared to the one determined under normal conditions." [Gramene:pankaj_jaiswal]
+def: "A chlorophyll content trait (TO:0000495) which is the relative chlorophyll content of a plant structure (PO:0009011) after a treatment, as compared to that determined under normal growth conditions." [Gramene:pankaj_jaiswal, TO:cooperl]
 is_a: TO:0000495 ! chlorophyll content
 
 [Term]
@@ -11326,7 +11332,7 @@ creation_date: 2011-12-09T01:27:39Z
 [Term]
 id: TO:0012002
 name: leaf chlorophyll content
-def: "A chlorophyll content trait (TO:0000495) which is a quality of a leaf (PO:0025034)." [PO:0025034, TO:cooperl]
+def: "A chlorophyll content trait (TO:0000495) which is the chlorophyll content of a leaf (PO:0025034)." [PO:0025034, TO:cooperl]
 xref: TO_GIT:275
 is_a: TO:0000495 ! chlorophyll content
 created_by: jaiswalp
@@ -11335,7 +11341,10 @@ creation_date: 2011-12-09T01:52:17Z
 [Term]
 id: TO:0012003
 name: chlorophyll content in an extract
+def: "OBSOLETE" []
 is_a: TO:0000495 ! chlorophyll content
+is_obsolete: true
+replaced_by: 'chlorophyll content'
 created_by: jaiswalp
 creation_date: 2011-12-09T01:54:09Z
 
