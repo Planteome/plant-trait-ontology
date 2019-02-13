@@ -8105,7 +8105,7 @@ creation_date: 2015-10-19T14:35:34Z
 [Term]
 id: TO:0000955
 name: cyanide content
-def: "A metabolite content related trait (TO:0000281) which is the amount of cyanide (CHEBI:17514) occurring in a plant anatomical entity (PO:0025131)." []
+def: "A metabolite content related trait (TO:0000281) which is the amount of cyanide (CHEBI:17514) occurring in a plant structure (PO:0009011)." [TO:cooperl]
 xref: CHEBI:17514
 is_a: TO:0000281 ! metabolite content trait
 
@@ -8613,7 +8613,7 @@ id: TO:0001020
 name: exudate sap volume
 def: "Volume of the sap exudate collected from the cut parts of a plant." [Gramene:pankaj_jaiswal]
 synonym: "Sap per tiller (related)" RELATED []
-is_a: TO:0000281 ! metabolite content trait
+is_a: TO:0000327 ! shoot system yield trait
 
 [Term]
 id: TO:0001021
@@ -11952,7 +11952,7 @@ def: "The trait  takes into account energy losses occurring in the animal in fae
 comment: Units: Kcal/kg.
 synonym: "metabolised energy (exact)" EXACT []
 synonym: "stover related traits (broad)" BROAD [GCP:GCP_324.000003]
-is_a: TO:0000281 ! metabolite content trait
+is_a: TO:0000327 ! shoot system yield trait
 created_by: jaiswalp
 creation_date: 2011-08-19T03:17:28Z
 
@@ -11961,7 +11961,7 @@ id: TO:0020082
 name: stover nitrogen content
 def: "A trait to measure percent nitrogen concentration in the stover sample used for predicting crude protein (CP) content of stover by multiplication with a factor of 6.25 (CP = N x 6.25). This concentration is one of the criteria to assess the quality of fodder. Value derived from the analysis of stover using Near Infrared Reflectance Spectrophotometry (NIRS)." [GCP:GCP_324.0000016, ICRISAT:Vincent_Vadez, ILRI:Michael_Blummel]
 synonym: "stover related traits" BROAD [GCP:GCP_324.000003]
-is_a: TO:0000281 ! metabolite content trait
+is_a: TO:0000327 ! shoot system yield trait
 created_by: jaiswalp
 creation_date: 2011-08-19T03:20:23Z
 
@@ -12016,8 +12016,8 @@ creation_date: 2011-08-19T03:44:21Z
 id: TO:0020088
 name: total water soluble content
 alt_id: TO:0002711
-def: "A metabolite content related trait (TO:0000281) which is the concentration of water soluble components in a plant, as determined by refractive index." [Gramene:pankaj_jaiswal, TO:cooperl]
-comment: This trait is usually highly correlated with total soluble sugar content (TO:0000340). Often determined in fresh tissue.
+def: "A metabolite content trait (TO:0000281) which is the concentration of water soluble components in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
+comment: This trait is usually highly correlated with total soluble sugar content (TO:0000340). Often determined in fresh tissue using a refractive index.
 synonym: "total dissolved solids content (related)" RELATED []
 xref: TO_GIT:100
 is_a: TO:0000281 ! metabolite content trait
