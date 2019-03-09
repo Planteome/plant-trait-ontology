@@ -1069,7 +1069,7 @@ is_a: TO:0000462 ! gelatinization temperature
 [Term]
 id: TO:0000135
 name: leaf length
-def: "A leaf size (TO:0002637) trait which is a length of a leaf (PO:0025034)." [IRRI:SES, PO:0025034, TO:cooperl, TO:moorel]
+def: "A leaf morphology trait (TO:0000748) which is the length of a leaf (PO:0025034)." [IRRI:SES, PO:0025034, TO:cooperl, TO:moorel]
 comment: Actual measurements, in centimeters of the leaf. Refers to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points. In maize, this is measured in centimeters. If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFLG (related)" RELATED []
 synonym: "lfln (related)" RELATED [MaizeGDB_QTL:61715]
@@ -1077,7 +1077,9 @@ synonym: "LL (related)" RELATED []
 xref: MaizeGDB_QTL:61715
 xref: PATO:0000122
 xref: TO_GIT:247
-is_a: TO:0002637 ! leaf size
+is_a: TO:0000748 ! leaf morphology trait
+relationship: part_of TO:0000542 ! leaf length to width ratio
+relationship: part_of TO:0002637 ! leaf size
 
 [Term]
 id: TO:0000136
@@ -2088,10 +2090,11 @@ is_a: TO:0000043 ! root morphology trait
 [Term]
 id: TO:0000258
 name: leaf thickness
-def: "A leaf size (TO:0002637) trait which is the thickness of a leaf (PO:0025034)." [PO:0025034, TO:moorel]
+def: "A leaf morphology trait (TO:0000748) which is the thickness of a leaf (PO:0025034)." [PO:0025034, TO:moorel]
 comment: Refers to thickness PATO:0000915 A 1-D extent quality which is equal to the dimension through an object as opposed to its length or width. If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 xref: PATO:0000915
-is_a: TO:0002637 ! leaf size
+is_a: TO:0000748 ! leaf morphology trait
+relationship: part_of TO:0002637 ! leaf size
 
 [Term]
 id: TO:0000259
@@ -3039,7 +3042,7 @@ is_a: TO:0000933 ! plant phenological trait
 [Term]
 id: TO:0000370
 name: leaf width
-def: "A leaf size (TO:0002637) trait which the width of a leaf (PO:0025034)." [IRRI:SES, PO:0025034, TO:cooperl, TO:moorel]
+def: "A leaf morphology trait (TO:0000748) which is the width of a leaf (PO:0025034)." [IRRI:SES, PO:0025034, TO:cooperl, TO:moorel]
 comment: Actual measurements, in centimeters of the widest portion of the leaf. To be precise use the children terms leaf lamina width (TO:0002720) or  'leaf sheath width (TO:0002721). Refers to width (PATO:0000921) A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite. If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFWD (related)" RELATED []
 synonym: "lfwid (related)" RELATED [MaizeGDB_QTL:61714]
@@ -3047,7 +3050,8 @@ synonym: "LW (related)" RELATED []
 xref: MaizeGDB_QTL:61714
 xref: PATO:0000921
 xref: TO_GIT:247
-is_a: TO:0002637 ! leaf size
+is_a: TO:0000748 ! leaf morphology trait
+relationship: part_of TO:0002637 ! leaf size
 
 [Term]
 id: TO:0000371
@@ -4344,10 +4348,11 @@ is_a: TO:0000748 ! leaf morphology trait
 [Term]
 id: TO:0000542
 name: leaf length to width ratio
-def: "A leaf size (TO:0002637) which is the ratio of leaf length to its width." [Gramene:pankaj_jaiswal]
+def: "A leaf morphology trait (TO:0000748) which is the ratio of leaf length (TO:0000135) to leaf width (TO:0000370)." [Gramene:pankaj_jaiswal, TO:cooperl]
 comment: If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFLGWDRO (related)" RELATED []
-is_a: TO:0002637 ! leaf size
+is_a: TO:0000748 ! leaf morphology trait
+relationship: part_of TO:0002637 ! leaf size
 
 [Term]
 id: TO:0000543
@@ -8308,10 +8313,10 @@ creation_date: 2015-10-22T09:35:32Z
 [Term]
 id: TO:0000977
 name: leaf foliage rating
-def: "A leaf size trait (TO:0002637) which is the size of the total surface of a leaf (PO:0025034)." [TO:Ethan_Johnson]
+def: "A leaf area trait (TO:0000540) that is the size of the total surface area of a leaf (PO:0025034)." [TO:Ethan_Johnson]
 comment: Comment: rating scale of  3, small; 5, intermediate; 7 large
 xref: TO_GIT:139
-is_a: TO:0002637 ! leaf size
+is_a: TO:0000540 ! leaf area trait
 created_by: johnseth
 creation_date: 2015-10-23T10:29:59Z
 
