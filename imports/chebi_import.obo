@@ -3,15 +3,23 @@ ontology: to/imports/chebi_import
 
 [Term]
 id: CHEBI:10022
-name: Vomitoxin
-synonym: "Deoxynivalenol" RELATED [KEGG_COMPOUND]
-synonym: "Vomitoxin" EXACT [KEGG_COMPOUND]
+name: deoxynivalenol
+def: "A trichothecene mycotoxin produced by Fusarium to which wheat, barley, maize (corn) and their products are susceptible to contamination." []
+synonym: "3alpha,7alpha,15-trihydroxy-12,13-epoxytrichothec-9-en-8-one" EXACT IUPAC_NAME [IUPAC]
+synonym: "3alpha,7alpha,15-trihydroxy-12,13-epoxytrichothec-9-en-8-one" RELATED [ChemIDplus]
+synonym: "4-Deoxynivalenol" RELATED [ChemIDplus]
+synonym: "4-Desoxynivalenol" RELATED [ChemIDplus]
+synonym: "Dehydronivalenol" RELATED [ChemIDplus]
+synonym: "Desoxynivalenol" RELATED [ChemIDplus]
+synonym: "DON" RELATED [KEGG_COMPOUND]
+synonym: "Vomitoxin" RELATED [KEGG_COMPOUND]
 is_a: CHEBI:15734 ! primary alcohol
 is_a: CHEBI:2468 ! secondary alpha-hydroxy ketone
 is_a: CHEBI:27136 ! triol
 is_a: CHEBI:3992 ! cyclic ketone
 is_a: CHEBI:51689 ! enone
 is_a: CHEBI:55517 ! trichothecene
+relationship: RO:0000087 CHEBI:25442 ! mycotoxin
 
 [Term]
 id: CHEBI:10362
@@ -41,6 +49,7 @@ synonym: "e-" RELATED [KEGG_COMPOUND]
 synonym: "electron" EXACT [KEGG_COMPOUND]
 synonym: "electron" EXACT IUPAC_NAME [IUPAC]
 synonym: "electron" EXACT [ChEBI]
+synonym: "Elektron" RELATED [ChEBI]
 synonym: "negatron" RELATED [IUPAC]
 is_a: CHEBI:36338 ! lepton
 
@@ -291,13 +300,81 @@ is_a: CHEBI:30879 ! alcohol
 is_a: CHEBI:52396 ! alpha-oxyketone
 
 [Term]
+id: CHEBI:142851
+name: 2-amino-4-[hydroxy(methyl)phosphoryl]butanoic acid
+def: "A non-proteinogenic alpha-amino acid that is 2-aminobutanoic acid which is substituted at position 4 by a hydroxy(methyl)phosphoryl group." []
+synonym: "2-amino-4-[hydroxy(methyl)phosphoryl]butanoic acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "2-amino-4-[hydroxy(methyl)phosphoryl]butyric acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "phosphinothricin" RELATED [ChEBI]
+is_a: CHEBI:26044 ! phosphinic acids
+is_a: CHEBI:83925 ! non-proteinogenic alpha-amino acid
+
+[Term]
+id: CHEBI:142852
+name: glufosinate-P
+is_a: CHEBI:142851 ! 2-amino-4-[hydroxy(methyl)phosphoryl]butanoic acid
+relationship: is_enantiomer_of CHEBI:142853 ! (2R)-glufosinate
+relationship: is_tautomer_of CHEBI:142856 ! glufosinate-P zwitterion
+relationship: RO:0000087 CHEBI:24319 ! EC 6.3.1.2 (glutamate--ammonia ligase) inhibitor
+relationship: RO:0000087 CHEBI:24527 ! herbicide
+relationship: RO:0000087 CHEBI:33286 ! agrochemical
+
+[Term]
+id: CHEBI:142853
+name: (2R)-glufosinate
+is_a: CHEBI:142851 ! 2-amino-4-[hydroxy(methyl)phosphoryl]butanoic acid
+relationship: is_enantiomer_of CHEBI:142852 ! glufosinate-P
+relationship: is_tautomer_of CHEBI:142854 ! (2R)-glufosinate zwitterion
+
+[Term]
+id: CHEBI:142854
+name: (2R)-glufosinate zwitterion
+is_a: CHEBI:35238 ! amino acid zwitterion
+relationship: is_conjugate_acid_of CHEBI:142858 ! (2R)-glufosinate zwitterion(1-)
+relationship: is_enantiomer_of CHEBI:142856 ! glufosinate-P zwitterion
+relationship: is_tautomer_of CHEBI:142853 ! (2R)-glufosinate
+
+[Term]
+id: CHEBI:142856
+name: glufosinate-P zwitterion
+is_a: CHEBI:35238 ! amino acid zwitterion
+relationship: is_conjugate_base_of CHEBI:142859 ! glufosinate-P zwitterion(1-)
+relationship: is_enantiomer_of CHEBI:142854 ! (2R)-glufosinate zwitterion
+relationship: is_tautomer_of CHEBI:142852 ! glufosinate-P
+
+[Term]
+id: CHEBI:142858
+name: (2R)-glufosinate zwitterion(1-)
+def: "An organic anion resulting from the deprotonation of the phosphinic acid group of (2R)-glufosinate zwitterion." []
+synonym: "(-)-glufosinate zwitterion(1-)" RELATED [ChEBI]
+synonym: "(2R)-2-azaniumyl-4-(methylphosphinato)butanoate" EXACT IUPAC_NAME [IUPAC]
+synonym: "(2R)-2-azaniumyl-4-(methylphosphinato)butyrate" EXACT IUPAC_NAME [IUPAC]
+synonym: "(R)-glufosinate zwitterion(1-)" RELATED [ChEBI]
+synonym: "4-(methylphosphinato)-D-homoalanine zwitterion" RELATED [ChEBI]
+is_a: CHEBI:25696 ! organic anion
+relationship: is_conjugate_base_of CHEBI:142854 ! (2R)-glufosinate zwitterion
+
+[Term]
+id: CHEBI:142859
+name: glufosinate-P zwitterion(1-)
+def: "An organic anion resulting from the deprotonation of the phosphinic acid group of (2R)-glufosinate-P zwitterion." []
+synonym: "(+)-glufosinate zwitterion(1-)" RELATED [ChEBI]
+synonym: "(2S)-2-amino-4-(hydroxymethylphosphinato)butanoic acid zwitterion" RELATED [ChEBI]
+synonym: "(2S)-2-azaniumyl-4-[hydroxy(methyl)phosphinato]butanoate" EXACT IUPAC_NAME [IUPAC]
+synonym: "(2S)-2-azaniumyl-4-[hydroxy(methyl)phosphinato]butyrate" EXACT IUPAC_NAME [IUPAC]
+synonym: "(2S)-glufosinate zwitterion(1-)" RELATED [ChEBI]
+synonym: "(S)-glufosinate zwitterion(1-)" RELATED [ChEBI]
+synonym: "4-[hydroxy(methyl)phosphinoyl]-L-homoalanine zwitterion(1-)" RELATED [ChEBI]
+is_a: CHEBI:25696 ! organic anion
+relationship: is_conjugate_acid_of CHEBI:142856 ! glufosinate-P zwitterion
+
+[Term]
 id: CHEBI:15339
 name: acceptor
 def: "A molecular entity that can accept an electron, a pair of electrons, an atom or a group from another molecular entity." []
 synonym: "A" RELATED [KEGG_COMPOUND]
 synonym: "accepteur" RELATED [ChEBI]
 synonym: "Acceptor" EXACT [KEGG_COMPOUND]
-synonym: "acceptor" EXACT [UniProt]
 synonym: "Akzeptor" RELATED [ChEBI]
 synonym: "Hydrogen-acceptor" RELATED [KEGG_COMPOUND]
 synonym: "Oxidized donor" RELATED [KEGG_COMPOUND]
@@ -583,7 +660,6 @@ synonym: "hydridooxygenate(1-)" EXACT IUPAC_NAME [IUPAC]
 synonym: "hydroxide" EXACT IUPAC_NAME [IUPAC]
 synonym: "HYDROXIDE ION" RELATED [PDBeChem]
 synonym: "Hydroxide ion" RELATED [KEGG_COMPOUND]
-synonym: "OH(-)" RELATED [UniProt]
 synonym: "OH(-)" RELATED [IUPAC]
 synonym: "OH-" RELATED [KEGG_COMPOUND]
 synonym: "oxidanide" EXACT IUPAC_NAME [IUPAC]
@@ -804,7 +880,6 @@ synonym: "CN-" RELATED [KEGG_COMPOUND]
 synonym: "Cyanide" EXACT [ChEBI]
 synonym: "Cyanide" EXACT [KEGG_COMPOUND]
 synonym: "cyanide" EXACT IUPAC_NAME [IUPAC]
-synonym: "cyanide" EXACT [UniProt]
 synonym: "CYANIDE ION" RELATED [PDBeChem]
 synonym: "nitridocarbonate(1-)" EXACT IUPAC_NAME [IUPAC]
 synonym: "Prussiate" RELATED [KEGG_COMPOUND]
@@ -831,8 +906,8 @@ id: CHEBI:17579
 name: beta-carotene
 def: "A cyclic carotene obtained by dimerisation of all-trans-retinol. A strongly-coloured red-orange pigment abundant in plants and fruit and the most active and important provitamin A carotenoid." []
 synonym: "1,1'-[(1E,3E,5E,7E,9E,11E,13E,15E,17E)-3,7,12,16-tetramethyloctadeca-1,3,5,7,9,11,13,15,17-nonaene-1,18-diyl]bis(2,6,6-trimethylcyclohexene)" RELATED [ChEBI]
-synonym: "all-trans-beta-carotene" RELATED [UniProt]
 synonym: "all-trans-beta-carotene" RELATED [NIST_Chemistry_WebBook]
+synonym: "all-trans-beta-carotene" RELATED [UniProt]
 synonym: "beta,beta-carotene" EXACT IUPAC_NAME [IUPAC]
 synonym: "BETA-CAROTENE" EXACT [PDBeChem]
 synonym: "beta-Carotene" EXACT [KEGG_COMPOUND]
@@ -955,6 +1030,7 @@ relationship: RO:0000087 CHEBI:77746 ! human metabolite
 [Term]
 id: CHEBI:17855
 name: triglyceride
+def: "Any glyceride resulting from the condensation of all three hydroxy groups of glycerol (propane-1,2,3-triol) with fatty acids." []
 synonym: "a triacylglycerol" RELATED [UniProt]
 synonym: "Triacylglycerol" RELATED [KEGG_COMPOUND]
 synonym: "triacylglycerols" RELATED [LIPID_MAPS]
@@ -972,7 +1048,6 @@ def: "A molecular entity that can transfer (\"donate\") an electron, a pair of e
 synonym: "Donator" RELATED [ChEBI]
 synonym: "donneur" RELATED [ChEBI]
 synonym: "Donor" EXACT [KEGG_COMPOUND]
-synonym: "donor" EXACT [UniProt]
 is_a: CHEBI:51086 ! chemical role
 
 [Term]
@@ -1013,7 +1088,6 @@ id: CHEBI:18133
 name: hexose
 def: "Any six-carbon monosaccharide which in its linear form contains either an aldehyde group at position 1 (aldohexose) or a ketone group at position 2 (ketohexose)." []
 synonym: "Hexose" EXACT [KEGG_COMPOUND]
-synonym: "hexose" EXACT [UniProt]
 synonym: "hexoses" RELATED [ChEBI]
 is_a: CHEBI:35381 ! monosaccharide
 
@@ -1023,8 +1097,8 @@ name: ethene
 synonym: "Aethen" RELATED [ChEBI]
 synonym: "Aethylen" RELATED [ChEBI]
 synonym: "CH2=CH2" RELATED [IUPAC]
-synonym: "ethene" EXACT [UniProt]
 synonym: "ethene" EXACT IUPAC_NAME [IUPAC]
+synonym: "ethene" EXACT [UniProt]
 synonym: "Ethylene" RELATED [KEGG_COMPOUND]
 synonym: "H2C=CH2" RELATED [ChEBI]
 synonym: "R-1150" RELATED [ChEBI]
@@ -1459,7 +1533,6 @@ is_a: CHEBI:32955 ! epoxide
 id: CHEBI:23044
 name: carotenoid
 def: "One of a class of tetraterpenoids (C40), formally derived from the acyclic parent, psi,psi-carotene by hydrogenation, dehydrogenation, cyclization, oxidation, or combination of these processes. This class includes carotenes, xanthophylls and certain compounds that arise from rearrangement of the skeleton of psi,psi-carotene or by loss of part of this structure. Retinoids are excluded." []
-synonym: "a carotenoid" RELATED [UniProt]
 synonym: "carotenes and carotenoids" RELATED [ChemIDplus]
 synonym: "carotenoid" EXACT IUPAC_NAME [IUPAC]
 synonym: "carotenoids" RELATED [ChEBI]
@@ -1512,7 +1585,6 @@ is_a: CHEBI:79020 ! alpha,beta-unsaturated monocarboxylic acid
 id: CHEBI:23336
 name: cobalt cation
 synonym: "cobalt cation" EXACT IUPAC_NAME [IUPAC]
-synonym: "cobalt cation" EXACT [UniProt]
 synonym: "cobalt cations" RELATED [ChEBI]
 is_a: CHEBI:33515 ! transition element cation
 
@@ -1659,6 +1731,27 @@ id: CHEBI:24271
 name: glucosamines
 def: "Any  hexosamine that is glucose in which at least one of the hydroxy groups has been replaced by an amino group." []
 is_a: CHEBI:24586 ! hexosamine
+
+[Term]
+id: CHEBI:24319
+name: EC 6.3.1.2 (glutamate--ammonia ligase) inhibitor
+def: "An EC 6.3.* (C-N bond-forming ligase) inhibitor that interferes with the action of glutamate--ammonia ligase (EC 6.3.1.2)." []
+synonym: "EC 6.3.1.2 (glutamate--ammonia ligase) inhibitors" RELATED [ChEBI]
+synonym: "EC 6.3.1.2 inhibitor" RELATED [ChEBI]
+synonym: "EC 6.3.1.2 inhibitors" RELATED [ChEBI]
+synonym: "glutamate--ammonia ligase (EC 6.3.1.2) inhibitor" RELATED [ChEBI]
+synonym: "glutamate--ammonia ligase (EC 6.3.1.2) inhibitors" RELATED [ChEBI]
+synonym: "glutamate--ammonia ligase inhibitor" RELATED [ChEBI]
+synonym: "glutamate--ammonia ligase inhibitors" RELATED [ChEBI]
+synonym: "glutamine synthetase inhibitor" RELATED [ChEBI]
+synonym: "glutamine synthetase inhibitors" RELATED [ChEBI]
+synonym: "glutamylhydroxamic synthetase inhibitor" RELATED [ChEBI]
+synonym: "glutamylhydroxamic synthetase inhibitors" RELATED [ChEBI]
+synonym: "L-glutamate:ammonia ligase (ADP-forming) inhibitor" RELATED [ChEBI]
+synonym: "L-glutamate:ammonia ligase (ADP-forming) inhibitors" RELATED [ChEBI]
+synonym: "L-glutamine synthetase inhibitor" RELATED [ChEBI]
+synonym: "L-glutamine synthetase inhibitors" RELATED [ChEBI]
+is_a: CHEBI:76823 ! EC 6.3.1.* (acid-ammonia/amine ligase) inhibitor
 
 [Term]
 id: CHEBI:24373
@@ -2009,6 +2102,7 @@ is_a: CHEBI:24978 ! ketose
 [Term]
 id: CHEBI:24978
 name: ketose
+def: "Ketonic parent sugars (polyhydroxy ketones H[CH(OH)]nC(=O)[CH(OH)]mH) and their intramolecular hemiketals." []
 synonym: "ketose" EXACT [ChEBI]
 synonym: "ketoses" RELATED [ChEBI]
 is_a: CHEBI:35381 ! monosaccharide
@@ -2167,7 +2261,6 @@ relationship: BFO:0000051 CHEBI:28685 ! molybdenum atom
 id: CHEBI:25384
 name: monocarboxylic acid
 def: "An oxoacid containing a single carboxy group." []
-synonym: "monocarboxylic acid" EXACT [UniProt]
 synonym: "monocarboxylic acids" RELATED [ChEBI]
 is_a: CHEBI:33575 ! carboxylic acid
 relationship: is_conjugate_acid_of CHEBI:35757 ! monocarboxylic acid anion
@@ -2186,7 +2279,6 @@ relationship: is_conjugate_acid_of CHEBI:82680 ! monounsaturated fatty acid anio
 id: CHEBI:25414
 name: monoatomic monocation
 synonym: "monoatomic monocations" RELATED [ChEBI]
-synonym: "monovalent cation" RELATED [UniProt]
 synonym: "monovalent inorganic cations" RELATED [ChEBI]
 is_a: CHEBI:23906 ! monoatomic cation
 
@@ -2223,7 +2315,6 @@ id: CHEBI:25501
 name: neoxanthin
 def: "An epoxycarotenoid that is 6,7-didehydro-5,5',6,6'-tetrahydro-5',6'-epoxy-beta,beta-carotene which is substituted by hydroxy groups at the 3, 3', and 5 positions." []
 synonym: "all-trans-Neoxanthin" RELATED [KEGG_COMPOUND]
-synonym: "neoxanthin" EXACT [UniProt]
 is_a: CHEBI:35307 ! epoxycarotenol
 is_a: CHEBI:37602 ! allenes
 
@@ -2309,7 +2400,7 @@ synonym: "stearic acid, ion(1-)" RELATED [ChemIDplus]
 is_a: CHEBI:57560 ! long-chain fatty acid anion
 is_a: CHEBI:58954 ! straight-chain saturated fatty acid anion
 is_a: CHEBI:78125 ! fatty acid anion 18:0
-is_a: CHEBI:83955 ! 1,2-saturated fatty acid anion
+is_a: CHEBI:83955 ! 2-saturated fatty acid anion
 relationship: is_conjugate_base_of CHEBI:28842 ! octadecanoic acid
 relationship: RO:0000087 CHEBI:75772 ! Saccharomyces cerevisiae metabolite
 relationship: RO:0000087 CHEBI:76924 ! plant metabolite
@@ -2430,7 +2521,6 @@ is_a: CHEBI:33575 ! carboxylic acid
 id: CHEBI:2580
 name: unsaturated fatty acid anion
 def: "Any fatty acid anion containing at least one C-C unsaturated bond; formed by deprotonation of the carboxylic acid moiety." []
-synonym: "an unsaturated fatty acid" RELATED [UniProt]
 is_a: CHEBI:28868 ! fatty acid anion
 relationship: is_conjugate_base_of CHEBI:27208 ! unsaturated fatty acid
 
@@ -3006,6 +3096,7 @@ is_a: CHEBI:138675 ! gas molecular entity
 is_a: CHEBI:36389 ! saturated organic heteromonocyclic parent
 is_a: CHEBI:38104 ! oxacycle
 relationship: RO:0000087 CHEBI:25435 ! mutagen
+relationship: RO:0000087 CHEBI:50904 ! allergen
 relationship: RO:0000087 CHEBI:75771 ! mouse metabolite
 
 [Term]
@@ -3057,8 +3148,8 @@ is_a: CHEBI:33306 ! carbon group element atom
 id: CHEBI:27594
 name: carbon atom
 synonym: "6C" RELATED [IUPAC]
-synonym: "C" RELATED [IUPAC]
 synonym: "C" RELATED [KEGG_COMPOUND]
+synonym: "C" RELATED [IUPAC]
 synonym: "Carbon" RELATED [KEGG_COMPOUND]
 synonym: "carbon" EXACT IUPAC_NAME [IUPAC]
 synonym: "carbon" RELATED [ChEBI]
@@ -3244,8 +3335,8 @@ id: CHEBI:28659
 name: phosphorus atom
 synonym: "15P" RELATED [IUPAC]
 synonym: "fosforo" RELATED [ChEBI]
-synonym: "P" RELATED [KEGG_COMPOUND]
 synonym: "P" RELATED [IUPAC]
+synonym: "P" RELATED [KEGG_COMPOUND]
 synonym: "Phosphor" RELATED [ChEBI]
 synonym: "phosphore" RELATED [ChEBI]
 synonym: "Phosphorus" RELATED [KEGG_COMPOUND]
@@ -3283,6 +3374,7 @@ synonym: "cuivre" RELATED [ChEBI]
 synonym: "cuprum" RELATED [IUPAC]
 synonym: "Kupfer" RELATED [ChEBI]
 is_a: CHEBI:33366 ! copper group element atom
+is_a: CHEBI:88184 ! metal allergen
 relationship: RO:0000087 CHEBI:27027 ! micronutrient
 relationship: RO:0000087 CHEBI:76971 ! Escherichia coli metabolite
 
@@ -3721,7 +3813,6 @@ relationship: RO:0000087 CHEBI:85234 ! human blood serum metabolite
 id: CHEBI:30412
 name: monoatomic dication
 synonym: "Divalent cation" RELATED [KEGG_COMPOUND]
-synonym: "divalent cation" RELATED [UniProt]
 synonym: "divalent inorganic cations" RELATED [ChEBI]
 synonym: "monoatomic dications" RELATED [ChEBI]
 is_a: CHEBI:23906 ! monoatomic cation
@@ -4978,7 +5069,6 @@ id: CHEBI:33856
 name: aromatic amino acid
 def: "An amino acid whose structure includes an aromatic ring." []
 synonym: "Aromatic amino acid" EXACT [KEGG_COMPOUND]
-synonym: "aromatic amino acid" EXACT [UniProt]
 synonym: "aromatic amino acids" RELATED [ChEBI]
 is_a: CHEBI:33659 ! organic aromatic compound
 is_a: CHEBI:33709 ! amino acid
@@ -5246,7 +5336,6 @@ synonym: "monosacarido" RELATED [ChEBI]
 synonym: "monosacaridos" RELATED [IUPAC]
 synonym: "Monosaccharid" RELATED [ChEBI]
 synonym: "Monosaccharide" EXACT [KEGG_COMPOUND]
-synonym: "monosaccharide" EXACT [UniProt]
 synonym: "monosaccharides" EXACT IUPAC_NAME [IUPAC]
 synonym: "Monosacharid" RELATED [ChEBI]
 is_a: CHEBI:16646 ! carbohydrate
@@ -5996,7 +6085,6 @@ is_a: CHEBI:25370 ! molybdenum molecular entity
 [Term]
 id: CHEBI:37239
 name: molybdenum cation
-synonym: "Mo cation" RELATED [UniProt]
 synonym: "molybdenum cation" EXACT IUPAC_NAME [IUPAC]
 synonym: "molybdenum cations" RELATED [ChEBI]
 is_a: CHEBI:33515 ! transition element cation
@@ -6043,7 +6131,6 @@ synonym: "acid" EXACT IUPAC_NAME [IUPAC]
 synonym: "acide" RELATED [IUPAC]
 synonym: "acido" RELATED [ChEBI]
 synonym: "acids" RELATED [ChEBI]
-synonym: "an acid" RELATED [UniProt]
 synonym: "Saeure" RELATED [ChEBI]
 synonym: "Saeuren" RELATED [ChEBI]
 is_a: CHEBI:51086 ! chemical role
@@ -6111,7 +6198,6 @@ def: "An aldohexose that is the C-2 epimer of glucose." []
 synonym: "Man" RELATED [JCBN]
 synonym: "manno-hexose" EXACT IUPAC_NAME [IUPAC]
 synonym: "mannose" EXACT IUPAC_NAME [IUPAC]
-synonym: "mannose" EXACT [UniProt]
 is_a: CHEBI:33917 ! aldohexose
 relationship: RO:0000087 CHEBI:78675 ! fundamental metabolite
 
@@ -6598,7 +6684,6 @@ is_a: CHEBI:33249 ! organyl group
 id: CHEBI:47778
 name: glyceride
 def: "Any ester resulting from the condensation of one or more of the hydroxy groups of glycerol (propane-1,2,3-triol) with fatty acids." []
-synonym: "acylglycerol" RELATED [UniProt]
 synonym: "acylglycerols" RELATED [ChEBI]
 synonym: "glyceride" EXACT [ChEBI]
 synonym: "glycerides" EXACT IUPAC_NAME [IUPAC]
@@ -6628,7 +6713,6 @@ def: "Any member of the 'superclass' flavonoids whose skeleton is based on 1-ben
 synonym: "2-aryl-1-benzopyran" RELATED [ChEBI]
 synonym: "2-aryl-1-benzopyrans" RELATED [ChEBI]
 synonym: "Flavonoid" EXACT [KEGG_COMPOUND]
-synonym: "flavonoid" EXACT [UniProt]
 synonym: "flavonoids" RELATED [ChEBI]
 is_a: CHEBI:72544 ! flavonoids
 relationship: has_functional_parent CHEBI:26004 ! phenylpropanoid
@@ -6884,7 +6968,6 @@ is_a: CHEBI:2571 ! aliphatic alcohol
 id: CHEBI:50699
 name: oligosaccharide
 def: "A compound in which monosaccharide units are joined by glycosidic linkages. The term is commonly used to refer to a defined structure as opposed to a polymer of unspecified length or a homologous mixture. When the linkages are of other types the compounds are regarded as oligosaccharide analogues." []
-synonym: "an oligosaccharide" RELATED [UniProt]
 synonym: "O-glycosylglycoside" RELATED [ChEBI]
 synonym: "O-glycosylglycosides" RELATED [ChEBI]
 synonym: "oligosacarido" RELATED [ChEBI]
@@ -6924,7 +7007,7 @@ is_a: CHEBI:52209 ! aetiopathogenetic role
 [Term]
 id: CHEBI:50904
 name: allergen
-def: "A chemical compound which causes the onset of an allergic reaction by interacting with any of the molecular pathways involved in an allergy." []
+def: "A chemical compound, or part thereof, which causes the onset of an allergic reaction by interacting with any of the molecular pathways involved in an allergy." []
 synonym: "alergeno" RELATED [ChEBI]
 synonym: "allergene" RELATED [ChEBI]
 synonym: "allergenic agent" RELATED [ChEBI]
@@ -7027,16 +7110,20 @@ relationship: RO:0000087 CHEBI:77746 ! human metabolite
 
 [Term]
 id: CHEBI:52136
-name: phosphinothricin
+name: glufosinate
+def: "A racemate comprising equimolar amounts of (2S)-gluphosinate (better known as gluphosinate-P) and (2R)-gluphosinate." []
 synonym: "2-Amino-4-(hydroxymethylphosphinyl)butanoic acid" RELATED [KEGG_COMPOUND]
-synonym: "2-amino-4-[hydroxy(methyl)phosphoryl]butanoic acid" EXACT IUPAC_NAME [IUPAC]
 synonym: "3-Amino-3-carboxypropylmethylphosphinic acid" RELATED [ChemIDplus]
 synonym: "DL-2-Amino-4-(methylphosphino)butanoic acid" RELATED [ChemIDplus]
-synonym: "glufosinate" RELATED [ChemIDplus]
-synonym: "PHOSPHINOTHRICIN" EXACT [PDBeChem]
-synonym: "Phosphinothricin" EXACT [KEGG_COMPOUND]
-is_a: CHEBI:26044 ! phosphinic acids
+synonym: "glufosinate" EXACT [ChemIDplus]
+synonym: "PHOSPHINOTHRICIN" RELATED [PDBeChem]
+synonym: "phosphinothricin" RELATED [KEGG_COMPOUND]
+synonym: "rac-2-amino-4-[hydroxy(methyl)phosphoryl]butanoic acid" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:60911 ! racemate
+relationship: BFO:0000051 CHEBI:142852 ! glufosinate-P
+relationship: BFO:0000051 CHEBI:142853 ! (2R)-glufosinate
 relationship: is_conjugate_acid_of CHEBI:58882 ! phosphinothricin(1-)
+relationship: RO:0000087 CHEBI:24319 ! EC 6.3.1.2 (glutamate--ammonia ligase) inhibitor
 relationship: RO:0000087 CHEBI:24527 ! herbicide
 
 [Term]
@@ -7240,7 +7327,7 @@ synonym: "2-ammonio-4-(methylphosphinato)butanoate" RELATED [ChEBI]
 synonym: "2-azaniumyl-4-(methylphosphinato)butanoate" EXACT IUPAC_NAME [IUPAC]
 synonym: "phosphinothricin" RELATED [UniProt]
 is_a: CHEBI:25696 ! organic anion
-relationship: is_conjugate_base_of CHEBI:52136 ! phosphinothricin
+relationship: is_conjugate_base_of CHEBI:52136 ! glufosinate
 
 [Term]
 id: CHEBI:58941
@@ -7261,7 +7348,6 @@ is_a: CHEBI:26079 ! phosphoric acid derivative
 id: CHEBI:58953
 name: saturated fatty acid anion
 def: "Any fatty acid anion in which there is no C-C unsaturation." []
-synonym: "a saturated fatty acid" RELATED [UniProt]
 synonym: "saturated fatty acid anions" RELATED [ChEBI]
 is_a: CHEBI:28868 ! fatty acid anion
 
@@ -7353,6 +7439,20 @@ is_a: CHEBI:78608 ! alpha-amino acid zwitterion
 relationship: is_tautomer_of CHEBI:15705 ! L-alpha-amino acid
 
 [Term]
+id: CHEBI:59999
+name: chemical substance
+def: "A chemical substance is a portion of matter of constant composition, composed of molecular entities of the same type or of different types." []
+synonym: "Chemische Substanz" RELATED [ChEBI]
+is_a: CHEBI:24431 ! chemical entity
+
+[Term]
+id: CHEBI:60004
+name: mixture
+def: "A mixture is a chemical substance composed of multiple molecules, at least two of which are of a different kind." []
+synonym: "Mischung" RELATED [ChEBI]
+is_a: CHEBI:59999 ! chemical substance
+
+[Term]
 id: CHEBI:60038
 name: flavonoid oxoanion
 def: "Any anion arising from deprotonation of at least one OH group in a flavonoid compound." []
@@ -7416,6 +7516,15 @@ def: "Zwitterionic form of any peptide where the amino terminus is positively ch
 synonym: "peptide zwitterions" RELATED [ChEBI]
 is_a: CHEBI:27369 ! zwitterion
 relationship: is_tautomer_of CHEBI:16670 ! peptide
+
+[Term]
+id: CHEBI:60911
+name: racemate
+def: "A racemate is an equimolar mixture of a pair of enantiomers." []
+synonym: "melange racemique" RELATED [ChEBI]
+synonym: "racemates" RELATED [ChEBI]
+synonym: "racemic mixture" RELATED [ChEBI]
+is_a: CHEBI:60004 ! mixture
 
 [Term]
 id: CHEBI:60926
@@ -7939,6 +8048,36 @@ synonym: "raffinose family oligosaccharides" RELATED [ChEBI]
 is_a: CHEBI:50699 ! oligosaccharide
 
 [Term]
+id: CHEBI:75600
+name: EC 6.3.* (C-N bond-forming ligase) inhibitor
+def: "A ligase inhibitor that interferes with the action of a C-N bond-forming ligase (EC 6.3.*.*)." []
+synonym: "C--N bond-forming ligase inhibitor" RELATED [ChEBI]
+synonym: "C--N bond-forming ligase inhibitors" RELATED [ChEBI]
+synonym: "C-N bond-forming ligase (EC 6.3.*) inhibitor" RELATED [ChEBI]
+synonym: "C-N bond-forming ligase (EC 6.3.*) inhibitors" RELATED [ChEBI]
+synonym: "C-N bond-forming ligase inhibitor" RELATED [ChEBI]
+synonym: "C-N bond-forming ligase inhibitors" RELATED [ChEBI]
+synonym: "EC 6.3.* (C-N bond-forming ligase) inhibitorS" RELATED [ChEBI]
+synonym: "EC 6.3.* inhibitor" RELATED [ChEBI]
+synonym: "EC 6.3.* inhibitors" RELATED [ChEBI]
+synonym: "EC 6.3.*.* inhibitor" RELATED [ChEBI]
+synonym: "EC 6.3.*.* inhibitors" RELATED [ChEBI]
+is_a: CHEBI:75603 ! EC 6.* (ligase) inhibitor
+
+[Term]
+id: CHEBI:75603
+name: EC 6.* (ligase) inhibitor
+def: "Any enzyme inhibitor that interferes with the action of a ligase (EC 6.*.*.*). Ligases are enzymes that catalyse the joining of two molecules with concomitant hydrolysis of the diphosphate bond in ATP or a similar triphosphate." []
+synonym: "EC 6.* (ligase) inhibitors" RELATED [ChEBI]
+synonym: "EC 6.* inhibitor" RELATED [ChEBI]
+synonym: "EC 6.* inhibitors" RELATED [ChEBI]
+synonym: "EC 6.*.*.* inhibitor" RELATED [ChEBI]
+synonym: "EC 6.*.*.* inhibitors" RELATED [ChEBI]
+synonym: "ligase inhibitor" RELATED [ChEBI]
+synonym: "ligase inhibitors" RELATED [ChEBI]
+is_a: CHEBI:23924 ! enzyme inhibitor
+
+[Term]
 id: CHEBI:75763
 name: eukaryotic metabolite
 def: "Any  metabolite produced during a metabolic reaction in eukaryotes, the taxon that include members of the fungi, plantae and animalia kingdoms." []
@@ -8227,6 +8366,17 @@ is_a: CHEBI:37699 ! protein kinase inhibitor
 is_a: CHEBI:76668 ! EC 2.7.* (P-containing group transferase) inhibitor
 
 [Term]
+id: CHEBI:76823
+name: EC 6.3.1.* (acid-ammonia/amine ligase) inhibitor
+def: "An EC 6.3.* (C-N bond-forming ligase) inhibitor that interferes with the action of any acid-ammonia (or amine) ligase (EC 6.3.1.*)." []
+synonym: "acid-ammonia (or amine) ligase inhibitor" RELATED [ChEBI]
+synonym: "acid-ammonia (or amine) ligase inhibitors" RELATED [ChEBI]
+synonym: "EC 6.3.1.* (acid-ammonia/amine ligase) inhibitors" RELATED [ChEBI]
+synonym: "EC 6.3.1.* inhibitor" RELATED [ChEBI]
+synonym: "EC 6.3.1.* inhibitors" RELATED [ChEBI]
+is_a: CHEBI:75600 ! EC 6.3.* (C-N bond-forming ligase) inhibitor
+
+[Term]
 id: CHEBI:76834
 name: EC 2.5.* (non-methyl-alkyl or aryl transferase) inhibitor
 def: "An EC 2.5.* (transferase) inhibitor that inhibits the action of any transferase that transfers an alkyl (other than methyl) or aryl group (EC 2.5.*)." []
@@ -8279,8 +8429,6 @@ synonym: "carboxy-lyase (EC 4.1.1.*) inhibitors" RELATED [ChEBI]
 synonym: "carboxy-lyases (EC 4.1.1.*) inhibitor" RELATED [ChEBI]
 synonym: "carboxy-lyases (EC 4.1.1.*) inhibitors" RELATED [ChEBI]
 synonym: "EC 4.1.1.* (carboxy-lyase) inhibitors" RELATED [ChEBI]
-synonym: "EC 4.1.1.* (carboxy-lyases) inhibitor" RELATED [ChEBI]
-synonym: "EC 4.1.1.* (carboxy-lyases) inhibitors" RELATED [ChEBI]
 synonym: "EC 4.1.1.* inhibitor" RELATED [ChEBI]
 synonym: "EC 4.1.1.* inhibitors" RELATED [ChEBI]
 is_a: CHEBI:76711 ! EC 4.1.* (C-C lyase) inhibitor
@@ -8719,6 +8867,23 @@ is_a: CHEBI:33575 ! carboxylic acid
 is_a: CHEBI:35352 ! organonitrogen compound
 
 [Term]
+id: CHEBI:83820
+name: non-proteinogenic amino acid
+def: "Any amino-acid that is not naturally encoded in the genetic code of any organism." []
+synonym: "non-canonical amino acid" RELATED [ChEBI]
+synonym: "non-canonical amino acids" RELATED [ChEBI]
+synonym: "non-canonical amino-acid" RELATED [ChEBI]
+synonym: "non-canonical amino-acids" RELATED [ChEBI]
+synonym: "non-coded amino acid" RELATED [ChEBI]
+synonym: "non-coded amino acids" RELATED [ChEBI]
+synonym: "non-coded amino-acid" RELATED [ChEBI]
+synonym: "non-coded amino-acids" RELATED [ChEBI]
+synonym: "non-proteinogenic amino acids" RELATED [ChEBI]
+synonym: "non-proteinogenic amino-acid" RELATED [ChEBI]
+synonym: "non-proteinogenic amino-acids" RELATED [ChEBI]
+is_a: CHEBI:33709 ! amino acid
+
+[Term]
 id: CHEBI:83821
 name: amino acid derivative
 def: "Any derivative of an amino acid resulting from reaction at an amino group, carboxy group, side-chain functional group, or from the replacement of any hydrogen by a heteroatom. The definition normally excludes peptides containing amino acid residues." []
@@ -8727,10 +8892,21 @@ synonym: "modified amino acids" RELATED [ChEBI]
 is_a: CHEBI:35352 ! organonitrogen compound
 
 [Term]
+id: CHEBI:83925
+name: non-proteinogenic alpha-amino acid
+def: "Any  alpha-amino acid which is not a member of the group of 23 proteinogenic amino acids." []
+synonym: "non-proteinogenic alpha-amino acids" RELATED [ChEBI]
+synonym: "non-proteinogenic alpha-amino-acid" RELATED [ChEBI]
+synonym: "non-proteinogenic alpha-amino-acids" RELATED [ChEBI]
+is_a: CHEBI:33704 ! alpha-amino acid
+is_a: CHEBI:83820 ! non-proteinogenic amino acid
+
+[Term]
 id: CHEBI:83955
-name: 1,2-saturated fatty acid anion
-def: "A fatty acid anion obtained by deprotonation of the carboxy group of any 1,2-saturated fatty acid" []
-synonym: "1,2-saturated fatty acid" RELATED [UniProt]
+name: 2-saturated fatty acid anion
+def: "A fatty acid anion obtained by deprotonation of the carboxy group of any 2-saturated fatty acid." []
+synonym: "1,2-saturated fatty acid anion" RELATED [ChEBI]
+synonym: "a 1,2-saturated fatty acid" RELATED [UniProt]
 is_a: CHEBI:28868 ! fatty acid anion
 
 [Term]

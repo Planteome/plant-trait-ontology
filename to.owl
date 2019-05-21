@@ -14,7 +14,7 @@
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:po="http://purl.obolibrary.org/obo/po#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/to.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/to/releases/2018-09-25/to.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/to/releases/2019-05-21/to.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/to/imports/ro_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/to/imports/pato_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/to/imports/peco_import.owl"/>
@@ -55,12 +55,6 @@
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001">
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">term replaced by</rdfs:label>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002581 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002581"/>
     
 
 
@@ -28323,14 +28317,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PO_0028006 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0028006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PO_0025066"/>
-    </rdf:Description>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PO_0030001 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PO_0030001">
@@ -30035,7 +30021,7 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A common sedge weed Cyperus iria (rice flatsedge), Cyperus difformis (Small flower umbrella sedge),  Rice field bulrush Scirpus mucronatus, River bulrush Scirpus fluviatilis. Grows as a weed in the rice field. Can be distinguished from grass plant by the leaf shape, venation, stem cross-section and plant shape leaf shape.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:9712200299</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">web:http//www.ipm.ucdavis.edu/PMG/r682700999.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http//www.ipm.ucdavis.edu/PMG/r682700999.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31453,7 +31439,7 @@
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A common sedge weed Monochoria vaginalis (monochoria), California arrowhead Sagittaria montevidensis, Gregg arrowhead Sagittaria longiloba, Ducksalad Heteranthera limosa, Echinodorus berteroi and E. cordifolius (Burhead), Ammannia spp (Redstems), Bacopa spp. (Water hyssops), Alisma plantago-aquatica (Common water plantain). Grows as a weed in the rice field. Can be distinguished from rice plant by the leaf shape, venation, stem cross-section and plant shape leaf shape.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:9712200299</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">web:http//www.ipm.ucdavis.edu/PMG/r682700999.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.ipm.ucdavis.edu/PMG/r682700999.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -32177,7 +32163,13 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000135">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000122"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002637"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf size (TO:0002637) trait which is a length of a leaf (PO:0025034).</obo1:IAO_0000115>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0000542"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf morphology trait (TO:0000748) which is the length of a leaf (PO:0025034).</obo1:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MaizeGDB_QTL:61715</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000122</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:247</oboInOwl:hasDbXref>
@@ -32192,7 +32184,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000135"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf size (TO:0002637) trait which is a length of a leaf (PO:0025034).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf morphology trait (TO:0000748) which is the length of a leaf (PO:0025034).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IRRI:SES</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:0025034</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
@@ -32403,7 +32395,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000144"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A grain yield trait (TO:0000396) which is the proportion of kernels remaining after milling to remove the bran.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RiceCAP https://ricecap.hosted.uark.edu/glossary_ricecaplist.htm#M</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://ricecap.hosted.uark.edu/glossary_ricecaplist.htm#M</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -33249,7 +33241,7 @@ Refer to fertility (PATO:0000274): A reproductive quality inhering in a bearer b
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000184">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000836"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A multi-tissue plant structure morphology trait (TO:0000836) which is a seed (PO:0009010).</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A multi-tissue plant structure morphology trait (TO:0000836) which is a quality of a seed (PO:0009010).</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000184</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seed morphology trait</rdfs:label>
@@ -33257,7 +33249,7 @@ Refer to fertility (PATO:0000274): A reproductive quality inhering in a bearer b
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000184"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A multi-tissue plant structure morphology trait (TO:0000836) which is a seed (PO:0009010).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A multi-tissue plant structure morphology trait (TO:0000836) which is a quality of a seed (PO:0009010).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:0009010</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:moorel</oboInOwl:hasDbXref>
@@ -34343,10 +34335,10 @@ Refer to fertility (PATO:0000274): A reproductive quality inhering in a bearer b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000227"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A root morphology trait (TO:0000043) which is the length of a root (PO:0009005).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:jcl
-GR:pj</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:austin_meier
-TO:cooperl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GR:pj</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:jcl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:austin_meier</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -34355,10 +34347,17 @@ TO:cooperl</oboInOwl:hasDbXref>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000228">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000597"/>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant quality trait (TO:0000597) which is the amount of moisture in a plant structure (PO:0009011).</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000228</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">moisture content trait</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000228"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant quality trait (TO:0000597) which is the amount of moisture in a plant structure (PO:0009011).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -34933,7 +34932,13 @@ TO:cooperl</oboInOwl:hasDbXref>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000258">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000915"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002637"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf size (TO:0002637) trait which is the thickness of a leaf (PO:0025034).</obo1:IAO_0000115>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0002637"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf morphology trait (TO:0000748) which is the thickness of a leaf (PO:0025034).</obo1:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000915</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000258</oboInOwl:id>
@@ -34943,7 +34948,7 @@ TO:cooperl</oboInOwl:hasDbXref>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000258"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf size (TO:0002637) trait which is the thickness of a leaf (PO:0025034).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf morphology trait (TO:0000748) which is the thickness of a leaf (PO:0025034).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:0025034</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:moorel</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -35200,7 +35205,7 @@ TO:cooperl</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HSDWT (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hundred seed weight (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000269</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hundred grain weights are measured in grams on a precision balance on 100 well-developed whole grains (with the caryopsis hull; PO:0006000), dried to 13% moisture content.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hundred grain weights are measured in grams, on a precision balance on 100 well-developed whole grains (with the caryopsis hull; PO:0006000), dried to 13% moisture content.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100-grain weight</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -35278,8 +35283,8 @@ TO:cooperl</oboInOwl:hasDbXref>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Causal agent: Pseudaletia unipuncta, Spodoptera mauritia and Spodoptera praefica. The swarming caterpillars cause severe damage to rice plants in nursery beds.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">web:http//pne.gsnu.ac.kr/riceipm/spodopte.htm</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">web:http//www.ipm.ucdavis.edu/PMG/r682300411.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://pne.gsnu.ac.kr/riceipm/spodopte.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.ipm.ucdavis.edu/PMG/r682300411.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -35703,17 +35708,20 @@ TO:cooperl</oboInOwl:hasDbXref>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000293">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000495"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measures the chlorophyll-a (Chl-a) content in a green tissue. It is a type of chlorophyll present as green pigment in plants.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is the chlorophyll a content in a plant structure (PO:0009011).</obo1:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chl a (exact)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chl-a (exact)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorophyll-a content (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chl-a (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000293</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorophyll-a content</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorophyll a content</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000293"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measures the chlorophyll-a (Chl-a) content in a green tissue. It is a type of chlorophyll present as green pigment in plants.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is the chlorophyll a content in a plant structure (PO:0009011).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -35747,16 +35755,20 @@ TO:cooperl</oboInOwl:hasDbXref>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000295">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000495"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measures the chlorophyll-b (Chl-b) content in a green tissue. It is a type of chlorophyll present as green pigment in plants.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is the chlorophyll b content in a plant structure (PO:0009011).</obo1:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chl b content (exact)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chl-b content (exact)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorophyll-b content (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000295</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorophyll-b content</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorophyll b content</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000295"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measures the chlorophyll-b (Chl-b) content in a green tissue. It is a type of chlorophyll present as green pigment in plants.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is the chlorophyll b content in a plant structure (PO:0009011).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -35805,20 +35817,22 @@ TO:cooperl</oboInOwl:hasDbXref>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000298">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000495"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measures the a-a to chlorophyll-b content ratio in a green tissue. Chlorophyll is the green pigment found in plants.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is the ratio of chlorophyll a to chlorophyll b in a plant structure (PO:0009011).</obo1:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chl a to chl b ratio (exact)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chl-a to chl-b ratio (exact)</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorophyll content ratio (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHLRO (related)</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chl-a to chl-b ratio (related)</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorophyll content ratio (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000298</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The average ratio of chl-a to chl-b is about 3:1.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The average ratio of chl a to chl b is about 3:1.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorophyll ratio</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000298"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measures the a-a to chlorophyll-b content ratio in a green tissue. Chlorophyll is the green pigment found in plants.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is the ratio of chlorophyll a to chlorophyll b in a plant structure (PO:0009011).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:198506732</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -36071,7 +36085,7 @@ TO:cooperl</oboInOwl:hasDbXref>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000310"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Self-incompatibility allows plants to recognize and reject pollen from the same plant, thereby reducing inbreeding.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PubMed:PMID_10066554</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:10066554</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -36278,19 +36292,20 @@ TO:cooperl</oboInOwl:hasDbXref>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000320">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001470"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000298"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000319"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A ratio of the amount of rubisco protein to that of the chlorophyll content in a plant or plant part.</obo1:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000495"/>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is ratio of the amount of RuBisCo protein to that of the chlorophyll content (TO:0000495) in a plant strucure (PO:0009011).</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RUBISCOCHLRO (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000320</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rubisco to chlorophyll ratio</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorophyll to rubisco ratio</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000320"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A ratio of the amount of rubisco protein to that of the chlorophyll content in a plant or plant part.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is ratio of the amount of RuBisCo protein to that of the chlorophyll content (TO:0000495) in a plant strucure (PO:0009011).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -36319,18 +36334,20 @@ TO:cooperl</oboInOwl:hasDbXref>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000322">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000597"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breeding objectives for each variety and trait varies. The evaluation should reflect the overall acceptability of the variety.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant quality trait (TO:0000597) which is the evaluation of whether the plant phenotype is meeting the breeding objectives.</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PAcp (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">overall liking (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000322</oboInOwl:id>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breeding objectives vary for each trait and variety. The evaluation should reflect the overall acceptability of the variety.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phenotypic acceptability</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000322"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breeding objectives for each variety and trait varies. The evaluation should reflect the overall acceptability of the variety.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant quality trait (TO:0000597) which is the evaluation of whether the plant phenotype is meeting the breeding objectives.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IRRI:SES</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -36789,7 +36806,7 @@ also holes etc).</rdfs:comment>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A common grass weed Echinochloa glabbrescens or Echinochloa crus-galli (Barnyard grass), Typha spp. (Cattails), Leptochloa fascicularis (Bearded sprangletop) grows as a weed in the rice field. Can be distinguished from rice plant by the leaf shape, venation, stem cross-section and plant shape leaf shape.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:9712200299</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www:http//www.ipm.ucdavis.edu/PMG/r682700999.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.ipm.ucdavis.edu/PMG/r682700999.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -37309,7 +37326,13 @@ also holes etc).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000370">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000921"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002637"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf size (TO:0002637) trait which the width of a leaf (PO:0025034).</obo1:IAO_0000115>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0002637"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf morphology trait (TO:0000748) which is the width of a leaf (PO:0025034).</obo1:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MaizeGDB_QTL:61714</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000921</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:247</oboInOwl:hasDbXref>
@@ -37324,7 +37347,7 @@ also holes etc).</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000370"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf size (TO:0002637) trait which the width of a leaf (PO:0025034).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf morphology trait (TO:0000748) which is the width of a leaf (PO:0025034).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IRRI:SES</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:0025034</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
@@ -37561,7 +37584,7 @@ also holes etc).</rdfs:comment>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TSDWT (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thousand seed weight (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000382</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thousand grain weights are measured in grams on a precision balance on 100 well-developed whole grains (with the caryopsis hull; PO:0006000), dried to 13% moisture content.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thousand grain weights are measured in grams, on a precision balance, on 1000 well-developed whole grains (with the caryopsis hull; PO:0006000), dried to 13% moisture content.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1000-grain weight</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -37614,22 +37637,23 @@ also holes etc).</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/TO_0000385 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000385">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001079"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit color (TO:0002617) trait which is the color of dehulled, milled grain, which does not have pericarp (PO:0009084).</obo1:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001109"/>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A grain color (TO:0002617) trait which is the color of dehulled, milled grain (caryopsis fruit; PO:0030104).</obo1:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000014</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRCL (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MGRCL (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000385</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">For color of the dehulled grain, see pericarp color (TO:0000707).  Refer to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dehulled, milled grains have had the caryopsis hull (PO:0006000) removed, as well as the pericarp (PO:0009084), aleurone layer (PO:0005360) and germ (plant embryo; PO:0009009).  Refers to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">milled grain color</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000385"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit color (TO:0002617) trait which is the color of dehulled, milled grain, which does not have pericarp (PO:0009084).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A grain color (TO:0002617) trait which is the color of dehulled, milled grain (caryopsis fruit; PO:0030104).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:0009084</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000014</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:moorel</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -37864,9 +37888,9 @@ also holes etc).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000397">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001079"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002625"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit size (TO:0002625) which is the size of a dehulled, milled grain without pericarp (PO:0009084).</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A caryopsis fruit morphology trait (TO:0001079) which is the size of the grain (caryopsis fruit; PO:0030104).</obo1:IAO_0000115>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRSZ (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRSZ (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000397</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer&apos;s physical magnitude. Size categories ranging from small to medium to large.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grain size</rdfs:label>
@@ -37874,7 +37898,7 @@ also holes etc).</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000397"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit size (TO:0002625) which is the size of a dehulled, milled grain without pericarp (PO:0009084).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A caryopsis fruit morphology trait (TO:0001079) which is the size of the grain (caryopsis fruit; PO:0030104).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:0009084</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:moorel</oboInOwl:hasDbXref>
@@ -38094,7 +38118,7 @@ also holes etc).</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000406">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000597"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A panicle morphology trait (TO:0000847) which is the percentage of shattered grains, determined by firmly grasping and pulling the hand over the panicle.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant quality trait (TO:0000597) which is the percentage of shattered grains, determined by firmly grasping and pulling the hand over the panicle.</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PNTH (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thr (related)</oboInOwl:hasRelatedSynonym>
@@ -38104,7 +38128,7 @@ also holes etc).</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000406"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A panicle morphology trait (TO:0000847) which is the percentage of shattered grains, determined by firmly grasping and pulling the hand over the panicle.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant quality trait (TO:0000597) which is the percentage of shattered grains, determined by firmly grasping and pulling the hand over the panicle.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IRRI:SES</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -38183,7 +38207,7 @@ also holes etc).</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A caryopsis fruit morphology trait (TO:0001079) which is the ratio of grain length (TO:0000734) to grain width (TO:0002762), including the caryopsis hull (PO:0006000).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</rdfs:comment>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -38226,7 +38250,7 @@ also holes etc).</rdfs:comment>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Causal agent: Rice tungro bacilliform virus (RTBV) and rice tungro spherical virus (RTSV). The disease is transmitted by the green leafhopper Nephotettix spp. Symptoms: Yellow-to-yellow orange leaves, stunting and slightly reduced tillering.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IRRI:SES</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">web:http//www.fao.org/inpho/vlibrary/t0567e/T0567E03.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.fao.org/inpho/vlibrary/t0567e/T0567E03.htm</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -39268,7 +39292,7 @@ also holes etc).</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stability of the cell membrane under the impact of temperature (heat) and water deficit stress.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">web:http://www.plantstress.com/methods/CMS_method.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.plantstress.com/methods/CMS_method.htm</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -39298,7 +39322,8 @@ also holes etc).</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000469">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000933"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of days required from seeding to seed/grain ripening .</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant phenological trait (TO:0000933) which is the number of days from planting to the fruit ripening stage (PO:0025502) or seed maturation stage (PO:0007632).</obo1:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time to harvest (narrow)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DTMT (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mat (related)</oboInOwl:hasRelatedSynonym>
@@ -39308,8 +39333,9 @@ also holes etc).</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000469"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of days required from seeding to seed/grain ripening .</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant phenological trait (TO:0000933) which is the number of days from planting to the fruit ripening stage (PO:0025502) or seed maturation stage (PO:0007632).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IRRI:SES</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -39781,7 +39807,7 @@ also holes etc).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000495">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000494"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000674"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measures the chlorophyll content in a green tissue. Includes both chlorophyll-a and chlorophyll-b. Chlorophyll is the green pigment found in plants.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pigment content trait (TO:0000494) which is a measure of the chlorophyll a and/or chlorophyll b content in a plant structure (PO:0009011).</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHLCN (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000495</oboInOwl:id>
@@ -39791,8 +39817,9 @@ also holes etc).</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000495"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Measures the chlorophyll content in a green tissue. Includes both chlorophyll-a and chlorophyll-b. Chlorophyll is the green pigment found in plants.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A pigment content trait (TO:0000494) which is a measure of the chlorophyll a and/or chlorophyll b content in a plant structure (PO:0009011).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40492,8 +40519,8 @@ also holes etc).</rdfs:comment>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000531"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An anther morphology trait (TO:1000022) which is the length (PATO:0000122) of an anther (PO:0009066).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:ethan_johnson
-TO:austin_meier</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:austin_meier</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:ethan_johnson</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40700,8 +40727,14 @@ TO:austin_meier</oboInOwl:hasDbXref>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000542">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001470"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002637"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf size (TO:0002637) which is the ratio of leaf length to its width.</obo1:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000748"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0002637"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf morphology trait (TO:0000748) which is the ratio of leaf length (TO:0000135) to leaf width (TO:0000370).</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LFLGWDRO (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000542</oboInOwl:id>
@@ -40711,8 +40744,9 @@ TO:austin_meier</oboInOwl:hasDbXref>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000542"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf size (TO:0002637) which is the ratio of leaf length to its width.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf morphology trait (TO:0000748) which is the ratio of leaf length (TO:0000135) to leaf width (TO:0000370).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40842,9 +40876,10 @@ TO:austin_meier</oboInOwl:hasDbXref>
     <!-- http://purl.obolibrary.org/obo/TO_0000548 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000548">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001555"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000077"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000549"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000953"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of rhizomes present in a plant.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shoot system morphology trait (TO:0000077) which is the number of rhizomes present in a shoot system (PO:0009006).</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RHZNB (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rhizome number per plant (related)</oboInOwl:hasRelatedSynonym>
@@ -40854,8 +40889,9 @@ TO:austin_meier</oboInOwl:hasDbXref>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000548"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of rhizomes present in a plant.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shoot system morphology trait (TO:0000077) which is the number of rhizomes present in a shoot system (PO:0009006).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40863,8 +40899,8 @@ TO:austin_meier</oboInOwl:hasDbXref>
     <!-- http://purl.obolibrary.org/obo/TO_0000549 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000549">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000361"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A trait which is a quality of of the rhizomatic stem and its parts.</obo1:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000739"/>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shoot axis morphology trait (TO:0000739) which is a quality of a rhizome (PO:0004542).</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000549</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rhizome morphology trait</rdfs:label>
@@ -40872,8 +40908,9 @@ TO:austin_meier</oboInOwl:hasDbXref>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000549"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A trait which is a quality of of the rhizomatic stem and its parts.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shoot axis morphology trait (TO:0000739) which is a quality of a rhizome (PO:0004542).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40883,19 +40920,19 @@ TO:austin_meier</oboInOwl:hasDbXref>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000550">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002326"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000549"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000577"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angle of branches on a rhizhomatic stem.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rhizome morphology trait (TO:0000549) which is the angle of a branch (PO:0025073) on a rhizome (PO:0004542) .</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RHZBRAG (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rhizome branching degree (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000550</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rhizome branching angle</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rhizome branch angle</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000550"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angle of branches on a rhizhomatic stem.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rhizome morphology trait (TO:0000549) which is the angle of a branch (PO:0025073) on a rhizome (PO:0004542) .</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40904,18 +40941,19 @@ TO:austin_meier</oboInOwl:hasDbXref>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000551">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000549"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of branches on a rhizhomatic stem.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rhizome morphology trait (TO:0000549) which is the number of branches (PO:0025073) on a rhizome (PO:0004542).</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RHZBRNB (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rhizome branching number per plant (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000551</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rhizome branching number</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rhizome branch number</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000551"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of branches on a rhizhomatic stem.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rhizome morphology trait (TO:0000549) which is the number of branches (PO:0025073) on a rhizome (PO:0004542).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40949,9 +40987,9 @@ TO:austin_meier</oboInOwl:hasDbXref>
     <!-- http://purl.obolibrary.org/obo/TO_0000553 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000553">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000122"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000549"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000576"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Length of the rhizhomatic stem.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rhizome morphology trait (TO:0000549) which is the length of a rhizome (PO:0004542).</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RHZLG (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">average rhizome length (related)</oboInOwl:hasRelatedSynonym>
@@ -40961,8 +40999,9 @@ TO:austin_meier</oboInOwl:hasDbXref>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000553"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Length of the rhizhomatic stem.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rhizome morphology trait (TO:0000549) which is the length of a rhizome (PO:0004542).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40972,7 +41011,7 @@ TO:austin_meier</oboInOwl:hasDbXref>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000554">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000553"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000754"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Length of internodes on a rhizhomatic stem.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rhizome morphology trait (TO:0000549) which is the length of a rhizome internode (PO:0025204).</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RHZINLG (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">average rhizome internode length (related)</oboInOwl:hasRelatedSynonym>
@@ -40982,8 +41021,9 @@ TO:austin_meier</oboInOwl:hasDbXref>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000554"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Length of internodes on a rhizhomatic stem.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rhizome morphology trait (TO:0000549) which is the length of a rhizome internode (PO:0025204).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -40993,7 +41033,7 @@ TO:austin_meier</oboInOwl:hasDbXref>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000555">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000548"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000754"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of internodes on a rhizhomatic stem.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rhizome morphology trait (TO:0000549) which is the number of rhizome internodes (PO:0025204).</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RHZINNB (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">average rhizome internode number (related)</oboInOwl:hasRelatedSynonym>
@@ -41003,8 +41043,9 @@ TO:austin_meier</oboInOwl:hasDbXref>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000555"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number of internodes on a rhizhomatic stem.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rhizome morphology trait (TO:0000549) which is the number of rhizome internodes (PO:0025204).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41019,12 +41060,19 @@ TO:austin_meier</oboInOwl:hasDbXref>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0000352"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rhizome morphology trait (TO:0000549) which is the dry weight of a rhizome (PO:0004542).</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RHZDWT (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rhizome dry weight per plant (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000556</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rhizome dry weight</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000556"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A rhizome morphology trait (TO:0000549) which is the dry weight of a rhizome (PO:0004542).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -41679,8 +41727,8 @@ Refer to length (PATO:0000122): A 1-D extent quality which is equal to the dista
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A root length (TO:0000227) that is the length of one or more seminal roots (PO:0000046).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal37</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:seymour_megan
-TO:austin_meier</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:austin_meier</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:seymour_megan</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -41790,7 +41838,7 @@ TO:austin_meier</oboInOwl:hasDbXref>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000592">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000590"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dehulled grain weight (TO:0000590) which is the weight of a sample ofeight of 1000 dehulled grains (caryopsis fruit; PO:0030104) .</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dehulled grain weight (TO:0000590) which is the weight of a sample of 1000 dehulled grains (caryopsis fruit; PO:0030104) .</obo1:IAO_0000115>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thousand grain weight (broad)</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TDHULGRWT (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thousand dehulled grain weight (exact)</oboInOwl:hasExactSynonym>
@@ -41802,7 +41850,7 @@ TO:austin_meier</oboInOwl:hasDbXref>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000592"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dehulled grain weight (TO:0000590) which is the weight of a sample ofeight of 1000 dehulled grains (caryopsis fruit; PO:0030104) .</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dehulled grain weight (TO:0000590) which is the weight of a sample of 1000 dehulled grains (caryopsis fruit; PO:0030104) .</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -41817,7 +41865,7 @@ TO:austin_meier</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLSGRWT (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000593</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polishing removes the bran, which consists of aleurone layer (PO:0005360) and pericarp; PO:0009084) and the germ (plant embryo; PO:0009009).  In rice, this is what is referred to as &apos;white rice&apos;.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polishing removes the bran, which consists of aleurone layer (PO:0005360), pericarp; (PO:0009084) and the germ (plant embryo; PO:0009009).  In rice, this is what is referred to as &apos;white rice&apos;.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">polished grain weight</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -42187,7 +42235,6 @@ Plant traits from other upper level classes may contribute to (as part_of childr
     <!-- http://purl.obolibrary.org/obo/TO_0000611 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000611">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000281"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001070"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">It is a measure of the sugars and nitrogenous compounds available for yeast nutrition.</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
@@ -42359,21 +42406,28 @@ Plant traits from other upper level classes may contribute to (as part_of childr
     <!-- http://purl.obolibrary.org/obo/TO_0000617 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000617">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000707"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Percentage of colored de-hulled grains in a sample of grains with reference color.</obo1:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001109"/>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A grain color (TO:0002617) trait which is the percentage of colored grains.</obo1:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">percentage of damaged yellow rice grains (narrow)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">percentage of green rice grains (narrow)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">percentage of red rice grains (narrow)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">percentage of colored grains (related)</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">percentage of damaged yellow rice grains (related)</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">percentage of green rice grains (related)</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">percentage of red rice grains (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000617</oboInOwl:id>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The measurement is on de-hulled grains in comparison to a reference color.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colored grain percentage</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000617"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Percentage of colored de-hulled grains in a sample of grains with reference color.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A grain color (TO:0002617) trait which is the percentage of colored grains.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000617"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The measurement is on de-hulled grains in comparison to a reference color.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -42742,7 +42796,12 @@ Plant traits from other upper level classes may contribute to (as part_of childr
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000639">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000184"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000420"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000931"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0000931"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SDFRT (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">percent seed fertility (related)</oboInOwl:hasRelatedSynonym>
@@ -43885,21 +43944,26 @@ Plant traits from other upper level classes may contribute to (as part_of childr
     <!-- http://purl.obolibrary.org/obo/TO_0000697 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000697">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000162"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000291"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000327"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002629"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An assay to determine the starch yield from a bigger sample such as from a given population or from a plot or field. It is often carried out initially with the smaller sample but later converted to associate with a large sample for example record starch yield in kilograms per hectare.</obo1:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000371"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/TO_0000162"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A yield trait (TO:0000371) which is the yield of starch from a plant structure (PO:0009011).</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STARCHYLD (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000697</oboInOwl:id>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Starch yield can be assayed initially with a smaller sample, but later converted to associate with a large sample, for example, for starch yield in kilograms per hectare.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">starch yield</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000697"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An assay to determine the starch yield from a bigger sample such as from a given population or from a plot or field. It is often carried out initially with the smaller sample but later converted to associate with a large sample for example record starch yield in kilograms per hectare.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A yield trait (TO:0000371) which is the yield of starch from a plant structure (PO:0009011).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -44385,7 +44449,8 @@ Plant traits from other upper level classes may contribute to (as part_of childr
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf morphology trait (TO:0000748) which is a tightly rolled leaf encasing the next emerging leaf (PO:0025034).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:0025034,TO:cooperl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:0025034</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -44617,12 +44682,12 @@ Plant traits from other upper level classes may contribute to (as part_of childr
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000734">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000397"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002626"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit length (TO:0002626) of the dehulled grain with pericarp (PO:0009084).</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A caryopsis fruit morphology trait (TO:0001079) which is the length of a grain (caryopsis fruit; PO:0030104).</obo1:IAO_0000115>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0002760</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000122</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRLG (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DHULGRLG (related)</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRLG (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KERLG (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kernel length (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">length of dehulled grain (related)</oboInOwl:hasRelatedSynonym>
@@ -44634,9 +44699,8 @@ Plant traits from other upper level classes may contribute to (as part_of childr
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000734"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit length (TO:0002626) of the dehulled grain with pericarp (PO:0009084).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A caryopsis fruit morphology trait (TO:0001079) which is the length of a grain (caryopsis fruit; PO:0030104).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:0009084</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:moorel</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -49346,7 +49410,7 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000931">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000597"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality trait (TO:0000597) which is the commercial and /or economical value of a seed (PO:0009010) , or its overall improvement.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant quality trait (TO:0000597) which is the commercial and /or economical value of a seed (PO:0009010) , or its overall improvement.</obo1:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cooperl</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-03-17T11:41:08Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:209</oboInOwl:hasDbXref>
@@ -49357,7 +49421,7 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000931"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality trait (TO:0000597) which is the commercial and /or economical value of a seed (PO:0009010) , or its overall improvement.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant quality trait (TO:0000597) which is the commercial and /or economical value of a seed (PO:0009010) , or its overall improvement.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -49434,7 +49498,7 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000935">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000919"/>
-        <obo1:IAO_0000231 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A grain weight (TO:0000919) which is the total weight of all kernels on the primary ear infructescence (PO:0025597).</obo1:IAO_0000231>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A grain weight (TO:0000919) which is the total weight of all kernels on the primary ear infructescence (PO:0025597).</obo1:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cooperl</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014-06-27T08:27:30Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBO_S2F_TO:280</oboInOwl:hasDbXref>
@@ -49444,7 +49508,7 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000935"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000231"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A grain weight (TO:0000919) which is the total weight of all kernels on the primary ear infructescence (PO:0025597).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MaizeGDB:Mary_Schaeffer</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
@@ -49899,12 +49963,18 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000955">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000281"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A metabolite content related trait (TO:0000281) which is the amount of cyanide (CHEBI:17514) occurring in a plant anatomical entity (PO:0025131).</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A metabolite content related trait (TO:0000281) which is the amount of cyanide (CHEBI:17514) occurring in a plant structure (PO:0009011).</obo1:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:17514</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000955</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cyanide content</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000955"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A metabolite content related trait (TO:0000281) which is the amount of cyanide (CHEBI:17514) occurring in a plant structure (PO:0009011).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -50346,8 +50416,8 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
     <!-- http://purl.obolibrary.org/obo/TO_0000977 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0000977">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002637"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf size trait (TO:0002637) which is the size of the total surface of a leaf (PO:0025034).</obo1:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000540"/>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf area trait (TO:0000540) that is the size of the total surface area of a leaf (PO:0025034).</obo1:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">johnseth</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015-10-23T10:29:59Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:139</oboInOwl:hasDbXref>
@@ -50359,7 +50429,7 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000977"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf size trait (TO:0002637) which is the size of the total surface of a leaf (PO:0025034).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A leaf area trait (TO:0000540) that is the size of the total surface area of a leaf (PO:0025034).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:Ethan_Johnson</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -50521,6 +50591,12 @@ Refer to weight PATO:0000128: A physical quality inhering in a bearer that has m
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0000990</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seed hardness</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0000990"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A seed morphology trait (TO:0000184) which is the hardness of a seed (PO:0009010).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -51028,7 +51104,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000495"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relative chlorophyll content of the plant determined after a given treatment as compared to the one determined under normal conditions.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is the relative chlorophyll content of a plant structure (PO:0009011) after a treatment, as compared to that determined under normal growth conditions.</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001016</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relative chlorophyll content</rdfs:label>
@@ -51036,8 +51112,9 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0001016"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The relative chlorophyll content of the plant determined after a given treatment as compared to the one determined under normal conditions.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is the relative chlorophyll content of a plant structure (PO:0009011) after a treatment, as compared to that determined under normal growth conditions.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -51103,7 +51180,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <!-- http://purl.obolibrary.org/obo/TO_0001020 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001020">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000281"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000327"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Volume of the sap exudate collected from the cut parts of a plant.</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sap per tiller (related)</oboInOwl:hasRelatedSynonym>
@@ -51449,7 +51526,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001042">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000597"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality trait (TO:0000597) which is the quality of roots (PO:0009005).</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant quality trait (TO:0000597) which is the quality of roots (PO:0009005).</obo1:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cooperl</oboInOwl:created_by>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001042</oboInOwl:id>
@@ -51458,7 +51535,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0001042"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality trait (TO:0000597) which is the quality of roots (PO:0009005).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant quality trait (TO:0000597) which is the quality of roots (PO:0009005).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -51686,7 +51763,6 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A subterranean shoot axis tuber morphology trait (TO:0000742) which is the length of a subterranean shoot axis tuber (PO:0004547).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-29T23:52:06Z</dc:date>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-11-29T10:36:57Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:56</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
@@ -51843,7 +51919,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A subterranean shoot axis tuber morphology trait (TO:0000742) which is the width of a subterranean shoot axis tuber (PO:0004547).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-30T00:04:18Z</dc:date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-11-30T00:04:18Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:56</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001060</oboInOwl:id>
@@ -51864,7 +51940,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001061">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000782"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An inflorescence axis morphology trait (TO:0000782) which is the thickness of an inflorescence axis (PO:0020122).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-30T23:50:51Z</dc:date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-01-30T23:50:51Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:419</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rachis thickness (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
@@ -51886,7 +51962,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001062">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000847"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A panicle inflorescence morphology trait (TO:0000847) which is the number of inflorescence axis internodes (PO:0006326) in a panicle inflorescence (PO:0030123).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-31T00:33:37Z</dc:date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-01-31T00:33:37Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:419</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001062</oboInOwl:id>
@@ -51907,7 +51983,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001063">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000847"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A panicle inflorescence morphology trait (TO:0000847) which is the length of the inflorescence axis internodes (PO:0006326) in a panicle inflorescence (PO:0030123).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-31T00:43:58Z</dc:date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-01-31T00:43:58Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:419</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001063</oboInOwl:id>
@@ -51928,7 +52004,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001064">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000847"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A panicle inflorescence morphology trait (TO:0000847) which is the average number of branches per inflorescence axis internode (PO:0006326) in a panicle inflorescence (PO:0030123).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-31T23:29:53Z</dc:date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-01-31T23:29:53Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:419</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001064</oboInOwl:id>
@@ -51949,7 +52025,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001065">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000847"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A panicle inflorescence morphology trait (TO:0000847) which is the length of a terminal primary branch in a panicle inflorescence (PO:0030123).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-31T23:36:03Z</dc:date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-01-31T23:36:03Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:419</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001065</oboInOwl:id>
@@ -51964,7 +52040,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001555"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000470"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A vascular tissue morphology trait (TO_0000470) which is the number of metaxylem vessels (PO:0025620).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-17T21:15:56Z</dc:date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-08-17T21:15:56Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:421</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001066</oboInOwl:id>
@@ -51986,7 +52062,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001067">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002616"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A flowering time trait (TO:0002616) which is the length of time for a plant or group of plants to reach booting stage (PO:0007014).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-01T19:15:02Z</dc:date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-02-01T19:15:02Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:420</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001067</oboInOwl:id>
@@ -52007,7 +52083,6 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001068">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000597"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant quality trait (TO:0000597) that is the utility of a plant, plant structure (PO:0009011) or plant product for post-harvest chemical, biological or mechanical transformation into a desired end product.</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-07T23:52:42Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-12-07T10:36:57Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:426</oboInOwl:hasDbXref>
@@ -52028,15 +52103,15 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001069">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001068"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-08T00:41:11Z</dc:date>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A processing quality trait (TO:0001068) that is the utility of a plant, plant structure (PO:0009011) or plant product for a food cooking process (FOODON:03450002).</obo1:IAO_0000115>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-12-08T00:41:11Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001069</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A processing quality trait (TO:0001068) that is the utility of a plant, plant structure (PO:0009011) or plant product for a food cooking process (FOODON:03450002).</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cooking quality trait</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0001069"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A processing quality trait (TO:0001068) that is the utility of a plant, plant structure (PO:0009011) or plant product for a food cooking process (FOODON:03450002).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FOODON:03450002</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
@@ -52049,7 +52124,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001070">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001068"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A processing quality trait (TO:0001068) that is the utility of a plant, plant structure (PO:0009011) or plant product for post-harvest brewing of fermented endproducts.</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-08T00:41:25Z</dc:date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-12-08T00:41:25Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001070</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brewing quality trait</rdfs:label>
@@ -52068,7 +52143,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001071">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000327"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shoot system yield trait (TO:0000327) which is the yield of shoot axis tubers (PO:0004543).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-20T23:14:07Z</dc:date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017-12-20T23:14:07Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001071</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use for tuber yields of yams (Dioscorea spp.) and potatoes (Solanum spp.).</rdfs:comment>
@@ -52088,7 +52163,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001072">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000782"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An inflorescence axis morphology trait (TO:0000782) which is the length of an inflorescence axis (PO:0020122).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-31T19:32:32Z</dc:date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-01-31T19:32:32Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:407</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RACHISLENG (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rachis length (exact)</oboInOwl:hasExactSynonym>
@@ -52117,8 +52192,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit senescing quality trait (TO:0002729) that is the tendency of a fruit (PO:0009001) to dehisce, releasing one or more seed(s) (PO:0009001).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-23T19:49:51Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-02-23T19:49:51Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:430</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001073</oboInOwl:id>
@@ -52138,8 +52213,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001074">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001073"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit shattering trait (TO:0001073) that is the tendency of a legume fruit (PO:0030100) to dehisce, releasing one or more seed(s) (PO:0009001).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-23T19:50:20Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-02-23T19:50:20Z</oboInOwl:creation_date>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pod shattering (broad)</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:430</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
@@ -52162,7 +52237,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000117"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000754"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A cardinal organ part morphology trait (TO:0000754) which is the size of a pulvinus (PO:0009000).</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T23:33:59Z</dc:date>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-03-01T23:33:59Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:429</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001075</oboInOwl:id>
@@ -52182,8 +52257,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001076">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000654"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A shoot system growth and development trait (TO:0000654) that is a quality of infructescence (PO:0006342) development.</obo1:IAO_0000115>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-27T19:37:18Z</dc:date>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-03-27T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001076</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">infructescence development trait</rdfs:label>
@@ -52202,6 +52277,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001077">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002629"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit morphology trait (TO:0002629) which is a quality of a berry fruit (PO:0030108).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001077</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">berry fruit morphology trait</rdfs:label>
@@ -52220,6 +52297,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001078">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002629"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit morphology trait (TO:0002629) which is a quality of a capsule fruit (PO:0030091).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001078</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">capsule fruit morphology trait</rdfs:label>
@@ -52238,6 +52317,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001079">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002629"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit morphology trait (TO:0002629) which is a quality of a caryopsis fruit (PO:0030104).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grain morphology trait (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kernel morphology trait (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
@@ -52258,6 +52339,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001080">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002629"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit morphology trait (TO:0002629) which is a quality of a drupe fruit (PO:0030103).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stone fruit morphology trait (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001080</oboInOwl:id>
@@ -52277,6 +52360,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001081">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002629"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit morphology trait (TO:0002629) which is a quality of a follicle fruit (PO:0030105).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001081</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">follicle fruit morphology trait</rdfs:label>
@@ -52333,6 +52418,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001084">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002629"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit morphology trait (TO:0002629) which is a quality of a samara fruit (PO:0030099).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001084</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samara fruit morphology trait</rdfs:label>
@@ -52351,6 +52438,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001085">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002629"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit morphology trait (TO:0002629) which is a quality of a schizocarp fruit (PO:0030098).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001085</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">schizocarp fruit morphology trait</rdfs:label>
@@ -52369,6 +52458,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001086">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002629"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit morphology trait (TO:0002629) which is a quality of a silique fruit (PO:0030106).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silique morphology trait (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001086</oboInOwl:id>
@@ -52389,6 +52480,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001097"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002746"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A achene fruit morphology trait (TO:0001097) which is the weight of a achene fruit (PO:0030107).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001087</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">achene fruit weight</rdfs:label>
@@ -52408,6 +52501,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001077"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002746"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A berry fruit morphology trait (TO:0001077) which is the weight of a berry fruit (PO:0030108).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001088</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">berry fruit weight</rdfs:label>
@@ -52427,6 +52522,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001078"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002746"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A capsule fruit morphology trait (TO:0001078) which is the weight of a capsule fruit (PO:0030091).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001089</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">capsule fruit weight</rdfs:label>
@@ -52446,6 +52543,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001080"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002746"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A drupe fruit morphology trait (TO:0001080) which is the weight of a drupe fruit (PO:0030103).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001090</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drupe fruit weight</rdfs:label>
@@ -52465,6 +52564,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001081"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002746"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A follicle fruit morphology trait (TO:0001081) which is the weight of a follicle fruit (PO:0030105).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001091</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">follicle fruit weight</rdfs:label>
@@ -52484,6 +52585,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001082"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002746"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A legume fruit morphology trait (TO:0001082) which is the weight of a legume fruit (PO:0030100).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001092</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">legume fruit weight</rdfs:label>
@@ -52503,6 +52606,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001083"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002746"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A nut fruit morphology trait (TO:0001083) which is the weight of a nut fruit (PO:0030102).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001093</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nut fruit weight</rdfs:label>
@@ -52522,6 +52627,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001084"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002746"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A samara fruit morphology trait (TO:0001084) which is the weight of a samara fruit (PO:0030099).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001094</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">samara fruit weight</rdfs:label>
@@ -52541,6 +52648,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001085"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002746"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A schizocarp fruit morphology trait (TO:0001085) which is the weight of a schizocarp fruit (PO:0030098).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001095</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">schizocarp fruit weight</rdfs:label>
@@ -52560,6 +52669,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001086"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002746"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A silique fruit morphology trait (TO:0001086) which is the weight of a silique fruit (PO:0030106).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001096</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silique fruit weight</rdfs:label>
@@ -52578,6 +52689,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001097">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002629"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit morphology trait (TO:0002629) which is a quality of a achene fruit (PO:0030107).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accessory fruit morphology trait (narrow)</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001097</oboInOwl:id>
@@ -52597,6 +52710,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001098">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001077"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A berry fruit morphology trait (TO:0001077) which is a quality of a pepo fruit (PO:0030111).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pepo morphology trait (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001098</oboInOwl:id>
@@ -52616,6 +52731,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001099">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001077"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A berry fruit morphology trait (TO:0001077) which is a quality of a pome fruit (PO:0030110).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001099</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pome fruit morphology trait</rdfs:label>
@@ -52634,6 +52751,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001100">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001078"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A capsule fruit morphology trait (TO:0001078) which is a quality of a circumscissile capsule fruit (PO:0030096).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001100</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">circumscissile capsule fruit morphology trait</rdfs:label>
@@ -52652,6 +52771,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001101">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001100"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A circumscissile capsule morphology trait (TO:0001100) which is a quality of a utricle capsule fruit (PO:0030097).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001101</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">utricle capsule fruit morphology trait</rdfs:label>
@@ -52670,6 +52791,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001102">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001078"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A capsule fruit morphology trait (TO:0001078) which is a quality of a coccarium capsule fruit (PO:0030094).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001102</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coccarium capsule fruit morphology trait</rdfs:label>
@@ -52688,6 +52811,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001103">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001078"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A capsule fruit morphology trait (TO:0001078) which is a quality of a loculicidal capsule fruit (PO:0030092).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001103</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">loculicidal capsule fruit morphology trait</rdfs:label>
@@ -52706,6 +52831,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001104">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001078"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A capsule fruit morphology trait (TO:0001078) which is a quality of a poricidal capsule fruit (PO:0030095).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001104</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">poricidal capsule fruit morphology trait</rdfs:label>
@@ -52724,6 +52851,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001105">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001078"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A capsule fruit morphology trait (TO:0001078) which is a quality of a septicidal capsule fruit (PO:0030093).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001105</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">septicidal capsule fruit morphology trait</rdfs:label>
@@ -52742,6 +52871,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001106">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001082"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A legume fruit morphology trait (TO:0001082) which is a quality of a loment fruit (PO:0030101).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001106</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">loment fruit morphology trait</rdfs:label>
@@ -52760,6 +52891,8 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001107">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001077"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A berry fruit morphology trait (TO:0001077) which is a quality of a hesperidium fruit (PO:0030109).</obo1:IAO_0000115>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurel_Cooper</oboInOwl:created_by>
+        <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018-09-26T19:37:18Z</oboInOwl:creation_date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">citrus fruit morphology trait (exact)</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001107</oboInOwl:id>
@@ -52789,6 +52922,26 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0001108"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A caryopsis fruit morphology trait (TO:0001079) which is the volume of a grain (caryopsis fruit; PO:0030104).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/TO_0001109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0001109">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001079"/>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A caryopsis fruit morphology trait (TO:0001079) which is the color of a grain (caryopsis fruit; PO:0030104).</obo1:IAO_0000115>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-18T19:27:51Z</dc:date>
+        <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kernel color (related)</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0001109</oboInOwl:id>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grain color trait</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0001109"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A caryopsis fruit morphology trait (TO:0001079) which is the color of a grain (caryopsis fruit; PO:0030104).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -53717,7 +53870,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE</obo1:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0002640</oboInOwl:id>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fruit set trait</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">obsoleted fruit set trait</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
@@ -53741,7 +53894,7 @@ Refer to persistence (PATO:0000082): A rhythm quality inhering in a bearer by vi
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The percentage of highly indigestible or slowly digestible fiber in a feed or forage. Acid detergent fiber contains cellulose as well as silica and lignin which are associated with low digestibility.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GrainGenes_trait:Acid_Detergent_Fiber</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">web:http://www.foragetesting.org/lab_procedure/sectionB/4/part4.1.htm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.foragetesting.org/lab_procedure/sectionB/4/part4.1.htm</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -55536,7 +55689,7 @@ Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0002728">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000597"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality trait (TO:0000597) which is the commercial and /or economical value of a fruit (PO:0009001) , or its overall improvement.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant quality trait (TO:0000597) which is the commercial and /or economical value of a fruit (PO:0009001) , or its overall improvement.</obo1:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:263</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0002728</oboInOwl:id>
@@ -55545,7 +55698,7 @@ Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0002728"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A quality trait (TO:0000597) which is the commercial and /or economical value of a fruit (PO:0009001) , or its overall improvement.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant quality trait (TO:0000597) which is the commercial and /or economical value of a fruit (PO:0009001) , or its overall improvement.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -55575,12 +55728,12 @@ Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0002730">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001079"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002628"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit shape (TO:0002628) which is the shape of the dehulled grain.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A caryopsis fruit morphology trait (TO:0001079) which is the shape of a grain (caryopsis fruit; PO:0030104).</obo1:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000052</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DHULGRSHP (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRSHP (related)</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dehulled-grain shape (related)</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dehulled grain shape (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0002730</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refer to shape (PATO:0000052): A morphological quality inhering in a bearer by virtue of the bearer&apos;s ratios of distances between its features (points, edges, surfaces and also holes etc).</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grain shape</rdfs:label>
@@ -55588,9 +55741,10 @@ Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0002730"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A fruit shape (TO:0002628) which is the shape of the dehulled grain.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A caryopsis fruit morphology trait (TO:0001079) which is the shape of a grain (caryopsis fruit; PO:0030104).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:moorel</oboInOwl:hasDbXref>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</rdfs:comment>
     </owl:Axiom>
     
 
@@ -55598,7 +55752,7 @@ Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance
     <!-- http://purl.obolibrary.org/obo/TO_0002731 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0002731">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000397"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0001079"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A grain size (TO:0000397) which is the grain length and grain width on dehulled grain.</obo1:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000117</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000122</oboInOwl:hasDbXref>
@@ -55608,7 +55762,6 @@ Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRLHWDRO (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dehulled-grain length to width ratio (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0002731</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite. Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points. Refer to size (PATO:0000117): A morphology quality inhering in a bearer by virtue of the bearer&apos;s physical magnitude. Size categories ranging from small to medium to large.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grain length to width ratio</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -55700,7 +55853,7 @@ Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malformed inflorescence (panicle in rice), by staying upright/straight at the time of maturity and may carry infertile seeds.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">web:http://plantpathology.tamu.edu/Texlab/Grains/Rice/rices.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://plantpathology.tamu.edu/Texlab/Grains/Rice/rices.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -55941,7 +56094,7 @@ Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0002747">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000590"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dehulled grain weight (TO:0000590) which is the weight of a sample of 10 dehulled grains (caryopsis fruit; PO:0030104)</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dehulled grain weight (TO:0000590) which is the weight of a sample of 10 dehulled grains (caryopsis fruit; PO:0030104).</obo1:IAO_0000115>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 grain weight (broad)</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TENGRWT (broad)</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TENDHULGRWT (exact)</oboInOwl:hasExactSynonym>
@@ -55954,7 +56107,7 @@ Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0002747"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dehulled grain weight (TO:0000590) which is the weight of a sample of 10 dehulled grains (caryopsis fruit; PO:0030104)</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A dehulled grain weight (TO:0000590) which is the weight of a sample of 10 dehulled grains (caryopsis fruit; PO:0030104).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</rdfs:comment>
     </owl:Axiom>
@@ -56285,7 +56438,7 @@ Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance
     <!-- http://purl.obolibrary.org/obo/TO_0002763 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0002763">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002761"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0002745"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Average length of the curved surface of grain with hull (hulled).</obo1:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATO:0000122</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
@@ -56372,7 +56525,7 @@ also holes etc).</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/TO_0002767 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0002767">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000549"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000654"/>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RHZFORM (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0002767</oboInOwl:id>
@@ -57665,7 +57818,7 @@ also holes etc).</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0006052">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0020092"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A copper content (TO:0020092) which is the concentration of copper (CHEBI:23377) in a plant structure (PO:0009011)</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A copper content (TO:0020092) which is the concentration of copper (CHEBI:23377) in a plant structure (PO:0009011).</obo1:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jaiswalp</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010-10-25T04:59:17Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:23377</oboInOwl:hasDbXref>
@@ -57676,8 +57829,9 @@ also holes etc).</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0006052"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A copper content (TO:0020092) which is the concentration of copper (CHEBI:23377) in a plant structure (PO:0009011)</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A copper content (TO:0020092) which is the concentration of copper (CHEBI:23377) in a plant structure (PO:0009011).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:Karthik</oboInOwl:hasDbXref>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</rdfs:comment>
     </owl:Axiom>
     
 
@@ -58318,7 +58472,7 @@ also holes etc).</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0012002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000493"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000495"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is a quality of a leaf (PO:0025034).</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is the chlorophyll content of a leaf (PO:0025034).</obo1:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jaiswalp</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-12-09T01:52:17Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO_GIT:275</oboInOwl:hasDbXref>
@@ -58329,7 +58483,7 @@ also holes etc).</rdfs:comment>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0012002"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is a quality of a leaf (PO:0025034).</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A chlorophyll content trait (TO:0000495) which is the chlorophyll content of a leaf (PO:0025034).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PO:0025034</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -58339,12 +58493,15 @@ also holes etc).</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/TO_0012003 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0012003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000495"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OBSOLETE</obo1:IAO_0000115>
+        <obo1:IAO_0100001 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;TO:0000495&apos;</obo1:IAO_0100001>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jaiswalp</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-12-09T01:54:09Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0012003</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chlorophyll content in an extract</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
     
 
@@ -59554,7 +59711,7 @@ also holes etc).</rdfs:comment>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activity of beta-glucanase ((1,3-1,4)-beta-D-glucan, 4-glucanohydrolase), (EC:3.2.1.73) in the hydrolysis of beta-glucans.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0042972</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO::0052736</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GO:0052736</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T-CAP:Victoria_Corollo_Blake</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -59726,7 +59883,7 @@ also holes etc).</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0020079">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000301"/>
-        <obo1:RO_0002581 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A xanthophyll content (TO:0000301) which is the amount of beta-cryptoxanthin (CHEBI:10362) in a plant structure (PO:0009011).</obo1:RO_0002581>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A xanthophyll content (TO:0000301) which is the amount of beta-cryptoxanthin (CHEBI:10362) in a plant structure (PO:0009011).</obo1:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jaiswalp</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-08-19T02:53:13Z</oboInOwl:creation_date>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHEBI:10362</oboInOwl:hasDbXref>
@@ -59771,7 +59928,7 @@ also holes etc).</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/TO_0020081 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0020081">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000281"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000327"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The trait  takes into account energy losses occurring in the animal in faeces, urine and CH4 and estimates how much energy (in calories or joules) a given unit of ground stover is actually available for meat and milk production . Value derived from chemical and in vitro analysis of dried and ground stover.</obo1:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jaiswalp</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-08-19T03:17:28Z</oboInOwl:creation_date>
@@ -59802,7 +59959,7 @@ also holes etc).</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/TO_0020082 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0020082">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000281"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000327"/>
         <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A trait to measure percent nitrogen concentration in the stover sample used for predicting crude protein (CP) content of stover by multiplication with a factor of 6.25 (CP = N x 6.25). This concentration is one of the criteria to assess the quality of fodder. Value derived from the analysis of stover using Near Infrared Reflectance Spectrophotometry (NIRS).</obo1:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jaiswalp</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-08-19T03:20:23Z</oboInOwl:creation_date>
@@ -59944,7 +60101,7 @@ also holes etc).</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/TO_0020088">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/TO_0000281"/>
-        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A metabolite content related trait (TO:0000281) which is the concentration of water soluble components in a plant, as determined by refractive index.</obo1:IAO_0000115>
+        <obo1:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A metabolite content trait (TO:0000281) which is the concentration of water soluble components in a plant structure (PO:0009011).</obo1:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jaiswalp</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011-08-19T03:47:00Z</oboInOwl:creation_date>
         <oboInOwl:hasAlternativeId rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0002711</oboInOwl:hasAlternativeId>
@@ -59952,13 +60109,13 @@ also holes etc).</rdfs:comment>
         <oboInOwl:hasOBONamespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant_trait_ontology</oboInOwl:hasOBONamespace>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total dissolved solids content (related)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0020088</oboInOwl:id>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This trait is usually highly correlated with total soluble sugar content (TO:0000340). Often determined in fresh tissue.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This trait is usually highly correlated with total soluble sugar content (TO:0000340). Often determined in fresh tissue using a refractive index.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total water soluble content</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0020088"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A metabolite content related trait (TO:0000281) which is the concentration of water soluble components in a plant, as determined by refractive index.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A metabolite content trait (TO:0000281) which is the concentration of water soluble components in a plant structure (PO:0009011).</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gramene:pankaj_jaiswal</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -60032,6 +60189,12 @@ also holes etc).</rdfs:comment>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:0020092</oboInOwl:id>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">copper content trait</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/TO_0020092"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A mineral and ion content trait (TO:0000465) which is the copper cation (CHEBI:23378) composition in a plant structure (PO:0009011).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TO:cooperl</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -63219,5 +63382,5 @@ also holes etc).</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 1.1.0) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.6) https://github.com/owlcs/owlapi -->
 
