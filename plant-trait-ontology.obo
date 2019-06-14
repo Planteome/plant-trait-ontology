@@ -9,16 +9,15 @@ subsetdef: Solanaceae_spp "Terms_used_for_the_Solanaceae"
 subsetdef: Triticum_aestivum "Terms_used_for_wheat"
 subsetdef: Zea_mays "Terms_used_for_maize_or_corn"
 default-namespace: plant_trait_ontology
-import: http://purl.obolibrary.org/obo/po.owl
 import: http://purl.obolibrary.org/obo/to/imports/chebi_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/envo_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/go_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/ncbitaxon_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/pato_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/peco_import.owl
-import: http://purl.obolibrary.org/obo/to/imports/ro_import.owl
 import: http://purl.obolibrary.org/obo/to/patterns/merge_patterns.owl
 ontology: to
+property_value:  http://purl.obolibrary.org/obo/po.owl xsd:string
 
 [Term]
 id: TO:0000001
@@ -242,7 +241,7 @@ is_a: TO:0000080 ! micronutrient sensitivity
 [Term]
 id: TO:0000030
 name: sedge weed
-def: "A common sedge weed Cyperus iria (rice flatsedge), Cyperus difformis (Small flower umbrella sedge),  Rice field bulrush Scirpus mucronatus, River bulrush Scirpus fluviatilis. Grows as a weed in the rice field. Can be distinguished from grass plant by the leaf shape, venation, stem cross-section and plant shape leaf shape." [Gramene:pankaj_jaiswal, ISBN:9712200299, http//www.ipm.ucdavis.edu/PMG/r682700999.html]
+def: "A common sedge weed Cyperus iria (rice flatsedge), Cyperus difformis (Small flower umbrella sedge),  Rice field bulrush Scirpus mucronatus, River bulrush Scirpus fluviatilis. Grows as a weed in the rice field. Can be distinguished from grass plant by the leaf shape, venation, stem cross-section and plant shape leaf shape." [Gramene:pankaj_jaiswal, http//www.ipm.ucdavis.edu/PMG/r682700999.html, ISBN:9712200299]
 is_a: TO:0000347 ! weed damage
 
 [Term]
@@ -455,7 +454,7 @@ name: node color
 def: "Color of the stem node." [Gramene:pankaj_jaiswal]
 synonym: "NDCL (related)" RELATED []
 is_a: TO:1000003 {is_inferred="true"} ! shoot axis node color
-relationship: inheres_in PO:0020141 {is_inferred="true"} ! stem node
+relationship: inheres_in PO:0020141 {is_inferred="true"}
 relationship: part_of TO:0000056 ! stem color
 
 [Term]
@@ -804,7 +803,7 @@ is_a: TO:0000587 ! endosperm quality
 [Term]
 id: TO:0000101
 name: broad-leaved weed
-def: "A common sedge weed Monochoria vaginalis (monochoria), California arrowhead Sagittaria montevidensis, Gregg arrowhead Sagittaria longiloba, Ducksalad Heteranthera limosa, Echinodorus berteroi and E. cordifolius (Burhead), Ammannia spp (Redstems), Bacopa spp. (Water hyssops), Alisma plantago-aquatica (Common water plantain). Grows as a weed in the rice field. Can be distinguished from rice plant by the leaf shape, venation, stem cross-section and plant shape leaf shape." [Gramene:pankaj_jaiswal, ISBN:9712200299, http://www.ipm.ucdavis.edu/PMG/r682700999.html]
+def: "A common sedge weed Monochoria vaginalis (monochoria), California arrowhead Sagittaria montevidensis, Gregg arrowhead Sagittaria longiloba, Ducksalad Heteranthera limosa, Echinodorus berteroi and E. cordifolius (Burhead), Ammannia spp (Redstems), Bacopa spp. (Water hyssops), Alisma plantago-aquatica (Common water plantain). Grows as a weed in the rice field. Can be distinguished from rice plant by the leaf shape, venation, stem cross-section and plant shape leaf shape." [Gramene:pankaj_jaiswal, http://www.ipm.ucdavis.edu/PMG/r682700999.html, ISBN:9712200299]
 is_a: TO:0000347 ! weed damage
 
 [Term]
@@ -905,7 +904,7 @@ def: "An embryo shape trait (TO:0000193) that is a large sized plant embryo (PO:
 is_a: PATO:0000586 {is_inferred="true"} ! increased size
 is_a: TO:0000193 ! embryo shape
 is_a: TO:1000012 {is_inferred="true"} ! whole plant size
-relationship: inheres_in PO:0009009 {is_inferred="true"} ! plant embryo
+relationship: inheres_in PO:0009009 {is_inferred="true"}
 
 [Term]
 id: TO:0000114
@@ -1511,7 +1510,7 @@ synonym: "ANTCL (related)" RELATED []
 xref: TO_GIT:385
 is_a: PATO:0000014 {is_inferred="true"} ! color
 is_a: TO:1000022 {is_inferred="true"} ! anther morphology trait
-relationship: inheres_in PO:0009066 {is_inferred="true"} ! anther
+relationship: inheres_in PO:0009066 {is_inferred="true"}
 
 [Term]
 id: TO:0000188
@@ -1696,7 +1695,7 @@ id: TO:0000208
 name: lemma number
 def: "A spikelet floret morphology trait (TO:0000274) which is the number of lemma (PO:0009037) in a spikelet floret (PO:0009082)." [Gramene:pankaj_jaiswal, PATO:0001555, PO:0009037, PO:0009082, TO:cooperl, TO:moorel]
 is_a: TO:0000274 ! spikelet floret morphology trait
-relationship: inheres_in PO:0009037 {is_inferred="true"} ! lemma
+relationship: inheres_in PO:0009037 {is_inferred="true"}
 
 [Term]
 id: TO:0000209
@@ -1704,7 +1703,7 @@ name: palea number
 def: "A spikelet floret morphology trait (TO:0000274) which is the number of  palea (PO:0009038) in a spikelet floret (PO:0009082)." [Gramene:pankaj_jaiswal, PATO:0001555, PO:0009038, PO:0009082, TO:cooperl, TO:moorel]
 synonym: "PALNB (related)" RELATED []
 is_a: TO:0000274 ! spikelet floret morphology trait
-relationship: inheres_in PO:0009038 {is_inferred="true"} ! palea
+relationship: inheres_in PO:0009038 {is_inferred="true"}
 
 [Term]
 id: TO:0000210
@@ -1713,7 +1712,7 @@ def: "A stamen morphology trait (TO:0000215) which is the number of anthers (PO:
 synonym: "ANTNB (related)" RELATED []
 xref: TO_GIT:387
 is_a: TO:0000215 ! stamen morphology trait
-relationship: inheres_in PO:0009066 {is_inferred="true"} ! anther
+relationship: inheres_in PO:0009066 {is_inferred="true"}
 relationship: part_of TO:0000225 ! stamen number
 
 [Term]
@@ -1749,7 +1748,7 @@ synonym: "ANTSHP (related)" RELATED []
 xref: TO_GIT:385
 is_a: PATO:0000052 {is_inferred="true"} ! shape
 is_a: TO:1000022 {is_inferred="true"} ! anther morphology trait
-relationship: inheres_in PO:0009066 {is_inferred="true"} ! anther
+relationship: inheres_in PO:0009066 {is_inferred="true"}
 
 [Term]
 id: TO:0000215
@@ -1856,7 +1855,7 @@ is_a: TO:0002717 ! leaf sheath auricle morphology trait
 [Term]
 id: TO:0000227
 name: root length
-def: "A root morphology trait (TO:0000043) which is the length of a root (PO:0009005)." [Gramene:jcl, GR:pj, TO:austin_meier, TO:cooperl]
+def: "A root morphology trait (TO:0000043) which is the length of a root (PO:0009005)." [GR:pj, Gramene:jcl, TO:austin_meier, TO:cooperl]
 comment: refer to PATO:0000122- A 1-D extent quality which is equal to the distance between two points.
 synonym: "maximum root depth (related)" RELATED []
 synonym: "maximum root length (related)" RELATED []
@@ -2835,7 +2834,7 @@ is_a: TO:0000270 ! inflorescence axis angle
 [Term]
 id: TO:0000343
 name: grass weed
-def: "A common grass weed Echinochloa glabbrescens or Echinochloa crus-galli (Barnyard grass), Typha spp. (Cattails), Leptochloa fascicularis (Bearded sprangletop) grows as a weed in the rice field. Can be distinguished from rice plant by the leaf shape, venation, stem cross-section and plant shape leaf shape." [Gramene:pankaj_jaiswal, ISBN:9712200299, http://www.ipm.ucdavis.edu/PMG/r682700999.html]
+def: "A common grass weed Echinochloa glabbrescens or Echinochloa crus-galli (Barnyard grass), Typha spp. (Cattails), Leptochloa fascicularis (Bearded sprangletop) grows as a weed in the rice field. Can be distinguished from rice plant by the leaf shape, venation, stem cross-section and plant shape leaf shape." [Gramene:pankaj_jaiswal, http://www.ipm.ucdavis.edu/PMG/r682700999.html, ISBN:9712200299]
 is_a: TO:0000347 ! weed damage
 
 [Term]
@@ -3288,7 +3287,7 @@ comment: Refer to color PATO:0000014: A composite chromatic quality composed of 
 synonym: "SLmC (related)" RELATED []
 synonym: "STLEMCL (related)" RELATED []
 is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
-relationship: inheres_in PO:0009040 {is_inferred="true"} ! sterile lemma
+relationship: inheres_in PO:0009040 {is_inferred="true"}
 
 [Term]
 id: TO:0000401
@@ -3392,7 +3391,7 @@ is_a: TO:0001069 ! cooking quality trait
 [Term]
 id: TO:0000413
 name: rice tungro virus resistance
-def: "Causal agent: Rice tungro bacilliform virus (RTBV) and rice tungro spherical virus (RTSV). The disease is transmitted by the green leafhopper Nephotettix spp. Symptoms: Yellow-to-yellow orange leaves, stunting and slightly reduced tillering." [Gramene:pankaj_jaiswal, IRRI:SES, http://www.fao.org/inpho/vlibrary/t0567e/T0567E03.htm]
+def: "Causal agent: Rice tungro bacilliform virus (RTBV) and rice tungro spherical virus (RTSV). The disease is transmitted by the green leafhopper Nephotettix spp. Symptoms: Yellow-to-yellow orange leaves, stunting and slightly reduced tillering." [Gramene:pankaj_jaiswal, http://www.fao.org/inpho/vlibrary/t0567e/T0567E03.htm, IRRI:SES]
 synonym: "RTD (related)" RELATED []
 synonym: "RTVRS (related)" RELATED []
 is_a: TO:0000148 ! viral disease resistance
@@ -4270,12 +4269,12 @@ is_a: TO:0000566 ! leaf stomatal complex frequency
 [Term]
 id: TO:0000531
 name: anther length
-def: "An anther morphology trait (TO:1000022) which is the length (PATO:0000122) of an anther (PO:0009066)." [TO:ethan_johnson, TO:austin_meier]
+def: "An anther morphology trait (TO:1000022) which is the length (PATO:0000122) of an anther (PO:0009066)." [TO:austin_meier, TO:ethan_johnson]
 comment: Refers to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "ANTLG (related)" RELATED []
 xref: TO_GIT:385
 is_a: TO:1000022 {is_inferred="true"} ! anther morphology trait
-relationship: inheres_in PO:0009066 {is_inferred="true"} ! anther
+relationship: inheres_in PO:0009066 {is_inferred="true"}
 relationship: part_of TO:0002609 ! stamen length
 
 [Term]
@@ -4715,7 +4714,7 @@ is_a: TO:0000920 ! infructescence morphology trait
 [Term]
 id: TO:0000586
 name: seminal root length
-def: "A root length (TO:0000227) that is the length of one or more seminal roots (PO:0000046)." [Gramene:pankaj_jaiswal37, TO:seymour_megan, TO:austin_meier]
+def: "A root length (TO:0000227) that is the length of one or more seminal roots (PO:0000046)." [Gramene:pankaj_jaiswal37, TO:austin_meier, TO:seymour_megan]
 comment: Seminal root is the primary root originating in a plant after germination.\nRefer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 xref: PATO:0000122
 xref: TO_GIT:365
@@ -4953,7 +4952,7 @@ comment: Refer to shape PATO:0000052: A morphological quality inhering in a bear
 xref: TO_GIT:390
 is_a: PATO:0000052 {is_inferred="true"} ! shape
 is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
-relationship: inheres_in PO:0009037 {is_inferred="true"} ! lemma
+relationship: inheres_in PO:0009037 {is_inferred="true"}
 
 [Term]
 id: TO:0000615
@@ -5221,7 +5220,7 @@ synonym: "LEMLG (related)" RELATED []
 xref: TO_GIT:390
 is_a: TO:0000817 {is_inferred="true"} ! inflorescence bract length
 is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
-relationship: inheres_in PO:0009037 {is_inferred="true"} ! lemma
+relationship: inheres_in PO:0009037 {is_inferred="true"}
 
 [Term]
 id: TO:0000651
@@ -10283,7 +10282,7 @@ synonym: "STLEMWD (related)" RELATED []
 xref: TO_GIT:390
 is_a: PATO:0000921 {is_inferred="true"} ! width
 is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
-relationship: inheres_in PO:0009040 {is_inferred="true"} ! sterile lemma
+relationship: inheres_in PO:0009040 {is_inferred="true"}
 
 [Term]
 id: TO:0002728
@@ -12357,7 +12356,7 @@ def: "A trait which is associated with the volumetric density of a secondary xyl
 synonym: "wood volumetric density (exact)" EXACT [TO:TermGenie]
 is_a: PATO:0001353 {is_inferred="true"} ! volumetric density
 is_a: TO:0000470 {is_inferred="true"} ! vascular tissue morphology trait
-relationship: inheres_in PO:0005848 {is_inferred="true"} ! secondary xylem
+relationship: inheres_in PO:0005848 {is_inferred="true"}
 created_by: cjmungall
 creation_date: 2015-11-30T17:23:56Z
 
@@ -12369,7 +12368,7 @@ synonym: "shoot axis node colour (exact)" EXACT [TO:TermGenie]
 synonym: "shoot axis node relative color (exact)" EXACT [TO:TermGenie]
 is_a: PATO:0000014 {is_inferred="true"} ! color
 is_a: TO:0000754 {is_inferred="true"} ! cardinal organ part morphology trait
-relationship: inheres_in PO:0005004 {is_inferred="true"} ! shoot axis node
+relationship: inheres_in PO:0005004 {is_inferred="true"}
 created_by: cjmungall
 creation_date: 2015-11-30T17:23:58Z
 
@@ -12406,7 +12405,7 @@ def: "A branch morphology trait (TO:0000740) which is the position of a branch (
 synonym: "shoot axis branch position (exact)" EXACT [TO:TermGenie]
 is_a: PATO:0000140 {is_inferred="true"} ! position
 is_a: TO:0000740 {is_inferred="true"} ! branch morphology trait
-relationship: inheres_in PO:0025073 {is_inferred="true"} ! branch
+relationship: inheres_in PO:0025073 {is_inferred="true"}
 created_by: marieangelique.laporte
 creation_date: 2015-12-16T09:38:12Z
 
@@ -12418,7 +12417,7 @@ synonym: "branching angle (exact)" EXACT []
 synonym: "shoot axis branch angle (exact)" EXACT [TO:TermGenie]
 is_a: PATO:0002326 {is_inferred="true"} ! angle
 is_a: TO:0000740 {is_inferred="true"} ! branch morphology trait
-relationship: inheres_in PO:0025073 {is_inferred="true"} ! branch
+relationship: inheres_in PO:0025073 {is_inferred="true"}
 created_by: marieangelique.laporte
 creation_date: 2015-12-16T14:12:59Z
 
@@ -12429,7 +12428,7 @@ def: "A cardinal part of a multi-tissue plant structure morphology trait (TO:000
 synonym: "caruncle colour (exact)" EXACT [TO:TermGenie]
 is_a: PATO:0000014 {is_inferred="true"} ! color
 is_a: TO:0000837 {is_inferred="true"} ! cardinal part of a multi-tissue plant structure morphology trait
-relationship: inheres_in PO:0020060 {is_inferred="true"} ! caruncle
+relationship: inheres_in PO:0020060 {is_inferred="true"}
 created_by: marieangelique.laporte
 creation_date: 2015-12-16T14:18:40Z
 
@@ -12498,7 +12497,7 @@ synonym: "utricle location (narrow)" NARROW [TO:TermGenie]
 synonym: "utricle position (narrow)" NARROW [TO:TermGenie]
 is_a: PATO:0000140 {is_inferred="true"} ! position
 is_a: TO:0002629 {is_inferred="true"} ! fruit morphology trait
-relationship: inheres_in PO:0009001 {is_inferred="true"} ! fruit
+relationship: inheres_in PO:0009001 {is_inferred="true"}
 created_by: cooperl
 creation_date: 2015-12-30T18:26:07Z
 
@@ -12528,7 +12527,7 @@ synonym: "vine size (narrow)" NARROW [TO:TermGenie]
 synonym: "woody clump size (narrow)" NARROW [TO:TermGenie]
 is_a: PATO:0000117 {is_inferred="true"} ! size
 is_a: TO:0000398 {is_inferred="true"} ! whole plant morphology trait
-relationship: inheres_in PO:0000003 {is_inferred="true"} ! whole plant
+relationship: inheres_in PO:0000003 {is_inferred="true"}
 created_by: cooperl
 creation_date: 2015-12-30T19:41:19Z
 
@@ -12538,7 +12537,7 @@ name: leaf lamina lobe morphology trait
 def: "A cardinal organ part morphology trait (TO:0000754) which is a quality of a leaf lamina lobe (PO:0025517)." [TO:TermGenie]
 synonym: "leaf lobe morphology trait (exact)" EXACT []
 is_a: TO:0000754 {is_inferred="true"} ! cardinal organ part morphology trait
-relationship: inheres_in PO:0025517 {is_inferred="true"} ! leaf lamina lobe
+relationship: inheres_in PO:0025517 {is_inferred="true"}
 created_by: marieangelique.laporte
 creation_date: 2016-01-05T10:49:33Z
 
@@ -12549,7 +12548,7 @@ def: "A leaf lamina lobe morphology trait (TO:1000013) which is the length of a 
 synonym: "leaf lobe length (exact)" EXACT []
 is_a: PATO:0000122 {is_inferred="true"} ! length
 is_a: TO:0000754 {is_inferred="true"} ! cardinal organ part morphology trait
-relationship: inheres_in PO:0025517 {is_inferred="true"} ! leaf lamina lobe
+relationship: inheres_in PO:0025517 {is_inferred="true"}
 created_by: marieangelique.laporte
 creation_date: 2016-01-05T11:01:12Z
 
@@ -12560,7 +12559,7 @@ def: "A leaf lamina lobe morphology trait (TO:1000013) which is the width of a l
 synonym: "leaf lobe width (related)" RELATED []
 is_a: PATO:0000921 {is_inferred="true"} ! width
 is_a: TO:0000754 {is_inferred="true"} ! cardinal organ part morphology trait
-relationship: inheres_in PO:0025517 {is_inferred="true"} ! leaf lamina lobe
+relationship: inheres_in PO:0025517 {is_inferred="true"}
 created_by: marieangelique.laporte
 creation_date: 2016-01-05T11:04:25Z
 
@@ -12583,7 +12582,7 @@ synonym: "stem cortex colour (exact)" EXACT [TO:TermGenie]
 synonym: "stem cortex relative color (exact)" EXACT [TO:TermGenie]
 is_a: PATO:0000014 {is_inferred="true"} ! color
 is_a: TO:0000843 {is_inferred="true"} ! portion of plant tissue morphology trait
-relationship: inheres_in PO:0025612 {is_inferred="true"} ! stem cortex
+relationship: inheres_in PO:0025612 {is_inferred="true"}
 created_by: marieangelique.laporte
 creation_date: 2016-01-05T14:08:59Z
 
@@ -12595,7 +12594,7 @@ synonym: "stem epidermis colour (exact)" EXACT [TO:TermGenie]
 synonym: "stem epidermis relative color (exact)" EXACT [TO:TermGenie]
 is_a: PATO:0000014 {is_inferred="true"} ! color
 is_a: TO:0000843 {is_inferred="true"} ! portion of plant tissue morphology trait
-relationship: inheres_in PO:0025178 {is_inferred="true"} ! stem epidermis
+relationship: inheres_in PO:0025178 {is_inferred="true"}
 created_by: marieangelique.laporte
 creation_date: 2016-01-05T14:11:24Z
 
@@ -12606,7 +12605,7 @@ def: "A flower color trait (TO:0000537) which is the color of a disk flower (PO:
 synonym: "disc floret color (exact)" EXACT [TO:TermGenie]
 synonym: "disk floret color (exact)" EXACT [TO:TermGenie]
 is_a: TO:0000537 {is_inferred="true"} ! flower color
-relationship: inheres_in PO:0025332 {is_inferred="true"} ! disk flower
+relationship: inheres_in PO:0025332 {is_inferred="true"}
 created_by: marieangelique.laporte
 creation_date: 2016-01-05T14:21:10Z
 
@@ -12616,7 +12615,7 @@ name: stipule length
 def: "A cardinal organ part morphology trait (TO:0000754) which is the length of a stipule (PO:0020041)." [TO:TermGenie]
 is_a: PATO:0000122 {is_inferred="true"} ! length
 is_a: TO:0000754 {is_inferred="true"} ! cardinal organ part morphology trait
-relationship: inheres_in PO:0020041 {is_inferred="true"} ! stipule
+relationship: inheres_in PO:0020041 {is_inferred="true"}
 created_by: marieangelique.laporte
 creation_date: 2016-01-05T14:57:02Z
 
@@ -12627,7 +12626,7 @@ def: "A plant structure morphology trait (TO:0000839) which is a quality of a pl
 synonym: "Poaceae ovary morphology (narrow)" NARROW [TO:TermGenie]
 synonym: "Zea ovary morphology (narrow)" NARROW [TO:TermGenie]
 is_a: TO:0000839 {is_inferred="true"} ! plant structure morphology trait
-relationship: inheres_in PO:0009072 {is_inferred="true"} ! plant ovary
+relationship: inheres_in PO:0009072 {is_inferred="true"}
 created_by: cooperl
 creation_date: 2016-01-06T01:44:00Z
 
