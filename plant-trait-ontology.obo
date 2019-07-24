@@ -2206,7 +2206,9 @@ is_a: TO:0000782 ! inflorescence axis morphology trait
 [Term]
 id: TO:0000271
 name: inflorescence length
-is_a: TO:0006031 ! inflorescence size
+def: "An inflorescence morphology trait (TO:0000373) trait which is the length of an inflorescence (PO:0009049)." [TO:cooperl]
+is_a: TO:0000373 ! inflorescence morphology trait
+relationship: part_of TO:0006031 ! inflorescence size
 
 [Term]
 id: TO:0000272
@@ -5439,8 +5441,10 @@ relationship: part_of TO:0000433 ! ear diameter
 [Term]
 id: TO:0000680
 name: inflorescence circumference
+def: "An inflorescence morphology trait (TO:0000373) trait which is the circumference of an inflorescence (PO:0009049)." [TO:cooperl]
 synonym: "INFLOCIRCUM (related)" RELATED []
-is_a: TO:0006031 ! inflorescence size
+is_a: TO:0000373 ! inflorescence morphology trait
+relationship: part_of TO:0006031 ! inflorescence size
 
 [Term]
 id: TO:0000681
@@ -6559,13 +6563,14 @@ creation_date: 2012-06-01T13:18:51Z
 id: TO:0000802
 name: inflorescence diameter
 alt_id: TO:0000679
-def: "An inflorescence morphology trait (TO:0000373) which with the diameter of an inflorescence (PO:0009049)." [PO:0009049, TO:cooperl]
+def: "An inflorescence morphology trait (TO:0000373) which is the diameter of an inflorescence (PO:0009049)." [PO:0009049, TO:cooperl]
 comment: Refer to diameter PATO:0001334:A length quality which is equal to the length of any straight line segment that passes through the center of a circle and whose endpoints are on the circular boundary.
 synonym: "head diameter (narrow)" NARROW []
 xref: PATO:0001334
 xref: TO_GIT:92
 xref: TO_GIT:97
 is_a: TO:0000373 ! inflorescence morphology trait
+relationship: part_of TO:0006031 ! inflorescence size
 created_by: moorel
 creation_date: 2012-06-01T13:20:49Z
 
