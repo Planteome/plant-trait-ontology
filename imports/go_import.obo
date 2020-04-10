@@ -127,7 +127,7 @@ is_a: GO:0005488 ! binding
 [Term]
 id: GO:0005575
 name: cellular_component
-def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao-1337158144]
+def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao1337158144]
 synonym: "cell or subcellular entity" EXACT []
 synonym: "cellular component" EXACT []
 synonym: "subcellular entity" RELATED [NIF_Subcellular:nlx_subcell_100315]
@@ -140,19 +140,14 @@ synonym: "internal to cell" EXACT []
 synonym: "nucleocytoplasm" RELATED [GOC:mah]
 synonym: "protoplasm" EXACT []
 synonym: "protoplast" RELATED [GOC:mah]
-is_a: GO:0044464 ! cell part
-
-[Term]
-id: GO:0005623
-name: cell
-def: "The basic structural and functional unit of all organisms. Includes the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:go_curators]
 is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: GO:0005737
 name: cytoplasm
 def: "All of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures." [ISBN:0198547684]
-is_a: GO:0044424 ! intracellular part
+is_a: GO:0110165 ! cellular anatomical entity
+relationship: BFO:0000050 GO:0005622 ! intracellular
 
 [Term]
 id: GO:0005886
@@ -167,7 +162,17 @@ synonym: "juxtamembrane" BROAD []
 synonym: "plasma membrane lipid bilayer" NARROW [GOC:mah]
 synonym: "plasmalemma" EXACT []
 is_a: GO:0016020 ! membrane
-is_a: GO:0044464 ! cell part
+relationship: BFO:0000050 GO:0071944 ! cell periphery
+
+[Term]
+id: GO:0005938
+name: cell cortex
+def: "The region of a cell that lies just beneath the plasma membrane and often, but not always, contains a network of actin filaments and associated proteins." [GOC:mah, ISBN:0815316194]
+synonym: "cell periphery" RELATED []
+synonym: "peripheral cytoplasm" RELATED []
+is_a: GO:0005737 ! cytoplasm
+intersection_of: GO:0005737 ! cytoplasm
+intersection_of: BFO:0000050 GO:0071944 ! cell periphery
 relationship: BFO:0000050 GO:0071944 ! cell periphery
 
 [Term]
@@ -230,7 +235,7 @@ is_a: GO:0009628 ! response to abiotic stimulus
 id: GO:0006996
 name: organelle organization
 def: "A process that is carried out at the cellular level which results in the assembly, arrangement of constituent parts, or disassembly of an organelle within a cell. An organelle is an organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:mah]
-synonym: "organelle organisation" EXACT [GOC:curators]
+synonym: "organelle organisation" EXACT []
 synonym: "organelle organization and biogenesis" RELATED [GOC:dph, GOC:jl, GOC:mah]
 synonym: "single organism organelle organization" EXACT [GOC:TermGenie]
 synonym: "single-organism organelle organization" RELATED []
@@ -374,7 +379,7 @@ id: GO:0009536
 name: plastid
 def: "Any member of a family of organelles found in the cytoplasm of plants and some protists, which are membrane-bounded and contain DNA. Plant plastids develop from a common type, the proplastid." [GOC:jl, ISBN:0198547684]
 is_a: GO:0043231 ! intracellular membrane-bounded organelle
-is_a: GO:0044444 ! cytoplasmic part
+relationship: BFO:0000050 GO:0005737 ! cytoplasm
 
 [Term]
 id: GO:0009628
@@ -574,7 +579,7 @@ relationship: RO:0002211 GO:0016791 ! phosphatase activity
 id: GO:0016020
 name: membrane
 def: "A lipid bilayer along with all the proteins and protein complexes embedded in it an attached to it." [GOC:dos, GOC:mah, ISBN:0815316194]
-is_a: GO:0005575 ! cellular_component
+is_a: GO:0110165 ! cellular anatomical entity
 
 [Term]
 id: GO:0016043
@@ -586,7 +591,6 @@ synonym: "cellular component organisation at cellular level" EXACT [GOC:mah]
 synonym: "cellular component organisation in other organism" EXACT [GOC:mah]
 synonym: "cellular component organization at cellular level" EXACT []
 synonym: "cellular component organization in other organism" EXACT []
-is_a: GO:0009987 ! cellular process
 is_a: GO:0071840 ! cellular component organization or biogenesis
 
 [Term]
@@ -747,7 +751,7 @@ is_a: GO:0008152 ! metabolic process
 [Term]
 id: GO:0021700
 name: developmental maturation
-def: "A developmental process, independent of morphogenetic (shape) change, that is required for an anatomical structure, cell or cellular component to attain its fully functional state." [GO_REF:0000021, GOC:cls, GOC:dgh, GOC:dph, GOC:jid, GOC:mtg_15jun06]
+def: "A developmental process, independent of morphogenetic (shape) change, that is required for an anatomical structure, cell or cellular component to attain its fully functional state." [GO_REF:0000021, GOC:cls, GOC:dgh, GOC:dph, GOC:jid]
 is_a: GO:0032502 ! developmental process
 
 [Term]
@@ -856,9 +860,9 @@ id: GO:0032838
 name: plasma membrane bounded cell projection cytoplasm
 def: "All of the contents of a plasma membrane bounded cell projection, excluding the plasma membrane surrounding the projection." [GOC:krc, GOC:mah]
 is_a: GO:0099568 ! cytoplasmic region
-is_a: GO:0120038 ! plasma membrane bounded cell projection part
 intersection_of: GO:0005737 ! cytoplasm
 intersection_of: BFO:0000050 GO:0120025 ! plasma membrane bounded cell projection
+relationship: BFO:0000050 GO:0120025 ! plasma membrane bounded cell projection
 
 [Term]
 id: GO:0032879
@@ -884,7 +888,7 @@ relationship: RO:0002211 GO:0006996 ! organelle organization
 [Term]
 id: GO:0035251
 name: UDP-glucosyltransferase activity
-def: "Catalysis of the transfer of a glucosyl group from UDP-glucose to an acceptor molecule." [http://www.chem.qmul.ac.uk/iubmb/enzyme/reaction/polysacc/UDPsugar.html]
+def: "Catalysis of the transfer of a glucosyl group from UDP-glucose to an acceptor molecule." [PMID:19858195]
 is_a: GO:0008194 ! UDP-glycosyltransferase activity
 is_a: GO:0046527 ! glucosyltransferase activity
 
@@ -934,20 +938,21 @@ def: "A prolongation or process extending from a cell, e.g. a flagellum or axon.
 synonym: "cell process" BROAD []
 synonym: "cellular process" BROAD []
 synonym: "cellular projection" EXACT []
-is_a: GO:0044464 ! cell part
+is_a: GO:0110165 ! cellular anatomical entity
 
 [Term]
 id: GO:0043036
 name: starch grain
 def: "Plant storage body for amylose and amylopectin, 1-100um in diameter. Also contains small amounts of enzymes, amino acids, lipids and nucleic acids. The shape of the grain varies widely amongst species, but is often spherical or disk-shaped." [GOC:jl, PMID:11217978]
 synonym: "starch granule" EXACT []
-is_a: GO:0044435 ! plastid part
+is_a: GO:0110165 ! cellular anatomical entity
+relationship: BFO:0000050 GO:0009536 ! plastid
 
 [Term]
 id: GO:0043226
 name: organelle
 def: "Organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, and prokaryotic structures such as anammoxosomes and pirellulosomes. Excludes the plasma membrane." [GOC:go_curators]
-is_a: GO:0005575 ! cellular_component
+is_a: GO:0110165 ! cellular anatomical entity
 
 [Term]
 id: GO:0043227
@@ -961,9 +966,9 @@ id: GO:0043229
 name: intracellular organelle
 def: "Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:go_curators]
 is_a: GO:0043226 ! organelle
-is_a: GO:0044424 ! intracellular part
 intersection_of: GO:0043226 ! organelle
 intersection_of: BFO:0000050 GO:0005622 ! intracellular
+relationship: BFO:0000050 GO:0005622 ! intracellular
 
 [Term]
 id: GO:0043231
@@ -1020,91 +1025,6 @@ synonym: "cellular formation" EXACT []
 synonym: "cellular synthesis" EXACT []
 is_a: GO:0009058 ! biosynthetic process
 is_a: GO:0044237 ! cellular metabolic process
-
-[Term]
-id: GO:0044422
-name: organelle part
-def: "Any constituent part of an organelle, an organized structure of distinctive morphology and function. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, but excludes the plasma membrane." [GOC:jl]
-is_a: GO:0005575 ! cellular_component
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: BFO:0000050 GO:0043226 ! organelle
-relationship: BFO:0000050 GO:0043226 ! organelle
-
-[Term]
-id: GO:0044424
-name: intracellular part
-def: "Any constituent part of the living contents of a cell; the matter contained within (but not including) the plasma membrane, usually taken to exclude large vacuoles and masses of secretory or ingested material. In eukaryotes it includes the nucleus and cytoplasm." [GOC:jl]
-is_a: GO:0044464 ! cell part
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: BFO:0000050 GO:0005622 ! intracellular
-relationship: BFO:0000050 GO:0005622 ! intracellular
-
-[Term]
-id: GO:0044425
-name: membrane part
-def: "Any constituent part of a membrane, a double layer of lipid molecules that encloses all cells, and, in eukaryotes, many organelles; may be a single or double lipid bilayer; also includes associated proteins." [GOC:jl]
-is_a: GO:0005575 ! cellular_component
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: BFO:0000050 GO:0016020 ! membrane
-relationship: BFO:0000050 GO:0016020 ! membrane
-
-[Term]
-id: GO:0044435
-name: plastid part
-def: "Any constituent part of a plastid, a member of a family of organelles found in the cytoplasm of plants and some protists, which are membrane-bounded and contain DNA. Plant plastids develop from a common type, the proplastid." [GOC:jl]
-is_a: GO:0044444 ! cytoplasmic part
-is_a: GO:0044446 ! intracellular organelle part
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: BFO:0000050 GO:0009536 ! plastid
-relationship: BFO:0000050 GO:0009536 ! plastid
-
-[Term]
-id: GO:0044444
-name: cytoplasmic part
-def: "Any constituent part of the cytoplasm, all of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures." [GOC:jl]
-synonym: "cytoplasm component" EXACT []
-is_a: GO:0044424 ! intracellular part
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: BFO:0000050 GO:0005737 ! cytoplasm
-relationship: BFO:0000050 GO:0005737 ! cytoplasm
-
-[Term]
-id: GO:0044446
-name: intracellular organelle part
-def: "A constituent part of an intracellular organelle, an organized structure of distinctive morphology and function, occurring within the cell. Includes constituent parts of the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton but excludes the plasma membrane." [GOC:jl]
-is_a: GO:0044422 ! organelle part
-is_a: GO:0044424 ! intracellular part
-relationship: BFO:0000050 GO:0043229 ! intracellular organelle
-
-[Term]
-id: GO:0044459
-name: plasma membrane part
-def: "Any constituent part of the plasma membrane, the membrane surrounding a cell that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins." [GOC:jl]
-is_a: GO:0044425 ! membrane part
-is_a: GO:0044464 ! cell part
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: BFO:0000050 GO:0005886 ! plasma membrane
-relationship: BFO:0000050 GO:0005886 ! plasma membrane
-
-[Term]
-id: GO:0044463
-name: cell projection part
-def: "Any constituent part of a cell projection, a prolongation or process extending from a cell, e.g. a flagellum or axon." [GOC:jl]
-is_a: GO:0044464 ! cell part
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: BFO:0000050 GO:0042995 ! cell projection
-relationship: BFO:0000050 GO:0042995 ! cell projection
-
-[Term]
-id: GO:0044464
-name: cell part
-def: "Any constituent part of a cell, the basic structural and functional unit of all organisms." [GOC:jl]
-synonym: "cellular subcomponent" EXACT [NIF_Subcellular:sao628508602]
-synonym: "protoplast" RELATED [GOC:mah]
-is_a: GO:0005575 ! cellular_component
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: BFO:0000050 GO:0005623 ! cell
-relationship: BFO:0000050 GO:0005623 ! cell
 
 [Term]
 id: GO:0044550
@@ -1269,7 +1189,7 @@ relationship: RO:0002211 GO:0048367 ! shoot system development
 [Term]
 id: GO:0048856
 name: anatomical structure development
-def: "The biological process whose specific outcome is the progression of an anatomical structure from an initial condition to its mature state. This process begins with the formation of the structure and ends with the mature structure, whatever form that may be including its natural destruction. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome." [GO_REF:0000021, GOC:mtg_15jun06]
+def: "The biological process whose specific outcome is the progression of an anatomical structure from an initial condition to its mature state. This process begins with the formation of the structure and ends with the mature structure, whatever form that may be including its natural destruction. An anatomical structure is any biological entity that occupies space and is distinguished from its surroundings. Anatomical structures can be macroscopic such as a carpel, or microscopic such as an acrosome." [GO_REF:0000021]
 synonym: "development of an anatomical structure" EXACT []
 is_a: GO:0032502 ! developmental process
 
@@ -1309,7 +1229,7 @@ name: regulation of cellular process
 def: "Any process that modulates the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." [GOC:go_curators]
 synonym: "regulation of cellular physiological process" EXACT []
 is_a: GO:0050789 ! regulation of biological process
-intersection_of: GO:0008150 ! biological_process
+intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0009987 ! cellular process
 relationship: RO:0002211 GO:0009987 ! cellular process
 
@@ -1344,7 +1264,7 @@ name: regulation of cellular component organization
 def: "Any process that modulates the frequency, rate or extent of a process involved in the formation, arrangement of constituent parts, or disassembly of cell structures, including the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:ai]
 synonym: "regulation of cell organisation" RELATED [GOC:mah]
 synonym: "regulation of cell organization" RELATED [GOC:mah]
-synonym: "regulation of cellular component organisation" EXACT [GOC:curators]
+synonym: "regulation of cellular component organisation" EXACT []
 synonym: "regulation of cellular component organization and biogenesis" RELATED [GOC:mah]
 is_a: GO:0050794 ! regulation of cellular process
 intersection_of: GO:0008150 ! biological_process
@@ -1517,7 +1437,7 @@ relationship: BFO:0000050 GO:0048856 ! anatomical structure development
 [Term]
 id: GO:0071704
 name: organic substance metabolic process
-def: "The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon." [CHEBI:50860, GOC:mah]
+def: "The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon." [GOC:mah]
 synonym: "organic molecular entity metabolic process" EXACT []
 synonym: "organic molecular entity metabolism" EXACT []
 synonym: "organic substance metabolism" EXACT []
@@ -1530,13 +1450,13 @@ def: "A process that results in the biosynthesis of constituent macromolecules, 
 synonym: "cellular component organisation or biogenesis" EXACT [GOC:mah]
 synonym: "cellular component organisation or biogenesis at cellular level" EXACT [GOC:mah]
 synonym: "cellular component organization or biogenesis at cellular level" EXACT []
-is_a: GO:0008150 ! biological_process
+is_a: GO:0009987 ! cellular process
 
 [Term]
 id: GO:0071944
 name: cell periphery
 def: "The part of a cell encompassing the cell cortex, the plasma membrane, and any external encapsulating structures." [GOC:mah]
-is_a: GO:0044464 ! cell part
+is_a: GO:0110165 ! cellular anatomical entity
 
 [Term]
 id: GO:0080134
@@ -1574,9 +1494,9 @@ name: plasma membrane region
 def: "A membrane that is a (regional) part of the plasma membrane." [GOC:dos]
 synonym: "region of plasma membrane" EXACT []
 is_a: GO:0016020 ! membrane
-is_a: GO:0044459 ! plasma membrane part
 intersection_of: GO:0016020 ! membrane
 intersection_of: BFO:0000050 GO:0005886 ! plasma membrane
+relationship: BFO:0000050 GO:0005886 ! plasma membrane
 
 [Term]
 id: GO:0098772
@@ -1598,9 +1518,26 @@ id: GO:0099568
 name: cytoplasmic region
 def: "Any (proper) part of the cytoplasm of a single cell of sufficient size to still be considered cytoplasm\"" [GOC:dos]
 is_a: GO:0005737 ! cytoplasm
-is_a: GO:0044444 ! cytoplasmic part
 intersection_of: GO:0005737 ! cytoplasm
 intersection_of: BFO:0000050 GO:0005737 ! cytoplasm
+relationship: BFO:0000050 GO:0005737 ! cytoplasm
+
+[Term]
+id: GO:0099738
+name: cell cortex region
+def: "The complete extent of cell cortex that underlies some some region of the plasma membrane" [GOC:dos]
+synonym: "perimembrane region" EXACT []
+is_a: GO:0005938 ! cell cortex
+is_a: GO:0099568 ! cytoplasmic region
+intersection_of: GO:0005938 ! cell cortex
+intersection_of: BFO:0000050 GO:0005938 ! cell cortex
+relationship: BFO:0000050 GO:0005938 ! cell cortex
+
+[Term]
+id: GO:0110165
+name: cellular anatomical entity
+def: "A part of a cellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex but below that of an anatomical system. Or, a substance produced by a cellular organism with granularity above the level of a protein complex." [GOC:kmv]
+is_a: GO:0005575 ! cellular_component
 
 [Term]
 id: GO:0120025
@@ -1610,15 +1547,6 @@ is_a: GO:0042995 ! cell projection
 intersection_of: GO:0042995 ! cell projection
 intersection_of: BFO:0000051 GO:0098590 ! plasma membrane region
 relationship: BFO:0000051 GO:0098590 ! plasma membrane region
-
-[Term]
-id: GO:0120038
-name: plasma membrane bounded cell projection part
-def: "Any constituent part of a plasma membrane bounded cell projection, a prolongation or process extending from a cell, e.g. a cilium or axon." [GOC:krc]
-is_a: GO:0044463 ! cell projection part
-intersection_of: GO:0005575 ! cellular_component
-intersection_of: BFO:0000050 GO:0120025 ! plasma membrane bounded cell projection
-relationship: BFO:0000050 GO:0120025 ! plasma membrane bounded cell projection
 
 [Term]
 id: GO:0140013
