@@ -379,7 +379,6 @@ comment: Branching usually determines the shape and compactness of the infloresc
 synonym: "panicle branching (related)" RELATED []
 xref: TO_GIT:96
 is_a: TO:0000373 ! inflorescence morphology trait
-is_a: TO:0000621 ! inflorescence development trait
 
 [Term]
 id: TO:0000051
@@ -1611,7 +1610,6 @@ id: TO:0000198
 name: rootless
 def: "Absence of roots in the seedling or plant." [Gramene:pankaj_jaiswal]
 synonym: "RTMIN (related)" RELATED []
-is_a: TO:0000656 ! root development trait
 
 [Term]
 id: TO:0000199
@@ -3332,7 +3330,6 @@ id: TO:0000404
 name: nodal rooting
 def: "Extent of rooting from the nodes on a stem." [Gramene:pankaj_jaiswal]
 is_a: TO:0000361 ! stem morphology trait
-is_a: TO:0000656 ! root development trait
 
 [Term]
 id: TO:0000405
@@ -3865,9 +3862,9 @@ is_a: TO:0000043 ! root morphology trait
 [Term]
 id: TO:0000472
 name: vascular bundle number
-def: "Number of vascular bundles present in a plant part." [Gramene:pankaj_jaiswal]
+def: "A plant structure morphology trait (TO:0000839) which is the number of vascular bundles (PO:0005020) in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "VBNB (related)" RELATED []
-is_a: TO:0020109 ! vascular bundle development trait
+is_a: TO:0000839 ! plant structure morphology trait
 
 [Term]
 id: TO:0000473
@@ -4199,17 +4196,18 @@ is_a: TO:0000043 ! root morphology trait
 
 [Term]
 id: TO:0000520
-name: stomatal closure rate
+name: stomatal complex closure rate
 def: "The rate of closure of stomata due to stress or coupled to the rate of photosynthesis and/or transpiration." [Gramene:pankaj_jaiswal]
 synonym: "STOCSRRATE (related)" RELATED []
 is_a: TO:0020095 ! stomatal process related trait
 
 [Term]
 id: TO:0000521
-name: stomatal closure time
-def: "Average time taken for closure of stomata due to stress or coupled to the rate of photosynthesis and/or transpiration." [Gramene:pankaj_jaiswal]
+name: stomatal complex closure time
+def: "The amount of time taken for a stomatal complex (PO:0002000) to close." [Gramene:pankaj_jaiswal, TO:cooperl]
+comment: Stomatal complex closure may be due to stress, or coupled to the rate of photosynthesis and/or transpiration.
 synonym: "STOCSRTM (related)" RELATED []
-is_a: TO:0020095 ! stomatal process related trait
+is_a: TO:0000933 ! plant phenological trait
 
 [Term]
 id: TO:0000522
@@ -9798,8 +9796,6 @@ id: TO:0002659
 name: pistil number
 def: "A pistil morphology trait (TO:0000223) which is the number of pistils in the gynoecium (PO:0009062)." [Gramene:pankaj_jaiswal, PO:0009062, TO:moorel]
 is_a: TO:0000223 ! pistil morphology trait
-is_a: TO:0002613 ! reproductive homeotic development trait
-is_a: TO:0006022 ! floral organ development trait
 
 [Term]
 id: TO:0002660
@@ -10826,9 +10822,7 @@ is_a: TO:0000736 ! plant organ morphology trait
 id: TO:0006010
 name: lodicule number
 def: "A lodicule morphology trait (TO:0006009) which is the average number of lodicules (PO:0009036) per grass flower (floret) in a study." [Gramene:pankaj_jaiswal, PO:0009036, TO:moorel]
-is_a: TO:0002613 ! reproductive homeotic development trait
-is_a: TO:0006009 ! lodicule morphology trait
-is_a: TO:0006023 ! lodicule development trait
+is_a: TO:0000274 ! spikelet floret morphology trait
 
 [Term]
 id: TO:0006011
@@ -10923,15 +10917,15 @@ is_a: TO:0006023 ! lodicule development trait
 
 [Term]
 id: TO:0006025
-name: floral bract development trait
+name: flower bract development trait
 def: "Traits associated with observing effects on the development of the floral bracts." [Gramene:pankaj_jaiswal]
 is_a: TO:0006022 ! floral organ development trait
 
 [Term]
 id: TO:0006026
-name: floral bract number
-def: "Number of bracts in a flower." [Gramene:pankaj_jaiswal]
-is_a: TO:0006025 ! floral bract development trait
+name: flower bract number
+def: "A flower morphology trait (TO:0000499) which is the number of flower bracts (TO:0006026)." [Gramene:pankaj_jaiswal]
+is_a: TO:0000499 ! flower morphology trait
 
 [Term]
 id: TO:0006027
