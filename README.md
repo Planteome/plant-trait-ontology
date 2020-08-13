@@ -1,5 +1,6 @@
 [![DOI](https://zenodo.org/badge/13996/Planteome/plant-trait-ontology.svg)](https://zenodo.org/badge/latestdoi/13996/Planteome/plant-trait-ontology)
 [![Build Status](https://travis-ci.org/Planteome/plant-trait-ontology.svg?branch=master)](https://travis-ci.org/Planteome/plant-trait-ontology)
+[![NSF-1340112](https://img.shields.io/badge/NSF-1340112-blue.svg)](https://www.nsf.gov/awardsearch/showAward?AWD_ID=1340112)
 
 This is the repository for the Plant Trait Ontology.
 
