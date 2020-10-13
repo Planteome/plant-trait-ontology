@@ -568,7 +568,6 @@ synonym: "L-Amino acid" RELATED [KEGG_COMPOUND]
 is_a: CHEBI:33704 ! alpha-amino acid
 relationship: is_conjugate_acid_of CHEBI:59814 ! L-alpha-amino acid anion
 relationship: is_tautomer_of CHEBI:59869 ! L-alpha-amino acid zwitterion
-relationship: RO:0000087 CHEBI:75771 ! mouse metabolite
 
 [Term]
 id: CHEBI:15734
@@ -5842,7 +5841,7 @@ name: HPODE
 def: "Hydroperoxy-octadecadienoic acids, formed in mammalian cells by peroxidation of linoleic acid." []
 synonym: "HPODEs" RELATED [ChEBI]
 is_a: CHEBI:36326 ! octadecanoid
-is_a: CHEBI:61051 ! lipid hydroperoxide
+is_a: CHEBI:64009 ! hydroperoxy fatty acid
 relationship: has_functional_parent CHEBI:17351 ! linoleic acid
 relationship: is_conjugate_acid_of CHEBI:131862 ! HPODE(1-)
 
@@ -6908,12 +6907,18 @@ is_a: CHEBI:48354 ! polar solvent
 [Term]
 id: CHEBI:48359
 name: protophilic solvent
+def: "Solvent that is capable of acting as a hydron (proton) acceptor." []
+synonym: "HBA solvent" RELATED [ChEBI]
+synonym: "hydrogen bond acceptor solvent" RELATED [ChEBI]
+synonym: "protophilic solvent" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:39142 ! Bronsted base
 is_a: CHEBI:48354 ! polar solvent
 
 [Term]
 id: CHEBI:48360
 name: amphiprotic solvent
+def: "Self-ionizing solvent possessing both characteristics of Bronsted acids and bases." []
+synonym: "amphiprotic solvent" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:48356 ! protic solvent
 is_a: CHEBI:48359 ! protophilic solvent
 
@@ -7692,9 +7697,10 @@ relationship: RO:0000087 CHEBI:26115 ! phytoalexin
 [Term]
 id: CHEBI:61051
 name: lipid hydroperoxide
-def: "A peroxol that is the primary oxygenated product of a polyunsaturated fatty acid." []
-synonym: "a hydroperoxy-polyunsaturated fatty acid" RELATED [UniProt]
+def: "Any lipid carrying one or more hydroperoxy substituents." []
+synonym: "a lipid hydroperoxide" RELATED [UniProt]
 synonym: "lipid hydroperoxides" RELATED [ChEBI]
+is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:35924 ! peroxol
 
 [Term]
@@ -7878,6 +7884,23 @@ synonym: "neuroprotectant" RELATED [ChEBI]
 synonym: "neuroprotectants" RELATED [ChEBI]
 synonym: "neuroprotective agents" RELATED [ChEBI]
 is_a: CHEBI:50267 ! protective agent
+
+[Term]
+id: CHEBI:64009
+name: hydroperoxy fatty acid
+def: "Any fatty acid carrying one or more hydroperoxy substituents." []
+synonym: "hydroperoxy fatty acids" RELATED [ChEBI]
+is_a: CHEBI:35366 ! fatty acid
+is_a: CHEBI:61051 ! lipid hydroperoxide
+relationship: is_conjugate_acid_of CHEBI:64012 ! hydroperoxy fatty acid anion
+
+[Term]
+id: CHEBI:64012
+name: hydroperoxy fatty acid anion
+def: "A fatty acid anion that is the conjugate base of any hydroperoxy fatty acid, formed by deprotonation of the carboxylic acid moiety." []
+synonym: "hydroperoxy fatty acid anions" RELATED [ChEBI]
+is_a: CHEBI:28868 ! fatty acid anion
+relationship: is_conjugate_base_of CHEBI:64009 ! hydroperoxy fatty acid
 
 [Term]
 id: CHEBI:64047
@@ -8712,7 +8735,7 @@ is_a: CHEBI:58953 ! saturated fatty acid anion
 [Term]
 id: CHEBI:78295
 name: food component
-def: "Any substance that is distributed in foodstuffs. It includes materials derived from plants or animals, such as vitamins or minerals, as well as environmental contaminants." []
+def: "A physiological role played by any substance that is distributed in foodstuffs. It includes materials derived from plants or animals, such as vitamins or minerals, as well as environmental contaminants." []
 synonym: "dietary component" RELATED [ChEBI]
 synonym: "dietary components" RELATED [ChEBI]
 synonym: "food components" RELATED [ChEBI]
