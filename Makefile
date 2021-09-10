@@ -19,7 +19,7 @@ $(ONT).owl: $(SRC)
 	$(ROBOT)  reason -e none -i $< -r ELK relax reduce -r ELK annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 $(ONT).obo: $(ONT).owl
 	$(ROBOT) convert -i $< -f obo --check false -o $(ONT).obo.tmp && grep -v '^owl-axioms:' $(ONT).obo.tmp > $@ && rm $(ONT).obo.tmp
-#$(ONT).owl: $(ONT).json
+#$(ONT).json: $(ONT).owl
 #	$(ROBOT) convert --check false -f json -o $(ONT).json
 
 subsets/$(ONT)-basic.obo: $(ONT).owl
