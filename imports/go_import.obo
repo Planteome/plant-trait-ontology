@@ -28,7 +28,7 @@ is_a: GO:0048285 ! organelle fission
 [Term]
 id: GO:0003006
 name: developmental process involved in reproduction
-def: "A developmental process in which a progressive change in the state of some part of an organism specifically contributes to its ability to form offspring." [GOC:dph, GOC:isa_complete]
+def: "A developmental process in which a progressive change in the state of some part of an organism, germline or somatic, specifically contributes to its ability to form offspring." [GOC:dph, GOC:isa_complete]
 synonym: "puberty" NARROW [GOC:dph]
 synonym: "reproductive developmental process" RELATED [GOC:dph, GOC:tb]
 is_a: GO:0022414 ! reproductive process
@@ -103,7 +103,7 @@ is_a: GO:0004553 ! hydrolase activity, hydrolyzing O-glycosyl compounds
 [Term]
 id: GO:0005102
 name: signaling receptor binding
-def: "Interacting selectively and non-covalently with one or more specific sites on a receptor molecule, a macromolecule that undergoes combination with a hormone, neurotransmitter, drug or intracellular messenger to initiate a change in cell function." [GOC:bf, GOC:ceb, ISBN:0198506732]
+def: "Binding to one or more specific sites on a receptor molecule, a macromolecule that undergoes combination with a hormone, neurotransmitter, drug or intracellular messenger to initiate a change in cell function." [GOC:bf, GOC:ceb, ISBN:0198506732]
 synonym: "receptor binding" BROAD []
 synonym: "receptor ligand" NARROW []
 synonym: "receptor-associated protein activity" RELATED []
@@ -119,7 +119,7 @@ is_a: GO:0003674 ! molecular_function
 [Term]
 id: GO:0005515
 name: protein binding
-def: "Interacting selectively and non-covalently with any protein or protein complex (a complex of two or more proteins that may include other nonprotein molecules)." [GOC:go_curators]
+def: "Binding to a protein." [GOC:go_curators]
 synonym: "glycoprotein binding" NARROW []
 synonym: "protein amino acid binding" EXACT []
 is_a: GO:0005488 ! binding
@@ -146,7 +146,7 @@ is_a: GO:0110165 ! cellular anatomical entity
 [Term]
 id: GO:0005737
 name: cytoplasm
-def: "All of the contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures." [ISBN:0198547684]
+def: "The contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures." [ISBN:0198547684]
 is_a: GO:0110165 ! cellular anatomical entity
 relationship: BFO:0000050 GO:0005622 ! intracellular anatomical structure
 
@@ -346,7 +346,7 @@ is_a: GO:0008150 ! biological_process
 id: GO:0008194
 name: UDP-glycosyltransferase activity
 def: "Catalysis of the transfer of a glycosyl group from a UDP-sugar to a small hydrophobic molecule." [InterPro:IPR004224, PMID:11846783]
-is_a: GO:0016757 ! transferase activity, transferring glycosyl groups
+is_a: GO:0016757 ! glycosyltransferase activity
 
 [Term]
 id: GO:0008878
@@ -378,6 +378,13 @@ synonym: "multicellular organismal biosynthetic process" NARROW []
 synonym: "single-organism biosynthetic process" RELATED []
 synonym: "synthesis" EXACT []
 is_a: GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0009526
+name: plastid envelope
+def: "The double lipid bilayer enclosing a plastid and separating its contents from the rest of the cytoplasm; includes the intermembrane space." [GOC:jy]
+is_a: GO:0031967 ! organelle envelope
+relationship: BFO:0000050 GO:0009536 ! plastid
 
 [Term]
 id: GO:0009536
@@ -473,6 +480,45 @@ intersection_of: RO:0002211 GO:0009058 ! biosynthetic process
 relationship: RO:0002211 GO:0009058 ! biosynthetic process
 
 [Term]
+id: GO:0009891
+name: positive regulation of biosynthetic process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of substances." [GOC:go_curators]
+synonym: "activation of biosynthetic process" NARROW []
+synonym: "positive regulation of anabolism" EXACT []
+synonym: "positive regulation of biosynthesis" EXACT []
+synonym: "positive regulation of formation" EXACT []
+synonym: "positive regulation of synthesis" EXACT []
+synonym: "stimulation of biosynthetic process" NARROW []
+synonym: "up regulation of biosynthetic process" EXACT []
+synonym: "up-regulation of biosynthetic process" EXACT []
+synonym: "upregulation of biosynthetic process" EXACT []
+is_a: GO:0009889 ! regulation of biosynthetic process
+is_a: GO:0009893 ! positive regulation of metabolic process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0009058 ! biosynthetic process
+relationship: RO:0002213 GO:0009058 ! biosynthetic process
+
+[Term]
+id: GO:0009893
+name: positive regulation of metabolic process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways within a cell or an organism." [GOC:go_curators]
+synonym: "activation of metabolic process" NARROW []
+synonym: "positive regulation of metabolism" EXACT []
+synonym: "positive regulation of multicellular organismal metabolic process" NARROW []
+synonym: "positive regulation of organismal metabolism" NARROW []
+synonym: "stimulation of metabolic process" NARROW []
+synonym: "stimulation of organismal metabolic process" NARROW []
+synonym: "up regulation of metabolic process" EXACT []
+synonym: "up-regulation of metabolic process" EXACT []
+synonym: "up-regulation of organismal metabolic process" NARROW []
+synonym: "upregulation of metabolic process" EXACT []
+is_a: GO:0019222 ! regulation of metabolic process
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0008152 ! metabolic process
+relationship: RO:0002213 GO:0008152 ! metabolic process
+
+[Term]
 id: GO:0009908
 name: flower development
 def: "The process whose specific outcome is the progression of the flower over time, from its formation to the mature structure. The flower is the reproductive structure in a plant, and its development begins with the transition of the vegetative or inflorescence meristem into a floral meristem." [GOC:tb, ISBN:0879015322]
@@ -490,6 +536,22 @@ intersection_of: RO:0002211 GO:0009908 ! flower development
 relationship: RO:0002211 GO:0009908 ! flower development
 
 [Term]
+id: GO:0009911
+name: positive regulation of flower development
+def: "Any process that activates or increases the frequency, rate or extent of flower development." [GOC:go_curators]
+synonym: "activation of flower development" NARROW []
+synonym: "stimulation of flower development" NARROW []
+synonym: "up regulation of flower development" EXACT []
+synonym: "up-regulation of flower development" EXACT []
+synonym: "upregulation of flower development" EXACT []
+is_a: GO:0009909 ! regulation of flower development
+is_a: GO:0048582 ! positive regulation of post-embryonic development
+is_a: GO:2000243 ! positive regulation of reproductive process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0009908 ! flower development
+relationship: RO:0002213 GO:0009908 ! flower development
+
+[Term]
 id: GO:0009966
 name: regulation of signal transduction
 def: "Any process that modulates the frequency, rate or extent of signal transduction." [GOC:sm]
@@ -501,6 +563,25 @@ is_a: GO:0048583 ! regulation of response to stimulus
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0007165 ! signal transduction
 relationship: RO:0002211 GO:0007165 ! signal transduction
+
+[Term]
+id: GO:0009967
+name: positive regulation of signal transduction
+def: "Any process that activates or increases the frequency, rate or extent of signal transduction." [GOC:sm]
+synonym: "activation of signal transduction" NARROW []
+synonym: "positive regulation of signaling pathway" RELATED []
+synonym: "positive regulation of signalling pathway" RELATED [GOC:mah]
+synonym: "stimulation of signal transduction" NARROW []
+synonym: "up regulation of signal transduction" EXACT []
+synonym: "up-regulation of signal transduction" EXACT []
+synonym: "upregulation of signal transduction" EXACT []
+is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:0010647 ! positive regulation of cell communication
+is_a: GO:0023056 ! positive regulation of signaling
+is_a: GO:0048584 ! positive regulation of response to stimulus
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0007165 ! signal transduction
+relationship: RO:0002213 GO:0007165 ! signal transduction
 
 [Term]
 id: GO:0009987
@@ -553,6 +634,28 @@ def: "The process whose specific outcome is the progression of an inflorescence 
 is_a: GO:0090567 ! reproductive shoot system development
 
 [Term]
+id: GO:0010469
+name: regulation of signaling receptor activity
+def: "Any process that modulates the frequency, rate or extent of a signaling receptor activity. Receptor activity is when a molecule combines with an extracellular or intracellular messenger to initiate a change in cell activity." [GOC:dph, GOC:tb]
+synonym: "regulation of receptor activity" BROAD []
+synonym: "regulation of signalling receptor activity" EXACT []
+is_a: GO:0009966 ! regulation of signal transduction
+is_a: GO:0065009 ! regulation of molecular function
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002211 GO:0038023 ! signaling receptor activity
+relationship: RO:0002211 GO:0038023 ! signaling receptor activity
+
+[Term]
+id: GO:0010562
+name: positive regulation of phosphorus metabolic process
+def: "Any process that increases the frequency, rate or extent of the chemical reactions and pathways involving phosphorus or compounds containing phosphorus." [GOC:dph, GOC:tb]
+is_a: GO:0031325 ! positive regulation of cellular metabolic process
+is_a: GO:0051174 ! regulation of phosphorus metabolic process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0006793 ! phosphorus metabolic process
+relationship: RO:0002213 GO:0006793 ! phosphorus metabolic process
+
+[Term]
 id: GO:0010564
 name: regulation of cell cycle process
 def: "Any process that modulates a cellular process that is involved in the progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events." [GOC:dph, GOC:tb]
@@ -560,6 +663,18 @@ is_a: GO:0051726 ! regulation of cell cycle
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0022402 ! cell cycle process
 relationship: RO:0002211 GO:0022402 ! cell cycle process
+
+[Term]
+id: GO:0010638
+name: positive regulation of organelle organization
+def: "Any process that increases the frequency, rate or extent of a process involved in the formation, arrangement of constituent parts, or disassembly of an organelle." [GOC:dph, GOC:tb]
+synonym: "positive regulation of organelle organisation" EXACT [GOC:mah]
+synonym: "positive regulation of organelle organization and biogenesis" RELATED [GOC:mah]
+is_a: GO:0033043 ! regulation of organelle organization
+is_a: GO:0051130 ! positive regulation of cellular component organization
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0006996 ! organelle organization
+relationship: RO:0002213 GO:0006996 ! organelle organization
 
 [Term]
 id: GO:0010646
@@ -571,6 +686,16 @@ intersection_of: RO:0002211 GO:0007154 ! cell communication
 relationship: RO:0002211 GO:0007154 ! cell communication
 
 [Term]
+id: GO:0010647
+name: positive regulation of cell communication
+def: "Any process that increases the frequency, rate or extent of cell communication. Cell communication is the process that mediates interactions between a cell and its surroundings. Encompasses interactions such as signaling or attachment between one cell and another cell, between a cell and an extracellular matrix, or between a cell and any other aspect of its environment." [GOC:dph, GOC:tb]
+is_a: GO:0010646 ! regulation of cell communication
+is_a: GO:0048522 ! positive regulation of cellular process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0007154 ! cell communication
+relationship: RO:0002213 GO:0007154 ! cell communication
+
+[Term]
 id: GO:0010921
 name: regulation of phosphatase activity
 def: "Any process that modulates the rate or frequency of phosphatase activity. Phosphatases catalyze the hydrolysis of phosphoric monoesters, releasing inorganic phosphate." [GOC:BHF, GOC:dph, GOC:tb]
@@ -579,6 +704,17 @@ is_a: GO:0051336 ! regulation of hydrolase activity
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0016791 ! phosphatase activity
 relationship: RO:0002211 GO:0016791 ! phosphatase activity
+
+[Term]
+id: GO:0010922
+name: positive regulation of phosphatase activity
+def: "Any process that increases the rate or frequency of phosphatase activity. Phosphatases catalyze the hydrolysis of phosphoric monoesters, releasing inorganic phosphate." [GOC:BHF, GOC:dph, GOC:tb]
+is_a: GO:0010921 ! regulation of phosphatase activity
+is_a: GO:0035306 ! positive regulation of dephosphorylation
+is_a: GO:0051345 ! positive regulation of hydrolase activity
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0016791 ! phosphatase activity
+relationship: RO:0002213 GO:0016791 ! phosphatase activity
 
 [Term]
 id: GO:0016020
@@ -644,9 +780,9 @@ is_a: GO:0003824 ! catalytic activity
 
 [Term]
 id: GO:0016757
-name: transferase activity, transferring glycosyl groups
+name: glycosyltransferase activity
 def: "Catalysis of the transfer of a glycosyl group from one compound (donor) to another (acceptor)." [GOC:jl, ISBN:0198506732]
-synonym: "glycosyltransferase activity" EXACT []
+synonym: "transferase activity, transferring glycosyl groups" EXACT []
 synonym: "transferase activity, transferring other glycosyl groups" NARROW []
 synonym: "transglycosidase activity" EXACT []
 synonym: "transglycosylase activity" EXACT []
@@ -654,10 +790,10 @@ is_a: GO:0016740 ! transferase activity
 
 [Term]
 id: GO:0016758
-name: transferase activity, transferring hexosyl groups
+name: hexosyltransferase activity
 def: "Catalysis of the transfer of a hexosyl group from one compound (donor) to another (acceptor)." [GOC:jl]
-synonym: "hexosyltransferase activity" EXACT []
-is_a: GO:0016757 ! transferase activity, transferring glycosyl groups
+synonym: "transferase activity, transferring hexosyl groups" EXACT []
+is_a: GO:0016757 ! glycosyltransferase activity
 
 [Term]
 id: GO:0016772
@@ -713,6 +849,25 @@ synonym: "N-glycosylase" NARROW []
 is_a: GO:0016787 ! hydrolase activity
 
 [Term]
+id: GO:0019208
+name: phosphatase regulator activity
+def: "Binds to and modulates the activity of a phosphatase, an enzyme which catalyzes of the removal of a phosphate group from a substrate molecule." [GOC:ai]
+is_a: GO:0030234 ! enzyme regulator activity
+intersection_of: GO:0098772 ! molecular function regulator
+intersection_of: RO:0002211 GO:0016791 ! phosphatase activity
+relationship: BFO:0000051 GO:0019902 ! phosphatase binding
+relationship: RO:0002211 GO:0016791 ! phosphatase activity
+
+[Term]
+id: GO:0019211
+name: phosphatase activator activity
+def: "Binds to and increases the activity of a phosphatase, an enzyme which catalyzes of the removal of a phosphate group from a substrate molecule." [GOC:ai]
+is_a: GO:0019208 ! phosphatase regulator activity
+intersection_of: GO:0098772 ! molecular function regulator
+intersection_of: RO:0002213 GO:0016791 ! phosphatase activity
+relationship: RO:0002213 GO:0016791 ! phosphatase activity
+
+[Term]
 id: GO:0019220
 name: regulation of phosphate metabolic process
 def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving phosphates." [GOC:go_curators]
@@ -755,6 +910,18 @@ synonym: "secondary metabolism" EXACT []
 synonym: "secondary metabolite metabolic process" EXACT []
 synonym: "secondary metabolite metabolism" EXACT []
 is_a: GO:0008152 ! metabolic process
+
+[Term]
+id: GO:0019899
+name: enzyme binding
+def: "Binding to an enzyme, a protein with catalytic activity." [GOC:jl]
+is_a: GO:0005515 ! protein binding
+
+[Term]
+id: GO:0019902
+name: phosphatase binding
+def: "Binding to a phosphatase." [GOC:jl]
+is_a: GO:0019899 ! enzyme binding
 
 [Term]
 id: GO:0021700
@@ -810,10 +977,39 @@ synonym: "single organism signaling" RELATED []
 is_a: GO:0008150 ! biological_process
 
 [Term]
-id: GO:0030545
-name: receptor regulator activity
-def: "The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is changed." [GOC:ceb]
+id: GO:0023056
+name: positive regulation of signaling
+def: "Any process that activates, maintains or increases the frequency, rate or extent of a signaling process." [GOC:mtg_signal]
+synonym: "positive regulation of signaling process" RELATED [GOC:bf]
+synonym: "positive regulation of signalling process" EXACT [GOC:mah]
+is_a: GO:0023051 ! regulation of signaling
+is_a: GO:0048518 ! positive regulation of biological process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0023052 ! signaling
+relationship: RO:0002213 GO:0023052 ! signaling
+
+[Term]
+id: GO:0030234
+name: enzyme regulator activity
+def: "Binds to and modulates the activity of an enzyme." [GOC:dph, GOC:mah, GOC:tb]
+synonym: "catalytic regulator activity" EXACT [GOC:dph]
+synonym: "enzyme modulator" EXACT []
+synonym: "metalloenzyme regulator activity" NARROW []
 is_a: GO:0098772 ! molecular function regulator
+intersection_of: GO:0098772 ! molecular function regulator
+intersection_of: RO:0002211 GO:0003824 ! catalytic activity
+relationship: BFO:0000050 GO:0050790 ! regulation of catalytic activity
+relationship: RO:0002211 GO:0003824 ! catalytic activity
+
+[Term]
+id: GO:0030545
+name: signaling receptor regulator activity
+def: "Binds to and modulates the activity of a receptor." [GOC:ceb]
+synonym: "receptor regulator activity" BROAD []
+is_a: GO:0098772 ! molecular function regulator
+intersection_of: GO:0098772 ! molecular function regulator
+intersection_of: RO:0002211 GO:0038023 ! signaling receptor activity
+relationship: RO:0002211 GO:0038023 ! signaling receptor activity
 
 [Term]
 id: GO:0030546
@@ -821,7 +1017,20 @@ name: signaling receptor activator activity
 def: "The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is increased." [GOC:ceb]
 synonym: "receptor activator activity" BROAD []
 synonym: "signalling receptor activator activity" EXACT []
-is_a: GO:0030545 ! receptor regulator activity
+is_a: GO:0030545 ! signaling receptor regulator activity
+intersection_of: GO:0098772 ! molecular function regulator
+intersection_of: RO:0002213 GO:0038023 ! signaling receptor activity
+relationship: RO:0002213 GO:0038023 ! signaling receptor activity
+
+[Term]
+id: GO:0031090
+name: organelle membrane
+def: "A membrane that is one of the two lipid bilayers of an organelle envelope or the outermost membrane of single membrane bound organelle." [GOC:dos, GOC:mah]
+synonym: "intracellular membrane" RELATED [NIF_Subcellular:sao830981606]
+is_a: GO:0016020 ! membrane
+intersection_of: GO:0016020 ! membrane
+intersection_of: BFO:0000050 GO:0043227 ! membrane-bounded organelle
+relationship: BFO:0000050 GO:0043227 ! membrane-bounded organelle
 
 [Term]
 id: GO:0031323
@@ -833,6 +1042,23 @@ is_a: GO:0050794 ! regulation of cellular process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0044237 ! cellular metabolic process
 relationship: RO:0002211 GO:0044237 ! cellular metabolic process
+
+[Term]
+id: GO:0031325
+name: positive regulation of cellular metabolic process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways by which individual cells transform chemical substances." [GOC:mah]
+synonym: "activation of cellular metabolic process" NARROW []
+synonym: "positive regulation of cellular metabolism" EXACT []
+synonym: "stimulation of cellular metabolic process" NARROW []
+synonym: "up regulation of cellular metabolic process" EXACT []
+synonym: "up-regulation of cellular metabolic process" EXACT []
+synonym: "upregulation of cellular metabolic process" EXACT []
+is_a: GO:0009893 ! positive regulation of metabolic process
+is_a: GO:0031323 ! regulation of cellular metabolic process
+is_a: GO:0048522 ! positive regulation of cellular process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0044237 ! cellular metabolic process
+relationship: RO:0002213 GO:0044237 ! cellular metabolic process
 
 [Term]
 id: GO:0031326
@@ -847,6 +1073,55 @@ is_a: GO:0031323 ! regulation of cellular metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0044249 ! cellular biosynthetic process
 relationship: RO:0002211 GO:0044249 ! cellular biosynthetic process
+
+[Term]
+id: GO:0031328
+name: positive regulation of cellular biosynthetic process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of substances, carried out by individual cells." [GOC:mah]
+synonym: "activation of cellular biosynthetic process" NARROW []
+synonym: "positive regulation of cellular anabolism" EXACT []
+synonym: "positive regulation of cellular biosynthesis" EXACT []
+synonym: "positive regulation of cellular formation" EXACT []
+synonym: "positive regulation of cellular synthesis" EXACT []
+synonym: "stimulation of cellular biosynthetic process" NARROW []
+synonym: "up regulation of cellular biosynthetic process" EXACT []
+synonym: "up-regulation of cellular biosynthetic process" EXACT []
+synonym: "upregulation of cellular biosynthetic process" EXACT []
+is_a: GO:0009891 ! positive regulation of biosynthetic process
+is_a: GO:0031325 ! positive regulation of cellular metabolic process
+is_a: GO:0031326 ! regulation of cellular biosynthetic process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0044249 ! cellular biosynthetic process
+relationship: RO:0002213 GO:0044249 ! cellular biosynthetic process
+
+[Term]
+id: GO:0031967
+name: organelle envelope
+def: "A double membrane structure enclosing an organelle, including two lipid bilayers and the region between them. In some cases, an organelle envelope may have more than two membranes." [GOC:mah, GOC:pz]
+is_a: GO:0031975 ! envelope
+relationship: BFO:0000050 GO:0043227 ! membrane-bounded organelle
+relationship: BFO:0000050 GO:0043229 ! intracellular organelle
+
+[Term]
+id: GO:0031975
+name: envelope
+def: "A multilayered structure surrounding all or part of a cell; encompasses one or more lipid bilayers, and may include a cell wall layer; also includes the space between layers." [GOC:mah, GOC:pz]
+is_a: GO:0110165 ! cellular anatomical entity
+
+[Term]
+id: GO:0032092
+name: positive regulation of protein binding
+def: "Any process that activates or increases the frequency, rate or extent of protein binding." [GOC:mah]
+synonym: "activation of protein binding" NARROW []
+synonym: "stimulation of protein binding" NARROW []
+synonym: "up regulation of protein binding" EXACT []
+synonym: "up-regulation of protein binding" EXACT []
+synonym: "upregulation of protein binding" EXACT []
+is_a: GO:0043393 ! regulation of protein binding
+is_a: GO:0051099 ! positive regulation of binding
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0005515 ! protein binding
+relationship: RO:0002213 GO:0005515 ! protein binding
 
 [Term]
 id: GO:0032501
@@ -911,10 +1186,34 @@ intersection_of: RO:0002211 GO:0016311 ! dephosphorylation
 relationship: RO:0002211 GO:0016311 ! dephosphorylation
 
 [Term]
+id: GO:0035306
+name: positive regulation of dephosphorylation
+def: "Any process that activates or increases the frequency, rate or extent of removal of phosphate groups from a molecule." [GOC:bf]
+synonym: "activation of dephosphorylation" NARROW []
+synonym: "stimulation of dephosphorylation" NARROW []
+synonym: "up regulation of dephosphorylation" EXACT []
+synonym: "up-regulation of dephosphorylation" EXACT []
+synonym: "upregulation of dephosphorylation" EXACT []
+is_a: GO:0035303 ! regulation of dephosphorylation
+is_a: GO:0045937 ! positive regulation of phosphate metabolic process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0016311 ! dephosphorylation
+relationship: RO:0002213 GO:0016311 ! dephosphorylation
+
+[Term]
 id: GO:0035618
 name: root hair
 def: "A long, thin projection from a root epidermal cell that contains F-actin and tubulin, and a cell wall." [http://www.jstor.org/stable/4354264, PO:0000256]
 is_a: GO:0120025 ! plasma membrane bounded cell projection
+
+[Term]
+id: GO:0038023
+name: signaling receptor activity
+def: "Receiving a signal and transmitting it in the cell to initiate a change in cell activity. A signal is a physical entity or change in state that is used to transfer information in order to trigger a response." [GOC:bf, GOC:signaling]
+synonym: "receptor activity" BROAD []
+synonym: "receptor activity involved in signal transduction" EXACT [GOC:bf]
+synonym: "signalling receptor activity" EXACT []
+is_a: GO:0060089 ! molecular transducer activity
 
 [Term]
 id: GO:0040020
@@ -933,6 +1232,15 @@ id: GO:0042044
 name: fluid transport
 def: "The directed movement of substances that are in liquid form in normal living conditions into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 is_a: GO:0006810 ! transport
+
+[Term]
+id: GO:0042170
+name: plastid membrane
+def: "Either of the lipid bilayers that surround a plastid and form the plastid envelope." [GOC:mah]
+is_a: GO:0031090 ! organelle membrane
+intersection_of: GO:0016020 ! membrane
+intersection_of: BFO:0000050 GO:0009536 ! plastid
+relationship: BFO:0000050 GO:0009526 ! plastid envelope
 
 [Term]
 id: GO:0042578
@@ -958,6 +1266,28 @@ is_a: GO:0110165 ! cellular anatomical entity
 relationship: BFO:0000050 GO:0009536 ! plastid
 
 [Term]
+id: GO:0043085
+name: positive regulation of catalytic activity
+def: "Any process that activates or increases the activity of an enzyme." [GOC:ebc, GOC:jl, GOC:tb, GOC:vw]
+synonym: "activation of enzyme activity" NARROW []
+synonym: "activation of metalloenzyme activity" NARROW []
+synonym: "positive regulation of enzyme activity" EXACT [GOC:tb]
+synonym: "positive regulation of metalloenzyme activity" NARROW []
+synonym: "stimulation of enzyme activity" NARROW []
+synonym: "stimulation of metalloenzyme activity" NARROW []
+synonym: "up regulation of enzyme activity" EXACT []
+synonym: "up regulation of metalloenzyme activity" NARROW []
+synonym: "up-regulation of enzyme activity" EXACT []
+synonym: "up-regulation of metalloenzyme activity" NARROW []
+synonym: "upregulation of enzyme activity" EXACT []
+synonym: "upregulation of metalloenzyme activity" NARROW []
+is_a: GO:0044093 ! positive regulation of molecular function
+is_a: GO:0050790 ! regulation of catalytic activity
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0003824 ! catalytic activity
+relationship: RO:0002213 GO:0003824 ! catalytic activity
+
+[Term]
 id: GO:0043226
 name: organelle
 def: "Organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, and prokaryotic structures such as anammoxosomes and pirellulosomes. Excludes the plasma membrane." [GOC:go_curators]
@@ -969,12 +1299,18 @@ name: membrane-bounded organelle
 def: "Organized structure of distinctive morphology and function, bounded by a single or double lipid bilayer membrane. Includes the nucleus, mitochondria, plastids, vacuoles, and vesicles. Excludes the plasma membrane." [GOC:go_curators]
 synonym: "membrane-enclosed organelle" EXACT []
 is_a: GO:0043226 ! organelle
+intersection_of: GO:0043226 ! organelle
+intersection_of: BFO:0000051 GO:0016020 ! membrane
+relationship: BFO:0000051 GO:0016020 ! membrane
 
 [Term]
 id: GO:0043229
 name: intracellular organelle
 def: "Organized structure of distinctive morphology and function, occurring within the cell. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton. Excludes the plasma membrane." [GOC:go_curators]
-is_a: GO:0005622 ! intracellular anatomical structure
+is_a: GO:0043226 ! organelle
+intersection_of: GO:0043226 ! organelle
+intersection_of: BFO:0000050 GO:0005622 ! intracellular anatomical structure
+relationship: BFO:0000050 GO:0005622 ! intracellular anatomical structure
 
 [Term]
 id: GO:0043231
@@ -983,6 +1319,8 @@ def: "Organized structure of distinctive morphology and function, bounded by a s
 synonym: "intracellular membrane-enclosed organelle" EXACT []
 is_a: GO:0043227 ! membrane-bounded organelle
 is_a: GO:0043229 ! intracellular organelle
+intersection_of: GO:0043227 ! membrane-bounded organelle
+intersection_of: BFO:0000050 GO:0005622 ! intracellular anatomical structure
 
 [Term]
 id: GO:0043393
@@ -1011,6 +1349,15 @@ is_a: GO:0051239 ! regulation of multicellular organismal process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0007585 ! respiratory gaseous exchange by respiratory system
 relationship: RO:0002211 GO:0007585 ! respiratory gaseous exchange by respiratory system
+
+[Term]
+id: GO:0044093
+name: positive regulation of molecular function
+def: "Any process that activates or increases the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding." [GO:jl]
+is_a: GO:0065009 ! regulation of molecular function
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0003674 ! molecular_function
+relationship: RO:0002213 GO:0003674 ! molecular_function
 
 [Term]
 id: GO:0044237
@@ -1050,6 +1397,92 @@ synonym: "yolk protein" RELATED []
 is_a: GO:0003674 ! molecular_function
 
 [Term]
+id: GO:0045787
+name: positive regulation of cell cycle
+def: "Any process that activates or increases the rate or extent of progression through the cell cycle." [GOC:go_curators]
+synonym: "activation of progression through cell cycle" NARROW []
+synonym: "positive regulation of cell cycle progression" EXACT []
+synonym: "positive regulation of progression through cell cycle" EXACT [GOC:dph, GOC:tb]
+synonym: "stimulation of progression through cell cycle" NARROW []
+synonym: "up regulation of progression through cell cycle" EXACT []
+synonym: "up-regulation of progression through cell cycle" EXACT []
+synonym: "upregulation of progression through cell cycle" EXACT []
+is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:0051726 ! regulation of cell cycle
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0007049 ! cell cycle
+relationship: RO:0002213 GO:0007049 ! cell cycle
+
+[Term]
+id: GO:0045836
+name: positive regulation of meiotic nuclear division
+def: "Any process that activates or increases the frequency, rate or extent of meiosis." [GOC:go_curators]
+synonym: "activation of meiosis" NARROW []
+synonym: "positive regulation of meiosis" EXACT []
+synonym: "stimulation of meiosis" NARROW []
+synonym: "up regulation of meiosis" EXACT []
+synonym: "up-regulation of meiosis" EXACT []
+synonym: "upregulation of meiosis" EXACT []
+is_a: GO:0040020 ! regulation of meiotic nuclear division
+is_a: GO:0051446 ! positive regulation of meiotic cell cycle
+is_a: GO:0051785 ! positive regulation of nuclear division
+is_a: GO:0090068 ! positive regulation of cell cycle process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0140013 ! meiotic nuclear division
+relationship: RO:0002213 GO:0140013 ! meiotic nuclear division
+
+[Term]
+id: GO:0045840
+name: positive regulation of mitotic nuclear division
+def: "Any process that activates or increases the frequency, rate or extent of mitosis." [GOC:go_curators]
+synonym: "activation of mitosis" NARROW []
+synonym: "mitogenic activity" NARROW []
+synonym: "positive regulation of mitosis" EXACT []
+synonym: "stimulation of mitosis" NARROW []
+synonym: "up regulation of mitosis" EXACT []
+synonym: "up-regulation of mitosis" EXACT []
+synonym: "upregulation of mitosis" EXACT []
+is_a: GO:0007088 ! regulation of mitotic nuclear division
+is_a: GO:0051785 ! positive regulation of nuclear division
+is_a: GO:0090068 ! positive regulation of cell cycle process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0140014 ! mitotic nuclear division
+relationship: RO:0002213 GO:0140014 ! mitotic nuclear division
+
+[Term]
+id: GO:0045931
+name: positive regulation of mitotic cell cycle
+def: "Any process that activates or increases the rate or extent of progression through the mitotic cell cycle." [GOC:dph, GOC:go_curators, GOC:tb]
+synonym: "activation of progression through mitotic cell cycle" NARROW []
+synonym: "positive regulation of mitotic cell cycle progression" EXACT []
+synonym: "positive regulation of progression through mitotic cell cycle" EXACT [GOC:dph, GOC:tb]
+synonym: "stimulation of progression through mitotic cell cycle" NARROW []
+synonym: "up regulation of progression through mitotic cell cycle" EXACT []
+synonym: "up-regulation of progression through mitotic cell cycle" EXACT []
+synonym: "upregulation of progression through mitotic cell cycle" EXACT []
+is_a: GO:0007346 ! regulation of mitotic cell cycle
+is_a: GO:0045787 ! positive regulation of cell cycle
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0000278 ! mitotic cell cycle
+relationship: RO:0002213 GO:0000278 ! mitotic cell cycle
+
+[Term]
+id: GO:0045937
+name: positive regulation of phosphate metabolic process
+def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways involving phosphates." [GOC:go_curators]
+synonym: "activation of phosphate metabolic process" NARROW []
+synonym: "positive regulation of phosphate metabolism" EXACT []
+synonym: "stimulation of phosphate metabolic process" NARROW []
+synonym: "up regulation of phosphate metabolic process" EXACT []
+synonym: "up-regulation of phosphate metabolic process" EXACT []
+synonym: "upregulation of phosphate metabolic process" EXACT []
+is_a: GO:0010562 ! positive regulation of phosphorus metabolic process
+is_a: GO:0019220 ! regulation of phosphate metabolic process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0006796 ! phosphate-containing compound metabolic process
+relationship: RO:0002213 GO:0006796 ! phosphate-containing compound metabolic process
+
+[Term]
 id: GO:0046524
 name: sucrose-phosphate synthase activity
 def: "Catalysis of the reaction: UDP-glucose + D-fructose 6-phosphate = UDP + sucrose 6-phosphate." [EC:2.4.1.14]
@@ -1069,7 +1502,7 @@ is_a: GO:0035251 ! UDP-glucosyltransferase activity
 id: GO:0046527
 name: glucosyltransferase activity
 def: "Catalysis of the transfer of a glucosyl group to an acceptor molecule, typically another carbohydrate or a lipid." [ISBN:0198506732]
-is_a: GO:0016758 ! transferase activity, transferring hexosyl groups
+is_a: GO:0016758 ! hexosyltransferase activity
 
 [Term]
 id: GO:0047484
@@ -1143,6 +1576,37 @@ synonym: "pistil development" EXACT []
 is_a: GO:0048438 ! floral whorl development
 
 [Term]
+id: GO:0048518
+name: positive regulation of biological process
+def: "Any process that activates or increases the frequency, rate or extent of a biological process. Biological processes are regulated by many means; examples include the control of gene expression, protein modification or interaction with a protein or substrate molecule." [GOC:jid]
+synonym: "activation of biological process" NARROW []
+synonym: "positive regulation of physiological process" EXACT []
+synonym: "stimulation of biological process" NARROW []
+synonym: "up regulation of biological process" EXACT []
+synonym: "up-regulation of biological process" EXACT []
+synonym: "upregulation of biological process" EXACT []
+is_a: GO:0050789 ! regulation of biological process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0008150 ! biological_process
+relationship: RO:0002213 GO:0008150 ! biological_process
+
+[Term]
+id: GO:0048522
+name: positive regulation of cellular process
+def: "Any process that activates or increases the frequency, rate or extent of a cellular process, any of those that are carried out at the cellular level, but are not necessarily restricted to a single cell. For example, cell communication occurs among more than one cell, but occurs at the cellular level." [GOC:jid]
+synonym: "activation of cellular process" NARROW []
+synonym: "positive regulation of cellular physiological process" EXACT []
+synonym: "stimulation of cellular process" NARROW []
+synonym: "up regulation of cellular process" EXACT []
+synonym: "up-regulation of cellular process" EXACT []
+synonym: "upregulation of cellular process" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0050794 ! regulation of cellular process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0009987 ! cellular process
+relationship: RO:0002213 GO:0009987 ! cellular process
+
+[Term]
 id: GO:0048580
 name: regulation of post-embryonic development
 def: "Any process that modulates the frequency, rate or extent of post-embryonic development. Post-embryonic development is defined as the process whose specific outcome is the progression of the organism over time, from the completion of embryonic development to the mature structure." [GOC:jid]
@@ -1150,6 +1614,22 @@ is_a: GO:2000026 ! regulation of multicellular organismal development
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0009791 ! post-embryonic development
 relationship: RO:0002211 GO:0009791 ! post-embryonic development
+
+[Term]
+id: GO:0048582
+name: positive regulation of post-embryonic development
+def: "Any process that activates or increases the frequency, rate or extent of post-embryonic development. Post-embryonic development is defined as the process whose specific outcome is the progression of the organism over time, from the completion of embryonic development to the mature structure." [GOC:jid]
+synonym: "activation of post-embryonic development" NARROW []
+synonym: "stimulation of post-embryonic development" NARROW []
+synonym: "up regulation of post-embryonic development" EXACT []
+synonym: "up-regulation of post-embryonic development" EXACT []
+synonym: "upregulation of post-embryonic development" EXACT []
+is_a: GO:0048580 ! regulation of post-embryonic development
+is_a: GO:0051094 ! positive regulation of developmental process
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0009791 ! post-embryonic development
+relationship: RO:0002213 GO:0009791 ! post-embryonic development
 
 [Term]
 id: GO:0048583
@@ -1161,9 +1641,24 @@ intersection_of: RO:0002211 GO:0050896 ! response to stimulus
 relationship: RO:0002211 GO:0050896 ! response to stimulus
 
 [Term]
+id: GO:0048584
+name: positive regulation of response to stimulus
+def: "Any process that activates, maintains or increases the rate of a response to a stimulus. Response to stimulus is a change in state or activity of a cell or an organism (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus." [GOC:jid]
+synonym: "activation of response to stimulus" NARROW []
+synonym: "stimulation of response to stimulus" NARROW []
+synonym: "up regulation of response to stimulus" EXACT []
+synonym: "up-regulation of response to stimulus" EXACT []
+synonym: "upregulation of response to stimulus" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0048583 ! regulation of response to stimulus
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0050896 ! response to stimulus
+relationship: RO:0002213 GO:0050896 ! response to stimulus
+
+[Term]
 id: GO:0048608
 name: reproductive structure development
-def: "The reproductive developmental process whose specific outcome is the progression of structures that will be used in the process of creating new individuals from one or more parents, from their formation to the mature structures." [GOC:dph, GOC:isa_complete, GOC:jid]
+def: "The reproductive developmental process whose specific outcome is the progression of somatic structures that will be used in the process of creating new individuals from one or more parents, from their formation to the mature structures." [GOC:dph, GOC:isa_complete, GOC:jid]
 is_a: GO:0003006 ! developmental process involved in reproduction
 is_a: GO:0048856 ! anatomical structure development
 relationship: BFO:0000050 GO:0061458 ! reproductive system development
@@ -1256,6 +1751,36 @@ intersection_of: RO:0002211 GO:0006810 ! transport
 relationship: RO:0002211 GO:0006810 ! transport
 
 [Term]
+id: GO:0051050
+name: positive regulation of transport
+def: "Any process that activates or increases the frequency, rate or extent of the directed movement of substances (such as macromolecules, small molecules, ions) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
+synonym: "activation of transport" NARROW []
+synonym: "stimulation of transport" NARROW []
+synonym: "up regulation of transport" EXACT []
+synonym: "up-regulation of transport" EXACT []
+synonym: "upregulation of transport" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0051049 ! regulation of transport
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0006810 ! transport
+relationship: RO:0002213 GO:0006810 ! transport
+
+[Term]
+id: GO:0051094
+name: positive regulation of developmental process
+def: "Any process that activates or increases the rate or extent of development, the biological process whose specific outcome is the progression of an organism over time from an initial condition (e.g. a zygote, or a young adult) to a later condition (e.g. a multicellular animal or an aged adult)." [GOC:ai]
+synonym: "activation of developmental process" NARROW []
+synonym: "stimulation of developmental process" NARROW []
+synonym: "up regulation of developmental process" EXACT []
+synonym: "up-regulation of developmental process" EXACT []
+synonym: "upregulation of developmental process" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0050793 ! regulation of developmental process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0032502 ! developmental process
+relationship: RO:0002213 GO:0032502 ! developmental process
+
+[Term]
 id: GO:0051098
 name: regulation of binding
 def: "Any process that modulates the frequency, rate or extent of binding, the selective interaction of a molecule with one or more specific sites on another molecule." [GOC:ai]
@@ -1263,6 +1788,21 @@ is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0005488 ! binding
 relationship: RO:0002211 GO:0005488 ! binding
+
+[Term]
+id: GO:0051099
+name: positive regulation of binding
+def: "Any process that activates or increases the rate or extent of binding, the selective interaction of a molecule with one or more specific sites on another molecule." [GOC:ai]
+synonym: "activation of binding" NARROW []
+synonym: "stimulation of binding" NARROW []
+synonym: "up regulation of binding" EXACT []
+synonym: "up-regulation of binding" EXACT []
+synonym: "upregulation of binding" EXACT []
+is_a: GO:0044093 ! positive regulation of molecular function
+is_a: GO:0051098 ! regulation of binding
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0005488 ! binding
+relationship: RO:0002213 GO:0005488 ! binding
 
 [Term]
 id: GO:0051128
@@ -1276,6 +1816,23 @@ is_a: GO:0050794 ! regulation of cellular process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0016043 ! cellular component organization
 relationship: RO:0002211 GO:0016043 ! cellular component organization
+
+[Term]
+id: GO:0051130
+name: positive regulation of cellular component organization
+def: "Any process that activates or increases the frequency, rate or extent of a process involved in the formation, arrangement of constituent parts, or disassembly of cell structures, including the plasma membrane and any external encapsulating structures such as the cell wall and cell envelope." [GOC:ai]
+synonym: "activation of cell organization" NARROW []
+synonym: "positive regulation of cell organisation" EXACT []
+synonym: "positive regulation of cellular component organization and biogenesis" RELATED [GOC:mah]
+synonym: "stimulation of cell organization" NARROW []
+synonym: "up regulation of cell organization" EXACT []
+synonym: "up-regulation of cell organization" EXACT []
+synonym: "upregulation of cell organization" EXACT []
+is_a: GO:0048522 ! positive regulation of cellular process
+is_a: GO:0051128 ! regulation of cellular component organization
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0016043 ! cellular component organization
+relationship: RO:0002213 GO:0016043 ! cellular component organization
 
 [Term]
 id: GO:0051174
@@ -1318,6 +1875,21 @@ intersection_of: RO:0002211 GO:0032501 ! multicellular organismal process
 relationship: RO:0002211 GO:0032501 ! multicellular organismal process
 
 [Term]
+id: GO:0051240
+name: positive regulation of multicellular organismal process
+def: "Any process that activates or increases the frequency, rate or extent of an organismal process, any of the processes pertinent to the function of an organism above the cellular level; includes the integrated processes of tissues and organs." [GOC:ai]
+synonym: "activation of multicellular organismal process" NARROW []
+synonym: "stimulation of multicellular organismal process" NARROW []
+synonym: "up regulation of multicellular organismal process" EXACT []
+synonym: "up-regulation of multicellular organismal process" EXACT []
+synonym: "upregulation of multicellular organismal process" EXACT []
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0051239 ! regulation of multicellular organismal process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0032501 ! multicellular organismal process
+relationship: RO:0002213 GO:0032501 ! multicellular organismal process
+
+[Term]
 id: GO:0051321
 name: meiotic cell cycle
 def: "Progression through the phases of the meiotic cell cycle, in which canonically a cell replicates to produce four offspring with half the chromosomal content of the progenitor cell via two nuclear divisions." [GOC:ai]
@@ -1349,6 +1921,38 @@ intersection_of: RO:0002211 GO:0016740 ! transferase activity
 relationship: RO:0002211 GO:0016740 ! transferase activity
 
 [Term]
+id: GO:0051345
+name: positive regulation of hydrolase activity
+def: "Any process that activates or increases the frequency, rate or extent of hydrolase activity, the catalysis of the hydrolysis of various bonds." [GOC:ai]
+synonym: "activation of hydrolase activity" NARROW []
+synonym: "hydrolase activator" EXACT []
+synonym: "stimulation of hydrolase activity" NARROW []
+synonym: "up regulation of hydrolase activity" EXACT []
+synonym: "up-regulation of hydrolase activity" EXACT []
+synonym: "upregulation of hydrolase activity" EXACT []
+is_a: GO:0043085 ! positive regulation of catalytic activity
+is_a: GO:0051336 ! regulation of hydrolase activity
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0016787 ! hydrolase activity
+relationship: RO:0002213 GO:0016787 ! hydrolase activity
+
+[Term]
+id: GO:0051347
+name: positive regulation of transferase activity
+def: "Any process that activates or increases the frequency, rate or extent of transferase activity, the catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from a donor compound to an acceptor." [GOC:ai]
+synonym: "activation of transferase activity" NARROW []
+synonym: "stimulation of transferase activity" NARROW []
+synonym: "transferase activator" EXACT []
+synonym: "up regulation of transferase activity" EXACT []
+synonym: "up-regulation of transferase activity" EXACT []
+synonym: "upregulation of transferase activity" EXACT []
+is_a: GO:0043085 ! positive regulation of catalytic activity
+is_a: GO:0051338 ! regulation of transferase activity
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0016740 ! transferase activity
+relationship: RO:0002213 GO:0016740 ! transferase activity
+
+[Term]
 id: GO:0051445
 name: regulation of meiotic cell cycle
 def: "Any process that modulates the rate or extent of progression through the meiotic cell cycle." [GOC:ai, GOC:dph, GOC:tb]
@@ -1365,6 +1969,24 @@ intersection_of: RO:0002211 GO:0051321 ! meiotic cell cycle
 relationship: RO:0002211 GO:0051321 ! meiotic cell cycle
 
 [Term]
+id: GO:0051446
+name: positive regulation of meiotic cell cycle
+def: "Any process that activates or increases the frequency, rate or extent of progression through the meiotic cell cycle." [GOC:ai, GOC:dph, GOC:tb]
+synonym: "activation of progression through meiotic cell cycle" NARROW []
+synonym: "positive regulation of meiotic cell cycle progression" EXACT []
+synonym: "positive regulation of progression through meiotic cell cycle" EXACT [GOC:dph, GOC:tb]
+synonym: "stimulation of progression through meiotic cell cycle" NARROW []
+synonym: "up regulation of progression through meiotic cell cycle" EXACT []
+synonym: "up-regulation of progression through meiotic cell cycle" EXACT []
+synonym: "upregulation of progression through meiotic cell cycle" EXACT []
+is_a: GO:0045787 ! positive regulation of cell cycle
+is_a: GO:0051445 ! regulation of meiotic cell cycle
+is_a: GO:2000243 ! positive regulation of reproductive process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0051321 ! meiotic cell cycle
+relationship: RO:0002213 GO:0051321 ! meiotic cell cycle
+
+[Term]
 id: GO:0051716
 name: cellular response to stimulus
 def: "Any process that results in a change in state or activity of a cell (in terms of movement, secretion, enzyme production, gene expression, etc.) as a result of a stimulus. The process begins with detection of the stimulus by a cell and ends with a change in state or activity or the cell." [GOC:bf, GOC:jl]
@@ -1375,11 +1997,17 @@ is_a: GO:0050896 ! response to stimulus
 id: GO:0051726
 name: regulation of cell cycle
 def: "Any process that modulates the rate or extent of progression through the cell cycle." [GOC:ai, GOC:dph, GOC:tb]
+synonym: "arrest of mitotic cell cycle progression" NARROW [GOC:mah]
+synonym: "cell cycle arrest" NARROW []
 synonym: "cell cycle modulation" EXACT []
 synonym: "cell cycle regulation" EXACT []
 synonym: "cell cycle regulator" RELATED []
 synonym: "control of cell cycle progression" EXACT []
+synonym: "mitotic cell cycle arrest" NARROW []
 synonym: "modulation of cell cycle progression" EXACT []
+synonym: "negative regulation of cell cycle arrest" NARROW []
+synonym: "positive regulation of cell cycle arrest" NARROW []
+synonym: "regulation of cell cycle arrest" NARROW []
 synonym: "regulation of cell cycle progression" EXACT []
 synonym: "regulation of progression through cell cycle" EXACT []
 synonym: "tumor suppressor" RELATED []
@@ -1398,11 +2026,32 @@ intersection_of: RO:0002211 GO:0000280 ! nuclear division
 relationship: RO:0002211 GO:0000280 ! nuclear division
 
 [Term]
+id: GO:0051785
+name: positive regulation of nuclear division
+def: "Any process that activates or increases the frequency, rate or extent of nuclear division, the partitioning of the nucleus and its genetic information." [GOC:ai]
+synonym: "activation of nuclear division" NARROW []
+synonym: "stimulation of nuclear division" NARROW []
+synonym: "up regulation of nuclear division" EXACT []
+synonym: "up-regulation of nuclear division" EXACT []
+synonym: "upregulation of nuclear division" EXACT []
+is_a: GO:0010638 ! positive regulation of organelle organization
+is_a: GO:0051783 ! regulation of nuclear division
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0000280 ! nuclear division
+relationship: RO:0002213 GO:0000280 ! nuclear division
+
+[Term]
 id: GO:0052736
 name: beta-glucanase activity
 def: "Catalysis of the hydrolysis of linkages in beta-D-glucans; beta-glucans are polysaccharides of D-glucose monomers linked by beta-glycosidic bonds." [Wikipedia:Beta-glucan]
 synonym: "beta-D-glucanase activity" EXACT []
 is_a: GO:0004553 ! hydrolase activity, hydrolyzing O-glycosyl compounds
+
+[Term]
+id: GO:0060089
+name: molecular transducer activity
+def: "A compound molecular function in which an effector function is controlled by one or more regulatory components." [GOC:dos, GOC:pdt]
+is_a: GO:0003674 ! molecular_function
 
 [Term]
 id: GO:0061458
@@ -1474,6 +2123,16 @@ intersection_of: RO:0002211 GO:0006950 ! response to stress
 relationship: RO:0002211 GO:0006950 ! response to stress
 
 [Term]
+id: GO:0090068
+name: positive regulation of cell cycle process
+def: "Any process that increases the rate, frequency or extent of a cellular process that is involved in the progression of biochemical and morphological phases and events that occur in a cell during successive cell replication or nuclear replication events." [GOC:dph, GOC:tb]
+is_a: GO:0010564 ! regulation of cell cycle process
+is_a: GO:0045787 ! positive regulation of cell cycle
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0022402 ! cell cycle process
+relationship: RO:0002213 GO:0022402 ! cell cycle process
+
+[Term]
 id: GO:0090332
 name: stomatal closure
 def: "The process of closing of stomata, pores in the epidermis of leaves and stems bordered by two guard cells and serving in gas exchange." [GOC:tb]
@@ -1507,9 +2166,9 @@ relationship: BFO:0000050 GO:0005886 ! plasma membrane
 [Term]
 id: GO:0098772
 name: molecular function regulator
-def: "A molecular function that modulates the activity of a gene product or complex.  Examples include enzyme regulators and channel regulators." [GOC:dos, GOC:pt]
+def: "A molecular function regulator regulates the activity of its target via non-covalent binding that does not result in covalent modification to the target. Examples of molecular function regulators include regulatory subunits of multimeric enzymes and channels. Mechanisms of regulation include allosteric changes in the target and competitive inhibition." [GOC:dos, GOC:pt]
 is_a: GO:0003674 ! molecular_function
-relationship: BFO:0000050 GO:0065009 ! regulation of molecular function
+relationship: BFO:0000051 GO:0005515 ! protein binding
 
 [Term]
 id: GO:0099402
@@ -1584,6 +2243,20 @@ intersection_of: RO:0002211 GO:0010150 ! leaf senescence
 relationship: RO:0002211 GO:0010150 ! leaf senescence
 
 [Term]
+id: GO:1900057
+name: positive regulation of leaf senescence
+def: "Any process that activates or increases the frequency, rate or extent of leaf senescence." [GOC:TermGenie]
+synonym: "activation of leaf senescence" RELATED [GOC:TermGenie]
+synonym: "up regulation of leaf senescence" RELATED [GOC:TermGenie]
+synonym: "up-regulation of leaf senescence" RELATED [GOC:TermGenie]
+synonym: "upregulation of leaf senescence" RELATED [GOC:TermGenie]
+is_a: GO:0051094 ! positive regulation of developmental process
+is_a: GO:1900055 ! regulation of leaf senescence
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0010150 ! leaf senescence
+relationship: RO:0002213 GO:0010150 ! leaf senescence
+
+[Term]
 id: GO:1900120
 name: regulation of receptor binding
 def: "Any process that modulates the frequency, rate or extent of a protein or other molecule binding to a receptor." [GOC:signaling, GOC:TermGenie]
@@ -1592,6 +2265,19 @@ is_a: GO:0043393 ! regulation of protein binding
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0005102 ! signaling receptor binding
 relationship: RO:0002211 GO:0005102 ! signaling receptor binding
+
+[Term]
+id: GO:1900122
+name: positive regulation of receptor binding
+def: "Any process that activates or increases the frequency, rate or extent of a protein or other molecule binding to a receptor." [GOC:signaling, GOC:TermGenie]
+synonym: "activation of receptor binding" NARROW [GOC:TermGenie]
+synonym: "up regulation of receptor binding" EXACT [GOC:TermGenie]
+synonym: "upregulation of receptor binding" EXACT [GOC:TermGenie]
+is_a: GO:0032092 ! positive regulation of protein binding
+is_a: GO:1900120 ! regulation of receptor binding
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0005102 ! signaling receptor binding
+relationship: RO:0002213 GO:0005102 ! signaling receptor binding
 
 [Term]
 id: GO:1900376
@@ -1603,6 +2289,25 @@ is_a: GO:0043455 ! regulation of secondary metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0044550 ! secondary metabolite biosynthetic process
 relationship: RO:0002211 GO:0044550 ! secondary metabolite biosynthetic process
+
+[Term]
+id: GO:1900378
+name: positive regulation of secondary metabolite biosynthetic process
+def: "Any process that activates or increases the frequency, rate or extent of secondary metabolite biosynthetic process." [GOC:di, GOC:TermGenie]
+synonym: "activation of secondary metabolite biosynthesis" EXACT [GOC:TermGenie]
+synonym: "activation of secondary metabolite biosynthetic process" NARROW [GOC:TermGenie]
+synonym: "positive regulation of secondary metabolite biosynthesis" EXACT [GOC:TermGenie]
+synonym: "up regulation of secondary metabolite biosynthesis" EXACT [GOC:TermGenie]
+synonym: "up regulation of secondary metabolite biosynthetic process" EXACT [GOC:TermGenie]
+synonym: "up-regulation of secondary metabolite biosynthesis" EXACT [GOC:TermGenie]
+synonym: "up-regulation of secondary metabolite biosynthetic process" EXACT [GOC:TermGenie]
+synonym: "upregulation of secondary metabolite biosynthesis" EXACT [GOC:TermGenie]
+synonym: "upregulation of secondary metabolite biosynthetic process" EXACT [GOC:TermGenie]
+is_a: GO:0009891 ! positive regulation of biosynthetic process
+is_a: GO:1900376 ! regulation of secondary metabolite biosynthetic process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0044550 ! secondary metabolite biosynthetic process
+relationship: RO:0002213 GO:0044550 ! secondary metabolite biosynthetic process
 
 [Term]
 id: GO:1901141
@@ -1674,6 +2379,35 @@ intersection_of: BFO:0000050 GO:0000278 ! mitotic cell cycle
 relationship: BFO:0000050 GO:0000278 ! mitotic cell cycle
 
 [Term]
+id: GO:1903942
+name: positive regulation of respiratory gaseous exchange
+def: "Any process that activates or increases the frequency, rate or extent of respiratory gaseous exchange." [GO_REF:0000058, GOC:TermGenie, PMID:22819705]
+synonym: "activation of respiratory gaseous exchange" NARROW [GOC:TermGenie]
+synonym: "up regulation of respiratory gaseous exchange" EXACT [GOC:TermGenie]
+synonym: "up-regulation of respiratory gaseous exchange" EXACT [GOC:TermGenie]
+synonym: "upregulation of respiratory gaseous exchange" EXACT [GOC:TermGenie]
+is_a: GO:0043576 ! regulation of respiratory gaseous exchange
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0007585 ! respiratory gaseous exchange by respiratory system
+relationship: RO:0002213 GO:0007585 ! respiratory gaseous exchange by respiratory system
+
+[Term]
+id: GO:1905623
+name: positive regulation of leaf development
+def: "Any process that activates or increases the frequency, rate or extent of leaf development." [GO_REF:0000058, GOC:TermGenie, PMID:11606552]
+synonym: "activation of leaf development" NARROW [GOC:TermGenie]
+synonym: "up regulation of leaf development" EXACT [GOC:TermGenie]
+synonym: "up-regulation of leaf development" EXACT [GOC:TermGenie]
+synonym: "upregulation of leaf development" EXACT [GOC:TermGenie]
+is_a: GO:0051094 ! positive regulation of developmental process
+is_a: GO:0051240 ! positive regulation of multicellular organismal process
+is_a: GO:2000024 ! regulation of leaf development
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0048366 ! leaf development
+relationship: RO:0002213 GO:0048366 ! leaf development
+
+[Term]
 id: GO:2000024
 name: regulation of leaf development
 def: "Any process that modulates the frequency, rate or extent of leaf development." [GOC:obol]
@@ -1700,6 +2434,27 @@ is_a: GO:0050789 ! regulation of biological process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0022414 ! reproductive process
 relationship: RO:0002211 GO:0022414 ! reproductive process
+
+[Term]
+id: GO:2000243
+name: positive regulation of reproductive process
+def: "Any process that activates or increases the frequency, rate or extent of reproductive process." [GOC:mah]
+is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:2000241 ! regulation of reproductive process
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0022414 ! reproductive process
+relationship: RO:0002213 GO:0022414 ! reproductive process
+
+[Term]
+id: GO:2000273
+name: positive regulation of signaling receptor activity
+def: "Any process that activates or increases the frequency, rate or extent of signaling receptor activity." [GOC:obol]
+synonym: "positive regulation of signalling receptor activity" EXACT []
+is_a: GO:0010469 ! regulation of signaling receptor activity
+is_a: GO:0044093 ! positive regulation of molecular function
+intersection_of: GO:0065007 ! biological regulation
+intersection_of: RO:0002213 GO:0038023 ! signaling receptor activity
+relationship: RO:0002213 GO:0038023 ! signaling receptor activity
 
 [Term]
 id: GO:2000280
@@ -1733,4 +2488,8 @@ is_transitive: true
 [Typedef]
 id: RO:0002211
 is_transitive: true
+
+[Typedef]
+id: RO:0002213
+is_a: RO:0002211
 

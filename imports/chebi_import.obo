@@ -593,7 +593,7 @@ is_a: CHEBI:33839 ! macromolecule
 [Term]
 id: CHEBI:15864
 name: luteolin
-def: "A tetrahydroxyflavone in which the four hydroxy groups are located at positions 3', 4' 5 and 7. It is thought to play an important role in the human body as an antioxidant, a free radical scavenger, an inflammatory agent and an immune system modulator as well as being active against several cancers." []
+def: "A tetrahydroxyflavone in which the four hydroxy groups are located at positions 3', 4', 5 and 7. It is thought to play an important role in the human body as an antioxidant, a free radical scavenger, an anti-inflammatory agent and an immune system modulator as well as being active against several cancers." []
 synonym: "2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-4-benzopyrone" RELATED [ChemIDplus]
 synonym: "2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-4H-1-benzopyran-4-one" RELATED [ChemIDplus]
 synonym: "2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-4H-chromen-4-one" EXACT IUPAC_NAME [IUPAC]
@@ -607,9 +607,10 @@ synonym: "Salifazide" RELATED [ChemIDplus]
 is_a: CHEBI:27741 ! 3'-hydroxyflavonoid
 is_a: CHEBI:38684 ! tetrahydroxyflavone
 relationship: is_conjugate_acid_of CHEBI:57545 ! 2-(3,4-dihydroxyphenyl)-5-hydroxy-4-oxo-4H-chromen-7-olate luteolin-7-olate(1-)
-relationship: RO:0000087 CHEBI:22586 ! antioxidant
 relationship: RO:0000087 CHEBI:35610 ! antineoplastic agent
 relationship: RO:0000087 CHEBI:48422 ! angiogenesis inhibitor
+relationship: RO:0000087 CHEBI:48578 ! radical scavenger
+relationship: RO:0000087 CHEBI:50846 ! immunomodulator
 relationship: RO:0000087 CHEBI:65207 ! vascular endothelial growth factor receptor antagonist
 relationship: RO:0000087 CHEBI:67079 ! anti-inflammatory agent
 relationship: RO:0000087 CHEBI:68495 ! apoptosis inducer
@@ -923,6 +924,14 @@ is_a: CHEBI:33917 ! aldohexose
 relationship: RO:0000087 CHEBI:78675 ! fundamental metabolite
 
 [Term]
+id: CHEBI:173084
+name: ferroptosis inhibitor
+def: "Any substance that inhibits the process of ferroptosis (a type of programmed cell death dependent on iron and characterized by the accumulation of lipid peroxides) in organisms." []
+synonym: "ferroptosis inhibitors" RELATED [ChEBI]
+is_a: CHEBI:35222 ! inhibitor
+is_a: CHEBI:52206 ! biochemical role
+
+[Term]
 id: CHEBI:17351
 name: linoleic acid
 def: "An octadecadienoic acid in which the two double bonds are at positions 9 and 12 and have Z (cis) stereochemistry." []
@@ -995,6 +1004,7 @@ synonym: "beta-Carotene" EXACT [KEGG_COMPOUND]
 synonym: "beta-Karotin" RELATED [ChEBI]
 is_a: CHEBI:139120 ! carotenoid beta-end group
 is_a: CHEBI:35163 ! cyclic carotene
+relationship: RO:0000087 CHEBI:173084 ! ferroptosis inhibitor
 relationship: RO:0000087 CHEBI:22586 ! antioxidant
 relationship: RO:0000087 CHEBI:23357 ! cofactor
 relationship: RO:0000087 CHEBI:26130 ! biological pigment
@@ -6952,6 +6962,14 @@ synonym: "anti-angiogenic agent" RELATED [ChEBI]
 is_a: CHEBI:23888 ! drug
 
 [Term]
+id: CHEBI:48578
+name: radical scavenger
+def: "A role played by a substance that can react readily with, and thereby eliminate, radicals." []
+synonym: "free radical scavengers" RELATED [ChEBI]
+synonym: "free-radical scavenger" RELATED [ChEBI]
+is_a: CHEBI:22586 ! antioxidant
+
+[Term]
 id: CHEBI:48705
 name: agonist
 def: "Substance which binds to cell receptors normally responding to naturally occurring substances and which produces a response of its own." []
@@ -7151,6 +7169,18 @@ synonym: "Dietary Supplement" RELATED [ChEBI]
 synonym: "Food Supplementation" RELATED [ChEBI]
 synonym: "Nutritional supplement" RELATED [ChEBI]
 is_a: CHEBI:23888 ! drug
+
+[Term]
+id: CHEBI:50846
+name: immunomodulator
+def: "Biologically active substance whose activity affects or plays a role in the functioning of the immune system." []
+synonym: "Biomodulator" RELATED [ChEBI]
+synonym: "Immune factor" RELATED [ChEBI]
+synonym: "Immunologic factor" RELATED [ChEBI]
+synonym: "Immunological factor" RELATED [ChEBI]
+synonym: "immunomodulators" RELATED [ChEBI]
+is_a: CHEBI:23888 ! drug
+is_a: CHEBI:24432 ! biological role
 
 [Term]
 id: CHEBI:50860
@@ -7537,6 +7567,7 @@ id: CHEBI:59139
 name: gibberellin carboxylic acid anion
 def: "A carboxylic acid anion arising from deprotonation of one or more carboxy groups of any gibberellin." []
 synonym: "gibberellin monocarboxylic acid anions" RELATED [ChEBI]
+is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:29067 ! carboxylic acid anion
 relationship: is_conjugate_base_of CHEBI:24250 ! gibberellin
 
@@ -7800,6 +7831,7 @@ name: hepatoprotective agent
 def: "Any compound that is able to prevent damage to the liver." []
 synonym: "antihepatotoxic agent" RELATED [ChEBI]
 synonym: "hepatoprotective agents" RELATED [ChEBI]
+synonym: "hepatoprotector" RELATED [ChEBI]
 is_a: CHEBI:50267 ! protective agent
 
 [Term]

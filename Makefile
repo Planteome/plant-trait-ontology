@@ -1,12 +1,14 @@
 OBO=http://purl.obolibrary.org/obo
 ONT=to
 BASE=$(OBO)/$(ONT)
-#SRC=plant-trait-ontology.obo.owl
+#SRC=plant-trait-ontology.owl
 SRC=plant-trait-ontology.obo
 RELEASEDIR=.
 ROBOT= robot
 OWLTOOLS= owltools
 DOSDP = dosdp-tools
+ROBOT_ENV = ROBOT_JAVA_ARGS=-Xmx8G
+ROBOT = $(ROBOT_ENV) robot --catalog catalog-v001.xml
 
 
 all: all_imports $(ONT).owl $(ONT).obo subsets/$(ONT)-basic.obo
@@ -17,6 +19,8 @@ $(ONT).owl: $(SRC)
 	$(ROBOT)  reason -e none -i $< -r ELK relax reduce -r ELK annotate -V $(BASE)/releases/`date +%Y-%m-%d`/$(ONT).owl -o $@
 $(ONT).obo: $(ONT).owl
 	$(ROBOT) convert -i $< -f obo --check false -o $(ONT).obo.tmp && grep -v '^owl-axioms:' $(ONT).obo.tmp > $@ && rm $(ONT).obo.tmp
+#$(ONT).owl: $(ONT).json
+#	$(ROBOT) convert --check false -f json -o $(ONT).json
 
 subsets/$(ONT)-basic.obo: $(ONT).owl
 	owltools --use-catalog $< --remove-imports-declarations --make-subset-by-properties -f BFO:0000050 --remove-dangling --remove-axioms -t EquivalentClasses --set-ontology-id $(OBO)/subsets/$(ONT)-basic.owl -o -f obo $@.tmp && mv $@.tmp $@
