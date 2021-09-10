@@ -50,10 +50,14 @@ committed and pushed, and the travis build passes.
 
 to release, change into this directory, and type
 
-    make all
+    ./run.sh make all
 
 This generates derived files such as to.owl and to.obo. The versionIRI
 will be added.
+
+To create to.json use robot in a different terminal. Be sure you are in robot/bin directory
+
+    ./robot convert --input ~/plant-trait-ontology/to.owl --format json --output ~/plant-trait-ontology/to.json
 
 Commit and push these files to the repository
 
