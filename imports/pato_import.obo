@@ -131,7 +131,7 @@ synonym: "presence" RELATED []
 synonym: "presence or absence in organism" EXACT []
 synonym: "quantitative" EXACT []
 is_a: PATO:0000068 ! qualitative
-relationship: reciprocal_of PATO:0001555 ! has number of
+relationship: RO:0015012 PATO:0001555 ! has number of
 
 [Term]
 id: PATO:0000085
@@ -167,7 +167,7 @@ is_a: PATO:0001018 ! physical quality
 [Term]
 id: PATO:0000128
 name: weight
-def: "A physical quality inhering in a bearer that has mass near a gravitational body." [Wikipedia:http\://en.wikipedia.org/wiki/Weight]
+def: "A physical quality inhering in a bearer that has mass near a gravitational body. Important usage note: Note that this ontology has a class for a similar concept, mass (PATO:0000125). Mass and weight are not equivalent. For most use cases, the class mass is strongly preferred over weight." [https://en.wikipedia.org/wiki/Mass#Weight_vs._mass, Wikipedia:http\://en.wikipedia.org/wiki/Weight]
 is_a: PATO:0001035 ! force
 
 [Term]
@@ -309,8 +309,8 @@ def: "A quality denoting the lack of an entity." [thefreedictionary.:thefreedict
 synonym: "absence" EXACT []
 synonym: "absent from organism" EXACT []
 is_a: PATO:0000070 ! amount
-relationship: reciprocal_of PATO:0001558 ! lacking processual parts
-relationship: reciprocal_of PATO:0002000 ! lacks all parts of type
+relationship: RO:0015012 PATO:0001558 ! lacking processual parts
+relationship: RO:0015012 PATO:0002000 ! lacks all parts of type
 
 [Term]
 id: PATO:0000515
@@ -573,7 +573,7 @@ def: "A spheroid quality inhering in a bearer by virtue of the bearer's resembli
 synonym: "globular" EXACT []
 synonym: "rotund" RELATED []
 is_a: PATO:0001865 ! spheroid
-relationship: has_cross_section PATO:0000411 ! circular
+relationship: RO:0015011 PATO:0000411 ! circular
 
 [Term]
 id: PATO:0001533
@@ -619,14 +619,14 @@ synonym: "mereological quality" EXACT []
 synonym: "number" RELATED []
 synonym: "number of" EXACT []
 is_a: PATO:0001241 ! physical object quality
-relationship: reciprocal_of PATO:0000070 ! amount
+relationship: RO:0015012 PATO:0000070 ! amount
 
 [Term]
 id: PATO:0001558
 name: lacking processual parts
 def: "A quality of a process inhering in a bearer by virtue of the bearer's lacking a processual part as specified by the additional entity." [PATOC:GVG]
 is_a: PATO:0001564 ! extra or missing processual parts
-relationship: reciprocal_of PATO:0000462 ! absent
+relationship: RO:0015012 PATO:0000462 ! absent
 
 [Term]
 id: PATO:0001564
@@ -637,8 +637,16 @@ is_a: PATO:0001236 ! process quality
 [Term]
 id: PATO:0001595
 name: depth
-def: "A 1-D extent quality inhering in a bearer by virtue of the bearer's downward or backward or inward dimenision." [WordNet:WordNet]
+def: "A 1-D extent quality inhering in a bearer by virtue of the bearer's downward or backward or inward dimension." [WordNet:WordNet]
 is_a: PATO:0001708 ! 1-D extent
+
+[Term]
+id: PATO:0001596
+name: increased depth
+def: "A depth quality which is relatively high." [PATO:GVG]
+synonym: "deep" EXACT []
+is_a: PATO:0000586 ! increased size
+is_a: PATO:0001595 ! depth
 
 [Term]
 id: PATO:0001648
@@ -704,6 +712,13 @@ def: "A quality inhering in a bearer by virtue of whether the bearer's being cov
 is_a: PATO:0001018 ! physical quality
 
 [Term]
+id: PATO:0001823
+name: wet
+def: "A wetness quality inhering in a bearer by virtue of the bearer's being covered by a liquid." [PATOC:GVG]
+is_a: PATO:0001822 ! wetness
+disjoint_from: PATO:0001824 ! dry
+
+[Term]
 id: PATO:0001824
 name: dry
 def: "A wetness quality inhering in a bearer by virtue of the bearer's not being covered by a liquid." [PATOC:GVG]
@@ -763,7 +778,7 @@ name: lacks all parts of type
 def: "A quality of physical entities inhering in a bearer by virtue of the bearer's lacking a physical part as specified by the additional entity." [PATOC:CJM]
 synonym: "lacks all physical parts of type" EXACT []
 is_a: PATO:0001999 ! lacks parts or has fewer parts of type
-relationship: reciprocal_of PATO:0000462 ! absent
+relationship: RO:0015012 PATO:0000462 ! absent
 
 [Term]
 id: PATO:0002002
@@ -796,7 +811,7 @@ id: PATO:0002007
 name: convex 3-D shape
 def: "A complete three dimensional shape in which for every line connecting pair of points on the object is within the object. Or: a shape lacking cavities. Contrast: concave." [PATOC:CJM]
 is_a: PATO:0002266 ! 3-D shape
-relationship: has_cross_section PATO:0002006 ! 2-D shape
+relationship: RO:0015011 PATO:0002006 ! 2-D shape
 
 [Term]
 id: PATO:0002008
@@ -826,6 +841,7 @@ is_a: PATO:0001236 ! process quality
 id: PATO:0002083
 name: altered number of
 def: "Having extra or fewer parts." [PATOC:GVG]
+is_a: PATO:0000051 ! morphology
 is_a: PATO:0001555 ! has number of
 
 [Term]
@@ -865,14 +881,14 @@ id: PATO:0002300
 name: increased quality
 def: "A quality that has a value that is increased compared to normal or average." [PATOC:GVG]
 is_a: PATO:0000069 ! deviation (from_normal)
-relationship: increased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: RO:0015007 PATO:0000461 ! normal
 
 [Term]
 id: PATO:0002301
 name: decreased quality
 def: "A quality that has a value that is decreased compared to normal or average." [PATOC:GVG]
 is_a: PATO:0000069 ! deviation (from_normal)
-relationship: decreased_in_magnitude_relative_to PATO:0000461 ! normal
+relationship: RO:0015008 PATO:0000461 ! normal
 
 [Term]
 id: PATO:0002303
@@ -902,6 +918,12 @@ def: "An orientation inhering in a bearer by virtue of the bearer's placement at
 is_a: PATO:0000133 ! orientation
 
 [Term]
+id: PATO:0002349
+name: basal to
+def: "A spatial quality inhering in a bearer by virtue of the bearer's being located toward the base of an organism relative to another entity." [merriam-webster:http\://www.merriam-webster.com/dictionary/basal]
+is_a: PATO:0000140 ! position
+
+[Term]
 id: PATO:0002381
 name: waxiness
 def: "A composition quality inhering in an bearer by virtue of the presence of long chain aliphatic lipids on the surface of an organism." [PATOC:lm]
@@ -923,21 +945,12 @@ id: BFO:0000051
 is_transitive: true
 
 [Typedef]
-id: decreased_in_magnitude_relative_to
-domain: PATO:0000001 ! quality
-range: PATO:0000001 ! quality
-is_transitive: true
-is_a: different_in_magnitude_relative_to
-
-[Typedef]
-id: different_in_magnitude_relative_to
+id: RO:0015007
 domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
 
 [Typedef]
-id: increased_in_magnitude_relative_to
+id: RO:0015008
 domain: PATO:0000001 ! quality
 range: PATO:0000001 ! quality
-is_transitive: true
-is_a: different_in_magnitude_relative_to
 

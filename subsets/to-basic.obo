@@ -10,6 +10,9 @@ subsetdef: Triticum_aestivum "Terms_used_for_wheat"
 subsetdef: Zea_mays "Terms_used_for_maize_or_corn"
 default-namespace: plant_trait_ontology
 ontology: subsets/to-basic
+property_value: http://purl.org/dc/terms/description "An ontology that describes phenotypic traits in plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature plant." xsd:string
+property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
+property_value: http://purl.org/dc/terms/title "Plant Trait Ontology" xsd:string
 
 [Term]
 id: TO:0000001
@@ -21,7 +24,7 @@ is_a: TO:0000252 ! non-mineral nutrient sensitivity
 
 [Term]
 id: TO:0000002
-name: epigenetic trait
+name: OBSOLETE epigenetic trait
 def: "OBSOLETE. An epigenetic trait is a distinguishable feature or a characteristic or a quality of character or a phenotypic feature of a developing or developed individual but have arisen as a result of mechanisms regulating the expression of the genes rather than differences in the gene sequence." [Gramene:pankaj_jaiswal, ISBN:0198506732]
 is_obsolete: true
 
@@ -276,7 +279,7 @@ is_a: TO:0000035 ! incompatibility trait
 
 [Term]
 id: TO:0000037
-name: male sterility extent
+name: OBSOLETE male sterility extent
 def: "OBSOLETE. Determines the extent of male sterility of a male sterile line. Can be determined by either pollen sterility or spikelet fertility" [Gramene:pankaj_jaiswal, IRRI:SES]
 synonym: "degree of male sterility of male sterile lines (related)" RELATED []
 synonym: "male sterility measure (related)" RELATED []
@@ -289,7 +292,7 @@ is_a: TO:0000247 ! other nutrient sensitivity
 
 [Term]
 id: TO:0000039
-name: yield component
+name: OBSOLETE yield component
 def: "OBSOLETE. Defines the components that determine the over all yield from a plant" [Gramene:pankaj_jaiswal]
 is_obsolete: true
 
@@ -300,6 +303,7 @@ def: "A panicle morphology trait (TO:0000847) which is the measurement in centim
 comment: Evaluated at growth stage:8 in rice.
 synonym: "PnL (related)" RELATED []
 synonym: "PNLG (related)" RELATED []
+is_a: TO:0000271 ! inflorescence length
 is_a: TO:0006032 ! panicle inflorescence size
 
 [Term]
@@ -496,7 +500,7 @@ is_a: TO:0000043 ! root morphology trait
 
 [Term]
 id: TO:0000066
-name: spot disease
+name: OBSOLETE spot disease
 def: "OBSOLETE." []
 is_obsolete: true
 
@@ -579,7 +583,7 @@ is_a: TO:0000161 ! radiation response trait
 
 [Term]
 id: TO:0000076
-name: inflorescence feature
+name: OBSOLETE inflorescence feature
 def: "OBSOLETE. The instances define various distinguishing trait features associated with inflorescence and its instances." [Gramene:pankaj_jaiswal]
 is_obsolete: true
 
@@ -712,7 +716,7 @@ is_a: TO:0000306 ! root thickness
 
 [Term]
 id: TO:0000091
-name: leafhopper
+name: OBSOLETE leafhopper
 def: "OBSOLETE." []
 is_obsolete: true
 
@@ -1050,11 +1054,12 @@ name: basal internode diameter
 def: "Actual measurements in millimeters from the outer diameter of the stem at the basal portion of the main stem." [IRRI:SES]
 synonym: "BAINDIA (related)" RELATED []
 synonym: "DBI (related)" RELATED []
-is_a: TO:0000361 ! stem morphology trait
+is_a: TO:0000756 ! stem internode morphology trait
+is_a: TO:0020083 ! stem diameter
 
 [Term]
 id: TO:0000133
-name: stature or vigor trait
+name: OBSOLETE stature or vigor trait
 def: "OBSOLETE: A subjective assessment of the plant in similar site and growing conditions (often unfavorable conditions) based upon a specific facet of growth." [Gramene:pankaj_jaiswal]
 is_obsolete: true
 created_by: jaiswalp
@@ -1385,7 +1390,7 @@ is_a: TO:0000114 ! flooding related trait
 
 [Term]
 id: TO:0000171
-name: height trait
+name: OBSOLETE height trait
 def: "OBSOLETE. A stature and vigor trait (TO:0000133) which is the height of a whole plant (PO:0000003) or another plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
 comment: Refers to: height (PATO_0000119): A 1-D extent quality inhering in a bearer by virtue of the bearer's vertical dimension of extension.
 xref: TO_GIT:226
@@ -1408,14 +1413,14 @@ is_a: TO:0000401 ! plant growth hormone sensitivity
 
 [Term]
 id: TO:0000174
-name: maturity trait
+name: OBSOLETE maturity trait
 def: "OBSOLETE." []
 is_obsolete: true
 
 [Term]
 id: TO:0000175
 name: rice bacterial blight disease resistance
-def: "Causal agent: Xanthomonas oryzae pv. oryzae." [Gramene:pankaj_jaiswal, IRRI:SES]
+def: "A bacterial blight disease resistance (TO:0000770) that is involved in the response to rice bacterial blight disease. Causal agent: Xanthomonas oryzae pv. oryzae." [Gramene:pankaj_jaiswal, IRRI:SES]
 comment: Symptoms: lesions usually start near the leaf tips or leaf margins or both, and extend down the outer edge(s). Young lesions are pale to grayish green, later turning yellow to grey (dead) with time. In very susceptible varieties, lesions may extend to the entire leaf length into the leaf sheath. Young leaves should not be inoculated for assay. Old or leaves with symptoms of nutrient deficiency or other diseases should also be avoided for inoculation.
 synonym: "BB (related)" RELATED []
 synonym: "BBRS (related)" RELATED []
@@ -1501,7 +1506,7 @@ is_a: TO:0006012 ! carpel morphology trait
 
 [Term]
 id: TO:0000186
-name: environmental stress related trait
+name: OBSOLETE environmental stress related trait
 def: "OBSOLETE." []
 is_obsolete: true
 
@@ -1652,7 +1657,7 @@ is_a: TO:0000315 ! bacterial disease resistance
 [Term]
 id: TO:0000204
 name: rice seedling blight disease resistance
-def: "Causal agent: Xanthomonas oryzae pv. oryzae." [Gramene:pankaj_jaiswal, IRRI:SES]
+def: "A rice bacterial blight disease resistance (TO:0000175) that is involved in the response to rice bacterial blight disease, on a seedling. Causal agent: Xanthomonas oryzae pv. oryzae. Causal agent: Xanthomonas oryzae pv. oryzae." [Gramene:pankaj_jaiswal, IRRI:SES]
 comment: Symptoms: lesions usually start near the leaf tips or leaf margins or both, and extend down the outer edge(s). Young lesions are pale to grayish green, later turning yellow to grey (dead) with time. In very susceptible varieties, lesions may extend to the entire leaf length into the leaf sheath. Kresek or seedling blight causes wilting and death of plant.
 synonym: "kresek (related)" RELATED []
 synonym: "leaf blight (related)" RELATED []
@@ -1764,7 +1769,7 @@ is_a: TO:0000868 ! microsporophyll morphology trait
 
 [Term]
 id: TO:0000216
-name: grassy stunt virus disease
+name: OBSOLETE grassy stunt virus disease
 def: "OBSOLETE." []
 is_obsolete: true
 
@@ -1786,7 +1791,7 @@ is_a: TO:0000437 ! male sterility
 
 [Term]
 id: TO:0000219
-name: stem morphology
+name: OBSOLETE stem morphology
 def: "OBSOLETE." []
 synonym: "culm morphology (related)" RELATED []
 is_obsolete: true
@@ -1957,7 +1962,7 @@ is_a: TO:0000482 ! chemical stress sensitivity
 
 [Term]
 id: TO:0000239
-name: plant genetic trait unknown
+name: OBSOLETE plant genetic trait unknown
 def: "OBSOLETE." []
 is_obsolete: true
 
@@ -2084,7 +2089,7 @@ is_a: TO:0000664 ! fungal blight disease resistance
 
 [Term]
 id: TO:0000256
-name: genetic trait
+name: OBSOLETE genetic trait
 def: "OBSOLETE. A genetic trait is a distinguishable feature or a characteristic or a quality of character or a phenotypic feature of a developing or developed individual that is linked to a physical or genetic marker" [Gramene:pankaj_jaiswal]
 is_obsolete: true
 
@@ -2218,12 +2223,12 @@ is_a: TO:0000782 ! inflorescence axis morphology trait
 id: TO:0000271
 name: inflorescence length
 def: "An inflorescence morphology trait (TO:0000373) trait which is the length of an inflorescence (PO:0009049)." [TO:cooperl]
-is_a: TO:0000373 ! inflorescence morphology trait
+is_a: TO:0006031 ! inflorescence size
 relationship: part_of TO:0006031 ! inflorescence size
 
 [Term]
 id: TO:0000272
-name: plant survivability
+name: OBSOLETE plant survivability
 def: "OBSOLETE." []
 is_obsolete: true
 
@@ -2303,7 +2308,7 @@ is_a: TO:0000277 ! biochemical trait
 
 [Term]
 id: TO:0000282
-name: enzymatic activity and protein content related trait
+name: OBSOLETE enzymatic activity and protein content related trait
 def: "OBSOLETE: The trait associated with an assay to determine the effected enzymatic activity and protein content." [Gramene:pankaj_jaiswal]
 is_obsolete: true
 
@@ -2495,7 +2500,7 @@ is_a: TO:0000496 ! carotenoid content
 
 [Term]
 id: TO:0000302
-name: smut disease
+name: OBSOLETE smut disease
 def: "OBSOLETE." []
 is_obsolete: true
 
@@ -2770,7 +2775,7 @@ is_a: TO:0000291 ! carbohydrate content
 
 [Term]
 id: TO:0000334
-name: hybrid evaluation
+name: OBSOLETE hybrid evaluation
 def: "OBSOLETE." []
 synonym: "parental line evaluation (related)" RELATED []
 is_obsolete: true
@@ -2835,7 +2840,7 @@ is_a: TO:0000333 ! sugar content
 
 [Term]
 id: TO:0000341
-name: plant genetic trait
+name: OBSOLETE plant genetic trait
 alt_id: TO:0000005
 def: "OBSOLETE. A plant genetic trait is a distinguishable feature or a characteristic or a quality of character or a phenotypic feature of a developing or developed plant species which is genetically linked to a physical or genetic marker" [Gramene:pankaj_jaiswal]
 synonym: "obsolete trait term (related)" RELATED []
@@ -2921,6 +2926,7 @@ synonym: "PTDWT (related)" RELATED []
 synonym: "RTWT (related)" RELATED []
 synonym: "total dry mass (related)" RELATED []
 is_a: TO:0000371 ! yield trait
+is_a: TO:0000398 ! whole plant morphology trait
 
 [Term]
 id: TO:0000353
@@ -3002,7 +3008,7 @@ is_a: TO:0000739 ! shoot axis morphology trait
 
 [Term]
 id: TO:0000362
-name: rot disease
+name: OBSOLETE rot disease
 def: "OBSOLETE." []
 is_obsolete: true
 
@@ -3115,7 +3121,7 @@ synonym: "BRWRRO (related)" RELATED []
 xref: PATO:0000117
 xref: PATO:0000122
 xref: PATO:0000921
-is_a: TO:0002731 ! grain length to width ratio
+is_a: TO:0002731 ! dehulled grain length to width ratio
 
 [Term]
 id: TO:0000376
@@ -3146,7 +3152,7 @@ is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000380
-name: planthopper
+name: OBSOLETE planthopper
 def: "OBSOLETE." []
 is_obsolete: true
 
@@ -3247,12 +3253,12 @@ is_a: TO:0000184 ! seed morphology trait
 [Term]
 id: TO:0000392
 name: sterility or fertility trait
-def: " A plant trait (TO:0000387) which is a measure of either the fertility or sterility, contributed by nonfunctional male and or female plant parts or their incompatible interaction. This also includes traits on seed setting behavior in the fruit (caryopsis) of a grass plant that can be assayed in terms of spikelet sterility or fertility." [Gramene:pankaj_jaiswal]
+def: "A plant trait (TO:0000387) which is a measure of either the fertility or sterility, contributed by nonfunctional male and or female plant parts or their incompatible interaction. This also includes traits on seed setting behavior in the fruit (caryopsis) of a grass plant that can be assayed in terms of spikelet sterility or fertility." [Gramene:pankaj_jaiswal]
 is_a: TO:0000387 ! plant trait
 
 [Term]
 id: TO:0000393
-name: yield and yield component
+name: OBSOLETE yield and yield component
 def: "OBSOLETE." []
 is_obsolete: true
 
@@ -3364,7 +3370,7 @@ is_a: TO:0000597 ! plant quality trait
 
 [Term]
 id: TO:0000407
-name: hoppers
+name: OBSOLETE hoppers
 def: "OBSOLETE." []
 is_obsolete: true
 
@@ -4505,6 +4511,7 @@ def: "A rhizome morphology trait (TO:0000549) which is the dry weight of a rhizo
 synonym: "rhizome dry weight per plant (related)" RELATED []
 synonym: "RHZDWT (related)" RELATED []
 is_a: TO:0000549 ! rhizome morphology trait
+is_a: TO:0000568 ! shoot axis weight
 relationship: part_of TO:0000352 ! plant dry weight
 
 [Term]
@@ -4831,7 +4838,7 @@ is_a: TO:0000593 ! polished grain weight
 
 [Term]
 id: TO:0000596
-name: plant volume (sensu Poaceae)
+name: OBSOLETE plant volume (sensu Poaceae)
 def: "OBSOLETE." []
 is_obsolete: true
 
@@ -5066,9 +5073,9 @@ synonym: "bristle length (related)" RELATED []
 synonym: "INVLCBS (related)" RELATED []
 synonym: "sterile inflorescence branch length (related)" RELATED []
 xref: TO_GIT:153
+is_a: TO:0000271 ! inflorescence length
 is_a: TO:0000643 ! inflorescence bristle length
 is_a: TO:0000979 ! involucre morphology trait
-is_a: TO:0006031 ! inflorescence size
 
 [Term]
 id: TO:0000624
@@ -5375,7 +5382,7 @@ is_a: TO:0000449 ! grain yield per plant
 
 [Term]
 id: TO:0000667
-name: cooking or brewing quality
+name: OBSOLETE cooking or brewing quality
 def: "OBSOLETE: The quality trait of the seed or the products derived from it." [Gramene:pankaj_jaiswal]
 xref: TO_GIT:108
 is_obsolete: true
@@ -5482,7 +5489,7 @@ id: TO:0000680
 name: inflorescence circumference
 def: "An inflorescence morphology trait (TO:0000373) trait which is the circumference of an inflorescence (PO:0009049)." [TO:cooperl]
 synonym: "INFLOCIRCUM (related)" RELATED []
-is_a: TO:0000373 ! inflorescence morphology trait
+is_a: TO:0006031 ! inflorescence size
 relationship: part_of TO:0006031 ! inflorescence size
 
 [Term]
@@ -6045,8 +6052,10 @@ def: "A subterranean shoot axis tuber morphology trait (TO:0000742) which is the
 comment: Refer to mass (PATO:0000125): A physical quality that inheres in a bearer by virtue of the proportion of the bearer's amount of matter.
 subset: Solanaceae_spp
 synonym: "tuber mass (broad)" BROAD []
+synonym: "tuber weight (exact)" EXACT []
 xref: PATO:0000125
 xref: TO_GIT:56
+is_a: TO:0000568 ! shoot axis weight
 is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
 created_by: moorel
 creation_date: 2012-04-19T10:56:34Z
@@ -6549,8 +6558,8 @@ comment: Refer to circumference PATO:0001684: An 1-D extent quality which is equ
 subset: Zea_mays
 xref: PATO:0001684
 xref: TO_GIT:89
+is_a: TO:0000680 ! inflorescence circumference
 is_a: TO:0000788 ! tassel inflorescence morphology trait
-is_a: TO:0006031 ! inflorescence size
 created_by: moorel
 creation_date: 2012-05-30T14:00:19Z
 
@@ -6575,8 +6584,8 @@ comment: Refer to length PATO:0000122: A 1-D extent quality which is equal to th
 subset: Zea_mays
 xref: PATO:0000122
 xref: TO_GIT:89
+is_a: TO:0000271 ! inflorescence length
 is_a: TO:0000788 ! tassel inflorescence morphology trait
-is_a: TO:0006031 ! inflorescence size
 created_by: moorel
 creation_date: 2012-05-30T14:06:52Z
 
@@ -6589,7 +6598,7 @@ subset: Zea_mays
 xref: PATO:0001334
 xref: TO_GIT:89
 is_a: TO:0000788 ! tassel inflorescence morphology trait
-is_a: TO:0006031 ! inflorescence size
+is_a: TO:0000802 ! inflorescence diameter
 created_by: moorel
 creation_date: 2012-05-30T14:09:31Z
 
@@ -6629,7 +6638,7 @@ synonym: "head diameter (narrow)" NARROW []
 xref: PATO:0001334
 xref: TO_GIT:92
 xref: TO_GIT:97
-is_a: TO:0000373 ! inflorescence morphology trait
+is_a: TO:0006031 ! inflorescence size
 relationship: part_of TO:0006031 ! inflorescence size
 created_by: moorel
 creation_date: 2012-06-01T13:20:49Z
@@ -6653,8 +6662,8 @@ name: inflorescence width
 alt_id: TO:0000637
 def: "An inflorescence morphology trait (TO:0000373) which is the width of an inflorescence (PO:0009049)." [PO:0009049, TO:cooperl]
 comment: Refer to width PATO:0000921: A 1-D extent quality which is equal to the distance from one side of an object to another side which is opposite.
-synonym: " INFLWD (related)" RELATED []
 synonym: "head width (narrow)" NARROW []
+synonym: "INFLWD (related)" RELATED []
 xref: PATO:0000921
 xref: TO_GIT:92
 xref: TO_GIT:97
@@ -6757,6 +6766,7 @@ comment: Refer to dry PATO:0001824: A wetness quality inhering in a bearer by vi
 xref: PATO:0000128
 xref: PATO:0001824
 xref: TO_GIT:89
+is_a: TO:0000568 ! shoot axis weight
 is_a: TO:0000785 ! tassel branch morphology trait
 created_by: moorel
 creation_date: 2012-06-26T12:37:26Z
@@ -8028,7 +8038,6 @@ creation_date: 2014-09-02T17:16:07Z
 id: TO:0000938
 name: kernel number per row
 def: "An infructescence yield trait (TO:0000936) that is the number of kernels (fruit; PO:0009001) per row on an ear infructescence (PO:0025597)." [TO:cooperl]
-synonym: " 78114   (related)" RELATED []
 xref: MaizeGDB_QTL:78114
 xref: TO_GIT:284
 is_a: TO:0000936 ! infructescence yield trait
@@ -8567,7 +8576,7 @@ name: polished grain length to width ratio
 def: "A grain length to width ratio (TO:0002731) measured on a dehulled, polished grain." [TO:cooperl]
 synonym: "white rice grain length to width ratio (narrow)" NARROW []
 xref: TO_GIT:415
-is_a: TO:0002731 ! grain length to width ratio
+is_a: TO:0002731 ! dehulled grain length to width ratio
 creation_date: 2017-07-10T10:36:57Z
 
 [Term]
@@ -8825,7 +8834,7 @@ relationship: part_of TO:0000892 ! stem size
 
 [Term]
 id: TO:0001036
-name: stem senescence
+name: OBSOLETE stem senescence
 def: "OBSOLETE." []
 comment: Please refer to stem senescence (TO:0020085)." [Gramene:cwt, TO:moorel]
 synonym: "culm senescence (related)" RELATED []
@@ -8881,7 +8890,7 @@ is_a: TO:0000465 ! mineral and ion content trait
 id: TO:0001047
 name: lead content trait
 def: "A mineral and ion content trait (TO:0000465) which is the lead cation (CHEBI:30180) composition in a plant structure (PO:0009011)." [TO:cooperl]
-synonym: "I content (exact)" EXACT []
+synonym: "Pb content (exact)" EXACT []
 xref: TO_GIT:412
 is_a: TO:0000465 ! mineral and ion content trait
 
@@ -9259,6 +9268,7 @@ creation_date: 2018-09-26T19:37:18Z
 id: TO:0001092
 name: legume fruit weight
 def: "A legume fruit morphology trait (TO:0001082) which is the weight of a legume fruit (PO:0030100)." [TO:cooperl]
+synonym: "pod weight (exact)" EXACT []
 is_a: TO:0001082 ! legume fruit morphology trait
 is_a: TO:0002746 ! fruit weight
 created_by: Laurel_Cooper
@@ -9777,7 +9787,7 @@ is_a: TO:0000739 ! shoot axis morphology trait
 
 [Term]
 id: TO:0002640
-name: obsoleted fruit set trait
+name: OBSOLETE fruit set trait
 def: "OBSOLETE" []
 is_obsolete: true
 
@@ -10453,7 +10463,7 @@ is_a: TO:0002628 ! fruit shape
 
 [Term]
 id: TO:0002731
-name: grain length to width ratio
+name: dehulled grain length to width ratio
 def: "A grain size (TO:0000397) which is the grain length and grain width on dehulled grain." [Gramene:pankaj_jaiswal, TO:moorel]
 synonym: "dehulled-grain length to width ratio (related)" RELATED []
 synonym: "DHULGRLGWDRO (related)" RELATED []
@@ -10768,8 +10778,268 @@ def: "A spikelet morphology trait (TO:0000657) which is the length of a spikelet
 comment: Refer to length (PATO:0000122): A 1-D extent quality which is equal to the distance between two points.
 synonym: "SPKLG (related)" RELATED []
 xref: PATO:0000122
+is_a: TO:0000271 ! inflorescence length
 is_a: TO:0000657 ! spikelet morphology trait
-is_a: TO:0006031 ! inflorescence size
+
+[Term]
+id: TO:0003000
+name: stem fresh weight
+def: "A stem weight trait (TO:0000952) which is the fresh weight of a stem (PO:0009047)." [TO:malaporte]
+is_a: TO:0000952 ! stem weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003001
+name: stem dry weight
+def: "A stem weight trait (TO:0000952) which is the dry weight of a stem (PO:0009047)." [TO:malaporte]
+is_a: TO:0000952 ! stem weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003002
+name: infructescence fresh weight
+def: "An infructescence weight trait (TO:0000583) which is the fresh weight of a stem (PO:0006342)." [TO:malaporte]
+synonym: "bunch fresh weight (narrow)" NARROW []
+is_a: TO:0000583 ! infructescence weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003003
+name: infructescence dry weight
+def: "An infructescence weight trait (TO:0000583) which is the dry weight of a stem (PO:0006342)." [TO:malaporte]
+synonym: "bunch dry weight (narrow)" NARROW []
+is_a: TO:0000583 ! infructescence weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003004
+name: fruit fresh weight
+def: "A fruit weight trait (TO:0002746) that is the fresh weight of a fruit (PO:0009001)." [TO:malaporte]
+is_a: TO:0002746 ! fruit weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003005
+name: fruit dry weight
+def: "A fruit weight trait (TO:0002746) that is the dry weight of a fruit (PO:0009001)." [TO:malaporte]
+is_a: TO:0002746 ! fruit weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003006
+name: second order infructescence morphology trait
+def: "A reproductive shoot system morphology trait (TO:0000786) which is a quality of the second order infructescence (PO:0025241)." [TO:malaporte]
+is_a: TO:0000786 ! reproductive shoot system morphology trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003007
+name: hand fresh weight
+def: "A second order infructescence morphology trait (TO:0003006) which is the fresh weight of the second order infructescence (PO:0025241)." [TO:malaporte]
+is_a: TO:0003006 ! second order infructescence morphology trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003008
+name: hand dry weight
+def: "A second order infructescence morphology trait (TO:0003006) which is the dry weight of the second order infructescence (PO:0025241)." [TO:malaporte]
+is_a: TO:0003006 ! second order infructescence morphology trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003009
+name: tuberous root tuber weight
+def: "A tuberous root tuber morphology trait (TO:1000007) which is the weight of a tuberous root tuber (PO:0025476)." [TO:malaporte]
+synonym: "storage root weight (exact)" EXACT []
+is_a: TO:0000279 ! root weight
+is_a: TO:1000007 ! tuberous root tuber morphology trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003010
+name: tuberous root tuber fresh weight
+def: "A tuberous root tuber weight trait (TO:0003009) which is the fresh weight of a tuberous root tuber (PO:0025476)." [TO:malaporte]
+synonym: "storage root fresh weight (exact)" EXACT []
+is_a: TO:0003009 ! tuberous root tuber weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003011
+name: tuberous root tuber dry weight
+def: "A tuberous root tuber weight trait (TO:0003009) which is the dry weight of a tuberous root tuber (PO:0025476)." [TO:malaporte]
+synonym: "storage root dry weight (exact)" EXACT []
+is_a: TO:0003009 ! tuberous root tuber weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003012
+name: subterranean shoot axis tuber fresh weight
+def: "A subterranean shoot axis tuber weight trait (TO:0000746) which is the fresh weight of a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
+synonym: "tuber fresh weight (exact)" EXACT []
+is_a: TO:0000746 ! subterranean shoot axis tuber mass
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003013
+name: subterranean shoot axis tuber dry weight
+def: "A subterranean shoot axis tuber weight trait (TO:0000746) which is the dry weight of a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
+synonym: "tuber dry weight (exact)" EXACT []
+is_a: TO:0000746 ! subterranean shoot axis tuber mass
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003014
+name: grain fresh weight
+def: "A grain weight (TO:0000919) which is the fresh weight of a grain (caryopsis fruit; PO:0030104), including the caryopsis hull (PO:0006000)." [TO:malaporte]
+is_a: TO:0000919 ! grain weight
+is_a: TO:0003004 ! fruit fresh weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003015
+name: grain dry weight
+def: "A grain weight (TO:0000919) which is the dry weight of a grain (caryopsis fruit; PO:0030104), including the caryopsis hull (PO:0006000)." [TO:malaporte]
+is_a: TO:0000919 ! grain weight
+is_a: TO:0003005 ! fruit dry weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003016
+name: 100-grain fresh weight
+def: "A 100-grain weight (TO:0000269) which is the fresh weight of a sample of 100 grains (caryopsis fruit; PO:0030104), with the caryopsis hull (PO:0006000)." [TO:malaporte]
+is_a: TO:0000269 ! 100-grain weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003017
+name: 100-grain dry weight
+def: "A grain weight (TO:0000269) which is the dry weight of a sample of 100 grains (caryopsis fruit; PO:0030104), with the caryopsis hull (PO:0006000)." [TO:malaporte]
+is_a: TO:0000269 ! 100-grain weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003018
+name: 1000-grain fresh weight
+def: "A grain weight (TO:0000382) which is the fresh weight of a sample of 1000 grains (caryopsis fruit; PO:0030104), with the caryopsis hull (PO:0006000)." [TO:malaporte]
+is_a: TO:0000382 ! 1000-grain weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003019
+name: 1000-grain dry weight
+def: "A grain weight (TO:0000382) which is the dry weight of a sample of 1000 grains (caryopsis fruit; PO:0030104), with the caryopsis hull (PO:0006000)." [TO:malaporte]
+is_a: TO:0000382 ! 1000-grain weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003020
+name: panicle fresh weight
+def: "An infructescence weight trait (TO:0000014) which is the fresh weight of a panicle inflorescence (PO:0030123)." [TO:malaporte]
+is_a: TO:0000014 ! panicle weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003021
+name: panicle dry weight
+def: "An infructescence weight trait (TO:0000014) which is the dry weight of a panicle inflorescence (PO:0030123)." [TO:malaporte]
+is_a: TO:0000014 ! panicle weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003022
+name: ear fresh weight
+def: "An ear infructescence weight trait (TO:0000923) that is the fresh weight of an ear infructescence (PO:0025597)." [TO:malaporte]
+is_a: TO:0000923 ! ear weight
+is_a: TO:0003002 ! infructescence fresh weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003023
+name: ear dry weight
+def: "An ear infructescence weight trait (TO:0000923) that is the dry weight of an ear infructescence (PO:0025597)." [TO:malaporte]
+is_a: TO:0000923 ! ear weight
+is_a: TO:0003003 ! infructescence dry weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003024
+name: cob fresh weight
+def: "An cob weight trait (TO:0000922) which is the fresh weight of a cob (ear infructescence axis; PO:0025623)" [TO:malaporte]
+is_a: TO:0000922 ! cob weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003025
+name: cob dry weight
+def: "An cob weight trait (TO:0000922) which is the dry weight of a cob (ear infructescence axis; PO:0025623)" [TO:malaporte]
+is_a: TO:0000922 ! cob weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003026
+name: spike weight
+def: "An inflorescence weight (TO:0000803) trait which is the weight of a spike inflorescence (PO:0030117)." [TO:malaporte]
+is_a: TO:0000803 ! inflorescence weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003027
+name: spike fresh weight
+def: "An spike weight (TO:0003026) trait which is the fresh weight of a spike inflorescence (PO:0030117)." [TO:malaporte]
+is_a: TO:0003026 ! spike weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003028
+name: spike dry weight
+def: "An spike weight (TO:0003026) trait which is the dry weight of a spike inflorescence (PO:0030117)." [TO:malaporte]
+is_a: TO:0003026 ! spike weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003029
+name: legume fruit dry weight
+def: "A legume fruit weight trait (TO:0001092) which is the dry weight of a legume fruit (PO:0030100)." [TO:malaporte]
+synonym: "pod dry weight (exact)" EXACT []
+is_a: TO:0001092 ! legume fruit weight
+is_a: TO:0003005 ! fruit dry weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003030
+name: legume fruit fresh weight
+def: "A legume fruit weight trait (TO:0001092) which is the fresh weight of a legume fruit (PO:0030100)." [TO:malaporte]
+synonym: "pod fresh weight (exact)" EXACT []
+is_a: TO:0001092 ! legume fruit weight
+is_a: TO:0003004 ! fruit fresh weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003031
+name: pepo fruit weight
+synonym: "A pepo fruit morphology trait (TO:0001098) which is the weight of a pepo fruit (PO:0030111)." EXACT []
+synonym: "banana finger weight (exact)" EXACT []
+is_a: TO:0001088 ! berry fruit weight
+is_a: TO:0001098 ! pepo fruit morphology trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003032
+name: pepo fruit fresh weight
+def: "A pepo fruit weight trait (TO:0003031) which is the fresh weight of a pepo fruit (PO:0030111)." [TO:malaporte]
+synonym: "banana finger fresh weight (exact)" EXACT []
+is_a: TO:0003004 ! fruit fresh weight
+is_a: TO:0003031 ! pepo fruit weight
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003033
+name: pepo fruit dry weight
+def: "A pepo fruit weight trait (TO:0003031) which is the dry weight of a pepo fruit (PO:0030111)." [TO:malaporte]
+synonym: "banana finger dry weight (exact)" EXACT []
+is_a: TO:0003005 ! fruit dry weight
+is_a: TO:0003031 ! pepo fruit weight
+created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0005001
@@ -11516,7 +11786,7 @@ creation_date: 2011-12-09T01:52:17Z
 
 [Term]
 id: TO:0012003
-name: chlorophyll content in an extract
+name: OBSOLETE chlorophyll content in an extract
 def: "OBSOLETE" []
 is_obsolete: true
 replaced_by: 'TO:0000495'
@@ -11858,7 +12128,7 @@ creation_date: 2011-08-19T12:12:24Z
 [Term]
 id: TO:0020052
 name: barley spot blotch disease resistance
-def: "Causal agent: Cochliobolus sativus (Bipolaris sorokiniana)." [T-CAP:Victoria_Blake]
+def: "A fungal disease resistance (TO:0000439) that is involved in the response to barley spot blotch disease. Causal agent: Cochliobolus sativus (Bipolaris sorokiniana)." [T-CAP:Victoria_Blake]
 comment: Symptoms include, uniform chocolate brown lesions that eventually merge forming irregular necrotic patches on leaves. Lesions may be surrounded by yellow zones of varying width.
 synonym: "spot blotch (exact)" EXACT []
 is_a: TO:0000439 ! fungal disease resistance
@@ -11868,7 +12138,7 @@ creation_date: 2011-08-19T12:19:00Z
 [Term]
 id: TO:0020053
 name: wheat spot blotch disease resistance
-def: "Causal agent: Cochliobolus sativus (Bipolaris sorokiniana)." [T-CAP:Victoria_Blake]
+def: "A fungal disease resistance (TO:0000439) that is involved in the response to wheat spot blotch disease. Causal agent: Cochliobolus sativus (Bipolaris sorokiniana)." [T-CAP:Victoria_Blake]
 comment: Symptoms include, elongated to oval shaped dark brown lesions. Centers often lighten to dark brown or tan surrounded by an irregular dark brown ring.
 synonym: "Helminthosporium leaf blotch (exact)" EXACT []
 is_a: TO:0000439 ! fungal disease resistance
@@ -12515,7 +12785,7 @@ creation_date: 2015-11-24T22:16:25Z
 
 [Term]
 id: TO:1000001
-name: obsolete cotyledon size
+name: OBSOLETE cotyledon size
 def: "OBSOLETE. A trait which is associated with the size of a cotyledon." [TO:TermGenie]
 comment: This term was obsoleted at the TermGenie Gatekeeper stage.
 synonym: "seed leaf size (exact)" EXACT [TO:TermGenie]
@@ -13127,7 +13397,7 @@ is_a: TO:0020091 ! manganese content
 [Term]
 id: TO:1000065
 name: shoot system molybdenum content
-def: "A molybdenum content trait (TO:0006056) which is the (CHEBI:37239) in a shoot system (PO:0009006). " [https://search.proquest.com/docview/1426182399, TO:cooperl]
+def: "A molybdenum content trait (TO:0006056) which is the (CHEBI:37239) in a shoot system (PO:0009006)." [https://search.proquest.com/docview/1426182399, TO:cooperl]
 synonym: "shoot Mo content (related)" RELATED []
 xref: TO_GIT:412
 is_a: TO:0006056 ! molybdenum content
