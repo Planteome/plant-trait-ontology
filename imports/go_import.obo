@@ -206,8 +206,6 @@ id: GO:0006810
 name: transport
 def: "The directed movement of substances (such as macromolecules, small molecules, ions) or cellular components (such as complexes and organelles) into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter, pore or motor protein." [GOC:dos, GOC:dph, GOC:jl, GOC:mah]
 synonym: "single-organism transport" RELATED []
-synonym: "small molecule transport" NARROW []
-synonym: "solute:solute exchange" NARROW []
 is_a: GO:0051234 ! establishment of localization
 
 [Term]
@@ -309,13 +307,6 @@ intersection_of: RO:0002211 GO:0000278 ! mitotic cell cycle
 relationship: RO:0002211 GO:0000278 ! mitotic cell cycle
 
 [Term]
-id: GO:0007568
-name: aging
-def: "A developmental process that is a deterioration and loss of function over time. Aging includes loss of functions such as resistance to disease, homeostasis, and fertility, as well as wear and tear. Aging includes cellular senescence, but is more inclusive. May precede death and may succeed developmental maturation (GO:0021700)." [GOC:PO_curators]
-synonym: "ageing" EXACT []
-is_a: GO:0032502 ! developmental process
-
-[Term]
 id: GO:0007585
 name: respiratory gaseous exchange by respiratory system
 def: "The process of gaseous exchange between an organism and its environment. In plants, microorganisms, and many small animals, air or water makes direct contact with the organism's cells or tissue fluids, and the processes of diffusion supply the organism with dioxygen (O2) and remove carbon dioxide (CO2). In larger animals the efficiency of gaseous exchange is improved by specialized respiratory organs, such as lungs and gills, which are ventilated by breathing mechanisms." [ISBN:0198506732]
@@ -329,7 +320,7 @@ name: enzyme activator activity
 def: "Binds to and increases the activity of an enzyme." [GOC:dph, GOC:mah, GOC:tb]
 synonym: "metalloenzyme activator activity" NARROW []
 is_a: GO:0030234 ! enzyme regulator activity
-intersection_of: GO:0098772 ! molecular function regulator
+intersection_of: GO:0098772 ! molecular function regulator activity
 intersection_of: RO:0002213 GO:0003824 ! catalytic activity
 relationship: RO:0002213 GO:0003824 ! catalytic activity
 
@@ -352,6 +343,7 @@ synonym: "metabolism resulting in cell growth" NARROW []
 synonym: "multicellular organism metabolic process" NARROW []
 synonym: "single-organism metabolic process" RELATED []
 is_a: GO:0008150 ! biological_process
+disjoint_from: GO:0051179 ! localization
 
 [Term]
 id: GO:0008194
@@ -461,11 +453,10 @@ is_a: GO:0009808 ! lignin metabolic process
 [Term]
 id: GO:0009835
 name: fruit ripening
-def: "An aging process that has as participant a fruit. Ripening causes changes in one or more characteristics of a fruit (color, aroma, flavor, texture, hardness, cell wall structure) and may make it more attractive to animals and aid in seed dispersal." [GOC:lr]
+def: "An developmental maturation process that has as participant a fruit. Ripening causes changes in one or more characteristics of a fruit (color, aroma, flavor, texture, hardness, cell wall structure) and may make it more attractive to animals and aid in seed dispersal." [GOC:lr]
 synonym: "fruit maturation" RELATED [GOC:PO_curators]
 synonym: "fruit senescence" RELATED [GOC:PO_curators]
 is_a: GO:0003006 ! developmental process involved in reproduction
-is_a: GO:0007568 ! aging
 is_a: GO:0071695 ! anatomical structure maturation
 relationship: BFO:0000050 GO:0010154 ! fruit development
 
@@ -628,7 +619,7 @@ is_a: GO:0006833 ! water transport
 [Term]
 id: GO:0010150
 name: leaf senescence
-def: "The process that occurs in a leaf near the end of its active life that is associated with the dismantling of cell components and membranes, loss of functional chloroplasts, and an overall decline in metabolism." [ISBN:0387987819]
+def: "The last stage of leaf development during which programmed degradation of macromolecules and nutrient recycling take place." [ISBN:0387987819, PMID:17177638, PMID:34938309]
 is_a: GO:0090693 ! plant organ senescence
 relationship: BFO:0000050 GO:0048366 ! leaf development
 
@@ -848,7 +839,6 @@ synonym: "phosphatase" RELATED []
 synonym: "phosphoric monoester hydrolase activity" EXACT []
 synonym: "PNPPase activity" NARROW []
 is_a: GO:0042578 ! phosphoric ester hydrolase activity
-relationship: BFO:0000050 GO:0016311 ! dephosphorylation
 
 [Term]
 id: GO:0016798
@@ -864,7 +854,7 @@ id: GO:0019208
 name: phosphatase regulator activity
 def: "Binds to and modulates the activity of a phosphatase, an enzyme which catalyzes of the removal of a phosphate group from a substrate molecule." [GOC:ai]
 is_a: GO:0030234 ! enzyme regulator activity
-intersection_of: GO:0098772 ! molecular function regulator
+intersection_of: GO:0098772 ! molecular function regulator activity
 intersection_of: RO:0002211 GO:0016791 ! phosphatase activity
 relationship: BFO:0000051 GO:0019902 ! phosphatase binding
 relationship: RO:0002211 GO:0016791 ! phosphatase activity
@@ -875,7 +865,7 @@ name: phosphatase activator activity
 def: "Binds to and increases the activity of a phosphatase, an enzyme which catalyzes of the removal of a phosphate group from a substrate molecule." [GOC:ai]
 is_a: GO:0008047 ! enzyme activator activity
 is_a: GO:0019208 ! phosphatase regulator activity
-intersection_of: GO:0098772 ! molecular function regulator
+intersection_of: GO:0098772 ! molecular function regulator activity
 intersection_of: RO:0002213 GO:0016791 ! phosphatase activity
 relationship: RO:0002213 GO:0016791 ! phosphatase activity
 
@@ -1007,8 +997,8 @@ def: "Binds to and modulates the activity of an enzyme." [GOC:dph, GOC:mah, GOC:
 synonym: "catalytic regulator activity" EXACT [GOC:dph]
 synonym: "enzyme modulator" EXACT []
 synonym: "metalloenzyme regulator activity" NARROW []
-is_a: GO:0098772 ! molecular function regulator
-intersection_of: GO:0098772 ! molecular function regulator
+is_a: GO:0098772 ! molecular function regulator activity
+intersection_of: GO:0098772 ! molecular function regulator activity
 intersection_of: RO:0002211 GO:0003824 ! catalytic activity
 relationship: BFO:0000050 GO:0050790 ! regulation of catalytic activity
 relationship: RO:0002211 GO:0003824 ! catalytic activity
@@ -1018,8 +1008,8 @@ id: GO:0030545
 name: signaling receptor regulator activity
 def: "Binds to and modulates the activity of a receptor." [GOC:ceb]
 synonym: "receptor regulator activity" BROAD []
-is_a: GO:0098772 ! molecular function regulator
-intersection_of: GO:0098772 ! molecular function regulator
+is_a: GO:0098772 ! molecular function regulator activity
+intersection_of: GO:0098772 ! molecular function regulator activity
 intersection_of: RO:0002211 GO:0038023 ! signaling receptor activity
 relationship: RO:0002211 GO:0038023 ! signaling receptor activity
 
@@ -1030,7 +1020,7 @@ def: "The function of interacting (directly or indirectly) with receptors such t
 synonym: "receptor activator activity" BROAD []
 synonym: "signalling receptor activator activity" EXACT []
 is_a: GO:0030545 ! signaling receptor regulator activity
-intersection_of: GO:0098772 ! molecular function regulator
+intersection_of: GO:0098772 ! molecular function regulator activity
 intersection_of: RO:0002213 GO:0038023 ! signaling receptor activity
 relationship: RO:0002213 GO:0038023 ! signaling receptor activity
 
@@ -2161,8 +2151,8 @@ is_a: GO:0048608 ! reproductive structure development
 [Term]
 id: GO:0090693
 name: plant organ senescence
-def: "The process that occurs in a plant organ near the end of its active life that is associated with the dismantling of cell components and membranes, and an overall decline in metabolism." [GOC:tb]
-is_a: GO:0007568 ! aging
+def: "A plant organ developmental process during which a plant dismantles cellular components to reclaim the cellular building blocks and nutrients that have been deposited in the plant organs during growth." [GOC:tb, PMID:17177638, PMID:34938309]
+is_a: GO:0032502 ! developmental process
 relationship: BFO:0000050 GO:0099402 ! plant organ development
 
 [Term]
@@ -2177,8 +2167,9 @@ relationship: BFO:0000050 GO:0005886 ! plasma membrane
 
 [Term]
 id: GO:0098772
-name: molecular function regulator
+name: molecular function regulator activity
 def: "A molecular function regulator regulates the activity of its target via non-covalent binding that does not result in covalent modification to the target. Examples of molecular function regulators include regulatory subunits of multimeric enzymes and channels. Mechanisms of regulation include allosteric changes in the target and competitive inhibition." [GOC:dos, GOC:pt]
+synonym: "molecular function regulator" EXACT []
 is_a: GO:0003674 ! molecular_function
 relationship: BFO:0000051 GO:0005515 ! protein binding
 
