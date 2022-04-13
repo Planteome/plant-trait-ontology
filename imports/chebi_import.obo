@@ -150,6 +150,7 @@ synonym: "hydroperoxy-polyunsaturated fatty acid anion" RELATED [ChEBI]
 synonym: "hydroperoxy-polyunsaturated fatty acid anions" RELATED [ChEBI]
 is_a: CHEBI:64012 ! hydroperoxy fatty acid anion
 is_a: CHEBI:76567 ! polyunsaturated fatty acid anion
+relationship: is_conjugate_base_of CHEBI:189832 ! hydroperoxy polyunsaturated fatty acid
 
 [Term]
 id: CHEBI:134179
@@ -331,6 +332,13 @@ synonym: "alpha-hydroxyketone" RELATED [ChEBI]
 synonym: "alpha-hydroxyketones" RELATED [ChEBI]
 is_a: CHEBI:30879 ! alcohol
 is_a: CHEBI:52396 ! alpha-oxyketone
+
+[Term]
+id: CHEBI:140949
+name: fatty acid 18:2
+synonym: "FA 18:2" RELATED [ChEBI]
+synonym: "FA(18:2)" RELATED [ChEBI]
+is_a: CHEBI:35366 ! fatty acid
 
 [Term]
 id: CHEBI:142851
@@ -825,6 +833,7 @@ relationship: RO:0000087 CHEBI:77746 ! human metabolite
 id: CHEBI:16541
 name: protein polypeptide chain
 def: "A naturally occurring polypeptide synthesized at the ribosome." []
+synonym: "a protein" RELATED [UniProt]
 synonym: "polypeptide chain" RELATED [ChEBI]
 synonym: "Protein" RELATED [KEGG_COMPOUND]
 synonym: "protein polypeptide chains" RELATED [ChEBI]
@@ -1409,6 +1418,15 @@ is_a: CHEBI:39127 ! magnesium cation
 is_a: CHEBI:60240 ! divalent metal cation
 relationship: RO:0000087 CHEBI:176497 ! geroprotector
 relationship: RO:0000087 CHEBI:23357 ! cofactor
+
+[Term]
+id: CHEBI:189832
+name: hydroperoxy polyunsaturated fatty acid
+def: "Any polyunsaturated fatty acid carrying one or more hydroperoxy substituents." []
+synonym: "hydroperoxy polyunsaturated fatty acids" RELATED [ChEBI]
+is_a: CHEBI:26208 ! polyunsaturated fatty acid
+is_a: CHEBI:64009 ! hydroperoxy fatty acid
+relationship: is_conjugate_acid_of CHEBI:134019 ! hydroperoxy polyunsaturated fatty acid anion
 
 [Term]
 id: CHEBI:20432
@@ -2507,6 +2525,7 @@ id: CHEBI:25626
 name: octadecadienoate
 def: "A long-chain, unsaturated fatty acid anion formed by deprotonation of the carboxy group of any octadecadienoic acid; major species at pH 7.3." []
 synonym: "octadecadienoate" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:131860 ! octadecanoid anion
 is_a: CHEBI:57560 ! long-chain fatty acid anion
 is_a: CHEBI:76567 ! polyunsaturated fatty acid anion
 relationship: is_conjugate_base_of CHEBI:25627 ! octadecadienoic acid
@@ -2520,8 +2539,10 @@ synonym: "18:2" RELATED [ChEBI]
 synonym: "C18:2" RELATED [ChEBI]
 synonym: "FA (18:2)" RELATED [ChEBI]
 synonym: "octadecadienoic acid" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:140949 ! fatty acid 18:2
 is_a: CHEBI:15904 ! long-chain fatty acid
 is_a: CHEBI:26208 ! polyunsaturated fatty acid
+is_a: CHEBI:36326 ! octadecanoid
 is_a: CHEBI:53339 ! olefinic fatty acid
 is_a: CHEBI:59202 ! straight-chain fatty acid
 relationship: is_conjugate_acid_of CHEBI:25626 ! octadecadienoate
@@ -7609,7 +7630,6 @@ id: CHEBI:59139
 name: gibberellin carboxylic acid anion
 def: "A carboxylic acid anion arising from deprotonation of one or more carboxy groups of any gibberellin." []
 synonym: "gibberellin monocarboxylic acid anions" RELATED [ChEBI]
-is_a: CHEBI:18059 ! lipid
 is_a: CHEBI:29067 ! carboxylic acid anion
 relationship: is_conjugate_base_of CHEBI:24250 ! gibberellin
 

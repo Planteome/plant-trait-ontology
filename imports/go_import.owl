@@ -707,8 +707,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006810">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051234"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The directed movement of substances (such as macromolecules, small molecules, ions) or cellular components (such as complexes and organelles) into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter, pore or motor protein.</obo:IAO_0000115>
-        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">small molecule transport</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solute:solute exchange</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">single-organism transport</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transport</rdfs:label>
     </owl:Class>
@@ -999,23 +997,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0007568 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007568">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A developmental process that is a deterioration and loss of function over time. Aging includes loss of functions such as resistance to disease, homeostasis, and fertility, as well as wear and tear. Aging includes cellular senescence, but is more inclusive. May precede death and may succeed developmental maturation (GO:0021700).</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ageing</oboInOwl:hasExactSynonym>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aging</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007568"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A developmental process that is a deterioration and loss of function over time. Aging includes loss of functions such as resistance to disease, homeostasis, and fertility, as well as wear and tear. Aging includes cellular senescence, but is more inclusive. May precede death and may succeed developmental maturation (GO:0021700).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:PO_curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0007585 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0007585">
@@ -1093,6 +1074,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008152">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/GO_0051179"/>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">metabolic process resulting in cell growth</oboInOwl:hasNarrowSynonym>
@@ -1148,12 +1130,6 @@
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glucose 1-phosphate adenylyltransferase activity</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glucose-1-phosphate adenylyltransferase activity</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008878"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADP-glucose synthase activity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EC:2.7.7.27</oboInOwl:hasDbXref>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008878"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
@@ -1213,6 +1189,12 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008878"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADP-glucose pyrophosphorylase activity</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EC:2.7.7.27</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008878"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADP-glucose synthase activity</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EC:2.7.7.27</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -1411,7 +1393,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009835">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003006"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007568"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071695"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1419,7 +1400,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0010154"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An aging process that has as participant a fruit. Ripening causes changes in one or more characteristics of a fruit (color, aroma, flavor, texture, hardness, cell wall structure) and may make it more attractive to animals and aid in seed dispersal.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An developmental maturation process that has as participant a fruit. Ripening causes changes in one or more characteristics of a fruit (color, aroma, flavor, texture, hardness, cell wall structure) and may make it more attractive to animals and aid in seed dispersal.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fruit maturation</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fruit senescence</oboInOwl:hasRelatedSynonym>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fruit ripening</rdfs:label>
@@ -1427,7 +1408,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009835"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An aging process that has as participant a fruit. Ripening causes changes in one or more characteristics of a fruit (color, aroma, flavor, texture, hardness, cell wall structure) and may make it more attractive to animals and aid in seed dispersal.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An developmental maturation process that has as participant a fruit. Ripening causes changes in one or more characteristics of a fruit (color, aroma, flavor, texture, hardness, cell wall structure) and may make it more attractive to animals and aid in seed dispersal.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:lr</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -1868,14 +1849,16 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0048366"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process that occurs in a leaf near the end of its active life that is associated with the dismantling of cell components and membranes, loss of functional chloroplasts, and an overall decline in metabolism.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The last stage of leaf development during which programmed degradation of macromolecules and nutrient recycling take place.</obo:IAO_0000115>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leaf senescence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0010150"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process that occurs in a leaf near the end of its active life that is associated with the dismantling of cell components and membranes, loss of functional chloroplasts, and an overall decline in metabolism.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The last stage of leaf development during which programmed degradation of macromolecules and nutrient recycling take place.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBN:0387987819</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:17177638</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:34938309</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2531,12 +2514,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016791">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042578"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016311"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catalysis of the hydrolysis of phosphoric monoesters, releasing inorganic phosphate.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phosphoric monoester hydrolase activity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4-nitrophenylphosphatase activity</oboInOwl:hasNarrowSynonym>
@@ -6506,21 +6483,23 @@
     <!-- http://purl.obolibrary.org/obo/GO_0090693 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0090693">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0007568"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0032502"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0099402"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process that occurs in a plant organ near the end of its active life that is associated with the dismantling of cell components and membranes, and an overall decline in metabolism.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant organ developmental process during which a plant dismantles cellular components to reclaim the cellular building blocks and nutrients that have been deposited in the plant organs during growth.</obo:IAO_0000115>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plant organ senescence</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0090693"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The process that occurs in a plant organ near the end of its active life that is associated with the dismantling of cell components and membranes, and an overall decline in metabolism.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A plant organ developmental process during which a plant dismantles cellular components to reclaim the cellular building blocks and nutrients that have been deposited in the plant organs during growth.</owl:annotatedTarget>
         <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:tb</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:17177638</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PMID:34938309</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -6570,7 +6549,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A molecular function regulator regulates the activity of its target via non-covalent binding that does not result in covalent modification to the target. Examples of molecular function regulators include regulatory subunits of multimeric enzymes and channels. Mechanisms of regulation include allosteric changes in the target and competitive inhibition.</obo:IAO_0000115>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular function regulator</rdfs:label>
+        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular function regulator</oboInOwl:hasExactSynonym>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molecular function regulator activity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0098772"/>
