@@ -21,7 +21,7 @@ ontology: to
 property_value: http://purl.org/dc/terms/description "An ontology that describes phenotypic traits in plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature plant." xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: http://purl.org/dc/terms/title "Plant Trait Ontology" xsd:string
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_1>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0000125>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001824>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/TO_0000078>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000086>))\n\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/TO_0000078> (<http://purl.obolibrary.org/obo/TO_0000078>)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/TO_0000078> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000125> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NCBITaxon_1> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000086> <http://purl.obolibrary.org/obo/PATO_0001824>)))))\n\n\n)
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_1>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0000125>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001824>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/TO_0000078>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000086>))\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\n\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/TO_0000078> (<http://purl.obolibrary.org/obo/TO_0000078>)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/TO_0000078> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000125> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NCBITaxon_1> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000086> <http://purl.obolibrary.org/obo/PATO_0001824>)))))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/TO_0003103> \"TO_0003102\")\n)
 
 [Term]
 id: TO:0000001
@@ -11478,6 +11478,14 @@ is_a: TO:0000398 ! whole plant morphology trait
 intersection_of: PATO:0000125 ! mass
 intersection_of: inheres_in PO:0000003 ! whole plant
 created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003103
+name: plant yield
+def: "A yield trait (TO:0000371) that is the weight of harvested plant anatomical entity (PO:0025131), or one or more of it constituents, per unit of the harvested area for a plant" [https://doi.org/10.1016/j.fcr.2014.12.006]
+synonym: "crop yield" EXACT []
+is_a: TO:0000371 ! yield trait
+created_by: http://orcid.org/0000-0001-6284-48
 
 [Term]
 id: TO:0005001
