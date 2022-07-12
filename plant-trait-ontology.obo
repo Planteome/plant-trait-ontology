@@ -1025,7 +1025,7 @@ name: harvest index
 def: "Proportion of usable (economically significant) biomass over total (biological) biomass, expressed as a percentage." [Gramene:jcl, Gramene:pankaj_jaiswal]
 synonym: "HI (related)" RELATED []
 synonym: "HVID (related)" RELATED []
-is_a: TO:0000371 ! yield trait
+is_a: TO:0003111 ! plant yield related trait
 
 [Term]
 id: TO:0000129
@@ -1153,7 +1153,7 @@ def: "Relative yield was calculated as the ratio of biomass in stress to that of
 synonym: "RB (related)" RELATED []
 synonym: "relative biomass yield (related)" RELATED []
 synonym: "RELBIOM (related)" RELATED []
-is_a: TO:0000371 ! yield trait
+is_a: TO:0003111 ! plant yield related trait
 
 [Term]
 id: TO:0000144
@@ -1162,7 +1162,7 @@ def: "A grain yield trait (TO:0000396) which is the proportion of kernels remain
 comment: Milling is part of rice processing where the caryopsis hull (PO:0006000) and bran is removed. Milled rice consists of the broken kernels as well as the head rice (whole or 3/4 of original length or longer) milled kernels.
 synonym: "milled rice ratio (related)" RELATED []
 synonym: "MR (related)" RELATED []
-is_a: TO:0000396 ! grain yield trait
+is_a: TO:0000396 ! grain yield related trait
 
 [Term]
 id: TO:0000145
@@ -1242,7 +1242,7 @@ name: relative yield
 def: "Relative yield is calculated as a ratio of yield in stress to that of control." [Gramene:jcl, Gramene:pankaj_jaiswal]
 synonym: "RELYLD (related)" RELATED []
 synonym: "RY (related)" RELATED []
-is_a: TO:0000371 ! yield trait
+is_a: TO:0003111 ! plant yield related trait
 
 [Term]
 id: TO:0000154
@@ -1823,7 +1823,7 @@ synonym: "head milled rice (related)" RELATED []
 synonym: "head rice ratio (related)" RELATED []
 synonym: "HEADR (related)" RELATED []
 xref: TO_GIT:422
-is_a: TO:0000396 ! grain yield trait
+is_a: TO:0000396 ! grain yield related trait
 relationship: part_of TO:0000144 ! milled rice yield
 
 [Term]
@@ -2700,12 +2700,12 @@ created_by: jaiswalp
 
 [Term]
 id: TO:0000327
-name: shoot system yield trait
+name: shoot system yield related trait
 def: "A yield trait (TO: 0000371) that is the amount of a plant structure (PO:0009011) or portion of plant substance (PO:0025161) produced by the shoot system (PO:0009006) which is harvested." [ISBN:0198506732, TO:cooperl]
 synonym: "BIOMYLD (related)" RELATED []
 synonym: "BY (related)" RELATED []
 xref: TO_GIT:289
-is_a: TO:0000371 ! yield trait
+is_a: TO:0003111 ! plant yield related trait
 
 [Term]
 id: TO:0000328
@@ -3212,7 +3212,7 @@ def: "Yield of forage matter upon harvest." [Gramene:pankaj_jaiswal]
 synonym: "FRGYLD (related)" RELATED []
 synonym: "FY (related)" RELATED []
 synonym: "straw yield (related)" RELATED []
-is_a: TO:0000327 ! shoot system yield trait
+is_a: TO:0003104 ! shoot system yield
 
 [Term]
 id: TO:0000389
@@ -3258,13 +3258,13 @@ is_a: TO:0000237 ! water stress trait
 
 [Term]
 id: TO:0000396
-name: grain yield trait
+name: grain yield related trait
 def: "A fruit yield trait (TO:0000871) that is the amount of grain." [IRRI:SES, TO:contributors, TO:cooperl]
 comment: In rice, the grain yield is often measured in kilograms per hectare at 14 percent moisture, if the experiment was done on a field trial.
 synonym: "GRYLD (related)" RELATED []
 synonym: "Yld (related)" RELATED []
 xref: TO_GIT:242
-is_a: TO:0000871 ! fruit yield trait
+is_a: TO:0000871 ! fruit yield related trait
 
 [Term]
 id: TO:0000397
@@ -3640,7 +3640,7 @@ synonym: "ears per plant (related)" RELATED []
 synonym: "ENO (related)" RELATED []
 synonym: "ENP (related)" RELATED []
 xref: TO_GIT:244
-is_a: TO:0000936 ! infructescence yield trait
+is_a: TO:0000936 ! infructescence yield related trait
 
 [Term]
 id: TO:0000444
@@ -3688,17 +3688,19 @@ is_a: TO:0002759 ! grain number
 
 [Term]
 id: TO:0000449
-name: grain yield per plant
+name: grain weight per plant
 def: "Average weight of dehulled grains per plant." [Gramene:pankaj_jaiswal]
+synonym: "grain yield per plant" BROAD []
 synonym: "GRYLDPPL (related)" RELATED []
-is_a: TO:0000396 ! grain yield trait
+is_a: TO:0000396 ! grain yield related trait
 
 [Term]
 id: TO:0000450
-name: grain yield per panicle
+name: grain weight per panicle
 def: "Average weight of dehulled grains per panicle." [Gramene:pankaj_jaiswal]
+synonym: "grain yield per panicle" BROAD []
 synonym: "GRYLDPPN (exact)" EXACT []
-is_a: TO:0000396 ! grain yield trait
+is_a: TO:0000396 ! grain yield related trait
 
 [Term]
 id: TO:0000451
@@ -3724,7 +3726,7 @@ comment: Not all the tillers bear panicle.
 synonym: "panicle tiller ratio (related)" RELATED []
 synonym: "PNTIRO (related)" RELATED []
 synonym: "productive tiller percent (related)" RELATED []
-is_a: TO:0000371 ! yield trait
+is_a: TO:0003111 ! plant yield related trait
 
 [Term]
 id: TO:0000454
@@ -3754,10 +3756,12 @@ is_a: TO:0000373 ! inflorescence morphology trait
 [Term]
 id: TO:0000457
 name: total biomass yield
+def: "Mass of aboveground and belowground tissues of plants per unit area." [https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/biomass]
+synonym: "biomass" EXACT []
 synonym: "dry matter yield (related)" RELATED []
 synonym: "TBIOMYLD (related)" RELATED []
 synonym: "total dry weight (related)" RELATED []
-is_a: TO:0000371 ! yield trait
+is_a: TO:0003103 ! plant yield
 
 [Term]
 id: TO:0000458
@@ -4586,7 +4590,7 @@ def: "Weight of the shoot without inflorescence." [Gramene:pankaj_jaiswal37]
 synonym: "SHWT (related)" RELATED []
 synonym: "total shoot weight (related)" RELATED []
 is_a: TO:0000739 ! shoot axis morphology trait
-relationship: part_of TO:0000327 ! shoot system yield trait
+relationship: part_of TO:0000327 ! shoot system yield related trait
 
 [Term]
 id: TO:0000569
@@ -5339,9 +5343,10 @@ is_a: TO:0000587 ! endosperm quality
 
 [Term]
 id: TO:0000666
-name: brown rice yield
+name: brown rice weight
+synonym: "brown rice yield" BROAD []
 synonym: "BRWRYLD (related)" RELATED []
-is_a: TO:0000449 ! grain yield per plant
+is_a: TO:0000449 ! grain weight per plant
 
 [Term]
 id: TO:0000667
@@ -5517,7 +5522,7 @@ synonym: "kernel row number per ear (related)" RELATED []
 synonym: "KERROWNB (related)" RELATED []
 xref: MaizeGDB_QTL:99383
 xref: TO_GIT:286
-is_a: TO:0000936 ! infructescence yield trait
+is_a: TO:0000936 ! infructescence yield related trait
 is_a: TO:0000976 ! ear infructescence morphology trait
 
 [Term]
@@ -5527,7 +5532,7 @@ def: "A infructescence yield trait (TO:0000936) which is the length of a kernel 
 synonym: "kernel set length (related)" RELATED []
 synonym: "KERROWLG (related)" RELATED []
 xref: TO_GIT:288
-is_a: TO:0000936 ! infructescence yield trait
+is_a: TO:0000936 ! infructescence yield related trait
 
 [Term]
 id: TO:0000689
@@ -5597,7 +5602,7 @@ name: starch yield
 def: "A yield trait (TO:0000371) which is the yield of starch from a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
 comment: Starch yield can be assayed initially with a smaller sample, but later converted to associate with a large sample, for example, for starch yield in kilograms per hectare.
 synonym: "STARCHYLD (related)" RELATED []
-is_a: TO:0000371 ! yield trait
+is_a: TO:0003103 ! plant yield
 relationship: part_of TO:0000162 ! grain quality trait
 
 [Term]
@@ -7265,18 +7270,18 @@ creation_date: 2012-08-08T11:50:03Z
 
 [Term]
 id: TO:0000870
-name: leaf yield trait
-def: "A shoot system yield trait (TO:0000327) which is comprised of leaves (PO:0025034) or parts of leaves." [TO:cooperl]
-is_a: TO:0000327 ! shoot system yield trait
+name: leaf yield
+def: "A shoot system yield trait (TO:0000327) which is comprised of leaves (PO:0025034) or parts of leaves harvested per unit area." [TO:cooperl]
+is_a: TO:0003104 ! shoot system yield
 created_by: moorel
 creation_date: 2012-10-04T15:42:58Z
 
 [Term]
 id: TO:0000871
-name: fruit yield trait
+name: fruit yield related trait
 def: "A shoot system yield trait (TO:0000327) which is the yield of fruits (PO:0009001)." [TO:cooperl]
 xref: TO_GIT:291
-is_a: TO:0000327 ! shoot system yield trait
+is_a: TO:0000327 ! shoot system yield related trait
 relationship: has_part TO:0000397 ! grain size
 relationship: has_part TO:0002759 ! grain number
 created_by: moorel
@@ -7624,10 +7629,11 @@ creation_date: 2013-01-24T14:48:21Z
 
 [Term]
 id: TO:0000905
-name: seed yield trait
-def: "A shoot system yield trait (TO:0000327) which is the yield of seeds (PO:0009010)." [PO:0009010, TO:cooperl, TO:moorel]
+name: seed yield
+def: "A shoot system yield trait (TO:0000327) which is the mass of seeds (PO:0009010) per unit area." [PO:0009010, TO:cooperl, TO:moorel]
+synonym: "seed yield trait" EXACT []
 xref: TO_GIT:182
-is_a: TO:0000327 ! shoot system yield trait
+is_a: TO:0003106 ! fruit yield
 relationship: has_part TO:0000181 ! seed weight
 relationship: has_part TO:0000391 ! seed size
 relationship: has_part TO:0000445 ! fruit seed number
@@ -7775,7 +7781,7 @@ synonym: "kernel weight (exact)" EXACT []
 synonym: "kwt (related)" RELATED [MaizeGDB:78154]
 xref: TO_GIT:242
 is_a: TO:0001079 ! caryopsis fruit morphology trait
-relationship: part_of TO:0000396 ! grain yield trait
+relationship: part_of TO:0000396 ! grain yield related trait
 created_by: cooperl
 creation_date: 2013-11-14T14:06:21Z
 
@@ -7942,11 +7948,11 @@ creation_date: 2014-06-27T08:27:30Z
 
 [Term]
 id: TO:0000936
-name: infructescence yield trait
+name: infructescence yield related trait
 def: "A shoot system yield trait (TO:0000327) which is a quality of an infructescence (PO:0006342), or the number born on a plant." [TO:cooperl]
 synonym: "seeds per panicle (related)" RELATED []
 xref: TO_GIT:285
-is_a: TO:0000327 ! shoot system yield trait
+is_a: TO:0000327 ! shoot system yield related trait
 created_by: cooperl
 creation_date: 2014-09-02T16:37:45Z
 
@@ -7957,7 +7963,7 @@ def: "An infructescence yield trait (TO:0000936) that is the number of kernels (
 comment: Often calculated as the number of kernel rows in the middle of the ear times number of kernels per row. Also calculated based on total weight of kernels for an ear and average weight/kernel (Hung et al 2012).
 xref: MaizeGDB_QTL:99383
 xref: TO_GIT:283
-is_a: TO:0000936 ! infructescence yield trait
+is_a: TO:0000936 ! infructescence yield related trait
 created_by: cooperl
 creation_date: 2014-09-02T17:16:07Z
 
@@ -7967,7 +7973,7 @@ name: kernel number per row
 def: "An infructescence yield trait (TO:0000936) that is the number of kernels (fruit; PO:0009001) per row on an ear infructescence (PO:0025597)." [TO:cooperl]
 xref: MaizeGDB_QTL:78114
 xref: TO_GIT:284
-is_a: TO:0000936 ! infructescence yield trait
+is_a: TO:0000936 ! infructescence yield related trait
 created_by: cooperl
 creation_date: 2014-09-02T18:07:39Z
 
@@ -7999,7 +8005,7 @@ def: "An infructescence yield trait (TO:0000936) which is the number of ranks of
 comment: Used to look at QTL traits in crosses between Teosinte and maize. In order to compare the two types of ears, the kernel row number (TO:0000687; maize) is divided by two.
 xref: MaizeGDB_QTL:65770
 xref: TO_GIT:288
-is_a: TO:0000936 ! infructescence yield trait
+is_a: TO:0000936 ! infructescence yield related trait
 created_by: cooperl
 creation_date: 2014-09-08T14:05:22Z
 
@@ -8636,14 +8642,14 @@ id: TO:0001019
 name: root to total biomass ratio
 def: "A ratio of root dry weight to total plant dry weight." [Gramene:pankaj_jaiswal]
 synonym: "root dry weight to total plant dry weight ratio (related)" RELATED []
-is_a: TO:0001041 ! root yield
+is_a: TO:0001041 ! root yield related trait
 
 [Term]
 id: TO:0001020
 name: exudate sap volume
 def: "Volume of the sap exudate collected from the cut parts of a plant." [Gramene:pankaj_jaiswal]
 synonym: "Sap per tiller (related)" RELATED []
-is_a: TO:0000327 ! shoot system yield trait
+is_a: TO:0000327 ! shoot system yield related trait
 
 [Term]
 id: TO:0001021
@@ -8760,9 +8766,9 @@ is_obsolete: true
 
 [Term]
 id: TO:0001041
-name: root yield
-def: "A yield trait (TO:0000371) which is the yield of roots (PO:0009005)." [TO:cooperl]
-is_a: TO:0000371 ! yield trait
+name: root yield related trait
+def: "A yield trait (TO:0000371) which is the amount of roots (PO:0009005) harvested." [TO:cooperl]
+is_a: TO:0003111 ! plant yield related trait
 created_by: cooperl
 
 [Term]
@@ -9006,7 +9012,7 @@ id: TO:0001071
 name: shoot axis tuber yield
 def: "A shoot system yield trait (TO:0000327) which is the yield of shoot axis tubers (PO:0004543)." [TO:cooperl]
 comment: Use for tuber yields of yams (Dioscorea spp.) and potatoes (Solanum spp.).
-is_a: TO:0000327 ! shoot system yield trait
+is_a: TO:0000327 ! shoot system yield related trait
 creation_date: 2017-12-20T23:14:07Z
 
 [Term]
@@ -11482,10 +11488,108 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003103
 name: plant yield
-def: "A yield trait (TO:0000371) that is the weight of harvested plant anatomical entity (PO:0025131), or one or more of it constituents, per unit of the harvested area for a plant" [https://doi.org/10.1016/j.fcr.2014.12.006]
+def: "A yield trait (TO:0000371) that is the weight of harvested plant anatomical entity (PO:0025131), or one or more of it constituents, per unit area." [https://doi.org/10.1016/j.fcr.2014.12.006]
 synonym: "crop yield" EXACT []
+synonym: "yield" EXACT []
 is_a: TO:0000371 ! yield trait
 created_by: http://orcid.org/0000-0001-6284-48
+
+[Term]
+id: TO:0003104
+name: shoot system yield
+synonym: "A plant yield trait (TO:0003103) that is the mass of a plant structure (PO:0009011) or portion of plant substance (PO:0025161) produced by the shoot system (PO:0009006) harvested per unit area." EXACT []
+is_a: TO:0003103 ! plant yield
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003105
+name: root system yield
+def: "A plant yield trait (TO:0003103) which is the mass of roots (PO:0009005) harvested per unit area." []
+synonym: "root yield" EXACT []
+is_a: TO:0003103 ! plant yield
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003106
+name: fruit yield
+def: "Mass of fruit harvested per unit area." [DOI:10.1080/1343943X.2018.1541712]
+is_a: TO:0003104 ! shoot system yield
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003107
+name: grain yield
+def: "Mass of grain harvested per unit area." [http://institutmichelserres.ens-lyon.fr/spip.php?article30&lang=fr]
+is_a: TO:0003106 ! fruit yield
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003108
+name: dry grain yield
+def: "Mass of dry grain harvested per unit area." [http://institutmichelserres.ens-lyon.fr/spip.php?article30&lang=fr]
+is_a: TO:0003107 ! grain yield
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003109
+name: fresh grain yield
+def: "Mass of fresh grain harvested per unit area." [http://institutmichelserres.ens-lyon.fr/spip.php?article30&lang=fr]
+is_a: TO:0003107 ! grain yield
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003110
+name: straw yield
+def: "Mass of straw harvested per unit area." [https://www.sciencedirect.com/science/article/abs/pii/S0961953415301951]
+is_a: TO:0003104 ! shoot system yield
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003111
+name: plant yield related trait
+def: "A yield trait (TO:0000371) that is related to the weight of harvested plant anatomical entity (PO:0025131), or one or more of it constituents, per unit area." []
+is_a: TO:0000371 ! yield trait
+created_by: http://orcid.org/0000-0001-6284-4821
+
+[Term]
+id: TO:0003112
+name: dry biomass yield
+def: "Mass of dry aboveground and belowground  tissues of plants per unit area." [https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/biomass]
+synonym: "dry biomass" EXACT []
+is_a: TO:0000457 ! total biomass yield
+created_by: http://orcid.org/0000-0001-6284-4821
+
+[Term]
+id: TO:0003113
+name: aboveground biomass yield
+def: "Mass of aboveground biomass per unit area." [https://doi.org/10.1016/B978-0-12-818213-0.00009-6]
+synonym: "aboveground biomass" EXACT []
+is_a: TO:0000457 ! total biomass yield
+created_by: http://orcid.org/0000-0001-6284-4821
+
+[Term]
+id: TO:0003114
+name: dry aboveground biomass yield
+def: "Mass of dried aboveground tissues of plants per unit area." [https://doi.org/10.1016/B978-0-12-818213-0.00009-6]
+synonym: "dry aboveground biomass" EXACT []
+is_a: TO:0003113 ! aboveground biomass yield
+created_by: http://orcid.org/0000-0001-6284-4821
+
+[Term]
+id: TO:0003115
+name: fresh biomass yield
+def: "Mass of fresh aboveground and belowground tissues of plants per unit area." [https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/biomass]
+synonym: "fresh biomass" EXACT []
+is_a: TO:0000457 ! total biomass yield
+created_by: http://orcid.org/0000-0001-6284-4821
+
+[Term]
+id: TO:0003116
+name: fresh aboveground biomass yield
+def: "Mass of fresh aboveground tissues of plants per unit area." [] {comment="https://doi.org/10.1016/B978-0-12-818213-0.00009-6"}
+synonym: "fresh aboveground biomass" EXACT []
+is_a: TO:0003113 ! aboveground biomass yield
+created_by: http://orcid.org/0000-0001-6284-4821
 
 [Term]
 id: TO:0005001
@@ -12306,7 +12410,7 @@ name: grain weight to panicle weight ratio
 def: "A grain yield trait (TO:0000396) which is the ratio of grain weight (TO:0000919) to panicle weight (TO:0000014)." [TO:cooperl]
 comment: Grain weight (TO:0000919) is a general parent term, covering the weights of various types of caryopsis fruits (PO:0030104), and doesn't specify if they are hulled or dehulled.
 xref: TO_GIT:242
-is_a: TO:0000396 ! grain yield trait
+is_a: TO:0000396 ! grain yield related trait
 
 [Term]
 id: TO:0020003
@@ -12789,7 +12893,7 @@ name: head drop
 def: "A shoot system yield trait (TO:0000327) which is a measure of the number of fertile spikes (PO:0030117) dropped before harvest." [T-CAP:Victoria_Blake, TO:cooperl]
 synonym: "spike drop (exact)" EXACT []
 synonym: "spike inflorescence deop (exact)" EXACT []
-is_a: TO:0000327 ! shoot system yield trait
+is_a: TO:0000327 ! shoot system yield related trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:33:35Z
 
@@ -12829,7 +12933,7 @@ def: "The trait  takes into account energy losses occurring in the animal in fae
 comment: Units: Kcal/kg.
 synonym: "metabolised energy (exact)" EXACT []
 synonym: "stover related traits (broad)" BROAD [GCP:GCP_324.000003]
-is_a: TO:0000327 ! shoot system yield trait
+is_a: TO:0000327 ! shoot system yield related trait
 created_by: jaiswalp
 creation_date: 2011-08-19T03:17:28Z
 
@@ -12838,7 +12942,7 @@ id: TO:0020082
 name: stover nitrogen content
 def: "A trait to measure percent nitrogen concentration in the stover sample used for predicting crude protein (CP) content of stover by multiplication with a factor of 6.25 (CP = N x 6.25). This concentration is one of the criteria to assess the quality of fodder. Value derived from the analysis of stover using Near Infrared Reflectance Spectrophotometry (NIRS)." [GCP:GCP_324.0000016, ICRISAT:Vincent_Vadez, ILRI:Michael_Blummel]
 synonym: "stover related traits" BROAD [GCP:GCP_324.000003]
-is_a: TO:0000327 ! shoot system yield trait
+is_a: TO:0000327 ! shoot system yield related trait
 created_by: jaiswalp
 creation_date: 2011-08-19T03:20:23Z
 
@@ -13192,7 +13296,7 @@ id: TO:0020123
 name: ethanol yield from biomass
 def: "A trait to measure the ethanol yield from the industrial processing of feedstock (biomass)." [Gramene:pankaj_jaiswal, TO:contributors]
 comment: Often measured as volume/mass unit used by DOE-USA. It's also consistent with the common measure of fuel ethanol (volume, not mass) and common measure of biomass.  Please note that ethanol yield in liters per megagram would depend on both the ethanol conversion process and the composition (not just the quantity) of the biomass. And in most cases (at least for breeding), it probably would be predicted ethanol yield instead of ethanol yield that is directly measured from a pretreatment and fermentation process.
-is_a: TO:0000371 ! yield trait
+is_a: TO:0003103 ! plant yield
 created_by: jaiswalp
 creation_date: 2011-08-19T05:09:40Z
 
