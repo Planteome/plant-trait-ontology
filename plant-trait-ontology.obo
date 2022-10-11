@@ -21,7 +21,6 @@ ontology: to
 property_value: http://purl.org/dc/terms/description "An ontology that describes phenotypic traits in plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature plant." xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: http://purl.org/dc/terms/title "Plant Trait Ontology" xsd:string
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(Class(<http://purl.obolibrary.org/obo/NCBITaxon_1>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0000125>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/PATO_0001824>))\nDeclaration(Class(<http://purl.obolibrary.org/obo/TO_0000078>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000052>))\nDeclaration(ObjectProperty(<http://purl.obolibrary.org/obo/RO_0000086>))\n\n############################\n#   Classes\n############################\n\n# Class: <http://purl.obolibrary.org/obo/TO_0000078> (<http://purl.obolibrary.org/obo/TO_0000078>)\n\nEquivalentClasses(<http://purl.obolibrary.org/obo/TO_0000078> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/PATO_0000125> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000052> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/NCBITaxon_1> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/RO_0000086> <http://purl.obolibrary.org/obo/PATO_0001824>)))))\n\n\n)
 
 [Term]
 id: TO:0000001
@@ -439,7 +438,8 @@ is_a: TO:0000361 ! stem morphology trait
 
 [Term]
 id: TO:0000057
-name: grain moisture
+name: grain moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of the caryopsis fruit (PO:0030104)." [TO:malaporte]
 is_a: TO:0000162 ! grain quality trait
 
 [Term]
@@ -870,6 +870,7 @@ comment: The leaf shattering trait is the occurence of  the biological process o
 synonym: "leaf abscission (related)" RELATED [GO:0060866, SOY:0001342]
 synonym: "LFSH (related)" RELATED []
 xref: GO:0060866
+xref: SOY:0001342
 is_a: TO:0000655 ! leaf growth and development trait
 
 [Term]
@@ -2041,7 +2042,6 @@ name: plant vigor trait
 def: "A plant trait (TO:0000387) which is a measure of the active and/or healthy growth and development of a plant stucture (PO:0009011) or a population of plants." [TO:cooperl]
 comment: Plants vigor traits include those of a whole plant (PO:00009011; inclucluding a seedling), or parts of the plant such as a seed (PO:0009010), or of explants such as anthers (PO:0009066) or cuttings.
 synonym: "plant vigour trait (exact)" EXACT []
-property_value: seeAlso https://github.com/Planteome/plant-trait-ontology/issues/xyz
 is_a: TO:0000387 ! plant trait
 
 [Term]
@@ -2437,12 +2437,11 @@ is_a: TO:0000250 ! plant vigor trait
 [Term]
 id: TO:0000297
 name: glucosamine content
-def: "An oligosaccharide content (TO:0006003) which is the amount of glucosamine (CHEBI:5417) in a plant structure (PO:0009011)." []
+def: "An oligosaccharide content (TO:0006003) which is the amount of glucosamine (CHEBI:5417) in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: It is one of the most abundant natural polysaccharide.
 synonym: "2-amino-2-deoxyglucopyranose content (related)" RELATED []
 synonym: "GLUCNCN (related)" RELATED []
 xref: CHEBI:5417
-xref: Gramene:pankaj_jaiswal
 xref: ISBN:198506732
 is_a: TO:0006003 ! oligosaccharide content
 is_a: TO:0006008 ! carbohydrate derivative content
@@ -3093,8 +3092,9 @@ is_a: TO:0000786 ! reproductive shoot system morphology trait
 id: TO:0000374
 name: breakdown viscosity
 def: "A cooking quality trait that is the tendency of gelatinized starch granules to break during cooking, especially at high temperature." [PMCID:PMC434838, TO:cooperl]
-comment: Breakdown is usually associated with the tendency of gelatinized starch granules to break during holding at high temperature, accompanied with continuous shearing (Han and Hamaker 2001). Breakdown is usually calculated from a resulting viscogram by subtracting trough from peak viscosity. The increase in rice flour breakdown viscosity, although not always significant (P < 0.05), suggests a greater protection of the starch granule integrity. This probably is due to the increased affinity of proteins to interact with starch, as a result of protein denaturation. The resulting formation of protein–starch complexes tends to increase rice flour peak viscosity. {xref="PMCID:PMC434838"}
+comment: Breakdown is usually associated with the tendency of gelatinized starch granules to break during holding at high temperature, accompanied with continuous shearing (Han and Hamaker 2001). Breakdown is usually calculated from a resulting viscogram by subtracting trough from peak viscosity. The increase in rice flour breakdown viscosity, although not always significant (P < 0.05), suggests a greater protection of the starch granule integrity. This probably is due to the increased affinity of proteins to interact with starch, as a result of protein denaturation. The resulting formation of protein–starch complexes tends to increase rice flour peak viscosity.
 synonym: "BRKVIS (related)" RELATED []
+xref: PMCID:PMC434838
 is_a: TO:0001069 ! cooking quality trait
 
 [Term]
@@ -3217,7 +3217,6 @@ is_a: TO:0000327 ! shoot system yield trait
 id: TO:0000389
 name: nuclear mediated male sterility
 def: "Shows mendelian inheritance, caused by genetic modifications or mutations in the nuclear genome." [Gramene:pankaj_jaiswal, IRRI:SES]
-xref: scale:6
 is_a: TO:0000106 ! male sterility type
 
 [Term]
@@ -4831,8 +4830,8 @@ is_a: TO:0000281 ! metabolite content trait
 [Term]
 id: TO:0000599
 name: enzyme activity trait
-def: "A biochemical trait which is a quality of an enzymatic reaction." [] {comment="TO:cooperl"}
-comment: Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic. {xref="GO:0003824"}
+def: "A biochemical trait which is a quality of an enzymatic reaction." [GO:000382, TO:cooperl]
+comment: Catalysis of a biochemical reaction at physiological temperatures. In biologically catalyzed reactions, the reactants are known as substrates, and the catalysts are naturally occurring macromolecular substances known as enzymes. Enzymes possess specific binding sites for substrates, and are usually composed wholly or largely of protein, but RNA that has catalytic activity (ribozyme) is often also regarded as enzymatic.
 synonym: "enzymatic activity (related)" RELATED []
 synonym: "enzyme catalytic activity (related)" RELATED []
 property_value: seeAlso https://github.com/Planteome/plant-trait-ontology/issues/380
@@ -4864,7 +4863,6 @@ name: total fat content
 def: "The total fat or lipid content of present in the plant or the plant part such as seed." [Gramene:pankaj_jaiswal]
 synonym: "FATCN (related)" RELATED []
 synonym: "lipid content (related)" RELATED []
-is_a: TO:0000491 ! fat and essential oil composition related trait
 is_a: TO:0000604 ! fat and essential oil content
 
 [Term]
@@ -4988,7 +4986,7 @@ is_a: TO:0000492 ! leaf shape
 id: TO:0000617
 name: colored grain percentage
 def: "A grain color (TO:0002617) trait which is the percentage of colored grains." [Gramene:pankaj_jaiswal, TO:cooperl]
-comment: The measurement is on de-hulled grains in comparison to a reference color. {xref="TO:cooperl"}
+comment: The measurement is on de-hulled grains in comparison to a reference color.
 synonym: "percentage of damaged yellow rice grains (narrow)" NARROW []
 synonym: "percentage of green rice grains (narrow)" NARROW []
 synonym: "percentage of red rice grains (narrow)" NARROW []
@@ -7886,6 +7884,7 @@ id: TO:0000930
 name: seed shattering
 def: "A seed growth and development trait (TO:0000653) which is the extent of seed shattering based on the development of an abscission zone (PO:0000146)." [PO:0000146, TO:moorel]
 synonym: "hilum abscission (related)" RELATED [SOY:0001341]
+xref: SOY:0001341
 property_value: seeAlso https://github.com/Planteome/plant-trait-ontology/issues/249
 is_a: TO:0000653 ! seed growth and development trait
 created_by: moorel
@@ -8371,7 +8370,7 @@ created_by: TO_austin_meier
 [Term]
 id: TO:0000985
 name: root system morphology trait
-def: "A collective plant organ structure morphology trait (TO:0000842) which is a quality of a root system (PO:0025025)." [PO:0025025] {created_by="ethan_johnson"}
+def: "A collective plant organ structure morphology trait (TO:0000842) which is a quality of a root system (PO:0025025)." [PO:0025025]
 property_value: seeAlso https://github.com/Planteome/plant-trait-ontology/issues/359
 is_a: TO:0000842 ! collective plant organ structure morphology trait
 created_by: Ethan_Johnson
@@ -9341,6 +9340,14 @@ comment: Refers to soybean cyst nematode (Heterodera glycines; NCBITaxon:51029).
 property_value: seeAlso https://github.com/Planteome/plant-trait-ontology/issues/461
 is_a: TO:0000384 ! nematode damage resistance
 created_by: cooperl
+
+[Term]
+id: TO:0001112
+name: root width
+def: "A root morphology trait (TO:0000043) which is the width of a root (PO:0009005)." [PATO:0000921, PO:0009005, TO:cooperl]
+is_a: TO:0000043 ! root morphology trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2022-05-11
 
 [Term]
 id: TO:0002600
@@ -10679,7 +10686,7 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003002
 name: infructescence fresh weight
-def: "An infructescence weight trait (TO:0000583) which is the fresh weight of a stem (PO:0006342)." [TO:malaporte]
+def: "An infructescence weight trait (TO:0000583) which is the fresh weight of an infructescence (PO:0006342)." [TO:malaporte]
 synonym: "bunch fresh weight (narrow)" NARROW []
 is_a: TO:0000583 ! infructescence weight
 created_by: http://orcid.org/0000-0002-8461-9745
@@ -10687,7 +10694,7 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003003
 name: infructescence dry weight
-def: "An infructescence weight trait (TO:0000583) which is the dry weight of a stem (PO:0006342)." [TO:malaporte]
+def: "An infructescence weight trait (TO:0000583) which is the dry weight of an infructescence (PO:0006342)." [TO:malaporte]
 synonym: "bunch dry weight (narrow)" NARROW []
 is_a: TO:0000583 ! infructescence weight
 created_by: http://orcid.org/0000-0002-8461-9745
@@ -10709,21 +10716,21 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003006
 name: second order infructescence morphology trait
-def: "A reproductive shoot system morphology trait (TO:0000786) which is a quality of the second order infructescence (PO:0025241)." [TO:malaporte]
+def: "A reproductive shoot system morphology trait (TO:0000786) which is a quality of a second order infructescence (PO:0025241)." [TO:malaporte]
 is_a: TO:0000786 ! reproductive shoot system morphology trait
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003007
 name: hand fresh weight
-def: "A second order infructescence morphology trait (TO:0003006) which is the fresh weight of the second order infructescence (PO:0025241)." [TO:malaporte]
+def: "A second order infructescence morphology trait (TO:0003006) which is the fresh weight of a second order infructescence (PO:0025241)." [TO:malaporte]
 is_a: TO:0003006 ! second order infructescence morphology trait
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003008
 name: hand dry weight
-def: "A second order infructescence morphology trait (TO:0003006) which is the dry weight of the second order infructescence (PO:0025241)." [TO:malaporte]
+def: "A second order infructescence morphology trait (TO:0003006) which is the dry weight of a second order infructescence (PO:0025241)." [TO:malaporte]
 is_a: TO:0003006 ! second order infructescence morphology trait
 created_by: http://orcid.org/0000-0002-8461-9745
 
@@ -10840,14 +10847,14 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003024
 name: cob fresh weight
-def: "An cob weight trait (TO:0000922) which is the fresh weight of a cob (ear infructescence axis; PO:0025623)" [TO:malaporte]
+def: "A cob weight trait (TO:0000922) which is the fresh weight of a cob (ear infructescence axis; PO:0025623)." [TO:malaporte]
 is_a: TO:0000922 ! cob weight
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003025
 name: cob dry weight
-def: "An cob weight trait (TO:0000922) which is the dry weight of a cob (ear infructescence axis; PO:0025623)" [TO:malaporte]
+def: "A cob weight trait (TO:0000922) which is the dry weight of a cob (ear infructescence axis; PO:0025623)." [TO:malaporte]
 is_a: TO:0000922 ! cob weight
 created_by: http://orcid.org/0000-0002-8461-9745
 
@@ -10861,14 +10868,14 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003027
 name: spike fresh weight
-def: "An spike weight (TO:0003026) trait which is the fresh weight of a spike inflorescence (PO:0030117)." [TO:malaporte]
+def: "A spike weight (TO:0003026) trait which is the fresh weight of a spike inflorescence (PO:0030117)." [TO:malaporte]
 is_a: TO:0003026 ! spike weight
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003028
 name: spike dry weight
-def: "An spike weight (TO:0003026) trait which is the dry weight of a spike inflorescence (PO:0030117)." [TO:malaporte]
+def: "A spike weight (TO:0003026) trait which is the dry weight of a spike inflorescence (PO:0030117)." [TO:malaporte]
 is_a: TO:0003026 ! spike weight
 created_by: http://orcid.org/0000-0002-8461-9745
 
@@ -10891,7 +10898,7 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003031
 name: pepo fruit weight
-synonym: "A pepo fruit morphology trait (TO:0001098) which is the weight of a pepo fruit (PO:0030111)." EXACT []
+def: "A pepo fruit morphology trait (TO:0001098) which is the weight of a pepo fruit (PO:0030111)." [TO:malaporte]
 synonym: "banana finger weight (exact)" EXACT []
 is_a: TO:0001098 ! pepo fruit morphology trait
 created_by: http://orcid.org/0000-0002-8461-9745
@@ -10913,6 +10920,556 @@ is_a: TO:0003031 ! pepo fruit weight
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
+id: TO:0003034
+name: leaf moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of a leaf (PO:0025034)." [TO:malaporte]
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003035
+name: stem moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of a stem (PO:0009047)." [TO:malaporte]
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003036
+name: root moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of a root (PO:0009005)." [TO:malaporte]
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003037
+name: plant moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of the whole plant (PO:0000003)." [TO:malaporte]
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003038
+name: shoot moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of the shoot system (PO:0009006)." [TO:malaporte]
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003039
+name: infructescence moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of a infructescence (PO:0006342)." [TO:malaporte]
+synonym: "bunch moisture content (narrow)" NARROW []
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003040
+name: pepo fruit moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of a pepo fruit (PO:0030111)." [TO:malaporte]
+synonym: "banana finger moisture content (exact)" EXACT []
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003041
+name: second order infructescence moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of a second order infructescence (PO:0025241)." [TO:malaporte]
+synonym: "banana hand moisture content (exact)" EXACT []
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003042
+name: tuberous root tuber moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of a tuberous root tuber (PO:0025476)." [TO:malaporte]
+synonym: "storage root moisture content (exact)" EXACT []
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003043
+name: subterranean shoot axis tuber moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
+synonym: "tuber moisture content (exact)" EXACT []
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003044
+name: legume fruit moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of a legume fruit (PO:0030100)." [TO:malaporte]
+synonym: "pod moisture content (exact)" EXACT []
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003045
+name: panicle moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of a panicle inflorescence (PO:0030123)." [TO:malaporte]
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003046
+name: ear moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of a ear infructescence (PO:0025597)." [TO:malaporte]
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003047
+name: cob moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of a ear infructescence axis (PO:0025623)." [TO:malaporte]
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003048
+name: spike moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture of a spike inflorescence (PO:0030117)." [TO:malaporte]
+is_a: TO:0000228 ! moisture content trait
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003049
+name: leaf potassium content
+def: "A potassium content trait (TO:0000609) which is the amount of potassium cation (CHEBI:29103) in a leaf (PO:0025034)." [TO:malaporte]
+xref: CHEBI:29103
+is_a: TO:0000609 ! potassium content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003050
+name: stem potassium content
+def: "A potassium content trait (TO:0000609) which is the amount of potassium cation (CHEBI:29103) in a stem (PO:0009047)." [TO:malaporte]
+xref: CHEBI:29103
+is_a: TO:0000609 ! potassium content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003051
+name: infructescence potassium content
+def: "A potassium content trait (TO:0000609) which is the amount of potassium cation (CHEBI:29103) in an infructescence (PO:0006342)." [TO:malaporte]
+synonym: "bunch potassium content (narrow)" NARROW []
+xref: CHEBI:29103
+is_a: TO:0000609 ! potassium content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003052
+name: pepo fruit potassium content
+def: "A potassium content trait (TO:0000609) which is the amount of potassium cation (CHEBI:29103) in a pepo fruit (PO:0030111)." [TO:malaporte]
+synonym: "banana finger potassium content (exact)" EXACT []
+xref: CHEBI:29103
+is_a: TO:0000609 ! potassium content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003053
+name: second order infructescence potassium content
+def: "A potassium content trait (TO:0000609) which is the amount of potassium cation (CHEBI:29103) in a second order infructescence (PO:0025241)." [TO:malaporte]
+synonym: "banana hand potassium content (exact)" EXACT []
+xref: CHEBI:29103
+is_a: TO:0000609 ! potassium content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003054
+name: tuberous root tuber potassium content
+def: "A potassium content trait (TO:0000609) which is the amount of potassium cation (CHEBI:29103) in a tuberous root tuber (PO:0025476)." [TO:malaporte]
+synonym: "storage root potassium content (exact)" EXACT []
+xref: CHEBI:29103
+is_a: TO:0000609 ! potassium content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003055
+name: subterranean shoot axis tuber potassium content
+def: "A moisture content trait (TO:0000228) which is the amount of potassium cation (CHEBI:29103) in a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
+synonym: "tuber potassium content (exact)" EXACT []
+xref: CHEBI:29103
+is_a: TO:0000609 ! potassium content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003056
+name: grain potassium content
+def: "A potassium content trait (TO:0000609) which is the amount of potassium cation (CHEBI:29103) in a caryopsis fruit (PO:0030104)." [TO:malaporte]
+xref: CHEBI:29103
+is_a: TO:0000609 ! potassium content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003057
+name: panicle potassium content
+def: "A potassium content trait (TO:0000609) which is the amount of potassium cation (CHEBI:29103) in a panicle inflorescence (PO:0030123)." [TO:malaporte]
+xref: CHEBI:29103
+is_a: TO:0000609 ! potassium content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003058
+name: ear potassium content
+def: "A potassium content trait (TO:0000609) which is the amount of potassium cation (CHEBI:29103) in a ear infructescence (PO:0025597)." [TO:malaporte]
+xref: CHEBI:29103
+is_a: TO:0000609 ! potassium content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003059
+name: cob potassium content
+def: "A potassium content trait (TO:0000609) which is the amount of potassium cation (CHEBI:29103) in a ear infructescence axis (PO:0025623)." [TO:malaporte]
+xref: CHEBI:29103
+is_a: TO:0000609 ! potassium content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003060
+name: spike potassium content
+def: "A potassium content trait (TO:0000609) which is the amount of potassium cation (CHEBI:29103) in a spike inflorescence (PO:0030117)." [TO:malaporte]
+xref: CHEBI:29103
+is_a: TO:0000609 ! potassium content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003061
+name: legume fruit potassium content
+def: "A potassium content trait (TO:0000609) which is the amount of potassium cation (CHEBI:29103) in a legume fruit (PO:0030100)." [TO:malaporte]
+synonym: "pod potassium content (exact)" EXACT []
+xref: CHEBI:29103
+is_a: TO:0000609 ! potassium content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003062
+name: stem nitrogen content
+def: "A nitrogen content trait (TO:0020093) which is the amount of nitrogen (CHEBI:51143) in a stem (PO:0009047)." [TO:malaporte]
+xref: CHEBI:51143
+is_a: TO:0020093 ! nitrogen content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003063
+name: infructescence nitrogen content
+def: "A nitrogen content trait (TO:0020093) which is the amount of nitrogen (CHEBI:51143) in an infructescence (PO:0006342)." [TO:malaporte]
+synonym: "bunch nitrogen content (narrow)" NARROW []
+xref: CHEBI:51143
+is_a: TO:0020093 ! nitrogen content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003064
+name: pepo fruit nitrogen content
+def: "A nitrogen content trait (TO:0020093) which is the amount of nitrogen (CHEBI:51143) in a pepo fruit (PO:0030111)." [TO:malaporte]
+synonym: "banana finger nitrogen content (exact)" EXACT []
+xref: CHEBI:51143
+is_a: TO:0020093 ! nitrogen content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003065
+name: second order infructescence nitrogen content
+def: "A nitrogen content trait (TO:0020093) which is the amount of nitrogen (CHEBI:51143) in a second order infructescence (PO:0025241)." [TO:malaporte]
+synonym: "banana hand nitrogen content (exact)" EXACT []
+xref: CHEBI:51143
+is_a: TO:0020093 ! nitrogen content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003066
+name: tuberous root tuber nitrogen content
+def: "A nitrogen content trait (TO:0020093) which is the amount of nitrogen (CHEBI:51143) in a tuberous root tuber (PO:0025476)." [TO:malaporte]
+synonym: "storage root nitrogen content (exact)" EXACT []
+xref: CHEBI:51143
+is_a: TO:0020093 ! nitrogen content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003067
+name: subterranean shoot axis tuber nitrogen content
+def: "A moisture content trait (TO:0000228) which is the amount of nitrogen (CHEBI:51143) in a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
+synonym: "tuber nitrogen content (exact)" EXACT []
+xref: CHEBI:51143
+is_a: TO:0020093 ! nitrogen content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003068
+name: grain nitrogen content
+def: "A nitrogen content trait (TO:0020093) which is the amount of nitrogen (CHEBI:51143) in a caryopsis fruit (PO:0030104)." [TO:malaporte]
+xref: CHEBI:51143
+is_a: TO:0020093 ! nitrogen content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003069
+name: panicle nitrogen content
+def: "A nitrogen content trait (TO:0020093) which is the amount of nitrogen (CHEBI:51143) in a panicle inflorescence (PO:0030123)." [TO:malaporte]
+xref: CHEBI:51143
+is_a: TO:0020093 ! nitrogen content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003070
+name: ear nitrogen content
+def: "A nitrogen content trait (TO:0020093) which is the amount of nitrogen (CHEBI:51143) in a ear infructescence (PO:0025597)." [TO:malaporte]
+xref: CHEBI:51143
+is_a: TO:0020093 ! nitrogen content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003071
+name: cob nitrogen content
+def: "A nitrogen content trait (TO:0020093) which is the amount of nitrogen (CHEBI:51143) in a ear infructescence axis (PO:0025623)." [TO:malaporte]
+xref: CHEBI:51143
+is_a: TO:0020093 ! nitrogen content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003072
+name: spike nitrogen content
+def: "A nitrogen content trait (TO:0020093) which is the amount of nitrogen (CHEBI:51143) in a spike inflorescence (PO:0030117)." [TO:malaporte]
+xref: CHEBI:51143
+is_a: TO:0020093 ! nitrogen content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003073
+name: legume fruit nitrogen content
+def: "A nitrogen content trait (TO:0020093) which is the amount of nitrogen (CHEBI:51143) in a legume fruit (PO:0030100)." [TO:malaporte]
+synonym: "pod nitrogen content (exact)" EXACT []
+xref: CHEBI:51143
+is_a: TO:0020093 ! nitrogen content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003074
+name: root nitrogen content
+def: "A nitrogen content trait (TO:0020093) which is the amount of nitrogen (CHEBI:51143) in a root (PO:0009005)." [TO:malaporte]
+xref: CHEBI:51143
+is_a: TO:0020093 ! nitrogen content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003076
+name: stem phosphorus content
+def: "A phosphorus content trait (TO:0001024) which is the amount of phosphorus cation (CHEBI:33467) in a stem (PO:0009047)." [TO:malaporte]
+xref: CHEBI:33467
+is_a: TO:0020114 ! shoot system phosphorus content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003077
+name: infructescence phosphorus content
+def: "A phosphorus content trait (TO:0001024) which is the amount of phosphorus cation (CHEBI:33467) in an infructescence (PO:0006342)." [TO:malaporte]
+synonym: "bunch phosphorus content (narrow)" NARROW []
+xref: CHEBI:33467
+is_a: TO:0020114 ! shoot system phosphorus content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003078
+name: pepo fruit phosphorus content
+def: "A phosphorus content trait (TO:0001024) which is the amount of phosphorus cation (CHEBI:33467) in a pepo fruit (PO:0030111)." [TO:malaporte]
+synonym: "banana finger phosphorus content (exact)" EXACT []
+xref: CHEBI:33467
+is_a: TO:0020114 ! shoot system phosphorus content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003079
+name: second order infructescence phosphorus content
+def: "A phosphorus content trait (TO:0001024) which is the amount of phosphorus cation (CHEBI:33467) in a second order infructescence (PO:0025241)." [TO:malaporte]
+synonym: "banana hand phosphorus content (exact)" EXACT []
+xref: CHEBI:33467
+is_a: TO:0020114 ! shoot system phosphorus content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003080
+name: tuberous root tuber phosphorus content
+def: "A phosphorus content trait (TO:0001024) which is the amount of phosphorus cation (CHEBI:33467) in a tuberous root tuber (PO:0025476)." [TO:malaporte]
+synonym: "storage root phosphorus content (exact)" EXACT []
+xref: CHEBI:33467
+is_a: TO:0001024 ! phosphorus content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003081
+name: subterranean shoot axis tuber phosphorus content
+def: "A moisture content trait (TO:0000228) which is the amount of phosphorus cation (CHEBI:33467) in a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
+synonym: "tuber phosphorus content (exact)" EXACT []
+xref: CHEBI:33467
+is_a: TO:0001024 ! phosphorus content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003082
+name: grain phosphorus content
+def: "A phosphorus content trait (TO:0001024) which is the amount of phosphorus cation (CHEBI:33467) in a caryopsis fruit (PO:0030104)." [TO:malaporte]
+xref: CHEBI:33467
+is_a: TO:0001024 ! phosphorus content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003083
+name: panicle phosphorus content
+def: "A phosphorus content trait (TO:0001024) which is the amount of phosphorus cation (CHEBI:33467) in a panicle inflorescence (PO:0030123)." [TO:malaporte]
+xref: CHEBI:33467
+is_a: TO:0001024 ! phosphorus content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003084
+name: ear phosphorus content
+def: "A phosphorus content trait (TO:0001024) which is the amount of phosphorus cation (CHEBI:33467) in a ear infructescence (PO:0025597)." [TO:malaporte]
+xref: CHEBI:33467
+is_a: TO:0001024 ! phosphorus content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003085
+name: cob phosphorus content
+def: "A phosphorus content trait (TO:0001024) which is the amount of phosphorus cation (CHEBI:33467) in a ear infructescence axis (PO:0025623)." [TO:malaporte]
+xref: CHEBI:33467
+is_a: TO:0001024 ! phosphorus content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003086
+name: spike phosphorus content
+def: "A phosphorus content trait (TO:0001024) which is the amount of phosphorus cation (CHEBI:33467) in a spike inflorescence (PO:0030117)." [TO:malaporte]
+xref: CHEBI:33467
+is_a: TO:0001024 ! phosphorus content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003087
+name: legume fruit phosphorus content
+def: "A phosphorus content trait (TO:0001024) which is the amount of phosphorus cation (CHEBI:33467) in a legume fruit (PO:0030100)." [TO:malaporte]
+synonym: "pod phosphorus content (exact)" EXACT []
+xref: CHEBI:33467
+is_a: TO:0001024 ! phosphorus content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003088
+name: leaf carbon content
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in a leaf (PO:0025034)." [TO:malaporte]
+xref: CHEBI:27594
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003089
+name: stem carbon content
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in a stem (PO:0009047)." [TO:malaporte]
+xref: CHEBI:27594
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003090
+name: root carbon content
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in a root (PO:0009005)." [TO:malaporte]
+xref: CHEBI:27594
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003091
+name: infructescence carbon content
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in an infructescence (PO:0006342)." [TO:malaporte]
+synonym: "bunch carbon content (narrow)" NARROW []
+xref: CHEBI:27594
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003092
+name: pepo fruit carbon content
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in a pepo fruit (PO:0030111)." [TO:malaporte]
+synonym: "banana finger carbon content (exact)" EXACT []
+xref: CHEBI:27594
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003093
+name: second order infructescence carbon content
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in a second order infructescence (PO:0025241)." [TO:malaporte]
+synonym: "banana hand carbon content (exact)" EXACT []
+xref: CHEBI:27594
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003094
+name: tuberous root tuber carbon content
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in a tuberous root tuber (PO:0025476)." [TO:malaporte]
+synonym: "storage root carbon content (exact)" EXACT []
+xref: CHEBI:27594
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003095
+name: subterranean shoot axis tuber carbon content
+def: "A moisture content trait (TO:0000228) which is the amount of carbon (CHEBI:27594) in a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
+synonym: "tuber carbon content (exact)" EXACT []
+xref: CHEBI:27594
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003096
+name: grain carbon content
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in a caryopsis fruit (PO:0030104)." [TO:malaporte]
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003097
+name: panicle carbon content
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in a panicle inflorescence (PO:0030123)." [TO:malaporte]
+xref: CHEBI:27594
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003098
+name: ear carbon content
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in a ear infructescence (PO:0025597)." [TO:malaporte]
+xref: CHEBI:27594
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003099
+name: cob carbon content
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in a ear infructescence axis (PO:0025623)." [TO:malaporte]
+xref: CHEBI:27594
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003100
+name: spike carbon content
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in a spike inflorescence (PO:0030117)." [TO:malaporte]
+xref: CHEBI:27594
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
+id: TO:0003101
+name: legume fruit carbon content
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in a legume fruit (PO:0030100)." [TO:malaporte]
+synonym: "pod carbon content (exact)" EXACT []
+xref: CHEBI:27594
+is_a: TO:0000466 ! carbon content
+created_by: http://orcid.org/0000-0002-8461-9745
+
+[Term]
 id: TO:0005001
 name: linoleic acid content
 def: "The linoleic acid content in the essential oils present in or extracted from a plant or the plant part such as seed." [Gramene:pankaj_jaiswal]
@@ -10925,7 +11482,6 @@ synonym: "cis,cis-linoleic acid content (exact)" EXACT []
 synonym: "high linoleic oil content (narrow)" NARROW []
 synonym: "linoleic oil content (exact)" EXACT []
 synonym: "low linoleic oil content (narrow)" NARROW []
-xref: CAS:60-33-3
 xref: CHEBI:17351
 is_a: TO:0000604 ! fat and essential oil content
 
@@ -10941,7 +11497,6 @@ synonym: "cis-9-octadecenoic acid content (exact)" EXACT []
 synonym: "high oleic oil content (narrow)" NARROW []
 synonym: "mid oleic oil content (narrow)" NARROW []
 synonym: "oleic oil content (related)" RELATED []
-xref: CAS:112-80-1
 xref: CHEBI:16196
 is_a: TO:0000604 ! fat and essential oil content
 
@@ -10956,7 +11511,6 @@ synonym: "n-octadecanoic acid content (exact)" EXACT []
 synonym: "octadecanoic acid content (exact)" EXACT []
 synonym: "octadecoic acid content (exact)" EXACT []
 synonym: "stearic oil content (related)" RELATED []
-xref: CAS:57-11-4
 xref: CHEBI:28842
 is_a: TO:0000604 ! fat and essential oil content
 
@@ -10980,7 +11534,6 @@ synonym: "9,12,15-Octadecatrienoic acid content (exact)" EXACT []
 synonym: "9-cis,12-cis,15-cis-octadecatrienoic acid content (exact)" EXACT []
 synonym: "all-cis-9,12,15-octadecatrienoic acid content (exact)" EXACT []
 synonym: "cis,cis,cis-9,12,15-octadecatrienoic acid content (exact)" EXACT []
-xref: CAS:463-40-1
 xref: CHEBI:27432
 is_a: TO:0005004 ! omega-3 fatty acid content
 
@@ -11530,6 +12083,17 @@ created_by: jaiswalp
 creation_date: 2010-10-25T05:44:20Z
 
 [Term]
+id: TO:0007000
+name: seed volume
+def: "A seed morphology trait (TO:0000184) which is the volume of a seed (PO:0009010)." [PO:0009010, TO:cooperl]
+comment: Refer to volume (PATO:0000918): A 3-D extent quality inhering in a bearer by virtue of the bearer's amount of 3-dimensional space it occupies.
+xref: TO_GIT:489
+is_a: TO:0000184 ! seed morphology trait
+relationship: part_of TO:0000391 ! seed size
+created_by: cooperl
+creation_date: 2022-09-08
+
+[Term]
 id: TO:0010001
 name: percent germination
 def: "The percentage of seeds that germinate against the total number of seeds planted." [Gramene:pankaj_jaiswal]
@@ -11815,7 +12379,8 @@ id: TO:0020016
 name: seed texture
 def: "A seed morphology trait (TO:0000184) which is the texture of a seed (PO:0009010)." [PO:0009010, TO:moorel]
 comment: Refer to texture PATO:0000150: A morphologic quality inhering in a bearer by virtue of the bearer's relative size, organization and distribution of its surface elements or the representation or invention of the appearance of its surface; visual and tactile surface characteristics.
-xref: TO:0000150
+xref: PATO:0000150
+xref: TO_GIT:213
 property_value: seeAlso https://github.com/Planteome/plant-trait-ontology/issues/213
 is_a: TO:0000184 ! seed morphology trait
 
@@ -11887,7 +12452,6 @@ is_a: TO:0020028 ! apical axillary branch number
 [Term]
 id: TO:0020028
 name: apical axillary branch number
-xref: Gramene:cwt6
 is_a: TO:0002639 ! shoot branching
 
 [Term]
