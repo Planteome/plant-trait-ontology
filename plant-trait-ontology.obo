@@ -21,6 +21,7 @@ ontology: to
 property_value: http://purl.org/dc/terms/description "An ontology that describes phenotypic traits in plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature plant." xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: http://purl.org/dc/terms/title "Plant Trait Ontology" xsd:string
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasDbXref>))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://purl.obolibrary.org/obo/TO_0001117> \"\")\n)
 
 [Term]
 id: TO:0000001
@@ -4530,8 +4531,8 @@ is_a: TO:0000559 ! plant volume
 [Term]
 id: TO:0000562
 name: specific leaf area
-def: "A leaf area trait (TO:0000540) that is the ratio of the leaf area (TO:0000540) to the leaf dry weight (TO:0001014) or leaf dry mass (TO:New)." [TO:cooperl]
-synonym: "leaf specific area (related)" RELATED []
+def: "A leaf area trait (TO:0000540) that is the ratio of the leaf area to the leaf weight (TO:0000505)." [TO:cooperl]
+synonym: "leaf specific area (exact)" EXACT []
 synonym: "SLA (related)" RELATED []
 synonym: "SLFAR (related)" RELATED []
 xref: MaizeGDB_QTL:247869
@@ -9351,6 +9352,109 @@ created_by: https://orcid.org/0000-0002-6379-8932
 creation_date: 2022-05-11
 
 [Term]
+id: TO:0001113
+name: leaflet morphology trait
+def: "A cardinal organ part morphology trait (TO:0000754) which is a quality of a leaflet (PO:0020049)." [TO:Cooperl]
+xref: TO_GIT:230
+is_a: TO:0000754 ! cardinal organ part morphology trait
+created_by: http://orcid.org/0000-0002-6379-8932
+creation_date: 2023-01-09T19:26:13Z
+
+[Term]
+id: TO:0001114
+name: leaflet area
+def: "A leaflet morphology trait (TO:0001113) which is the area (PATO:0001323) of a leaflet (PO:0020049)." [TO:cooperl]
+xref: TO_GIT:216
+is_a: TO:0001113 ! leaflet morphology trait
+relationship: part_of TO:0001119 ! leaflet size
+created_by: http://orcid.org/0000-0002-6379-8932
+creation_date: 2023-01-09T19:37:44Z
+
+[Term]
+id: TO:0001115
+name: leaflet length
+def: "A leaflet morphology trait (TO:0001113) which is the length (PATO:0000122 ) of a leaflet (PO:0020049)." [TO:cooperl]
+xref: TO_GIT:216
+is_a: TO:0001113 ! leaflet morphology trait
+relationship: part_of TO:0001119 ! leaflet size
+created_by: http://orcid.org/0000-0002-6379-8932
+creation_date: 2023-01-09T19:40:14Z
+
+[Term]
+id: TO:0001116
+name: leaflet shape
+def: "A leaflet morphology trait (TO:0001113) which is the shape (PATO:0000052 ) of a leaflet (PO:0020049)." [TO:cooperl]
+xref: TO_GIT:411
+xref: TO_GIT:83
+is_a: TO:0001113 ! leaflet morphology trait
+created_by: http://orcid.org/0000-0002-6379-8932
+creation_date: 2023-01-09T21:54:09Z
+
+[Term]
+id: TO:0001117
+name: leaflet weight
+def: "A leaflet morphology trait (TO:0001113) which is the weight (PATO:0000128 ) of a leaflet (PO:0020049)." [TO:cooperl]
+is_a: TO:0001113 ! leaflet morphology trait
+created_by: http://orcid.org/0000-0002-6379-8932
+creation_date: 2023-01-09T21:56:45Z
+
+[Term]
+id: TO:0001118
+name: leaflet width
+def: "A leaflet morphology trait (TO:0001113) which is the width (PATO:0000921) of a leaflet (PO:0020049)." [TO:cooperl]
+xref: TO_GIT:216
+is_a: TO:0001113 ! leaflet morphology trait
+relationship: part_of TO:0001119 ! leaflet size
+created_by: http://orcid.org/0000-0002-6379-8932
+creation_date: 2023-01-09T22:01:05Z
+
+[Term]
+id: TO:0001119
+name: leaflet size
+def: "A leaflet morphology trait (TO:0001113) which is the size (PATO:0000117 ) of a leaflet (PO:0020049)." [TO:cooperl]
+xref: TO_GIT:411
+is_a: TO:0001113 ! leaflet morphology trait
+created_by: http://orcid.org/0000-0002-6379-8932
+creation_date: 2023-01-09T22:02:40Z
+
+[Term]
+id: TO:0001120
+name: specific leaflet weight
+def: "A leaflet weight (TO:0001117) which is the ratio of leaflet weight to leaflet area (TO:0001114)." [TO:cooperl]
+synonym: "leaflet specific weight (exact)" EXACT []
+xref: TO_GIT:231
+is_a: TO:0001117 ! leaflet weight
+created_by: http://orcid.org/0000-0002-6379-8932
+creation_date: 2023-01-09T22:50:17Z
+
+[Term]
+id: TO:0001121
+name: compound leaf morphology trait
+def: "A vascular leaf morphology trait (TO:0000419) which is a quality of a compound leaf (PO:0020043)." [TO:cooperl]
+xref: TO_GIT:215
+is_a: TO:0000419 ! vascular leaf morphology trait
+created_by: http://orcid.org/0000-0002-6379-8932
+creation_date: 2023-01-09T22:29:37Z
+
+[Term]
+id: TO:0001122
+name: specific leaf weight
+def: "A leaf weight (TO:0000505) which is the ratio of leaf weight to leaf area (TO:0000540)." [TO:cooperl]
+xref: TO_GIT:231
+is_a: TO:0000505 ! leaf weight
+created_by: http://orcid.org/0000-0002-6379-8932
+creation_date: 2023-01-09T22:55:35Z
+
+[Term]
+id: TO:0001123
+name: specific leaflet area
+def: "A leaflet area trait (TO:0001114) that is the ratio of the leaflet area to the leaflet weight (TO:0001117)." [TO:cooperl]
+xref: TO_GIT:491
+is_a: TO:0001114 ! leaflet area
+created_by: http://orcid.org/0000-0002-6379-8932
+creation_date: 2023-01-09T23:16:39Z
+
+[Term]
 id: TO:0002600
 name: floral organ size
 def: "A floral organ morphology trait (TO:0000862) which is the size of a floral organ (PO:0025395)." [Gramene:pankaj_jaiswal, PO:0025395, TO:moorel]
@@ -9660,8 +9764,9 @@ created_by: jaiswalp
 [Term]
 id: TO:0002636
 name: leaflet number
-def: "An assay to detrmine the variation the number of leaves." [Gramene:pankaj_jaiswal]
-is_a: TO:0000419 ! vascular leaf morphology trait
+def: "A compound leaf morphology trait (TO:0001121) which is the number of leaflets (PO:0020049) in a compound leaf (PO:0020043)." [Gramene:pankaj_jaiswal, TO:cooperl]
+xref: TO_GIT:211
+is_a: TO:0001121 ! compound leaf morphology trait
 
 [Term]
 id: TO:0002637
