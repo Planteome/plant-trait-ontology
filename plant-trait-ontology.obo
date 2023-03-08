@@ -1109,13 +1109,12 @@ is_a: TO:0001021 ! days to inflorescence exsertion
 
 [Term]
 id: TO:0000138
-name: brown rice protein
-def: "Total protein content of the brown rice." [IRRI:SES]
-synonym: "brown rice protein content (related)" RELATED []
+name: brown rice protein content
+def: "A grain protein content (TO:0001136) which is the amount of protein (CHEBI:36080) in a brown rice grain (caryopsis fruit; PO:0030104)." [IRRI:SES] {comment="TO:cooperl"}
 synonym: "BrP (related)" RELATED []
 synonym: "BRWRPROT (related)" RELATED []
 synonym: "Prt (related)" RELATED []
-is_a: TO:0000598 ! protein content
+is_a: TO:0001136 ! grain protein content
 
 [Term]
 id: TO:0000140
@@ -3375,10 +3374,9 @@ is_a: TO:0001069 ! cooking quality trait
 [Term]
 id: TO:0000410
 name: polished rice protein content
-def: "Total protein content of the polished rice." [Gramene:pankaj_jaiswal]
+def: "A grain protein content (TO:0001136) which is the amount of protein (CHEBI:36080) in a polished rice grain (caryopsis fruit; PO:0030104)." [Gramene:pankaj_jaiswal] {comment="TO:cooperl"}
 synonym: "POLRPROTCN (related)" RELATED []
-is_a: TO:0000490 ! seed protein composition trait
-is_a: TO:0000598 ! protein content
+is_a: TO:0001136 ! grain protein content
 
 [Term]
 id: TO:0000411
@@ -3408,11 +3406,11 @@ is_a: TO:0000148 ! viral disease resistance
 [Term]
 id: TO:0000414
 name: white rice protein content
+def: "A grain protein content (TO:0001136) which is the amount of protein (CHEBI:36080) in a white rice grain (caryopsis fruit; PO:0030104)." [TO:cooperl]
 synonym: "polished rice protein (related)" RELATED []
 synonym: "protein content for polished rice (related)" RELATED []
 synonym: "WHTRPROTCN (related)" RELATED []
-is_a: TO:0000490 ! seed protein composition trait
-is_a: TO:0000598 ! protein content
+is_a: TO:0001136 ! grain protein content
 
 [Term]
 id: TO:0000415
@@ -4004,9 +4002,9 @@ is_a: TO:0000281 ! metabolite content trait
 
 [Term]
 id: TO:0000490
-name: seed protein composition trait
-def: "A seed composition based quality trait (TO:0000488) which is the amount of protein (CHEBI_36080) in a seed (PO:0009010)." []
-is_a: TO:0000488 ! seed composition quality trait
+name: seed protein content
+def: "A protein content trait (TO:0000598) which is the amount of protein (CHEBI:36080) in a seed (PO:0009010)." [TO:cooperl]
+is_a: TO:0000598 ! protein content
 
 [Term]
 id: TO:0000491
@@ -4825,9 +4823,9 @@ created_by: jaiswalp
 [Term]
 id: TO:0000598
 name: protein content
-def: "The total protein content measured in a plant or a plant part." [Gramene:pankaj_jaiswal37]
+def: "A metabolite content trait (TO:0000281) which is the amount of protein (CHEBI:36080) in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal37] {comment="TO:cooperl"}
 synonym: "PROTCN (related)" RELATED []
-synonym: "total protein content (related)" RELATED []
+synonym: "total protein content (narrow)" NARROW []
 is_a: TO:0000281 ! metabolite content trait
 
 [Term]
@@ -4924,8 +4922,6 @@ def: "The ratio of soluble protein to total protein content is a measure of the 
 comment: As seen in degree of modification of grain to malt in barley.
 synonym: "Soluble protein to total protein content ratio (related)" RELATED []
 synonym: "STPROTRO (related)" RELATED []
-is_a: TO:0000325 ! soluble protein content
-is_a: TO:0000490 ! seed protein composition trait
 is_a: TO:0000598 ! protein content
 
 [Term]
@@ -9552,7 +9548,7 @@ creation_date: 2023-02-28T23:10:08Z
 [Term]
 id: TO:0001132
 name: capsule fruit length
-def: "A capsule fruit morphology trait (TO:0001078) which is the width (PATO:0000921) of a capsule fruit (PO:0030091)." [PATO:0000122, TO:cooperl]
+def: "A capsule fruit morphology trait (TO:0001078) which is the length (PATO:0000122) of a capsule fruit (PO:0030091)." [PATO:0000122, TO:cooperl]
 synonym: "capsule length (exact)" EXACT []
 xref: TO_GIT:497
 is_a: TO:0001078 ! capsule fruit morphology trait
@@ -9583,11 +9579,21 @@ creation_date: 2023-02-28T23:41:19Z
 id: TO:0001135
 name: capsule fruit number
 def: "A fruit number trait (TO:0000894) which is the number of capsule fruit (PO:0030091)." [TO:cooperl]
-synonym: "number of capsules per plant (broad)" BROAD []
+synonym: "number of capsule fruits per plant (narrow)" NARROW []
 xref: TO_GIT:500
 is_a: TO:0000894 ! fruit number trait
 created_by: https://orcid.org/0000-0002-6379-8932
 creation_date: 2023-02-28T23:44:27Z
+
+[Term]
+id: TO:0001136
+name: grain protein content
+def: "A protein content trait (TO:0000598) which is the amount of protein (CHEBI:36080) in a caryopsis fruit (PO:0030104)." [TO:cooperl]
+synonym: "kernel protein content (related)" RELATED []
+xref: TO_GIT:278
+is_a: TO:0000598 ! protein content
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2023-03-08T00:47:52Z
 
 [Term]
 id: TO:0002600
@@ -10019,8 +10025,7 @@ is_a: TO:0002650 ! phototropism response trait
 id: TO:0002653
 name: endosperm storage protein content
 def: "Assay for the amount of seed storage protein present in the endosperm." [Gramene:pankaj_jaiswal]
-is_a: TO:0000490 ! seed protein composition trait
-is_a: TO:0000598 ! protein content
+is_a: TO:0000490 ! seed protein content
 
 [Term]
 id: TO:0002654
