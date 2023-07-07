@@ -1308,7 +1308,7 @@ def: "Response shown by the plant in terms of sensitivity to one or more types o
 synonym: "radiation sensitivity (related)" RELATED []
 synonym: "RADSN (related)" RELATED []
 synonym: "response to radiation (related)" RELATED []
-is_a: TO:0000168 ! abiotic stress trait
+is_a: TO:0000168 ! abiotic plant stress trait
 
 [Term]
 id: TO:0000162
@@ -1333,7 +1333,7 @@ is_a: TO:0000401 ! plant growth hormone sensitivity
 [Term]
 id: TO:0000164
 name: plant stress trait
-def: "A plant trait (TO:0000387) which is the response of a plant structure (PO:0009011) to a plant stress (PSO:0000001)." [Gramene:pankaj_jaiswal, TO:cooperl]
+def: "A plant trait (TO:0000387) which is the response of a plant structure (PO:0009011) to a plant stress (PSO:0000001)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000001, TO:cooperl]
 comment: Plant stress traits may be manifested in either the whole plant (PO:0000003) or in parts of the plant, as a result of the exposure to either a biotic plant stress (PSO:0000011) or an abiotic plant stress (PSO:0000012). Responses to plant stresses may vary from resistance to susceptibility, with varying levels of tolerance.
 synonym: "crop damage (related)" RELATED []
 synonym: "stress resistance (related)" RELATED []
@@ -1369,8 +1369,9 @@ is_a: TO:0000401 ! plant growth hormone sensitivity
 
 [Term]
 id: TO:0000168
-name: abiotic stress trait
-def: "Response by the plant in terms of resistivity or sensitivity to abiotic stress." [Gramene:pankaj_jaiswal]
+name: abiotic plant stress trait
+def: "A plant stress trait (TO:0000164) which is the response of a plant structure (PO:0009011) to an abiotic plant stress (PSO:0000012)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000012, TO:cooperl]
+comment: Plant abiotic stress traits may be manifested in either the whole plant (PO:0000003) or in parts of the plant, as a result of the exposure to an abiotic plant stress (PSO:0000012).  Responses to plant stresses may vary from resistance to susceptibility, with varying levels of tolerance. Abiotic stresses are those resulting from non-living factors such as drought, salinity or temperature extremes.
 synonym: "abiotic stress tolerance (related)" RELATED []
 is_a: TO:0000164 ! plant stress trait
 
@@ -1454,8 +1455,9 @@ is_a: TO:0000479 ! acid sensitivity
 
 [Term]
 id: TO:0000179
-name: biotic stress trait
-def: "Response by the plant in terms of resistivity or sensitivity to biotic stress." [Gramene:pankaj_jaiswal]
+name: biotic plant stress trait
+def: "A plant stress trait (TO:0000164) which is the response of a plant structure (PO:0009011) to biotic plant stress (PSO:0000011)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000011, TO:cooperl]
+comment: Plant biotic stress traits may be manifested in either the whole plant (PO:0000003) or in parts of the plant, as a result of the exposure to a biotic plant stress (PSO:0000011). Responses to biotic plant stresses may vary from resistance to susceptibility, with varying levels of tolerance. Biotic stresses are those resulting from living factors such as microorganisms, animals, insects, or other plants.
 is_a: TO:0000164 ! plant stress trait
 
 [Term]
@@ -1940,13 +1942,13 @@ is_a: TO:0002748 ! ligule morphology trait
 id: TO:0000236
 name: crop damage resistance
 synonym: "crop damage resistance trait (exact)" EXACT []
-is_a: TO:0000179 ! biotic stress trait
+is_a: TO:0000179 ! biotic plant stress trait
 
 [Term]
 id: TO:0000237
 name: water stress trait
 def: "Response by the plant in terms of sensitivity to water stress (quality and quantity of water)." [Gramene:pankaj_jaiswal]
-is_a: TO:0000168 ! abiotic stress trait
+is_a: TO:0000168 ! abiotic plant stress trait
 
 [Term]
 id: TO:0000238
@@ -3557,7 +3559,7 @@ is_a: TO:0000976 ! ear infructescence morphology trait
 id: TO:0000432
 name: temperature response trait
 def: "Response by the plant in terms of sensitivity to temperature stress." [Gramene:pankaj_jaiswal]
-is_a: TO:0000168 ! abiotic stress trait
+is_a: TO:0000168 ! abiotic plant stress trait
 
 [Term]
 id: TO:0000433
@@ -3832,7 +3834,7 @@ name: cell membrane stability
 def: "Stability of the cell membrane under the impact of temperature (heat) and water deficit stress." [Gramene:pankaj_jaiswal, http://www.plantstress.com/methods/CMS_method.htm]
 comment: The trait is often observed in plants as a measure of drought and heat tolerance by determining the amount of solutes/electrolyte leaked from the cell.
 synonym: "CELMBSTB (related)" RELATED []
-is_a: TO:0000168 ! abiotic stress trait
+is_a: TO:0000168 ! abiotic plant stress trait
 
 [Term]
 id: TO:0000468
@@ -3945,7 +3947,7 @@ is_a: TO:0000254 ! growth media pH sensitivity
 id: TO:0000482
 name: chemical stress sensitivity
 def: "Response by the plant in terms of resistivity or senility to chemical stress." [Gramene:pankaj_jaiswal]
-is_a: TO:0000168 ! abiotic stress trait
+is_a: TO:0000168 ! abiotic plant stress trait
 
 [Term]
 id: TO:0000483
@@ -10367,7 +10369,7 @@ is_a: TO:0006016 ! meristem tissue development trait
 id: TO:0002693
 name: gravity response trait
 def: "An assay to determine the variation in the gravitropism under the influence of gravity or zero gravity." [Gramene:pankaj_jaiswal]
-is_a: TO:0000168 ! abiotic stress trait
+is_a: TO:0000168 ! abiotic plant stress trait
 
 [Term]
 id: TO:0002694
