@@ -116,8 +116,7 @@ def: "An assay to determine the resistance exhibited by a plant or a group of pl
 comment: The factors needed for successful test are the presence of sources and vectors, inoculation at the susceptible growth stage of the test plants and favorable environmental conditions.
 synonym: "MLO (related)" RELATED []
 synonym: "MLORS (related)" RELATED []
-is_a: TO:0000112 ! disease resistance
-is_a: TO:0000242 ! microbial damage resistance
+is_a: TO:0000112 ! microbial disease response
 
 [Term]
 id: TO:0000014
@@ -898,13 +897,13 @@ is_a: TO:0000106 ! male sterility type
 
 [Term]
 id: TO:0000112
-name: disease resistance
-def: "An assay to determine the resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a pathogen infection as compared to the susceptible and/or the reference plants of the same species." [Gramene:pankaj_jaiswal]
-comment: It represents the damage done by the diease and/or the pathogen to the plant. The damage is a direct measure of resistance to the particular pathogen variety causing the disease.
-synonym: "disease control (exact)" EXACT []
-synonym: "disease resistance trait (exact)" EXACT []
+name: microbial disease response
+def: "A biotic plant stress trait (TO:0000179) which is the response to damage to a plant structure (PO:0009011) caused by an infection by a microbial pathogen." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+comment: The plant reponse to a microbial infection may be manifested in either the whole plant (PO:0000003) or in parts of the plant. The damage is a direct measure of resistance to the particular pathogen causing the disease.
+synonym: "disease control (broad)" BROAD []
+synonym: "disease resistance trait (narrow)" NARROW []
 synonym: "disease susceptibility (narrow)" NARROW []
-synonym: "disease tolerance (exact)" EXACT []
+synonym: "disease tolerance (narrow)" EXACT []
 is_a: TO:0000179 ! biotic plant stress trait
 
 [Term]
@@ -1197,8 +1196,7 @@ id: TO:0000148
 name: viral disease resistance
 def: "An assay to determine the resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a viral pathogen infection as compared to the susceptible and/or the reference plants of the same species." [Gramene:pankaj_jaiswal, RiceSES:SES]
 comment: It represents the damage done by the diease and/or the viral pathogen to the plant. The damage is a direct measure of resistance to the particular viral strain causing the diease.
-is_a: TO:0000112 ! disease resistance
-is_a: TO:0000242 ! microbial damage resistance
+is_a: TO:0000112 ! microbial disease response
 
 [Term]
 id: TO:0000149
@@ -1984,9 +1982,9 @@ is_a: TO:0000077 ! shoot system morphology trait
 
 [Term]
 id: TO:0000242
-name: microbial damage resistance
-def: "Response by the plant in terms of resistivity or sensitivity to microbes." [Gramene:pankaj_jaiswal]
-is_a: TO:0000179 ! biotic plant stress trait
+name: OBSOLETE microbial damage resistance
+def: "OBSOLETE Response by the plant in terms of resistivity or sensitivity to microbes." [Gramene:pankaj_jaiswal]
+is_obsolete: true
 
 [Term]
 id: TO:0000243
@@ -2613,8 +2611,7 @@ id: TO:0000315
 name: bacterial disease resistance
 def: "The resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a bacterial pathogen infection as compared to the susceptible and/or the reference plants of the same species." [Gramene:pankaj_jaiswal]
 comment: It represents the damage done by the diease and/or the pathogen to the plant. The damage is a direct measure of resistance to the particular bacterial strain causing the disease.
-is_a: TO:0000112 ! disease resistance
-is_a: TO:0000242 ! microbial damage resistance
+is_a: TO:0000112 ! microbial disease response
 
 [Term]
 id: TO:0000316
@@ -3610,7 +3607,7 @@ id: TO:0000439
 name: fungal disease resistance
 def: "The resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a fungal pathogen infection as compared to the susceptible and/or the reference plants of the same species." [Gramene:pankaj_jaiswal]
 comment: It represents the damage done by the diease and/or the pathogen to the plant. The damage is a direct measure of resistance to the particular fungal strain causing the disease.
-is_a: TO:0000112 ! disease resistance
+is_a: TO:0000112 ! microbial disease response
 
 [Term]
 id: TO:0000440
@@ -4605,7 +4602,7 @@ id: TO:0000570
 name: watery lesion percentage
 synonym: "percentage of watery lesion (related)" RELATED []
 synonym: "WLPCENT (related)" RELATED []
-is_a: TO:0000242 ! microbial damage resistance
+is_a: TO:0000315 ! bacterial disease resistance
 
 [Term]
 id: TO:0000571
@@ -8226,7 +8223,7 @@ creation_date: 2015-09-01T16:12:33Z
 [Term]
 id: TO:0000966
 name: ear infructescence position ratio
-def: "An ear infructescence morphology trait (TO:0000976) which is the ratio of ear infructescence position (TO:0000683) to plant height (TO:0000207)." [TO:Laurel_Cooper, TO:Ethan_Johnson]
+def: "An ear infructescence morphology trait (TO:0000976) which is the ratio of ear infructescence position (TO:0000683) to plant height (TO:0000207)." [TO:Ethan_Johnson, TO:Laurel_Cooper]
 synonym: "ear position ratio (related)" RELATED []
 xref: TO_GIT:132
 is_a: TO:0000976 ! ear infructescence morphology trait
@@ -10447,8 +10444,7 @@ is_a: TO:0000439 ! fungal disease resistance
 id: TO:0002703
 name: protist disease resistance
 def: "The resistance exhibited by a plant or a group of plants (population) in response to the disease caused by a protist infection as compared to the susceptible and/or the reference plants of the same species." [Gramene:pankaj_jaiswal]
-is_a: TO:0000112 ! disease resistance
-is_a: TO:0000242 ! microbial damage resistance
+is_a: TO:0000112 ! microbial disease response
 
 [Term]
 id: TO:0002704
