@@ -245,7 +245,7 @@ id: TO:0000030
 name: sedge weed response
 def: "A weed damage response (TO:0000347) trait which is the response of a plant to weed competition from sedge weeds." [Gramene:pankaj_jaiswal, http://ipm.ucanr.edu/PMG/WEEDS/sedge_gallery.html, ISBN:9712200299, TO:Laurel_Cooper]
 comment: Sedges are perennial plants which resemble grasses, and commonly grow in shallow water or moist soils, such as rice production fields.  Sedges may be distinguished from grasses by their stem cross-section (solid, triangular)  and leaf shape (long, thin-textured, narrow and flat).\nCommon sedge weeds in rice fields include Smallflower Umbrella Sedge (Cyperus difformis),  Ricefield Bulrush (Scirpus mucronatus), and River Bulrush (Scirpus fluviatilis).
-is_a: TO:0000347 ! weed damage
+is_a: TO:0000347 ! weed damage response trait
 
 [Term]
 id: TO:0000031
@@ -812,7 +812,7 @@ is_a: TO:0000587 ! endosperm quality
 id: TO:0000101
 name: broad-leaved weed
 def: "A common sedge weed Monochoria vaginalis (monochoria), California arrowhead Sagittaria montevidensis, Gregg arrowhead Sagittaria longiloba, Ducksalad Heteranthera limosa, Echinodorus berteroi and E. cordifolius (Burhead), Ammannia spp (Redstems), Bacopa spp. (Water hyssops), Alisma plantago-aquatica (Common water plantain). Grows as a weed in the rice field. Can be distinguished from rice plant by the leaf shape, venation, stem cross-section and plant shape leaf shape." [Gramene:pankaj_jaiswal, http://www.ipm.ucdavis.edu/PMG/r682700999.html, ISBN:9712200299]
-is_a: TO:0000347 ! weed damage
+is_a: TO:0000347 ! weed damage response trait
 
 [Term]
 id: TO:0000102
@@ -2847,7 +2847,7 @@ is_a: TO:0000270 ! inflorescence axis angle
 id: TO:0000343
 name: grass weed
 def: "A common grass weed Echinochloa glabbrescens or Echinochloa crus-galli (Barnyard grass), Typha spp. (Cattails), Leptochloa fascicularis (Bearded sprangletop) grows as a weed in the rice field. Can be distinguished from rice plant by the leaf shape, venation, stem cross-section and plant shape leaf shape." [Gramene:pankaj_jaiswal, http://www.ipm.ucdavis.edu/PMG/r682700999.html, ISBN:9712200299]
-is_a: TO:0000347 ! weed damage
+is_a: TO:0000347 ! weed damage response trait
 
 [Term]
 id: TO:0000344
@@ -2876,8 +2876,9 @@ relationship: part_of TO:0000027 ! culm number
 
 [Term]
 id: TO:0000347
-name: weed damage
-def: "Weeds reduce the yield regardless of planting season. They compete for sunlight, nutrients and water. If any of these is lacking, the others cannot be used effectively, even if a lot are present. Thus, the competition results in poor plant growth and less yield." [Gramene:pankaj_jaiswal, ISBN:9712200299]
+name: weed damage response trait
+def: "A biotic plant stress trait (TO:0000179) which is the response to the competition for nutrients, light, water or space for caused by another plant (NCBITaxon:33090)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+comment: In the case of parasitic plants, the weed may cause damage to a plant structure (PO:0009011), as well as competing for nutrients.
 is_a: TO:0000179 ! biotic plant stress trait
 
 [Term]
@@ -3647,7 +3648,7 @@ is_a: TO:0000936 ! infructescence yield trait
 [Term]
 id: TO:0000444
 name: parasitic weed
-is_a: TO:0000347 ! weed damage
+is_a: TO:0000347 ! weed damage response trait
 
 [Term]
 id: TO:0000445
@@ -5051,7 +5052,7 @@ id: TO:0000624
 name: allelopathic effect
 def: "This is an assay of any direct or indirect, harmful or beneficial effect of one plant on another through the production of chemical compounds (allelochemicals) that escape in the environment." [Gramene:pankaj_jaiswal]
 synonym: "ALLELPATHEF (related)" RELATED []
-is_a: TO:0000347 ! weed damage
+is_a: TO:0000347 ! weed damage response trait
 
 [Term]
 id: TO:0000625
@@ -9652,7 +9653,7 @@ name: legume fruit yield trait
 def: "A fruit yield trait (TO:0000871) which is the amount of legume fruit (PO:0030100) produced." [PO:0030100, TO:Laurel_Cooper]
 comment: The yield of pods or legume fruits is often measured in weight per unit area of land.
 synonym: "pod yield (exact)" EXACT []
-synonym: "TO_GIT:495" EXACT []
+xref: TO_GIT:495
 is_a: TO:0000871 ! fruit yield trait
 created_by: https://orcid.org/0000-0002-6379-8932
 creation_date: 2023-07-17T17:24:36Z
