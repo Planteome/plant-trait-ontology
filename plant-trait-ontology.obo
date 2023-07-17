@@ -3263,6 +3263,7 @@ id: TO:0000396
 name: grain yield trait
 def: "A fruit yield trait (TO:0000871) that is the amount of grain." [RiceSES:SES, TO:contributors, TO:Laurel_Cooper]
 comment: In rice, the grain yield is often measured in kilograms per hectare at 14 percent moisture, if the experiment was done on a field trial.
+synonym: "caryopsis yield (exact)" EXACT []
 synonym: "GRYLD (related)" RELATED []
 synonym: "Yld (related)" RELATED []
 xref: TO_GIT:242
@@ -9195,6 +9196,7 @@ name: legume fruit weight
 def: "A legume fruit morphology trait (TO:0001082) which is the weight of a legume fruit (PO:0030100)." [TO:Laurel_Cooper]
 synonym: "pod weight (exact)" EXACT []
 is_a: TO:0001082 ! legume fruit morphology trait
+relationship: part_of TO:0001142 ! legume fruit yield trait
 created_by: Laurel_Cooper
 creation_date: 2018-09-26T19:37:18Z
 
@@ -9643,6 +9645,17 @@ comment: Rodents includes rats, mice, rabbits, gophers, beavers, etc.
 is_a: TO:0000054 ! animal damage response trait
 created_by: https://orcid.org/0000-0002-6379-8932
 creation_date: 2023-07-07T22:15:20Z
+
+[Term]
+id: TO:0001142
+name: legume fruit yield trait
+def: "A fruit yield trait (TO:0000871) which is the amount of legume fruit (PO:0030100) produced." [PO:0030100, TO:Laurel_Cooper]
+comment: The yield of pods or legume fruits is often measured in weight per unit area of land.
+synonym: "pod yield (exact)" EXACT []
+synonym: "TO_GIT:495" EXACT []
+is_a: TO:0000871 ! fruit yield trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2023-07-17T17:24:36Z
 
 [Term]
 id: TO:0002600
@@ -11179,6 +11192,7 @@ name: legume fruit dry weight
 def: "A legume fruit weight trait (TO:0001092) which is the dry weight of a legume fruit (PO:0030100)." [TO:malaporte]
 synonym: "pod dry weight (exact)" EXACT []
 is_a: TO:0001092 ! legume fruit weight
+relationship: part_of TO:0001142 ! legume fruit yield trait
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
@@ -11187,6 +11201,7 @@ name: legume fruit fresh weight
 def: "A legume fruit weight trait (TO:0001092) which is the fresh weight of a legume fruit (PO:0030100)." [TO:malaporte]
 synonym: "pod fresh weight (exact)" EXACT []
 is_a: TO:0001092 ! legume fruit weight
+relationship: part_of TO:0001142 ! legume fruit yield trait
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
