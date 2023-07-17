@@ -53,12 +53,6 @@
     
 
 
-    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -411,6 +405,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_131860">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_2580"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_57560"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
@@ -1188,7 +1183,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23044"/>
         <obo:IAO_0000115>Any carotenoid derivative with a psi-end group.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>a carotenoid psi-end group</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>carotenoid  psi-end group</rdfs:label>
+        <rdfs:label>carotenoid psi-end derivative</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_139114"/>
@@ -1205,7 +1200,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23044"/>
         <obo:IAO_0000115>Any carotenoid derivative with an beta-end group</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>a carotenoid beta-end derivative</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>carotenoid beta-end group</rdfs:label>
+        <rdfs:label>carotenoid beta-end derivative</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_139120"/>
@@ -1405,6 +1400,29 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_139588"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>alpha-hydroxyketones</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_140948 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_140948">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35366"/>
+        <oboInOwl:hasRelatedSynonym>FA 18:1</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>FA(18:1)</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>fatty acid 18:1</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_140948"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>FA 18:1</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_140948"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>FA(18:1)</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2243,7 +2261,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29412"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>An oxygen hydride consisting of an oxygen atom that is covalently bonded to two hydrogen atoms.</obo:IAO_0000115>
+        <obo:IAO_0000115>An oxygen hydride consisting of an oxygen atom that is covalently bonded to two hydrogen atoms</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>WATER</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Water</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>oxidane</oboInOwl:hasExactSynonym>
@@ -6678,8 +6696,8 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_189832 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_189832">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_194321"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_26208"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64009"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
@@ -6694,6 +6712,34 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_189832"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>hydroperoxy polyunsaturated fatty acids</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_192499 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_192499">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_47916"/>
+        <obo:IAO_0000115>are a type of flavonoid pigments in plants. Anthoxanthins are water-soluble pigments which range in color from white or colorless to a creamy to yellow, often on petals of flowers.</obo:IAO_0000115>
+        <rdfs:label>anthoxanthin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_194321 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_194321">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27208"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64009"/>
+        <obo:IAO_0000115>Any unsaturated fatty acid carrying one or more hydroperoxy substituents.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>hydroperoxy unsaturated fatty acids</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>hydroperoxy unsaturated fatty acid</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_194321"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>hydroperoxy unsaturated fatty acids</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -8285,6 +8331,7 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_24043 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_24043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_192499"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_47916"/>
         <obo:IAO_0000115>A member of the class of flavonoid with a 2-aryl-1-benzopyran-4-one (2-arylchromen-4-one) skeleton and its substituted derivatives.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>2-aryl-1-benzopyran-4-one</oboInOwl:hasRelatedSynonym>
@@ -10986,6 +11033,7 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_25634 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25634">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_140948"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15904"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25413"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_53339"/>
@@ -11252,6 +11300,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25754">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33575"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35903"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>Any compound that has an aldehydic or ketonic group as well as a carboxylic acid group in the same molecule.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>oxo carboxylic acids</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>oxo acids</oboInOwl:hasRelatedSynonym>
@@ -11399,6 +11453,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29369"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_63248"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Compounds of structure ROOR&apos;.</obo:IAO_0000115>
@@ -14081,7 +14141,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_67052"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A phosphonic acid resulting from the formal oxidative coupling of the methyl group of methylphosphonic acid with the amino group of glycine. It is one of the most commonly used herbicdes worldwide, and the only one to target the enzyme 5-enolpyruvyl-3-shikimate phosphate synthase (EPSPS).</obo:IAO_0000115>
+        <obo:IAO_0000115>A phosphonic acid resulting from the formal oxidative coupling of the methyl group of methylphosphonic acid with the amino group of glycine. It is one of the most commonly used herbicides worldwide, and the only one to target the enzyme 5-enolpyruvyl-3-shikimate phosphate synthase (EPSPS).</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>Glyphosate</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>N-(phosphonomethyl)glycine</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>Roundup</oboInOwl:hasRelatedSynonym>
@@ -23259,6 +23319,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35903">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29067"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25754"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>Any carboxylic acid anion containing at least one oxo group.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>oxo carboxylic acid anions</oboInOwl:hasRelatedSynonym>
         <rdfs:label>oxo carboxylic acid anion</rdfs:label>
@@ -23714,6 +23780,7 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_36326 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36326">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15904"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27208"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -23737,8 +23804,8 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_36329 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36329">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_189832"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_36326"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64009"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#has_functional_parent"/>
@@ -27228,6 +27295,12 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38443"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_60038"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>Any member of the &apos;superclass&apos; flavonoids whose skeleton is based on 1-benzopyran with an aryl substituent at position 2. The term was originally restricted to natural products, but is now also used to describe semi-synthetic and fully synthetic compounds.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>Flavonoid</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>2-aryl-1-benzopyran</oboInOwl:hasRelatedSynonym>
@@ -29222,9 +29295,10 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115>A flavonoid oxoanion that is the conjugate base of luteolin, arising from selective deprotonation of the 7-hydroxy group.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>2-(3,4-dihydroxyphenyl)-5-hydroxy-4-oxo-4H-chromen-7-olate</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>2-(3,4-dihydroxyphenyl)-5-hydroxy-4-oxo-4H-1-benzopyran-7-olate</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>luteolin</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>luteolin-7-olate anion</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>2-(3,4-dihydroxyphenyl)-5-hydroxy-4-oxo-4H-chromen-7-olate luteolin-7-olate(1-)</rdfs:label>
+        <rdfs:label>luteolin-7-olate</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_57545"/>
@@ -29232,6 +29306,12 @@
         <owl:annotatedTarget>2-(3,4-dihydroxyphenyl)-5-hydroxy-4-oxo-4H-chromen-7-olate</owl:annotatedTarget>
         <oboInOwl:hasDbXref>IUPAC</oboInOwl:hasDbXref>
         <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/chebi#IUPAC_NAME"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_57545"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>2-(3,4-dihydroxyphenyl)-5-hydroxy-4-oxo-4H-1-benzopyran-7-olate</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>IUPAC</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_57545"/>
@@ -29862,6 +29942,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_60038">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25696"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_47916"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>Any anion arising from deprotonation of at least one OH group in a flavonoid compound.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>flavonoid oxoanions</oboInOwl:hasRelatedSynonym>
         <rdfs:label>flavonoid oxoanion</rdfs:label>
@@ -33966,7 +34052,6 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_78049 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_78049">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_2580"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_82680"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -35653,5 +35738,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi -->
 

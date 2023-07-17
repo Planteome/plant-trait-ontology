@@ -25,6 +25,7 @@ relationship: BFO:0000050 BFO:0000004 ! independent continuant
 id: BFO:0000019
 name: quality
 is_a: BFO:0000020 ! specifically dependent continuant
+relationship: BFO:0000050 BFO:0000019 ! quality
 
 [Term]
 id: BFO:0000020
@@ -227,14 +228,44 @@ is_transitive: true
 is_a: RO:0002131
 
 [Typedef]
+id: RO:0000052
+is_functional: true
+is_a: RO:0002314
+inverse_of: RO:0000053
+
+[Typedef]
+id: RO:0000053
+range: BFO:0000020 ! specifically dependent continuant
+is_inverse_functional: true
+
+[Typedef]
+id: RO:0000080
+is_a: RO:0000052
+inverse_of: RO:0000086
+
+[Typedef]
 id: RO:0000086
+range: BFO:0000019 ! quality
 is_a: RO:0000053
 
 [Typedef]
 id: RO:0002131
+holds_over_chain: BFO:0000050 BFO:0000050
+holds_over_chain: BFO:0000051 BFO:0000050 {http://purl.obolibrary.org/obo/RO_0002582="true"}
+holds_over_chain: BFO:0000051 RO:0002131
+is_symmetric: true
 is_a: RO:0002323
+transitive_over: BFO:0000050
+
+[Typedef]
+id: RO:0002314
+holds_over_chain: RO:0000052 BFO:0000050 {http://purl.obolibrary.org/obo/RO_0002582="true"}
+is_a: RO:0002502
+transitive_over: BFO:0000050
 
 [Typedef]
 id: RO:0002473
+domain: BFO:0000040 ! material entity
+range: BFO:0000040 ! material entity
 is_a: BFO:0000051
 

@@ -75,6 +75,7 @@ synonym: "anionic octadecanoid" RELATED [ChEBI]
 synonym: "anionic octadecanoids" RELATED [ChEBI]
 synonym: "octadecanoid anions" RELATED [ChEBI]
 is_a: CHEBI:2580 ! unsaturated fatty acid anion
+is_a: CHEBI:57560 ! long-chain fatty acid anion
 relationship: is_conjugate_base_of CHEBI:36326 ! octadecanoid
 
 [Term]
@@ -268,14 +269,14 @@ is_a: CHEBI:76906 ! EC 4.1.1.* (carboxy-lyase) inhibitor
 
 [Term]
 id: CHEBI:139114
-name: carotenoid  psi-end group
+name: carotenoid psi-end derivative
 def: "Any carotenoid derivative with a psi-end group." []
 synonym: "a carotenoid psi-end group" RELATED [UniProt]
 is_a: CHEBI:23044 ! carotenoid
 
 [Term]
 id: CHEBI:139120
-name: carotenoid beta-end group
+name: carotenoid beta-end derivative
 def: "Any carotenoid derivative with an beta-end group" []
 synonym: "a carotenoid beta-end derivative" RELATED [UniProt]
 is_a: CHEBI:23044 ! carotenoid
@@ -332,6 +333,13 @@ synonym: "alpha-hydroxyketone" RELATED [ChEBI]
 synonym: "alpha-hydroxyketones" RELATED [ChEBI]
 is_a: CHEBI:30879 ! alcohol
 is_a: CHEBI:52396 ! alpha-oxyketone
+
+[Term]
+id: CHEBI:140948
+name: fatty acid 18:1
+synonym: "FA 18:1" RELATED [ChEBI]
+synonym: "FA(18:1)" RELATED [ChEBI]
+is_a: CHEBI:35366 ! fatty acid
 
 [Term]
 id: CHEBI:140949
@@ -502,7 +510,7 @@ relationship: RO:0000087 CHEBI:83056 ! Daphnia magna metabolite
 [Term]
 id: CHEBI:15377
 name: water
-def: "An oxygen hydride consisting of an oxygen atom that is covalently bonded to two hydrogen atoms." []
+def: "An oxygen hydride consisting of an oxygen atom that is covalently bonded to two hydrogen atoms" []
 synonym: "[OH2]" RELATED [IUPAC]
 synonym: "acqua" RELATED [ChEBI]
 synonym: "agua" RELATED [ChEBI]
@@ -626,7 +634,7 @@ synonym: "Luteolol" RELATED [ChemIDplus]
 synonym: "Salifazide" RELATED [ChemIDplus]
 is_a: CHEBI:27741 ! 3'-hydroxyflavonoid
 is_a: CHEBI:38684 ! tetrahydroxyflavone
-relationship: is_conjugate_acid_of CHEBI:57545 ! 2-(3,4-dihydroxyphenyl)-5-hydroxy-4-oxo-4H-chromen-7-olate luteolin-7-olate(1-)
+relationship: is_conjugate_acid_of CHEBI:57545 ! luteolin-7-olate
 relationship: RO:0000087 CHEBI:35610 ! antineoplastic agent
 relationship: RO:0000087 CHEBI:48422 ! angiogenesis inhibitor
 relationship: RO:0000087 CHEBI:48578 ! radical scavenger
@@ -662,7 +670,7 @@ synonym: "LYCOPENE" EXACT [PDBeChem]
 synonym: "Lycopene" EXACT [KEGG_COMPOUND]
 synonym: "psi,psi-carotene" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:35162 ! acyclic carotene
-relationship: BFO:0000051 CHEBI:139114 ! carotenoid  psi-end group
+relationship: BFO:0000051 CHEBI:139114 ! carotenoid psi-end derivative
 relationship: RO:0000087 CHEBI:22586 ! antioxidant
 relationship: RO:0000087 CHEBI:76924 ! plant metabolite
 
@@ -1024,7 +1032,7 @@ synonym: "beta,beta-carotene" EXACT IUPAC_NAME [IUPAC]
 synonym: "BETA-CAROTENE" EXACT [PDBeChem]
 synonym: "beta-Carotene" EXACT [KEGG_COMPOUND]
 synonym: "beta-Karotin" RELATED [ChEBI]
-is_a: CHEBI:139120 ! carotenoid beta-end group
+is_a: CHEBI:139120 ! carotenoid beta-end derivative
 is_a: CHEBI:35163 ! cyclic carotene
 relationship: RO:0000087 CHEBI:173084 ! ferroptosis inhibitor
 relationship: RO:0000087 CHEBI:22586 ! antioxidant
@@ -1424,9 +1432,23 @@ id: CHEBI:189832
 name: hydroperoxy polyunsaturated fatty acid
 def: "Any polyunsaturated fatty acid carrying one or more hydroperoxy substituents." []
 synonym: "hydroperoxy polyunsaturated fatty acids" RELATED [ChEBI]
+is_a: CHEBI:194321 ! hydroperoxy unsaturated fatty acid
 is_a: CHEBI:26208 ! polyunsaturated fatty acid
-is_a: CHEBI:64009 ! hydroperoxy fatty acid
 relationship: is_conjugate_acid_of CHEBI:134019 ! hydroperoxy polyunsaturated fatty acid anion
+
+[Term]
+id: CHEBI:192499
+name: anthoxanthin
+def: "are a type of flavonoid pigments in plants. Anthoxanthins are water-soluble pigments which range in color from white or colorless to a creamy to yellow, often on petals of flowers." []
+is_a: CHEBI:47916 ! flavonoid
+
+[Term]
+id: CHEBI:194321
+name: hydroperoxy unsaturated fatty acid
+def: "Any unsaturated fatty acid carrying one or more hydroperoxy substituents." []
+synonym: "hydroperoxy unsaturated fatty acids" RELATED [ChEBI]
+is_a: CHEBI:27208 ! unsaturated fatty acid
+is_a: CHEBI:64009 ! hydroperoxy fatty acid
 
 [Term]
 id: CHEBI:20432
@@ -1848,6 +1870,7 @@ synonym: "2-aryl-1-benzopyran-4-ones" RELATED [ChEBI]
 synonym: "2-arylchromen-4-one" RELATED [ChEBI]
 synonym: "2-arylchromen-4-ones" RELATED [ChEBI]
 synonym: "a flavone" RELATED [UniProt]
+is_a: CHEBI:192499 ! anthoxanthin
 is_a: CHEBI:47916 ! flavonoid
 
 [Term]
@@ -2585,6 +2608,7 @@ id: CHEBI:25634
 name: octadecenoic acid
 def: "Any member of the group of C18 monounsaturated fatty acids with the double bond located at any position in the chain." []
 synonym: "octadecenoic acid" EXACT IUPAC_NAME [IUPAC]
+is_a: CHEBI:140948 ! fatty acid 18:1
 is_a: CHEBI:15904 ! long-chain fatty acid
 is_a: CHEBI:25413 ! monounsaturated fatty acid
 is_a: CHEBI:53339 ! olefinic fatty acid
@@ -2677,6 +2701,7 @@ synonym: "oxo acids" RELATED [IUPAC]
 synonym: "oxo carboxylic acids" EXACT IUPAC_NAME [IUPAC]
 synonym: "oxo carboxylic acids" RELATED [ChEBI]
 is_a: CHEBI:33575 ! carboxylic acid
+relationship: is_conjugate_acid_of CHEBI:35903 ! oxo carboxylic acid anion
 
 [Term]
 id: CHEBI:2580
@@ -2714,6 +2739,7 @@ def: "Compounds of structure ROOR'." []
 synonym: "a peroxide" RELATED [UniProt]
 is_a: CHEBI:25741 ! oxide
 relationship: BFO:0000051 CHEBI:29369 ! peroxy group
+relationship: RO:0000087 CHEBI:63248 ! oxidising agent
 
 [Term]
 id: CHEBI:25944
@@ -3366,7 +3392,7 @@ is_a: CHEBI:24698 ! hydroxyflavone
 [Term]
 id: CHEBI:27744
 name: glyphosate
-def: "A phosphonic acid resulting from the formal oxidative coupling of the methyl group of methylphosphonic acid with the amino group of glycine. It is one of the most commonly used herbicdes worldwide, and the only one to target the enzyme 5-enolpyruvyl-3-shikimate phosphate synthase (EPSPS)." []
+def: "A phosphonic acid resulting from the formal oxidative coupling of the methyl group of methylphosphonic acid with the amino group of glycine. It is one of the most commonly used herbicides worldwide, and the only one to target the enzyme 5-enolpyruvyl-3-shikimate phosphate synthase (EPSPS)." []
 synonym: "Glyphosate" EXACT [KEGG_COMPOUND]
 synonym: "N-(phosphonomethyl)glycine" EXACT IUPAC_NAME [IUPAC]
 synonym: "Roundup" RELATED BRAND_NAME [KEGG_COMPOUND]
@@ -3487,7 +3513,7 @@ synonym: "all-trans-alpha-carotene" RELATED [ChemIDplus]
 synonym: "alpha-Carotene" EXACT [KEGG_COMPOUND]
 synonym: "alpha-carotene" EXACT [UniProt]
 synonym: "beta,epsilon-carotene" EXACT IUPAC_NAME [IUPAC]
-is_a: CHEBI:139120 ! carotenoid beta-end group
+is_a: CHEBI:139120 ! carotenoid beta-end derivative
 is_a: CHEBI:35163 ! cyclic carotene
 relationship: RO:0000087 CHEBI:67200 ! provitamin A
 relationship: RO:0000087 CHEBI:76924 ! plant metabolite
@@ -5788,6 +5814,7 @@ name: oxo carboxylic acid anion
 def: "Any carboxylic acid anion containing at least one oxo group." []
 synonym: "oxo carboxylic acid anions" RELATED [ChEBI]
 is_a: CHEBI:29067 ! carboxylic acid anion
+relationship: is_conjugate_base_of CHEBI:25754 ! oxo carboxylic acid
 
 [Term]
 id: CHEBI:35923
@@ -5925,6 +5952,7 @@ id: CHEBI:36326
 name: octadecanoid
 def: "Unsaturated C18 fatty acids and skeletally related compounds." []
 synonym: "octadecanoids" RELATED [ChEBI]
+is_a: CHEBI:15904 ! long-chain fatty acid
 is_a: CHEBI:27208 ! unsaturated fatty acid
 relationship: is_conjugate_acid_of CHEBI:131860 ! octadecanoid anion
 
@@ -5933,8 +5961,8 @@ id: CHEBI:36329
 name: HPODE
 def: "Hydroperoxy-octadecadienoic acids, formed in mammalian cells by peroxidation of linoleic acid." []
 synonym: "HPODEs" RELATED [ChEBI]
+is_a: CHEBI:189832 ! hydroperoxy polyunsaturated fatty acid
 is_a: CHEBI:36326 ! octadecanoid
-is_a: CHEBI:64009 ! hydroperoxy fatty acid
 relationship: has_functional_parent CHEBI:17351 ! linoleic acid
 relationship: is_conjugate_acid_of CHEBI:131862 ! HPODE(1-)
 
@@ -6949,6 +6977,7 @@ synonym: "flavonoids" RELATED [ChEBI]
 is_a: CHEBI:72544 ! flavonoids
 relationship: has_functional_parent CHEBI:26004 ! phenylpropanoid
 relationship: has_functional_parent CHEBI:38443 ! 1-benzopyran
+relationship: is_conjugate_acid_of CHEBI:60038 ! flavonoid oxoanion
 
 [Term]
 id: CHEBI:48107
@@ -7516,8 +7545,9 @@ relationship: is_tautomer_of CHEBI:15428 ! glycine
 
 [Term]
 id: CHEBI:57545
-name: 2-(3,4-dihydroxyphenyl)-5-hydroxy-4-oxo-4H-chromen-7-olate luteolin-7-olate(1-)
+name: luteolin-7-olate
 def: "A flavonoid oxoanion that is the conjugate base of luteolin, arising from selective deprotonation of the 7-hydroxy group." []
+synonym: "2-(3,4-dihydroxyphenyl)-5-hydroxy-4-oxo-4H-1-benzopyran-7-olate" RELATED [IUPAC]
 synonym: "2-(3,4-dihydroxyphenyl)-5-hydroxy-4-oxo-4H-chromen-7-olate" EXACT IUPAC_NAME [IUPAC]
 synonym: "luteolin" RELATED [UniProt]
 synonym: "luteolin-7-olate anion" RELATED [ChEBI]
@@ -7724,6 +7754,7 @@ name: flavonoid oxoanion
 def: "Any anion arising from deprotonation of at least one OH group in a flavonoid compound." []
 synonym: "flavonoid oxoanions" RELATED [ChEBI]
 is_a: CHEBI:25696 ! organic anion
+relationship: is_conjugate_base_of CHEBI:47916 ! flavonoid
 
 [Term]
 id: CHEBI:60240
@@ -8846,7 +8877,6 @@ is_a: CHEBI:76807 ! EC 3.5.1.* (non-peptide linear amide C-N hydrolase) inhibito
 id: CHEBI:78049
 name: octadecenoate
 def: "A fatty acid anion containing 18 carbons and one double bond. Formed by deprotonation of the carboxylic acid group. Major species at pH 7.3." []
-is_a: CHEBI:2580 ! unsaturated fatty acid anion
 is_a: CHEBI:82680 ! monounsaturated fatty acid anion
 relationship: is_conjugate_base_of CHEBI:25634 ! octadecenoic acid
 
