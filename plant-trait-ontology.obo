@@ -21,7 +21,6 @@ ontology: to
 property_value: http://purl.org/dc/terms/description "An ontology that describes phenotypic traits in plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature plant." xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: http://purl.org/dc/terms/title "Plant Trait Ontology" xsd:string
-owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/TO_00001143> \"TO:0001143\")\n)
 
 [Term]
 id: TO:0000001
@@ -920,14 +919,6 @@ relationship: inheres_in PO:0009009 {is_inferred="true"} ! plant embryo
 id: TO:0000114
 name: flooding related trait
 is_a: TO:0000237 ! water stress trait
-
-[Term]
-id: TO:0001143
-name: antioxidant activity trait
-def: "A biochemical trait (TO:0000277) which is the response to an antioxidant (CHEBI:22586)." [TO:cooperl]
-is_a: TO:0000277 ! biochemical trait
-created_by: https://orcid.org/0000-0002-6379-8932
-creation_date: 2023-10-17T20:57:28Z
 
 [Term]
 id: TO:0000115
@@ -5417,7 +5408,7 @@ is_a: TO:0000281 ! metabolite content trait
 [Term]
 id: TO:0000675
 name: ferulic acid content
-def: "A phytochemical compound content trait (TO:0000674) which is the amount of ferulic acid (CHEBI:17620) in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
+def: "A phytochemical compound content trait (TO:0000674) which is the amount of ferulic acid (CHEBI:17620) in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl, Wikipedia:ferulic_acid]
 comment: Ferulic acid is an antioxidant which neutralizes free radicals (superoxide, nitric oxide and hydroxyl radical) which could cause oxidative damage of cell membranes and DNA. Ferulic acid helps to prevent damage to cells caused by ultraviolet light. It is found in the leaves and seeds of many plants, but especially in cereals such as brown rice, whole wheat and oats.
 synonym: "4-hydroxy-3-methoxycinnamic acid (related)" RELATED []
 synonym: "FERULICACIDCN (related)" RELATED []
@@ -9668,6 +9659,14 @@ xref: TO_GIT:495
 is_a: TO:0000871 ! fruit yield trait
 created_by: https://orcid.org/0000-0002-6379-8932
 creation_date: 2023-07-17T17:24:36Z
+
+[Term]
+id: TO:0001143
+name: antioxidant activity trait
+def: "A biochemical trait (TO:0000277) which is the response to an antioxidant (CHEBI:22586)." [TO:cooperl]
+is_a: TO:0000277 ! biochemical trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2023-10-17T20:57:28Z
 
 [Term]
 id: TO:0002600
