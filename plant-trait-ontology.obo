@@ -21,6 +21,7 @@ ontology: to
 property_value: http://purl.org/dc/terms/description "An ontology that describes phenotypic traits in plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature plant." xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: http://purl.org/dc/terms/title "Plant Trait Ontology" xsd:string
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/TO_00001145> \"TO:0001145\")\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/TO_00001146> \"TO:0001146\")\n)
 
 [Term]
 id: TO:0000001
@@ -188,7 +189,8 @@ is_a: TO:0000261 ! insect damage response trait
 [Term]
 id: TO:0000023
 name: fungal infection related grain discoloration
-def: "Causal agent: species of Sarocladium, Bipolaris, Alternaria, Gerlachia, Fusarium, Phoma, Curvularia, Trichoconiella and Psaudomonas etc. Symptoms: darkening of glumes of spikelets, brown color to black including rotten glumes caused by one or more pathogens. Intensity ranges from sporadic discoloration to discoloration of the whole glume. Severity of grain discoloration can be estimated by counting of grains with more than 25% of glume surface affected." [Gramene:pankaj_jaiswal, RiceSES:SES]
+def: "Causal agent: species of Sarocladium, Bipolaris, Alternaria, Gerlachia, Fusarium, Phoma, Curvularia, Trichoconiella and Pseudomonas etc." [Gramene:pankaj_jaiswal, RiceSES:SES]
+comment: Symptoms: darkening of glumes of spikelets, brown color to black including rotten glumes caused by one or more pathogens. Intensity ranges from sporadic discoloration to discoloration of the whole glume. Severity of grain discoloration can be estimated by counting of grains with more than 25% of glume surface affected.
 synonym: "Gd (related)" RELATED []
 synonym: "grain discoloration (related)" RELATED []
 is_a: TO:0000439 ! fungal disease response
@@ -343,10 +345,10 @@ is_a: TO:0006012 ! carpel morphology trait
 [Term]
 id: TO:0000045
 name: rice udbatta disease response
-def: "Causal agent: Balanasia oryzae-sativae (Ephelis oryzae)." [Gramene:pankaj_jaiswal, NCBITaxon:116609, RiceSES:SES, TO:Laurel_Cooper]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Balanasia oryzae-sativae (Ephelis oryzae)." [Gramene:pankaj_jaiswal, NCBITaxon:116609, RiceSES:SES, TO:Laurel_Cooper]
 comment: Symptoms: a white mycelial mat ties the panicle branches together so that they emerge as single, small, cylindrical rods.
 synonym: "UDb (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000046
@@ -366,7 +368,7 @@ def: "Causal agent: Tilletia barclayana." [Gramene:pankaj_jaiswal, NCBITaxon:157
 comment: Symptoms: infected grains show minute black pustules or streaks bursting through the glumes. In severe infection, the rupturing glumes produce short beak-like or spur-like outgrowths.
 synonym: "KSm (related)" RELATED []
 synonym: "KSRS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001146 ! Basidomycete fungal disease response
 
 [Term]
 id: TO:0000049
@@ -573,13 +575,13 @@ is_a: TO:0000080 ! micronutrient sensitivity
 
 [Term]
 id: TO:0000074
-name: blast disease response
-def: "Causal agent: Magnaporthe grisea (Pyricularia grisea)." [Gramene:pankaj_jaiswal, NCBITaxon:148305]
-comment: Symptoms: Can affect either or both the leaf and panicles.
+name: rice blast disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Pyricularia grisea (Magnaporthe grisea)." [Gramene:pankaj_jaiswal, NCBITaxon:148305, TO:cooperl]
+comment: Symptoms: Can affect either or both the leaves and panicles.
 synonym: "blast disease resistance trait (narrow)" NARROW []
 synonym: "blast disease susceptibility (narrow)" NARROW []
 xref: TO_GIT:69
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000075
@@ -677,11 +679,11 @@ is_a: TO:0000748 ! leaf morphology trait
 [Term]
 id: TO:0000086
 name: rice sheath rot disease response
-def: "Causal agent: Sarocladium oryzae." [Gramene:pankaj_jaiswal, NCBITaxon:284135, RiceSES:SES, TO:Laurel_Cooper]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Sarocladium oryzae." [Gramene:pankaj_jaiswal, NCBITaxon:284135, RiceSES:SES, TO:Laurel_Cooper]
 comment: Symptoms: oblong or irregular brown to grey lesions on the leaf sheath near panicle; sometimes coalescing to prevent emergence of panicle.
 synonym: "ShR (related)" RELATED []
 synonym: "SHROTRS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000087
@@ -925,6 +927,22 @@ name: flooding related trait
 is_a: TO:0000237 ! water stress trait
 
 [Term]
+id: TO:00001145
+name: Ascomycete fungal disease response
+def: "A fungal disease response trait (TO:0000439) which is caused by infection by an Asomycete fungal species or combination of species." [NCBITaxon:4890, TO:cooperl]
+is_a: TO:0000439 ! fungal disease response
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2023-12-05T21:40:01Z
+
+[Term]
+id: TO:00001146
+name: Basidomycete fungal disease response
+def: "A fungal disease response trait (TO:0000439) which is caused by infection by a Basidomycete fungal species or combination of species." [NCBITaxon:5204, TO:cooperl]
+is_a: TO:0000439 ! fungal disease response
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2023-12-05T21:46:29Z
+
+[Term]
 id: TO:0000115
 name: root mass density
 def: "Determined as the dry mass of roots per unit soil volume at a given soil section." [Gramene:pankaj_jaiswal]
@@ -1034,11 +1052,11 @@ is_a: TO:0000371 ! yield trait
 [Term]
 id: TO:0000129
 name: rice false smut disease response
-def: "Causal agent: Ustilaginoidea virens." [Gramene:pankaj_jaiswal, NCBITaxon:1159556, RiceSES:SES, TO:cooperl]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Ustilaginoidea virens." [Gramene:pankaj_jaiswal, NCBITaxon:1159556, RiceSES:SES, TO:cooperl]
 comment: Symptoms: infected grains are transformed into yellow-greenish or greenish-black velvety-looking spore balls.
 synonym: "FSm (related)" RELATED []
 synonym: "FSRS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000130
@@ -2080,12 +2098,12 @@ is_a: TO:0000238 ! growth media composition sensitivity
 [Term]
 id: TO:0000255
 name: rice leaf sheath blight disease response
-def: "A fungal blight disease reponse (TO:0000664) trait which is caused by Rhizoctonia solani (PECO:0007379) exposure." [NCBITaxon:107832, RiceSES:SES, TO:Cooperl]
+def: "A Basidomycete fungal disease response trait (TO:0001146) which is caused by Rhizoctonia solani (PECO:0007379) exposure." [NCBITaxon:107832, RiceSES:SES, TO:Cooperl]
 comment: Causal agent: 'Rhizoctonia solani J.G. Kühn, 1858' (NCBITaxon:456999) is known as 'Thanatephorus cucumeris (A.B. Frank) Donk' (NCBITaxon:107832) in the telomorph phase.\nSymptoms: Grayish-green lesions may enlarge and coalesce with other lesions, mostly on lower leaf sheaths, but occasionally on the leaves (RiceSES:SES).
 synonym: "ShB (related)" RELATED []
 synonym: "SHBTRS (related)" RELATED []
 xref: TO_GIT:67
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001146 ! Basidomycete fungal disease response
 
 [Term]
 id: TO:0000256
@@ -2677,11 +2695,11 @@ is_a: TO:0000597 ! plant quality trait
 [Term]
 id: TO:0000323
 name: rice stem rot disease response
-def: "Causal agent: Magnaporthe salvinii (Nakataea sigmoidea, Sclerotium oryzae), and Helminthosporium sigmoideum var. irregulare." [Gramene:pankaj_jaiswal, RiceSES:SES, TO:Laurel_Cooper]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Magnaporthe salvinii (Nakataea sigmoidea, Sclerotium oryzae) and Helminthosporium sigmoideum var. irregulare." [Gramene:pankaj_jaiswal, NCBITaxon:165778, NCBITaxon:58127, RiceSES:SES, TO:Laurel_Cooper]
 comment: Symptoms: dark lesions develop on the stems near the water line. Small, dark bodies (sclerotia) develop, weaken the stem and cause lodging.
 synonym: "CULMROTRS (related)" RELATED []
 synonym: "SR (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000324
@@ -2952,10 +2970,10 @@ is_a: TO:0000250 ! plant vigor trait
 [Term]
 id: TO:0000356
 name: rice brown spot disease response
-def: "Causal agent: Cochliobolus miyabeanus (Bipolaris oryzae, Drechslera oryzae)." [Gramene:pankaj_jaiswal, NCBITaxon:101162, RiceSES:SES]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Cochliobolus miyabeanus (Bipolaris oryzae, Drechslera oryzae)." [Gramene:pankaj_jaiswal, NCBITaxon:101162, RiceSES:SES]
 comment: Symptom: typical leaf spots are small, oval or circular and dark brown. Larger lesions usually have same color on the edges but have a pale (usually grayish) center. Most spots have a light yellow halo around the outer edge.
 synonym: "BS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000357
@@ -3137,11 +3155,11 @@ is_a: TO:0001069 ! cooking quality trait
 [Term]
 id: TO:0000378
 name: rice leaf scald disease response
-def: "Causal agent: Monographella albescens (Microdochium oryzae)." [Gramene:pankaj_jaiswal, NCBITaxon:1682384, RiceSES:SES, TO:Laurel_Cooper]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Monographella albescens (Microdochium oryzae)." [Gramene:pankaj_jaiswal, NCBITaxon:1682384, RiceSES:SES, TO:Laurel_Cooper]
 comment: Symptoms: the lesions occurs mostly near leaf tips, but sometimes start at the margin of the blade and develops into large ellipsoid areas encircled by dark-brown, narrow bands accompanied by a light-brown halo.
 synonym: "LFSRS (related)" RELATED []
 synonym: "LSc (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000379
@@ -3453,11 +3471,11 @@ is_a: TO:0000079 ! flower bract morphology trait
 [Term]
 id: TO:0000418
 name: rice bakanae disease response
-def: "Causal agent: Gibberella fujikuroi." [Gramene:pankaj_jaiswal, NCBITaxon:5127, RiceSES:SES, TO:cooperl]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Gibberella fujikuroi." [Gramene:pankaj_jaiswal, NCBITaxon:5127, RiceSES:SES, TO:cooperl]
 comment: Symptoms: the plant elongates abnormally, has few tillers and usually dies before producing grains.
 synonym: "Bak (related)" RELATED []
 synonym: "BKRS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000419
@@ -3481,10 +3499,10 @@ is_a: TO:0000420 ! fertility related trait
 [Term]
 id: TO:0000422
 name: rice narrow brown leaf spot disease response
-def: "Causal agent: Sphaerulina oryzina (Cercospora janseana)." [Gramene:pankaj_jaiswal, NCBITaxon:706553, RiceSES:SES, TO:cooperl]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Sphaerulina oryzina (Cercospora janseana)." [Gramene:pankaj_jaiswal, NCBITaxon:706553, RiceSES:SES, TO:cooperl]
 synonym: "NBLFSPRS (related)" RELATED []
 synonym: "NBLS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000423
@@ -3850,11 +3868,11 @@ is_a: TO:0000168 ! abiotic plant stress trait
 
 [Term]
 id: TO:0000468
-name: leaf blast disease response
-def: "Causal agent: Magnaporthe grisea (Pyricularia grisea)." [Gramene:pankaj_jaiswal, NCBITaxon:148305, RiceSES:SES]
+name: rice leaf blast disease response
+def: "A rice blast disease response (TO:0000074) caused by Pyricularia grisea (Magnaporthe grisea) affecting a leaf (PO:0009025)." [Gramene:pankaj_jaiswal, NCBITaxon:148305, RiceSES:SES, TO:cooperl]
 synonym: "Bl (related)" RELATED []
 synonym: "LFBLRS (related)" RELATED []
-is_a: TO:0000074 ! blast disease response
+is_a: TO:0000074 ! rice blast disease response
 
 [Term]
 id: TO:0000469
@@ -3918,12 +3936,12 @@ is_a: TO:0000281 ! metabolite content trait
 
 [Term]
 id: TO:0000477
-name: panicle blast disease response
-def: "Causal agent: Magnaporthe grisea (Pyricularia oryzae)." [Gramene:pankaj_jaiswal, NCBITaxon:148305, RiceSES:SES]
+name: rice panicle blast disease response
+def: "A rice blast disease response (TO:0000074) caused by Pyricularia grisea (Magnaporthe grisea) affecting a panicle inflorescence (PO:0030123)." [Gramene:pankaj_jaiswal, NCBITaxon:148305, RiceSES:SES]
 comment: Symptoms are dark necrotic lesions covering partially or completely around the panicle base (node) or the uppermost internode or the lower part.
 synonym: "PB (related)" RELATED []
 synonym: "PNBLRS (related)" RELATED []
-is_a: TO:0000074 ! blast disease response
+is_a: TO:0000074 ! rice blast disease response
 
 [Term]
 id: TO:0000478
@@ -5328,17 +5346,19 @@ relationship: part_of TO:0000329 ! tillering ability
 [Term]
 id: TO:0000662
 name: barley fusarium head blight response
-def: "Caused by Fusarium graminearum Schwabe, that affects the quality and yield of barley (Hordeum vulgare L.) grain." [Gramene:pankaj_jaiswal, NCBITaxon:5518, TO:cooperl]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Fusarium graminearum Schwabe." [Gramene:pankaj_jaiswal, NCBITaxon:5518, TO:cooperl]
+comment: barley fusarium head blight affects the quality and yield of barley (Hordeum vulgare L.) grain.
 synonym: "Hv_FUSHEADBTRS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000663
 name: wheat fusarium head blight response
-def: "Caused by Fusarium graminearum Schwabe (teleomorph: Gibberella zeae), in the USA and Canada. It causes severe yield and quality losses in wheat (Triticum aestivum L.)." [Gramene:pankaj_jaiswal]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Fusarium graminearum Schwabe (teleomorph: Gibberella zeae)." [Gramene:pankaj_jaiswal, NCBITaxon:5518, TO:cooperl]
+comment: In the USA and Canada, it causes severe yield and quality losses in wheat (Triticum aestivum L.).
 synonym: "Ta_FUSHEADBTRS (related)" RELATED []
 xref: TO_GIT:70
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000664
@@ -5564,10 +5584,10 @@ is_a: TO:0000598 ! protein content
 [Term]
 id: TO:0000691
 name: maize northern leaf blight disease response
-def: "Causal agent: Setosphaeria turcica." [Gramene:pankaj_jaiswal, NCBITaxon:93612, TO:cooperl]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Exserohilum turcicum (Setosphaeria turcica)." [Gramene:pankaj_jaiswal, NCBITaxon:93612, TO:cooperl]
 synonym: "NCLB reponse (exact)" EXACT []
 synonym: "northern corn leaf blight response (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000692
@@ -10485,8 +10505,8 @@ is_a: TO:0000301 ! xanthophyll content
 [Term]
 id: TO:0002702
 name: cercospora leaf spot response
-def: "Causal agent: Cercospora spp." [Gramene:pankaj_jaiswal, NCBITaxon:29002]
-is_a: TO:0000439 ! fungal disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Cercospora spp." [Gramene:pankaj_jaiswal, NCBITaxon:29002, TO:cooperl]
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0002703
@@ -12677,16 +12697,17 @@ is_a: TO:0000261 ! insect damage response trait
 
 [Term]
 id: TO:0020008
-name: sorghum grain mold
-def: "Causative agent: Aspergillus spp and Penicillium spp. Trait is measured as extent of grain surface covered with mold." [Gramene:cwt, ICRIS:050]
-is_a: TO:0000023 ! fungal infection related grain discoloration
+name: sorghum grain mold disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Aspergillus spp and Penicillium spp." [Gramene:cwt, NCBITaxon:5052, TO:cooperl]
+comment: Trait is measured as extent of grain surface covered with mold.
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0020009
-name: sorghum rust response
-def: "Causative agent: Puccinia purpurea." [Gramene:cwt, ICRIS:049, NCBITaxon:684838, TO:cooperl]
+name: sorghum rust disease response
+def: "A Basidomycete fungal disease response trait (TO:0001146) caused by Puccinia purpurea infection." [Gramene:cwt, ICRIS:049, NCBITaxon:684838, TO:cooperl]
 comment: Infection causes purple, red or tan flecks on both surfaces of leaves, leaving a reddish powder on fingers when passed over it.
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001146 ! Basidomycete fungal disease response
 
 [Term]
 id: TO:0020010
@@ -12721,10 +12742,10 @@ is_obsolete: true
 
 [Term]
 id: TO:0020015
-name: sorghum leaf blight response
-def: "Causal agent: Setosphaeria turcica, Exserohilum turcicum" [NCBITaxon:93612, TO:cooperl]
+name: sorghum leaf blight disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Exserohilum turcicum (Setosphaeria turcica)." [NCBITaxon:93612, TO:cooperl]
 xref: TO_GIT:69
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0020016
@@ -12889,7 +12910,7 @@ name: barley leaf scald disease response
 def: "Causal agent: Rhynchosporium secalis." [NCBITaxon:38038, T-CAP:Victoria_Blake]
 comment: Symptoms include, oval, water-soaked, blue-grey spots (1.0-1.5 cm long) developing into lesions with dry necrotic centers and dark brown margins. Lesions will coalesce under high infection levels and are not delimited by veins.
 synonym: "scald (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:12:24Z
 
@@ -12899,77 +12920,77 @@ name: barley spot blotch disease response
 def: "A fungal disease resistance (TO:0000439) that is involved in the response to barley spot blotch disease. Causal agent: Cochliobolus sativus (Bipolaris sorokiniana)." [NCBITaxon:45130, T-CAP:Victoria_Blake]
 comment: Symptoms include, uniform chocolate brown lesions that eventually merge forming irregular necrotic patches on leaves. Lesions may be surrounded by yellow zones of varying width.
 synonym: "spot blotch (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:19:00Z
 
 [Term]
 id: TO:0020053
-name: wheat spot blotch disease resistance
-def: "A fungal disease resistance (TO:0000439) that is involved in the response to wheat spot blotch disease. Causal agent: Cochliobolus sativus (Bipolaris sorokiniana)." [T-CAP:Victoria_Blake]
+name: wheat spot blotch disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Cochliobolus sativus (Bipolaris sorokiniana)." [NCBITaxon:45130, T-CAP:Victoria_Blake, TO:cooperl]
 comment: Symptoms include, elongated to oval shaped dark brown lesions. Centers often lighten to dark brown or tan surrounded by an irregular dark brown ring.
-synonym: "Helminthosporium leaf blotch (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+synonym: "Helminthosporium leaf blotch (related)" RELATED []
+is_a: TO:00001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:21:53Z
 
 [Term]
 id: TO:0020054
 name: barley stripe rust disease response
-def: "Causal agent: Puccinia striiformis f. sp. hordei." [NCBITaxon:376348, T-CAP:Victoria_Blake]
+def: "A Basidomycete fungal disease response trait (TO:0001146) caused by Puccinia striiformis f. sp. hordei infection." [NCBITaxon:376348, T-CAP:Victoria_Blake, TO:cooperl]
 comment: Symptoms: chlorotic flecks at the infection site initially appear, followed by yellow uredinia (spore masses) in prominent stripes along the leaf veins. Black telia (overseasoning structures) readily develop from uredinia as infected plants mature.
 synonym: "BSR (exact)" EXACT []
 synonym: "yellow rust (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001146 ! Basidomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:25:00Z
 
 [Term]
 id: TO:0020055
-name: wheat stripe rust disease resistance
-def: "Causal agent: Puccinia striiformis f. sp. tritici." [T-CAP:Victoria_Blake]
+name: wheat stripe rust disease response
+def: "A Basidomycete fungal disease response trait (TO:0001146) caused by Puccinia striiformis f. sp. tritici." [NCBITaxon:168172, T-CAP:Victoria_Blake, TO:cooperl]
 comment: Symptoms: pustules (spore masses) containing yellow to orange-yellow urediniospores form narrow stripes on leaves, leaf sheaths and glumes.
 synonym: "yellow rust (broad)" BROAD []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001146 ! Basidomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:27:45Z
 
 [Term]
 id: TO:0020056
 name: barley leaf rust disease response
-def: "Causal agent: Puccinia hordei." [NCBITaxon:27345, T-CAP:Victoria_Blake]
+def: "A Basidomycete fungal disease response trait (TO:0001146) caused by Puccinia hordei infection." [NCBITaxon:27345, T-CAP:Victoria_Blake, TO:cooperl]
 comment: Symptoms: small round orange brown pustules producing a mass of orange-brown urediniospores on the upper leaf surfaces and leaf sheaths.
 synonym: "brown rust (broad)" BROAD []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001146 ! Basidomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:29:57Z
 
 [Term]
 id: TO:0020057
-name: wheat leaf rust disease resistance
-def: "Causal agent: Puccinia recondita f. sp. tritici." [T-CAP:Victoria_Blake]
+name: wheat leaf rust disease response
+def: "A Basidomycete fungal disease response trait (TO:0001146) caused by Puccinia recondita f. sp. tritici (Puccinia triticina)." [NCBITaxon:208348, T-CAP:Victoria_Blake, TO:cooperl]
 comment: Symptoms: circular to slightly elliptical pustules containing masses of orange to orange-brown urediniospores on the leaf surfaces and leaf sheaths.
 synonym: "brown rust (broad)" BROAD []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001146 ! Basidomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:31:09Z
 
 [Term]
 id: TO:0020058
 name: barley common root rot response
-def: "Causal agents: Cochliobolus sativus (Bipolaris sorokiniana), Fusarium culmorum and Fusarium pseudograminearum." [T-CAP:Victoria_Blake]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Cochliobolus sativus (Bipolaris sorokiniana), Fusarium culmorum and Fusarium pseudograminearum." [NCBITaxon:101028, NCBITaxon:45130, NCBITaxon:5516, T-CAP:Victoria_Blake, TO:cooperl]
 comment: Symptoms: brown lesions on the roots, especially the subcrown internode. Under severe conditions, lesions can become nearly black with brown tissue extending into the crown and leaf sheaths. Stunted plants with reduced tillering and yield. Heads can be white with fewer kernels that are small and shriveled.
 synonym: "crown rot (broad)" BROAD []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:33:03Z
 
 [Term]
 id: TO:0020059
-name: wheat common root rot resistance
-def: "Causal agents: Cochliobolus sativus (Bipolaris sorokiniana)." [T-CAP:Victoria_Blake]
+name: wheat common root rot response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Cochliobolus sativus (Bipolaris sorokiniana)." [NCBITaxon:45130, T-CAP:Victoria_Blake, TO:cooperl]
 comment: Symptoms: browning of the root, crown and basal culm tissues.  Plants may lodge. White spikes can appear.
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:36:24Z
 
@@ -12978,55 +12999,55 @@ id: TO:0020060
 name: barley powdery mildew disease response
 def: "Causal agent: Blumeria graminis f. sp. hordei." [NCBITaxon:2867405, T-CAP:Victoria_Blake]
 comment: Symptoms: first visible signs are fuzzy white to pale grey tufts of mycelia and conidia on the upper surfaces of leaves and leaf sheaths (especially on lower leaves) and sometimes on the spikes. Older fungal tissue is yellowish grey and can be easily rubbed off.  Plant tissue becomes chlorotic or necrotic.  Spherical black cleistothecia may develop.
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:39:36Z
 
 [Term]
 id: TO:0020061
-name: wheat powdery mildew disease resistance
-def: "Causal agent: Blumeria graminis f. sp. tritici." [T-CAP:Victoria_Blake]
+name: wheat powdery mildew disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Blumeria graminis f. sp. tritici." [NCBITaxon:34373, T-CAP:Victoria_Blake, TO:cooperl]
 comment: Symptoms: first visible signs are fuzzy white to pale grey tufts of mycelia and conidia on the upper surfaces of leaves and leaf sheaths (especially on lower leaves) and sometimes on the spikes. Older fungal tissue is yellowish grey and can be easily rubbed off. Plant tissue becomes chlorotic or necrotic. Spherical black cleistothecia may develop.
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:39:36Z
 
 [Term]
 id: TO:0020062
 name: barley net form net blotch disease response
-def: "Causal agent: Pyrenophora teres f. teres." [NCBITaxon:97479, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Pyrenophora teres f. teres." [NCBITaxon:97479, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms: in adult plants, initial symptoms are small pinpoint to elliptical brown spots which expand to form narrow, tan to light brown lesions, often delimited by leaf veins. Within lesions, dark brown longitudinal and transverse striations appear forming a net-like pattern. In seedlings, greenish grey, water-soaked areas appear forming brown lesions with netted striations.
 synonym: "NFNB (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:39:36Z
 
 [Term]
 id: TO:0020063
 name: barley spot form net blotch disease response
-def: "Causal agent: Pyrenophora teres f. maculata." [NCBITaxon:97480, T-CAP:Victoria_Blake, TO:cooperl]
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Pyrenophora teres f. maculata." [NCBITaxon:97480, T-CAP:Victoria_Blake, TO:cooperl]
 comment: Symptoms: dark brown, circular to elliptical lesions surrounded by bands of chlorosis.
 synonym: "SFNB (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:39:36Z
 
 [Term]
 id: TO:0020064
 name: barley septoria disease response
-def: "Causal agent: Septoria passerinii and Stagonospora avenae f. sp. triticeae (teleomorph: Phaeosphaeria avenaria f. sp. triticeae)." [T-CAP:Victoria_Blake]
-comment: Symptoms: in seedlings, S. passerinii causes faint, yellowish areas that turn greenish gray then straw colored with time forming a distinct demarcation next to healthy green tissue.  On adult plants S. passerinii infection produces long, rectangular lesions delimited by veins that first appear graying then turn tan or straw colored. S. avenae f. sp. triticea produces yellow brown lesions that traverse veins and are shield or lens shaped.
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Septoria passerinii (Zymoseptoria passerinii) and Stagonospora avenae f. sp. triticeae (Parastagonospora avenae f. sp. tritici)." [NCBITaxon:1047170, NCBITaxon:54790, T-CAP:Victoria_Blake]
+comment: Symptoms: in seedlings, S. passerinii causes faint, yellowish areas that turn greenish gray then straw colored with time forming a distinct demarcation next to healthy green tissue.  On adult plants S. passerinii infection produces long, rectangular lesions delimited by veins that first appear graying then turn tan or straw colored. S. avenae f. sp. triticea produces yellow brown lesions that traverse veins and are shield or lens shaped. (Stagonospora avenae f. sp. triticeae - teleomorph: Phaeosphaeria avenaria f. sp. triticeae).
 synonym: "SSLB (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:39:36Z
 
 [Term]
 id: TO:0020065
-name: wheat septoria leaf blotch disease resistance
-def: "Causal agent: Septoria tritici (Mycosphaerella graminicola), Septoria nodorum (Leptosphaeria nodorum), Septoria avenae f. sp. triticeae (Leptosphaeria avenaria f. sp. triticeae)." [T-CAP:Victoria_Blake]
+name: wheat septoria leaf blotch disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Septoria tritici (Mycosphaerella graminicola), Septoria nodorum (Leptosphaeria nodorum) and/or Septoria avenae f. sp. triticeae (Leptosphaeria avenaria f. sp. triticeae)." [NCBITaxon:1047171, NCBITaxon:13684, NCBITaxon:54790, T-CAP:Victoria_Blake, TO:cooperl]
 comment: Symptoms: Initial infection sites tend to be irregular in shape, oval to elongated chlorotic spots or lesions. As these sites expand, the centers of the lesions become pale, straw colored, and slightly necrotic, often with numerous small black dots (pycnidia). The lesions of septoria tritici blotch tend to be linear and restricted laterally, while those of septoria nodorum blotch and septoria avenae blotch are more lens shaped. All above ground plant parts can be affected.
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:00001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:39:36Z
 
