@@ -21,6 +21,7 @@ ontology: to
 property_value: http://purl.org/dc/terms/description "An ontology that describes phenotypic traits in plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature plant." xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: http://purl.org/dc/terms/title "Plant Trait Ontology" xsd:string
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/TO_00001148> \"TO:0001148\")\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/TO_00001149> \"TO:0001149\")\n)
 
 [Term]
 id: TO:0000001
@@ -924,6 +925,24 @@ relationship: inheres_in PO:0009009 {is_inferred="true"} ! plant embryo
 id: TO:0000114
 name: flooding related trait
 is_a: TO:0000237 ! water stress trait
+
+[Term]
+id: TO:00001148
+name: neutral detergent fiber content
+def: "The percentage of highly indigestible or slowly digestible fiber in a feed or forage. Neutral detergent fiber contains cellulose, hemicellulose and lignin which are associated with low digestibility." [DOI:10.1186/s12870-018-1368-4, TO:bimbert, TO:Cooperl, Wikipedia:neutral_detergent_fiber]
+comment: The process of determining NDF content involves a neutral detergent that dissolves plant pectins, proteins, sugars and lipids. This leaves behind the fibrous parts such as cellulose, lignin and hemicellulose. (REF: Wikipedia)
+synonym: "NDF (related)" RELATED []
+is_a: TO:0002642 ! dietary fiber content trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2024-05-03T22:51:46Z
+
+[Term]
+id: TO:00001149
+name: seed coat dimpled
+def: "A seed coat texture (TO:0000903) characterized by shallow, wide depressions on the seed surface, distinctly separated by smooth areas." [DOI:10.1017/S0021859600009758, DOI:10.1186/s12870-018-1368-4, TO:bimbert, TO:cooperl]
+is_a: TO:0000903 ! seed coat texture
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2024-05-03T23:15:46Z
 
 [Term]
 id: TO:0000115
@@ -10055,16 +10074,16 @@ is_obsolete: true
 
 [Term]
 id: TO:0002641
-name: acid detergent fiber
+name: acid detergent fiber content
 def: "The percentage of highly indigestible or slowly digestible fiber in a feed or forage. Acid detergent fiber contains cellulose as well as silica and lignin which are associated with low digestibility." [GrainGenes_trait:Acid_Detergent_Fiber, Gramene:pankaj_jaiswal]
 comment: The method typically uses acidified quaternary detergent solution to dissolve cell solubles, hemicellulose and soluble minerals leaving a residue of cellulose, lignin, and heat damaged protein and a portion of cell wall protein and minerals (ash). Acid detergent fiber is determined gravimetrically as the residue remaining after extraction. The lower the acid detergent fiber, the more digestible the feed is and the higher the energy value of the feed.
 synonym: "ACIDDETFIBR (related)" RELATED []
 synonym: "ADF (related)" RELATED []
-is_a: TO:0002642 ! dietary fiber related trait
+is_a: TO:0002642 ! dietary fiber content trait
 
 [Term]
 id: TO:0002642
-name: dietary fiber related trait
+name: dietary fiber content trait
 def: "The traits assayed for content and quality of food/forage based on pre or post digestive processes." [Gramene:pankaj_jaiswal]
 is_a: TO:0000597 ! plant quality trait
 
