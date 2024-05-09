@@ -928,10 +928,10 @@ is_a: TO:0000237 ! water stress trait
 [Term]
 id: TO:00001148
 name: neutral detergent fiber content
-def: "The percentage of highly indigestible or slowly digestible fiber in a feed or forage. Neutral detergent fiber contains cellulose, hemicellulose and lignin which are associated with low digestibility." [DOI:10.1186/s12870-018-1368-4, TO:bimbert, TO:Cooperl, Wikipedia:neutral_detergent_fiber]
+def: "A fiber content trait (TO:0002642) which is the percentage of cellulose, hemicellulose and lignin fiber in a feed or forage." [DOI:10.1186/s12870-018-1368-4, INRAE:bimbert, TO:Cooperl, Wikipedia:neutral_detergent_fiber]
 comment: The process of determining NDF content involves a neutral detergent that dissolves plant pectins, proteins, sugars and lipids. This leaves behind the fibrous parts such as cellulose, lignin and hemicellulose. (REF: Wikipedia)
 synonym: "NDF (related)" RELATED []
-is_a: TO:0002642 ! dietary fiber content trait
+is_a: TO:0002642 ! fiber content trait
 created_by: https://orcid.org/0000-0002-6379-8932
 creation_date: 2024-05-03T22:51:46Z
 
@@ -10074,16 +10074,16 @@ is_obsolete: true
 [Term]
 id: TO:0002641
 name: acid detergent fiber content
-def: "The percentage of highly indigestible or slowly digestible fiber in a feed or forage. Acid detergent fiber contains cellulose as well as silica and lignin which are associated with low digestibility." [GrainGenes_trait:Acid_Detergent_Fiber, Gramene:pankaj_jaiswal]
-comment: The method typically uses acidified quaternary detergent solution to dissolve cell solubles, hemicellulose and soluble minerals leaving a residue of cellulose, lignin, and heat damaged protein and a portion of cell wall protein and minerals (ash). Acid detergent fiber is determined gravimetrically as the residue remaining after extraction. The lower the acid detergent fiber, the more digestible the feed is and the higher the energy value of the feed.
+def: "A fiber content trait (TO:0002642) which is the proportion of fiber that is composed of cellulose and lignin and is highly indigestible or slowly digestible in a feed or forage." [GrainGenes_trait:Acid_Detergent_Fiber, Gramene:pankaj_jaiswal]
+comment: Acid detergent fiber is composed of cellulose and lignin which are associated with low digestibility. The lower the acid detergent fiber, the more digestible the feed is and the higher the energy value of the feed.
 synonym: "ACIDDETFIBR (related)" RELATED []
 synonym: "ADF (related)" RELATED []
-is_a: TO:0002642 ! dietary fiber content trait
+is_a: TO:0002642 ! fiber content trait
 
 [Term]
 id: TO:0002642
-name: dietary fiber content trait
-def: "The traits assayed for content and quality of food/forage based on pre or post digestive processes." [Gramene:pankaj_jaiswal]
+name: fiber content trait
+def: "A plant quality trait (TO:0000597) which is the content and quality of fiber in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal] {comment="TO:cooperl"}
 is_a: TO:0000597 ! plant quality trait
 
 [Term]
@@ -10096,7 +10096,8 @@ is_a: TO:0000465 ! mineral and ion content trait
 [Term]
 id: TO:0002644
 name: dry matter digestibility
-def: "Expressed as a percent, is a measure of the dry matter content of forage or feed that is retained in the animal body." [GrainGenes_trait:Dry_matter_digestibility, Gramene:iyt, Gramene:pankaj_jaiswal]
+def: "A plant quality trait (TO:0000597) which is the proportion of the dry matter content of a forage or feed that is digested in an animal body." [GrainGenes_trait:Dry_matter_digestibility, Gramene:iyt, Gramene:pankaj_jaiswal, TO:cooperl]
+comment: Dry matter digestibility is usually expressed as a percentage.
 synonym: "DMATTDIGAB (related)" RELATED []
 is_a: TO:0000597 ! plant quality trait
 
@@ -10118,7 +10119,8 @@ is_a: TO:0001069 ! cooking quality trait
 [Term]
 id: TO:0002647
 name: starch digestibility
-def: "Expressed as a percent, is a measure of the starch content of forage or feed that is retained in the animal body." [GrainGenes_trait:Starch_digestibility, Gramene:pankaj_jaiswal]
+def: "A plant quality trait (TO:0000597) which is the proportion of the starch content of a forage or feed that is digested by an animal." [GrainGenes_trait:Starch_digestibility, Gramene:pankaj_jaiswal, TO:cooperl]
+comment: Starch digestibility is usually expressed as a percentage.
 synonym: "STARCHDIG (related)" RELATED []
 is_a: TO:0000597 ! plant quality trait
 
@@ -10715,7 +10717,7 @@ relationship: inheres_in PO:0009040 {is_inferred="true"} ! sterile lemma
 [Term]
 id: TO:0002728
 name: fruit quality trait
-def: "A plant quality trait (TO:0000597) which is the commercial and /or economical value of a fruit (PO:0009001) , or its overall improvement." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+def: "A plant quality trait (TO:0000597) which is the commercial and/or economic value of a fruit (PO:0009001) , or its overall improvement." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 xref: TO_GIT:263
 is_a: TO:0000597 ! plant quality trait
 
@@ -13208,8 +13210,8 @@ creation_date: 2011-08-19T02:53:13Z
 [Term]
 id: TO:0020080
 name: stover organic matter digestibility
-def: "This trait determines the amount of organic matter from the stover that would eventually be digested by animals. Value derived from chemical and in vitro analysis with rumen microbial inoculum of dried and ground stover, usually using Near Infrared Reflectance Spectrophotometry (NIRS) after appropriate calibration." [GCP:GCP_324.0000031, ICRISAT:Vincent_Vadez, ILRI:Michael_Blummel]
-comment: Measured as percentage.
+def: "A plant quality trait (TO:0000597) which is the amount of organic matter in the stover that can be digested by animals." [ICRISAT:Vincent_Vadez, ILRI:Michael_Blummel, TO:cooperl]
+comment: Measured as a percentage. The value is derived from in vitro chemical analysis with rumen microbial inoculum of dried and ground stover, usually using Near Infrared Reflectance Spectrophotometry (NIRS) after appropriate calibration.
 synonym: "in vitro organic matter digestibility (exact)" EXACT []
 synonym: "stover related trait (broad)" BROAD [GCP:GCP_324.000003]
 is_a: TO:0000597 ! plant quality trait
