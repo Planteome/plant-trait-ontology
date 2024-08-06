@@ -926,24 +926,6 @@ name: flooding related trait
 is_a: TO:0000237 ! water stress trait
 
 [Term]
-id: TO:0001148
-name: neutral detergent fiber content
-def: "A fiber content trait (TO:0002642) which is the percentage of cellulose, hemicellulose and lignin fiber in a feed or forage." [DOI:10.1186/s12870-018-1368-4,INRAE:bimbert,TO:Cooperl,Wikipedia:neutral_detergent_fiber]
-comment: The process of determining NDF content involves a neutral detergent that dissolves plant pectins, proteins, sugars and lipids. This leaves behind the fibrous parts such as cellulose, lignin and hemicellulose. (REF: Wikipedia)
-synonym: "NDF (related)" RELATED []
-is_a: TO:0002642 ! fiber content trait
-created_by: https://orcid.org/0000-0002-6379-8932
-creation_date: 2024-05-03T22:51:46Z
-
-[Term]
-id: TO:0001149
-name: seed coat dimpled
-def: "A seed coat texture (TO:0000903) characterized by shallow, wide depressions on the seed surface, distinctly separated by smooth areas." [DOI:10.1017/S0021859600009758, DOI:10.1186/s12870-018-1368-4,INRAE:bimbert,TO:cooperl]
-is_a: TO:0000903 ! seed coat texture
-created_by: https://orcid.org/0000-0002-6379-8932
-creation_date: 2024-05-03T23:15:46Z
-
-[Term]
 id: TO:0000115
 name: root mass density
 def: "Determined as the dry mass of roots per unit soil volume at a given soil section." [Gramene:pankaj_jaiswal]
@@ -1297,7 +1279,7 @@ id: TO:0000157
 name: canopy temperature
 def: "Assay determines temperature of the leaf canopy." [Gramene:jcl, Gramene:pankaj_jaiswal]
 synonym: "CANTMP (related)" RELATED []
-is_a: TO:0000432 ! temperature response trait
+is_a: TO:0000394 ! drought related trait
 
 [Term]
 id: TO:0000158
@@ -1331,7 +1313,7 @@ def: "Response shown by the plant in terms of sensitivity to one or more types o
 synonym: "radiation sensitivity (related)" RELATED []
 synonym: "RADSN (related)" RELATED []
 synonym: "response to radiation (related)" RELATED []
-is_a: TO:0000168 ! abiotic plant stress trait
+is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
 id: TO:0000162
@@ -1392,7 +1374,7 @@ is_a: TO:0000401 ! plant growth hormone sensitivity
 
 [Term]
 id: TO:0000168
-name: abiotic plant stress trait
+name: abiotic plant stress response trait
 def: "A plant stress trait (TO:0000164) which is the response of a plant structure (PO:0009011) to an abiotic plant stress (PSO:0000012)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000012, TO:Laurel_Cooper]
 comment: Plant abiotic stress traits may be manifested in either the whole plant (PO:0000003) or in parts of the plant, as a result of the exposure to an abiotic plant stress (PSO:0000012).  Responses to plant stresses may vary from resistance to susceptibility, with varying levels of tolerance. Abiotic stresses are those resulting from non-living factors such as drought, salinity or temperature extremes.
 synonym: "abiotic stress tolerance (related)" RELATED []
@@ -1972,7 +1954,7 @@ is_obsolete: true
 id: TO:0000237
 name: water stress trait
 def: "Response by the plant in terms of sensitivity to water stress (quality and quantity of water)." [Gramene:pankaj_jaiswal]
-is_a: TO:0000168 ! abiotic plant stress trait
+is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
 id: TO:0000238
@@ -2131,8 +2113,8 @@ relationship: part_of TO:0002637 ! leaf size
 
 [Term]
 id: TO:0000259
-name: heat tolerance
-def: "Tolerance to warm temperatures if plant is exposed to above than permissive temperature limits. Observe differences in vigor along with subtle changes in leaf color. The optimum time to make observations would be the seedling, tillering (sensu Poaceae), flowering and mature stages. Mainly scored in terms of spikelet fertility in grasses." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: high temperature response
+def: "A temperature response trait (TO:0000432) which is the response to warmer than normal growth conditions." [Gramene:pankaj_jaiswal, TO:cooperl]
 synonym: "HTol (related)" RELATED []
 is_a: TO:0000432 ! temperature response trait
 
@@ -2524,8 +2506,8 @@ is_obsolete: true
 
 [Term]
 id: TO:0000303
-name: cold tolerance
-def: "Tolerance to cold temperatures if plant is exposed to below permissive temperature limits. Observe differences in vigor along with subtle changes in leaf color. The optimum time to make observations would be the seedling, tillering (sensu Poaceae), flowering and mature stages." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: low temperature response
+def: "A temperature response trait (TO:0000432) which is the response to colder than normal growth conditions." [TO:cooperl] {comment="Cold temperature stress varies from chilling to freezing and varies depending upon the species of the plant. Some plants survive low temperatutre by undergoing cold acclimation, while other plants require a period of low temperature (vernalization) in order to flower."}
 synonym: "COLDTL (related)" RELATED []
 synonym: "CTol (related)" RELATED []
 is_a: TO:0000432 ! temperature response trait
@@ -3589,8 +3571,8 @@ is_a: TO:0000976 ! ear infructescence morphology trait
 [Term]
 id: TO:0000432
 name: temperature response trait
-def: "Response by the plant in terms of sensitivity to temperature stress." [Gramene:pankaj_jaiswal]
-is_a: TO:0000168 ! abiotic plant stress trait
+def: "An abiotic plant stress trait (TO:0000168) which is the response to temperature stress." [Gramene:pankaj_jaiswal, TO:cooperl]
+is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
 id: TO:0000433
@@ -3866,7 +3848,7 @@ name: cell membrane stability
 def: "Stability of the cell membrane under the impact of temperature (heat) and water deficit stress." [Gramene:pankaj_jaiswal, http://www.plantstress.com/methods/CMS_method.htm]
 comment: The trait is often observed in plants as a measure of drought and heat tolerance by determining the amount of solutes/electrolyte leaked from the cell.
 synonym: "CELMBSTB (related)" RELATED []
-is_a: TO:0000168 ! abiotic plant stress trait
+is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
 id: TO:0000468
@@ -3980,7 +3962,7 @@ is_a: TO:0000254 ! growth media pH sensitivity
 id: TO:0000482
 name: chemical stress sensitivity
 def: "Response by the plant in terms of resistivity or senility to chemical stress." [Gramene:pankaj_jaiswal]
-is_a: TO:0000168 ! abiotic plant stress trait
+is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
 id: TO:0000483
@@ -9730,6 +9712,36 @@ created_by: https://orcid.org/0000-0002-6379-8932
 creation_date: 2023-12-05T21:46:29Z
 
 [Term]
+id: TO:0001148
+name: neutral detergent fiber content
+def: "A fiber content trait (TO:0002642) which is the percentage of cellulose, hemicellulose and lignin fiber in a feed or forage." [DOI:10.1186/s12870-018-1368-4\,INRAE\:bimbert\,TO\:Cooperl\,Wikipedia\:neutral_detergent_fiber]
+comment: The process of determining NDF content involves a neutral detergent that dissolves plant pectins, proteins, sugars and lipids. This leaves behind the fibrous parts such as cellulose, lignin and hemicellulose. (REF: Wikipedia)
+synonym: "NDF (related)" RELATED []
+is_a: TO:0002642 ! fiber content trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2024-05-03T22:51:46Z
+
+[Term]
+id: TO:0001149
+name: seed coat dimpled
+def: "A seed coat texture (TO:0000903) characterized by shallow, wide depressions on the seed surface, distinctly separated by smooth areas." [DOI:10.1017/S0021859600009758, DOI:10.1186/s12870-018-1368-4\,INRAE\:bimbert\,TO\:cooperl]
+is_a: TO:0000903 ! seed coat texture
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2024-05-03T23:15:46Z
+
+[Term]
+id: TO:0001150
+name: chilling response
+def: "A low temperature response (TO:0000303) which is the response of a plant structure (PO:0009011) to temperatures less than optimal for growth, but not below freezing." [TO:cooperl]
+is_a: TO:0000303 ! low temperature response
+
+[Term]
+id: TO:0001151
+name: freezing response
+def: "A low temperature response (TO:0000303) which is the response of a plant structure (PO:0009011) to temperatures below freezing." [TO:cooperl]
+is_a: TO:0000303 ! low temperature response
+
+[Term]
 id: TO:0002600
 name: floral organ size
 def: "A floral organ morphology trait (TO:0000862) which is the size of a floral organ (PO:0025395)." [Gramene:pankaj_jaiswal, PO:0025395, TO:moorel]
@@ -10465,7 +10477,7 @@ is_a: TO:0006016 ! meristem tissue development trait
 id: TO:0002693
 name: gravity response trait
 def: "An assay to determine the variation in the gravitropism under the influence of gravity or zero gravity." [Gramene:pankaj_jaiswal]
-is_a: TO:0000168 ! abiotic plant stress trait
+is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
 id: TO:0002694
