@@ -1337,7 +1337,7 @@ is_a: TO:0000401 ! plant growth hormone sensitivity
 
 [Term]
 id: TO:0000164
-name: plant stress trait
+name: plant stress reponse trait
 def: "A plant trait (TO:0000387) which is the response of a plant structure (PO:0009011) to a plant stress (PSO:0000001)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000001, TO:Laurel_Cooper]
 comment: Plant stress traits may be manifested in either the whole plant (PO:0000003) or in parts of the plant, as a result of the exposure to either a biotic plant stress (PSO:0000011) or an abiotic plant stress (PSO:0000012). Responses to plant stresses may vary from resistance to susceptibility, with varying levels of tolerance.
 synonym: "crop damage (related)" RELATED []
@@ -1375,10 +1375,10 @@ is_a: TO:0000401 ! plant growth hormone sensitivity
 [Term]
 id: TO:0000168
 name: abiotic plant stress response trait
-def: "A plant stress trait (TO:0000164) which is the response of a plant structure (PO:0009011) to an abiotic plant stress (PSO:0000012)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000012, TO:Laurel_Cooper]
+def: "A plant stress reponse trait (TO:0000164) which is the response of a plant structure (PO:0009011) to an abiotic plant stress (PSO:0000012)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000012, TO:Laurel_Cooper]
 comment: Plant abiotic stress traits may be manifested in either the whole plant (PO:0000003) or in parts of the plant, as a result of the exposure to an abiotic plant stress (PSO:0000012).  Responses to plant stresses may vary from resistance to susceptibility, with varying levels of tolerance. Abiotic stresses are those resulting from non-living factors such as drought, salinity or temperature extremes.
 synonym: "abiotic stress tolerance (related)" RELATED []
-is_a: TO:0000164 ! plant stress trait
+is_a: TO:0000164 ! plant stress reponse trait
 
 [Term]
 id: TO:0000169
@@ -1461,9 +1461,9 @@ is_a: TO:0000479 ! acid sensitivity
 [Term]
 id: TO:0000179
 name: biotic plant stress trait
-def: "A plant stress trait (TO:0000164) which is the response of a plant structure (PO:0009011) to biotic plant stress (PSO:0000011)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000011, TO:Laurel_Cooper]
+def: "A plant stress response trait (TO:0000164) which is the response of a plant structure (PO:0009011) to biotic plant stress (PSO:0000011)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000011, TO:Laurel_Cooper]
 comment: Plant biotic stress traits may be manifested in either the whole plant (PO:0000003) or in parts of the plant, as a result of the exposure to a biotic plant stress (PSO:0000011). Responses to biotic plant stresses may vary from resistance to susceptibility, with varying levels of tolerance. Biotic stresses are those resulting from living factors such as microorganisms, animals (including insects, arachnids and nematodes) or other plants.
-is_a: TO:0000164 ! plant stress trait
+is_a: TO:0000164 ! plant stress reponse trait
 
 [Term]
 id: TO:0000180
@@ -2113,10 +2113,10 @@ relationship: part_of TO:0002637 ! leaf size
 
 [Term]
 id: TO:0000259
-name: high temperature response
-def: "A temperature response trait (TO:0000432) which is the response to warmer than normal growth conditions." [Gramene:pankaj_jaiswal, TO:cooperl]
+name: high temperature stress response
+def: "A temperature stress response trait (TO:0000432) which is the response to warmer than normal growth conditions." [Gramene:pankaj_jaiswal, TO:cooperl]
 synonym: "HTol (related)" RELATED []
-is_a: TO:0000432 ! temperature response trait
+is_a: TO:0000432 ! temperature stress response trait
 
 [Term]
 id: TO:0000260
@@ -2506,11 +2506,11 @@ is_obsolete: true
 
 [Term]
 id: TO:0000303
-name: low temperature response
-def: "A temperature response trait (TO:0000432) which is the response to colder than normal growth conditions." [TO:cooperl] {comment="Cold temperature stress varies from chilling to freezing and varies depending upon the species of the plant. Some plants survive low temperatutre by undergoing cold acclimation, while other plants require a period of low temperature (vernalization) in order to flower."}
+name: low temperature stress response
+def: "A temperature stress response trait (TO:0000432) which is the response to colder than normal growth conditions." [TO:cooperl] {comment="Cold temperature stress varies from chilling to freezing and varies depending upon the species of the plant. Some plants survive low temperatutre by undergoing cold acclimation, while other plants require a period of low temperature (vernalization) in order to flower."}
 synonym: "COLDTL (related)" RELATED []
 synonym: "CTol (related)" RELATED []
-is_a: TO:0000432 ! temperature response trait
+is_a: TO:0000432 ! temperature stress response trait
 
 [Term]
 id: TO:0000304
@@ -3570,8 +3570,8 @@ is_a: TO:0000976 ! ear infructescence morphology trait
 
 [Term]
 id: TO:0000432
-name: temperature response trait
-def: "An abiotic plant stress trait (TO:0000168) which is the response to temperature stress." [Gramene:pankaj_jaiswal, TO:cooperl]
+name: temperature stress response trait
+def: "An abiotic plant stress reponse trait (TO:0000168) which is the response to temperature stress." [Gramene:pankaj_jaiswal, TO:cooperl]
 is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
@@ -3961,7 +3961,7 @@ is_a: TO:0000254 ! growth media pH sensitivity
 [Term]
 id: TO:0000482
 name: chemical stress sensitivity
-def: "Response by the plant in terms of resistivity or senility to chemical stress." [Gramene:pankaj_jaiswal]
+def: "An abiotic plant stress reponse trait (TO:0000168) which is the response of a plant structure (PO:0009011) to chemical stress." [Gramene:pankaj_jaiswal, TO:cooperl]
 is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
@@ -9731,15 +9731,28 @@ creation_date: 2024-05-03T23:15:46Z
 
 [Term]
 id: TO:0001150
-name: chilling response
-def: "A low temperature response (TO:0000303) which is the response of a plant structure (PO:0009011) to temperatures less than optimal for growth, but not below freezing." [INRAE:bimbert, TO:cooperl]
-is_a: TO:0000303 ! low temperature response
+name: chilling stress response
+def: "A low temperature stress response (TO:0000303) which is the response of a plant structure (PO:0009011) to temperatures less than optimal for growth, but not below freezing." [INRAE:bimbert, TO:cooperl]
+is_a: TO:0000303 ! low temperature stress response
 
 [Term]
 id: TO:0001151
-name: freezing response
-def: "A low temperature response (TO:0000303) which is the response of a plant structure (PO:0009011) to temperatures below freezing." [INRAE:bimbert, TO:cooperl]
-is_a: TO:0000303 ! low temperature response
+name: freezing stress response
+def: "A low temperature stress response (TO:0000303) which is the response of a plant structure (PO:0009011) to temperatures below freezing." [INRAE:bimbert, TO:cooperl]
+is_a: TO:0000303 ! low temperature stress response
+
+[Term]
+id: TO:0001152
+name: frost damage stress response
+def: "A freezing stress reponse trait (TO:0001151) which is the response to damage to a plant structure (PO:0009011) caused by freezing temperatures." [INRAE:bimbert, TO:cooperl]
+comment: Damage from freezing temperatures occurs when ice forms inside the plant tissues and injures plant cells.
+is_a: TO:0001151 ! freezing stress response
+
+[Term]
+id: TO:0001153
+name: survival rate after freezing temperature stress
+def: "A freezing stress reponse trait (TO:0001151) which is the percentage of plants that survive freezing temperature exposure." []
+is_a: TO:0001151 ! freezing stress response
 
 [Term]
 id: TO:0002600
@@ -10476,7 +10489,7 @@ is_a: TO:0006016 ! meristem tissue development trait
 [Term]
 id: TO:0002693
 name: gravity response trait
-def: "An assay to determine the variation in the gravitropism under the influence of gravity or zero gravity." [Gramene:pankaj_jaiswal]
+def: "An abiotic plant stress reponse trait (TO:0000168) which is theresponse of a plant structure (PO:0009011) to abnormal gravity." [Gramene:pankaj_jaiswal, TO:cooperl]
 is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
