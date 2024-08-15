@@ -745,7 +745,7 @@ def: "A drought related trait (TO:0000394) which is a measure of the pulling for
 comment: Root pulling force is correlated with root weight (TO:0000279), root branching (TO:0000257) and thick root number. It is a measure of the drought resistance and is often evaluatred on rice seedlings.
 synonym: "rpf (related)" RELATED []
 synonym: "RTPF (related)" RELATED []
-is_a: TO:0000394 ! drought related trait
+is_a: TO:0000394 ! drought stress response trait
 
 [Term]
 id: TO:0000094
@@ -761,7 +761,7 @@ name: osmotic response sensitivity
 def: "Sensitivity to the osmoticum in the growth medium." [Gramene:pankaj_jaiswal]
 synonym: "oa (related)" RELATED []
 synonym: "OSRPSN (related)" RELATED []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000096
@@ -834,7 +834,7 @@ name: deepwater stress
 def: "The sensitivity response shown by the plant growing in a stagnant water for a long period of time (not unlike deepwater presence during flash flooding of the fields)." [Gramene:pankaj_jaiswal]
 synonym: "deep water stress (related)" RELATED []
 synonym: "DWSTR (related)" RELATED []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000104
@@ -923,7 +923,7 @@ relationship: inheres_in PO:0009009 {is_inferred="true"} ! plant embryo
 [Term]
 id: TO:0000114
 name: flooding related trait
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000115
@@ -1055,7 +1055,7 @@ name: leaf water potential
 def: "Water potential of a leaf." [Gramene:pankaj_jaiswal]
 synonym: "LFWP (related)" RELATED []
 synonym: "lwp (related)" RELATED []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000132
@@ -1279,7 +1279,7 @@ id: TO:0000157
 name: canopy temperature
 def: "Assay determines temperature of the leaf canopy." [Gramene:jcl, Gramene:pankaj_jaiswal]
 synonym: "CANTMP (related)" RELATED []
-is_a: TO:0000394 ! drought related trait
+is_a: TO:0000394 ! drought stress response trait
 
 [Term]
 id: TO:0000158
@@ -1535,7 +1535,7 @@ def: "Drought sensitivity is highly interactive with crop phenology, plant growt
 synonym: "drought susceptibility (related)" RELATED []
 synonym: "DRS (related)" RELATED []
 synonym: "DRSN (related)" RELATED []
-is_a: TO:0000394 ! drought related trait
+is_a: TO:0000394 ! drought stress response trait
 
 [Term]
 id: TO:0000189
@@ -1952,8 +1952,8 @@ is_obsolete: true
 
 [Term]
 id: TO:0000237
-name: water stress trait
-def: "Response by the plant in terms of sensitivity to water stress (quality and quantity of water)." [Gramene:pankaj_jaiswal]
+name: water stress response trait
+def: "An abiotic plant stress reponse trait (TO:0000168) which is the response of a plant structure (PO:0009011) to water stress (too little or too much water)." [Gramene:pankaj_jaiswal, TO:cooperl]
 is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
@@ -2264,7 +2264,7 @@ def: "Becoming tolerant to drought like conditions of minimal or no water conten
 comment: Often  the plants exhibiting high salt tolerance also exhibit drought tolerance.
 synonym: "drought resistance (exact)" EXACT []
 synonym: "DRTL (related)" RELATED []
-is_a: TO:0000394 ! drought related trait
+is_a: TO:0000394 ! drought stress response trait
 
 [Term]
 id: TO:0000277
@@ -3264,10 +3264,10 @@ is_obsolete: true
 
 [Term]
 id: TO:0000394
-name: drought related trait
-def: "Response by the plant in terms of sensitivity to sufficiently prolonged water deficit/scarcity or scanty water content in the soil or growth medium, that can cause damage to the plant." [Gramene:pankaj_jaiswal]
+name: drought stress response trait
+def: "A water stress response trait (TO:0000237) which is a response by a plant structure (PO:0009011) to growth conditions with lower than optimal water availability." [Gramene:pankaj_jaiswal, TO:cooperl]
 synonym: "dessication related trait (related)" RELATED []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000396
@@ -3633,7 +3633,7 @@ is_a: TO:0002759 ! grain number trait
 [Term]
 id: TO:0000441
 name: humidity related trait
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000442
@@ -3781,7 +3781,7 @@ id: TO:0000458
 name: drought recovery
 def: "Scores are taken after 10 days following soaking rain or watering- Indicate the degree of stress before recovery." [RiceSES:SES]
 synonym: "DRR (related)" RELATED []
-is_a: TO:0000394 ! drought related trait
+is_a: TO:0000394 ! drought stress response trait
 
 [Term]
 id: TO:0000459
@@ -3845,10 +3845,10 @@ is_a: TO:0000465 ! mineral and ion content trait
 [Term]
 id: TO:0000467
 name: cell membrane stability
-def: "Stability of the cell membrane under the impact of temperature (heat) and water deficit stress." [Gramene:pankaj_jaiswal, http://www.plantstress.com/methods/CMS_method.htm]
-comment: The trait is often observed in plants as a measure of drought and heat tolerance by determining the amount of solutes/electrolyte leaked from the cell.
+def: "A drought stress response trait (TO:0000394) which is the changes in the stability of the cell membrane during water deficit stress." [Gramene:pankaj_jaiswal, https://plantstress.com/the-cell-membrane-stability-cms-test/, TO:cooperl]
+comment: The trait is observed by determining the amount of solutes and electrolytes which leak from the cell.
 synonym: "CELMBSTB (related)" RELATED []
-is_a: TO:0000168 ! abiotic plant stress response trait
+is_a: TO:0000394 ! drought stress response trait
 
 [Term]
 id: TO:0000468
@@ -4141,7 +4141,7 @@ name: osmotic adjustment capacity
 def: "The ability of the plant to adust the osmotic potential under stress conditions." [Gramene:pankaj_jaiswal]
 comment: The main role of osmotic adjustment in the plant is to assist in the maintenance of turgor and volume as organs lose water during desiccation, i.e. to provide dehydration tolerance. Often determined by relative water or the amount of solute accumulated at a given water potential.
 synonym: "OSADJCAP (related)" RELATED []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000508
@@ -8645,7 +8645,7 @@ id: TO:0001017
 name: water use efficiency
 def: "As determined by the ratio of photosynthetic rate to transpiration rate." [Gramene:pankaj_jaiswal]
 synonym: "photosynthetic rate to transpiration rate ratio (exact)" EXACT []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0001018
@@ -8723,7 +8723,7 @@ id: TO:0001028
 name: osmotic adjustment break point
 def: "Break point of leaf water potential in the regression of leaf water potential against leaf relative water content." [CIRAD:Brigitte_Courtois]
 synonym: "Break point of osmotic adjustment (related)" RELATED []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0001029
