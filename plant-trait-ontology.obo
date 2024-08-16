@@ -169,7 +169,7 @@ is_a: TO:0000207 ! plant height
 id: TO:0000020
 name: black streak dwarf virus resistance
 synonym: "BSDVRS (related)" RELATED []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 
 [Term]
 id: TO:0000021
@@ -702,7 +702,7 @@ name: rice yellow mottle virus resistance
 def: "Causal agent: rice yellow mottle virus (RYMV). Symptoms: stunting, reduced tillering, mottling and yellowish streaking of the leaves, delayed flowering or incomplete emergence of the panicle; in extreme cases, death of plants." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "RYMV (related)" RELATED []
 synonym: "RYMVRS (related)" RELATED []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 
 [Term]
 id: TO:0000089
@@ -834,7 +834,7 @@ name: deepwater stress
 def: "The sensitivity response shown by the plant growing in a stagnant water for a long period of time (not unlike deepwater presence during flash flooding of the fields)." [Gramene:pankaj_jaiswal]
 synonym: "deep water stress (related)" RELATED []
 synonym: "DWSTR (related)" RELATED []
-is_a: TO:0000237 ! water stress response trait
+is_a: TO:0000114 ! flooding related trait
 
 [Term]
 id: TO:0000104
@@ -1195,11 +1195,11 @@ name: rice hoja blanca disease resistance
 def: "Causal agent: rice hoja blanca virus (RHBV). Symptoms: cream colored to yellow spots, elongating and coalescing to form longitudinal yellowish green to pale green striations. Streaks may coalesce to cover the whole leaf. Brown and sterile glumes with typical \"parrot beak\" shape of deformation." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "HBVRS (related)" RELATED []
 synonym: "RHBV (related)" RELATED []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 
 [Term]
 id: TO:0000148
-name: viral disease response
+name: viral disease response trait
 def: "A microbial disease response (TO:0000112) trait which is the response to damage to a plant structure (PO:0009011) caused by an infection by a virus (NCBITaxon:10239)." [Gramene:pankaj_jaiswal, NCBITaxon:10239, RiceSES:SES, TO:Laurel_Cooper]
 comment: It represents the damage done by the diease and/or the viral pathogen to the plant. The damage is a direct measure of resistance to the particular viral strain causing the diease.
 is_a: TO:0000112 ! microbial disease response
@@ -1752,7 +1752,7 @@ id: TO:0000213
 name: rice grassy stunt 1 and 2 virus resistance
 def: "Causal agent: rice grassy stunt virus 1 (RGSV1) and rice grassy stunt virus 2 (RGSV2). Symptoms: RGSV1 causes severe stunting, excessive tillering, pale green to yellow and narrow leaves with small rusty spots. RGSV2 causes severe stunting, excessive tillering, yellow to orange and narrow leaves with small rusty spots." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "RGSVRS (related)" RELATED []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 
 [Term]
 id: TO:0000214
@@ -3206,7 +3206,7 @@ id: TO:0000386
 name: rice ragged stunt virus resistance
 def: "Causal agent: rice ragged stunt virus (RRSV). Symptoms: plants are stunted but remain dark green. Leaves are ragged and twisted. Vein swelling on leaf collar, leaf blades and leaf sheaths." [Gramene:pankaj_jaiswal\,, RiceSES:SES]
 synonym: "RSVRS (related)" RELATED []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 
 [Term]
 id: TO:0000387
@@ -3416,7 +3416,7 @@ name: rice tungro virus resistance
 def: "Causal agent: Rice tungro bacilliform virus (RTBV) and rice tungro spherical virus (RTSV). The disease is transmitted by the green leafhopper Nephotettix spp. Symptoms: Yellow-to-yellow orange leaves, stunting and slightly reduced tillering." [Gramene:pankaj_jaiswal, http://www.fao.org/inpho/vlibrary/t0567e/T0567E03.htm, RiceSES:SES]
 synonym: "RTD (related)" RELATED []
 synonym: "RTVRS (related)" RELATED []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 
 [Term]
 id: TO:0000414
@@ -9762,6 +9762,30 @@ def: "A freezing stress reponse trait (TO:0001151) which is the percentage of pl
 is_a: TO:0001151 ! freezing stress response
 
 [Term]
+id: TO:0001154
+name: peanut early leaf spot disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Mycosphaerella arachidis." [DOI:10.1111/pbi.12930, NCBITaxon:143450, TO:cooperl]
+synonym: "ELS (exact)" EXACT []
+xref: TO_GIT:469
+is_a: TO:0001145 ! Ascomycete fungal disease response
+
+[Term]
+id: TO:0001155
+name: peanut late leaf spot disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Nothopassalora personata." [DOI:10.1111/pbi.12930, NCBITaxon:2060155, TO:cooperl]
+synonym: "LLS (exact)" EXACT []
+xref: TO_GIT:468
+is_a: TO:0001145 ! Ascomycete fungal disease response
+
+[Term]
+id: TO:0001156
+name: tomato spotted wilt virus response
+def: "A viral disease response trait (TO:0000148) caused by Tomato spotted wilt virus." [DOI:10.1111/pbi.12930, NCBITaxon:3052585, TO:cooperl]
+synonym: "TSWV (exact)" EXACT []
+xref: TO_GIT:467
+is_a: TO:0000148 ! viral disease response trait
+
+[Term]
 id: TO:0002600
 name: floral organ size
 def: "A floral organ morphology trait (TO:0000862) which is the size of a floral organ (PO:0025395)." [Gramene:pankaj_jaiswal, PO:0025395, TO:moorel]
@@ -10496,7 +10520,7 @@ is_a: TO:0006016 ! meristem tissue development trait
 [Term]
 id: TO:0002693
 name: gravity response trait
-def: "An abiotic plant stress reponse trait (TO:0000168) which is theresponse of a plant structure (PO:0009011) to abnormal gravity." [Gramene:pankaj_jaiswal, TO:cooperl]
+def: "An abiotic plant stress reponse trait (TO:0000168) which is the response of a plant structure (PO:0009011) to abnormal gravity." [Gramene:pankaj_jaiswal, TO:cooperl]
 is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
@@ -13128,7 +13152,7 @@ name: barley yellow dwarf virus disease resistance
 def: "Causal agent: The Barley Yellow Dwarf Viruses, Luteovirus (Group IV (+)ssRNA)." [T-CAP:Victoria_Blake]
 comment: Symptoms: uneven blotches of bright yellow discoloration on the tips and margins of older leaves, eventually progressing down toward the base, covering the entire leaf within a few weeks.  Reduced internode elongation causes stunting with severe infection possibly.
 synonym: "BYDV (exact)" EXACT []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:00:45Z
 
