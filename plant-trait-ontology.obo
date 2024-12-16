@@ -1078,7 +1078,7 @@ name: alkali digestion
 def: "Is an indirect measure of gelatinization temperature. Observed by placing six milled-rice kernels in 10ml 1.7% KOH in a shallow container and arrange them so that they do not touch. Let them stand for 23hrs at 30degC temperature and score for spreading. Measure for Alkali digestion is inversely proportional to the gelatinization temperature, e.g. if alkali digestion is low, the gelatinization temperature is high." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "AlkD (related)" RELATED []
 synonym: "ALKDIG (related)" RELATED []
-is_a: TO:0000462 ! gelatinization temperature
+is_a: TO:0000462 ! starch gelatinization temperature
 
 [Term]
 id: TO:0000135
@@ -1732,7 +1732,7 @@ relationship: part_of TO:0000225 ! stamen number
 
 [Term]
 id: TO:0000211
-name: gel consistency
+name: starch gel consistency
 def: "Scored by gel consistency type in mm." [RiceSES:SES]
 synonym: "GelC (related)" RELATED []
 synonym: "GELCON (related)" RELATED []
@@ -3103,8 +3103,8 @@ is_a: TO:0000786 ! reproductive shoot system morphology trait
 
 [Term]
 id: TO:0000374
-name: breakdown viscosity
-def: "A cooking quality trait that is the tendency of gelatinized starch granules to break during cooking, especially at high temperature." [PMCID:PMC434838, TO:Laurel_Cooper]
+name: starch breakdown viscosity
+def: "A cooking quality trait (TO:0001069) which is the tendency of gelatinized starch granules to break during cooking, especially at high temperature." [TO:Laurel_Cooper] {comment="DOI:10.1006/jcrs.2001.0374"}
 comment: Breakdown is usually associated with the tendency of gelatinized starch granules to break during holding at high temperature, accompanied with continuous shearing (Han and Hamaker 2001). Breakdown is usually calculated from a resulting viscogram by subtracting trough from peak viscosity. The increase in rice flour breakdown viscosity, although not always significant (P < 0.05), suggests a greater protection of the starch granule integrity. This probably is due to the increased affinity of proteins to interact with starch, as a result of protein denaturation. The resulting formation of protein–starch complexes tends to increase rice flour peak viscosity.
 synonym: "BRKVIS (related)" RELATED []
 xref: PMCID:PMC434838
@@ -3124,7 +3124,7 @@ is_a: TO:0002731 ! dehulled grain length to width ratio
 
 [Term]
 id: TO:0000376
-name: consistency viscosity
+name: starch consistency viscosity
 synonym: "CONVIS (related)" RELATED []
 is_a: TO:0001069 ! cooking quality trait
 
@@ -3146,7 +3146,8 @@ is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000379
-name: cool paste viscosity
+name: starch cool paste viscosity
+def: "A cooking quality trait (TO:0001069) which is the viscosity of a starch paste after it has been cooked and cooled down." [] {comment="TO:cooperl"}
 synonym: "CPVIS (related)" RELATED []
 is_a: TO:0001069 ! cooking quality trait
 
@@ -3376,13 +3377,14 @@ is_obsolete: true
 
 [Term]
 id: TO:0000408
-name: hot paste viscosity
+name: starch hot paste viscosity
 synonym: "HPVIS (related)" RELATED []
 is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000409
-name: peak viscosity
+name: starch peak viscosity trait
+def: "A cooking quality trait (TO:0001069) which is the ability of starch granules to swell before breaking down during heating." [] {comment="TO:cooperl"}
 synonym: "PVIS (related)" RELATED []
 is_a: TO:0001069 ! cooking quality trait
 
@@ -3403,7 +3405,7 @@ is_a: TO:0001079 ! caryopsis fruit morphology trait
 
 [Term]
 id: TO:0000412
-name: setback viscosity
+name: starch setback viscosity
 def: "Determined by deducting the peak viscosity from the cool paste viscosity." [Gramene:pankaj_jaiswal37]
 synonym: "setback (related)" RELATED []
 synonym: "SETBK (related)" RELATED []
@@ -3805,7 +3807,7 @@ is_a: TO:0000369 ! vegetative growth time
 
 [Term]
 id: TO:0000462
-name: gelatinization temperature
+name: starch gelatinization temperature
 def: "Is an indication of gelatinization temperature. Observed by placing six milled-grains/kernels in 10ml 1.7% KOH in a shallow container and arrange them so that they do not touch. Let them stand for 23hrs at 30C temperature and score for spreading. Measure for Alkali digestion is inversely proportional to the gelatinization temperature, e.g. if alkali digestion is low, the gelatinization temperature is high." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "GELTZTMP (related)" RELATED []
 is_a: TO:0000489 ! carbohydrate composition related trait
@@ -10170,7 +10172,7 @@ name: flour particle size
 def: "Size of flour particles determined after grinding the grains. The size depends on the length and type of grinding." [GrainGenes_trait:Particle_size, Gramene:pankaj_jaiswal]
 comment: It affects the water absorption, dough handling characteristics and loaf volume while cooking.
 synonym: "FLRPARTSZ (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001068 ! processing quality trait
 
 [Term]
 id: TO:0002647
