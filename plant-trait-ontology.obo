@@ -21,6 +21,7 @@ ontology: to
 property_value: http://purl.org/dc/terms/description "An ontology that describes phenotypic traits in plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature plant." xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: http://purl.org/dc/terms/title "Plant Trait Ontology" xsd:string
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))\n\n\nAnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/TO_0000369> \"\")\n)
 
 [Term]
 id: TO:0000001
@@ -3057,9 +3058,8 @@ is_a: TO:0000654 ! shoot system growth and development trait
 [Term]
 id: TO:0000369
 name: vegetative growth time
-def: "A plant phenological trait (TO:0000933) which is the length of time of the vegetative growth phase in a plant's life cycle." [Gramene:pankaj_jaiswal]
+def: "A plant phenological trait (TO:0000933) which is the length of time of the vegetative growth phase in a plant's life cycle." [Gramene:pankaj_jaiswal, TO:cooperl]
 synonym: "VGTM (related)" RELATED []
-xref: TO:cooperl
 is_a: TO:0000933 ! plant phenological trait
 
 [Term]
@@ -3807,6 +3807,7 @@ is_a: TO:0000075 ! light sensitivity
 [Term]
 id: TO:0000461
 name: basic vegetative phase
+def: "A vegetative growth time (TO:0000369) which is the mumber of days from seeding to heading under short-day length." [PMID:12582574, TO:cooperl]
 synonym: "BAVEGPH (related)" RELATED []
 is_a: TO:0000369 ! vegetative growth time
 
@@ -12648,7 +12649,7 @@ is_a: TO:0000426 ! stem internode color
 [Term]
 id: TO:0012001
 name: leaf area index
-def: "Leaf Area Index (LAI) is the ratio of total upper leaf surface of vegetation divided by the surface area of the land on which the vegetation grows." [Wikipedia:Leaf_area_index, TO:cooperl]
+def: "Leaf Area Index (LAI) is the ratio of total upper leaf surface of vegetation divided by the surface area of the land on which the vegetation grows." [TO:cooperl, Wikipedia:Leaf_area_index]
 comment: LAI is used to predict photosynthetic primary production and as a reference tool for crop growth. Measured on the plant canopy only.
 is_a: TO:0000540 ! leaf area trait
 created_by: jaiswalp
@@ -12675,9 +12676,8 @@ creation_date: 2011-12-09T01:54:09Z
 [Term]
 id: TO:0012004
 name: quantum yield
+def: "The efficiency of light energy conversion into chemical energy by plants." [TO:cooperl, Wikipedia:quantum_yield]
 synonym: "QY (related)" RELATED []
-def: "The efficiency of light energy conversion into chemical energy by plants."  [Wikipedia:quantum_yield, TO:cooperl]
-
 is_a: TO:0012006 ! fluorescence related trait
 created_by: jaiswalp
 creation_date: 2011-12-09T02:09:21Z
@@ -13567,9 +13567,9 @@ creation_date: 2011-08-19T04:30:47Z
 
 [Term]
 id: TO:0020112
-name: phosphorus toxicity
-def: "Accumulation of phosphate level a plant structure (PO:0009011) at toxic level." [TO:contributors]
-is_a: TO:0000102 ! phosphorus sensitivity
+name: OBSOLETE phosphorus toxicity
+def: "OBSOLETE Accumulation of phosphate level a plant structure (PO:0009011) at toxic level." [TO:contributors]
+is_obsolete: true
 created_by: jaiswalp
 creation_date: 2011-08-19T04:31:40Z
 
