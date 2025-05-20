@@ -5,7 +5,7 @@ BASE=$(OBO)/$(ONT)
 SRC=plant-trait-ontology.obo
 RELEASEDIR=.
 ROBOT= robot
-OWLTOOLS= owltools
+OWLTOOLS= java -Xms10g -Xmx20g -jar owltools
 DOSDP = dosdp-tools
 
 
@@ -19,7 +19,7 @@ $(ONT).obo: $(ONT).owl
 	$(ROBOT) convert -i $< -f obo --check false -o $(ONT).obo.tmp && grep -v '^owl-axioms:' $(ONT).obo.tmp > $@ && rm $(ONT).obo.tmp
 
 subsets/$(ONT)-basic.obo: $(ONT).owl
-	owltools --use-catalog $< --remove-imports-declarations --make-subset-by-properties -f BFO:0000050 --remove-dangling --remove-axioms -t EquivalentClasses --set-ontology-id $(OBO)/subsets/$(ONT)-basic.owl -o -f obo $@.tmp && mv $@.tmp $@
+	$(OWLTOOLS) --use-catalog $< --remove-imports-declarations --make-subset-by-properties -f BFO:0000050 --remove-dangling --remove-axioms -t EquivalentClasses --set-ontology-id $(OBO)/subsets/$(ONT)-basic.owl -o -f obo $@.tmp && mv $@.tmp $@
 
 
 IMPORTS = chebi pato peco po go ncbitaxon ro envo
