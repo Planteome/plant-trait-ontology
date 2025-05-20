@@ -7,6 +7,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/to/imports/pato_import.owl"/>
     
@@ -26,6 +27,12 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
     
 
 
@@ -249,7 +256,7 @@
     <!-- http://purl.obolibrary.org/obo/PATO_0000033 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000033">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002182"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000070"/>
         <obo:IAO_0000115>A quality inhering in a substance by virtue of the amount of the bearer&apos;s there is mixed with another substance.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>concentration</oboInOwl:hasExactSynonym>
         <rdfs:label>concentration of</rdfs:label>
@@ -401,8 +408,16 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000068">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
+        <obo:IAO_0000115>A quality of an entity that is descriptive or observational, typically not represented numerically.</obo:IAO_0000115>
         <rdfs:label>qualitative</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000068"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quality of an entity that is descriptive or observational, typically not represented numerically.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://libguides.macalester.edu/c.php?g=527786&amp;p=3608639</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.ncbi.nlm.nih.gov/books/NBK470395/</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -425,7 +440,7 @@
     <!-- http://purl.obolibrary.org/obo/PATO_0000070 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000070">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000068"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0103000"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0015012"/>
@@ -891,6 +906,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0002000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0000467"/>
         <obo:IAO_0000115>A quality denoting the lack of an entity.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>absence</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>absent from organism</oboInOwl:hasExactSynonym>
@@ -901,6 +917,45 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A quality denoting the lack of an entity.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>thefreedictionary.:thefreedictionary.</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000467 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000467">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000070"/>
+        <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s existence.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>present in organism</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>present</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000467"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s existence.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000470 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000470">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000467"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002300"/>
+        <obo:IAO_0000115>An amount which is relatively high.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>increased number</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>present in greater numbers in organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>supernumerary</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>accessory</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>increased</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>increased amount</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000470"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An amount which is relatively high.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1466,19 +1521,19 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001470">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001018"/>
-        <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s magnitude in respect to a related entity.</obo:IAO_0000115>
+        <obo:IAO_0000115>A quality inhering in a bearer by virtue of the bearer&apos;s magnitude in proportion to the magnitude of another entity.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>proportion</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>proportionality</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>proportionality to</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>quotient</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>ratio</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>rate</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>proportionality to</rdfs:label>
+        <rdfs:label>ratio</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001470"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s magnitude in respect to a related entity.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:nw</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>A quality inhering in a bearer by virtue of the bearer&apos;s magnitude in proportion to the magnitude of another entity.</owl:annotatedTarget>
+        <terms:contributor>https://orcid.org/0000-0001-8314-2140</terms:contributor>
     </owl:Axiom>
     
 
@@ -1593,13 +1648,7 @@
     <!-- http://purl.obolibrary.org/obo/PATO_0001555 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001555">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0015012"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0000070"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000070"/>
         <obo:IAO_0000115>The number of parts of a particular type that the bearer entity has. This is a relational quality, and thus holds between two entities: the bearer of the quality, and the type of parts.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>extra or missing physical or functional parts</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>has or lacks parts of type</oboInOwl:hasExactSynonym>
@@ -2014,6 +2063,7 @@
     <!-- http://purl.obolibrary.org/obo/PATO_0002002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000470"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002083"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002305"/>
         <obo:IAO_0000115>The bearer of this quality has_part &gt; n of the indicated entity type, where n is the normal amount for a comparable organism. Note that the bearer of the quality is the whole, not the part.</obo:IAO_0000115>
@@ -2164,23 +2214,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002083"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Having extra or fewer parts.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0002182 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002182">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
-        <obo:IAO_0000115>A quality which inheres in a molecular entity, a single molecule, atom, ion, radical etc.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>relational molecular quality</oboInOwl:hasExactSynonym>
-        <rdfs:label>molecular quality</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002182"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A quality which inheres in a molecular entity, a single molecule, atom, ion, radical etc.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -2417,9 +2450,26 @@
         <owl:annotatedTarget>A quality of a substance on which or through which electromagnetic radiation impinges or traverses with respect to radiation. This substance quality changes the quality of the incident radiation with respect to any of: intensity, direction, scatter and wavelength.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>https://orcid.org/0000-0002-5111-7263</oboInOwl:hasDbXref>
     </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0103000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0103000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
+        <obo:IAO_0000115>A quality of an entity that can be represented numerically, including anything that can be counted, measured, or given a numerical value.</obo:IAO_0000115>
+        <rdfs:label>quantitative</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0103000"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quality of an entity that can be represented numerically, including anything that can be counted, measured, or given a numerical value.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://libguides.macalester.edu/c.php?g=527786&amp;p=3608639</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>https://www.nnlm.gov/guides/data-glossary/quantitative-data</oboInOwl:hasDbXref>
+    </owl:Axiom>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 

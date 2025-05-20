@@ -114,26 +114,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0000003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0000003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <obo:IAO_0000115>The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>reproductive physiological process</oboInOwl:hasExactSynonym>
-        <rdfs:label>reproduction</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:go_curators</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:isa_complete</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0198506732</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0000278 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0000278">
@@ -165,7 +145,6 @@
         <owl:annotatedTarget>Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0815316194</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>Reactome:69278</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -193,11 +172,8 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0022414"/>
                     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0032502"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
-                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -492,7 +468,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0005575 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0005575">
-        <obo:IAO_0000115>A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).</obo:IAO_0000115>
+        <obo:IAO_0000115>A location, relative to cellular compartments and structures, occupied by a macromolecular machine. There are three types of cellular components described in the gene ontology: (1) the cellular anatomical entity where a gene product carries out a molecular function (e.g., plasma membrane, cytoskeleton) or membrane-enclosed compartments (e.g., mitochondrion); (2) virion components, where viral proteins act, and (3) the stable macromolecular complexes of which gene product are parts (e.g., the clathrin complex).</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>cell or subcellular entity</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>cellular component</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>subcellular entity</oboInOwl:hasRelatedSynonym>
@@ -501,9 +477,8 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome).</owl:annotatedTarget>
+        <owl:annotatedTarget>A location, relative to cellular compartments and structures, occupied by a macromolecular machine. There are three types of cellular components described in the gene ontology: (1) the cellular anatomical entity where a gene product carries out a molecular function (e.g., plasma membrane, cytoskeleton) or membrane-enclosed compartments (e.g., mitochondrion); (2) virion components, where viral proteins act, and (3) the stable macromolecular complexes of which gene product are parts (e.g., the clathrin complex).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>NIF_Subcellular:sao1337158144</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
@@ -635,6 +610,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The region of a cell that lies just beneath the plasma membrane and often, but not always, contains a network of actin filaments and associated proteins.</obo:IAO_0000115>
+        <oboInOwl:hasNarrowSynonym>ectoplasm</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym>cell periphery</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>peripheral cytoplasm</oboInOwl:hasRelatedSynonym>
         <rdfs:label>cell cortex</rdfs:label>
@@ -649,38 +625,18 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0006725 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006725">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044237"/>
-        <obo:IAO_0000115>The chemical reactions and pathways involving aromatic compounds, any organic compound characterized by one or more planar rings, each of which contains conjugated double bonds and delocalized pi electrons, as carried out by individual cells.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>aromatic compound metabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>aromatic hydrocarbon metabolic process</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>aromatic hydrocarbon metabolism</oboInOwl:hasNarrowSynonym>
-        <rdfs:label>cellular aromatic compound metabolic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006725"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways involving aromatic compounds, any organic compound characterized by one or more planar rings, each of which contains conjugated double bonds and delocalized pi electrons, as carried out by individual cells.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>ISBN:0198506732</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0006793 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006793">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044237"/>
-        <obo:IAO_0000115>The chemical reactions and pathways involving the nonmetallic element phosphorus or compounds that contain phosphorus, usually in the form of a phosphate group (PO4).</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
+        <obo:IAO_0000115>The chemical reactions and pathways involving the nonmetallic element phosphorus or compounds that contain phosphorus.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>phosphorus metabolism</oboInOwl:hasExactSynonym>
         <rdfs:label>phosphorus metabolic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0006793"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways involving the nonmetallic element phosphorus or compounds that contain phosphorus, usually in the form of a phosphate group (PO4).</owl:annotatedTarget>
+        <owl:annotatedTarget>The chemical reactions and pathways involving the nonmetallic element phosphorus or compounds that contain phosphorus.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -728,7 +684,6 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0006833">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042044"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071702"/>
         <obo:IAO_0000115>The directed movement of water (H2O) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore.</obo:IAO_0000115>
         <rdfs:label>water transport</rdfs:label>
     </owl:Class>
@@ -906,10 +861,6 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell.</obo:IAO_0000115>
-        <oboInOwl:hasNarrowSynonym>signal transduction by cis-phosphorylation</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>signal transduction by conformational transition</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>signal transduction by protein phosphorylation</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>signal transduction by trans-phosphorylation</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>signaling cascade</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>signalling cascade</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym>signaling pathway</oboInOwl:hasRelatedSynonym>
@@ -922,12 +873,6 @@
         <owl:annotatedTarget>The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:go_curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:mtg_signaling_feb11</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>signalling pathway</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -1040,20 +985,16 @@
     <!-- http://purl.obolibrary.org/obo/GO_0008152 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0008152">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/GO_0051179"/>
-        <obo:IAO_0000115>The chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation.</obo:IAO_0000115>
+        <obo:IAO_0000115>A cellular process consisting of the biochemical pathways by which a living organism transforms chemical substances. This includes including anabolism (biosynthetic process) and catabolism (catabolic process). Metabolic processes includes the transformation of small molecules, as well  macromolecular processes such as DNA repair and replication, protein synthesis and degradation.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>metabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>metabolic process resulting in cell growth</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>metabolism resulting in cell growth</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>multicellular organism metabolic process</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasRelatedSynonym>single-organism metabolic process</oboInOwl:hasRelatedSynonym>
         <rdfs:label>metabolic process</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation.</owl:annotatedTarget>
+        <owl:annotatedTarget>A cellular process consisting of the biochemical pathways by which a living organism transforms chemical substances. This includes including anabolism (biosynthetic process) and catabolism (catabolic process). Metabolic processes includes the transformation of small molecules, as well  macromolecular processes such as DNA repair and replication, protein synthesis and degradation.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:go_curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0198547684</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -1171,7 +1112,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009058">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
-        <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of substances; typically the energy-requiring part of metabolism in which simpler substances are transformed into more complex ones.</obo:IAO_0000115>
+        <obo:IAO_0000115>A cellular process consisting of the biochemical pathways by which a living organism synthesizes chemical substances. This typically represents the energy-requiring part of metabolism in which simpler substances are transformed into more complex ones.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>formation</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>anabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>biosynthesis</oboInOwl:hasExactSynonym>
@@ -1183,7 +1124,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0009058"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways resulting in the formation of substances; typically the energy-requiring part of metabolism in which simpler substances are transformed into more complex ones.</owl:annotatedTarget>
+        <owl:annotatedTarget>A cellular process consisting of the biochemical pathways by which a living organism synthesizes chemical substances. This typically represents the energy-requiring part of metabolism in which simpler substances are transformed into more complex ones.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>ISBN:0198547684</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -1255,9 +1196,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0009698 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009698">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006725"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019748"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901360"/>
         <obo:IAO_0000115>The chemical reactions and pathways involving aromatic derivatives of trans-cinnamic acid.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>phenylpropanoid metabolism</oboInOwl:hasExactSynonym>
         <rdfs:label>phenylpropanoid metabolic process</rdfs:label>
@@ -1275,9 +1214,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009699">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009698"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019438"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044550"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901362"/>
         <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of aromatic derivatives of trans-cinnamic acid.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>phenylpropanoid anabolism</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>phenylpropanoid biosynthesis</oboInOwl:hasExactSynonym>
@@ -1359,7 +1296,6 @@
     <!-- http://purl.obolibrary.org/obo/GO_0009835 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0009835">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0003006"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071695"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -1506,7 +1442,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019222"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048518"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048522"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
@@ -1913,7 +1849,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031325"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009893"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0051174"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2108,13 +2044,13 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0016791"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>Any process that modulates the rate or frequency of phosphatase activity. Phosphatases catalyze the hydrolysis of phosphoric monoesters, releasing inorganic phosphate.</obo:IAO_0000115>
+        <obo:IAO_0000115>Any process that modulates the rate or frequency of phosphatase activity. Phosphatases catalyze the hydrolysis of phosphoric monoesters, releasing phosphate.</obo:IAO_0000115>
         <rdfs:label>regulation of phosphatase activity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0010921"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any process that modulates the rate or frequency of phosphatase activity. Phosphatases catalyze the hydrolysis of phosphoric monoesters, releasing inorganic phosphate.</owl:annotatedTarget>
+        <owl:annotatedTarget>Any process that modulates the rate or frequency of phosphatase activity. Phosphatases catalyze the hydrolysis of phosphoric monoesters, releasing phosphate.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:BHF</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:tb</oboInOwl:hasDbXref>
@@ -2235,7 +2171,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016157">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0035251"/>
-        <obo:IAO_0000115>Catalysis of the reaction: UDP-glucose + D-fructose = UDP + sucrose.</obo:IAO_0000115>
+        <obo:IAO_0000115>Catalysis of the reaction: an NDP-alpha-D-glucose + D-fructose = a ribonucleoside 5&apos;-diphosphate + H+ + sucrose. The phosphate acceptor can be UDP or ADP.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>NDP-glucose:D-fructose 2-alpha-D-glucosyltransferase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>UDP-glucose-fructose glucosyltransferase activity</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>UDPglucose-fructose glucosyltransferase activity</oboInOwl:hasRelatedSynonym>
@@ -2248,8 +2184,8 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016157"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Catalysis of the reaction: UDP-glucose + D-fructose = UDP + sucrose.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>EC:2.4.1.13</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>Catalysis of the reaction: an NDP-alpha-D-glucose + D-fructose = a ribonucleoside 5&apos;-diphosphate + H+ + sucrose. The phosphate acceptor can be UDP or ADP.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>RHEA:16241</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016157"/>
@@ -2377,7 +2313,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016740"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ISBN:0198506732</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:2.-.-.-</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2415,7 +2351,7 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016758"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Catalysis of the transfer of a hexosyl group from one compound (donor) to another (acceptor).</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>EC:2.4.1.-</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2441,14 +2377,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016779">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0016772"/>
-        <obo:IAO_0000115>Catalysis of the transfer of a nucleotidyl group to a reactant.</obo:IAO_0000115>
+        <obo:IAO_0000115>Catalysis of the transfer of a nucleotidyl group from one compound (donor) to another (acceptor).</obo:IAO_0000115>
         <rdfs:label>nucleotidyltransferase activity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016779"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Catalysis of the transfer of a nucleotidyl group to a reactant.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ISBN:0198506732</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>Catalysis of the transfer of a nucleotidyl group from one compound (donor) to another (acceptor).</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>EC:2.7.7.-</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2490,25 +2426,15 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0016791">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0042578"/>
-        <obo:IAO_0000115>Catalysis of the hydrolysis of phosphoric monoesters, releasing inorganic phosphate.</obo:IAO_0000115>
+        <obo:IAO_0000115>Catalysis of the hydrolysis of a phosphoric monoester, releasing a phosphate.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>phosphoric monoester hydrolase activity</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>4-nitrophenylphosphatase activity</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>4-nitrophenylphosphate phosphohydrolase activity</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>K-pNPPase activity</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>NPPase activity</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>PNPPase activity</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>ecto-p-nitrophenyl phosphatase activity</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>nitrophenyl phosphatase activity</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>p-nitrophenylphosphatase activity</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>p-nitrophenylphosphate phosphohydrolase activity</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>para-nitrophenyl phosphatase activity</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym>phosphatase</oboInOwl:hasRelatedSynonym>
         <rdfs:label>phosphatase activity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0016791"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Catalysis of the hydrolysis of phosphoric monoesters, releasing inorganic phosphate.</owl:annotatedTarget>
+        <owl:annotatedTarget>Catalysis of the hydrolysis of a phosphoric monoester, releasing a phosphate.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:curators</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:pg</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -2582,7 +2508,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050789"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050794"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
@@ -2610,29 +2536,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0019438 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019438">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006725"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044249"/>
-        <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of aromatic compounds, any substance containing an aromatic carbon ring.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>aromatic compound anabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>aromatic compound biosynthesis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>aromatic compound formation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>aromatic compound synthesis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>aromatic hydrocarbon biosynthesis</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>aromatic hydrocarbon biosynthetic process</oboInOwl:hasNarrowSynonym>
-        <rdfs:label>aromatic compound biosynthetic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0019438"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways resulting in the formation of aromatic compounds, any substance containing an aromatic carbon ring.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:ai</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0019748 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019748">
@@ -2655,7 +2558,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0019953 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0019953">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0022414"/>
         <obo:IAO_0000115>A type of reproduction that combines the genetic material of two gametes (such as a sperm or egg cell or fungal spores). The gametes have an haploid genome (with a single set of chromosomes, the product of a meiotic division) and combines with one another to produce a zygote (diploid).</obo:IAO_0000115>
         <rdfs:label>sexual reproduction</rdfs:label>
     </owl:Class>
@@ -2725,24 +2628,7 @@
     <!-- http://purl.obolibrary.org/obo/GO_0022414 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0022414">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0008150"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008150"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0000003"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000115>A biological process that directly contributes to the process of producing new individuals by one or two organisms. The new individuals inherit some proportion of their genetic material from the parent or parents.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>single organism reproductive process</oboInOwl:hasRelatedSynonym>
         <rdfs:label>reproductive process</rdfs:label>
@@ -2901,6 +2787,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030545">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0098772"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0038023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>Binds to and modulates the activity of a receptor.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>receptor regulator activity</oboInOwl:hasBroadSynonym>
         <rdfs:label>signaling receptor regulator activity</rdfs:label>
@@ -2919,6 +2811,12 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0030546">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0030545"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0140677"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0038023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>The function of interacting (directly or indirectly) with receptors such that the proportion of receptors in the active form is increased.</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>receptor activator activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>signalling receptor activator activity</oboInOwl:hasExactSynonym>
@@ -2974,168 +2872,10 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0031323 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031323">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0065007"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044237"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019222"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0050794"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044237"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of the chemical reactions and pathways by which individual cells transform chemical substances.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>regulation of cellular metabolism</oboInOwl:hasExactSynonym>
-        <rdfs:label>regulation of cellular metabolic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031323"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of the chemical reactions and pathways by which individual cells transform chemical substances.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0031325 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031325">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0065007"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044237"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009893"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031323"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0048522"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044237"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways by which individual cells transform chemical substances.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>positive regulation of cellular metabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>up regulation of cellular metabolic process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>up-regulation of cellular metabolic process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>upregulation of cellular metabolic process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>activation of cellular metabolic process</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>stimulation of cellular metabolic process</oboInOwl:hasNarrowSynonym>
-        <rdfs:label>positive regulation of cellular metabolic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031325"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways by which individual cells transform chemical substances.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0031326 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031326">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0065007"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044249"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009889"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031323"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044249"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>Any process that modulates the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of substances, carried out by individual cells.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>regulation of cellular anabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>regulation of cellular biosynthesis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>regulation of cellular formation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>regulation of cellular synthesis</oboInOwl:hasExactSynonym>
-        <rdfs:label>regulation of cellular biosynthetic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031326"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any process that modulates the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of substances, carried out by individual cells.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0031328 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031328">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/GO_0065007"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044249"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009891"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031325"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031326"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0044249"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of substances, carried out by individual cells.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>positive regulation of cellular anabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>positive regulation of cellular biosynthesis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>positive regulation of cellular formation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>positive regulation of cellular synthesis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>up regulation of cellular biosynthetic process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>up-regulation of cellular biosynthetic process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>upregulation of cellular biosynthetic process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>activation of cellular biosynthetic process</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasNarrowSynonym>stimulation of cellular biosynthetic process</oboInOwl:hasNarrowSynonym>
-        <rdfs:label>positive regulation of cellular biosynthetic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031328"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of substances, carried out by individual cells.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0031967 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031967">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031975"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
@@ -3155,23 +2895,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031967"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A double membrane structure enclosing an organelle, including two lipid bilayers and the region between them. In some cases, an organelle envelope may have more than two membranes.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:pz</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0031975 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0031975">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
-        <obo:IAO_0000115>A multilayered structure surrounding all or part of a cell; encompasses one or more lipid bilayers, and may include a cell wall layer; also includes the space between layers.</obo:IAO_0000115>
-        <rdfs:label>envelope</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0031975"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A multilayered structure surrounding all or part of a cell; encompasses one or more lipid bilayers, and may include a cell wall layer; also includes the space between layers.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:pz</oboInOwl:hasDbXref>
     </owl:Axiom>
@@ -3477,8 +3200,8 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0035618"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A long, thin projection from a root epidermal cell that contains F-actin and tubulin, and a cell wall.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PMID:24982600</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>PO:0000256</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.jstor.org/stable/4354264</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3632,7 +3355,7 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A prolongation or process extending from a cell, e.g. a flagellum or axon.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>http://www.cogsci.princeton.edu/~wn/</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>PMID:16318917</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -3957,52 +3680,6 @@
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Any process that activates or increases the rate or extent of a molecular function, an elemental biological activity occurring at the molecular level, such as catalysis or binding.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GO:jl</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0044237 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044237">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009987"/>
-        <obo:IAO_0000115>The chemical reactions and pathways by which individual cells transform chemical substances.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>cellular metabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>intermediary metabolism</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>cellular metabolic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044237"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways by which individual cells transform chemical substances.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:go_curators</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044237"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>intermediary metabolism</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0044249 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0044249">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009058"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0044237"/>
-        <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of substances, carried out by individual cells.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>cellular anabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>cellular biosynthesis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>cellular formation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>cellular synthesis</oboInOwl:hasExactSynonym>
-        <rdfs:label>cellular biosynthetic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0044249"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways resulting in the formation of substances, carried out by individual cells.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:jl</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -4412,23 +4089,16 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007165"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002213"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0038023"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands).</obo:IAO_0000115>
+        <obo:IAO_0000115>The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same cell that expresses the receptor. Ligands may also be expressed at the plasma membrane of an adjacent cell (e.g. Notch ligands) or be secreted and diffuse extracellularly from their point of origin to the receiving cell (e.g. interleukins).</obo:IAO_0000115>
         <oboInOwl:hasBroadSynonym>receptor agonist activity</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym>signaling molecule</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>signaling receptor ligand activity</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasNarrowSynonym>vitamin D receptor activator activity</oboInOwl:hasNarrowSynonym>
         <rdfs:label>receptor ligand activity</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0048018"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands).</owl:annotatedTarget>
+        <owl:annotatedTarget>The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same cell that expresses the receptor. Ligands may also be expressed at the plasma membrane of an adjacent cell (e.g. Notch ligands) or be secreted and diffuse extracellularly from their point of origin to the receiving cell (e.g. interleukins).</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:kv</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:molecular_function_refactoring</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
@@ -5396,7 +5066,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031323"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0019222"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002211"/>
@@ -6128,41 +5798,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/GO_0071702 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071702">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0006810"/>
-        <obo:IAO_0000115>The directed movement of organic substances into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore. An organic substance is a molecular entity that contains carbon.</obo:IAO_0000115>
-        <rdfs:label>organic substance transport</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0071702"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The directed movement of organic substances into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore. An organic substance is a molecular entity that contains carbon.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_0071704 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071704">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0008152"/>
-        <obo:IAO_0000115>The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>organic molecular entity metabolic process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organic molecular entity metabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organic substance metabolism</oboInOwl:hasExactSynonym>
-        <rdfs:label>organic substance metabolic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0071704"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:mah</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/GO_0071840 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071840">
@@ -6198,13 +5833,13 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0071944">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
-        <obo:IAO_0000115>The broad region around and including the plasma membrane of a cell,  encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures.</obo:IAO_0000115>
+        <obo:IAO_0000115>The broad region around and including the plasma membrane of a cell, encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures.</obo:IAO_0000115>
         <rdfs:label>cell periphery</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0071944"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The broad region around and including the plasma membrane of a cell,  encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures.</owl:annotatedTarget>
+        <owl:annotatedTarget>The broad region around and including the plasma membrane of a cell, encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:pdt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -6489,13 +6124,14 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_0110165">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0005575"/>
-        <obo:IAO_0000115>A part of a cellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex but below that of an anatomical system. Or, a substance produced by a cellular organism with granularity above the level of a protein complex.</obo:IAO_0000115>
-        <rdfs:label>cellular anatomical entity</rdfs:label>
+        <obo:IAO_0000115>A part of a cellular organism consisting of a material entity with granularity above the level of a protein complex but below that of an anatomical system. Note that cellular organisms exclude viruses.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>cellular anatomical entity</oboInOwl:hasExactSynonym>
+        <rdfs:label>cellular anatomical structure</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_0110165"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A part of a cellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex but below that of an anatomical system. Or, a substance produced by a cellular organism with granularity above the level of a protein complex.</owl:annotatedTarget>
+        <owl:annotatedTarget>A part of a cellular organism consisting of a material entity with granularity above the level of a protein complex but below that of an anatomical system. Note that cellular organisms exclude viruses.</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:kmv</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -6954,7 +6590,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031326"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1900376"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_2000762"/>
         <rdfs:subClassOf>
@@ -6998,125 +6633,6 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901141"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>regulation of lignin synthesis</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_1901360 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_1901360">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071704"/>
-        <obo:IAO_0000115>The chemical reactions and pathways involving organic cyclic compound.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>organic cyclic compound metabolism</oboInOwl:hasExactSynonym>
-        <rdfs:label>organic cyclic compound metabolic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901360"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways involving organic cyclic compound.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901360"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>organic cyclic compound metabolism</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_1901362 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_1901362">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901360"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_1901576"/>
-        <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of organic cyclic compound.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>organic cyclic compound anabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organic cyclic compound biosynthesis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organic cyclic compound formation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organic cyclic compound synthesis</oboInOwl:hasExactSynonym>
-        <rdfs:label>organic cyclic compound biosynthetic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901362"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways resulting in the formation of organic cyclic compound.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901362"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>organic cyclic compound anabolism</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901362"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>organic cyclic compound biosynthesis</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901362"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>organic cyclic compound formation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901362"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>organic cyclic compound synthesis</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/GO_1901576 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/GO_1901576">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0009058"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0071704"/>
-        <obo:IAO_0000115>The chemical reactions and pathways resulting in the formation of an organic substance, any molecular entity containing carbon.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>organic molecular entity anabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organic molecular entity biosynthesis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organic molecular entity biosynthetic process</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organic molecular entity formation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organic molecular entity synthesis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organic substance anabolism</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organic substance biosynthesis</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organic substance formation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>organic substance synthesis</oboInOwl:hasExactSynonym>
-        <rdfs:label>organic substance biosynthetic process</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901576"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>The chemical reactions and pathways resulting in the formation of an organic substance, any molecular entity containing carbon.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:pr</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901576"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>organic molecular entity anabolism</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901576"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>organic molecular entity biosynthesis</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901576"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>organic molecular entity formation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/GO_1901576"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>organic molecular entity synthesis</owl:annotatedTarget>
         <oboInOwl:hasDbXref>GOC:TermGenie</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -7539,7 +7055,6 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0031323"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/GO_0043455"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -7567,5 +7082,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 

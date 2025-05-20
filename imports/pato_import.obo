@@ -1,4 +1,6 @@
 format-version: 1.2
+idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
+idspace: terms http://purl.org/dc/terms/ 
 ontology: to/imports/pato_import
 
 [Term]
@@ -54,7 +56,7 @@ id: PATO:0000033
 name: concentration of
 def: "A quality inhering in a substance by virtue of the amount of the bearer's there is mixed with another substance." [Wikipedia:http\://en.wikipedia.org/wiki/concentration]
 synonym: "concentration" EXACT []
-is_a: PATO:0002182 ! molecular quality
+is_a: PATO:0000070 ! amount
 
 [Term]
 id: PATO:0000037
@@ -113,6 +115,7 @@ is_a: PATO:0000150 ! texture
 [Term]
 id: PATO:0000068
 name: qualitative
+def: "A quality of an entity that is descriptive or observational, typically not represented numerically." [https://libguides.macalester.edu/c.php?g=527786&p=3608639, https://www.ncbi.nlm.nih.gov/books/NBK470395/]
 is_a: PATO:0000001 ! quality
 
 [Term]
@@ -130,7 +133,7 @@ synonym: "number" RELATED []
 synonym: "presence" RELATED []
 synonym: "presence or absence in organism" EXACT []
 synonym: "quantitative" EXACT []
-is_a: PATO:0000068 ! qualitative
+is_a: PATO:0103000 ! quantitative
 relationship: RO:0015012 PATO:0001555 ! has number of
 
 [Term]
@@ -309,8 +312,28 @@ def: "A quality denoting the lack of an entity." [thefreedictionary.:thefreedict
 synonym: "absence" EXACT []
 synonym: "absent from organism" EXACT []
 is_a: PATO:0000070 ! amount
+disjoint_from: PATO:0000467 ! present
 relationship: RO:0015012 PATO:0001558 ! lacking processual parts
 relationship: RO:0015012 PATO:0002000 ! lacks all parts of type
+
+[Term]
+id: PATO:0000467
+name: present
+def: "A quality inhering in a bearer by virtue of the bearer's existence." [PATOC:GVG]
+synonym: "present in organism" RELATED []
+is_a: PATO:0000070 ! amount
+
+[Term]
+id: PATO:0000470
+name: increased amount
+def: "An amount which is relatively high." [PATOC:GVG]
+synonym: "accessory" RELATED []
+synonym: "increased" RELATED []
+synonym: "increased number" EXACT []
+synonym: "present in greater numbers in organism" EXACT []
+synonym: "supernumerary" EXACT []
+is_a: PATO:0000467 ! present
+is_a: PATO:0002300 ! increased quality
 
 [Term]
 id: PATO:0000515
@@ -551,13 +574,13 @@ is_a: PATO:0001995 ! organismal quality
 
 [Term]
 id: PATO:0001470
-name: proportionality to
-def: "A quality inhering in a bearer by virtue of the bearer's magnitude in respect to a related entity." [PATOC:nw]
+name: ratio
+def: "A quality inhering in a bearer by virtue of the bearer's magnitude in proportion to the magnitude of another entity." [] {terms:contributor="https://orcid.org/0000-0001-8314-2140"}
 synonym: "proportion" EXACT []
 synonym: "proportionality" EXACT []
+synonym: "proportionality to" EXACT []
 synonym: "quotient" EXACT []
 synonym: "rate" RELATED []
-synonym: "ratio" EXACT []
 is_a: PATO:0001018 ! physical quality
 
 [Term]
@@ -612,8 +635,7 @@ synonym: "has or lacks parts of type" EXACT []
 synonym: "mereological quality" EXACT []
 synonym: "number" RELATED []
 synonym: "number of" EXACT []
-is_a: PATO:0001241 ! physical object quality
-relationship: RO:0015012 PATO:0000070 ! amount
+is_a: PATO:0000070 ! amount
 
 [Term]
 id: PATO:0001558
@@ -777,6 +799,7 @@ synonym: "has increased number of" EXACT []
 synonym: "having extra physical parts" EXACT []
 synonym: "having supernumerary physical parts" EXACT []
 synonym: "increased number of" EXACT []
+is_a: PATO:0000470 ! increased amount
 is_a: PATO:0002083 ! altered number of
 is_a: PATO:0002305 ! increased object quality
 
@@ -831,13 +854,6 @@ name: altered number of
 def: "Having extra or fewer parts." [PATOC:GVG]
 is_a: PATO:0000051 ! morphology
 is_a: PATO:0001555 ! has number of
-
-[Term]
-id: PATO:0002182
-name: molecular quality
-def: "A quality which inheres in a molecular entity, a single molecule, atom, ion, radical etc." [PATOC:GVG]
-synonym: "relational molecular quality" EXACT []
-is_a: PATO:0001241 ! physical object quality
 
 [Term]
 id: PATO:0002198
@@ -928,6 +944,12 @@ id: PATO:0070060
 name: quality of interaction of a substance with electromagnetic radiation
 def: "A quality of a substance on which or through which electromagnetic radiation impinges or traverses with respect to radiation. This substance quality changes the quality of the incident radiation with respect to any of: intensity, direction, scatter and wavelength." [https://orcid.org/0000-0002-5111-7263]
 is_a: PATO:0002198 ! quality of a substance
+
+[Term]
+id: PATO:0103000
+name: quantitative
+def: "A quality of an entity that can be represented numerically, including anything that can be counted, measured, or given a numerical value." [https://libguides.macalester.edu/c.php?g=527786&p=3608639, https://www.nnlm.gov/guides/data-glossary/quantitative-data]
+is_a: PATO:0000001 ! quality
 
 [Typedef]
 id: BFO:0000050

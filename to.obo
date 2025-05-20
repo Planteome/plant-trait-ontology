@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: releases/2023-07-17
+data-version: releases/2025-05-20
 saved-by: cooperl
 subsetdef: Allium_porrum "Terms_used_for_leek"
 subsetdef: Cucurbita "Terms_used_for_squash"
@@ -10,6 +10,11 @@ subsetdef: Solanaceae_spp "Terms_used_for_the_Solanaceae"
 subsetdef: Triticum_aestivum "Terms_used_for_wheat"
 subsetdef: Zea_mays "Terms_used_for_maize_or_corn"
 default-namespace: plant_trait_ontology
+idspace: dc http://purl.org/dc/elements/1.1/ 
+idspace: obo http://www.geneontology.org/formats/oboInOwl#http://purl.obolibrary.org/obo/ 
+idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
+idspace: swrla http://swrl.stanford.edu/ontologies/3.3/swrla.owl# 
+idspace: terms http://purl.org/dc/terms/ 
 import: http://purl.obolibrary.org/obo/po.owl
 import: http://purl.obolibrary.org/obo/to/imports/chebi_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/envo_import.owl
@@ -19,9 +24,9 @@ import: http://purl.obolibrary.org/obo/to/imports/pato_import.owl
 import: http://purl.obolibrary.org/obo/to/imports/peco_import.owl
 import: http://purl.obolibrary.org/obo/to/patterns/merge_patterns.owl
 ontology: to
-property_value: http://purl.org/dc/terms/description "An ontology that describes phenotypic traits in plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature plant." xsd:string
-property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
-property_value: http://purl.org/dc/terms/title "Plant Trait Ontology" xsd:string
+property_value: terms:description "An ontology that describes phenotypic traits in plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature plant." xsd:string
+property_value: terms:license http://creativecommons.org/licenses/by/4.0/
+property_value: terms:title "Plant Trait Ontology" xsd:string
 
 [Term]
 id: BFO:0000002 ! continuant
@@ -49,14 +54,14 @@ is_a: BFO:0000017 ! realizable entity
 
 [Term]
 id: BFO:0000017 ! realizable entity
-is_a: BFO:0000020 ! specifically dependent continuant
+is_a: BFO:0000020 ! characteristic
 
 [Term]
 id: BFO:0000019 ! quality
-is_a: BFO:0000020 ! specifically dependent continuant
+is_a: BFO:0000020 ! characteristic
 
 [Term]
-id: BFO:0000020 ! specifically dependent continuant
+id: BFO:0000020 ! characteristic
 is_a: BFO:0000002 ! continuant
 
 [Term]
@@ -215,8 +220,8 @@ is_a: CHEBI:37022 ! amino-acid anion
 
 [Term]
 id: CHEBI:139588 ! alpha-hydroxy ketone
-is_a: CHEBI:30879 ! alcohol
-is_a: CHEBI:52396 ! alpha-oxyketone
+is_a: CHEBI:17087 ! ketone
+is_a: CHEBI:33822 ! organic hydroxy compound
 
 [Term]
 id: CHEBI:140948 ! fatty acid 18:1
@@ -241,19 +246,19 @@ is_a: CHEBI:142851 ! 2-amino-4-[hydroxy(methyl)phosphoryl]butanoic acid
 
 [Term]
 id: CHEBI:142854 ! (2R)-glufosinate zwitterion
-is_a: CHEBI:35238 ! amino acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 
 [Term]
 id: CHEBI:142856 ! glufosinate-P zwitterion
-is_a: CHEBI:35238 ! amino acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 
 [Term]
 id: CHEBI:142858 ! (2R)-glufosinate zwitterion(1-)
-is_a: CHEBI:25696 ! organic anion
+is_a: CHEBI:58882 ! phosphinothricin(1-)
 
 [Term]
 id: CHEBI:142859 ! glufosinate-P zwitterion(1-)
-is_a: CHEBI:25696 ! organic anion
+is_a: CHEBI:58882 ! phosphinothricin(1-)
 
 [Term]
 id: CHEBI:146293 ! 9-HPODE(1-)
@@ -280,14 +285,11 @@ is_a: CHEBI:52625 ! inorganic hydroxy compound
 [Term]
 id: CHEBI:15428 ! glycine
 is_a: CHEBI:26650 ! serine family amino acid
+is_a: CHEBI:83813 ! proteinogenic amino acid
 
 [Term]
 id: CHEBI:15693 ! aldose
 is_a: CHEBI:35381 ! monosaccharide
-
-[Term]
-id: CHEBI:15705 ! L-alpha-amino acid
-is_a: CHEBI:33704 ! alpha-amino acid
 
 [Term]
 id: CHEBI:15734 ! primary alcohol
@@ -415,8 +417,8 @@ is_a: CHEBI:139120 ! carotenoid beta-end derivative
 is_a: CHEBI:35163 ! cyclic carotene
 
 [Term]
-id: CHEBI:17620 ! ferulic acid
-is_a: CHEBI:24031 ! ferulic acids
+id: CHEBI:17620 ! trans-ferulic acid
+is_a: CHEBI:193350 ! ferulic acid
 
 [Term]
 id: CHEBI:17632 ! nitrate
@@ -441,7 +443,7 @@ is_a: CHEBI:50584 ! alkyl alcohol
 is_a: CHEBI:64708 ! one-carbon compound
 
 [Term]
-id: CHEBI:17792
+id: CHEBI:17792 ! organohalogen compound
 is_a: CHEBI:33285 ! heteroorganic entity
 is_a: CHEBI:37578 ! halide
 
@@ -533,6 +535,10 @@ id: CHEBI:192499 ! anthoxanthin
 is_a: CHEBI:47916 ! flavonoid
 
 [Term]
+id: CHEBI:193350 ! ferulic acid
+is_a: CHEBI:24031 ! ferulic acids
+
+[Term]
 id: CHEBI:19351 ! (2,4-dichlorophenoxy)acetate
 is_a: CHEBI:23151 ! chlorophenoxyacetate anion
 
@@ -611,6 +617,11 @@ id: CHEBI:22728 ! benzopyrrole
 is_a: CHEBI:27171 ! organic heterobicyclic compound
 is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 is_a: CHEBI:38180 ! polycyclic heteroarene
+
+[Term]
+id: CHEBI:228364 ! NMR chemical shift reference compound
+is_a: CHEBI:33232 ! application
+is_a: CHEBI:51086 ! chemical role
 
 [Term]
 id: CHEBI:22916 ! boron molecular entity
@@ -696,6 +707,10 @@ is_a: CHEBI:79020 ! alpha,beta-unsaturated monocarboxylic acid
 [Term]
 id: CHEBI:23336 ! cobalt cation
 is_a: CHEBI:33515 ! transition element cation
+
+[Term]
+id: CHEBI:233500 ! post-transition metal atom
+is_a: CHEBI:33521 ! metal atom
 
 [Term]
 id: CHEBI:23357 ! cofactor
@@ -962,8 +977,8 @@ is_a: CHEBI:38104 ! oxacycle
 
 [Term]
 id: CHEBI:25016 ! lead atom
+is_a: CHEBI:233500 ! post-transition metal atom
 is_a: CHEBI:33306 ! carbon group element atom
-is_a: CHEBI:33521 ! metal atom
 
 [Term]
 id: CHEBI:25048 ! linolenic acid
@@ -1265,8 +1280,7 @@ is_a: CHEBI:33304 ! chalcogen molecular entity
 
 [Term]
 id: CHEBI:26650 ! serine family amino acid
-is_a: CHEBI:15705 ! L-alpha-amino acid
-is_a: CHEBI:83813 ! proteinogenic amino acid
+is_a: CHEBI:33704 ! alpha-amino acid
 
 [Term]
 id: CHEBI:26658 ! sesquiterpenoid
@@ -1548,8 +1562,8 @@ is_a: CHEBI:25111 ! magnesium porphyrin
 
 [Term]
 id: CHEBI:28984 ! aluminium atom
+is_a: CHEBI:233500 ! post-transition metal atom
 is_a: CHEBI:33317 ! boron group element atom
-is_a: CHEBI:33521 ! metal atom
 
 [Term]
 id: CHEBI:29035 ! manganese(2+)
@@ -1625,7 +1639,7 @@ is_a: CHEBI:33693 ! oxygen hydride
 is_a: CHEBI:50313 ! onium cation
 
 [Term]
-id: CHEBI:29749 ! ferulate
+id: CHEBI:29749 ! trans-ferulate
 is_a: CHEBI:35757 ! monocarboxylic acid anion
 
 [Term]
@@ -2186,6 +2200,7 @@ is_a: CHEBI:36916 ! cation
 
 [Term]
 id: CHEBI:33703 ! amino-acid cation
+is_a: CHEBI:25697 ! organic cation
 is_a: CHEBI:33702 ! polyatomic cation
 
 [Term]
@@ -2358,7 +2373,7 @@ id: CHEBI:35222 ! inhibitor
 is_a: CHEBI:24432 ! biological role
 
 [Term]
-id: CHEBI:35238 ! amino acid zwitterion
+id: CHEBI:35238 ! amino-acid zwitterion
 is_a: CHEBI:27369 ! zwitterion
 
 [Term]
@@ -2547,6 +2562,10 @@ is_a: CHEBI:23888 ! drug
 is_a: CHEBI:52210 ! pharmacological role
 
 [Term]
+id: CHEBI:35952 ! 5-oxo monocarboxylic acid
+is_a: CHEBI:35871 ! oxo monocarboxylic acid
+
+[Term]
 id: CHEBI:35975 ! 5-oxo monocarboxylic acid anion
 is_a: CHEBI:35902 ! oxo monocarboxylic acid anion
 
@@ -2695,14 +2714,8 @@ is_a: CHEBI:72695 ! organic molecule
 
 [Term]
 id: CHEBI:36683 ! organochlorine compound
-is_a: CHEBI:17792
+is_a: CHEBI:17792 ! organohalogen compound
 is_a: CHEBI:23117 ! chlorine molecular entity
-is_a: CHEBI:36684 ! organohalogen compound
-
-[Term]
-id: CHEBI:36684 ! organohalogen compound
-is_a: CHEBI:33285 ! heteroorganic entity
-is_a: CHEBI:37578 ! halide
 
 [Term]
 id: CHEBI:36758 ! apo carotenoid sesquiterpenoid
@@ -3297,10 +3310,6 @@ id: CHEBI:50904 ! allergen
 is_a: CHEBI:52209 ! aetiopathogenetic role
 
 [Term]
-id: CHEBI:50906 ! role
-is_a: BFO:0000023 ! role
-
-[Term]
 id: CHEBI:50910 ! neurotoxin
 is_a: CHEBI:52209 ! aetiopathogenetic role
 is_a: CHEBI:64909 ! poison
@@ -3312,7 +3321,6 @@ is_a: CHEBI:50906 ! role
 [Term]
 id: CHEBI:51143 ! nitrogen molecular entity
 is_a: CHEBI:33302 ! pnictogen molecular entity
-is_a: FOODON:03412972 ! food additive
 
 [Term]
 id: CHEBI:51151 ! dipolar compound
@@ -3381,14 +3389,6 @@ id: CHEBI:52217 ! pharmaceutical
 is_a: CHEBI:33232 ! application
 
 [Term]
-id: CHEBI:52395 ! oxyketone
-is_a: CHEBI:17087 ! ketone
-
-[Term]
-id: CHEBI:52396 ! alpha-oxyketone
-is_a: CHEBI:52395 ! oxyketone
-
-[Term]
 id: CHEBI:52625 ! inorganic hydroxy compound
 is_a: CHEBI:24651 ! hydroxides
 is_a: CHEBI:24835 ! inorganic molecular entity
@@ -3422,7 +3422,7 @@ is_a: CHEBI:33595 ! cyclic compound
 
 [Term]
 id: CHEBI:57305 ! glycine zwitterion
-is_a: CHEBI:35238 ! amino acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 
 [Term]
 id: CHEBI:57545 ! luteolin-7-olate
@@ -3461,6 +3461,10 @@ is_a: CHEBI:25696 ! organic anion
 [Term]
 id: CHEBI:58941 ! cyclic tetrapyrrole anion
 is_a: CHEBI:25696 ! organic anion
+
+[Term]
+id: CHEBI:58942 ! cationic amino-acid residue
+is_a: CHEBI:64769 ! organic cationic group
 
 [Term]
 id: CHEBI:58945 ! organophosphate oxoanion
@@ -3503,14 +3507,6 @@ is_a: CHEBI:33457 ! phosphorus oxoacid
 id: CHEBI:59740 ! nucleophilic reagent
 is_a: CHEBI:33893 ! reagent
 is_a: CHEBI:39144 ! Lewis base
-
-[Term]
-id: CHEBI:59814 ! L-alpha-amino acid anion
-is_a: CHEBI:33558 ! alpha-amino-acid anion
-
-[Term]
-id: CHEBI:59869 ! L-alpha-amino acid zwitterion
-is_a: CHEBI:78608 ! alpha-amino acid zwitterion
 
 [Term]
 id: CHEBI:59999 ! chemical substance
@@ -3562,6 +3558,10 @@ id: CHEBI:60466 ! peptide zwitterion
 is_a: CHEBI:27369 ! zwitterion
 
 [Term]
+id: CHEBI:60575 ! phenoxy herbicide
+is_a: CHEBI:24527 ! herbicide
+
+[Term]
 id: CHEBI:60911 ! racemate
 is_a: CHEBI:60004 ! mixture
 
@@ -3591,7 +3591,7 @@ is_a: CHEBI:28965 ! dicarboxylic acid dianion
 
 [Term]
 id: CHEBI:62031 ! polar amino acid zwitterion
-is_a: CHEBI:35238 ! amino acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 
 [Term]
 id: CHEBI:62071 ! 2-cis-abscisate
@@ -3685,7 +3685,7 @@ is_a: CHEBI:33232 ! application
 
 [Term]
 id: CHEBI:64554 ! tryptophan zwitterion
-is_a: CHEBI:35238 ! amino acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 
 [Term]
 id: CHEBI:6457 ! lignin
@@ -3714,6 +3714,26 @@ is_a: CHEBI:50860 ! organic molecular entity
 [Term]
 id: CHEBI:64712 ! trivalent inorganic cation
 is_a: CHEBI:36915 ! inorganic cation
+
+[Term]
+id: CHEBI:64766 ! cationic group
+is_a: CHEBI:24433 ! group
+
+[Term]
+id: CHEBI:64767 ! anionic group
+is_a: CHEBI:24433 ! group
+
+[Term]
+id: CHEBI:64769 ! organic cationic group
+is_a: CHEBI:64766 ! cationic group
+
+[Term]
+id: CHEBI:64775 ! organic anionic group
+is_a: CHEBI:64767 ! anionic group
+
+[Term]
+id: CHEBI:64898 ! anionic amino-acid residue
+is_a: CHEBI:64775 ! organic anionic group
 
 [Term]
 id: CHEBI:64909 ! poison
@@ -3846,7 +3866,7 @@ is_a: CHEBI:25212 ! metabolite
 
 [Term]
 id: CHEBI:76042 ! aromatic amino-acid zwitterion
-is_a: CHEBI:35238 ! amino acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 
 [Term]
 id: CHEBI:76206 ! xenobiotic metabolite
@@ -4034,8 +4054,8 @@ id: CHEBI:78444 ! EC 3.1.1.1 (carboxylesterase) inhibitor
 is_a: CHEBI:76773 ! EC 3.1.1.* (carboxylic ester hydrolase) inhibitor
 
 [Term]
-id: CHEBI:78608 ! alpha-amino acid zwitterion
-is_a: CHEBI:35238 ! amino acid zwitterion
+id: CHEBI:78608 ! alpha-amino-acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 
 [Term]
 id: CHEBI:78616 ! carbohydrates and carbohydrate derivatives
@@ -4122,19 +4142,18 @@ is_a: CHEBI:18310 ! alkane
 
 [Term]
 id: CHEBI:83811 ! proteinogenic amino acid derivative
-is_a: CHEBI:83821 ! amino acid derivative
+is_a: CHEBI:83821 ! amino-acid derivative
 
 [Term]
 id: CHEBI:83813 ! proteinogenic amino acid
-is_a: CHEBI:33575 ! carboxylic acid
-is_a: CHEBI:35352 ! organonitrogen compound
+is_a: CHEBI:33709 ! amino acid
 
 [Term]
 id: CHEBI:83820 ! non-proteinogenic amino acid
 is_a: CHEBI:33709 ! amino acid
 
 [Term]
-id: CHEBI:83821 ! amino acid derivative
+id: CHEBI:83821 ! amino-acid derivative
 is_a: CHEBI:35352 ! organonitrogen compound
 
 [Term]
@@ -4163,30 +4182,16 @@ id: CHEBI:90172 ! c-Jun N-terminal kinase inhibitor
 is_a: CHEBI:79091 ! EC 2.7.11.24 (mitogen-activated protein kinase) inhibitor
 
 [Term]
-id: ENVO:00000000 ! geographic feature
+id: ENVO:00000063 ! water body
+is_a: ENVO:01000685 ! water mass
+
+[Term]
+id: ENVO:00000191 ! solid astronomical body part
 is_a: ENVO:01000813 ! astronomical body part
 
 [Term]
-id: ENVO:00000012 ! hydrographic feature
-is_a: ENVO:00000000 ! geographic feature
-
-[Term]
-id: ENVO:00000063 ! water body
-is_a: ENVO:00000000 ! geographic feature
-is_a: ENVO:01000685
-
-[Term]
-id: ENVO:00000304 ! shore
-is_a: ENVO:00000012 ! hydrographic feature
-is_a: ENVO:01000635 ! land
-
-[Term]
-id: ENVO:00002006 ! water
+id: ENVO:00002006 ! liquid water
 is_a: ENVO:01000815 ! liquid environmental material
-
-[Term]
-id: ENVO:00002297 ! environmental feature
-is_a: BFO:0000040 ! material entity
 
 [Term]
 id: ENVO:00010483 ! environmental material
@@ -4194,7 +4199,7 @@ is_a: BFO:0000024 ! fiat object
 
 [Term]
 id: ENVO:00010504 ! surface layer
-is_a: ENVO:01001684
+is_a: ENVO:01001684 ! interface layer
 
 [Term]
 id: ENVO:01000254 ! environmental system
@@ -4202,42 +4207,41 @@ is_a: RO:0002577 ! system
 
 [Term]
 id: ENVO:01000281 ! layer
-is_a: ENVO:00000000 ! geographic feature
-
-[Term]
-id: ENVO:01000317 ! aquatic environment
-is_a: ENVO:01000997 ! environmental system determined by a quality
-is_a: ENVO:01000998 ! environmental system determined by a material
+is_a: BFO:0000040 ! material entity
 
 [Term]
 id: ENVO:01000324 ! planetary surface
-is_a: ENVO:01001483
-
-[Term]
-id: ENVO:01000325 ! aquatic layer
-is_a: ENVO:01001273 ! liquid layer
+is_a: ENVO:01001483 ! surface of an astronomical body
 
 [Term]
 id: ENVO:01000355 ! vegetation layer
 is_a: ENVO:01000281 ! layer
 
 [Term]
-id: ENVO:01000635 ! land
+id: ENVO:01000554 ! hydrocarbon gas
+is_a: ENVO:01000797 ! gaseous environmental material
+is_a: ENVO:2000045 ! hydrocarbon-based environmental material
+
+[Term]
+id: ENVO:01000635 ! planetary landmass
 is_a: ENVO:01000324 ! planetary surface
-is_a: ENVO:01001782
+is_a: ENVO:01001782 ! landmass
 
 [Term]
 id: ENVO:01000637 ! outer space
-is_a: ENVO:00002297 ! environmental feature
 is_a: ENVO:00010483 ! environmental material
 
 [Term]
-id: ENVO:01000685
-is_a: ENVO:01001476
+id: ENVO:01000685 ! water mass
+is_a: ENVO:01001476 ! body of liquid
 
 [Term]
 id: ENVO:01000797 ! gaseous environmental material
-is_a: ENVO:02000140
+is_a: ENVO:02000140 ! fluid environmental material
+
+[Term]
+id: ENVO:01000798 ! plasma
+is_a: ENVO:02000140 ! fluid environmental material
 
 [Term]
 id: ENVO:01000799 ! astronomical body
@@ -4250,28 +4254,26 @@ is_a: ENVO:01000799 ! astronomical body
 [Term]
 id: ENVO:01000804 ! astronomical object
 is_a: BFO:0000030 ! object
-is_a: ENVO:00002297 ! environmental feature
 
 [Term]
 id: ENVO:01000813 ! astronomical body part
 is_a: BFO:0000024 ! fiat object
-is_a: ENVO:00002297 ! environmental feature
 
 [Term]
 id: ENVO:01000814 ! solid environmental material
-is_a: ENVO:01001125 ! ice
+is_a: ENVO:00010483 ! environmental material
 
 [Term]
 id: ENVO:01000815 ! liquid environmental material
-is_a: ENVO:02000140
+is_a: ENVO:02000140 ! fluid environmental material
 
 [Term]
 id: ENVO:01000819 ! hydrosphere
-is_a: ENVO:01001477
+is_a: ENVO:01001477 ! liquid astronomical body part
 
 [Term]
 id: ENVO:01000981 ! mass liquid flow
-is_a: ENVO:01001747
+is_a: ENVO:01001747 ! mass fluid flow
 
 [Term]
 id: ENVO:01000982 ! water flow process
@@ -4279,29 +4281,12 @@ is_a: ENVO:01000981 ! mass liquid flow
 is_a: ENVO:02500031 ! hydrological process
 
 [Term]
-id: ENVO:01000997 ! environmental system determined by a quality
-is_a: ENVO:01000254 ! environmental system
-
-[Term]
-id: ENVO:01000998 ! environmental system determined by a material
-is_a: ENVO:01000254 ! environmental system
-
-[Term]
 id: ENVO:01001110 ! ecosystem
 is_a: ENVO:01000254 ! environmental system
 
 [Term]
-id: ENVO:01001125 ! ice
-is_a: ENVO:00010483 ! environmental material
-
-[Term]
 id: ENVO:01001164 ! geodiversity
 is_a: PATO:0001241 ! physical object quality
-
-[Term]
-id: ENVO:01001191 ! water surface
-is_a: ENVO:01000325 ! aquatic layer
-is_a: ENVO:01001310 ! liquid surface layer
 
 [Term]
 id: ENVO:01001241 ! crop canopy
@@ -4316,21 +4301,12 @@ id: ENVO:01001244 ! cropland ecosystem
 is_a: ENVO:01001790 ! terrestrial ecosystem
 
 [Term]
-id: ENVO:01001273 ! liquid layer
-is_a: ENVO:01001678
-
-[Term]
 id: ENVO:01001275 ! solid layer
 is_a: ENVO:01000281 ! layer
 
 [Term]
 id: ENVO:01001308 ! hydroform
-is_a: ENVO:01001477
-
-[Term]
-id: ENVO:01001310 ! liquid surface layer
-is_a: ENVO:00010504 ! surface layer
-is_a: ENVO:01001273 ! liquid layer
+is_a: ENVO:01001477 ! liquid astronomical body part
 
 [Term]
 id: ENVO:01001311 ! solid surface layer
@@ -4342,53 +4318,70 @@ id: ENVO:01001334 ! advective transport process
 is_a: ENVO:03000010 ! material transport process
 
 [Term]
-id: ENVO:01001476
-is_a: ENVO:01001477
+id: ENVO:01001476 ! body of liquid
+is_a: ENVO:01001477 ! liquid astronomical body part
 
 [Term]
-id: ENVO:01001477
-is_a: ENVO:01001479
-is_a: ENVO:01001784
+id: ENVO:01001477 ! liquid astronomical body part
+is_a: ENVO:01001479 ! fluid astronomical body part
+is_a: ENVO:01001784 ! compound astronomical body part
 
 [Term]
-id: ENVO:01001479
+id: ENVO:01001478 ! gaseous astronomical body part
+is_a: ENVO:01001479 ! fluid astronomical body part
+is_a: ENVO:01001784 ! compound astronomical body part
+
+[Term]
+id: ENVO:01001479 ! fluid astronomical body part
 is_a: ENVO:01000813 ! astronomical body part
 
 [Term]
-id: ENVO:01001483
+id: ENVO:01001483 ! surface of an astronomical body
 is_a: ENVO:00010504 ! surface layer
 
 [Term]
-id: ENVO:01001678
+id: ENVO:01001684 ! interface layer
 is_a: ENVO:01000281 ! layer
 
 [Term]
-id: ENVO:01001684
-is_a: ENVO:01000281 ! layer
+id: ENVO:01001686 ! mass of environmental material
+is_a: BFO:0000030 ! object
 
 [Term]
-id: ENVO:01001747
+id: ENVO:01001687 ! mass of solid material
+is_a: ENVO:01001686 ! mass of environmental material
+
+[Term]
+id: ENVO:01001691 ! mass of compounded environmental materials
+is_a: ENVO:01001686 ! mass of environmental material
+
+[Term]
+id: ENVO:01001747 ! mass fluid flow
 is_a: ENVO:01001334 ! advective transport process
 
 [Term]
-id: ENVO:01001782
-is_a: ENVO:01001785
+id: ENVO:01001781 ! part of a landmass
+is_a: ENVO:00000191 ! solid astronomical body part
 
 [Term]
-id: ENVO:01001784
+id: ENVO:01001782 ! landmass
+is_a: ENVO:01001785 ! land
+
+[Term]
+id: ENVO:01001784 ! compound astronomical body part
 is_a: ENVO:01000813 ! astronomical body part
 
 [Term]
-id: ENVO:01001785
+id: ENVO:01001785 ! land
 is_a: ENVO:01001311 ! solid surface layer
-is_a: ENVO:01001483
+is_a: ENVO:01001483 ! surface of an astronomical body
 
 [Term]
 id: ENVO:01001790 ! terrestrial ecosystem
 is_a: ENVO:01001110 ! ecosystem
 
 [Term]
-id: ENVO:02000140
+id: ENVO:02000140 ! fluid environmental material
 is_a: ENVO:00010483 ! environmental material
 
 [Term]
@@ -4397,7 +4390,6 @@ is_a: BFO:0000015 ! process
 
 [Term]
 id: ENVO:02500002 ! flooding
-is_a: ENVO:02500031 ! hydrological process
 is_a: ENVO:03000010 ! material transport process
 
 [Term]
@@ -4409,28 +4401,8 @@ id: ENVO:03000010 ! material transport process
 is_a: ENVO:02500000 ! environmental system process
 
 [Term]
-id: FOODON:00001002 ! foodon product type
-is_a: FOODON:03400361 ! food product type
-
-[Term]
-id: FOODON:00001714 ! food component product
-is_a: FOODON:00001002 ! foodon product type
-
-[Term]
-id: FOODON:03400361 ! food product type
-is_a: BFO:0000040 ! material entity
-
-[Term]
-id: FOODON:03411041 ! chemical food product
-is_a: FOODON:00001714 ! food component product
-
-[Term]
-id: FOODON:03412972 ! food additive
-is_a: FOODON:03411041 ! chemical food product
-
-[Term]
-id: GO:0000003 ! reproduction
-is_a: GO:0008150 ! biological_process
+id: ENVO:2000045 ! hydrocarbon-based environmental material
+is_a: ENVO:00010483 ! environmental material
 
 [Term]
 id: GO:0000278 ! mitotic cell cycle
@@ -4483,11 +4455,11 @@ is_a: GO:0005488 ! binding
 
 [Term]
 id: GO:0005622 ! intracellular anatomical structure
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
 id: GO:0005737 ! cytoplasm
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
 id: GO:0005886 ! plasma membrane
@@ -4498,12 +4470,8 @@ id: GO:0005938 ! cell cortex
 is_a: GO:0005737 ! cytoplasm
 
 [Term]
-id: GO:0006725 ! cellular aromatic compound metabolic process
-is_a: GO:0044237 ! cellular metabolic process
-
-[Term]
 id: GO:0006793 ! phosphorus metabolic process
-is_a: GO:0044237 ! cellular metabolic process
+is_a: GO:0008152 ! metabolic process
 
 [Term]
 id: GO:0006796 ! phosphate-containing compound metabolic process
@@ -4516,7 +4484,6 @@ is_a: GO:0051234 ! establishment of localization
 [Term]
 id: GO:0006833 ! water transport
 is_a: GO:0042044 ! fluid transport
-is_a: GO:0071702 ! organic substance transport
 
 [Term]
 id: GO:0006950 ! response to stress
@@ -4569,7 +4536,7 @@ is_a: BFO:0000015 ! process
 
 [Term]
 id: GO:0008152 ! metabolic process
-is_a: GO:0008150 ! biological_process
+is_a: GO:0009987 ! cellular process
 
 [Term]
 id: GO:0008194 ! UDP-glycosyltransferase activity
@@ -4597,16 +4564,12 @@ is_a: GO:0050896 ! response to stimulus
 
 [Term]
 id: GO:0009698 ! phenylpropanoid metabolic process
-is_a: GO:0006725 ! cellular aromatic compound metabolic process
 is_a: GO:0019748 ! secondary metabolic process
-is_a: GO:1901360 ! organic cyclic compound metabolic process
 
 [Term]
 id: GO:0009699 ! phenylpropanoid biosynthetic process
 is_a: GO:0009698 ! phenylpropanoid metabolic process
-is_a: GO:0019438 ! aromatic compound biosynthetic process
 is_a: GO:0044550 ! secondary metabolite biosynthetic process
-is_a: GO:1901362 ! organic cyclic compound biosynthetic process
 
 [Term]
 id: GO:0009791 ! post-embryonic development
@@ -4623,7 +4586,6 @@ is_a: GO:0009808 ! lignin metabolic process
 
 [Term]
 id: GO:0009835 ! fruit ripening
-is_a: GO:0003006 ! developmental process involved in reproduction
 is_a: GO:0071695 ! anatomical structure maturation
 
 [Term]
@@ -4642,7 +4604,7 @@ is_a: GO:0009893 ! positive regulation of metabolic process
 [Term]
 id: GO:0009893 ! positive regulation of metabolic process
 is_a: GO:0019222 ! regulation of metabolic process
-is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0048522 ! positive regulation of cellular process
 
 [Term]
 id: GO:0009908 ! flower development
@@ -4708,7 +4670,7 @@ is_a: GO:0065009 ! regulation of molecular function
 
 [Term]
 id: GO:0010562 ! positive regulation of phosphorus metabolic process
-is_a: GO:0031325 ! positive regulation of cellular metabolic process
+is_a: GO:0009893 ! positive regulation of metabolic process
 is_a: GO:0051174 ! regulation of phosphorus metabolic process
 
 [Term]
@@ -4742,7 +4704,7 @@ is_a: GO:0051345 ! positive regulation of hydrolase activity
 
 [Term]
 id: GO:0016020 ! membrane
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
 id: GO:0016043 ! cellular component organization
@@ -4762,7 +4724,7 @@ is_a: GO:0016160 ! amylase activity
 
 [Term]
 id: GO:0016301 ! kinase activity
-is_a: GO:0003674 ! molecular_function
+is_a: GO:0016772 ! transferase activity, transferring phosphorus-containing groups
 
 [Term]
 id: GO:0016311 ! dephosphorylation
@@ -4810,12 +4772,7 @@ is_a: GO:0051174 ! regulation of phosphorus metabolic process
 
 [Term]
 id: GO:0019222 ! regulation of metabolic process
-is_a: GO:0050789 ! regulation of biological process
-
-[Term]
-id: GO:0019438 ! aromatic compound biosynthetic process
-is_a: GO:0006725 ! cellular aromatic compound metabolic process
-is_a: GO:0044249 ! cellular biosynthetic process
+is_a: GO:0050794 ! regulation of cellular process
 
 [Term]
 id: GO:0019748 ! secondary metabolic process
@@ -4823,7 +4780,7 @@ is_a: GO:0008152 ! metabolic process
 
 [Term]
 id: GO:0019953 ! sexual reproduction
-is_a: GO:0000003 ! reproduction
+is_a: GO:0022414 ! reproductive process
 
 [Term]
 id: GO:0021700 ! developmental maturation
@@ -4868,34 +4825,8 @@ id: GO:0031090 ! organelle membrane
 is_a: GO:0016020 ! membrane
 
 [Term]
-id: GO:0031323 ! regulation of cellular metabolic process
-is_a: GO:0019222 ! regulation of metabolic process
-is_a: GO:0050794 ! regulation of cellular process
-
-[Term]
-id: GO:0031325 ! positive regulation of cellular metabolic process
-is_a: GO:0009893 ! positive regulation of metabolic process
-is_a: GO:0031323 ! regulation of cellular metabolic process
-is_a: GO:0048522 ! positive regulation of cellular process
-
-[Term]
-id: GO:0031326 ! regulation of cellular biosynthetic process
-is_a: GO:0009889 ! regulation of biosynthetic process
-is_a: GO:0031323 ! regulation of cellular metabolic process
-
-[Term]
-id: GO:0031328 ! positive regulation of cellular biosynthetic process
-is_a: GO:0009891 ! positive regulation of biosynthetic process
-is_a: GO:0031325 ! positive regulation of cellular metabolic process
-is_a: GO:0031326 ! regulation of cellular biosynthetic process
-
-[Term]
 id: GO:0031967 ! organelle envelope
-is_a: GO:0031975 ! envelope
-
-[Term]
-id: GO:0031975 ! envelope
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
 id: GO:0032092 ! positive regulation of protein binding
@@ -4964,11 +4895,11 @@ is_a: GO:0016788 ! hydrolase activity, acting on ester bonds
 
 [Term]
 id: GO:0042995 ! cell projection
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
 id: GO:0043036 ! starch grain
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
 id: GO:0043085 ! positive regulation of catalytic activity
@@ -4977,7 +4908,7 @@ is_a: GO:0050790 ! regulation of catalytic activity
 
 [Term]
 id: GO:0043226 ! organelle
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
 id: GO:0043227 ! membrane-bounded organelle
@@ -5007,16 +4938,6 @@ is_a: GO:0051239 ! regulation of multicellular organismal process
 [Term]
 id: GO:0044093 ! positive regulation of molecular function
 is_a: GO:0065009 ! regulation of molecular function
-
-[Term]
-id: GO:0044237 ! cellular metabolic process
-is_a: GO:0008152 ! metabolic process
-is_a: GO:0009987 ! cellular process
-
-[Term]
-id: GO:0044249 ! cellular biosynthetic process
-is_a: GO:0009058 ! biosynthetic process
-is_a: GO:0044237 ! cellular metabolic process
 
 [Term]
 id: GO:0044550 ! secondary metabolite biosynthetic process
@@ -5205,7 +5126,7 @@ is_a: GO:0051128 ! regulation of cellular component organization
 
 [Term]
 id: GO:0051174 ! regulation of phosphorus metabolic process
-is_a: GO:0031323 ! regulation of cellular metabolic process
+is_a: GO:0019222 ! regulation of metabolic process
 
 [Term]
 id: GO:0051179 ! localization
@@ -5305,20 +5226,12 @@ id: GO:0071695 ! anatomical structure maturation
 is_a: GO:0021700 ! developmental maturation
 
 [Term]
-id: GO:0071702 ! organic substance transport
-is_a: GO:0006810 ! transport
-
-[Term]
-id: GO:0071704 ! organic substance metabolic process
-is_a: GO:0008152 ! metabolic process
-
-[Term]
 id: GO:0071840 ! cellular component organization or biogenesis
 is_a: GO:0009987 ! cellular process
 
 [Term]
 id: GO:0071944 ! cell periphery
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
 id: GO:0080134 ! regulation of response to stress
@@ -5365,7 +5278,7 @@ is_a: GO:0005938 ! cell cortex
 is_a: GO:0099568 ! cytoplasmic region
 
 [Term]
-id: GO:0110165 ! cellular anatomical entity
+id: GO:0110165 ! cellular anatomical structure
 is_a: GO:0005575 ! cellular_component
 
 [Term]
@@ -5416,23 +5329,8 @@ is_a: GO:1900376 ! regulation of secondary metabolite biosynthetic process
 
 [Term]
 id: GO:1901141 ! regulation of lignin biosynthetic process
-is_a: GO:0031326 ! regulation of cellular biosynthetic process
 is_a: GO:1900376 ! regulation of secondary metabolite biosynthetic process
 is_a: GO:2000762 ! regulation of phenylpropanoid metabolic process
-
-[Term]
-id: GO:1901360 ! organic cyclic compound metabolic process
-is_a: GO:0071704 ! organic substance metabolic process
-
-[Term]
-id: GO:1901362 ! organic cyclic compound biosynthetic process
-is_a: GO:1901360 ! organic cyclic compound metabolic process
-is_a: GO:1901576 ! organic substance biosynthetic process
-
-[Term]
-id: GO:1901576 ! organic substance biosynthetic process
-is_a: GO:0009058 ! biosynthetic process
-is_a: GO:0071704 ! organic substance metabolic process
 
 [Term]
 id: GO:1903046 ! meiotic cell cycle process
@@ -5483,7 +5381,6 @@ is_a: GO:0050793 ! regulation of developmental process
 
 [Term]
 id: GO:2000762 ! regulation of phenylpropanoid metabolic process
-is_a: GO:0031323 ! regulation of cellular metabolic process
 is_a: GO:0043455 ! regulation of secondary metabolic process
 
 [Term]
@@ -5544,13 +5441,8 @@ id: NCBITaxon:147550 ! Sordariomycetes
 is_a: NCBITaxon:715989 ! sordariomyceta
 
 [Term]
-id: NCBITaxon:148303 ! Magnaporthe
-is_a: NCBITaxon:81093 ! Magnaporthaceae
-
-[Term]
-id: NCBITaxon:148305 ! Magnaporthe grisea
-is_a: NCBITaxon:148303 ! Magnaporthe
-is_a: NCBITaxon:48558
+id: NCBITaxon:148305 ! Pyricularia grisea
+is_a: NCBITaxon:48558 ! Pyricularia
 
 [Term]
 id: NCBITaxon:165778 ! Nakataea oryzae
@@ -5583,8 +5475,7 @@ is_a: OBI:0100026 ! organism
 
 [Term]
 id: NCBITaxon:2169577 ! Solemoviridae
-is_a: NCBITaxon:2559587
-is_a: NCBITaxon:35278 ! ssRNA positive-strand viruses, no DNA stage
+is_a: NCBITaxon:2559587 ! Riboviria
 
 [Term]
 id: NCBITaxon:222543 ! Hypocreomycetidae
@@ -5607,11 +5498,11 @@ id: NCBITaxon:228882 ! Nakataea
 is_a: NCBITaxon:81093 ! Magnaporthaceae
 
 [Term]
-id: NCBITaxon:2528436
+id: NCBITaxon:2528436 ! Pyriculariaceae
 is_a: NCBITaxon:639021 ! Magnaporthales
 
 [Term]
-id: NCBITaxon:2559587
+id: NCBITaxon:2559587 ! Riboviria
 is_a: NCBITaxon:10239 ! Viruses
 
 [Term]
@@ -5669,7 +5560,7 @@ is_a: NCBITaxon:6072 ! Eumetazoa
 
 [Term]
 id: NCBITaxon:33283 ! Tylenchomorpha
-is_a: NCBITaxon:6300 ! Tylenchida
+is_a: NCBITaxon:6300 ! Tylenchina
 
 [Term]
 id: NCBITaxon:33284 ! Tylenchoidea
@@ -5708,12 +5599,8 @@ id: NCBITaxon:34373 ! Blumeria graminis
 is_a: NCBITaxon:34372 ! Blumeria
 
 [Term]
-id: NCBITaxon:35278 ! ssRNA positive-strand viruses, no DNA stage
-is_a: NCBITaxon:439488 ! ssRNA viruses
-
-[Term]
 id: NCBITaxon:35325 ! dsRNA viruses
-is_a: NCBITaxon:2559587
+is_a: NCBITaxon:2559587 ! Riboviria
 
 [Term]
 id: NCBITaxon:35493 ! Streptophyta
@@ -5726,10 +5613,6 @@ is_a: NCBITaxon:7041 ! Coleoptera
 [Term]
 id: NCBITaxon:41088 ! Cucujiformia
 is_a: NCBITaxon:41084 ! Polyphaga <beetles>
-
-[Term]
-id: NCBITaxon:439488 ! ssRNA viruses
-is_a: NCBITaxon:10239 ! Viruses
 
 [Term]
 id: NCBITaxon:45130 ! Bipolaris sorokiniana
@@ -5752,8 +5635,8 @@ id: NCBITaxon:4751 ! Fungi
 is_a: NCBITaxon:33154 ! Opisthokonta
 
 [Term]
-id: NCBITaxon:48558
-is_a: NCBITaxon:2528436
+id: NCBITaxon:48558 ! Pyricularia
+is_a: NCBITaxon:2528436 ! Pyriculariaceae
 
 [Term]
 id: NCBITaxon:4890 ! Ascomycota
@@ -5796,7 +5679,7 @@ id: NCBITaxon:6231 ! Nematoda
 is_a: NCBITaxon:1206794 ! Ecdysozoa
 
 [Term]
-id: NCBITaxon:6236
+id: NCBITaxon:6236 ! Rhabditida
 is_a: NCBITaxon:119089 ! Chromadorea
 
 [Term]
@@ -5804,8 +5687,8 @@ id: NCBITaxon:62690 ! Blumeria graminis f. sp. tritici
 is_a: NCBITaxon:34373 ! Blumeria graminis
 
 [Term]
-id: NCBITaxon:6300 ! Tylenchida
-is_a: NCBITaxon:6236
+id: NCBITaxon:6300 ! Tylenchina
+is_a: NCBITaxon:6236 ! Rhabditida
 
 [Term]
 id: NCBITaxon:6303 ! Meloidogyne javanica
@@ -5901,7 +5784,7 @@ is_a: BFO:0000040 ! material entity
 
 [Term]
 id: PATO:0000001 ! quality
-is_a: BFO:0000020 ! specifically dependent continuant
+is_a: BFO:0000020 ! characteristic
 
 [Term]
 id: PATO:0000011 ! age
@@ -5930,7 +5813,7 @@ is_a: PATO:0000141 ! structure
 
 [Term]
 id: PATO:0000033 ! concentration of
-is_a: PATO:0002182 ! molecular quality
+is_a: PATO:0000070 ! amount
 
 [Term]
 id: PATO:0000037 ! consistency
@@ -5974,7 +5857,7 @@ is_a: PATO:0000068 ! qualitative
 
 [Term]
 id: PATO:0000070 ! amount
-is_a: PATO:0000068 ! qualitative
+is_a: PATO:0103000 ! quantitative
 
 [Term]
 id: PATO:0000085 ! sensitivity toward
@@ -6081,6 +5964,15 @@ id: PATO:0000462 ! absent
 is_a: PATO:0000070 ! amount
 
 [Term]
+id: PATO:0000467 ! present
+is_a: PATO:0000070 ! amount
+
+[Term]
+id: PATO:0000470 ! increased amount
+is_a: PATO:0000467 ! present
+is_a: PATO:0002300 ! increased quality
+
+[Term]
 id: PATO:0000515 ! tolerant to
 is_a: PATO:0001046 ! resistance to
 
@@ -6164,10 +6056,6 @@ id: PATO:0001236 ! process quality
 is_a: PATO:0000001 ! quality
 
 [Term]
-id: PATO:0001237 ! quality of a single physical entity
-is_a: BFO:0000019 ! quality
-
-[Term]
 id: PATO:0001241 ! physical object quality
 is_a: BFO:0000019 ! quality
 is_a: PATO:0000001 ! quality
@@ -6217,7 +6105,7 @@ id: PATO:0001434 ! reproductive quality
 is_a: PATO:0001995 ! organismal quality
 
 [Term]
-id: PATO:0001470 ! proportionality to
+id: PATO:0001470 ! ratio
 is_a: PATO:0001018 ! physical quality
 
 [Term]
@@ -6242,22 +6130,19 @@ is_a: PATO:0001546 ! quality of a solid
 
 [Term]
 id: PATO:0001546 ! quality of a solid
-is_a: PATO:0001237 ! quality of a single physical entity
 is_a: PATO:0002198 ! quality of a substance
 
 [Term]
 id: PATO:0001547 ! quality of a gas
-is_a: PATO:0001237 ! quality of a single physical entity
 is_a: PATO:0002198 ! quality of a substance
 
 [Term]
 id: PATO:0001548 ! quality of a liquid
-is_a: PATO:0001237 ! quality of a single physical entity
 is_a: PATO:0002198 ! quality of a substance
 
 [Term]
 id: PATO:0001555 ! has number of
-is_a: PATO:0001241 ! physical object quality
+is_a: PATO:0000070 ! amount
 
 [Term]
 id: PATO:0001558 ! lacking processual parts
@@ -6354,6 +6239,7 @@ is_a: PATO:0001999 ! lacks parts or has fewer parts of type
 
 [Term]
 id: PATO:0002002 ! has extra parts of type
+is_a: PATO:0000470 ! increased amount
 is_a: PATO:0002083 ! altered number of
 is_a: PATO:0002305 ! increased object quality
 
@@ -6393,10 +6279,6 @@ is_a: PATO:0001555 ! has number of
 [Term]
 id: PATO:0002124 ! laminar
 is_a: PATO:0000141 ! structure
-
-[Term]
-id: PATO:0002182 ! molecular quality
-is_a: PATO:0001241 ! physical object quality
 
 [Term]
 id: PATO:0002198 ! quality of a substance
@@ -6453,8 +6335,16 @@ id: PATO:0002474 ! bitter
 is_a: PATO:0001329 ! flavourful
 
 [Term]
+id: PATO:0015021 ! combustibility
+is_a: PATO:0001018 ! physical quality
+
+[Term]
 id: PATO:0070060 ! quality of interaction of a substance with electromagnetic radiation
 is_a: PATO:0002198 ! quality of a substance
+
+[Term]
+id: PATO:0103000 ! quantitative
+is_a: PATO:0000001 ! quality
 
 [Term]
 id: PECO:0001001 ! plant exposure
@@ -6471,7 +6361,7 @@ is_a: PECO:0007189 ! chemical exposure
 [Term]
 id: PECO:0001009 ! inorganic anion exposure
 is_a: PECO:0001004 ! inorganic chemical exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0001019 ! organic gas exposure
@@ -6486,9 +6376,14 @@ id: PECO:0001038 ! osmotic stress exposure
 is_a: PECO:0001036 ! chemical stress exposure
 
 [Term]
-id: PECO:0007041 ! antimicrobial agent exposure
+id: PECO:0001064 ! potassium fertilizer exposure
+is_a: PECO:0007045 ! primary plant macronutrient exposure
+is_a: PECO:0007086 ! chemical fertilizer exposure
+
+[Term]
+id: PECO:0007041 ! antibiotic exposure
 is_a: PECO:0007189 ! chemical exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007043 ! non-mineral nutrient exposure
@@ -6552,7 +6447,7 @@ is_a: PECO:0007165 ! growth hormone exposure
 [Term]
 id: PECO:0007085 ! fertilizer exposure
 is_a: PECO:0007241 ! plant nutrient exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007086 ! chemical fertilizer exposure
@@ -6560,6 +6455,7 @@ is_a: PECO:0007085 ! fertilizer exposure
 
 [Term]
 id: PECO:0007102 ! nitrogen fertilizer exposure
+is_a: PECO:0007045 ! primary plant macronutrient exposure
 is_a: PECO:0007086 ! chemical fertilizer exposure
 
 [Term]
@@ -6569,7 +6465,7 @@ is_a: PECO:0007165 ! growth hormone exposure
 [Term]
 id: PECO:0007107 ! Ascomycota exposure
 is_a: PECO:0007233 ! fungal plant exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007109 ! ssRNA positive-strand virus with no DNA stage exposure
@@ -6578,7 +6474,7 @@ is_a: PECO:0007210 ! virus plant exposure
 [Term]
 id: PECO:0007110 ! dsRNA virus exposure
 is_a: PECO:0007210 ! virus plant exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007114 ! Lepidoptera exposure
@@ -6602,7 +6498,7 @@ is_a: PECO:0007333 ! insect plant exposure
 
 [Term]
 id: PECO:0007127 ! Meloidogyne spp. exposure
-is_a: PECO:0007337 ! Nematoda exposure
+is_a: PECO:0007337 ! plant nematode exposure
 
 [Term]
 id: PECO:0007133 ! basic pH growth media environment exposure
@@ -6623,7 +6519,7 @@ is_a: PECO:0007191 ! abiotic plant exposure
 [Term]
 id: PECO:0007151 ! radiation exposure
 is_a: PECO:0007316 ! physical plant exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007154 ! radiation quality exposure
@@ -6632,12 +6528,12 @@ is_a: PECO:0007151 ! radiation exposure
 [Term]
 id: PECO:0007165 ! growth hormone exposure
 is_a: PECO:0007189 ! chemical exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007167 ! pesticide exposure
 is_a: PECO:0007189 ! chemical exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007171 ! pH exposure
@@ -6667,7 +6563,7 @@ is_a: PECO:0007167 ! pesticide exposure
 [Term]
 id: PECO:0007185 ! salt exposure
 is_a: PECO:0007189 ! chemical exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007189 ! chemical exposure
@@ -6720,6 +6616,7 @@ is_a: PECO:0007196 ! light exposure
 [Term]
 id: PECO:0007225 ! fluorine nutrient exposure
 is_a: PECO:0007047 ! other nutrient exposure
+is_a: PECO:0007239 ! micronutrient exposure
 
 [Term]
 id: PECO:0007226 ! Magnaporthe grisea exposure
@@ -6728,6 +6625,7 @@ is_a: PECO:0007135 ! Magnaporthe spp. exposure
 [Term]
 id: PECO:0007228 ! chromium nutrient exposure
 is_a: PECO:0007047 ! other nutrient exposure
+is_a: PECO:0007239 ! micronutrient exposure
 
 [Term]
 id: PECO:0007229 ! Gibberella fujikuroi exposure
@@ -6736,10 +6634,12 @@ is_a: PECO:0007341 ! Fusarium exposure
 [Term]
 id: PECO:0007230 ! iodine nutrient exposure
 is_a: PECO:0007047 ! other nutrient exposure
+is_a: PECO:0007239 ! micronutrient exposure
 
 [Term]
 id: PECO:0007232 ! selenium nutrient exposure
 is_a: PECO:0007047 ! other nutrient exposure
+is_a: PECO:0007239 ! micronutrient exposure
 
 [Term]
 id: PECO:0007233 ! fungal plant exposure
@@ -6748,11 +6648,12 @@ is_a: PECO:0007357 ! biotic plant exposure
 [Term]
 id: PECO:0007235 ! silicon nutrient exposure
 is_a: PECO:0007047 ! other nutrient exposure
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007239 ! micronutrient exposure
 is_a: PECO:0007241 ! plant nutrient exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007240 ! plant macronutrient exposure
@@ -6785,19 +6686,22 @@ is_a: PECO:0007239 ! micronutrient exposure
 [Term]
 id: PECO:0007276 ! cobalt nutrient exposure
 is_a: PECO:0007047 ! other nutrient exposure
+is_a: PECO:0007239 ! micronutrient exposure
 
 [Term]
 id: PECO:0007278 ! oxygen exposure
 is_a: PECO:0007043 ! non-mineral nutrient exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007284 ! nitrogen macronutrient exposure
 is_a: PECO:0007045 ! primary plant macronutrient exposure
+is_a: PECO:0007086 ! chemical fertilizer exposure
 
 [Term]
 id: PECO:0007288 ! magnesium nutrient exposure
 is_a: PECO:0007046 ! secondary macronutrient exposure
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007289 ! Hydrellia philippina exposure
@@ -6806,10 +6710,12 @@ is_a: PECO:0007119 ! Dipteran insect plant exposure
 [Term]
 id: PECO:0007293 ! potassium nutrient exposure
 is_a: PECO:0007045 ! primary plant macronutrient exposure
+is_a: PECO:0007086 ! chemical fertilizer exposure
 
 [Term]
 id: PECO:0007295 ! sulfur nutrient exposure
 is_a: PECO:0007046 ! secondary macronutrient exposure
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007296 ! Dicladispa armigera exposure
@@ -6818,6 +6724,7 @@ is_a: PECO:0007120 ! Coleoptera exposure
 [Term]
 id: PECO:0007297 ! calcium nutrient exposure
 is_a: PECO:0007046 ! secondary macronutrient exposure
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007300 ! Leptocorisa oratorius exposure
@@ -6826,6 +6733,7 @@ is_a: PECO:0007116 ! Hemiptera insect plant exposure
 [Term]
 id: PECO:0007303 ! carbon nutrient exposure
 is_a: PECO:0007043 ! non-mineral nutrient exposure
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007305 ! Cnaphalocrocis medinalis exposure
@@ -6834,6 +6742,7 @@ is_a: PECO:0007114 ! Lepidoptera exposure
 [Term]
 id: PECO:0007306 ! aluminum nutrient exposure
 is_a: PECO:0007047 ! other nutrient exposure
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007308 ! Nephotettix spp exposure
@@ -6850,14 +6759,14 @@ is_a: PECO:0007191 ! abiotic plant exposure
 [Term]
 id: PECO:0007318 ! rice yellow mottle virus exposure
 is_a: PECO:0007109 ! ssRNA positive-strand virus with no DNA stage exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007333 ! insect plant exposure
 is_a: PECO:0007349 ! metazoan plant exposure
 
 [Term]
-id: PECO:0007337 ! Nematoda exposure
+id: PECO:0007337 ! plant nematode exposure
 is_a: PECO:0007349 ! metazoan plant exposure
 
 [Term]
@@ -6867,7 +6776,7 @@ is_a: PECO:0007118 ! Gibberella spp. exposure
 [Term]
 id: PECO:0007349 ! metazoan plant exposure
 is_a: PECO:0007357 ! biotic plant exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007357 ! biotic plant exposure
@@ -6896,11 +6805,12 @@ is_a: PECO:0007239 ! micronutrient exposure
 [Term]
 id: PECO:0007396 ! flood prone region exposure
 is_a: PECO:0007064 ! ecological environment exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007397 ! phosphorus nutrient exposure
 is_a: PECO:0007045 ! primary plant macronutrient exposure
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007404 ! drought environment exposure
@@ -6910,6 +6820,7 @@ is_a: PECO:0007198 ! water environment exposure
 id: PECO:0007406 ! nitrate exposure
 is_a: PECO:0001009 ! inorganic anion exposure
 is_a: PECO:0007102 ! nitrogen fertilizer exposure
+is_a: PECO:0007284 ! nitrogen macronutrient exposure
 
 [Term]
 id: PECO:0007409 ! brassinosteroid exposure
@@ -6918,7 +6829,7 @@ is_a: PECO:0007165 ! growth hormone exposure
 [Term]
 id: PECO:0007629 ! hydrogen exposure
 is_a: PECO:0007043 ! non-mineral nutrient exposure
-is_a: RO:0002310
+is_a: RO:0002310 ! exposure event or process
 
 [Term]
 id: PECO:0007632 ! insecticide exposure
@@ -6975,10 +6886,12 @@ is_a: PO:0009009 ! plant embryo
 id: PO:0000011 ! cultured somatic plant embryo
 is_a: PO:0000010 ! cultured plant embryo
 is_a: PO:0025302 ! somatic plant embryo
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0000012 ! apical hook
 is_a: PO:0025001 ! cardinal organ part
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0000013 ! cauline leaf
@@ -7040,6 +6953,7 @@ is_a: PO:0005046 ! periderm
 [Term]
 id: PO:0000032 ! tetrad of microspores
 is_a: PO:0009007 ! portion of plant tissue
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0000033 ! fruit valve
@@ -7219,6 +7133,7 @@ is_a: PO:0000295 ! cambial initial cell
 [Term]
 id: PO:0000084 ! plant sperm cell
 is_a: PO:0025006 ! plant gamete
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0000112 ! shoot axis epidermis
@@ -7227,6 +7142,7 @@ is_a: PO:0006035 ! shoot system epidermis
 [Term]
 id: PO:0000115 ! socket cell
 is_a: PO:0025165 ! shoot epidermal cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0000146 ! abscission zone
@@ -7299,6 +7215,7 @@ is_a: PO:0025059 ! portion of ground tissue
 [Term]
 id: PO:0000256 ! root hair cell
 is_a: PO:0025164 ! root epidermal cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0000258 ! root cortex
@@ -7307,10 +7224,12 @@ is_a: PO:0005708 ! cortex
 [Term]
 id: PO:0000262 ! trichoblast
 is_a: PO:0025164 ! root epidermal cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0000263 ! non-hair root epidermal cell
 is_a: PO:0025164 ! root epidermal cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0000272 ! protoxylem
@@ -7323,6 +7242,7 @@ is_a: PO:0025407 ! plant fiber cell
 [Term]
 id: PO:0000282 ! trichome
 is_a: PO:0009011 ! plant structure
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0000283 ! idioblast
@@ -7343,6 +7263,7 @@ is_a: PO:0025606 ! native plant cell
 [Term]
 id: PO:0000293 ! guard cell
 is_a: PO:0025165 ! shoot epidermal cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0000295 ! cambial initial cell
@@ -7359,6 +7280,7 @@ is_a: PO:0009035 ! nectary
 [Term]
 id: PO:0000332 ! shoot epidermal pavement cell
 is_a: PO:0025165 ! shoot epidermal cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0000349 ! plant epidermal initial cell
@@ -7367,6 +7289,7 @@ is_a: PO:0004011 ! initial cell
 [Term]
 id: PO:0000351 ! guard mother cell
 is_a: PO:0025165 ! shoot epidermal cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0000352 ! myrosin cell
@@ -7671,6 +7594,7 @@ is_a: PO:0006035 ! shoot system epidermis
 [Term]
 id: PO:0002002 ! embryo basal cell
 is_a: PO:0025028 ! embryo plant cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0002003 ! xylem vessel member
@@ -7727,6 +7651,7 @@ is_a: PO:0020131 ! lateral root cap
 [Term]
 id: PO:0003023 ! root nodule
 is_a: PO:0025001 ! cardinal organ part
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0003024 ! stolon
@@ -7827,6 +7752,7 @@ is_a: PO:0005848 ! secondary xylem
 [Term]
 id: PO:0004518 ! bark
 is_a: PO:0009007 ! portion of plant tissue
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0004519 ! phloem fiber cell
@@ -7859,10 +7785,12 @@ is_a: PO:0000074 ! parenchyma cell
 [Term]
 id: PO:0004526 ! axial secondary xylem parenchyma cell
 is_a: PO:0004525 ! secondary xylem parenchyma cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0004527 ! ray secondary xylem parenchyma cell
 is_a: PO:0004525 ! secondary xylem parenchyma cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0004528 ! upright ray secondary xylem parenchyma cell
@@ -7895,10 +7823,12 @@ is_a: PO:0004532 ! secondary xylem parenchyma
 [Term]
 id: PO:0004535 ! fruit placenta
 is_a: PO:0020001 ! plant ovary placenta
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0004536 ! infructescence fruit pedicel
 is_a: PO:0030114 ! fruit pedicel
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0004537 ! nucellar plant embryo
@@ -7924,6 +7854,7 @@ is_a: PO:0025029 ! shoot axis
 id: PO:0004543 ! shoot axis tuber
 is_a: PO:0025029 ! shoot axis
 is_a: PO:0025522 ! tuber
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0004544 ! root-borne shoot system
@@ -8156,6 +8087,7 @@ is_a: PO:0025205 ! shoot system vascular system
 [Term]
 id: PO:0005029 ! root primordium
 is_a: PO:0025127 ! primordium
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0005030 ! lupulin gland
@@ -8172,6 +8104,7 @@ is_a: PO:0025083 ! strobilus
 [Term]
 id: PO:0005039 ! primary thickening meristem
 is_a: PO:0006344 ! shoot lateral meristem
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0005040 ! root pith
@@ -8305,6 +8238,7 @@ is_a: PO:0005656 ! portion of secretory tissue
 [Term]
 id: PO:0005679 ! plant epidermis
 is_a: PO:0009007 ! portion of plant tissue
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0005702 ! aerenchyma
@@ -8326,14 +8260,17 @@ is_a: PO:0025409 ! secondary vascular tissue
 [Term]
 id: PO:0005849 ! primary xylem
 is_a: PO:0005352 ! xylem
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006000 ! caryopsis hull
 is_a: PO:0025023 ! collective phyllome structure
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006001 ! phyllome
 is_a: PO:0009008 ! plant organ
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006002 ! lower glume
@@ -8370,6 +8307,7 @@ is_a: PO:0006007 ! anther wall secondary parietal cell layer
 [Term]
 id: PO:0006010 ! primary parietal cell
 is_a: PO:0025606 ! native plant cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006011 ! lateral leaf vein
@@ -8577,6 +8515,7 @@ is_a: PO:0006079 ! shoot system meristem
 [Term]
 id: PO:0006075 ! primary phloem
 is_a: PO:0005417 ! phloem
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006076 ! metaphloem
@@ -8613,6 +8552,7 @@ is_a: PO:0009013 ! portion of meristem tissue
 [Term]
 id: PO:0006088 ! primary sporogenous cell
 is_a: PO:0025606 ! native plant cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006089 ! anther primordium
@@ -8649,6 +8589,7 @@ is_a: PO:0025059 ! portion of ground tissue
 [Term]
 id: PO:0006204 ! sporocyte
 is_a: PO:0025606 ! native plant cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006205 ! spongy mesophyll cell
@@ -8725,6 +8666,7 @@ is_a: PO:0020145 ! lateral meristem
 [Term]
 id: PO:0006309 ! tassel spikelet
 is_a: PO:0009051 ! spikelet
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006310 ! tassel floret
@@ -8803,22 +8745,27 @@ is_a: PO:0025395 ! floral organ
 [Term]
 id: PO:0006331 ! seed raphe
 is_a: PO:0025498 ! cardinal part of multi-tissue plant structure
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006332 ! seed funicle
 is_a: PO:0025498 ! cardinal part of multi-tissue plant structure
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006333 ! seed chalaza
 is_a: PO:0009007 ! portion of plant tissue
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006334 ! seed micropyle
 is_a: PO:0025117 ! plant anatomical space
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006336 ! seed obturator
 is_a: PO:0009007 ! portion of plant tissue
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006338 ! embryo leaf
@@ -8845,6 +8792,7 @@ is_a: UBERON:0001062 ! anatomical entity
 [Term]
 id: PO:0006343 ! axillary shoot system
 is_a: PO:0004545 ! shoot-borne shoot system
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0006344 ! shoot lateral meristem
@@ -9792,6 +9740,7 @@ is_a: PO:0000051 ! petiole epidermis
 [Term]
 id: PO:0008030 ! trichome cell
 is_a: PO:0025606 ! native plant cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0008032 ! stomatal pore
@@ -9804,6 +9753,10 @@ is_a: PO:0009013 ! portion of meristem tissue
 [Term]
 id: PO:0008036 ! periblem
 is_a: PO:0009013 ! portion of meristem tissue
+
+[Term]
+id: PO:0008037 ! seedling
+is_a: PO:0000003 ! whole plant
 
 [Term]
 id: PO:0008039 ! stem base
@@ -9838,6 +9791,7 @@ is_a: PO:0025001 ! cardinal organ part
 [Term]
 id: PO:0009001 ! fruit
 is_a: PO:0025496 ! multi-tissue plant structure
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0009002 ! plant cell
@@ -9846,6 +9800,7 @@ is_a: PO:0009011 ! plant structure
 [Term]
 id: PO:0009005 ! root
 is_a: PO:0025004 ! plant axis
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0009006 ! shoot system
@@ -9866,6 +9821,7 @@ is_a: PO:0000003 ! whole plant
 [Term]
 id: PO:0009010 ! seed
 is_a: PO:0025496 ! multi-tissue plant structure
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0009011 ! plant structure
@@ -10001,6 +9957,7 @@ is_a: PO:0009054 ! inflorescence bract
 [Term]
 id: PO:0009046 ! flower
 is_a: PO:0025082 ! reproductive shoot system
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0009047 ! stem
@@ -10054,10 +10011,12 @@ is_a: PO:0025023 ! collective phyllome structure
 [Term]
 id: PO:0009061 ! androecium
 is_a: PO:0025023 ! collective phyllome structure
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0009062 ! gynoecium
 is_a: PO:0025023 ! collective phyllome structure
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0009063 ! epicalyx
@@ -10074,6 +10033,7 @@ is_a: PO:0025001 ! cardinal organ part
 [Term]
 id: PO:0009066 ! anther
 is_a: PO:0025007 ! collective plant organ structure
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0009067 ! filament
@@ -10151,6 +10111,7 @@ is_a: PO:0009007 ! portion of plant tissue
 [Term]
 id: PO:0009090 ! aril
 is_a: PO:0019022 ! arilloid
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0009100 ! involucre
@@ -10159,10 +10120,12 @@ is_a: PO:0025023 ! collective phyllome structure
 [Term]
 id: PO:0009101 ! long lateral tassel branch
 is_a: PO:0006323 ! tassel inflorescence branch
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0009102 ! short tassel branch
 is_a: PO:0006323 ! tassel inflorescence branch
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0009103 ! short tassel branch meristem
@@ -10189,6 +10152,7 @@ is_a: PO:0009106 ! tassel meristem
 id: PO:0009108 ! inflorescence apical meristem
 is_a: PO:0000230 ! inflorescence meristem
 is_a: PO:0008028 ! reproductive shoot apical meristem
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0009109 ! ear meristem
@@ -10235,6 +10199,7 @@ is_a: PO:0025309 ! microsporangium endothecium
 [Term]
 id: PO:0020003 ! plant ovule
 is_a: PO:0009008 ! plant organ
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0020004 ! anther wall exothecium
@@ -10292,6 +10257,7 @@ is_a: PO:0025001 ! cardinal organ part
 [Term]
 id: PO:0020029 ! obturator
 is_a: PO:0009007 ! portion of plant tissue
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0020030 ! cotyledon
@@ -10409,7 +10375,6 @@ is_a: PO:0019022 ! arilloid
 [Term]
 id: PO:0020061 ! coma
 is_a: PO:0006048 ! seed coat epidermis
-is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0020062 ! elaiosome
@@ -10478,6 +10443,7 @@ is_a: PO:0025001 ! cardinal organ part
 [Term]
 id: PO:0020108 ! suspensor
 is_a: PO:0025099 ! embryo plant structure
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0020109 ! embryo hypophysis
@@ -10526,6 +10492,7 @@ is_a: PO:0025095 ! root parenchyma
 [Term]
 id: PO:0020132 ! columella root cap cell
 is_a: PO:0025030 ! ground tissue cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0020133 ! columella root cap initial cell
@@ -10821,6 +10788,7 @@ is_a: PO:0005421 ! parenchyma
 [Term]
 id: PO:0025059 ! portion of ground tissue
 is_a: PO:0009007 ! portion of plant tissue
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025060 ! lamina
@@ -10883,6 +10851,7 @@ is_a: PO:0025029 ! shoot axis
 [Term]
 id: PO:0025074 ! embryo sac
 is_a: PO:0025279 ! megagametophyte
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025075 ! non-vascular leaf
@@ -11058,6 +11027,7 @@ is_a: PO:0000084 ! plant sperm cell
 [Term]
 id: PO:0025122 ! archegonium egg cell
 is_a: PO:0020094 ! plant egg cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025123 ! embryo sac egg cell
@@ -11075,6 +11045,7 @@ is_a: PO:0025124 ! multicellular plant gametangium
 [Term]
 id: PO:0025126 ! archegonium
 is_a: PO:0025124 ! multicellular plant gametangium
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025127 ! primordium
@@ -11083,6 +11054,7 @@ is_a: PO:0009013 ! portion of meristem tissue
 [Term]
 id: PO:0025128 ! phyllome primordium
 is_a: PO:0025127 ! primordium
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025129 ! petiole lamina
@@ -11358,6 +11330,7 @@ is_a: PO:0006085 ! root meristem
 [Term]
 id: PO:0025195 ! pollen tube cell
 is_a: PO:0025606 ! native plant cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025196 ! basal endosperm transfer layer
@@ -11493,6 +11466,7 @@ is_a: PO:0025224 ! axil
 [Term]
 id: PO:0025227 ! tetrad of megaspores
 is_a: PO:0009007 ! portion of plant tissue
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025228 ! valve
@@ -11552,6 +11526,7 @@ is_a: UBERON:0001062 ! anatomical entity
 [Term]
 id: PO:0025242 ! infructescence axis
 is_a: PO:0025029 ! shoot axis
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025243 ! higher order infructescence axis
@@ -11632,6 +11607,7 @@ is_a: PO:0025030 ! ground tissue cell
 [Term]
 id: PO:0025262 ! plant ovary septum
 is_a: PO:0000030 ! septum
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025263 ! locule
@@ -11656,6 +11632,7 @@ is_a: PO:0004535 ! fruit placenta
 [Term]
 id: PO:0025268 ! fruit septum
 is_a: PO:0000030 ! septum
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025269 ! collective organ part structure
@@ -11664,6 +11641,7 @@ is_a: PO:0025497 ! collective plant structure
 [Term]
 id: PO:0025270 ! fruit locule
 is_a: PO:0025263 ! locule
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025272 ! plant ovary replum
@@ -11704,6 +11682,7 @@ is_a: PO:0000003 ! whole plant
 [Term]
 id: PO:0025281 ! pollen
 is_a: PO:0025280 ! microgametophyte
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025282 ! archegonium megagametophyte
@@ -11718,6 +11697,7 @@ is_a: PO:0025280 ! microgametophyte
 id: PO:0025284 ! embryo apical cell
 is_a: PO:0025028 ! embryo plant cell
 is_a: PO:0030015 ! sporophyte meristematic apical cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025285 ! callus parenchyma cell
@@ -11731,6 +11711,7 @@ is_a: PO:0025099 ! embryo plant structure
 [Term]
 id: PO:0025287 ! seedling coleoptile
 is_a: PO:0020033 ! coleoptile
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025288 ! embryo coleorhiza
@@ -11740,6 +11721,7 @@ is_a: PO:0025099 ! embryo plant structure
 [Term]
 id: PO:0025289 ! seedling coleorhiza
 is_a: PO:0020034 ! coleorhiza
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025290 ! embryo hypocotyl
@@ -11749,6 +11731,7 @@ is_a: PO:0025099 ! embryo plant structure
 [Term]
 id: PO:0025291 ! seedling hypocotyl
 is_a: PO:0020100 ! hypocotyl
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025292 ! embryo epicotyl
@@ -11758,6 +11741,7 @@ is_a: PO:0025099 ! embryo plant structure
 [Term]
 id: PO:0025293 ! seedling epicotyl
 is_a: PO:0020035 ! epicotyl
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025294 ! embryo mesocotyl
@@ -11767,6 +11751,7 @@ is_a: PO:0025099 ! embryo plant structure
 [Term]
 id: PO:0025295 ! seedling mesocotyl
 is_a: PO:0020037 ! mesocotyl
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025296 ! plant embryo radicle
@@ -11789,6 +11774,7 @@ is_a: PO:0025099 ! embryo plant structure
 [Term]
 id: PO:0025301 ! seedling hypocotyl-root junction
 is_a: PO:0004724 ! hypocotyl-root junction
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025302 ! somatic plant embryo
@@ -12223,10 +12209,12 @@ is_a: PO:0000077 ! sclerenchyma cell
 [Term]
 id: PO:0025408 ! primary vascular tissue
 is_a: PO:0009015 ! portion of vascular tissue
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025409 ! secondary vascular tissue
 is_a: PO:0009015 ! portion of vascular tissue
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025410 ! axial system
@@ -12641,6 +12629,7 @@ is_a: PO:0025501 ! fruit formation stage
 [Term]
 id: PO:0025509 ! archegonium central cell
 is_a: PO:0025606 ! native plant cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025510 ! archegonium initial cell
@@ -12702,6 +12691,7 @@ is_a: PO:0009005 ! root
 [Term]
 id: PO:0025524 ! ventral canal cell
 is_a: PO:0025606 ! native plant cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025525 ! spermatogenous cell
@@ -12742,6 +12732,7 @@ is_a: PO:0025606 ! native plant cell
 [Term]
 id: PO:0025534 ! adventitious shoot axis
 is_a: PO:0025029 ! shoot axis
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025535 ! multicellular trichome tip
@@ -13029,6 +13020,7 @@ is_a: PO:0004013 ! plant epidermal cell
 [Term]
 id: PO:0025605 ! fruit pedicel abscission zone
 is_a: PO:0000146 ! abscission zone
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025606 ! native plant cell
@@ -13037,6 +13029,7 @@ is_a: PO:0009002 ! plant cell
 [Term]
 id: PO:0025607 ! vegetative shoot system
 is_a: PO:0009006 ! shoot system
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025608 ! flower pedicel abscission zone
@@ -13106,10 +13099,15 @@ is_a: PO:0025244 ! first order infructescence axis
 [Term]
 id: PO:0025624 ! endodermis cell
 is_a: PO:0025030 ! ground tissue cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0025625 ! cortex-endodermis initial cell
 is_a: PO:0004011 ! initial cell
+
+[Term]
+id: PO:0025626 ! plant gall
+is_a: PO:0025496 ! multi-tissue plant structure
 
 [Term]
 id: PO:0028002 ! sporophyte development stage
@@ -13179,6 +13177,7 @@ is_a: PO:0030011 ! leaf meristematic apical cell
 id: PO:0030013 ! non-vascular leaf meristematic apical cell
 is_a: PO:0030011 ! leaf meristematic apical cell
 is_a: PO:0030019 ! gametophore meristematic apical cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0030014 ! gametophyte meristematic apical cell
@@ -13199,6 +13198,7 @@ is_a: PO:0025117 ! plant anatomical space
 [Term]
 id: PO:0030018 ! gametophore
 is_a: PO:0009006 ! shoot system
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0030019 ! gametophore meristematic apical cell
@@ -13235,6 +13235,7 @@ is_a: PO:0030014 ! gametophyte meristematic apical cell
 [Term]
 id: PO:0030026 ! gametophore bud
 is_a: PO:0000058 ! vegetative bud
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0030027 ! thallus
@@ -13281,6 +13282,7 @@ is_a: PO:0025066 ! stalk
 [Term]
 id: PO:0030037 ! spore capsule calyptra
 is_a: PO:0025001 ! cardinal organ part
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0030038 ! venter
@@ -13393,6 +13395,7 @@ is_a: PO:0025319 ! axillary hair basal cell
 [Term]
 id: PO:0030065 ! archegonium neck canal cell
 is_a: PO:0025606 ! native plant cell
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0030066 ! archegonium neck canal
@@ -13417,6 +13420,7 @@ is_a: PO:0025162 ! multicellular trichome
 [Term]
 id: PO:0030071 ! epidermal rhizoid
 is_a: PO:0030078 ! rhizoid
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0030072 ! costa
@@ -13450,6 +13454,7 @@ is_a: PO:0009011 ! plant structure
 [Term]
 id: PO:0030079 ! protonemal rhizoid
 is_a: PO:0030078 ! rhizoid
+is_a: UBERON:0001062 ! anatomical entity
 
 [Term]
 id: PO:0030080 ! rhizoid meristematic apical cell
@@ -13680,7 +13685,7 @@ id: PO:0030136 ! compound drepanium inflorescence
 is_a: PO:0009049 ! inflorescence
 
 [Term]
-id: RO:0002310
+id: RO:0002310 ! exposure event or process
 is_a: BFO:0000015 ! process
 
 [Term]
@@ -13837,7 +13842,7 @@ is_a: TO:0000207 ! plant height
 id: TO:0000020
 name: black streak dwarf virus resistance
 synonym: "BSDVRS (related)" RELATED []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 
 [Term]
 id: TO:0000021
@@ -13855,11 +13860,12 @@ is_a: TO:0000261 ! insect damage response trait
 
 [Term]
 id: TO:0000023
-name: fungal infection related grain discoloration
-def: "Causal agent: species of Sarocladium, Bipolaris, Alternaria, Gerlachia, Fusarium, Phoma, Curvularia, Trichoconiella and Psaudomonas etc. Symptoms: darkening of glumes of spikelets, brown color to black including rotten glumes caused by one or more pathogens. Intensity ranges from sporadic discoloration to discoloration of the whole glume. Severity of grain discoloration can be estimated by counting of grains with more than 25% of glume surface affected." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice microbial grain discoloration
+def: "Causal agent: species of Sarocladium, Bipolaris, Alternaria, Gerlachia, Fusarium, Phoma, Curvularia, Trichoconiella and Pseudomonas etc." [Gramene:pankaj_jaiswal, RiceSES:SES, TO:Laurel_Cooper]
+comment: Symptoms: darkening of glumes of spikelets, brown color to black including rotten glumes caused by one or more pathogens. Intensity ranges from sporadic discoloration to discoloration of the whole glume. Severity of grain discoloration can be estimated by counting of grains with more than 25% of glume surface affected.
 synonym: "Gd (related)" RELATED []
 synonym: "grain discoloration (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0000112 ! microbial disease response
 
 [Term]
 id: TO:0000024
@@ -14006,7 +14012,7 @@ is_a: TO:0000738 ! plant axis morphology trait
 [Term]
 id: TO:0000044
 name: stigma exsertion
-def: "Trait is monitored by counting number of flowers or florets that have completed anthesis on a given day and showing exserted stigma. Trait expressed as  percent stigma exsertion." [Gramene:pankaj_jaiswal, RiceSES:SES]
+def: "Trait is monitored by counting number of flowers or florets that have completed anthesis on a given day and showing exserted stigma. Trait expressed as percent stigma exsertion." [Gramene:pankaj_jaiswal, RiceSES:SES]
 comment: Scale,  (%), Stigma exsertion; 1- Above 70, Well exserted; 3- 41-70, Moderately well exserted; 5- 21-40, Just exserted; 7- 11-20, Partly exserted; 9- 0-10, Enclosed.  Evaluated at growth stage:6 and 7 in rice.
 synonym: "STIEX (related)" RELATED []
 synonym: "stigma exsertion of male sterile lines (related)" RELATED []
@@ -14014,10 +14020,11 @@ is_a: TO:0006012 ! carpel morphology trait
 
 [Term]
 id: TO:0000045
-name: udbatta disease resistance
-def: "Causal agent: Balanasia oryzae-sativae (Ephelis oryzae). Symptoms: a white mycelial mat ties the panicle branches together so that they emerge as single, small, cylindrical rods." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice udbatta disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Balanasia oryzae-sativae (Ephelis oryzae)." [Gramene:pankaj_jaiswal, NCBITaxon:116609, RiceSES:SES, TO:Laurel_Cooper]
+comment: Symptoms: a white mycelial mat ties the panicle branches together so that they emerge as single, small, cylindrical rods.
 synonym: "UDb (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000046
@@ -14032,11 +14039,12 @@ is_a: TO:0000310 ! self-incompatibility
 
 [Term]
 id: TO:0000048
-name: kernel smut disease resistance
-def: "Causal agent: Tilletia barclayana. Symptoms: infected grains show minute black pustules or streaks bursting through the glumes. In severe infection, the rupturing glumes produce short beak-like or spur-like outgrowths." [Gramene:pankaj_jaiswal]
+name: rice kernel smut disease response
+def: "Causal agent: Tilletia barclayana." [Gramene:pankaj_jaiswal, NCBITaxon:157178, TO:Laurel_Cooper]
+comment: Symptoms: infected grains show minute black pustules or streaks bursting through the glumes. In severe infection, the rupturing glumes produce short beak-like or spur-like outgrowths.
 synonym: "KSm (related)" RELATED []
 synonym: "KSRS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001146 ! Basidiomycete fungal disease response
 
 [Term]
 id: TO:0000049
@@ -14156,7 +14164,9 @@ is_a: TO:0000754 ! cardinal organ part morphology trait
 [Term]
 id: TO:0000062
 name: phenol reaction
-is_a: TO:0000489 ! carbohydrate composition related trait
+def: "An enzyme activity trait (TO:0000599) which is a measure of the acitivity of polyphenol oxidase (PPO) enzymes in a seed coat or hull of a grain which catalyze the oxidation of phenolic compounds leading to the formation of melanin-like pigments." [TO:Laurel_Cooper]
+comment: The phenol reaction is a color reaction used for cultivar identification and purity testing.
+is_a: TO:0000599 ! enzyme activity trait
 
 [Term]
 id: TO:0000063
@@ -14225,12 +14235,11 @@ is_a: TO:0000652 ! leaf necrosis
 [Term]
 id: TO:0000071
 name: anthocyanin content
-def: "The anthocyanin content in a plant or plant part." [ISBN:198506732]
+def: "The anthocyanin content in a plant structure (PO:0009011)." [ISBN:198506732]
 comment: Anthocyanin is the red to purple pigments composed of soluble glycosides of anthocyanidins, present in leaves and floral tissue. Usually the pigment is produced under stress conditions. Amounts of anthocyanin produced depend on stored sugar and sunlight. The more stored sugar in the leaf and brighter the autumn days, the more intense red. Anthocyanin production also increases as phosphates move out of the leaves; the lack of phosphates in young leaves can also lead to the production of anthocyanin.
 synonym: "ANTHCN (related)" RELATED []
 is_a: TO:0000290 ! flavonoid content
 is_a: TO:0000494 ! pigment content trait
-is_a: TO:0006008 ! carbohydrate derivative content
 
 [Term]
 id: TO:0000072
@@ -14253,12 +14262,13 @@ is_a: TO:0000080 ! micronutrient sensitivity
 
 [Term]
 id: TO:0000074
-name: blast disease resistance
-def: "Causal agent: Magnaporthe grisea." [Gramene:pankaj_jaiswal]
-synonym: "blast disease resistance trait (exact)" EXACT []
+name: rice blast disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Pyricularia grisea (Magnaporthe grisea)." [Gramene:pankaj_jaiswal, NCBITaxon:148305, TO:Laurel_Cooper]
+comment: Symptoms: Can affect either or both the leaves and panicles.
+synonym: "blast disease resistance trait (narrow)" NARROW []
 synonym: "blast disease susceptibility (narrow)" NARROW []
 xref: TO_GIT:69
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000075
@@ -14339,7 +14349,7 @@ is_a: TO:0000084 ! root number
 [Term]
 id: TO:0000084
 name: root number
-def: "A root system morphology trait (TO:0000985) which is the number of roots (PO:0009005) in a root system (PO:0025025)." [Gramene:jcl, Gramene:pankaj_jaiswal, PATO:0001555, TO:Laurel_Cooper]
+def: "A root system morphology trait (TO:0000985) which is the number of roots (PO:0009005) in a root system (PO:0025025)." [Gramene:pankaj_jaiswal, PATO:0001555, TO:Laurel_Cooper]
 synonym: "RTNB (related)" RELATED []
 synonym: "tnr (related)" RELATED []
 xref: TO_GIT:357
@@ -14358,11 +14368,12 @@ is_a: TO:0000748 ! leaf morphology trait
 
 [Term]
 id: TO:0000086
-name: sheath rot disease resistance
-def: "Causal agent: Sarocladium oryzae. Symptoms: oblong or irregular brown to grey lesions on the leaf sheath near panicle; sometimes coalescing to prevent emergence of panicle." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice sheath rot disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Sarocladium oryzae." [Gramene:pankaj_jaiswal, NCBITaxon:284135, RiceSES:SES, TO:Laurel_Cooper]
+comment: Symptoms: oblong or irregular brown to grey lesions on the leaf sheath near panicle; sometimes coalescing to prevent emergence of panicle.
 synonym: "ShR (related)" RELATED []
 synonym: "SHROTRS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000087
@@ -14382,7 +14393,7 @@ name: rice yellow mottle virus resistance
 def: "Causal agent: rice yellow mottle virus (RYMV). Symptoms: stunting, reduced tillering, mottling and yellowish streaking of the leaves, delayed flowering or incomplete emergence of the panicle; in extreme cases, death of plants." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "RYMV (related)" RELATED []
 synonym: "RYMVRS (related)" RELATED []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 
 [Term]
 id: TO:0000089
@@ -14416,7 +14427,7 @@ synonym: "deep root ratio (related)" RELATED []
 synonym: "deep root/shoot ratio (related)" RELATED []
 synonym: "dr/s (related)" RELATED []
 synonym: "DRTSHRO (related)" RELATED []
-is_a: TO:0000278 ! root to shoot ratio
+is_a: TO:0000278 ! root length to shoot length ratio
 
 [Term]
 id: TO:0000093
@@ -14425,7 +14436,7 @@ def: "A drought related trait (TO:0000394) which is a measure of the pulling for
 comment: Root pulling force is correlated with root weight (TO:0000279), root branching (TO:0000257) and thick root number. It is a measure of the drought resistance and is often evaluatred on rice seedlings.
 synonym: "rpf (related)" RELATED []
 synonym: "RTPF (related)" RELATED []
-is_a: TO:0000394 ! drought related trait
+is_a: TO:0000394 ! drought stress response trait
 
 [Term]
 id: TO:0000094
@@ -14441,7 +14452,7 @@ name: osmotic response sensitivity
 def: "Sensitivity to the osmoticum in the growth medium." [Gramene:pankaj_jaiswal]
 synonym: "oa (related)" RELATED []
 synonym: "OSRPSN (related)" RELATED []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000096
@@ -14454,11 +14465,10 @@ is_a: TO:0000654 ! shoot system growth and development trait
 [Term]
 id: TO:0000097
 name: amylopectin content
-def: "Amount of amylopectin present in the plant or plant part." [ISBN:198506732]
+def: "Amount of amylopectin present in a plant structure (PO:0009011)." [ISBN:198506732]
 comment: It is a polysaccharide present in starch. Amylopectin is a polymer of alpha(1,4)-linked glucose units, as is amylose (see amylose). Unlike amylose, amylopectin contains branches of 2430 glucose units connected to the main chain by an alpha(1,6) linkage.
 synonym: "AMYPCTCN (related)" RELATED []
 is_a: TO:0006007 ! polysaccharide content
-is_a: TO:0006008 ! carbohydrate derivative content
 
 [Term]
 id: TO:0000098
@@ -14516,7 +14526,7 @@ name: deepwater stress
 def: "The sensitivity response shown by the plant growing in a stagnant water for a long period of time (not unlike deepwater presence during flash flooding of the fields)." [Gramene:pankaj_jaiswal]
 synonym: "deep water stress (related)" RELATED []
 synonym: "DWSTR (related)" RELATED []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000114 ! flooding related trait
 
 [Term]
 id: TO:0000104
@@ -14589,7 +14599,7 @@ is_a: TO:0000106 ! male sterility type
 id: TO:0000112
 name: microbial disease response
 def: "A biotic plant stress trait (TO:0000179) which is the response to damage to a plant structure (PO:0009011) caused by an infection by a microbial pathogen." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
-comment: The plant reponse to a microbial infection may be manifested in either the whole plant (PO:0000003) or in parts of the plant. The damage is a direct measure of resistance to the particular pathogen causing the disease.
+comment: The plant response to a microbial infection may be manifested in either the whole plant (PO:0000003) or in parts of the plant. The damage is a direct measure of resistance to the particular pathogen causing the disease.
 synonym: "disease control (broad)" BROAD []
 synonym: "disease resistance trait (narrow)" NARROW []
 synonym: "disease susceptibility (narrow)" NARROW []
@@ -14608,7 +14618,7 @@ relationship: inheres_in PO:0009009 {is_inferred="true"} ! plant embryo
 [Term]
 id: TO:0000114
 name: flooding related trait
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000115
@@ -14721,11 +14731,12 @@ is_a: TO:0000371 ! yield trait
 
 [Term]
 id: TO:0000129
-name: false smut disease resistance
-def: "Causal agent: Ustilaginoidea virens. Symptoms: infected grains are transformed into yellow-greenish or greenish-black velvety-looking spore balls." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice false smut disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Ustilaginoidea virens." [Gramene:pankaj_jaiswal, NCBITaxon:1159556, RiceSES:SES, TO:Laurel_Cooper]
+comment: Symptoms: infected grains are transformed into yellow-greenish or greenish-black velvety-looking spore balls.
 synonym: "FSm (related)" RELATED []
 synonym: "FSRS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000130
@@ -14741,7 +14752,7 @@ name: leaf water potential
 def: "Water potential of a leaf." [Gramene:pankaj_jaiswal]
 synonym: "LFWP (related)" RELATED []
 synonym: "lwp (related)" RELATED []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000132
@@ -14765,7 +14776,7 @@ name: alkali digestion
 def: "Is an indirect measure of gelatinization temperature. Observed by placing six milled-rice kernels in 10ml 1.7% KOH in a shallow container and arrange them so that they do not touch. Let them stand for 23hrs at 30degC temperature and score for spreading. Measure for Alkali digestion is inversely proportional to the gelatinization temperature, e.g. if alkali digestion is low, the gelatinization temperature is high." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "AlkD (related)" RELATED []
 synonym: "ALKDIG (related)" RELATED []
-is_a: TO:0000462 ! gelatinization temperature
+is_a: TO:0000462 ! starch gelatinization temperature
 
 [Term]
 id: TO:0000135
@@ -14886,12 +14897,12 @@ name: rice hoja blanca disease resistance
 def: "Causal agent: rice hoja blanca virus (RHBV). Symptoms: cream colored to yellow spots, elongating and coalescing to form longitudinal yellowish green to pale green striations. Streaks may coalesce to cover the whole leaf. Brown and sterile glumes with typical \"parrot beak\" shape of deformation." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "HBVRS (related)" RELATED []
 synonym: "RHBV (related)" RELATED []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 
 [Term]
 id: TO:0000148
-name: viral disease response
-def: "A microbial disease response (TO:0000112) trait which is the response to damage to a plant structure (PO:0009011) caused by an infection by a virus (NCBITaxon:10239)." [Gramene:pankaj_jaiswal, NCBITaxon:10239, RiceSES:SES, TO: Laurel_Cooper]
+name: viral disease response trait
+def: "A microbial disease response (TO:0000112) trait which is the response to damage to a plant structure (PO:0009011) caused by an infection by a virus (NCBITaxon:10239)." [Gramene:pankaj_jaiswal, NCBITaxon:10239, RiceSES:SES, TO:Laurel_Cooper]
 comment: It represents the damage done by the diease and/or the viral pathogen to the plant. The damage is a direct measure of resistance to the particular viral strain causing the diease.
 is_a: TO:0000112 ! microbial disease response
 
@@ -14972,7 +14983,7 @@ id: TO:0000157
 name: canopy temperature
 def: "Assay determines temperature of the leaf canopy." [Gramene:jcl, Gramene:pankaj_jaiswal]
 synonym: "CANTMP (related)" RELATED []
-is_a: TO:0000432 ! temperature response trait
+is_a: TO:0000394 ! drought stress response trait
 
 [Term]
 id: TO:0000158
@@ -15006,7 +15017,7 @@ def: "Response shown by the plant in terms of sensitivity to one or more types o
 synonym: "radiation sensitivity (related)" RELATED []
 synonym: "RADSN (related)" RELATED []
 synonym: "response to radiation (related)" RELATED []
-is_a: TO:0000168 ! abiotic plant stress trait
+is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
 id: TO:0000162
@@ -15030,7 +15041,7 @@ is_a: TO:0000401 ! plant growth hormone sensitivity
 
 [Term]
 id: TO:0000164
-name: plant stress trait
+name: plant stress response trait
 def: "A plant trait (TO:0000387) which is the response of a plant structure (PO:0009011) to a plant stress (PSO:0000001)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000001, TO:Laurel_Cooper]
 comment: Plant stress traits may be manifested in either the whole plant (PO:0000003) or in parts of the plant, as a result of the exposure to either a biotic plant stress (PSO:0000011) or an abiotic plant stress (PSO:0000012). Responses to plant stresses may vary from resistance to susceptibility, with varying levels of tolerance.
 synonym: "crop damage (related)" RELATED []
@@ -15067,11 +15078,11 @@ is_a: TO:0000401 ! plant growth hormone sensitivity
 
 [Term]
 id: TO:0000168
-name: abiotic plant stress trait
-def: "A plant stress trait (TO:0000164) which is the response of a plant structure (PO:0009011) to an abiotic plant stress (PSO:0000012)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000012, TO:Laurel_Cooper]
+name: abiotic plant stress response trait
+def: "A plant stress response trait (TO:0000164) which is the response of a plant structure (PO:0009011) to an abiotic plant stress (PSO:0000012)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000012, TO:Laurel_Cooper]
 comment: Plant abiotic stress traits may be manifested in either the whole plant (PO:0000003) or in parts of the plant, as a result of the exposure to an abiotic plant stress (PSO:0000012).  Responses to plant stresses may vary from resistance to susceptibility, with varying levels of tolerance. Abiotic stresses are those resulting from non-living factors such as drought, salinity or temperature extremes.
 synonym: "abiotic stress tolerance (related)" RELATED []
-is_a: TO:0000164 ! plant stress trait
+is_a: TO:0000164 ! plant stress response trait
 
 [Term]
 id: TO:0000169
@@ -15154,9 +15165,9 @@ is_a: TO:0000479 ! acid sensitivity
 [Term]
 id: TO:0000179
 name: biotic plant stress trait
-def: "A plant stress trait (TO:0000164) which is the response of a plant structure (PO:0009011) to biotic plant stress (PSO:0000011)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000011, TO:Laurel_Cooper]
+def: "A plant stress response trait (TO:0000164) which is the response of a plant structure (PO:0009011) to biotic plant stress (PSO:0000011)." [Gramene:pankaj_jaiswal, PO:0009011, PSO:0000011, TO:Laurel_Cooper]
 comment: Plant biotic stress traits may be manifested in either the whole plant (PO:0000003) or in parts of the plant, as a result of the exposure to a biotic plant stress (PSO:0000011). Responses to biotic plant stresses may vary from resistance to susceptibility, with varying levels of tolerance. Biotic stresses are those resulting from living factors such as microorganisms, animals (including insects, arachnids and nematodes) or other plants.
-is_a: TO:0000164 ! plant stress trait
+is_a: TO:0000164 ! plant stress response trait
 
 [Term]
 id: TO:0000180
@@ -15232,7 +15243,7 @@ def: "Drought sensitivity is highly interactive with crop phenology, plant growt
 synonym: "drought susceptibility (related)" RELATED []
 synonym: "DRS (related)" RELATED []
 synonym: "DRSN (related)" RELATED []
-is_a: TO:0000394 ! drought related trait
+is_a: TO:0000394 ! drought stress response trait
 
 [Term]
 id: TO:0000189
@@ -15327,6 +15338,8 @@ name: rootless
 def: "Absence of roots in the seedling or plant." [Gramene:pankaj_jaiswal]
 synonym: "RTMIN (related)" RELATED []
 is_a: PATO:0000462 ! absent
+is_a: TO:0000043 ! root morphology trait
+is_a: TO:0000398 ! whole plant morphology trait
 
 [Term]
 id: TO:0000199
@@ -15371,7 +15384,7 @@ is_a: TO:0000315 ! bacterial disease response
 [Term]
 id: TO:0000204
 name: rice seedling blight disease resistance
-def: "A rice bacterial blight disease resistance (TO:0000175) that is involved in the response to rice bacterial blight disease, on a seedling. Causal agent: Xanthomonas oryzae pv. oryzae. Causal agent: Xanthomonas oryzae pv. oryzae." [Gramene:pankaj_jaiswal, RiceSES:SES]
+def: "A rice bacterial blight disease resistance (TO:0000175) that is involved in the response to rice bacterial blight disease, on a seedling. Causal agent: Xanthomonas oryzae pv. oryzae." [Gramene:pankaj_jaiswal, RiceSES:SES]
 comment: Symptoms: lesions usually start near the leaf tips or leaf margins or both, and extend down the outer edge(s). Young lesions are pale to grayish green, later turning yellow to grey (dead) with time. In very susceptible varieties, lesions may extend to the entire leaf length into the leaf sheath. Kresek or seedling blight causes wilting and death of plant.
 synonym: "kresek (related)" RELATED []
 synonym: "leaf blight (related)" RELATED []
@@ -15447,11 +15460,10 @@ relationship: part_of TO:0000225 ! stamen number
 
 [Term]
 id: TO:0000211
-name: gel consistency
+name: starch gel consistency
 def: "Scored by gel consistency type in mm." [RiceSES:SES]
 synonym: "GelC (related)" RELATED []
 synonym: "GELCON (related)" RELATED []
-is_a: TO:0000489 ! carbohydrate composition related trait
 is_a: TO:0001069 ! cooking quality trait
 
 [Term]
@@ -15467,7 +15479,7 @@ id: TO:0000213
 name: rice grassy stunt 1 and 2 virus resistance
 def: "Causal agent: rice grassy stunt virus 1 (RGSV1) and rice grassy stunt virus 2 (RGSV2). Symptoms: RGSV1 causes severe stunting, excessive tillering, pale green to yellow and narrow leaves with small rusty spots. RGSV2 causes severe stunting, excessive tillering, yellow to orange and narrow leaves with small rusty spots." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "RGSVRS (related)" RELATED []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 
 [Term]
 id: TO:0000214
@@ -15677,9 +15689,9 @@ is_obsolete: true
 
 [Term]
 id: TO:0000237
-name: water stress trait
-def: "Response by the plant in terms of sensitivity to water stress (quality and quantity of water)." [Gramene:pankaj_jaiswal]
-is_a: TO:0000168 ! abiotic plant stress trait
+name: water stress response trait
+def: "An abiotic plant stress response trait (TO:0000168) which is the response of a plant structure (PO:0009011) to water stress (too little or too much water)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
 id: TO:0000238
@@ -15810,12 +15822,13 @@ is_a: TO:0000238 ! growth media composition sensitivity
 
 [Term]
 id: TO:0000255
-name: sheath blight disease resistance
-def: "Causal agent: Rhizoctonia solani. Symptom: Grayish-green lesions may enlarge and coalesce with other lesions, mostly on lower leaf sheaths, but occasionally on the leaves." [RiceSES:SES]
+name: rice leaf sheath blight disease response
+def: "A Basidiomycete fungal disease response trait (TO:0001146) which is caused by Rhizoctonia solani (PECO:0007379) exposure." [NCBITaxon:107832, RiceSES:SES, TO:Laurel_Cooper]
+comment: Causal agent: 'Rhizoctonia solani J.G. Kühn, 1858' (NCBITaxon:456999) is known as 'Thanatephorus cucumeris (A.B. Frank) Donk' (NCBITaxon:107832) in the telomorph phase.\nSymptoms: Grayish-green lesions may enlarge and coalesce with other lesions, mostly on lower leaf sheaths, but occasionally on the leaves (RiceSES:SES).
 synonym: "ShB (related)" RELATED []
 synonym: "SHBTRS (related)" RELATED []
 xref: TO_GIT:67
-is_a: TO:0000664 ! fungal blight disease resistance
+is_a: TO:0001146 ! Basidiomycete fungal disease response
 
 [Term]
 id: TO:0000256
@@ -15844,10 +15857,10 @@ relationship: part_of TO:0002637 ! leaf size
 
 [Term]
 id: TO:0000259
-name: heat tolerance
-def: "Tolerance to warm temperatures if plant is exposed to above than permissive temperature limits. Observe differences in vigor along with subtle changes in leaf color. The optimum time to make observations would be the seedling, tillering (sensu Poaceae), flowering and mature stages. Mainly scored in terms of spikelet fertility in grasses." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: high temperature stress response
+def: "A temperature stress response trait (TO:0000432) which is the response to warmer than normal growth conditions." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "HTol (related)" RELATED []
-is_a: TO:0000432 ! temperature response trait
+is_a: TO:0000432 ! temperature stress response trait
 
 [Term]
 id: TO:0000260
@@ -16000,7 +16013,7 @@ def: "Becoming tolerant to drought like conditions of minimal or no water conten
 comment: Often  the plants exhibiting high salt tolerance also exhibit drought tolerance.
 synonym: "drought resistance (exact)" EXACT []
 synonym: "DRTL (related)" RELATED []
-is_a: TO:0000394 ! drought related trait
+is_a: TO:0000394 ! drought stress response trait
 
 [Term]
 id: TO:0000277
@@ -16010,13 +16023,13 @@ is_a: TO:0000387 ! plant trait
 
 [Term]
 id: TO:0000278
-name: root to shoot ratio
+name: root length to shoot length ratio
 def: "The ratio determined from the parameters evaluated for root length and the shoot length in a study." [Gramene:pankaj_jaiswal]
 synonym: "r/s ratio (exact)" EXACT []
 synonym: "root length to shoot length ratio (exact)" EXACT []
 synonym: "root/shoot ratio (exact)" EXACT []
 synonym: "RTSHRO (exact)" EXACT []
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: TO:0000043 ! root morphology trait
 
 [Term]
@@ -16130,6 +16143,7 @@ def: "A phytochemical compound content trait (TO:0000674) which is the amount of
 comment: Flavonoids are water soluble polyphenolic molecules containing 15 carbon atoms. Flavonoids belong to the polyphenol family and have antioxidant activity.
 xref: CHEBI:47916
 is_a: TO:0000674 ! phytochemical compound content
+relationship: part_of TO:0001143 ! antioxidant activity trait
 
 [Term]
 id: TO:0000291
@@ -16195,7 +16209,6 @@ synonym: "GLUCNCN (related)" RELATED []
 xref: CHEBI:5417
 xref: ISBN:198506732
 is_a: TO:0006003 ! oligosaccharide content
-is_a: TO:0006008 ! carbohydrate derivative content
 
 [Term]
 id: TO:0000298
@@ -16224,7 +16237,7 @@ is_a: TO:0000829 ! leaf lamina morphology trait
 [Term]
 id: TO:0000300
 name: glucose content
-def: "Amount of glucose present in the plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Amount of glucose present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: It is a common monosaccharide that is a component of oligo/disaccharides (sucrose, lactose, and maltose) and various complex carbohydrates.
 synonym: "D-glucose content (related)" RELATED []
 synonym: "dextrose content (related)" RELATED []
@@ -16234,7 +16247,7 @@ is_a: TO:0000307 ! hexose content
 [Term]
 id: TO:0000301
 name: xanthophyll content
-def: "The xanthophyll content in a plant or plant part." [ISBN:198506732]
+def: "The xanthophyll content in a plant structure (PO:0009011)." [ISBN:198506732]
 comment: These are any group of naturally occurring tetraterpenes (carotenoids) that are synthesized only in plants and contain oxygen in various forms.
 synonym: "XANCN (related)" RELATED []
 is_a: TO:0000496 ! carotenoid content
@@ -16247,11 +16260,11 @@ is_obsolete: true
 
 [Term]
 id: TO:0000303
-name: cold tolerance
-def: "Tolerance to cold temperatures if plant is exposed to below permissive temperature limits. Observe differences in vigor along with subtle changes in leaf color. The optimum time to make observations would be the seedling, tillering (sensu Poaceae), flowering and mature stages." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: low temperature stress response
+def: "A temperature stress response trait (TO:0000432) which is the response to colder than normal growth conditions." [TO:Laurel_Cooper] {comment="Cold temperature stress varies from chilling to freezing and varies depending upon the species of the plant. Some plants survive low temperatutre by undergoing cold acclimation, while other plants require a period of low temperature (vernalization) in order to flower."}
 synonym: "COLDTL (related)" RELATED []
 synonym: "CTol (related)" RELATED []
-is_a: TO:0000432 ! temperature response trait
+is_a: TO:0000432 ! temperature stress response trait
 
 [Term]
 id: TO:0000304
@@ -16288,7 +16301,7 @@ is_a: TO:0000043 ! root morphology trait
 [Term]
 id: TO:0000307
 name: hexose content
-def: "Amount of hexose present in the plant or plant part." [ISBN:198506732]
+def: "Amount of hexose present in a plant structure (PO:0009011)." [ISBN:198506732]
 comment: Hexose is any aldose having a chain of six carbon atoms in a molecule.
 synonym: "HEXCN (related)" RELATED []
 is_a: TO:0006006 ! monosaccharide content
@@ -16367,7 +16380,7 @@ is_a: TO:0000112 ! microbial disease response
 [Term]
 id: TO:0000316
 name: photosynthetic ability
-def: "The photosynthesis ability determined on a plant or the plant part under stress." [Gramene:pankaj_jaiswal]
+def: "The photosynthesis ability determined on a plant structure (PO:0009011) under stress." [Gramene:pankaj_jaiswal]
 comment: Methods may include actual measurements on photosynthesis, pigment content or the content and composition of enzymes associated with photosynthesis.
 synonym: "PHOTOSYNAB (related)" RELATED []
 is_a: TO:0000283 ! biological process trait
@@ -16382,7 +16395,7 @@ is_a: TO:0000261 ! insect damage response trait
 [Term]
 id: TO:0000318
 name: reducing sugar content
-def: "Amount of reducing sugar present in the plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Amount of reducing sugar present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: A reducing sugar is any sugar which in basic solution forms contain aldehyde or ketone groups that are oxidised to carboxylic acids.
 synonym: "REDSUGCN (related)" RELATED []
 is_a: TO:0000333 ! sugar content
@@ -16390,7 +16403,7 @@ is_a: TO:0000333 ! sugar content
 [Term]
 id: TO:0000319
 name: rubisco content
-def: "Amount of Rubisco enzyme or protein present in a given plant or the plant part." [Gramene:pankaj_jaiswal]
+def: "Amount of Rubisco enzyme or protein present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "RUBISCOCN (related)" RELATED []
 is_a: TO:0000598 ! protein content
 
@@ -16399,16 +16412,16 @@ id: TO:0000320
 name: chlorophyll to rubisco ratio
 def: "A chlorophyll content trait (TO:0000495) which is ratio of the amount of RuBisCo protein to that of the chlorophyll content (TO:0000495) in a plant strucure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "RUBISCOCHLRO (related)" RELATED []
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: TO:0000319 ! rubisco content
 is_a: TO:0000495 ! chlorophyll content
 
 [Term]
 id: TO:0000321
 name: rubisco to nitrogen content ratio
-def: "A ratio of the amount of rubisco protein to that of the total nitrogen content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "A ratio of the amount of rubisco protein to that of the total nitrogen content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "RUBISCONICNRO (related)" RELATED []
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: TO:0000319 ! rubisco content
 
 [Term]
@@ -16422,23 +16435,24 @@ is_a: TO:0000597 ! plant quality trait
 
 [Term]
 id: TO:0000323
-name: stem rot disease resistance
-def: "Causal agent: Magnaporthe salvinii (Nakataea sigmoidea, Sclerotium oryzae), and Helminthosporium sigmoideum var. irregulare. Symptoms: dark lesions develop on the stems near the water line. Small, dark bodies (sclerotia) develop, weaken the stem and cause lodging." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice stem rot disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Magnaporthe salvinii (Nakataea sigmoidea, Sclerotium oryzae) and Helminthosporium sigmoideum var. irregulare." [Gramene:pankaj_jaiswal, NCBITaxon:165778, NCBITaxon:58127, RiceSES:SES, TO:Laurel_Cooper]
+comment: Symptoms: dark lesions develop on the stems near the water line. Small, dark bodies (sclerotia) develop, weaken the stem and cause lodging.
 synonym: "CULMROTRS (related)" RELATED []
 synonym: "SR (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000324
 name: rubisco to soluble protein ratio
-def: "A ratio of the amount of rubisco protein to that of the soluble protein content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "A ratio of the amount of rubisco protein to that of the soluble protein content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "RUBISCOSPROTRO (related)" RELATED []
 is_a: TO:0000319 ! rubisco content
 
 [Term]
 id: TO:0000325
 name: soluble protein content
-def: "Amount of the soluble protein present in the plant or the plant part." [Gramene:pankaj_jaiswal]
+def: "Amount of soluble protein present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "SPROTCN (related)" RELATED []
 is_a: TO:0000598 ! protein content
 
@@ -16465,7 +16479,7 @@ is_a: TO:0000371 ! yield trait
 [Term]
 id: TO:0000328
 name: sucrose content
-def: "The amount of sucrose present in the plant or the plant part." [Gramene:pankaj_jaiswal]
+def: "The amount of sucrose present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "saccharose content (related)" RELATED []
 synonym: "SUCROSECN (related)" RELATED []
 is_a: TO:0006003 ! oligosaccharide content
@@ -16514,7 +16528,7 @@ is_a: TO:0000261 ! insect damage response trait
 [Term]
 id: TO:0000333
 name: sugar content
-def: "Amount of sugar present in the plant or the plant part." [Gramene:pankaj_jaiswal]
+def: "Amount of sugar present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "SUGARCN (related)" RELATED []
 is_a: TO:0000291 ! carbohydrate content
 
@@ -16580,7 +16594,7 @@ relationship: part_of TO:0000892 ! stem size
 [Term]
 id: TO:0000340
 name: total soluble sugar content
-def: "Total amount of soluble sugar present in the plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Total amount of soluble sugar present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "TSOLSUGARCN (related)" RELATED []
 is_a: TO:0000333 ! sugar content
 
@@ -16704,10 +16718,11 @@ is_a: TO:0000250 ! plant vigor trait
 
 [Term]
 id: TO:0000356
-name: brown spot disease resistance
-def: "Causal agent: Cochliobolus miyabeanus (Bipolaris oryzae, Drechslera oryzae). Symptom: typical leaf spots are small, oval or circular and dark brown. Larger lesions usually have same color on the edges but have a pale (usually grayish) center. Most spots have a light yellow halo around the outer edge." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice brown spot disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Cochliobolus miyabeanus (Bipolaris oryzae, Drechslera oryzae)." [Gramene:pankaj_jaiswal, NCBITaxon:101162, RiceSES:SES]
+comment: Symptom: typical leaf spots are small, oval or circular and dark brown. Larger lesions usually have same color on the edges but have a pale (usually grayish) center. Most spots have a light yellow halo around the outer edge.
 synonym: "BS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000357
@@ -16786,8 +16801,9 @@ is_a: TO:0002616 ! flowering time trait
 [Term]
 id: TO:0000366
 name: reproductive growth time
-def: "Measure of time taken by the reproductive growth phase in a plant's life cycle." [Gramene:pankaj_jaiswal]
+def: "A plant phenological trait (TO:0000933) which is the amount of time taken by the reproductive growth phase in a plant's life cycle." [Gramene:pankaj_jaiswal]
 synonym: "RGTM (related)" RELATED []
+xref: TO:Laurel_Cooper
 is_a: TO:0000933 ! plant phenological trait
 
 [Term]
@@ -16808,7 +16824,7 @@ is_a: TO:0000654 ! shoot system growth and development trait
 [Term]
 id: TO:0000369
 name: vegetative growth time
-def: "Measure of the vegetative growth phase time in a plant's life cycle." [Gramene:pankaj_jaiswal]
+def: "A plant phenological trait (TO:0000933) which is the length of time of the vegetative growth phase in a plant's life cycle." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "VGTM (related)" RELATED []
 is_a: TO:0000933 ! plant phenological trait
 
@@ -16839,7 +16855,7 @@ id: TO:0000372
 name: amylose to amylopectin ratio
 def: "Ratio of amount of amylose to amylopectin content." [Gramene:pankaj_jaiswal]
 synonym: "AMYAMYPCTRO (related)" RELATED []
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: TO:0006007 ! polysaccharide content
 
 [Term]
@@ -16857,8 +16873,8 @@ is_a: TO:0000786 ! reproductive shoot system morphology trait
 
 [Term]
 id: TO:0000374
-name: breakdown viscosity
-def: "A cooking quality trait that is the tendency of gelatinized starch granules to break during cooking, especially at high temperature." [PMCID:PMC434838, TO:Laurel_Cooper]
+name: starch breakdown viscosity
+def: "A cooking quality trait (TO:0001069) which is the tendency of gelatinized starch granules to break during cooking, especially at high temperature." [TO:Laurel_Cooper] {comment="DOI:10.1006/jcrs.2001.0374"}
 comment: Breakdown is usually associated with the tendency of gelatinized starch granules to break during holding at high temperature, accompanied with continuous shearing (Han and Hamaker 2001). Breakdown is usually calculated from a resulting viscogram by subtracting trough from peak viscosity. The increase in rice flour breakdown viscosity, although not always significant (P < 0.05), suggests a greater protection of the starch granule integrity. This probably is due to the increased affinity of proteins to interact with starch, as a result of protein denaturation. The resulting formation of protein–starch complexes tends to increase rice flour peak viscosity.
 synonym: "BRKVIS (related)" RELATED []
 xref: PMCID:PMC434838
@@ -16878,7 +16894,7 @@ is_a: TO:0002731 ! dehulled grain length to width ratio
 
 [Term]
 id: TO:0000376
-name: consistency viscosity
+name: starch consistency viscosity
 synonym: "CONVIS (related)" RELATED []
 is_a: TO:0001069 ! cooking quality trait
 
@@ -16891,15 +16907,17 @@ is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000378
-name: leaf scald disease resistance
-def: "Causal agent: Monographella albescens (Microdochium oryzae). Symptoms: the lesions occurs mostly near leaf tips, but sometimes start at the margin of the blade and develops into large ellipsoid areas encircled by dark-brown, narrow bands accompanied by a light-brown halo." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice leaf scald disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Monographella albescens (Microdochium oryzae)." [Gramene:pankaj_jaiswal, NCBITaxon:1682384, RiceSES:SES, TO:Laurel_Cooper]
+comment: Symptoms: the lesions occurs mostly near leaf tips, but sometimes start at the margin of the blade and develops into large ellipsoid areas encircled by dark-brown, narrow bands accompanied by a light-brown halo.
 synonym: "LFSRS (related)" RELATED []
 synonym: "LSc (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000379
-name: cool paste viscosity
+name: starch cool paste viscosity
+def: "A cooking quality trait (TO:0001069) which is the viscosity of a starch paste after it has been cooked and cooled down." [] {comment="TO:Laurel_Cooper"}
 synonym: "CPVIS (related)" RELATED []
 is_a: TO:0001069 ! cooking quality trait
 
@@ -16950,6 +16968,8 @@ name: milled grain color
 def: "A grain color (TO:0002617) trait which is the color of dehulled, milled grain (caryopsis fruit; PO:0030104)." [Gramene:pankaj_jaiswal, PATO:0000014, TO:Laurel_Cooper, TO:moorel]
 comment: Dehulled, milled grains have had the caryopsis hull (PO:0006000) removed, as well as the pericarp (PO:0009084), aleurone layer (PO:0005360) and germ (plant embryo; PO:0009009).  Refers to color PATO:0000014: A composite chromatic quality composed of hue, saturation and intensity parts.
 synonym: "GRCL (related)" RELATED []
+synonym: "groat color (exact)" EXACT []
+synonym: "kernel color (related)" RELATED []
 synonym: "MGRCL (related)" RELATED []
 xref: PATO:0000014
 is_a: TO:0001109 ! grain color trait
@@ -16959,7 +16979,7 @@ id: TO:0000386
 name: rice ragged stunt virus resistance
 def: "Causal agent: rice ragged stunt virus (RRSV). Symptoms: plants are stunted but remain dark green. Leaves are ragged and twisted. Vein swelling on leaf collar, leaf blades and leaf sheaths." [Gramene:pankaj_jaiswal\,, RiceSES:SES]
 synonym: "RSVRS (related)" RELATED []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 
 [Term]
 id: TO:0000387
@@ -17018,10 +17038,10 @@ is_obsolete: true
 
 [Term]
 id: TO:0000394
-name: drought related trait
-def: "Response by the plant in terms of sensitivity to sufficiently prolonged water deficit/scarcity or scanty water content in the soil or growth medium, that can cause damage to the plant." [Gramene:pankaj_jaiswal]
+name: drought stress response trait
+def: "A water stress response trait (TO:0000237) which is a response by a plant structure (PO:0009011) to growth conditions with lower than optimal water availability." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "dessication related trait (related)" RELATED []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000396
@@ -17132,13 +17152,14 @@ is_obsolete: true
 
 [Term]
 id: TO:0000408
-name: hot paste viscosity
+name: starch hot paste viscosity
 synonym: "HPVIS (related)" RELATED []
 is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000409
-name: peak viscosity
+name: starch peak viscosity trait
+def: "A cooking quality trait (TO:0001069) which is the ability of starch granules to swell before breaking down during heating." [] {comment="TO:Laurel_Cooper"}
 synonym: "PVIS (related)" RELATED []
 is_a: TO:0001069 ! cooking quality trait
 
@@ -17159,7 +17180,7 @@ is_a: TO:0001079 ! caryopsis fruit morphology trait
 
 [Term]
 id: TO:0000412
-name: setback viscosity
+name: starch setback viscosity
 def: "Determined by deducting the peak viscosity from the cool paste viscosity." [Gramene:pankaj_jaiswal37]
 synonym: "setback (related)" RELATED []
 synonym: "SETBK (related)" RELATED []
@@ -17172,7 +17193,7 @@ name: rice tungro virus resistance
 def: "Causal agent: Rice tungro bacilliform virus (RTBV) and rice tungro spherical virus (RTSV). The disease is transmitted by the green leafhopper Nephotettix spp. Symptoms: Yellow-to-yellow orange leaves, stunting and slightly reduced tillering." [Gramene:pankaj_jaiswal, http://www.fao.org/inpho/vlibrary/t0567e/T0567E03.htm, RiceSES:SES]
 synonym: "RTD (related)" RELATED []
 synonym: "RTVRS (related)" RELATED []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 
 [Term]
 id: TO:0000414
@@ -17210,11 +17231,12 @@ is_a: TO:0000079 ! flower bract morphology trait
 
 [Term]
 id: TO:0000418
-name: bakanae disease resistance
-def: "Causal agent: Gibberella fujikuroi. Symptoms: the plant elongates abnormally, has few tillers and usually dies before producing grains." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice bakanae disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Gibberella fujikuroi." [Gramene:pankaj_jaiswal, NCBITaxon:5127, RiceSES:SES, TO:Laurel_Cooper]
+comment: Symptoms: the plant elongates abnormally, has few tillers and usually dies before producing grains.
 synonym: "Bak (related)" RELATED []
 synonym: "BKRS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000419
@@ -17227,9 +17249,7 @@ created_by: jaiswalp
 [Term]
 id: TO:0000420
 name: fertility related trait
-is_a: PATO:0000274 ! fertility
 is_a: TO:0000392 ! sterility or fertility trait
-is_a: TO:0000398 ! whole plant morphology trait
 
 [Term]
 id: TO:0000421
@@ -17239,11 +17259,11 @@ is_a: TO:0000420 ! fertility related trait
 
 [Term]
 id: TO:0000422
-name: narrow brown leaf spot disease resistance
-def: "Causal agent: Sphaerulina oryzina (Cercospora janseana)." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice narrow brown leaf spot disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Sphaerulina oryzina (Cercospora janseana)." [Gramene:pankaj_jaiswal, NCBITaxon:706553, RiceSES:SES, TO:Laurel_Cooper]
 synonym: "NBLFSPRS (related)" RELATED []
 synonym: "NBLS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000423
@@ -17330,9 +17350,9 @@ is_a: TO:0000976 ! ear infructescence morphology trait
 
 [Term]
 id: TO:0000432
-name: temperature response trait
-def: "Response by the plant in terms of sensitivity to temperature stress." [Gramene:pankaj_jaiswal]
-is_a: TO:0000168 ! abiotic plant stress trait
+name: temperature stress response trait
+def: "An abiotic plant stress response trait (TO:0000168) which is the response to temperature stress." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
 id: TO:0000433
@@ -17394,7 +17414,7 @@ is_a: TO:0002759 ! grain number trait
 [Term]
 id: TO:0000441
 name: humidity related trait
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000442
@@ -17433,6 +17453,7 @@ synonym: "number of seeds per pod (narrow)" NARROW []
 synonym: "pod seed number (narrow)" NARROW []
 synonym: "SDNB (related)" RELATED []
 is_a: TO:0002629 ! fruit morphology trait
+relationship: part_of TO:0000905 ! seed yield trait
 
 [Term]
 id: TO:0000446
@@ -17493,7 +17514,7 @@ name: leaf area to spikelet number ratio
 def: "A ratio of leaf area to the number of spikelets in a grass inflorescence." [Gramene:pankaj_jaiswal]
 comment: Often measured using the flag leaf.
 synonym: "LFARSPKNBRO (related)" RELATED []
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: TO:0000540 ! leaf area trait
 
 [Term]
@@ -17534,7 +17555,8 @@ is_a: TO:0000657 ! spikelet morphology trait
 
 [Term]
 id: TO:0000457
-name: total biomass yield
+name: biomass yield
+def: "A yield trait (TO:0000371) which is the amount of biomass obtained." [TO:Laurel_Cooper]
 synonym: "dry matter yield (related)" RELATED []
 synonym: "TBIOMYLD (related)" RELATED []
 synonym: "total dry weight (related)" RELATED []
@@ -17545,7 +17567,7 @@ id: TO:0000458
 name: drought recovery
 def: "Scores are taken after 10 days following soaking rain or watering- Indicate the degree of stress before recovery." [RiceSES:SES]
 synonym: "DRR (related)" RELATED []
-is_a: TO:0000394 ! drought related trait
+is_a: TO:0000394 ! drought stress response trait
 
 [Term]
 id: TO:0000459
@@ -17564,15 +17586,15 @@ is_a: TO:0000075 ! light sensitivity
 [Term]
 id: TO:0000461
 name: basic vegetative phase
+def: "A vegetative growth time (TO:0000369) which is the period between seeding and heading when the plant is not sensitive to day length." [DOI:10.1016/j.stress.2024.100561, TO:Laurel_Cooper]
 synonym: "BAVEGPH (related)" RELATED []
 is_a: TO:0000369 ! vegetative growth time
 
 [Term]
 id: TO:0000462
-name: gelatinization temperature
+name: starch gelatinization temperature
 def: "Is an indication of gelatinization temperature. Observed by placing six milled-grains/kernels in 10ml 1.7% KOH in a shallow container and arrange them so that they do not touch. Let them stand for 23hrs at 30C temperature and score for spreading. Measure for Alkali digestion is inversely proportional to the gelatinization temperature, e.g. if alkali digestion is low, the gelatinization temperature is high." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "GELTZTMP (related)" RELATED []
-is_a: TO:0000489 ! carbohydrate composition related trait
 is_a: TO:0001069 ! cooking quality trait
 
 [Term]
@@ -17610,18 +17632,18 @@ is_a: TO:0000465 ! mineral and ion content trait
 [Term]
 id: TO:0000467
 name: cell membrane stability
-def: "Stability of the cell membrane under the impact of temperature (heat) and water deficit stress." [Gramene:pankaj_jaiswal, http://www.plantstress.com/methods/CMS_method.htm]
-comment: The trait is often observed in plants as a measure of drought and heat tolerance by determining the amount of solutes/electrolyte leaked from the cell.
+def: "A drought stress response trait (TO:0000394) which is the changes in the stability of the cell membrane during water deficit stress." [Gramene:pankaj_jaiswal, https://plantstress.com/the-cell-membrane-stability-cms-test/, TO:Laurel_Cooper]
+comment: The trait is observed by determining the amount of solutes and electrolytes which leak from the cell.
 synonym: "CELMBSTB (related)" RELATED []
-is_a: TO:0000168 ! abiotic plant stress trait
+is_a: TO:0000394 ! drought stress response trait
 
 [Term]
 id: TO:0000468
-name: leaf blast disease resistance
-def: "Causal agent: Magnaporthe grisea. Symptoms: Can affect either or both the leaf and panicles." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice leaf blast disease response
+def: "A rice blast disease response (TO:0000074) caused by Pyricularia grisea (Magnaporthe grisea) affecting a leaf (PO:0009025)." [Gramene:pankaj_jaiswal, NCBITaxon:148305, RiceSES:SES, TO:Laurel_Cooper]
 synonym: "Bl (related)" RELATED []
 synonym: "LFBLRS (related)" RELATED []
-is_a: TO:0000074 ! blast disease resistance
+is_a: TO:0000074 ! rice blast disease response
 
 [Term]
 id: TO:0000469
@@ -17686,16 +17708,17 @@ is_a: TO:0000281 ! metabolite content trait
 
 [Term]
 id: TO:0000477
-name: panicle blast disease resistance
-def: "Causal agent: Magnaporthe grisea (Pyricularia oryzae). Symptoms are dark necrotic lesions covering partially or completely around the panicle base (node) or the uppermost internode or the lower part." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice panicle blast disease response
+def: "A rice blast disease response (TO:0000074) caused by Pyricularia grisea (Magnaporthe grisea) affecting a panicle inflorescence (PO:0030123)." [Gramene:pankaj_jaiswal, NCBITaxon:148305, RiceSES:SES]
+comment: Symptoms are dark necrotic lesions covering partially or completely around the panicle base (node) or the uppermost internode or the lower part.
 synonym: "PB (related)" RELATED []
 synonym: "PNBLRS (related)" RELATED []
-is_a: TO:0000074 ! blast disease resistance
+is_a: TO:0000074 ! rice blast disease response
 
 [Term]
 id: TO:0000478
 name: abscisic acid concentration
-def: "Measures the growth hormone concentration in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Measures the growth hormone concentration in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "ABA concentration (related)" RELATED []
 synonym: "ABACONC (related)" RELATED []
 synonym: "abscisic acid accumulation (related)" RELATED []
@@ -17726,8 +17749,8 @@ is_a: TO:0000254 ! growth media pH sensitivity
 [Term]
 id: TO:0000482
 name: chemical stress sensitivity
-def: "Response by the plant in terms of resistivity or senility to chemical stress." [Gramene:pankaj_jaiswal]
-is_a: TO:0000168 ! abiotic plant stress trait
+def: "An abiotic plant stress response trait (TO:0000168) which is the response of a plant structure (PO:0009011) to chemical stress." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
 id: TO:0000483
@@ -17778,8 +17801,9 @@ is_a: TO:0000575 ! endosperm morphology trait
 
 [Term]
 id: TO:0000488
-name: seed composition quality trait
-is_a: TO:0000931 ! seed quality trait
+name: OBSOLETE seed composition quality trait
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0000489
@@ -17794,8 +17818,10 @@ is_a: TO:0000598 ! protein content
 
 [Term]
 id: TO:0000491
-name: fat and essential oil composition related trait
-is_a: TO:0000488 ! seed composition quality trait
+name: OBSOLETE fat and essential oil composition related trait
+def: "OBSOLETE" []
+is_a: TO:0000488 ! OBSOLETE seed composition quality trait
+is_obsolete: true
 
 [Term]
 id: TO:0000492
@@ -17832,7 +17858,7 @@ is_a: TO:0000674 ! phytochemical compound content
 [Term]
 id: TO:0000496
 name: carotenoid content
-def: "The carotenoid content in a plant or plant part. Includes naturally occurring tetra terpenes that are synthesized only in plants." []
+def: "The carotenoid content in a plant structure (PO:0009011). Includes naturally occurring tetra terpenes that are synthesized only in plants." []
 synonym: "CRTCN (related)" RELATED []
 is_a: TO:0000494 ! pigment content trait
 is_a: TO:0000674 ! phytochemical compound content
@@ -17915,7 +17941,7 @@ name: osmotic adjustment capacity
 def: "The ability of the plant to adust the osmotic potential under stress conditions." [Gramene:pankaj_jaiswal]
 comment: The main role of osmotic adjustment in the plant is to assist in the maintenance of turgor and volume as organs lose water during desiccation, i.e. to provide dehydration tolerance. Often determined by relative water or the amount of solute accumulated at a given water potential.
 synonym: "OSADJCAP (related)" RELATED []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000508
@@ -17934,7 +17960,7 @@ is_a: TO:0000043 ! root morphology trait
 [Term]
 id: TO:0000511
 name: phosphorus uptake
-def: "The total phosphorus ion uptake measured in a plant or a plant part." [Gramene:pankaj_jaiswal]
+def: "The total phosphorus ion uptake measured a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "PHOUP (related)" RELATED []
 is_a: TO:0020096 ! mineral and ion transport trait
 
@@ -17948,14 +17974,14 @@ is_a: TO:0000114 ! flooding related trait
 [Term]
 id: TO:0000513
 name: potassium concentration
-def: "The total potassium ion concentration measured in a plant or a plant part or plant extract." [Gramene:pankaj_jaiswal]
+def: "The total potassium ion concentration measured a plant structure (PO:0009011) or plant extract." [Gramene:pankaj_jaiswal]
 synonym: "KCONC (related)" RELATED []
 is_a: TO:0000609 ! potassium content
 
 [Term]
 id: TO:0000514
 name: potassium uptake
-def: "The total potassium ion uptake measured in a plant or a plant part." [Gramene:pankaj_jaiswal]
+def: "The total potassium ion uptake measured a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "KUP (related)" RELATED []
 is_a: TO:0020096 ! mineral and ion transport trait
 
@@ -18001,7 +18027,7 @@ is_a: TO:0020095 ! stomatal process related trait
 [Term]
 id: TO:0000521
 name: stomatal complex closure time
-def: "The amount of time taken for a stomatal complex (PO:0002000) to close." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+def: "A plant phenological trait (TO:0000933) which is the amount of time taken for a stomatal complex (PO:0002000) to close." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 comment: Stomatal complex closure may be due to stress, or coupled to the rate of photosynthesis and/or transpiration.
 synonym: "STOCSRTM (related)" RELATED []
 is_a: PATO:0000165 ! time
@@ -18031,24 +18057,24 @@ is_a: TO:0000286 ! submergence sensitivity
 [Term]
 id: TO:0000525
 name: sodium to potassium content ratio
-def: "The ratio of total sodium to potassium ion content measured in a plant or a plant part." [Gramene:pankaj_jaiswal]
+def: "The ratio of total sodium to potassium ion content measured a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "Na/K ratio (related)" RELATED []
 synonym: "NAKRO (related)" RELATED []
 synonym: "sodium to potassium ratio (related)" RELATED []
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: TO:0000465 ! mineral and ion content trait
 
 [Term]
 id: TO:0000526
 name: sodium concentration
-def: "The total sodium ion concentration measured in a given volume of a plant or a plant part or plant extract." [Gramene:pankaj_jaiswal]
+def: "The total sodium ion concentration measured in a given volume of a plant structure (PO:0009011) or plant extract." [Gramene:pankaj_jaiswal]
 synonym: "NACONC (related)" RELATED []
 is_a: TO:0000608 ! sodium content
 
 [Term]
 id: TO:0000527
 name: sodium uptake
-def: "The total sodium ion uptake measured in a plant or a plant part." [Gramene:pankaj_jaiswal]
+def: "The total sodium ion uptake measured a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "NAUP (related)" RELATED []
 is_a: TO:0020096 ! mineral and ion transport trait
 
@@ -18124,7 +18150,7 @@ id: TO:0000538
 name: large vascular bundle number to leaf area ratio
 def: "A ratio of the large sized vascular bundles to the leaf surface area." [Gramene:pankaj_jaiswal]
 synonym: "LVBNBLFARRO (related)" RELATED []
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: TO:0000472 ! vascular bundle number
 
 [Term]
@@ -18162,7 +18188,7 @@ name: leaf length to width ratio
 def: "A leaf morphology trait (TO:0000748) which is the ratio of leaf length (TO:0000135) to leaf width (TO:0000370)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 comment: If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFLGWDRO (related)" RELATED []
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: TO:0000748 ! leaf morphology trait
 relationship: part_of TO:0002637 ! leaf size
 
@@ -18314,7 +18340,7 @@ is_a: TO:0000547 ! primary branch number
 [Term]
 id: TO:0000558
 name: small vascular bundle number
-def: "Number of small sized vascular bundles present in a plant part." [Gramene:pankaj_jaiswal]
+def: "Number of small sized vascular bundles present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "SVBNB (related)" RELATED []
 is_a: TO:0000472 ! vascular bundle number
 
@@ -18513,7 +18539,7 @@ name: root dry weight to tiller number ratio
 def: "The trait is an indirect measure of the balance between water absorption and transpiration." [Gramene:pankaj_jaiswal37]
 synonym: "deep root dry weight to tiller number ratio (related)" RELATED []
 synonym: "RTDWTTINBRO (related)" RELATED []
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: TO:0000078 ! root dry weight
 
 [Term]
@@ -18691,7 +18717,7 @@ is_a: TO:0000160 ! UV light sensitivity
 [Term]
 id: TO:0000602
 name: total fat content
-def: "The total fat or lipid content of present in the plant or the plant part such as seed." [Gramene:pankaj_jaiswal]
+def: "The total fat or lipid content of a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "FATCN (related)" RELATED []
 synonym: "lipid content (related)" RELATED []
 is_a: TO:0000604 ! fat and essential oil content
@@ -18699,17 +18725,17 @@ is_a: TO:0000604 ! fat and essential oil content
 [Term]
 id: TO:0000603
 name: magnesium to potassium content ratio
-def: "The ratio of total magnesium to potassium ion content measured in a plant or a plant part." [Gramene:pankaj_jaiswal]
+def: "The ratio of total magnesium to potassium ion content measured a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "Magnesium to potassium ratio (related)" RELATED []
 synonym: "MGKCNRO (related)" RELATED []
 synonym: "ratio of magnesium to potassium (related)" RELATED []
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: TO:0000465 ! mineral and ion content trait
 
 [Term]
 id: TO:0000604
 name: fat and essential oil content
-def: "Measures the fat and essential oil content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Measures the fat and essential oil content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000281 ! metabolite content trait
 
 [Term]
@@ -18731,7 +18757,7 @@ is_a: TO:0000599 ! enzyme activity trait
 [Term]
 id: TO:0000607
 name: ash content
-def: "The total mineral or ion content measured after drying and burning the plant or a plant part." [Gramene:pankaj_jaiswal]
+def: "The total mineral or ion content measured after drying and burning a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000465 ! mineral and ion content trait
 
 [Term]
@@ -18906,16 +18932,18 @@ is_a: TO:0001024 ! phosphorus content
 
 [Term]
 id: TO:0000627
-name: relative phosphorus utilization efficiency
+name: OBSOLETE relative phosphorus utilization efficiency
+def: "OBSOLETE" []
 synonym: "RELPHOUTZEFY (related)" RELATED []
-is_a: TO:0000102 ! phosphorus sensitivity
+is_obsolete: true
 
 [Term]
 id: TO:0000628
-name: pearl millet downy mildew resistance
-def: "Causal agent: Sclerospora graminicola (Sacc. ) Schroet. It causes the downy mildew disease in Pearl millet." [Gramene:pankaj_jaiswal]
+name: pearl millet downy mildew response
+def: "Causal agent: Sclerospora graminicola (Sacc. ) Schroet." [Gramene:pankaj_jaiswal, NCBITaxon:162130, TO:Laurel_Cooper]
+comment: It causes the downy mildew disease in Pearl millet.
 synonym: "Pg_DNMDRS (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001144 ! Oomycete disease response
 
 [Term]
 id: TO:0000629
@@ -18984,7 +19012,6 @@ id: TO:0000639
 name: seed fertility
 synonym: "percent seed fertility (related)" RELATED []
 synonym: "SDFRT (related)" RELATED []
-is_a: TO:0000184 ! seed morphology trait
 is_a: TO:0000420 ! fertility related trait
 relationship: part_of TO:0000931 ! seed quality trait
 
@@ -19033,10 +19060,10 @@ is_a: TO:0000078 ! root dry weight
 
 [Term]
 id: TO:0000645
-name: relative phosphorus concentration
+name: OBSOLETE relative phosphorus concentration
+def: "OBSOLETE" []
 synonym: "RELPHOCONC (related)" RELATED []
-is_a: TO:0000102 ! phosphorus sensitivity
-is_a: TO:0001024 ! phosphorus content
+is_obsolete: true
 created_by: jaiswalp
 
 [Term]
@@ -19053,9 +19080,10 @@ is_a: TO:0000705 ! acid phosphatase activity trait
 
 [Term]
 id: TO:0000648
-name: relative phosphorus uptake
+name: OBSOLETE relative phosphorus uptake
+def: "OBSOLETE" []
 synonym: "RELPHOUP (related)" RELATED []
-is_a: TO:0000102 ! phosphorus sensitivity
+is_obsolete: true
 
 [Term]
 id: TO:0000649
@@ -19142,8 +19170,9 @@ is_a: TO:0000359 ! female flowering
 [Term]
 id: TO:0000659
 name: phyllochron
-def: "The time interval between the appearance of successive leaves (days/leaf) on the developing shoot." [Gramene:pankaj_jaiswal]
-is_a: TO:0000655 ! leaf growth and development trait
+def: "A plant phenological trait (TO:0000933) which is the time interval between the appearance of successive leaves on the developing shoot axis." [Gramene:pankaj_jaiswal]
+xref: TO:Laurel_Cooper
+is_a: TO:0000933 ! plant phenological trait
 
 [Term]
 id: TO:0000660
@@ -19158,23 +19187,26 @@ relationship: part_of TO:0000329 ! tillering ability
 
 [Term]
 id: TO:0000662
-name: barley fusarium head blight resistance
-def: "Caused by Fusarium graminearum Schwabe, that affects the quality and yield of barley (Hordeum vulgare L.) grain." [Gramene:pankaj_jaiswal]
+name: barley fusarium head blight response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Fusarium graminearum Schwabe." [Gramene:pankaj_jaiswal, NCBITaxon:5518, TO:Laurel_Cooper]
+comment: barley fusarium head blight affects the quality and yield of barley (Hordeum vulgare L.) grain.
 synonym: "Hv_FUSHEADBTRS (related)" RELATED []
-is_a: TO:0000664 ! fungal blight disease resistance
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000663
-name: wheat fusarium head blight resistance
-def: "Caused by Fusarium graminearum Schwabe (teleomorph: Gibberella zeae), in the USA and Canada. It causes severe yield and quality losses in wheat (Triticum aestivum L.)." [Gramene:pankaj_jaiswal]
+name: wheat fusarium head blight response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Fusarium graminearum Schwabe (teleomorph: Gibberella zeae)." [Gramene:pankaj_jaiswal, NCBITaxon:5518, TO:Laurel_Cooper]
+comment: In the USA and Canada, it causes severe yield and quality losses in wheat (Triticum aestivum L.).
 synonym: "Ta_FUSHEADBTRS (related)" RELATED []
 xref: TO_GIT:70
-is_a: TO:0000664 ! fungal blight disease resistance
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000664
-name: fungal blight disease resistance
-is_a: TO:0000439 ! fungal disease response
+name: OBSOLETE fungal blight disease resistance
+def: "OBSOLETE" [TO:Laurel_Cooper]
+is_obsolete: true
 
 [Term]
 id: TO:0000665
@@ -19236,11 +19268,11 @@ is_a: TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0000673
-name: tetraploid wheat fusarium head blight resistance
+name: tetraploid wheat fusarium head blight response
 def: "Caused by Fusarium graminearum Schwabe (telomorph: Gibberella zeae), in the USA and Canada. It causes severe yield and quality losses in wheat (Triticum turgidum)." [Gramene:pankaj_jaiswal]
 synonym: "tetraploid wheat fusarium head blight disease resistance (related)" RELATED []
 synonym: "Tt_FUSHEADBTRS (related)" RELATED []
-is_a: TO:0000663 ! wheat fusarium head blight resistance
+is_a: TO:0000663 ! wheat fusarium head blight response
 
 [Term]
 id: TO:0000674
@@ -19251,11 +19283,12 @@ is_a: TO:0000281 ! metabolite content trait
 [Term]
 id: TO:0000675
 name: ferulic acid content
-def: "Amount of ferulic acid content determined in a given plant part. Ferulic acid is an antioxidant which neutralizes free radicals (superoxide, nitric oxide and hydroxyl radical) which could cause oxidative damage of cell membranes and DNA. Ferulic acid helps to prevent damage to the cells caused by ultraviolet light." [Gramene:pankaj_jaiswal]
-comment: It is found in the leaves and seeds of many plants, but especially in cereals such as brown rice, whole wheat and oats.
+def: "A phytochemical compound content trait (TO:0000674) which is the amount of ferulic acid (CHEBI:17620) in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper, Wikipedia:ferulic_acid]
+comment: Ferulic acid is an antioxidant which neutralizes free radicals (superoxide, nitric oxide and hydroxyl radical) which could cause oxidative damage of cell membranes and DNA. Ferulic acid helps to prevent damage to cells caused by ultraviolet light. It is found in the leaves and seeds of many plants, but especially in cereals such as brown rice, whole wheat and oats.
 synonym: "4-hydroxy-3-methoxycinnamic acid (related)" RELATED []
 synonym: "FERULICACIDCN (related)" RELATED []
 is_a: TO:0000674 ! phytochemical compound content
+relationship: part_of TO:0001143 ! antioxidant activity trait
 
 [Term]
 id: TO:0000676
@@ -19393,33 +19426,33 @@ is_a: TO:0000685 ! fruit tenderness
 [Term]
 id: TO:0000690
 name: maysin content
-def: "Measures the maysin content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "A grain protein content trait (TO:0001136) which is the amount maysin in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal] {comment="TO:Laurel_Cooper"}
 comment: Maysin is a coagulable globulin protein produced by the maize plant. It has insecticide properties.
 synonym: "MAYSINCN (related)" RELATED []
-is_a: TO:0000290 ! flavonoid content
-is_a: TO:0000598 ! protein content
-is_a: TO:0006008 ! carbohydrate derivative content
+is_a: TO:0001136 ! grain protein content
 
 [Term]
 id: TO:0000691
-name: Zea mays northern leaf blight disease resistance
-def: "Causal agent: Setosphaeria turcica." [Gramene:pankaj_jaiswal]
-is_a: TO:0000664 ! fungal blight disease resistance
+name: maize northern leaf blight disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Exserohilum turcicum (Setosphaeria turcica)." [Gramene:pankaj_jaiswal, NCBITaxon:93612, TO:Laurel_Cooper]
+synonym: "NCLB response (exact)" EXACT []
+synonym: "northern corn leaf blight response (exact)" EXACT []
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000692
-name: NCLB incubation period
+name: NCLB incubation period trait
+def: "A maize northern leaf blight disease response trait (TO:0000691) which is the incubation period of the disease." [NCBITaxon:93612, TO:Laurel_Cooper]
 synonym: "NLFBTINCUBPD (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
-relationship: part_of TO:0000691 ! Zea mays northern leaf blight disease resistance
+is_a: TO:0000691 ! maize northern leaf blight disease response
 
 [Term]
 id: TO:0000693
 name: NCLB area under disease progress curve
+def: "A maize northern leaf blight disease response trait (TO:0000691) which is the area under the disease progress curve." [NCBITaxon:93612, TO:Laurel_Cooper]
 synonym: "AUDPC (related)" RELATED []
 synonym: "NLFBTPROGCURV (related)" RELATED []
-is_a: TO:0000439 ! fungal disease response
-relationship: part_of TO:0000691 ! Zea mays northern leaf blight disease resistance
+is_a: TO:0000691 ! maize northern leaf blight disease response
 
 [Term]
 id: TO:0000694
@@ -19443,7 +19476,7 @@ is_a: TO:0002635 ! leaf margin morphology trait
 [Term]
 id: TO:0000696
 name: starch content
-def: "Amount of starch present in the plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Amount of starch present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "STARCHCN (related)" RELATED []
 is_a: TO:0006007 ! polysaccharide content
 
@@ -19458,10 +19491,11 @@ relationship: part_of TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0000698
-name: starchiness
+name: OBSOLETE starchiness
+def: "OBSOLETE" []
 synonym: "mealiness (related)" RELATED []
 synonym: "STARCH (related)" RELATED []
-is_a: TO:0000291 ! carbohydrate content
+is_obsolete: true
 
 [Term]
 id: TO:0000699
@@ -19488,7 +19522,7 @@ is_a: TO:0002683 ! plant cell morphology trait
 [Term]
 id: TO:0000702
 name: starch concentration
-def: "Concentration of starch present in the plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Concentration of starch present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "STARCHCONC (related)" RELATED []
 is_a: TO:0006007 ! polysaccharide content
 
@@ -19558,7 +19592,7 @@ is_a: TO:0000748 ! leaf morphology trait
 id: TO:0000710
 name: globulin protein content
 def: "Assay to detrmine the amount of globulin proteins." [Gramene:pankaj_jaiswal]
-comment: Globulin proteins also called globular  proteins, or spheroproteins are one of the main protein classes. These have a globelike protein structure, that is more or less soluble in aqueous solutions. The two major sub classes are alpha and beta globulins.
+comment: Globulin proteins also called globular proteins, or spheroproteins are one of the main protein classes. These have a globelike protein structure that is more or less soluble in aqueous solutions. The two major sub classes are alpha and beta globulins.
 is_a: TO:0000325 ! soluble protein content
 is_a: TO:0000575 ! endosperm morphology trait
 is_a: TO:0000587 ! endosperm quality
@@ -19680,7 +19714,6 @@ name: megasporocyte number
 def: "A count of the number of megasporocyte that is done to determine any increase or decrease in number." [Gramene:pankaj_jaiswal]
 is_a: PATO:0001555 ! has number of
 is_a: TO:0000724 ! megasporocyte development trait
-is_a: TO:0002683 ! plant cell morphology trait
 
 [Term]
 id: TO:0000726
@@ -19688,7 +19721,6 @@ name: microsporocyte number
 def: "A count of the number of microsporocyte that is done to determine any increase or decrease in number." [Gramene:pankaj_jaiswal]
 is_a: PATO:0001555 ! has number of
 is_a: TO:0000723 ! microsporocyte development trait
-is_a: TO:0002683 ! plant cell morphology trait
 
 [Term]
 id: TO:0000727
@@ -19724,7 +19756,7 @@ is_a: TO:0000728 ! cell cycle trait
 [Term]
 id: TO:0000731
 name: lignin content
-def: "Measures the lignin content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Measures the lignin content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000281 ! metabolite content trait
 
 [Term]
@@ -19735,7 +19767,7 @@ is_a: TO:0000731 ! lignin content
 [Term]
 id: TO:0000733
 name: lignin biosynthesis trait
-def: "Traits associated with the biosynthesis of lignin in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Traits associated with the biosynthesis of lignin in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "lignin biosynthesis (related)" RELATED []
 xref: GO:0009809
 is_a: TO:0000283 ! biological process trait
@@ -19759,8 +19791,9 @@ is_a: TO:0002626 ! fruit length
 [Term]
 id: TO:0000735
 name: plastochron
-def: "The time between the initiation of two leaves on the shoot apical meristem is called a plastochron." [Gramene:pankaj_jaiswal]
-is_a: TO:0000655 ! leaf growth and development trait
+def: "A plant phenological trait (TO:0000933) which is the time between the initiation of two leaves on the shoot apical meristem (PO:0020148)." [Gramene:pankaj_jaiswal]
+xref: TO:Laurel_Cooper
+is_a: TO:0000933 ! plant phenological trait
 
 [Term]
 id: TO:0000736
@@ -20114,7 +20147,7 @@ creation_date: 2012-04-30T13:37:02Z
 id: TO:0000769
 name: seedling hypocotyl morphology trait
 def: "A hypocotyl morphology trait (TO:0000757) which a seedling hypocotyl (PO:0025291)." [PO:0025291, TO:Laurel_Cooper]
-comment: Use this term to describe traits for a seedling hypocotyl (PO:002529; a hypocotyl (PO:0020100) that is part of a whole plant (PO:0000003) in the seedling development stage (PO:0007131)).
+comment: Use this term to describe traits for a seedling hypocotyl (PO:002529); a hypocotyl (PO:0020100) that is part of a seedling (PO:0008037).
 is_a: TO:0000757 ! hypocotyl morphology trait
 created_by: moorel
 creation_date: 2012-05-03T12:51:59Z
@@ -20141,7 +20174,7 @@ creation_date: 2012-05-04T13:47:12Z
 id: TO:0000772
 name: seedling mesocotyl morphology trait
 def: "A mesocotyl morphology trait (TO:0000758) which is a quality of a seedling mesocotyl (PO:0025295)." [PO:0025295, TO:Laurel_Cooper]
-comment: Use this term to descride traits for seedling mesocotyl (PO:0025295: A seedling mesocotyl is an elongation of and embryonic mesocotyl that is part of a whole plant in the seedling phase).
+comment: Use this term to descride traits for seedling mesocotyl (PO:0025295). A seedling mesocotyl is an elongation of an embryonic mesocotyl that is part of a seedling (PO:0008037).
 is_a: TO:0000758 ! mesocotyl morphology trait
 created_by: moorel
 creation_date: 2012-05-04T13:52:34Z
@@ -20158,7 +20191,7 @@ creation_date: 2012-05-04T13:57:56Z
 id: TO:0000774
 name: seedling cotyledon morphology trait
 def: "A cotyledon morphology trait (TO:0000749) which is a quality of a seedling cotyledon (PO:0025471)." [PO:0025471, TO:Laurel_Cooper]
-comment: Use this term to describe traits for a seedling cotyledon (PO:0025471): A cotyledon (PO:0020030) that is part of a whole plant (PO:0000003) in the seedling development stage (PO:0007131).
+comment: Use this term to describe traits for a seedling cotyledon (PO:0025471): A cotyledon (PO:0020030) that is part of a seedling (PO:0008037).
 xref: TO_GIT:61
 is_a: TO:0000749 ! cotyledon morphology trait
 created_by: moorel
@@ -22028,7 +22061,7 @@ creation_date: 2015-07-22T17:28:39Z
 [Term]
 id: TO:0000949
 name: seedling growth and development trait
-def: "A whole plant growth and development trait (TO:0000947) which is a quality of a seedling  development stage (PO:0007131)." [TO:ethan_johnson]
+def: "A whole plant growth and development trait (TO:0000947) which is a quality of a seedling development stage (PO:0007131)." [TO:ethan_johnson]
 xref: TO_GIT:298
 is_a: TO:0000947 ! whole plant growth and development trait
 created_by: johnseth
@@ -22553,9 +22586,9 @@ is_a: TO:0000241 ! leaf number
 [Term]
 id: TO:0001011
 name: deep root weight ratio
-def: "A ration of the deep root dry weight to total root dry weight per plant." [Gramene:pankaj_jaiswal]
+def: "A ratio of the deep root dry weight to total root dry weight per plant." [Gramene:pankaj_jaiswal]
 synonym: "deep root dry weight to total root dry weight ratio (exact)" EXACT []
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: TO:0000279 ! root weight
 
 [Term]
@@ -22598,7 +22631,7 @@ id: TO:0001017
 name: water use efficiency
 def: "As determined by the ratio of photosynthetic rate to transpiration rate." [Gramene:pankaj_jaiswal]
 synonym: "photosynthetic rate to transpiration rate ratio (exact)" EXACT []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0001018
@@ -22680,7 +22713,7 @@ id: TO:0001028
 name: osmotic adjustment break point
 def: "Break point of leaf water potential in the regression of leaf water potential against leaf relative water content." [CIRAD:Brigitte_Courtois]
 synonym: "Break point of osmotic adjustment (related)" RELATED []
-is_a: TO:0000237 ! water stress trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0001029
@@ -22899,7 +22932,7 @@ id: TO:0001059
 name: root system width to depth ratio
 def: "A root system morphology trait (TO:0000985) which is the ratio of the root system width (TO:0001057) to root system depth (TO:0001058)." [PMID:21454799, TO:Laurel_Cooper]
 xref: TO_GIT:417
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: TO:0000985 ! root system morphology trait
 creation_date: 2017-07-14T10:36:57Z
 
@@ -23344,7 +23377,7 @@ name: grain color trait
 def: "A caryopsis fruit morphology trait (TO:0001079) which is the color of a grain (caryopsis fruit; PO:0030104)." [TO:Laurel_Cooper]
 synonym: "kernel color (related)" RELATED []
 is_a: TO:0001079 ! caryopsis fruit morphology trait
-property_value: http://purl.org/dc/elements/1.1/date "2019-02-18T19:27:51Z" xsd:dateTime
+property_value: dc:date "2019-02-18T19:27:51Z" xsd:dateTime
 
 [Term]
 id: TO:0001110
@@ -23659,6 +23692,113 @@ xref: TO_GIT:495
 is_a: TO:0000871 ! fruit yield trait
 created_by: https://orcid.org/0000-0002-6379-8932
 creation_date: 2023-07-17T17:24:36Z
+
+[Term]
+id: TO:0001143
+name: antioxidant activity trait
+def: "A biochemical trait (TO:0000277) which is the response to an antioxidant (CHEBI:22586)." [TO:Laurel_Cooper]
+is_a: TO:0000277 ! biochemical trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2023-10-17T20:57:28Z
+
+[Term]
+id: TO:0001144
+name: Oomycete disease response
+def: "A microbial disease response (TO:0000112) trait which is the response to damage to a plant structure (PO:0009011) caused by an infection by a Oomycete pathogen." [https://www.apsnet.org/edcenter/disandpath/oomycete/introduction/Pages/IntroOomycetes.aspx, NCBITaxon:2038151, TO:Laurel_Cooper]
+comment: Oomycetes are fungus-like organisms which include the pathogen species of the genera Achlya, Peronospora, Phytopthora, Pseudoperonospora, Pythium, Sclerophthora and others.  These are the causal agents for Downy Mildew and Late Blight diseases, among others.
+is_a: TO:0000112 ! microbial disease response
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2023-11-21T21:56:10Z
+
+[Term]
+id: TO:0001145
+name: Ascomycete fungal disease response
+def: "A fungal disease response trait (TO:0000439) which is caused by infection by an Asomycete fungal species or combination of species." [NCBITaxon:4890, TO:Laurel_Cooper]
+is_a: TO:0000439 ! fungal disease response
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2023-12-05T21:40:01Z
+
+[Term]
+id: TO:0001146
+name: Basidiomycete fungal disease response
+def: "A fungal disease response trait (TO:0000439) which is caused by infection by a Basidiomycete fungal species or combination of species." [NCBITaxon:5204, TO:Laurel_Cooper]
+is_a: TO:0000439 ! fungal disease response
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2023-12-05T21:46:29Z
+
+[Term]
+id: TO:0001147
+name: Fusarium solani disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Fusarium solani." [NCBITaxon:169388, TO:Laurel_Cooper]
+xref: TO_GIT:466
+is_a: TO:0001145 ! Ascomycete fungal disease response
+
+[Term]
+id: TO:0001148
+name: neutral detergent fiber content
+def: "A fiber content trait (TO:0002642) which is the percentage of cellulose, hemicellulose and lignin fiber in a feed or forage." [DOI:10.1186/s12870-018-1368-4, INRAE:bimbert, TO:Laurel_Cooper, Wikipedia:neutral_detergent_fiber]
+comment: The process of determining NDF content involves a neutral detergent that dissolves plant pectins, proteins, sugars and lipids. This leaves behind the fibrous parts such as cellulose, lignin and hemicellulose. (REF: Wikipedia)
+synonym: "NDF (related)" RELATED []
+is_a: TO:0002642 ! fiber content trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2024-05-03T22:51:46Z
+
+[Term]
+id: TO:0001149
+name: seed coat dimpled
+def: "A seed coat texture (TO:0000903) characterized by shallow, wide depressions on the seed surface, distinctly separated by smooth areas." [DOI:10.1017/S0021859600009758, DOI:10.1186/s12870-018-1368-4, INRAE:bimbert, TO:Laurel_Cooper]
+is_a: TO:0000903 ! seed coat texture
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2024-05-03T23:15:46Z
+
+[Term]
+id: TO:0001150
+name: chilling stress response
+def: "A low temperature stress response (TO:0000303) which is the response of a plant structure (PO:0009011) to temperatures less than optimal for growth, but not below freezing." [INRAE:bimbert, TO:Laurel_Cooper]
+is_a: TO:0000303 ! low temperature stress response
+
+[Term]
+id: TO:0001151
+name: freezing stress response
+def: "A low temperature stress response (TO:0000303) which is the response of a plant structure (PO:0009011) to temperatures below freezing." [INRAE:bimbert, TO:Laurel_Cooper]
+is_a: TO:0000303 ! low temperature stress response
+
+[Term]
+id: TO:0001152
+name: frost damage stress response
+def: "A freezing stress response trait (TO:0001151) which is the response to damage to a plant structure (PO:0009011) caused by freezing temperatures." [INRAE:bimbert, TO:Laurel_Cooper]
+comment: Damage from freezing temperatures occurs when ice forms inside the plant tissues and injures plant cells.
+is_a: TO:0001151 ! freezing stress response
+
+[Term]
+id: TO:0001153
+name: survival rate after freezing temperature stress
+def: "A freezing stress response trait (TO:0001151) which is the percentage of plants that survive freezing temperature exposure." []
+is_a: TO:0001151 ! freezing stress response
+
+[Term]
+id: TO:0001154
+name: peanut early leaf spot disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Mycosphaerella arachidis." [DOI:10.1111/pbi.12930, NCBITaxon:143450, TO:Laurel_Cooper]
+synonym: "ELS (exact)" EXACT []
+xref: TO_GIT:469
+is_a: TO:0001145 ! Ascomycete fungal disease response
+
+[Term]
+id: TO:0001155
+name: peanut late leaf spot disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Nothopassalora personata." [DOI:10.1111/pbi.12930, NCBITaxon:2060155, TO:Laurel_Cooper]
+synonym: "LLS (exact)" EXACT []
+xref: TO_GIT:468
+is_a: TO:0001145 ! Ascomycete fungal disease response
+
+[Term]
+id: TO:0001156
+name: tomato spotted wilt virus response
+def: "A viral disease response trait (TO:0000148) caused by tomato spotted wilt virus." [DOI:10.1111/pbi.12930, NCBITaxon:3052585, TO:Laurel_Cooper]
+synonym: "TSWV (exact)" EXACT []
+xref: TO_GIT:467
+is_a: TO:0000148 ! viral disease response trait
 
 [Term]
 id: TO:0002600
@@ -24036,17 +24176,17 @@ is_obsolete: true
 
 [Term]
 id: TO:0002641
-name: acid detergent fiber
-def: "The percentage of highly indigestible or slowly digestible fiber in a feed or forage. Acid detergent fiber contains cellulose as well as silica and lignin which are associated with low digestibility." [GrainGenes_trait:Acid_Detergent_Fiber, Gramene:pankaj_jaiswal]
-comment: The method typically uses acidified quaternary detergent solution to dissolve cell solubles, hemicellulose and soluble minerals leaving a residue of cellulose, lignin, and heat damaged protein and a portion of cell wall protein and minerals (ash). Acid detergent fiber is determined gravimetrically as the residue remaining after extraction. The lower the acid detergent fiber, the more digestible the feed is and the higher the energy value of the feed.
+name: acid detergent fiber content
+def: "A fiber content trait (TO:0002642) which is the proportion of fiber that is composed of cellulose and lignin and is highly indigestible or slowly digestible in a feed or forage." [GrainGenes_trait:Acid_Detergent_Fiber, Gramene:pankaj_jaiswal]
+comment: Acid detergent fiber is composed of cellulose and lignin which are associated with low digestibility. The lower the acid detergent fiber, the more digestible the feed is and the higher the energy value of the feed.
 synonym: "ACIDDETFIBR (related)" RELATED []
 synonym: "ADF (related)" RELATED []
-is_a: TO:0002642 ! dietary fiber related trait
+is_a: TO:0002642 ! fiber content trait
 
 [Term]
 id: TO:0002642
-name: dietary fiber related trait
-def: "The traits assayed for content and quality of food/forage based on pre or post digestive processes." [Gramene:pankaj_jaiswal]
+name: fiber content trait
+def: "A plant quality trait (TO:0000597) which is the content and quality of fiber in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal] {comment="TO:Laurel_Cooper"}
 is_a: TO:0000597 ! plant quality trait
 
 [Term]
@@ -24059,7 +24199,8 @@ is_a: TO:0000465 ! mineral and ion content trait
 [Term]
 id: TO:0002644
 name: dry matter digestibility
-def: "Expressed as a percent, is a measure of the dry matter content of forage or feed that is retained in the animal body." [GrainGenes_trait:Dry_matter_digestibility, Gramene:iyt, Gramene:pankaj_jaiswal]
+def: "A plant quality trait (TO:0000597) which is the proportion of the dry matter content of a forage or feed that is digested in an animal body." [GrainGenes_trait:Dry_matter_digestibility, Gramene:iyt, Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+comment: Dry matter digestibility is usually expressed as a percentage.
 synonym: "DMATTDIGAB (related)" RELATED []
 is_a: TO:0000597 ! plant quality trait
 
@@ -24076,12 +24217,13 @@ name: flour particle size
 def: "Size of flour particles determined after grinding the grains. The size depends on the length and type of grinding." [GrainGenes_trait:Particle_size, Gramene:pankaj_jaiswal]
 comment: It affects the water absorption, dough handling characteristics and loaf volume while cooking.
 synonym: "FLRPARTSZ (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001068 ! processing quality trait
 
 [Term]
 id: TO:0002647
 name: starch digestibility
-def: "Expressed as a percent, is a measure of the starch content of forage or feed that is retained in the animal body." [GrainGenes_trait:Starch_digestibility, Gramene:pankaj_jaiswal]
+def: "A plant quality trait (TO:0000597) which is the proportion of the starch content of a forage or feed that is digested by an animal." [GrainGenes_trait:Starch_digestibility, Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+comment: Starch digestibility is usually expressed as a percentage.
 synonym: "STARCHDIG (related)" RELATED []
 is_a: TO:0000597 ! plant quality trait
 
@@ -24156,7 +24298,7 @@ is_a: TO:0000482 ! chemical stress sensitivity
 [Term]
 id: TO:0002658
 name: starch grain synthesis
-def: "An assay to determine if the starch grains are formed in the plant or plant part. Often associated with the starch biosynthesis and branching of the starch." [Gramene:pankaj_jaiswal]
+def: "An assay to determine if the starch grains are formed in a plant structure (PO:0009011). Often associated with the starch biosynthesis and branching of the starch." [Gramene:pankaj_jaiswal]
 is_a: TO:0000283 ! biological process trait
 
 [Term]
@@ -24169,7 +24311,7 @@ is_a: TO:0006013 ! carpel number
 [Term]
 id: TO:0002660
 name: cytokinin content
-def: "Measures the cytokinin content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Measures the cytokinin content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000476 ! growth hormone content
 
 [Term]
@@ -24237,7 +24379,7 @@ is_a: TO:0000476 ! growth hormone content
 [Term]
 id: TO:0002668
 name: jasmonic acid content
-def: "Measures the jasmonic acid content in a plant or plant part." [Gramene:pankaj_jaiswal, PMID:17031029]
+def: "Measures the jasmonic acid content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, PMID:17031029]
 synonym: "JA content (related)" RELATED []
 synonym: "jasmonate content (related)" RELATED []
 is_a: TO:0000476 ! growth hormone content
@@ -24245,14 +24387,14 @@ is_a: TO:0000476 ! growth hormone content
 [Term]
 id: TO:0002669
 name: diterpenoid phytoalexin content
-def: "Measures the diterpenoid phytoalexin content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Measures the diterpenoid phytoalexin content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: Diterpenoid phytoalexins are polycyclic diterpenes involved in pathogen response.
 is_a: TO:0000290 ! flavonoid content
 
 [Term]
 id: TO:0002670
 name: momilactone A content
-def: "Measures the momilactone A content in a plant or plant part." [PMID:16569039]
+def: "Measures the momilactone A content in a plant structure (PO:0009011)." [PMID:16569039]
 comment: Momilactone A is a instance of diterpenoid phytoalexin.
 synonym: "phytoalexin momilactone A content (related)" RELATED []
 is_a: TO:0002669 ! diterpenoid phytoalexin content
@@ -24277,19 +24419,19 @@ is_a: TO:0000476 ! growth hormone content
 [Term]
 id: TO:0002673
 name: amino acid content
-def: "The amino acid content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "The amino acid content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000281 ! metabolite content trait
 
 [Term]
 id: TO:0002674
 name: tryptophan content
-def: "Amino acid tryptophan content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Amino acid tryptophan content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0002673 ! amino acid content
 
 [Term]
 id: TO:0002675
 name: gibberellic acid content
-def: "Measures the gibberellic acid content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Measures the gibberellic acid content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "GA content (related)" RELATED []
 synonym: "GACN (related)" RELATED []
 synonym: "gibberellin content (related)" RELATED []
@@ -24298,7 +24440,7 @@ is_a: TO:0000476 ! growth hormone content
 [Term]
 id: TO:0002676
 name: brassinosteroid content
-def: "Measures the brassinosteroid content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Measures the brassinosteroid content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: Brassinosteroids (BR) are a group of steroidal plant hormones.
 synonym: "BRCN (related)" RELATED []
 is_a: TO:0000476 ! growth hormone content
@@ -24435,8 +24577,8 @@ is_a: TO:0006016 ! meristem tissue development trait
 [Term]
 id: TO:0002693
 name: gravity response trait
-def: "An assay to determine the variation in the gravitropism under the influence of gravity or zero gravity." [Gramene:pankaj_jaiswal]
-is_a: TO:0000168 ! abiotic plant stress trait
+def: "An abiotic plant stress response trait (TO:0000168) which is the response of a plant structure (PO:0009011) to abnormal gravity." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
 id: TO:0002694
@@ -24451,7 +24593,7 @@ is_a: TO:0002728 ! fruit quality trait
 [Term]
 id: TO:0002695
 name: beta-carotene content
-def: "The beta-carotene content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "The beta-carotene content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: The most common form of carotenoid is beta-carotene.
 synonym: "beta-carotenoid content (exact)" EXACT []
 is_a: TO:0002697 ! cyclic carotene content
@@ -24459,7 +24601,7 @@ is_a: TO:0002697 ! cyclic carotene content
 [Term]
 id: TO:0002696
 name: alpha carotene content
-def: "The alpha-carotene content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "The alpha-carotene content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: The alpha-carotene is the second most common form of carotenoid.
 synonym: "alpha-carotenoid content (exact)" EXACT []
 is_a: TO:0002697 ! cyclic carotene content
@@ -24467,19 +24609,19 @@ is_a: TO:0002697 ! cyclic carotene content
 [Term]
 id: TO:0002697
 name: cyclic carotene content
-def: "The cyclic carotene content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "The cyclic carotene content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000289 ! carotene content
 
 [Term]
 id: TO:0002698
 name: acyclic carotene content
-def: "The acyclic carotene content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "The acyclic carotene content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000289 ! carotene content
 
 [Term]
 id: TO:0002699
 name: lycopene content
-def: "The lycopene content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "The lycopene content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: Lycopene is the most efficient quencher of singlet oxygen free radicals.
 is_a: TO:0002698 ! acyclic carotene content
 
@@ -24492,14 +24634,14 @@ is_a: TO:0002694 ! fruit flavor trait
 [Term]
 id: TO:0002701
 name: lutein content
-def: "The leutein content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "The leutein content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000301 ! xanthophyll content
 
 [Term]
 id: TO:0002702
-name: cercospora leaf spot resistance
-def: "Causal agent: Cercospora spp." [Gramene:pankaj_jaiswal]
-is_a: TO:0000439 ! fungal disease response
+name: Cercospora leaf spot response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Cercospora spp." [Gramene:pankaj_jaiswal, NCBITaxon:29002, TO:Laurel_Cooper]
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0002703
@@ -24515,9 +24657,10 @@ is_a: TO:0000384 ! nematode damage response trait
 
 [Term]
 id: TO:0002705
-name: cucurbit downy mildew resistance
-def: "Causal agent: Pseudoperonospora cubensis. It causes the downy mildew disease in cucurbits." [Gramene:pankaj_jaiswal]
-is_a: TO:0000439 ! fungal disease response
+name: cucurbit downy mildew response
+def: "Causal agent: Pseudoperonospora cubensis." [Gramene:pankaj_jaiswal, NCBITaxon:143453, TO:Laurel_Cooper]
+comment: It causes the downy mildew disease in cucurbits.
+is_a: TO:0001144 ! Oomycete disease response
 
 [Term]
 id: TO:0002706
@@ -24698,7 +24841,7 @@ relationship: inheres_in PO:0009040 {is_inferred="true"} ! sterile lemma
 [Term]
 id: TO:0002728
 name: fruit quality trait
-def: "A plant quality trait (TO:0000597) which is the commercial and /or economical value of a fruit (PO:0009001) , or its overall improvement." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+def: "A plant quality trait (TO:0000597) which is the commercial and/or economic value of a fruit (PO:0009001) , or its overall improvement." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 xref: TO_GIT:263
 is_a: TO:0000597 ! plant quality trait
 
@@ -25857,9 +26000,19 @@ is_a: TO:0000466 ! carbon content
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
+id: TO:0003500
+name: plant gall morphology trait
+def: "A multi-tissue plant structure morphology trait (TO:0000836) which is a quality of a plant gall (PO:0025626)." [TO:Laurel_Cooper]
+comment: Plant galls are formed in response to some biotic stress (PSO:0000004), such as damage caused by an insect, mite, microorganism or other plant.
+xref: TO_GIT:505
+is_a: TO:0000836 ! multi-tissue plant structure morphology trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2024-03-11T21:05:28Z
+
+[Term]
 id: TO:0005001
 name: linoleic acid content
-def: "The linoleic acid content in the essential oils present in or extracted from a plant or the plant part such as seed." [Gramene:pankaj_jaiswal]
+def: "The linoleic acid content in or extracted from a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: According to the Codex Alimentarium, the FAO international standards for food product specifications, the normal values may differ depending on the source plant. For example, in soybean oil the normal values for linoleic acid content are 48% - 59%.
 synonym: "(9Z,12Z)-Octadecadienoic acid content (exact)" EXACT []
 synonym: "(Z,Z)-9,12-octadecadienoic acid content (exact)" EXACT []
@@ -25875,7 +26028,7 @@ is_a: TO:0000604 ! fat and essential oil content
 [Term]
 id: TO:0005002
 name: oleic acid content
-def: "The oleic acid content in the essential oils present in or extracted from a plant or the plant part such as seed." [Gramene:pankaj_jaiswal]
+def: "The oleic acid content in or extracted from a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: According to the Codex Alimentarium, the FAO international standards for food product specifications, the normal values may differ depending on the source plant. For example, for soybean oil the normal values for oleic acid content are 17% - 30%.
 synonym: "(9Z)-octadec-9-enoic acid content (exact)" EXACT []
 synonym: "(9Z)-Octadecenoic acid content (exact)" EXACT []
@@ -25890,7 +26043,7 @@ is_a: TO:0000604 ! fat and essential oil content
 [Term]
 id: TO:0005003
 name: stearic acid content
-def: "The stearic acid content in the essential oils present in or extracted from a plant or the plant part such as seed." [Gramene:pankaj_jaiswal]
+def: "The stearic acid content in or extracted from a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: According to the Codex Alimentarium, the FAO international standards for food product specifications, the normal values may differ depending on the source plant. e.g. for soybean oil the normal values for stearic acid content are 2% - 5.4%.
 synonym: "high stearic oil content (narrow)" NARROW []
 synonym: "low stearic oil content (narrow)" NARROW []
@@ -25904,15 +26057,15 @@ is_a: TO:0000604 ! fat and essential oil content
 [Term]
 id: TO:0005004
 name: omega-3 fatty acid content
-def: "The omega-3 fatty acid content in the essential oils present in or extracted from a plant or the plant part such as seed." [Gramene:pankaj_jaiswal]
-comment: Omega-3 fatty acid (CHEBI:25681)  is a  polyunsaturated fatty acid (CHEBI:26208) . There are four subtypes of omega-3 fatty acids, namely,  alpha-licanic acid (CHEBI:28771), all-cis-docosa-4,7,10,13,16,19-hexaenoic acid (CHEBI:28125), all-cis-icosa-5,8,11,14,17-pentaenoic acid and alpha-linolenic acid (CHEBI:27432).
+def: "The omega-3 fatty acid content in or extracted from a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+comment: Omega-3 fatty acid (CHEBI:25681) is a polyunsaturated fatty acid (CHEBI:26208). There are four subtypes of omega-3 fatty acids, namely, alpha-licanic acid (CHEBI:28771), all-cis-docosa-4,7,10,13,16,19-hexaenoic acid (CHEBI:28125), all-cis-icosa-5,8,11,14,17-pentaenoic acid and alpha-linolenic acid (CHEBI:27432).
 xref: CHEBI:25681
 is_a: TO:0000604 ! fat and essential oil content
 
 [Term]
 id: TO:0005005
 name: alpha-linolenic acid content
-def: "The alpha-linolenic acid content in the essential oils present in or extracted from a plant or the plant part such as seed." [Gramene:pankaj_jaiswal]
+def: "The alpha-linolenic acid content in or extracted from a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: According to the Codex Alimentarium, the FAO international standards for food product specifications, the normal values may differ depending on the source plant. For example, in soybean oil the normal values for alpha-linolenic acid content are 4.5% - 11%.
 synonym: "(9,12,15)-linolenic acid content (exact)" EXACT []
 synonym: "(9Z,12Z,15Z)-Octadecatrienoic acid content (exact)" EXACT []
@@ -25976,7 +26129,7 @@ is_a: TO:0000429 ! salt sensitivity
 [Term]
 id: TO:0006002
 name: proline content
-def: "Amino acid proline content in a plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Amino acid proline content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0002673 ! amino acid content
 
 [Term]
@@ -25990,35 +26143,35 @@ is_a: TO:0000489 ! carbohydrate composition related trait
 [Term]
 id: TO:0006004
 name: raffinose content
-def: "Amount of raffinose present in the plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Amount of raffinose present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0006003 ! oligosaccharide content
 
 [Term]
 id: TO:0006005
 name: fructose content
-def: "Amount of fructose present in the plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Amount of fructose present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000307 ! hexose content
 
 [Term]
 id: TO:0006006
 name: monosaccharide content
-def: "Amount of monosaccharide present in the plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Amount of monosaccharide present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000291 ! carbohydrate content
 is_a: TO:0000489 ! carbohydrate composition related trait
 
 [Term]
 id: TO:0006007
 name: polysaccharide content
-def: "Amount of polysaccharide present in the plant or plant part." [Gramene:pankaj_jaiswal]
+def: "Amount of polysaccharide present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000291 ! carbohydrate content
 is_a: TO:0000489 ! carbohydrate composition related trait
 
 [Term]
 id: TO:0006008
-name: carbohydrate derivative content
-def: "A carbohydrate content (TO:0000291) which is the amount of carbohydrate derivatives (CHEBI:63299) in a plant structure (PO:0009011)." []
+name: OBSOLETE carbohydrate derivative content
+def: "OBSOLETE A carbohydrate content (TO:0000291) which is the amount of carbohydrate derivatives (CHEBI:63299) in a plant structure (PO:0009011)." []
 xref: CHEBI:63299
-is_a: TO:0000291 ! carbohydrate content
+is_obsolete: true
 
 [Term]
 id: TO:0006009
@@ -26386,7 +26539,7 @@ creation_date: 2010-10-25T04:59:53Z
 [Term]
 id: TO:0006057
 name: cuperous ion concentration
-def: "The total Cu2+ ion concentration measured in a given volume of a plant or a plant part or plant extract." [Gramene:pankaj_jaiswal]
+def: "The total Cu2+ ion concentration measured in a given volume of a plant structure (PO:0009011) or plant extract." [Gramene:pankaj_jaiswal]
 is_a: TO:0006052 ! copper concentration
 created_by: jaiswalp
 creation_date: 2010-10-25T05:04:14Z
@@ -26394,7 +26547,7 @@ creation_date: 2010-10-25T05:04:14Z
 [Term]
 id: TO:0006058
 name: cuperic ion concentration
-def: "The total Cu3+ ion concentration measured in a given volume of a plant or a plant part or plant extract." [Gramene:pankaj_jaiswal]
+def: "The total Cu3+ ion concentration measured in a given volume of a plant structure (PO:0009011) or plant extract." [Gramene:pankaj_jaiswal]
 is_a: TO:0006052 ! copper concentration
 created_by: jaiswalp
 creation_date: 2010-10-25T05:04:19Z
@@ -26421,7 +26574,7 @@ creation_date: 2010-10-25T05:13:05Z
 [Term]
 id: TO:0006061
 name: days to germinate
-def: "Number of days taken from the day of sowing to the first emergence of cotyledons or hypocotyl." [Gramene:curators]
+def: "A plant phenological trait (TO:0000933) which is the number of days taken from the day of sowing to the first emergence of cotyledons or hypocotyl." [Gramene:curators]
 is_a: TO:0000933 ! plant phenological trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:23:52Z
@@ -26613,7 +26766,7 @@ is_a: TO:0000426 ! stem internode color
 [Term]
 id: TO:0012001
 name: leaf area index
-def: "Leaf Area Index (LAI) is the ratio of total upper leaf surface of vegetation divided by the surface area of the land on which the vegetation grows." [Wikipedia:Leaf_area_index]
+def: "Leaf Area Index (LAI) is the ratio of total upper leaf surface of vegetation divided by the surface area of the land on which the vegetation grows." [TO:Laurel_Cooper, Wikipedia:Leaf_area_index]
 comment: LAI is used to predict photosynthetic primary production and as a reference tool for crop growth. Measured on the plant canopy only.
 is_a: TO:0000540 ! leaf area trait
 created_by: jaiswalp
@@ -26641,6 +26794,7 @@ creation_date: 2011-12-09T01:54:09Z
 [Term]
 id: TO:0012004
 name: quantum yield
+def: "The efficiency of light energy conversion into chemical energy by plants." [TO:Laurel_Cooper, Wikipedia:quantum_yield]
 synonym: "QY (related)" RELATED []
 is_a: TO:0012006 ! fluorescence related trait
 created_by: jaiswalp
@@ -26728,7 +26882,7 @@ name: grain weight to panicle weight ratio
 def: "A grain yield trait (TO:0000396) which is the ratio of grain weight (TO:0000919) to panicle weight (TO:0000014)." [TO:Laurel_Cooper]
 comment: Grain weight (TO:0000919) is a general parent term, covering the weights of various types of caryopsis fruits (PO:0030104), and doesn't specify if they are hulled or dehulled.
 xref: TO_GIT:242
-is_a: PATO:0001470 ! proportionality to
+is_a: PATO:0001470 ! ratio
 is_a: TO:0000396 ! grain yield trait
 
 [Term]
@@ -26751,8 +26905,9 @@ is_a: TO:0000454 ! stem borer resistance
 
 [Term]
 id: TO:0020006
-name: chickpea pod borer
-is_a: TO:0000261 ! insect damage response trait
+name: OBSOLETE chickpea pod borer
+def: "OBSOLETE" [TO:Laurel_Cooper]
+is_obsolete: true
 
 [Term]
 id: TO:0020007
@@ -26762,47 +26917,55 @@ is_a: TO:0000261 ! insect damage response trait
 
 [Term]
 id: TO:0020008
-name: sorghum grain mold
-def: "Causative agent: Aspergillus spp and Penicillium spp. Trait is measured as extent of grain surface covered with mold." [Gramene:cwt, ICRIS:050]
-is_a: TO:0000023 ! fungal infection related grain discoloration
+name: sorghum grain mold disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Aspergillus spp and Penicillium spp." [Gramene:cwt, NCBITaxon:5052, TO:Laurel_Cooper]
+comment: Trait is measured as extent of grain surface covered with mold.
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0020009
-name: sorghum rust resistance
-def: "Causative agent: Puccinia purpurea. Infection causes purple, red or tan flecks on both surfaces of leaves, leaving a reddish powder on fingers when passed over it." [Gramene:cwt, ICRIS:049]
-is_a: TO:0000439 ! fungal disease response
+name: sorghum rust disease response
+def: "A Basidiomycete fungal disease response trait (TO:0001146) caused by Puccinia purpurea infection." [Gramene:cwt, ICRIS:049, NCBITaxon:684838, TO:Laurel_Cooper]
+comment: Infection causes purple, red or tan flecks on both surfaces of leaves, leaving a reddish powder on fingers when passed over it.
+is_a: TO:0001146 ! Basidiomycete fungal disease response
 
 [Term]
 id: TO:0020010
-name: sorghum downy mildew resistance
-def: "Causative agent:Peronospora sp. It causes abundant downy white growth on the under surfaces of infected portions of leaves during humid weather, mature infected leaves become necrotic and intervenal tissues disintegrate to give the typical shredded leaf symptom." [Gramene:cwt, ICRIS:047]
-is_a: TO:0000439 ! fungal disease response
+name: sorghum downy mildew response
+def: "Causative agent: Peronospora sp." [Gramene:cwt, ICRIS:047, NCBITaxon:70742, TO:Laurel_Cooper]
+comment: It causes abundant downy white growth on the under surfaces of infected portions of leaves during humid weather, mature infected leaves become necrotic and intervenal tissues disintegrate to give the typical shredded leaf symptom.
+is_a: TO:0001144 ! Oomycete disease response
 
 [Term]
 id: TO:0020011
-name: chickpea botrytis grey mold resistance
-is_a: TO:0000664 ! fungal blight disease resistance
+name: OBSOLETE chickpea botrytis grey mold response
+def: "OBSOLETE" [TO:Laurel_Cooper]
+is_obsolete: true
 
 [Term]
 id: TO:0020012
-name: chickpea fusarium wild resistance
-is_a: TO:0000664 ! fungal blight disease resistance
+name: OBSOLETE chickpea fusarium wild resistance
+def: "OBSOLETE" [TO:Laurel_Cooper]
+is_obsolete: true
 
 [Term]
 id: TO:0020013
-name: chickpea colleotrichum blight resistance
-is_a: TO:0000664 ! fungal blight disease resistance
+name: OBSOLETE chickpea colleotrichum blight response
+def: "OBSOLETE" [TO:Laurel_Cooper]
+is_obsolete: true
 
 [Term]
 id: TO:0020014
-name: chickpea ascochyta blight resistance
-is_a: TO:0000664 ! fungal blight disease resistance
+name: OBSOLETE chickpea ascochyta blight response
+def: "OBSOLETE" [TO:Laurel_Cooper]
+is_obsolete: true
 
 [Term]
 id: TO:0020015
-name: sorghum leaf blight resistance
+name: sorghum leaf blight disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Exserohilum turcicum (Setosphaeria turcica)." [NCBITaxon:93612, TO:Laurel_Cooper]
 xref: TO_GIT:69
-is_a: TO:0000664 ! fungal blight disease resistance
+is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0020016
@@ -26967,148 +27130,148 @@ is_a: TO:0000869 ! glume morphology trait
 
 [Term]
 id: TO:0020051
-name: barley leaf scald disease resistance
-def: "Causal agent: Rhynchosporium secalis." [T-CAP:Victoria_Blake]
+name: barley leaf scald disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Rhynchosporium secalis." [NCBITaxon:38038, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms include, oval, water-soaked, blue-grey spots (1.0-1.5 cm long) developing into lesions with dry necrotic centers and dark brown margins. Lesions will coalesce under high infection levels and are not delimited by veins.
 synonym: "scald (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:12:24Z
 
 [Term]
 id: TO:0020052
-name: barley spot blotch disease resistance
-def: "A fungal disease resistance (TO:0000439) that is involved in the response to barley spot blotch disease. Causal agent: Cochliobolus sativus (Bipolaris sorokiniana)." [T-CAP:Victoria_Blake]
+name: barley spot blotch disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by  Cochliobolus sativus (Bipolaris sorokiniana)." [NCBITaxon:45130, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms include, uniform chocolate brown lesions that eventually merge forming irregular necrotic patches on leaves. Lesions may be surrounded by yellow zones of varying width.
 synonym: "spot blotch (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:19:00Z
 
 [Term]
 id: TO:0020053
-name: wheat spot blotch disease resistance
-def: "A fungal disease resistance (TO:0000439) that is involved in the response to wheat spot blotch disease. Causal agent: Cochliobolus sativus (Bipolaris sorokiniana)." [T-CAP:Victoria_Blake]
+name: wheat spot blotch disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Cochliobolus sativus (Bipolaris sorokiniana)." [NCBITaxon:45130, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms include, elongated to oval shaped dark brown lesions. Centers often lighten to dark brown or tan surrounded by an irregular dark brown ring.
-synonym: "Helminthosporium leaf blotch (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+synonym: "Helminthosporium leaf blotch (related)" RELATED []
+is_a: TO:0001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:21:53Z
 
 [Term]
 id: TO:0020054
-name: barley stripe rust disease resistance
-def: "Causal agent: Puccinia striiformis f. sp. hordei." [T-CAP:Victoria_Blake]
+name: barley stripe rust disease response
+def: "A Basidiomycete fungal disease response trait (TO:0001146) caused by Puccinia striiformis f. sp. hordei infection." [NCBITaxon:376348, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms: chlorotic flecks at the infection site initially appear, followed by yellow uredinia (spore masses) in prominent stripes along the leaf veins. Black telia (overseasoning structures) readily develop from uredinia as infected plants mature.
 synonym: "BSR (exact)" EXACT []
 synonym: "yellow rust (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001146 ! Basidiomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:25:00Z
 
 [Term]
 id: TO:0020055
-name: wheat stripe rust disease resistance
-def: "Causal agent: Puccinia striiformis f. sp. tritici." [T-CAP:Victoria_Blake]
+name: wheat stripe rust disease response
+def: "A Basidiomycete fungal disease response trait (TO:0001146) caused by Puccinia striiformis f. sp. tritici." [NCBITaxon:168172, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms: pustules (spore masses) containing yellow to orange-yellow urediniospores form narrow stripes on leaves, leaf sheaths and glumes.
 synonym: "yellow rust (broad)" BROAD []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001146 ! Basidiomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:27:45Z
 
 [Term]
 id: TO:0020056
-name: barley leaf rust disease resistance
-def: "Causal agent: Puccinia hordei." [T-CAP:Victoria_Blake]
+name: barley leaf rust disease response
+def: "A Basidiomycete fungal disease response trait (TO:0001146) caused by Puccinia hordei infection." [NCBITaxon:27345, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms: small round orange brown pustules producing a mass of orange-brown urediniospores on the upper leaf surfaces and leaf sheaths.
 synonym: "brown rust (broad)" BROAD []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001146 ! Basidiomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:29:57Z
 
 [Term]
 id: TO:0020057
-name: wheat leaf rust disease resistance
-def: "Causal agent: Puccinia recondita f. sp. tritici." [T-CAP:Victoria_Blake]
+name: wheat leaf rust disease response
+def: "A Basidiomycete fungal disease response trait (TO:0001146) caused by Puccinia recondita f. sp. tritici (Puccinia triticina)." [NCBITaxon:208348, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms: circular to slightly elliptical pustules containing masses of orange to orange-brown urediniospores on the leaf surfaces and leaf sheaths.
 synonym: "brown rust (broad)" BROAD []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001146 ! Basidiomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:31:09Z
 
 [Term]
 id: TO:0020058
-name: barley common root rot resistance
-def: "Causal agents: Cochliobolus sativus (Bipolaris sorokiniana), Fusarium culmorum and Fusarium pseudograminearum." [T-CAP:Victoria_Blake]
+name: barley common root rot response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Cochliobolus sativus (Bipolaris sorokiniana), Fusarium culmorum and Fusarium pseudograminearum." [NCBITaxon:101028, NCBITaxon:45130, NCBITaxon:5516, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms: brown lesions on the roots, especially the subcrown internode. Under severe conditions, lesions can become nearly black with brown tissue extending into the crown and leaf sheaths. Stunted plants with reduced tillering and yield. Heads can be white with fewer kernels that are small and shriveled.
 synonym: "crown rot (broad)" BROAD []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:33:03Z
 
 [Term]
 id: TO:0020059
-name: wheat common root rot resistance
-def: "Causal agents: Cochliobolus sativus (Bipolaris sorokiniana)." [T-CAP:Victoria_Blake]
+name: wheat common root rot response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Cochliobolus sativus (Bipolaris sorokiniana)." [NCBITaxon:45130, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms: browning of the root, crown and basal culm tissues.  Plants may lodge. White spikes can appear.
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:36:24Z
 
 [Term]
 id: TO:0020060
-name: barley powdery mildew disease resistance
-def: "Causal agent: Blumeria graminis f. sp. hordei." [T-CAP:Victoria_Blake]
+name: barley powdery mildew disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Blumeria graminis f. sp. hordei." [NCBITaxon:2867405, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms: first visible signs are fuzzy white to pale grey tufts of mycelia and conidia on the upper surfaces of leaves and leaf sheaths (especially on lower leaves) and sometimes on the spikes. Older fungal tissue is yellowish grey and can be easily rubbed off.  Plant tissue becomes chlorotic or necrotic.  Spherical black cleistothecia may develop.
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:39:36Z
 
 [Term]
 id: TO:0020061
-name: wheat powdery mildew disease resistance
-def: "Causal agent: Blumeria graminis f. sp. tritici." [T-CAP:Victoria_Blake]
+name: wheat powdery mildew disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Blumeria graminis f. sp. tritici." [NCBITaxon:34373, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms: first visible signs are fuzzy white to pale grey tufts of mycelia and conidia on the upper surfaces of leaves and leaf sheaths (especially on lower leaves) and sometimes on the spikes. Older fungal tissue is yellowish grey and can be easily rubbed off. Plant tissue becomes chlorotic or necrotic. Spherical black cleistothecia may develop.
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:39:36Z
 
 [Term]
 id: TO:0020062
-name: barley net form net blotch disease resistance
-def: "Causal agent: Pyrenophora teres f. teres." [T-CAP:Victoria_Blake]
+name: barley net form net blotch disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Pyrenophora teres f. teres." [NCBITaxon:97479, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms: in adult plants, initial symptoms are small pinpoint to elliptical brown spots which expand to form narrow, tan to light brown lesions, often delimited by leaf veins. Within lesions, dark brown longitudinal and transverse striations appear forming a net-like pattern. In seedlings, greenish grey, water-soaked areas appear forming brown lesions with netted striations.
 synonym: "NFNB (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:39:36Z
 
 [Term]
 id: TO:0020063
-name: barley spot form net blotch disease resistance
-def: "Causal agent: Pyrenophora teres f. maculata." [T-CAP:Victoria_Blake]
+name: barley spot form net blotch disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Pyrenophora teres f. maculata." [NCBITaxon:97480, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms: dark brown, circular to elliptical lesions surrounded by bands of chlorosis.
 synonym: "SFNB (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:39:36Z
 
 [Term]
 id: TO:0020064
-name: barley septoria disease resistance
-def: "Causal agent: Septoria passerinii and Stagonospora avenae f. sp. triticeae (teleomorph: Phaeosphaeria avenaria f. sp. triticeae)." [T-CAP:Victoria_Blake]
-comment: Symptoms: in seedlings, S. passerinii causes faint, yellowish areas that turn greenish gray then straw colored with time forming a distinct demarcation next to healthy green tissue.  On adult plants S. passerinii infection produces long, rectangular lesions delimited by veins that first appear graying then turn tan or straw colored. S. avenae f. sp. triticea produces yellow brown lesions that traverse veins and are shield or lens shaped.
+name: barley septoria disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Septoria passerinii (Zymoseptoria passerinii) and Stagonospora avenae f. sp. triticeae (Parastagonospora avenae f. sp. tritici)." [NCBITaxon:1047170, NCBITaxon:54790, T-CAP:Victoria_Blake]
+comment: Symptoms: in seedlings, S. passerinii causes faint, yellowish areas that turn greenish gray then straw colored with time forming a distinct demarcation next to healthy green tissue.  On adult plants S. passerinii infection produces long, rectangular lesions delimited by veins that first appear graying then turn tan or straw colored. S. avenae f. sp. triticea produces yellow brown lesions that traverse veins and are shield or lens shaped. (Stagonospora avenae f. sp. triticeae - teleomorph: Phaeosphaeria avenaria f. sp. triticeae).
 synonym: "SSLB (exact)" EXACT []
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:39:36Z
 
 [Term]
 id: TO:0020065
-name: wheat septoria leaf blotch disease resistance
-def: "Causal agent: Septoria tritici (Mycosphaerella graminicola), Septoria nodorum (Leptosphaeria nodorum), Septoria avenae f. sp. triticeae (Leptosphaeria avenaria f. sp. triticeae)." [T-CAP:Victoria_Blake]
+name: wheat septoria leaf blotch disease response
+def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Septoria tritici (Mycosphaerella graminicola), Septoria nodorum (Leptosphaeria nodorum) and/or Septoria avenae f. sp. triticeae (Leptosphaeria avenaria f. sp. triticeae)." [NCBITaxon:1047171, NCBITaxon:13684, NCBITaxon:54790, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms: Initial infection sites tend to be irregular in shape, oval to elongated chlorotic spots or lesions. As these sites expand, the centers of the lesions become pale, straw colored, and slightly necrotic, often with numerous small black dots (pycnidia). The lesions of septoria tritici blotch tend to be linear and restricted laterally, while those of septoria nodorum blotch and septoria avenae blotch are more lens shaped. All above ground plant parts can be affected.
-is_a: TO:0000439 ! fungal disease response
+is_a: TO:0001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:39:36Z
 
@@ -27127,14 +27290,15 @@ name: barley yellow dwarf virus disease resistance
 def: "Causal agent: The Barley Yellow Dwarf Viruses, Luteovirus (Group IV (+)ssRNA)." [T-CAP:Victoria_Blake]
 comment: Symptoms: uneven blotches of bright yellow discoloration on the tips and margins of older leaves, eventually progressing down toward the base, covering the entire leaf within a few weeks.  Reduced internode elongation causes stunting with severe infection possibly.
 synonym: "BYDV (exact)" EXACT []
-is_a: TO:0000148 ! viral disease response
+is_a: TO:0000148 ! viral disease response trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:00:45Z
 
 [Term]
 id: TO:0020068
 name: beta-glucan content
-def: "Amount of beta-glucan present in the plant part or product (e.g. malt). Beta-Glucans are polysaccharides of D-glucose linked by beta-glycosidic bonds that vary by molecular mass, solubility, viscosity and 3D configuration." [T-CAP:Victoria_Blake]
+def: "Amount of beta-glucan present in a plant structure (PO:0009011) or product (e.g. malt)." [T-CAP:Victoria_Blake]
+comment: Beta-Glucans are polysaccharides of D-glucose linked by beta-glycosidic bonds that vary by molecular mass, solubility, viscosity and 3D configuration.
 is_a: TO:0006007 ! polysaccharide content
 created_by: jaiswalp
 creation_date: 2011-08-19T01:03:01Z
@@ -27204,8 +27368,8 @@ creation_date: 2011-08-19T01:29:00Z
 [Term]
 id: TO:0020076
 name: phenolic compound content
-def: "Amount of phenolics present in the plant part, whole plant or product." [T-CAP:Victoria_Blake]
-comment: In barley its evaluated in ex malt.
+def: "Amount of phenolics present in a plant structure (PO:0009011) or product." [T-CAP:Victoria_Blake]
+comment: In barley it is evaluated in ex malt.
 is_a: TO:0000281 ! metabolite content trait
 created_by: jaiswalp
 creation_date: 2011-08-19T01:29:58Z
@@ -27241,8 +27405,8 @@ creation_date: 2011-08-19T02:53:13Z
 [Term]
 id: TO:0020080
 name: stover organic matter digestibility
-def: "This trait determines the amount of organic matter from the stover that would eventually be digested by animals. Value derived from chemical and in vitro analysis with rumen microbial inoculum of dried and ground stover, usually using Near Infrared Reflectance Spectrophotometry (NIRS) after appropriate calibration." [GCP:GCP_324.0000031, ICRISAT:Vincent_Vadez, ILRI:Michael_Blummel]
-comment: Measured as percentage.
+def: "A plant quality trait (TO:0000597) which is the amount of organic matter in the stover that can be digested by animals." [ICRISAT:Vincent_Vadez, ILRI:Michael_Blummel, TO:Laurel_Cooper]
+comment: Measured as a percentage. The value is derived from in vitro chemical analysis with rumen microbial inoculum of dried and ground stover, usually using Near Infrared Reflectance Spectrophotometry (NIRS) after appropriate calibration.
 synonym: "in vitro organic matter digestibility (exact)" EXACT []
 synonym: "stover related trait (broad)" BROAD [GCP:GCP_324.000003]
 is_a: TO:0000597 ! plant quality trait
@@ -27432,7 +27596,7 @@ creation_date: 2011-08-19T04:13:47Z
 [Term]
 id: TO:0020100
 name: nitrate uptake
-def: "The total nitrate ion uptake measured in a plant or a plant part." [TO:contributors]
+def: "The total nitrate ion uptake measured a plant structure (PO:0009011)." [TO:contributors]
 is_a: TO:0020096 ! mineral and ion transport trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:13:47Z
@@ -27476,7 +27640,7 @@ creation_date: 2011-08-19T04:19:49Z
 [Term]
 id: TO:0020105
 name: CW-cytoplasmic male sterility
-def: "A trait to measure the CW type of ytoplasmic male sterility in plants." [TO:contributors]
+def: "A trait to measure the CW type of cytoplasmic male sterility in plants." [TO:contributors]
 comment: Often measured by abnormal pollen germination.
 is_a: TO:0000580 ! cytoplasmic male sterility
 created_by: jaiswalp
@@ -27539,9 +27703,9 @@ creation_date: 2011-08-19T04:30:47Z
 
 [Term]
 id: TO:0020112
-name: phosphorus toxicity
-def: "Accumulation of phosphate level in a plant or a plant part at toxic level." [TO:contributors]
-is_a: TO:0000102 ! phosphorus sensitivity
+name: OBSOLETE phosphorus toxicity
+def: "OBSOLETE Accumulation of phosphate level a plant structure (PO:0009011) at toxic level." [TO:contributors]
+is_obsolete: true
 created_by: jaiswalp
 creation_date: 2011-08-19T04:31:40Z
 
@@ -27679,7 +27843,7 @@ creation_date: 2015-11-30T17:23:58Z
 [Term]
 id: TO:1000004
 name: infructescence position
-def: "An infructescence morphology trait (TO:0000920) which is the position of an infructescence (PO:0006342)." [TO:Laurel_Cooper]
+def: "A reproductive shoot system morphology trait (TO:0000786) which is the position of an infructescence (PO:0006342)." [TO:Laurel_Cooper]
 is_a: PATO:0000140 ! position
 is_a: TO:0000920 ! infructescence morphology trait
 created_by: cooperl

@@ -1,4 +1,5 @@
 format-version: 1.2
+idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 ontology: to/imports/chebi_import
 
 [Term]
@@ -325,14 +326,14 @@ relationship: is_conjugate_base_of CHEBI:28616 ! carbamic acid
 [Term]
 id: CHEBI:139588
 name: alpha-hydroxy ketone
-def: "An alpha-oxyketone that has a hydroxy group as the alpha-oxy moiety." []
+def: "A ketone containing a hydroxy group on the alpha-carbon relative to the C=O group." []
 synonym: "alpha-hydroxy ketones" RELATED [ChEBI]
 synonym: "alpha-hydroxy-ketone" RELATED [ChEBI]
 synonym: "alpha-hydroxy-ketones" RELATED [ChEBI]
 synonym: "alpha-hydroxyketone" RELATED [ChEBI]
 synonym: "alpha-hydroxyketones" RELATED [ChEBI]
-is_a: CHEBI:30879 ! alcohol
-is_a: CHEBI:52396 ! alpha-oxyketone
+is_a: CHEBI:17087 ! ketone
+is_a: CHEBI:33822 ! organic hydroxy compound
 
 [Term]
 id: CHEBI:140948
@@ -404,7 +405,7 @@ synonym: "(2R)-2-azaniumyl-4-[hydroxy(methyl)phosphoryl]butanoate" EXACT IUPAC_N
 synonym: "(2R)-2-azaniumyl-4-[hydroxy(methyl)phosphoryl]butyrate" EXACT IUPAC_NAME [IUPAC]
 synonym: "(R)-glufosinate zwitterion" RELATED [ChEBI]
 synonym: "4-[hydroxy(methyl)phosphinoyl]-D-homoalanine zwitterion" RELATED [ChEBI]
-is_a: CHEBI:35238 ! amino acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 relationship: is_conjugate_acid_of CHEBI:142858 ! (2R)-glufosinate zwitterion(1-)
 relationship: is_enantiomer_of CHEBI:142856 ! glufosinate-P zwitterion
 relationship: is_tautomer_of CHEBI:142853 ! (2R)-glufosinate
@@ -420,7 +421,7 @@ synonym: "(2S)-2-azaniumyl-4-[hydroxy(methyl)phosphoryl]butanoate" EXACT IUPAC_N
 synonym: "(2S)-glufosinate zwitterion" RELATED [ChEBI]
 synonym: "(S)-glufosinate zwitterion" RELATED [ChEBI]
 synonym: "4-[hydroxy(methyl)phosphinoyl]-L-homoalanine zwitterion" RELATED [ChEBI]
-is_a: CHEBI:35238 ! amino acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 relationship: is_conjugate_acid_of CHEBI:142859 ! glufosinate-P zwitterion(1-)
 relationship: is_enantiomer_of CHEBI:142854 ! (2R)-glufosinate zwitterion
 relationship: is_tautomer_of CHEBI:142852 ! glufosinate-P
@@ -434,8 +435,10 @@ synonym: "(2R)-2-azaniumyl-4-(methylphosphinato)butanoate" EXACT IUPAC_NAME [IUP
 synonym: "(2R)-2-azaniumyl-4-(methylphosphinato)butyrate" EXACT IUPAC_NAME [IUPAC]
 synonym: "(R)-glufosinate zwitterion(1-)" RELATED [ChEBI]
 synonym: "4-(methylphosphinato)-D-homoalanine zwitterion" RELATED [ChEBI]
-is_a: CHEBI:25696 ! organic anion
+synonym: "D-phosphinothricin" RELATED [UniProt]
+is_a: CHEBI:58882 ! phosphinothricin(1-)
 relationship: is_conjugate_base_of CHEBI:142854 ! (2R)-glufosinate zwitterion
+relationship: is_enantiomer_of CHEBI:142859 ! glufosinate-P zwitterion(1-)
 
 [Term]
 id: CHEBI:142859
@@ -448,8 +451,10 @@ synonym: "(2S)-2-azaniumyl-4-[hydroxy(methyl)phosphinato]butyrate" EXACT IUPAC_N
 synonym: "(2S)-glufosinate zwitterion(1-)" RELATED [ChEBI]
 synonym: "(S)-glufosinate zwitterion(1-)" RELATED [ChEBI]
 synonym: "4-[hydroxy(methyl)phosphinoyl]-L-homoalanine zwitterion(1-)" RELATED [ChEBI]
-is_a: CHEBI:25696 ! organic anion
+synonym: "L-phosphinothricin" RELATED [UniProt]
+is_a: CHEBI:58882 ! phosphinothricin(1-)
 relationship: is_conjugate_base_of CHEBI:142856 ! glufosinate-P zwitterion
+relationship: is_enantiomer_of CHEBI:142858 ! (2R)-glufosinate zwitterion(1-)
 
 [Term]
 id: CHEBI:146293
@@ -585,19 +590,6 @@ synonym: "an aldose" RELATED [UniProt]
 is_a: CHEBI:35381 ! monosaccharide
 
 [Term]
-id: CHEBI:15705
-name: L-alpha-amino acid
-def: "Any alpha-amino acid having L-configuration at the alpha-carbon." []
-synonym: "L-2-Amino acid" RELATED [KEGG_COMPOUND]
-synonym: "L-alpha-amino acid" EXACT [IUPAC]
-synonym: "L-alpha-amino acids" EXACT IUPAC_NAME [IUPAC]
-synonym: "L-alpha-amino acids" RELATED [ChEBI]
-synonym: "L-Amino acid" RELATED [KEGG_COMPOUND]
-is_a: CHEBI:33704 ! alpha-amino acid
-relationship: is_conjugate_acid_of CHEBI:59814 ! L-alpha-amino acid anion
-relationship: is_tautomer_of CHEBI:59869 ! L-alpha-amino acid zwitterion
-
-[Term]
 id: CHEBI:15734
 name: primary alcohol
 def: "A primary alcohol is a compound in which a hydroxy group, -OH, is attached to a saturated carbon atom which has either three hydrogen atoms attached to it or only one other carbon atom and two hydrogen atoms attached to it." []
@@ -686,7 +678,6 @@ synonym: "ammoniac" RELATED [ChEBI]
 synonym: "Ammoniak" RELATED [ChemIDplus]
 synonym: "amoniaco" RELATED [ChEBI]
 synonym: "azane" EXACT IUPAC_NAME [IUPAC]
-synonym: "NH3" RELATED [UniProt]
 synonym: "NH3" RELATED [KEGG_COMPOUND]
 synonym: "NH3" RELATED [IUPAC]
 synonym: "R-717" RELATED [ChEBI]
@@ -696,6 +687,7 @@ is_a: CHEBI:35107 ! azane
 is_a: CHEBI:37176 ! mononuclear parent hydride
 relationship: is_conjugate_acid_of CHEBI:29337 ! azanide
 relationship: is_conjugate_base_of CHEBI:28938 ! ammonium
+relationship: RO:0000087 CHEBI:228364 ! NMR chemical shift reference compound
 relationship: RO:0000087 CHEBI:25212 ! metabolite
 relationship: RO:0000087 CHEBI:50910 ! neurotoxin
 relationship: RO:0000087 CHEBI:59740 ! nucleophilic reagent
@@ -818,7 +810,6 @@ id: CHEBI:16411
 name: indole-3-acetic acid
 def: "A monocarboxylic acid that is acetic acid in which one of the methyl hydrogens has been replaced by a 1H-indol-3-yl group." []
 synonym: "(Indol-3-yl)acetate" RELATED [KEGG_COMPOUND]
-synonym: "(indol-3-yl)acetic acid" RELATED [UniProt]
 synonym: "1H-indol-3-ylacetic acid" EXACT IUPAC_NAME [IUPAC]
 synonym: "2-(indol-3-yl)ethanoic acid" RELATED [ChEBI]
 synonym: "3-Indolylessigsaeure" RELATED [ChEBI]
@@ -1045,7 +1036,7 @@ relationship: RO:0000087 CHEBI:77746 ! human metabolite
 
 [Term]
 id: CHEBI:17620
-name: ferulic acid
+name: trans-ferulic acid
 def: "A ferulic acid consisting of trans-cinnamic acid bearing methoxy and hydroxy substituents at positions 3 and 4 respectively on the phenyl ring." []
 synonym: "(2E)-3-(4-hydroxy-3-methoxyphenyl)prop-2-enoic acid" EXACT IUPAC_NAME [IUPAC]
 synonym: "(E)-3-(4-Hydroxy-3-methoxyphenyl)-2-propenoic acid" RELATED [NIST_Chemistry_WebBook]
@@ -1056,11 +1047,11 @@ synonym: "3-(4-Hydroxy-3-methoxyphenyl)propenoic acid" RELATED [NIST_Chemistry_W
 synonym: "3-methoxy-4-hydroxy-trans-cinnamic acid" RELATED [ChEBI]
 synonym: "4-Hydroxy-3-methoxycinnamic acid" RELATED [KEGG_COMPOUND]
 synonym: "4-hydroxy-3-methoxycinnamic acid" RELATED [ChEBI]
-synonym: "Ferulic acid" EXACT [KEGG_COMPOUND]
+synonym: "Ferulic acid" RELATED [KEGG_COMPOUND]
 synonym: "trans-4-Hydroxy-3-methoxycinnamic acid" RELATED [ChemIDplus]
-synonym: "trans-Ferulic acid" RELATED [ChemIDplus]
-is_a: CHEBI:24031 ! ferulic acids
-relationship: is_conjugate_acid_of CHEBI:29749 ! ferulate
+synonym: "trans-Ferulic acid" EXACT [ChemIDplus]
+is_a: CHEBI:193350 ! ferulic acid
+relationship: is_conjugate_acid_of CHEBI:29749 ! trans-ferulate
 relationship: RO:0000087 CHEBI:22586 ! antioxidant
 relationship: RO:0000087 CHEBI:64345 ! MALDI matrix material
 relationship: RO:0000087 CHEBI:67079 ! anti-inflammatory agent
@@ -1443,6 +1434,23 @@ def: "are a type of flavonoid pigments in plants. Anthoxanthins are water-solubl
 is_a: CHEBI:47916 ! flavonoid
 
 [Term]
+id: CHEBI:193350
+name: ferulic acid
+def: "A member of the class of ferulic acids that is cinnamic acid substituted by a methoxy and a hydroxy group at positions 3 and 4 of the phenyl ring." []
+synonym: "3-(4-hydroxy-3-methoxyphenyl)-2-propenoic acid" RELATED [NIST_Chemistry_WebBook]
+synonym: "3-(4-hydroxy-3-methoxyphenyl)acrylic acid" RELATED [NIST_Chemistry_WebBook]
+synonym: "3-(4-hydroxy-3-methoxyphenyl)prop-2-enoic acid" EXACT IUPAC_NAME [IUPAC]
+synonym: "3-methoxy-4-hydroxycinnamic acid" RELATED [NIST_Chemistry_WebBook]
+synonym: "4'-hydroxy-3'-methoxycinnamic acid" RELATED [ChEBI]
+synonym: "4-hydroxy-3-methoxycinnamic acid" RELATED [NIST_Chemistry_WebBook]
+synonym: "coniferic acid" RELATED [ChEBI]
+synonym: "ferulaic acid" RELATED [ChEBI]
+is_a: CHEBI:24031 ! ferulic acids
+relationship: RO:0000087 CHEBI:22586 ! antioxidant
+relationship: RO:0000087 CHEBI:63726 ! neuroprotective agent
+relationship: RO:0000087 CHEBI:76924 ! plant metabolite
+
+[Term]
 id: CHEBI:194321
 name: hydroperoxy unsaturated fatty acid
 def: "Any unsaturated fatty acid carrying one or more hydroperoxy substituents." []
@@ -1617,6 +1625,20 @@ is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 is_a: CHEBI:38180 ! polycyclic heteroarene
 
 [Term]
+id: CHEBI:228364
+name: NMR chemical shift reference compound
+def: "Any compound that produces a peak used as reference frequency in the delta chemical shift scale." []
+synonym: "NMR chemical shift reference compounds" RELATED [ChEBI]
+synonym: "NMR chemical shift standard" RELATED [ChEBI]
+synonym: "NMR chemical shift standards" RELATED [ChEBI]
+synonym: "NMR internal standard" RELATED [ChEBI]
+synonym: "NMR internal standards" RELATED [ChEBI]
+synonym: "NMR reference standard" RELATED [ChEBI]
+synonym: "NMR reference standards" RELATED [ChEBI]
+is_a: CHEBI:33232 ! application
+is_a: CHEBI:51086 ! chemical role
+
+[Term]
 id: CHEBI:22916
 name: boron molecular entity
 synonym: "boron compounds" RELATED [ChEBI]
@@ -1684,8 +1706,8 @@ id: CHEBI:23019
 name: carbonyl group
 synonym: ">C=O" RELATED [IUPAC]
 synonym: "carbonyl" EXACT IUPAC_NAME [IUPAC]
-synonym: "carbonyl group" EXACT [ChEBI]
 synonym: "carbonyl group" EXACT [UniProt]
+synonym: "carbonyl group" EXACT [ChEBI]
 is_a: CHEBI:51422 ! organodiyl group
 
 [Term]
@@ -1763,6 +1785,23 @@ name: cobalt cation
 synonym: "cobalt cation" EXACT IUPAC_NAME [IUPAC]
 synonym: "cobalt cations" RELATED [ChEBI]
 is_a: CHEBI:33515 ! transition element cation
+
+[Term]
+id: CHEBI:233500
+name: post-transition metal atom
+def: "A group of metal atoms that are located in the periodic table between transition metals and metalloids." []
+synonym: "other metal atom" RELATED [ChEBI]
+synonym: "other metal atoms" RELATED [ChEBI]
+synonym: "p-block metal atom" RELATED [ChEBI]
+synonym: "p-block metal atoms" RELATED [ChEBI]
+synonym: "poor metal atom" RELATED [ChEBI]
+synonym: "poor metal atoms" RELATED [ChEBI]
+synonym: "post transition metal atom" RELATED [ChEBI]
+synonym: "post transition metal atoms" RELATED [ChEBI]
+synonym: "post-transition element atom" RELATED [ChEBI]
+synonym: "post-transition element atoms" RELATED [ChEBI]
+synonym: "post-transition metal atoms" RELATED [ChEBI]
+is_a: CHEBI:33521 ! metal atom
 
 [Term]
 id: CHEBI:23357
@@ -2101,6 +2140,7 @@ is_a: CHEBI:23677 ! diazole
 [Term]
 id: CHEBI:24781
 name: imidazolinone
+synonym: "imidazolinones" RELATED [ChEBI]
 is_a: CHEBI:20432 ! imidazolone
 is_a: CHEBI:38101 ! organonitrogen heterocyclic compound
 
@@ -2312,8 +2352,8 @@ synonym: "Pb" RELATED [IUPAC]
 synonym: "plomb" RELATED [ChEBI]
 synonym: "plomo" RELATED [ChEBI]
 synonym: "plumbum" RELATED [IUPAC]
+is_a: CHEBI:233500 ! post-transition metal atom
 is_a: CHEBI:33306 ! carbon group element atom
-is_a: CHEBI:33521 ! metal atom
 
 [Term]
 id: CHEBI:25048
@@ -2804,6 +2844,7 @@ synonym: "trihydroxidooxidophosphorus" EXACT IUPAC_NAME [IUPAC]
 is_a: CHEBI:59698 ! phosphoric acids
 relationship: is_conjugate_acid_of CHEBI:35780 ! phosphate ion
 relationship: is_conjugate_acid_of CHEBI:39745 ! dihydrogenphosphate
+relationship: RO:0000087 CHEBI:228364 ! NMR chemical shift reference compound
 relationship: RO:0000087 CHEBI:33287 ! fertilizer
 relationship: RO:0000087 CHEBI:46787 ! solvent
 relationship: RO:0000087 CHEBI:77746 ! human metabolite
@@ -2958,12 +2999,11 @@ relationship: BFO:0000051 CHEBI:27568 ! selenium atom
 [Term]
 id: CHEBI:26650
 name: serine family amino acid
-def: "An L-alpha-amino acid which is biosynthesised from 3-phosphoglycerate (i.e. serine, glycine, cysteine and homocysteine). A closed class." []
+def: "An alpha-amino acid which is biosynthesised from 3-phosphoglycerate (i.e. serine, glycine, cysteine and homocysteine). A closed class." []
 synonym: "3-phosphoglycerate family amino acid" RELATED [ChEBI]
 synonym: "3-phosphoglycerate family amino acids" RELATED [ChEBI]
 synonym: "serine family amino acids" RELATED [ChEBI]
-is_a: CHEBI:15705 ! L-alpha-amino acid
-is_a: CHEBI:83813 ! proteinogenic amino acid
+is_a: CHEBI:33704 ! alpha-amino acid
 
 [Term]
 id: CHEBI:26658
@@ -3754,8 +3794,8 @@ synonym: "Aluminium" RELATED [KEGG_COMPOUND]
 synonym: "aluminium" EXACT IUPAC_NAME [IUPAC]
 synonym: "aluminium" RELATED [ChEBI]
 synonym: "aluminum" RELATED [NIST_Chemistry_WebBook]
+is_a: CHEBI:233500 ! post-transition metal atom
 is_a: CHEBI:33317 ! boron group element atom
-is_a: CHEBI:33521 ! metal atom
 
 [Term]
 id: CHEBI:29035
@@ -3946,13 +3986,13 @@ relationship: is_conjugate_acid_of CHEBI:15377 ! water
 
 [Term]
 id: CHEBI:29749
-name: ferulate
+name: trans-ferulate
 def: "A monocarboxylic acid anion obtained by the deprotonation of the carboxy group of ferulic acid." []
 synonym: "(2E)-3-(4-hydroxy-3-methoxyphenyl)prop-2-enoate" EXACT IUPAC_NAME [IUPAC]
 synonym: "(E)-ferulate" RELATED [UniProt]
 synonym: "3-methoxy-4-hydroxy-trans-cinnamate" RELATED [ChEBI]
 is_a: CHEBI:35757 ! monocarboxylic acid anion
-relationship: is_conjugate_base_of CHEBI:17620 ! ferulic acid
+relationship: is_conjugate_base_of CHEBI:17620 ! trans-ferulic acid
 
 [Term]
 id: CHEBI:29792
@@ -4280,7 +4320,8 @@ name: organic group
 def: "Any substituent group or skeleton containing carbon." []
 synonym: "organic groups" RELATED [ChEBI]
 is_a: CHEBI:24433 ! group
-relationship: is_substituent_group_from CHEBI:50860 ! organic molecular entity
+relationship: is_conjugate_acid_of CHEBI:64775 ! organic anionic group
+relationship: is_conjugate_base_of CHEBI:64769 ! organic cationic group
 
 [Term]
 id: CHEBI:33249
@@ -4805,8 +4846,8 @@ is_a: CHEBI:33250 ! atom
 id: CHEBI:33558
 name: alpha-amino-acid anion
 def: "An amino-acid anion obtained by deprotonation of any alpha-amino acid." []
+synonym: "alpha-amino acid anion" RELATED [ChEBI]
 synonym: "alpha-amino acid anions" RELATED [ChEBI]
-synonym: "alpha-amino-acid anion" EXACT [ChEBI]
 synonym: "alpha-amino-acid anions" RELATED [ChEBI]
 is_a: CHEBI:37022 ! amino-acid anion
 relationship: is_conjugate_base_of CHEBI:33704 ! alpha-amino acid
@@ -5144,9 +5185,11 @@ is_a: CHEBI:36916 ! cation
 id: CHEBI:33703
 name: amino-acid cation
 synonym: "amino acid cation" RELATED [ChEBI]
-synonym: "amino-acid cation" EXACT [ChEBI]
+synonym: "amino acid cations" RELATED [ChEBI]
 synonym: "amino-acid cations" RELATED [ChEBI]
+is_a: CHEBI:25697 ! organic cation
 is_a: CHEBI:33702 ! polyatomic cation
+relationship: is_conjugate_acid_of CHEBI:33709 ! amino acid
 
 [Term]
 id: CHEBI:33704
@@ -5160,16 +5203,20 @@ synonym: "Amino acid" RELATED [KEGG_COMPOUND]
 synonym: "Amino acids" RELATED [KEGG_COMPOUND]
 is_a: CHEBI:33709 ! amino acid
 relationship: is_conjugate_acid_of CHEBI:33558 ! alpha-amino-acid anion
-relationship: is_tautomer_of CHEBI:78608 ! alpha-amino acid zwitterion
+relationship: is_conjugate_base_of CHEBI:33719 ! alpha-amino-acid cation
+relationship: is_tautomer_of CHEBI:78608 ! alpha-amino-acid zwitterion
 
 [Term]
 id: CHEBI:33708
 name: amino-acid residue
 def: "When two or more amino acids combine to form a peptide, the elements of water are removed, and what remains of each amino acid is called an amino-acid residue." []
 synonym: "amino acid residue" RELATED [ChEBI]
+synonym: "amino acid residues" RELATED [ChEBI]
 synonym: "amino-acid residue" EXACT IUPAC_NAME [IUPAC]
 synonym: "amino-acid residues" RELATED [JCBN]
 is_a: CHEBI:33247 ! organic group
+relationship: is_conjugate_acid_of CHEBI:64898 ! anionic amino-acid residue
+relationship: is_conjugate_base_of CHEBI:58942 ! cationic amino-acid residue
 relationship: is_substituent_group_from CHEBI:33709 ! amino acid
 
 [Term]
@@ -5183,21 +5230,25 @@ synonym: "Aminosaeure" RELATED [ChEBI]
 is_a: CHEBI:33575 ! carboxylic acid
 is_a: CHEBI:50047 ! organic amino compound
 relationship: is_conjugate_acid_of CHEBI:37022 ! amino-acid anion
+relationship: is_conjugate_base_of CHEBI:33703 ! amino-acid cation
 
 [Term]
 id: CHEBI:33710
 name: alpha-amino-acid residue
+def: "An amino-acid residue derived from an alpha-amino acid." []
 synonym: "alpha-amino-acid residues" RELATED [ChEBI]
+synonym: "an alpha-amino acid residue" RELATED [UniProt]
 is_a: CHEBI:33708 ! amino-acid residue
 relationship: is_substituent_group_from CHEBI:33704 ! alpha-amino acid
 
 [Term]
 id: CHEBI:33719
 name: alpha-amino-acid cation
+synonym: "alpha-amino acid cation" RELATED [ChEBI]
 synonym: "alpha-amino acid cations" RELATED [ChEBI]
-synonym: "alpha-amino-acid cation" EXACT [ChEBI]
 synonym: "alpha-amino-acid cations" RELATED [ChEBI]
 is_a: CHEBI:33703 ! amino-acid cation
+relationship: is_conjugate_acid_of CHEBI:33704 ! alpha-amino acid
 
 [Term]
 id: CHEBI:33741
@@ -5483,9 +5534,11 @@ is_a: CHEBI:24432 ! biological role
 
 [Term]
 id: CHEBI:35238
-name: amino acid zwitterion
+name: amino-acid zwitterion
 def: "The zwitterionic form of an amino acid having a negatively charged carboxyl group and a positively charged amino group." []
-synonym: "amino acid zwitterion" EXACT [ChEBI]
+synonym: "amino acid zwitterion" RELATED [ChEBI]
+synonym: "amino acid zwitterions" RELATED [ChEBI]
+synonym: "amino-acid zwitterions" RELATED [ChEBI]
 is_a: CHEBI:27369 ! zwitterion
 
 [Term]
@@ -5847,10 +5900,19 @@ is_a: CHEBI:23888 ! drug
 is_a: CHEBI:52210 ! pharmacological role
 
 [Term]
+id: CHEBI:35952
+name: 5-oxo monocarboxylic acid
+synonym: "5-oxo acid" RELATED [ChEBI]
+synonym: "5-oxo monocarboxylic acids" RELATED [ChEBI]
+is_a: CHEBI:35871 ! oxo monocarboxylic acid
+relationship: is_conjugate_base_of CHEBI:35975 ! 5-oxo monocarboxylic acid anion
+
+[Term]
 id: CHEBI:35975
 name: 5-oxo monocarboxylic acid anion
 synonym: "5-oxo monocarboxylic acid anions" RELATED [ChEBI]
 is_a: CHEBI:35902 ! oxo monocarboxylic acid anion
+relationship: is_conjugate_acid_of CHEBI:35952 ! 5-oxo monocarboxylic acid
 
 [Term]
 id: CHEBI:36009
@@ -6256,8 +6318,8 @@ is_a: CHEBI:36962 ! organochalcogen compound
 [Term]
 id: CHEBI:37022
 name: amino-acid anion
+synonym: "amino acid anion" RELATED [ChEBI]
 synonym: "amino acid anions" RELATED [ChEBI]
-synonym: "amino-acid anion" EXACT [ChEBI]
 synonym: "amino-acid anions" RELATED [ChEBI]
 is_a: CHEBI:29067 ! carboxylic acid anion
 is_a: CHEBI:35352 ! organonitrogen compound
@@ -6736,7 +6798,6 @@ is_a: CHEBI:33973 ! elemental magnesium
 [Term]
 id: CHEBI:39129
 name: strontium cation
-synonym: "Sr cation" RELATED [UniProt]
 synonym: "strontium cation" EXACT [ChEBI]
 synonym: "strontium cations" RELATED [ChEBI]
 is_a: CHEBI:33513 ! alkaline earth cation
@@ -7459,20 +7520,6 @@ synonym: "pharmaceuticals" RELATED [ChEBI]
 is_a: CHEBI:33232 ! application
 
 [Term]
-id: CHEBI:52395
-name: oxyketone
-def: "A compound with the general formula R2C=O (R=/=H) where one or more of the R groups contains an oxy (-O-) group." []
-synonym: "oxyketones" RELATED [ChEBI]
-is_a: CHEBI:17087 ! ketone
-
-[Term]
-id: CHEBI:52396
-name: alpha-oxyketone
-def: "An oxyketone with the general formula R2C(=O) (R=/=H) where one or more of the R groups contains an oxy (-O-) group and the oxy and carbonyl groups are bonded to the same carbon atom." []
-synonym: "alpha-oxyketones" RELATED [ChEBI]
-is_a: CHEBI:52395 ! oxyketone
-
-[Term]
 id: CHEBI:52625
 name: inorganic hydroxy compound
 synonym: "inorganic hydroxides" RELATED [ChEBI]
@@ -7540,7 +7587,7 @@ name: glycine zwitterion
 def: "An amino acid zwitterion arising from transfer of a proton from the carboxy to the amino group of glycine." []
 synonym: "2-azaniumylacetate" EXACT IUPAC_NAME [IUPAC]
 synonym: "glycine" RELATED [UniProt]
-is_a: CHEBI:35238 ! amino acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 relationship: is_tautomer_of CHEBI:15428 ! glycine
 
 [Term]
@@ -7633,6 +7680,20 @@ synonym: "cyclic tetrapyrrole anions" RELATED [ChEBI]
 is_a: CHEBI:25696 ! organic anion
 
 [Term]
+id: CHEBI:58942
+name: cationic amino-acid residue
+def: "An amino-acid residue protonated on nitrogen." []
+synonym: "amino acid cation residue" RELATED [ChEBI]
+synonym: "amino acid cation residues" RELATED [ChEBI]
+synonym: "amino-acid cation residue" RELATED [ChEBI]
+synonym: "amino-acid cation residues" RELATED [ChEBI]
+synonym: "cationic amino acid residue" RELATED [ChEBI]
+synonym: "cationic amino acid residues" RELATED [ChEBI]
+synonym: "cationic amino-acid residues" RELATED [ChEBI]
+is_a: CHEBI:64769 ! organic cationic group
+relationship: is_conjugate_acid_of CHEBI:33708 ! amino-acid residue
+
+[Term]
 id: CHEBI:58945
 name: organophosphate oxoanion
 def: "An organic phosphoric acid derivative in which one or more oxygen atoms of the phosphate group(s) has been deprotonated." []
@@ -7716,23 +7777,6 @@ synonym: "nucleophiles" RELATED [ChEBI]
 synonym: "nucleophilic reagents" RELATED [ChEBI]
 is_a: CHEBI:33893 ! reagent
 is_a: CHEBI:39144 ! Lewis base
-
-[Term]
-id: CHEBI:59814
-name: L-alpha-amino acid anion
-def: "Conjugate base of an L-alpha-amino acid arising from deprotonation of the C-1 carboxy group." []
-synonym: "L-alpha-amino carboxylate" RELATED [ChEBI]
-is_a: CHEBI:33558 ! alpha-amino-acid anion
-relationship: is_conjugate_base_of CHEBI:15705 ! L-alpha-amino acid
-
-[Term]
-id: CHEBI:59869
-name: L-alpha-amino acid zwitterion
-def: "Zwitterionic form of an L-alpha-amino acid having an anionic carboxy group and a protonated amino group." []
-synonym: "an L-alpha-amino acid" RELATED [UniProt]
-synonym: "L-alpha-amino acid zwitterions" RELATED [ChEBI]
-is_a: CHEBI:78608 ! alpha-amino acid zwitterion
-relationship: is_tautomer_of CHEBI:15705 ! L-alpha-amino acid
 
 [Term]
 id: CHEBI:59999
@@ -7874,7 +7918,7 @@ id: CHEBI:62031
 name: polar amino acid zwitterion
 def: "Zwitterionic form of a polar amino acid having an anionic carboxy group and a protonated amino group." []
 synonym: "a polar amino acid" RELATED [UniProt]
-is_a: CHEBI:35238 ! amino acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 relationship: is_tautomer_of CHEBI:26167 ! polar amino acid
 
 [Term]
@@ -8086,7 +8130,7 @@ name: tryptophan zwitterion
 def: "An amino acid zwitterion obtained by transfer of a proton from the carboxy to the amino group of tryptophan; major species at pH 7.3." []
 synonym: "2-ammonio-3-(1H-indol-3-yl)propanoate" RELATED [IUPAC]
 synonym: "2-azaniumyl-3-(1H-indol-3-yl)propanoate" EXACT IUPAC_NAME [IUPAC]
-is_a: CHEBI:35238 ! amino acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 relationship: is_tautomer_of CHEBI:27897 ! tryptophan
 
 [Term]
@@ -8162,6 +8206,49 @@ id: CHEBI:64712
 name: trivalent inorganic cation
 def: "An atom or small molecule with a positive charge that does not contain carbon in covalent linkage, with a valency of three." []
 is_a: CHEBI:36915 ! inorganic cation
+
+[Term]
+id: CHEBI:64766
+name: cationic group
+def: "A group that carries an overall positive charge." []
+synonym: "cationic groups" RELATED [ChEBI]
+is_a: CHEBI:24433 ! group
+
+[Term]
+id: CHEBI:64767
+name: anionic group
+def: "A group that carries an overall negative charge." []
+synonym: "anionic groups" RELATED [ChEBI]
+is_a: CHEBI:24433 ! group
+
+[Term]
+id: CHEBI:64769
+name: organic cationic group
+def: "A cationic group that contains carbon." []
+synonym: "organic cationic groups" RELATED [ChEBI]
+is_a: CHEBI:64766 ! cationic group
+relationship: is_conjugate_acid_of CHEBI:33247 ! organic group
+
+[Term]
+id: CHEBI:64775
+name: organic anionic group
+def: "An anionic group that contains carbon." []
+synonym: "organic anionic groups" RELATED [ChEBI]
+is_a: CHEBI:64767 ! anionic group
+relationship: is_conjugate_base_of CHEBI:33247 ! organic group
+
+[Term]
+id: CHEBI:64898
+name: anionic amino-acid residue
+def: "An amino-acid residue carrying an overall negative charge." []
+synonym: "amino acid anion residue" RELATED [ChEBI]
+synonym: "amino acid anion residues" RELATED [ChEBI]
+synonym: "amino-acid anion residue" RELATED [ChEBI]
+synonym: "amino-acid anion residues" RELATED [ChEBI]
+synonym: "anionic amino acid residue" RELATED [ChEBI]
+synonym: "anionic amino acid residues" RELATED [ChEBI]
+is_a: CHEBI:64775 ! organic anionic group
+relationship: is_conjugate_base_of CHEBI:33708 ! amino-acid residue
 
 [Term]
 id: CHEBI:64909
@@ -8471,7 +8558,7 @@ name: aromatic amino-acid zwitterion
 def: "An amino acid zwitterion obtained by transfer of a proton from the carboxy to the amino group of any aromatic amino-acid." []
 synonym: "an aromatic amino-acid" RELATED [UniProt]
 synonym: "aromatic amino-acid zwitterions" RELATED [ChEBI]
-is_a: CHEBI:35238 ! amino acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 relationship: is_tautomer_of CHEBI:33856 ! aromatic amino acid
 
 [Term]
@@ -8507,7 +8594,7 @@ relationship: is_conjugate_base_of CHEBI:26208 ! polyunsaturated fatty acid
 [Term]
 id: CHEBI:76579
 name: triradylglycerol
-def: "A glycerol compound having one of three possible substituent groups - either acyl, alkyl, or alk-1-enyl - at each of the three possible positions sn-1, sn-2 or sn-3. has functional parent glycerol (CHEBI:17754), children: triglyceride (CHEBI:17855). Parent: is_a glycerolipid (CHEBI:35741)" []
+def: "Any glycerolipid that is glycerol bearing three substituent groups - either acyl, alkyl, or alk-1-enyl at each of the three possible positions." []
 synonym: "triradylglycerols" RELATED [ChEBI]
 is_a: CHEBI:35741 ! glycerolipid
 
@@ -8960,10 +9047,13 @@ is_a: CHEBI:76773 ! EC 3.1.1.* (carboxylic ester hydrolase) inhibitor
 
 [Term]
 id: CHEBI:78608
-name: alpha-amino acid zwitterion
-def: "An amino acid zwitterion obtained by transfer of a proton from the carboxy to the amino group of any alpha-amino acid; major species at pH 7.3." []
+name: alpha-amino-acid zwitterion
+def: "An amino acid-zwitterion obtained by transfer of a proton from the carboxy to the amino group of any alpha-amino acid; major species at pH 7.3." []
+synonym: "alpha-amino acid zwitterion" RELATED [ChEBI]
+synonym: "alpha-amino acid zwitterions" RELATED [ChEBI]
+synonym: "alpha-amino-acid zwitterions" RELATED [ChEBI]
 synonym: "an alpha-amino acid" RELATED [UniProt]
-is_a: CHEBI:35238 ! amino acid zwitterion
+is_a: CHEBI:35238 ! amino-acid zwitterion
 relationship: is_tautomer_of CHEBI:33704 ! alpha-amino acid
 
 [Term]
@@ -9193,7 +9283,7 @@ synonym: "canonical amino-acid derivatives" RELATED [ChEBI]
 synonym: "proteinogenic amino acid derivatives" RELATED [ChEBI]
 synonym: "proteinogenic amino-acid derivative" RELATED [ChEBI]
 synonym: "proteinogenic amino-acid derivatives" RELATED [ChEBI]
-is_a: CHEBI:83821 ! amino acid derivative
+is_a: CHEBI:83821 ! amino-acid derivative
 relationship: has_functional_parent CHEBI:83813 ! proteinogenic amino acid
 
 [Term]
@@ -9203,8 +9293,7 @@ def: "Any of the 23 alpha-amino acids that are precursors to proteins, and are i
 synonym: "canonical amino acid" RELATED [ChEBI]
 synonym: "canonical amino acids" RELATED [ChEBI]
 synonym: "proteinogenic amino acids" RELATED [ChEBI]
-is_a: CHEBI:33575 ! carboxylic acid
-is_a: CHEBI:35352 ! organonitrogen compound
+is_a: CHEBI:33709 ! amino acid
 
 [Term]
 id: CHEBI:83820
@@ -9225,9 +9314,11 @@ is_a: CHEBI:33709 ! amino acid
 
 [Term]
 id: CHEBI:83821
-name: amino acid derivative
+name: amino-acid derivative
 def: "Any derivative of an amino acid resulting from reaction at an amino group, carboxy group, side-chain functional group, or from the replacement of any hydrogen by a heteroatom. The definition normally excludes peptides containing amino acid residues." []
+synonym: "amino acid derivative" RELATED [ChEBI]
 synonym: "amino acid derivatives" RELATED [ChEBI]
+synonym: "amino-acid derivatives" RELATED [ChEBI]
 synonym: "modified amino acids" RELATED [ChEBI]
 is_a: CHEBI:35352 ! organonitrogen compound
 

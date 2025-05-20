@@ -1,17 +1,11 @@
 format-version: 1.2
+idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 ontology: to/imports/go_import
-
-[Term]
-id: GO:0000003
-name: reproduction
-def: "The production of new individuals that contain some portion of genetic material inherited from one or more parent organisms." [GOC:go_curators, GOC:isa_complete, GOC:jl, ISBN:0198506732]
-synonym: "reproductive physiological process" EXACT []
-is_a: GO:0008150 ! biological_process
 
 [Term]
 id: GO:0000278
 name: mitotic cell cycle
-def: "Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent." [GOC:mah, ISBN:0815316194, Reactome:69278]
+def: "Progression through the phases of the mitotic cell cycle, the most common eukaryotic cell cycle, which canonically comprises four successive phases called G1, S, G2, and M and includes replication of the genome and the subsequent segregation of chromosomes into daughter cells. In some variant cell cycles nuclear replication or nuclear division may not be followed by cell division, or G1 and G2 phases may be absent." [GOC:mah, ISBN:0815316194]
 synonym: "mitosis" RELATED []
 is_a: GO:0007049 ! cell cycle
 intersection_of: GO:0007049 ! cell cycle
@@ -33,8 +27,8 @@ synonym: "puberty" NARROW [GOC:dph]
 synonym: "reproductive developmental process" RELATED [GOC:dph, GOC:tb]
 is_a: GO:0022414 ! reproductive process
 is_a: GO:0032502 ! developmental process
+intersection_of: GO:0022414 ! reproductive process
 intersection_of: GO:0032502 ! developmental process
-intersection_of: BFO:0000050 GO:0000003 ! reproduction
 
 [Term]
 id: GO:0003674
@@ -128,7 +122,7 @@ is_a: GO:0005488 ! binding
 [Term]
 id: GO:0005575
 name: cellular_component
-def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine when it carries out a molecular function. There are two ways in which the gene ontology describes locations of gene products: (1) relative to cellular structures (e.g., cytoplasmic side of plasma membrane) or compartments (e.g., mitochondrion), and (2) the stable macromolecular complexes of which they are parts (e.g., the ribosome)." [GOC:pdt, NIF_Subcellular:sao1337158144]
+def: "A location, relative to cellular compartments and structures, occupied by a macromolecular machine. There are three types of cellular components described in the gene ontology: (1) the cellular anatomical entity where a gene product carries out a molecular function (e.g., plasma membrane, cytoskeleton) or membrane-enclosed compartments (e.g., mitochondrion); (2) virion components, where viral proteins act, and (3) the stable macromolecular complexes of which gene product are parts (e.g., the clathrin complex)." [GOC:pdt]
 synonym: "cell or subcellular entity" EXACT []
 synonym: "cellular component" EXACT []
 synonym: "subcellular entity" RELATED [NIF_Subcellular:nlx_subcell_100315]
@@ -142,13 +136,13 @@ synonym: "intracellular" EXACT []
 synonym: "nucleocytoplasm" RELATED [GOC:mah]
 synonym: "protoplasm" EXACT []
 synonym: "protoplast" RELATED [GOC:mah]
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
 id: GO:0005737
 name: cytoplasm
 def: "The contents of a cell excluding the plasma membrane and nucleus, but including other subcellular structures." [ISBN:0198547684]
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 relationship: BFO:0000050 GO:0005622 ! intracellular anatomical structure
 
 [Term]
@@ -173,6 +167,7 @@ id: GO:0005938
 name: cell cortex
 def: "The region of a cell that lies just beneath the plasma membrane and often, but not always, contains a network of actin filaments and associated proteins." [GOC:mah, ISBN:0815316194]
 synonym: "cell periphery" RELATED []
+synonym: "ectoplasm" NARROW []
 synonym: "peripheral cytoplasm" RELATED []
 is_a: GO:0005737 ! cytoplasm
 intersection_of: GO:0005737 ! cytoplasm
@@ -180,20 +175,11 @@ intersection_of: BFO:0000050 GO:0071944 ! cell periphery
 relationship: BFO:0000050 GO:0071944 ! cell periphery
 
 [Term]
-id: GO:0006725
-name: cellular aromatic compound metabolic process
-def: "The chemical reactions and pathways involving aromatic compounds, any organic compound characterized by one or more planar rings, each of which contains conjugated double bonds and delocalized pi electrons, as carried out by individual cells." [GOC:ai, ISBN:0198506732]
-synonym: "aromatic compound metabolism" EXACT []
-synonym: "aromatic hydrocarbon metabolic process" NARROW []
-synonym: "aromatic hydrocarbon metabolism" NARROW []
-is_a: GO:0044237 ! cellular metabolic process
-
-[Term]
 id: GO:0006793
 name: phosphorus metabolic process
-def: "The chemical reactions and pathways involving the nonmetallic element phosphorus or compounds that contain phosphorus, usually in the form of a phosphate group (PO4)." [GOC:ai]
+def: "The chemical reactions and pathways involving the nonmetallic element phosphorus or compounds that contain phosphorus." [GOC:ai]
 synonym: "phosphorus metabolism" EXACT []
-is_a: GO:0044237 ! cellular metabolic process
+is_a: GO:0008152 ! metabolic process
 
 [Term]
 id: GO:0006796
@@ -215,7 +201,6 @@ id: GO:0006833
 name: water transport
 def: "The directed movement of water (H2O) into, out of or within a cell, or between cells, by means of some agent such as a transporter or pore." [GOC:ai]
 is_a: GO:0042044 ! fluid transport
-is_a: GO:0071702 ! organic substance transport
 
 [Term]
 id: GO:0006950
@@ -273,14 +258,10 @@ is_a: GO:0009987 ! cellular process
 id: GO:0007165
 name: signal transduction
 def: "The cellular process in which a signal is conveyed to trigger a change in the activity or state of a cell. Signal transduction begins with reception of a signal (e.g. a ligand binding to a receptor or receptor activation by a stimulus such as light), or for signal transduction in the absence of ligand, signal-withdrawal or the activity of a constitutively active receptor. Signal transduction ends with regulation of a downstream cellular process, e.g. regulation of transcription or regulation of a metabolic process. Signal transduction covers signaling from receptors located on the surface of the cell and signaling via molecules located within the cell. For signaling between cells, signal transduction is restricted to events at and within the receiving cell." [GOC:go_curators, GOC:mtg_signaling_feb11]
-synonym: "signal transduction by cis-phosphorylation" NARROW []
-synonym: "signal transduction by conformational transition" NARROW []
-synonym: "signal transduction by protein phosphorylation" NARROW []
-synonym: "signal transduction by trans-phosphorylation" NARROW []
 synonym: "signaling cascade" NARROW []
 synonym: "signaling pathway" RELATED []
 synonym: "signalling cascade" NARROW []
-synonym: "signalling pathway" RELATED [GOC:mah]
+synonym: "signalling pathway" RELATED []
 is_a: GO:0009987 ! cellular process
 is_a: GO:0050794 ! regulation of cellular process
 relationship: BFO:0000050 GO:0007154 ! cell communication
@@ -329,13 +310,9 @@ synonym: "single-organism process" RELATED []
 [Term]
 id: GO:0008152
 name: metabolic process
-def: "The chemical reactions and pathways, including anabolism and catabolism, by which living organisms transform chemical substances. Metabolic processes typically transform small molecules, but also include macromolecular processes such as DNA repair and replication, and protein synthesis and degradation." [GOC:go_curators, ISBN:0198547684]
-synonym: "metabolic process resulting in cell growth" NARROW []
+def: "A cellular process consisting of the biochemical pathways by which a living organism transforms chemical substances. This includes including anabolism (biosynthetic process) and catabolism (catabolic process). Metabolic processes includes the transformation of small molecules, as well  macromolecular processes such as DNA repair and replication, protein synthesis and degradation." [GOC:go_curators, ISBN:0198547684]
 synonym: "metabolism" EXACT []
-synonym: "metabolism resulting in cell growth" NARROW []
-synonym: "multicellular organism metabolic process" NARROW []
-synonym: "single-organism metabolic process" RELATED []
-is_a: GO:0008150 ! biological_process
+is_a: GO:0009987 ! cellular process
 disjoint_from: GO:0051179 ! localization
 
 [Term]
@@ -366,7 +343,7 @@ is_a: GO:0070566 ! adenylyltransferase activity
 [Term]
 id: GO:0009058
 name: biosynthetic process
-def: "The chemical reactions and pathways resulting in the formation of substances; typically the energy-requiring part of metabolism in which simpler substances are transformed into more complex ones." [GOC:curators, ISBN:0198547684]
+def: "A cellular process consisting of the biochemical pathways by which a living organism synthesizes chemical substances. This typically represents the energy-requiring part of metabolism in which simpler substances are transformed into more complex ones." [GOC:curators, ISBN:0198547684]
 synonym: "anabolism" EXACT []
 synonym: "biosynthesis" EXACT []
 synonym: "formation" BROAD []
@@ -401,9 +378,7 @@ id: GO:0009698
 name: phenylpropanoid metabolic process
 def: "The chemical reactions and pathways involving aromatic derivatives of trans-cinnamic acid." [GOC:jl]
 synonym: "phenylpropanoid metabolism" EXACT []
-is_a: GO:0006725 ! cellular aromatic compound metabolic process
 is_a: GO:0019748 ! secondary metabolic process
-is_a: GO:1901360 ! organic cyclic compound metabolic process
 
 [Term]
 id: GO:0009699
@@ -414,9 +389,7 @@ synonym: "phenylpropanoid biosynthesis" EXACT []
 synonym: "phenylpropanoid formation" EXACT []
 synonym: "phenylpropanoid synthesis" EXACT []
 is_a: GO:0009698 ! phenylpropanoid metabolic process
-is_a: GO:0019438 ! aromatic compound biosynthetic process
 is_a: GO:0044550 ! secondary metabolite biosynthetic process
-is_a: GO:1901362 ! organic cyclic compound biosynthetic process
 
 [Term]
 id: GO:0009791
@@ -449,7 +422,6 @@ name: fruit ripening
 def: "An developmental maturation process that has as participant a fruit. Ripening causes changes in one or more characteristics of a fruit (color, aroma, flavor, texture, hardness, cell wall structure) and may make it more attractive to animals and aid in seed dispersal." [GOC:lr]
 synonym: "fruit maturation" RELATED [GOC:PO_curators]
 synonym: "fruit senescence" RELATED [GOC:PO_curators]
-is_a: GO:0003006 ! developmental process involved in reproduction
 is_a: GO:0071695 ! anatomical structure maturation
 relationship: BFO:0000050 GO:0010154 ! fruit development
 
@@ -508,7 +480,7 @@ synonym: "up-regulation of metabolic process" EXACT []
 synonym: "up-regulation of organismal metabolic process" NARROW []
 synonym: "upregulation of metabolic process" EXACT []
 is_a: GO:0019222 ! regulation of metabolic process
-is_a: GO:0048518 ! positive regulation of biological process
+is_a: GO:0048522 ! positive regulation of cellular process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002213 GO:0008152 ! metabolic process
 relationship: RO:0002213 GO:0008152 ! metabolic process
@@ -644,7 +616,7 @@ relationship: RO:0002211 GO:0038023 ! signaling receptor activity
 id: GO:0010562
 name: positive regulation of phosphorus metabolic process
 def: "Any process that increases the frequency, rate or extent of the chemical reactions and pathways involving phosphorus or compounds containing phosphorus." [GOC:dph, GOC:tb]
-is_a: GO:0031325 ! positive regulation of cellular metabolic process
+is_a: GO:0009893 ! positive regulation of metabolic process
 is_a: GO:0051174 ! regulation of phosphorus metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002213 GO:0006793 ! phosphorus metabolic process
@@ -693,7 +665,7 @@ relationship: RO:0002213 GO:0007154 ! cell communication
 [Term]
 id: GO:0010921
 name: regulation of phosphatase activity
-def: "Any process that modulates the rate or frequency of phosphatase activity. Phosphatases catalyze the hydrolysis of phosphoric monoesters, releasing inorganic phosphate." [GOC:BHF, GOC:dph, GOC:tb]
+def: "Any process that modulates the rate or frequency of phosphatase activity. Phosphatases catalyze the hydrolysis of phosphoric monoesters, releasing phosphate." [GOC:BHF, GOC:dph, GOC:tb]
 is_a: GO:0035303 ! regulation of dephosphorylation
 is_a: GO:0051336 ! regulation of hydrolase activity
 intersection_of: GO:0065007 ! biological regulation
@@ -721,7 +693,7 @@ synonym: "membrane region" NARROW []
 synonym: "region of membrane" NARROW []
 synonym: "transmembrane" RELATED [GOC:mah]
 synonym: "whole membrane" NARROW []
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
 id: GO:0016043
@@ -738,7 +710,7 @@ is_a: GO:0071840 ! cellular component organization or biogenesis
 [Term]
 id: GO:0016157
 name: sucrose synthase activity
-def: "Catalysis of the reaction: UDP-glucose + D-fructose = UDP + sucrose." [EC:2.4.1.13]
+def: "Catalysis of the reaction: an NDP-alpha-D-glucose + D-fructose = a ribonucleoside 5'-diphosphate + H+ + sucrose. The phosphate acceptor can be UDP or ADP." [RHEA:16241]
 synonym: "NDP-glucose:D-fructose 2-alpha-D-glucosyltransferase activity" RELATED [EC:2.4.1.13]
 synonym: "sucrose synthetase activity" RELATED [EC:2.4.1.13]
 synonym: "sucrose-UDP glucosyltransferase activity" RELATED [EC:2.4.1.13]
@@ -773,7 +745,7 @@ is_a: GO:0006796 ! phosphate-containing compound metabolic process
 [Term]
 id: GO:0016740
 name: transferase activity
-def: "Catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2." [ISBN:0198506732]
+def: "Catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from one compound (generally regarded as the donor) to another compound (generally regarded as the acceptor). Transferase is the systematic name for any enzyme of EC class 2." [EC:2.-.-.-]
 is_a: GO:0003824 ! catalytic activity
 
 [Term]
@@ -789,7 +761,7 @@ is_a: GO:0016740 ! transferase activity
 [Term]
 id: GO:0016758
 name: hexosyltransferase activity
-def: "Catalysis of the transfer of a hexosyl group from one compound (donor) to another (acceptor)." [GOC:jl]
+def: "Catalysis of the transfer of a hexosyl group from one compound (donor) to another (acceptor)." [EC:2.4.1.-]
 synonym: "transferase activity, transferring hexosyl groups" EXACT []
 is_a: GO:0016757 ! glycosyltransferase activity
 
@@ -802,7 +774,7 @@ is_a: GO:0016740 ! transferase activity
 [Term]
 id: GO:0016779
 name: nucleotidyltransferase activity
-def: "Catalysis of the transfer of a nucleotidyl group to a reactant." [ISBN:0198506732]
+def: "Catalysis of the transfer of a nucleotidyl group from one compound (donor) to another (acceptor)." [EC:2.7.7.-]
 is_a: GO:0016772 ! transferase activity, transferring phosphorus-containing groups
 
 [Term]
@@ -821,19 +793,9 @@ is_a: GO:0016787 ! hydrolase activity
 [Term]
 id: GO:0016791
 name: phosphatase activity
-def: "Catalysis of the hydrolysis of phosphoric monoesters, releasing inorganic phosphate." [GOC:curators, GOC:pg]
-synonym: "4-nitrophenylphosphatase activity" NARROW []
-synonym: "4-nitrophenylphosphate phosphohydrolase activity" NARROW []
-synonym: "ecto-p-nitrophenyl phosphatase activity" NARROW []
-synonym: "K-pNPPase activity" NARROW []
-synonym: "nitrophenyl phosphatase activity" NARROW []
-synonym: "NPPase activity" NARROW []
-synonym: "p-nitrophenylphosphatase activity" NARROW []
-synonym: "p-nitrophenylphosphate phosphohydrolase activity" NARROW []
-synonym: "para-nitrophenyl phosphatase activity" NARROW []
+def: "Catalysis of the hydrolysis of a phosphoric monoester, releasing a phosphate." [GOC:curators, GOC:pg]
 synonym: "phosphatase" RELATED []
 synonym: "phosphoric monoester hydrolase activity" EXACT []
-synonym: "PNPPase activity" NARROW []
 is_a: GO:0042578 ! phosphoric ester hydrolase activity
 
 [Term]
@@ -862,23 +824,10 @@ def: "Any process that modulates the frequency, rate or extent of the chemical r
 synonym: "regulation of metabolism" EXACT []
 synonym: "regulation of multicellular organismal metabolic process" NARROW []
 synonym: "regulation of organismal metabolic process" NARROW [GOC:tb]
-is_a: GO:0050789 ! regulation of biological process
+is_a: GO:0050794 ! regulation of cellular process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0008152 ! metabolic process
 relationship: RO:0002211 GO:0008152 ! metabolic process
-
-[Term]
-id: GO:0019438
-name: aromatic compound biosynthetic process
-def: "The chemical reactions and pathways resulting in the formation of aromatic compounds, any substance containing an aromatic carbon ring." [GOC:ai]
-synonym: "aromatic compound anabolism" EXACT []
-synonym: "aromatic compound biosynthesis" EXACT []
-synonym: "aromatic compound formation" EXACT []
-synonym: "aromatic compound synthesis" EXACT []
-synonym: "aromatic hydrocarbon biosynthesis" NARROW []
-synonym: "aromatic hydrocarbon biosynthetic process" NARROW []
-is_a: GO:0006725 ! cellular aromatic compound metabolic process
-is_a: GO:0044249 ! cellular biosynthetic process
 
 [Term]
 id: GO:0019748
@@ -893,7 +842,7 @@ is_a: GO:0008152 ! metabolic process
 id: GO:0019953
 name: sexual reproduction
 def: "A type of reproduction that combines the genetic material of two gametes (such as a sperm or egg cell or fungal spores). The gametes have an haploid genome (with a single set of chromosomes, the product of a meiotic division) and combines with one another to produce a zygote (diploid)." [Wikipedia:Sexual_reproduction]
-is_a: GO:0000003 ! reproduction
+is_a: GO:0022414 ! reproductive process
 
 [Term]
 id: GO:0021700
@@ -916,9 +865,6 @@ name: reproductive process
 def: "A biological process that directly contributes to the process of producing new individuals by one or two organisms. The new individuals inherit some proportion of their genetic material from the parent or parents." [GOC:dph, GOC:isa_complete]
 synonym: "single organism reproductive process" RELATED []
 is_a: GO:0008150 ! biological_process
-intersection_of: GO:0008150 ! biological_process
-intersection_of: BFO:0000050 GO:0000003 ! reproduction
-relationship: BFO:0000050 GO:0000003 ! reproduction
 
 [Term]
 id: GO:0022622
@@ -966,6 +912,7 @@ name: signaling receptor regulator activity
 def: "Binds to and modulates the activity of a receptor." [GOC:ceb]
 synonym: "receptor regulator activity" BROAD []
 is_a: GO:0098772 ! molecular function regulator activity
+relationship: RO:0002211 GO:0038023 ! signaling receptor activity
 
 [Term]
 id: GO:0030546
@@ -975,6 +922,7 @@ synonym: "receptor activator activity" BROAD []
 synonym: "signalling receptor activator activity" EXACT []
 is_a: GO:0030545 ! signaling receptor regulator activity
 is_a: GO:0140677 ! molecular function activator activity
+relationship: RO:0002213 GO:0038023 ! signaling receptor activity
 
 [Term]
 id: GO:0031090
@@ -987,80 +935,12 @@ intersection_of: BFO:0000050 GO:0043227 ! membrane-bounded organelle
 relationship: BFO:0000050 GO:0043227 ! membrane-bounded organelle
 
 [Term]
-id: GO:0031323
-name: regulation of cellular metabolic process
-def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways by which individual cells transform chemical substances." [GOC:mah]
-synonym: "regulation of cellular metabolism" EXACT []
-is_a: GO:0019222 ! regulation of metabolic process
-is_a: GO:0050794 ! regulation of cellular process
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: RO:0002211 GO:0044237 ! cellular metabolic process
-relationship: RO:0002211 GO:0044237 ! cellular metabolic process
-
-[Term]
-id: GO:0031325
-name: positive regulation of cellular metabolic process
-def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways by which individual cells transform chemical substances." [GOC:mah]
-synonym: "activation of cellular metabolic process" NARROW []
-synonym: "positive regulation of cellular metabolism" EXACT []
-synonym: "stimulation of cellular metabolic process" NARROW []
-synonym: "up regulation of cellular metabolic process" EXACT []
-synonym: "up-regulation of cellular metabolic process" EXACT []
-synonym: "upregulation of cellular metabolic process" EXACT []
-is_a: GO:0009893 ! positive regulation of metabolic process
-is_a: GO:0031323 ! regulation of cellular metabolic process
-is_a: GO:0048522 ! positive regulation of cellular process
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: RO:0002213 GO:0044237 ! cellular metabolic process
-relationship: RO:0002213 GO:0044237 ! cellular metabolic process
-
-[Term]
-id: GO:0031326
-name: regulation of cellular biosynthetic process
-def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of substances, carried out by individual cells." [GOC:mah]
-synonym: "regulation of cellular anabolism" EXACT []
-synonym: "regulation of cellular biosynthesis" EXACT []
-synonym: "regulation of cellular formation" EXACT []
-synonym: "regulation of cellular synthesis" EXACT []
-is_a: GO:0009889 ! regulation of biosynthetic process
-is_a: GO:0031323 ! regulation of cellular metabolic process
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: RO:0002211 GO:0044249 ! cellular biosynthetic process
-relationship: RO:0002211 GO:0044249 ! cellular biosynthetic process
-
-[Term]
-id: GO:0031328
-name: positive regulation of cellular biosynthetic process
-def: "Any process that activates or increases the frequency, rate or extent of the chemical reactions and pathways resulting in the formation of substances, carried out by individual cells." [GOC:mah]
-synonym: "activation of cellular biosynthetic process" NARROW []
-synonym: "positive regulation of cellular anabolism" EXACT []
-synonym: "positive regulation of cellular biosynthesis" EXACT []
-synonym: "positive regulation of cellular formation" EXACT []
-synonym: "positive regulation of cellular synthesis" EXACT []
-synonym: "stimulation of cellular biosynthetic process" NARROW []
-synonym: "up regulation of cellular biosynthetic process" EXACT []
-synonym: "up-regulation of cellular biosynthetic process" EXACT []
-synonym: "upregulation of cellular biosynthetic process" EXACT []
-is_a: GO:0009891 ! positive regulation of biosynthetic process
-is_a: GO:0031325 ! positive regulation of cellular metabolic process
-is_a: GO:0031326 ! regulation of cellular biosynthetic process
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: RO:0002213 GO:0044249 ! cellular biosynthetic process
-relationship: RO:0002213 GO:0044249 ! cellular biosynthetic process
-
-[Term]
 id: GO:0031967
 name: organelle envelope
 def: "A double membrane structure enclosing an organelle, including two lipid bilayers and the region between them. In some cases, an organelle envelope may have more than two membranes." [GOC:mah, GOC:pz]
-is_a: GO:0031975 ! envelope
+is_a: GO:0110165 ! cellular anatomical structure
 relationship: BFO:0000050 GO:0043227 ! membrane-bounded organelle
 relationship: BFO:0000050 GO:0043229 ! intracellular organelle
-
-[Term]
-id: GO:0031975
-name: envelope
-def: "A multilayered structure surrounding all or part of a cell; encompasses one or more lipid bilayers, and may include a cell wall layer; also includes the space between layers." [GOC:mah, GOC:pz]
-is_a: GO:0110165 ! cellular anatomical entity
 
 [Term]
 id: GO:0032092
@@ -1157,7 +1037,7 @@ relationship: RO:0002213 GO:0016311 ! dephosphorylation
 [Term]
 id: GO:0035618
 name: root hair
-def: "A long, thin projection from a root epidermal cell that contains F-actin and tubulin, and a cell wall." [http://www.jstor.org/stable/4354264, PO:0000256]
+def: "A long, thin projection from a root epidermal cell that contains F-actin and tubulin, and a cell wall." [PMID:24982600, PO:0000256]
 is_a: GO:0120025 ! plasma membrane bounded cell projection
 
 [Term]
@@ -1205,18 +1085,18 @@ is_a: GO:0016788 ! hydrolase activity, acting on ester bonds
 [Term]
 id: GO:0042995
 name: cell projection
-def: "A prolongation or process extending from a cell, e.g. a flagellum or axon." [GOC:jl, http://www.cogsci.princeton.edu/~wn/]
+def: "A prolongation or process extending from a cell, e.g. a flagellum or axon." [GOC:jl, PMID:16318917]
 synonym: "cell process" BROAD []
 synonym: "cellular process" BROAD []
 synonym: "cellular projection" EXACT []
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
 id: GO:0043036
 name: starch grain
 def: "Plant storage body for amylose and amylopectin, 1-100um in diameter. Also contains small amounts of enzymes, amino acids, lipids and nucleic acids. The shape of the grain varies widely amongst species, but is often spherical or disk-shaped." [GOC:jl, PMID:11217978]
 synonym: "starch granule" EXACT []
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 relationship: BFO:0000050 GO:0009536 ! plastid
 
 [Term]
@@ -1245,7 +1125,7 @@ relationship: RO:0002213 GO:0003824 ! catalytic activity
 id: GO:0043226
 name: organelle
 def: "Organized structure of distinctive morphology and function. Includes the nucleus, mitochondria, plastids, vacuoles, vesicles, ribosomes and the cytoskeleton, and prokaryotic structures such as anammoxosomes and pirellulosomes. Excludes the plasma membrane." [GOC:go_curators]
-is_a: GO:0110165 ! cellular anatomical entity
+is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
 id: GO:0043227
@@ -1312,26 +1192,6 @@ is_a: GO:0065009 ! regulation of molecular function
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002213 GO:0003674 ! molecular_function
 relationship: RO:0002213 GO:0003674 ! molecular_function
-
-[Term]
-id: GO:0044237
-name: cellular metabolic process
-def: "The chemical reactions and pathways by which individual cells transform chemical substances." [GOC:go_curators]
-synonym: "cellular metabolism" EXACT []
-synonym: "intermediary metabolism" RELATED [GOC:mah]
-is_a: GO:0008152 ! metabolic process
-is_a: GO:0009987 ! cellular process
-
-[Term]
-id: GO:0044249
-name: cellular biosynthetic process
-def: "The chemical reactions and pathways resulting in the formation of substances, carried out by individual cells." [GOC:jl]
-synonym: "cellular anabolism" EXACT []
-synonym: "cellular biosynthesis" EXACT []
-synonym: "cellular formation" EXACT []
-synonym: "cellular synthesis" EXACT []
-is_a: GO:0009058 ! biosynthetic process
-is_a: GO:0044237 ! cellular metabolic process
 
 [Term]
 id: GO:0044550
@@ -1470,15 +1330,13 @@ relationship: RO:0002211 GO:0006970 ! response to osmotic stress
 [Term]
 id: GO:0048018
 name: receptor ligand activity
-def: "The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same, or different, cell that expresses the receptor. Ligands may diffuse extracellularly from their point of origin to the receiving cell, or remain attached to an adjacent cell surface (e.g. Notch ligands)." [GOC:kv, GOC:molecular_function_refactoring, GOC:pdt]
+def: "The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same cell that expresses the receptor. Ligands may also be expressed at the plasma membrane of an adjacent cell (e.g. Notch ligands) or be secreted and diffuse extracellularly from their point of origin to the receiving cell (e.g. interleukins)." [GOC:kv, GOC:molecular_function_refactoring, GOC:pdt]
 synonym: "receptor agonist activity" BROAD [GOC:molecular_function_refactoring]
 synonym: "signaling molecule" EXACT []
 synonym: "signaling receptor ligand activity" EXACT []
-synonym: "vitamin D receptor activator activity" NARROW []
 is_a: GO:0005102 ! signaling receptor binding
 is_a: GO:0030546 ! signaling receptor activator activity
 relationship: BFO:0000050 GO:0007165 ! signal transduction
-relationship: RO:0002213 GO:0038023 ! signaling receptor activity
 
 [Term]
 id: GO:0048285
@@ -1794,7 +1652,7 @@ id: GO:0051174
 name: regulation of phosphorus metabolic process
 def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving phosphorus or compounds containing phosphorus." [GOC:ai]
 synonym: "regulation of phosphorus metabolism" EXACT []
-is_a: GO:0031323 ! regulation of cellular metabolic process
+is_a: GO:0019222 ! regulation of metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0006793 ! phosphorus metabolic process
 relationship: RO:0002211 GO:0006793 ! phosphorus metabolic process
@@ -2046,21 +1904,6 @@ is_a: GO:0021700 ! developmental maturation
 relationship: BFO:0000050 GO:0048856 ! anatomical structure development
 
 [Term]
-id: GO:0071702
-name: organic substance transport
-def: "The directed movement of organic substances into, out of or within a cell, or between cells, or within a multicellular organism by means of some agent such as a transporter or pore. An organic substance is a molecular entity that contains carbon." [GOC:mah]
-is_a: GO:0006810 ! transport
-
-[Term]
-id: GO:0071704
-name: organic substance metabolic process
-def: "The chemical reactions and pathways involving an organic substance, any molecular entity containing carbon." [GOC:mah]
-synonym: "organic molecular entity metabolic process" EXACT []
-synonym: "organic molecular entity metabolism" EXACT []
-synonym: "organic substance metabolism" EXACT []
-is_a: GO:0008152 ! metabolic process
-
-[Term]
 id: GO:0071840
 name: cellular component organization or biogenesis
 def: "A process that results in the biosynthesis of constituent macromolecules, assembly, arrangement of constituent parts, or disassembly of a cellular component." [GOC:mah]
@@ -2072,8 +1915,8 @@ is_a: GO:0009987 ! cellular process
 [Term]
 id: GO:0071944
 name: cell periphery
-def: "The broad region around and including the plasma membrane of a cell,  encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures." [GOC:pdt]
-is_a: GO:0110165 ! cellular anatomical entity
+def: "The broad region around and including the plasma membrane of a cell, encompassing the cell cortex (inside the cell), the plasma membrane, and any external encapsulating structures." [GOC:pdt]
+is_a: GO:0110165 ! cellular anatomical structure
 
 [Term]
 id: GO:0080134
@@ -2163,8 +2006,9 @@ relationship: BFO:0000050 GO:0005938 ! cell cortex
 
 [Term]
 id: GO:0110165
-name: cellular anatomical entity
-def: "A part of a cellular organism that is either an immaterial entity or a material entity with granularity above the level of a protein complex but below that of an anatomical system. Or, a substance produced by a cellular organism with granularity above the level of a protein complex." [GOC:kmv]
+name: cellular anatomical structure
+def: "A part of a cellular organism consisting of a material entity with granularity above the level of a protein complex but below that of an anatomical system. Note that cellular organisms exclude viruses." [GOC:kmv]
+synonym: "cellular anatomical entity" EXACT []
 is_a: GO:0005575 ! cellular_component
 
 [Term]
@@ -2286,46 +2130,11 @@ synonym: "regulation of lignin anabolism" EXACT [GOC:TermGenie]
 synonym: "regulation of lignin biosynthesis" EXACT [GOC:TermGenie]
 synonym: "regulation of lignin formation" EXACT [GOC:TermGenie]
 synonym: "regulation of lignin synthesis" EXACT [GOC:TermGenie]
-is_a: GO:0031326 ! regulation of cellular biosynthetic process
 is_a: GO:1900376 ! regulation of secondary metabolite biosynthetic process
 is_a: GO:2000762 ! regulation of phenylpropanoid metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0009809 ! lignin biosynthetic process
 relationship: RO:0002211 GO:0009809 ! lignin biosynthetic process
-
-[Term]
-id: GO:1901360
-name: organic cyclic compound metabolic process
-def: "The chemical reactions and pathways involving organic cyclic compound." [GOC:TermGenie]
-synonym: "organic cyclic compound metabolism" EXACT [GOC:TermGenie]
-is_a: GO:0071704 ! organic substance metabolic process
-
-[Term]
-id: GO:1901362
-name: organic cyclic compound biosynthetic process
-def: "The chemical reactions and pathways resulting in the formation of organic cyclic compound." [GOC:TermGenie]
-synonym: "organic cyclic compound anabolism" EXACT [GOC:TermGenie]
-synonym: "organic cyclic compound biosynthesis" EXACT [GOC:TermGenie]
-synonym: "organic cyclic compound formation" EXACT [GOC:TermGenie]
-synonym: "organic cyclic compound synthesis" EXACT [GOC:TermGenie]
-is_a: GO:1901360 ! organic cyclic compound metabolic process
-is_a: GO:1901576 ! organic substance biosynthetic process
-
-[Term]
-id: GO:1901576
-name: organic substance biosynthetic process
-def: "The chemical reactions and pathways resulting in the formation of an organic substance, any molecular entity containing carbon." [GOC:pr, GOC:TermGenie]
-synonym: "organic molecular entity anabolism" EXACT [GOC:TermGenie]
-synonym: "organic molecular entity biosynthesis" EXACT [GOC:TermGenie]
-synonym: "organic molecular entity biosynthetic process" EXACT []
-synonym: "organic molecular entity formation" EXACT [GOC:TermGenie]
-synonym: "organic molecular entity synthesis" EXACT [GOC:TermGenie]
-synonym: "organic substance anabolism" EXACT []
-synonym: "organic substance biosynthesis" EXACT []
-synonym: "organic substance formation" EXACT []
-synonym: "organic substance synthesis" EXACT []
-is_a: GO:0009058 ! biosynthetic process
-is_a: GO:0071704 ! organic substance metabolic process
 
 [Term]
 id: GO:1903046
@@ -2439,7 +2248,6 @@ id: GO:2000762
 name: regulation of phenylpropanoid metabolic process
 def: "Any process that modulates the frequency, rate or extent of phenylpropanoid metabolic process." [GOC:obol]
 synonym: "regulation of phenylpropanoid metabolism" EXACT [GOC:obol]
-is_a: GO:0031323 ! regulation of cellular metabolic process
 is_a: GO:0043455 ! regulation of secondary metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0009698 ! phenylpropanoid metabolic process
