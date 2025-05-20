@@ -1362,9 +1362,9 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_139588 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_139588">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_30879"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_52396"/>
-        <obo:IAO_0000115>An alpha-oxyketone that has a hydroxy group as the alpha-oxy moiety.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17087"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33822"/>
+        <obo:IAO_0000115>A ketone containing a hydroxy group on the alpha-carbon relative to the C=O group.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>alpha-hydroxy ketones</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>alpha-hydroxy-ketone</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>alpha-hydroxy-ketones</oboInOwl:hasRelatedSynonym>
@@ -1824,11 +1824,17 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_142858 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_142858">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25696"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_58882"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_142854"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_enantiomer_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_142859"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>An organic anion resulting from the deprotonation of the phosphinic acid group of (2R)-glufosinate zwitterion.</obo:IAO_0000115>
@@ -1837,6 +1843,7 @@
         <oboInOwl:hasRelatedSynonym>(-)-glufosinate zwitterion(1-)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>(R)-glufosinate zwitterion(1-)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>4-(methylphosphinato)-D-homoalanine zwitterion</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>D-phosphinothricin</oboInOwl:hasRelatedSynonym>
         <rdfs:label>(2R)-glufosinate zwitterion(1-)</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1871,17 +1878,29 @@
         <owl:annotatedTarget>4-(methylphosphinato)-D-homoalanine zwitterion</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_142858"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>D-phosphinothricin</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>UniProt</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/CHEBI_142859 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_142859">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25696"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_58882"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_142856"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_enantiomer_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_142858"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>An organic anion resulting from the deprotonation of the phosphinic acid group of (2R)-glufosinate-P zwitterion.</obo:IAO_0000115>
@@ -1892,6 +1911,7 @@
         <oboInOwl:hasRelatedSynonym>(2S)-glufosinate zwitterion(1-)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>(S)-glufosinate zwitterion(1-)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>4-[hydroxy(methyl)phosphinoyl]-L-homoalanine zwitterion(1-)</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>L-phosphinothricin</oboInOwl:hasRelatedSynonym>
         <rdfs:label>glufosinate-P zwitterion(1-)</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -1937,6 +1957,12 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>4-[hydroxy(methyl)phosphinoyl]-L-homoalanine zwitterion(1-)</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_142859"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>L-phosphinothricin</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>UniProt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -2610,64 +2636,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CHEBI_15705 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_15705">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33704"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59814"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_tautomer_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59869"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>Any alpha-amino acid having L-configuration at the alpha-carbon.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>L-alpha-amino acid</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>L-alpha-amino acids</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>L-2-Amino acid</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>L-Amino acid</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>L-alpha-amino acids</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>L-alpha-amino acid</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15705"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>L-alpha-amino acid</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>IUPAC</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15705"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>L-alpha-amino acids</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>IUPAC</oboInOwl:hasDbXref>
-        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/chebi#IUPAC_NAME"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15705"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>L-2-Amino acid</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>KEGG_COMPOUND</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15705"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>L-Amino acid</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>KEGG_COMPOUND</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15705"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>L-alpha-amino acids</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/CHEBI_15734 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_15734">
@@ -3030,6 +2998,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_228364"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25212"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3132,12 +3106,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>NH3</owl:annotatedTarget>
         <oboInOwl:hasDbXref>KEGG_COMPOUND</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16134"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>NH3</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>UniProt</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16134"/>
@@ -3795,7 +3763,6 @@
         <oboInOwl:hasExactSynonym>1H-indol-3-ylacetic acid</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>Indole-3-acetic acid</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>(Indol-3-yl)acetate</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>(indol-3-yl)acetic acid</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>2-(indol-3-yl)ethanoic acid</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>3-Indolylessigsaeure</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>IAA</oboInOwl:hasRelatedSynonym>
@@ -3822,12 +3789,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>(Indol-3-yl)acetate</owl:annotatedTarget>
         <oboInOwl:hasDbXref>KEGG_COMPOUND</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16411"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>(indol-3-yl)acetic acid</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>UniProt</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_16411"/>
@@ -4814,7 +4775,7 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_17620 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_17620">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24031"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_193350"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
@@ -4859,7 +4820,7 @@
         </rdfs:subClassOf>
         <obo:IAO_0000115>A ferulic acid consisting of trans-cinnamic acid bearing methoxy and hydroxy substituents at positions 3 and 4 respectively on the phenyl ring.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>(2E)-3-(4-hydroxy-3-methoxyphenyl)prop-2-enoic acid</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym>Ferulic acid</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>trans-Ferulic acid</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>(E)-3-(4-Hydroxy-3-methoxyphenyl)-2-propenoic acid</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>(E)-4&apos;-hydroxy-3&apos;-methoxycinnamic acid</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>(E)-4-Hydroxy-3-methoxycinnamic acid</oboInOwl:hasRelatedSynonym>
@@ -4868,9 +4829,9 @@
         <oboInOwl:hasRelatedSynonym>3-methoxy-4-hydroxy-trans-cinnamic acid</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>4-Hydroxy-3-methoxycinnamic acid</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>4-hydroxy-3-methoxycinnamic acid</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>Ferulic acid</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>trans-4-Hydroxy-3-methoxycinnamic acid</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>trans-Ferulic acid</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>ferulic acid</rdfs:label>
+        <rdfs:label>trans-ferulic acid</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17620"/>
@@ -4882,8 +4843,8 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17620"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>Ferulic acid</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>KEGG_COMPOUND</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>trans-Ferulic acid</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChemIDplus</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17620"/>
@@ -4936,13 +4897,13 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17620"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>trans-4-Hydroxy-3-methoxycinnamic acid</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ChemIDplus</oboInOwl:hasDbXref>
+        <owl:annotatedTarget>Ferulic acid</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>KEGG_COMPOUND</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17620"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>trans-Ferulic acid</owl:annotatedTarget>
+        <owl:annotatedTarget>trans-4-Hydroxy-3-methoxycinnamic acid</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChemIDplus</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -6727,6 +6688,91 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_193350 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_193350">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24031"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_22586"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_63726"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_76924"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A member of the class of ferulic acids that is cinnamic acid substituted by a methoxy and a hydroxy group at positions 3 and 4 of the phenyl ring.</obo:IAO_0000115>
+        <oboInOwl:hasExactSynonym>3-(4-hydroxy-3-methoxyphenyl)prop-2-enoic acid</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>3-(4-hydroxy-3-methoxyphenyl)-2-propenoic acid</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>3-(4-hydroxy-3-methoxyphenyl)acrylic acid</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>3-methoxy-4-hydroxycinnamic acid</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>4&apos;-hydroxy-3&apos;-methoxycinnamic acid</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>4-hydroxy-3-methoxycinnamic acid</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>coniferic acid</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>ferulaic acid</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>ferulic acid</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_193350"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>3-(4-hydroxy-3-methoxyphenyl)prop-2-enoic acid</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>IUPAC</oboInOwl:hasDbXref>
+        <oboInOwl:hasSynonymType rdf:resource="http://purl.obolibrary.org/obo/chebi#IUPAC_NAME"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_193350"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>3-(4-hydroxy-3-methoxyphenyl)-2-propenoic acid</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NIST_Chemistry_WebBook</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_193350"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>3-(4-hydroxy-3-methoxyphenyl)acrylic acid</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NIST_Chemistry_WebBook</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_193350"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>3-methoxy-4-hydroxycinnamic acid</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NIST_Chemistry_WebBook</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_193350"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>4&apos;-hydroxy-3&apos;-methoxycinnamic acid</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_193350"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>4-hydroxy-3-methoxycinnamic acid</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>NIST_Chemistry_WebBook</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_193350"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>coniferic acid</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_193350"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>ferulaic acid</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_194321 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_194321">
@@ -7422,6 +7468,66 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_228364 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_228364">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33232"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_51086"/>
+        <obo:IAO_0000115>Any compound that produces a peak used as reference frequency in the delta chemical shift scale.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>NMR chemical shift reference compounds</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>NMR chemical shift standard</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>NMR chemical shift standards</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>NMR internal standard</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>NMR internal standards</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>NMR reference standard</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>NMR reference standards</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>NMR chemical shift reference compound</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_228364"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>NMR chemical shift reference compounds</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_228364"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>NMR chemical shift standard</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_228364"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>NMR chemical shift standards</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_228364"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>NMR internal standard</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_228364"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>NMR internal standards</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_228364"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>NMR reference standard</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_228364"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>NMR reference standards</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_22916 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_22916">
@@ -8005,6 +8111,93 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_233500 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_233500">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33521"/>
+        <obo:IAO_0000115>A group of metal atoms that are located in the periodic table between transition metals and metalloids.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>other metal atom</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>other metal atoms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>p-block metal atom</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>p-block metal atoms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>poor metal atom</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>poor metal atoms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>post transition metal atom</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>post transition metal atoms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>post-transition element atom</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>post-transition element atoms</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>post-transition metal atoms</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>post-transition metal atom</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>other metal atom</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>other metal atoms</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>p-block metal atom</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>p-block metal atoms</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>poor metal atom</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>poor metal atoms</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>post transition metal atom</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>post transition metal atoms</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>post-transition element atom</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>post-transition element atoms</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>post-transition metal atoms</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_23357 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_23357">
@@ -8202,6 +8395,12 @@
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23849"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>diterpenoides</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23849"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>diterpenoids</owl:annotatedTarget>
         <oboInOwl:hasDbXref>IUPAC</oboInOwl:hasDbXref>
@@ -8212,12 +8411,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>C20 isoprenoids</owl:annotatedTarget>
         <oboInOwl:hasDbXref>LIPID_MAPS</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23849"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>diterpenoides</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -9188,8 +9381,15 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_24781">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_20432"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38101"/>
+        <oboInOwl:hasRelatedSynonym>imidazolinones</oboInOwl:hasRelatedSynonym>
         <rdfs:label>imidazolinone</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24781"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>imidazolinones</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -9911,8 +10111,8 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_25016 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33306"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33521"/>
         <oboInOwl:hasExactSynonym>lead</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>82Pb</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Blei</oboInOwl:hasRelatedSynonym>
@@ -11598,6 +11798,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_228364"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000087"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33287"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -12244,9 +12450,8 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_26650 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_26650">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15705"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83813"/>
-        <obo:IAO_0000115>An L-alpha-amino acid which is biosynthesised from 3-phosphoglycerate (i.e. serine, glycine, cysteine and homocysteine). A closed class.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33704"/>
+        <obo:IAO_0000115>An alpha-amino acid which is biosynthesised from 3-phosphoglycerate (i.e. serine, glycine, cysteine and homocysteine). A closed class.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>3-phosphoglycerate family amino acid</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>3-phosphoglycerate family amino acids</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>serine family amino acids</oboInOwl:hasRelatedSynonym>
@@ -15727,8 +15932,8 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_28984 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_28984">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_233500"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33317"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33521"/>
         <oboInOwl:hasExactSynonym>aluminium</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>13Al</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>Al</oboInOwl:hasRelatedSynonym>
@@ -16646,7 +16851,7 @@
         <oboInOwl:hasExactSynonym>(2E)-3-(4-hydroxy-3-methoxyphenyl)prop-2-enoate</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>(E)-ferulate</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>3-methoxy-4-hydroxy-trans-cinnamate</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>ferulate</rdfs:label>
+        <rdfs:label>trans-ferulate</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_29749"/>
@@ -17976,8 +18181,14 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24433"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_substituent_group_from"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50860"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64775"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64769"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>Any substituent group or skeleton containing carbon.</obo:IAO_0000115>
@@ -19898,15 +20109,15 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>An amino-acid anion obtained by deprotonation of any alpha-amino acid.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>alpha-amino-acid anion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>alpha-amino acid anion</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>alpha-amino acid anions</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>alpha-amino-acid anions</oboInOwl:hasRelatedSynonym>
         <rdfs:label>alpha-amino-acid anion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33558"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>alpha-amino-acid anion</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>alpha-amino acid anion</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -21019,22 +21230,29 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_33703 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33703">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_25697"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33702"/>
-        <oboInOwl:hasExactSynonym>amino-acid cation</oboInOwl:hasExactSynonym>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33709"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <oboInOwl:hasRelatedSynonym>amino acid cation</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>amino acid cations</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>amino-acid cations</oboInOwl:hasRelatedSynonym>
         <rdfs:label>amino-acid cation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33703"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>amino-acid cation</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino acid cation</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33703"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>amino acid cation</owl:annotatedTarget>
+        <owl:annotatedTarget>amino acid cations</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -21054,6 +21272,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33558"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33719"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -21116,6 +21340,18 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33247"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64898"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_58942"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_substituent_group_from"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33709"/>
             </owl:Restriction>
@@ -21123,6 +21359,7 @@
         <obo:IAO_0000115>When two or more amino acids combine to form a peptide, the elements of water are removed, and what remains of each amino acid is called an amino-acid residue.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>amino-acid residue</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>amino acid residue</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>amino acid residues</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>amino-acid residues</oboInOwl:hasRelatedSynonym>
         <rdfs:label>amino-acid residue</rdfs:label>
     </owl:Class>
@@ -21137,6 +21374,12 @@
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33708"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>amino acid residue</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33708"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino acid residues</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -21157,6 +21400,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_37022"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33703"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A carboxylic acid containing one or more amino groups.</obo:IAO_0000115>
@@ -21203,7 +21452,9 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33704"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000115>An amino-acid residue derived from an alpha-amino acid.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>alpha-amino-acid residues</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>an alpha-amino acid residue</oboInOwl:hasRelatedSynonym>
         <rdfs:label>alpha-amino-acid residue</rdfs:label>
     </owl:Class>
     <owl:Axiom>
@@ -21212,6 +21463,12 @@
         <owl:annotatedTarget>alpha-amino-acid residues</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
     </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33710"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>an alpha-amino acid residue</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>UniProt</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -21219,15 +21476,21 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_33719">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33703"/>
-        <oboInOwl:hasExactSynonym>alpha-amino-acid cation</oboInOwl:hasExactSynonym>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33704"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:hasRelatedSynonym>alpha-amino acid cation</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>alpha-amino acid cations</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>alpha-amino-acid cations</oboInOwl:hasRelatedSynonym>
         <rdfs:label>alpha-amino-acid cation</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33719"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>alpha-amino-acid cation</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>alpha-amino acid cation</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -22199,13 +22462,27 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35238">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27369"/>
         <obo:IAO_0000115>The zwitterionic form of an amino acid having a negatively charged carboxyl group and a positively charged amino group.</obo:IAO_0000115>
-        <oboInOwl:hasExactSynonym>amino acid zwitterion</oboInOwl:hasExactSynonym>
-        <rdfs:label>amino acid zwitterion</rdfs:label>
+        <oboInOwl:hasRelatedSynonym>amino acid zwitterion</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>amino acid zwitterions</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>amino-acid zwitterions</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>amino-acid zwitterion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35238"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>amino acid zwitterion</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35238"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino acid zwitterions</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35238"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino-acid zwitterions</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
     </owl:Axiom>
     
@@ -23434,10 +23711,45 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_35952 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35952">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35871"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35975"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <oboInOwl:hasRelatedSynonym>5-oxo acid</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>5-oxo monocarboxylic acids</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>5-oxo monocarboxylic acid</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>5-oxo acid</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35952"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>5-oxo monocarboxylic acids</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_35975 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_35975">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35902"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35952"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <oboInOwl:hasRelatedSynonym>5-oxo monocarboxylic acid anions</oboInOwl:hasRelatedSynonym>
         <rdfs:label>5-oxo monocarboxylic acid anion</rdfs:label>
     </owl:Class>
@@ -24748,15 +25060,15 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33709"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <oboInOwl:hasExactSynonym>amino-acid anion</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>amino acid anion</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>amino acid anions</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>amino-acid anions</oboInOwl:hasRelatedSynonym>
         <rdfs:label>amino-acid anion</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_37022"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
-        <owl:annotatedTarget>amino-acid anion</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino acid anion</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -26330,7 +26642,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33513"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_39130"/>
         <oboInOwl:hasExactSynonym>strontium cation</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>Sr cation</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>strontium cations</oboInOwl:hasRelatedSynonym>
         <rdfs:label>strontium cation</rdfs:label>
     </owl:Class>
@@ -26339,12 +26650,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>strontium cation</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_39129"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>Sr cation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>UniProt</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_39129"/>
@@ -29014,40 +29319,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CHEBI_52395 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_52395">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_17087"/>
-        <obo:IAO_0000115>A compound with the general formula R2C=O (R=/=H) where one or more of the R groups contains an oxy (-O-) group.</obo:IAO_0000115>
-        <oboInOwl:hasRelatedSynonym>oxyketones</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>oxyketone</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_52395"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>oxyketones</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_52396 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_52396">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_52395"/>
-        <obo:IAO_0000115>An oxyketone with the general formula R2C(=O) (R=/=H) where one or more of the R groups contains an oxy (-O-) group and the oxy and carbonyl groups are bonded to the same carbon atom.</obo:IAO_0000115>
-        <oboInOwl:hasRelatedSynonym>alpha-oxyketones</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>alpha-oxyketone</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_52396"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>alpha-oxyketones</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/CHEBI_52625 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_52625">
@@ -29592,6 +29863,71 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_58942 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_58942">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64769"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33708"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An amino-acid residue protonated on nitrogen.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>amino acid cation residue</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>amino acid cation residues</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>amino-acid cation residue</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>amino-acid cation residues</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>cationic amino acid residue</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>cationic amino acid residues</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>cationic amino-acid residues</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>cationic amino-acid residue</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_58942"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino acid cation residue</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_58942"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino acid cation residues</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_58942"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino-acid cation residue</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_58942"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino-acid cation residues</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_58942"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>cationic amino acid residue</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_58942"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>cationic amino acid residues</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_58942"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>cationic amino-acid residues</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_58945 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_58945">
@@ -29847,59 +30183,6 @@
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>nucleophilic reagents</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_59814 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_59814">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33558"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15705"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>Conjugate base of an L-alpha-amino acid arising from deprotonation of the C-1 carboxy group.</obo:IAO_0000115>
-        <oboInOwl:hasRelatedSynonym>L-alpha-amino carboxylate</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>L-alpha-amino acid anion</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59814"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>L-alpha-amino carboxylate</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CHEBI_59869 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_59869">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_78608"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_tautomer_of"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_15705"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>Zwitterionic form of an L-alpha-amino acid having an anionic carboxy group and a protonated amino group.</obo:IAO_0000115>
-        <oboInOwl:hasRelatedSynonym>L-alpha-amino acid zwitterions</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>an L-alpha-amino acid</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>L-alpha-amino acid zwitterion</rdfs:label>
-    </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59869"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>L-alpha-amino acid zwitterions</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_59869"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
-        <owl:annotatedTarget>an L-alpha-amino acid</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>UniProt</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -31290,6 +31573,144 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CHEBI_64766 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_64766">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24433"/>
+        <obo:IAO_0000115>A group that carries an overall positive charge.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>cationic groups</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>cationic group</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64766"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>cationic groups</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_64767 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_64767">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24433"/>
+        <obo:IAO_0000115>A group that carries an overall negative charge.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>anionic groups</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>anionic group</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64767"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>anionic groups</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_64769 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_64769">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64766"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_acid_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33247"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A cationic group that contains carbon.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>organic cationic groups</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>organic cationic group</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64769"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>organic cationic groups</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_64775 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_64775">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64767"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33247"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An anionic group that contains carbon.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>organic anionic groups</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>organic anionic group</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64775"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>organic anionic groups</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_64898 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_64898">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64775"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/chebi#is_conjugate_base_of"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33708"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An amino-acid residue carrying an overall negative charge.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>amino acid anion residue</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>amino acid anion residues</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>amino-acid anion residue</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>amino-acid anion residues</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>anionic amino acid residue</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>anionic amino acid residues</oboInOwl:hasRelatedSynonym>
+        <rdfs:label>anionic amino-acid residue</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64898"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino acid anion residue</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64898"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino acid anion residues</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64898"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino-acid anion residue</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64898"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino-acid anion residues</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64898"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>anionic amino acid residue</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_64898"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>anionic amino acid residues</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/CHEBI_64909 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_64909">
@@ -32506,7 +32927,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_76579">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35741"/>
-        <obo:IAO_0000115>A glycerol compound having one of three possible substituent groups - either acyl, alkyl, or alk-1-enyl - at each of the three possible positions sn-1, sn-2 or sn-3. has functional parent glycerol (CHEBI:17754), children: triglyceride (CHEBI:17855). Parent: is_a glycerolipid (CHEBI:35741)</obo:IAO_0000115>
+        <obo:IAO_0000115>Any glycerolipid that is glycerol bearing three substituent groups - either acyl, alkyl, or alk-1-enyl at each of the three possible positions.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>triradylglycerols</oboInOwl:hasRelatedSynonym>
         <rdfs:label>triradylglycerol</rdfs:label>
     </owl:Class>
@@ -34493,10 +34914,31 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33704"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>An amino acid zwitterion obtained by transfer of a proton from the carboxy to the amino group of any alpha-amino acid; major species at pH 7.3.</obo:IAO_0000115>
+        <obo:IAO_0000115>An amino acid-zwitterion obtained by transfer of a proton from the carboxy to the amino group of any alpha-amino acid; major species at pH 7.3.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>alpha-amino acid zwitterion</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>alpha-amino acid zwitterions</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>alpha-amino-acid zwitterions</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>an alpha-amino acid</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>alpha-amino acid zwitterion</rdfs:label>
+        <rdfs:label>alpha-amino-acid zwitterion</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_78608"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>alpha-amino acid zwitterion</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_78608"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>alpha-amino acid zwitterions</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_78608"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>alpha-amino-acid zwitterions</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_78608"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
@@ -35439,8 +35881,7 @@
     <!-- http://purl.obolibrary.org/obo/CHEBI_83813 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_83813">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33575"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35352"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33709"/>
         <obo:IAO_0000115>Any of the 23 alpha-amino acids that are precursors to proteins, and are incorporated into proteins during translation. The group includes the 20 amino acids encoded by the nuclear genes of eukaryotes together with selenocysteine, pyrrolysine, and N-formylmethionine. Apart from glycine, which is non-chiral, all have L configuration.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>canonical amino acid</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>canonical amino acids</oboInOwl:hasRelatedSynonym>
@@ -35560,14 +36001,28 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_83821">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_35352"/>
         <obo:IAO_0000115>Any derivative of an amino acid resulting from reaction at an amino group, carboxy group, side-chain functional group, or from the replacement of any hydrogen by a heteroatom. The definition normally excludes peptides containing amino acid residues.</obo:IAO_0000115>
+        <oboInOwl:hasRelatedSynonym>amino acid derivative</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>amino acid derivatives</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>amino-acid derivatives</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>modified amino acids</oboInOwl:hasRelatedSynonym>
-        <rdfs:label>amino acid derivative</rdfs:label>
+        <rdfs:label>amino-acid derivative</rdfs:label>
     </owl:Class>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83821"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino acid derivative</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83821"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>amino acid derivatives</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/CHEBI_83821"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
+        <owl:annotatedTarget>amino-acid derivatives</owl:annotatedTarget>
         <oboInOwl:hasDbXref>ChEBI</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
@@ -35738,5 +36193,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.25) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 

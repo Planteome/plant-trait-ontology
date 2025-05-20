@@ -50,9 +50,9 @@ is_a: BFO:0000002 ! continuant
 relationship: BFO:0000050 BFO:0000020 {all_only="true"} ! specifically dependent continuant
 
 [Term]
-id: RO:0002310
-name: exposure event or process
-def: "A process occurring within or in the vicinity of an organism that exerts some causal influence on the organism via the interaction between an exposure stimulus and an exposure receptor. The exposure stimulus may be a process, material entity or condition (for example, lack of nutrients). The exposure receptor can be an organism, organism population or a part of an organism." []
+id: COB:0001000
+name: exposure of organism
+def: "A process during which an organism comes into contact with another entity." []
 is_a: BFO:0000015 ! process
 
 [Typedef]
@@ -90,7 +90,7 @@ is_a: RO:0000053
 [Typedef]
 id: RO:0002131
 holds_over_chain: BFO:0000050 BFO:0000050
-holds_over_chain: BFO:0000051 BFO:0000050 {http://purl.obolibrary.org/obo/RO_0002582="true"}
+holds_over_chain: BFO:0000051 BFO:0000050 {RO:0002582="true"}
 holds_over_chain: BFO:0000051 RO:0002131
 is_symmetric: true
 is_a: RO:0002323
@@ -98,12 +98,12 @@ transitive_over: BFO:0000050
 
 [Typedef]
 id: RO:0002244
-domain: RO:0002310 ! exposure event or process
+domain: COB:0001000 ! exposure of organism
 is_a: RO:0002410
 
 [Typedef]
 id: RO:0002314
-holds_over_chain: RO:0000052 BFO:0000050 {http://purl.obolibrary.org/obo/RO_0002582="true"}
+holds_over_chain: RO:0000052 BFO:0000050 {RO:0002582="true"}
 is_a: RO:0002502
 transitive_over: BFO:0000050
 
@@ -112,10 +112,4 @@ id: RO:0009501
 domain: BFO:0000017 ! realizable entity
 range: BFO:0000015 ! process
 is_a: RO:0002410
-
-[Typedef]
-id: RO:0017003
-is_reflexive: true
-is_symmetric: true
-is_a: RO:0002610
 
