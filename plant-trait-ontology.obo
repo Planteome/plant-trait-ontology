@@ -413,9 +413,9 @@ is_a: TO:0000050 ! inflorescence branching
 
 [Term]
 id: TO:0000053
-name: pollen sterility
-def: "Observed under a microscope at magnification 10x10 after staining with 1% iodine potassium iodide (IKI) solution. Samples for pollen are collected from anthers and fixed in 70% alcohol. Two to three anthers are extracted from each floret and pollen grains are squeezed out into the IKI solution drop. At least three fields are used to count the sterile pollen grains; unstained withered, unstained spherical and partially stained round and fertile, from stained round pollen grains. Percentage sterility is calculated as = (unstained withered+unstained spherical+partially stained) x 100/total number of pollen grains in the field including the fertile." [Gramene:pankaj_jaiswal, RiceSES:SES]
-is_a: TO:0000437 ! male sterility
+name: OBSOLETE pollen sterility
+def: "OBSOLETE" [Gramene:pankaj_jaiswal, RiceSES:SES]
+is_obsolete: true
 
 [Term]
 id: TO:0000054
@@ -3635,10 +3635,11 @@ is_a: TO:0000485 ! sterility related trait
 [Term]
 id: TO:0000437
 name: male sterility
-def: "In plants, it represents the incompetence of the pollen to fertilize the ovum. Reasons could be non-viable pollen, incompatibility, pollen abortion, toxicity, genetic etc. Usually determined by either the pollen sterility or spikelet fertility (percent seed set)." [Gramene:pankaj_jaiswal]
+def: "A sterility related trait (TO:0000485) which is the incompetence of pollen (PO:0025281) to fertilize the plant egg cell (PO:0020094)." [Gramene:pankaj_jaiswal, TO:cooperl]
 synonym: "degree of male sterility of male sterile lines (related)" RELATED []
 synonym: "male sterility measure (related)" RELATED []
 synonym: "MALEST (related)" RELATED []
+synonym: "pollen sterility (exact)" EXACT []
 is_a: TO:0000485 ! sterility related trait
 
 [Term]
@@ -4013,6 +4014,7 @@ is_a: TO:0000184 ! seed morphology trait
 [Term]
 id: TO:0000485
 name: sterility related trait
+def: "A sterility or fertility trait (TO:0000392) which is the quality of not being able to produce viable offspring." [TO:cooperl]
 is_a: TO:0000392 ! sterility or fertility trait
 
 [Term]
