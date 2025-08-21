@@ -251,6 +251,7 @@ is_a: TO:0000347 ! weed damage response trait
 [Term]
 id: TO:0000031
 name: silicon response trait
+def: "A chemical stress response trait (TO:0000482) to silicon minerals in the growth environment." [TO:cooperl]
 is_a: TO:0000482 ! chemical stress response
 
 [Term]
@@ -640,7 +641,7 @@ id: TO:0000080
 name: micronutrient response
 def: "Sensitivity response shown by the plant grown in either the excess or deficient amount of the micronutrient in the growth medium (soil)." [Gramene:pankaj_jaiswal]
 synonym: "micronutrient deficiency (related)" RELATED []
-is_a: TO:0000480 ! nutrient response trait
+is_a: TO:0000480 ! plant nutrient response trait
 
 [Term]
 id: TO:0000081
@@ -1453,7 +1454,7 @@ id: TO:0000176
 name: macronutrient response
 def: "A nutrient sensitivity (TO:0000480) response shown by the plant grown in either an excess or deficient amount of the macronutrient in the growth medium." [Gramene:pankaj_jaiswal]
 synonym: "macronutrient deficiency (related)" RELATED []
-is_a: TO:0000480 ! nutrient response trait
+is_a: TO:0000480 ! plant nutrient response trait
 
 [Term]
 id: TO:0000177
@@ -2073,7 +2074,7 @@ is_a: TO:0000176 ! macronutrient response
 id: TO:0000252
 name: non-mineral nutrient sensitivity
 def: "Sensitivity response shown by the plant grown in either the excess or deficient amount of the non-mineral nutrients in the growth medium. These nutrients are found in the air and water." [Gramene:pankaj_jaiswal]
-is_a: TO:0000480 ! nutrient response trait
+is_a: TO:0000480 ! plant nutrient response trait
 
 [Term]
 id: TO:0000253
@@ -2085,7 +2086,7 @@ relationship: part_of TO:0001159 ! grain dormancy
 [Term]
 id: TO:0000254
 name: response to pH
-def: "A growth media composition sensitivity (TO:0000238) which is the response of the plant to the pH of the growth media (soil/culture media), whether it be acidic or alkaline." [Gramene:pankaj_jaiswal, TO:moorel]
+def: "A chemical stress response trait (TO:0000482) which is the response of the plant to the pH of the growth enviroment." [Gramene:pankaj_jaiswal, TO:moorel]
 synonym: "soil pH stress (related)" RELATED []
 is_a: TO:0000482 ! chemical stress response
 
@@ -2946,7 +2947,7 @@ is_a: TO:0000218 ! pollen abortion type
 [Term]
 id: TO:0000354
 name: aluminum response trait
-def: "Sensitivity to aluminum content in the growth media." [Gramene:pankaj_jaiswal]
+def: "A chemical stress response trait (TO:0000482) to aluminum minerals in the growth environment." [Gramene:pankaj_jaiswal, TO:cooperl]
 synonym: "ALSN (related)" RELATED []
 synonym: "aluminium sensitivity (exact)" EXACT []
 synonym: "aluminum toxicity (related)" RELATED []
@@ -3568,7 +3569,7 @@ is_a: TO:0000243 ! in vitro regeneration ability
 
 [Term]
 id: TO:0000429
-name: salt sensitivity
+name: salt response
 def: "Plant sensitivity observed in response to different concentrations of salt in the growth medium." [RiceSES:SES]
 synonym: "Sal (related)" RELATED []
 synonym: "saline sensitivity (related)" RELATED []
@@ -3981,8 +3982,8 @@ is_a: TO:0000254 ! response to pH
 
 [Term]
 id: TO:0000480
-name: nutrient response trait
-def: "A growth media composition sensitivity (TO:0000238) which is the plant's response to an excess or deficient amount of the macro or micronutrient in the growth medium (soil/culture media)." [Gramene:pankaj_jaiswal, TO:moorel]
+name: plant nutrient response trait
+def: "A biochemical response trait (TO:0000277) which is the plant's response to an excess or deficient amount of the nutrients in the growth environment." [Gramene:pankaj_jaiswal, TO:cooperl, TO:moorel]
 synonym: "nutrient deficiency (related)" RELATED []
 is_a: TO:0000277 ! biochemical trait
 
@@ -10367,7 +10368,8 @@ is_a: TO:0000162 ! grain quality trait
 [Term]
 id: TO:0002657
 name: oxidative stress response
-def: "A chemical stress sensitivity (TO:0000482) which is the production of reactive oxygen and the plants ability to readily detoxify the reactive intermediates." [Gramene:pankaj_jaiswal, TO:moorel]
+def: "A chemical stress response trait (TO:0000482) reactive oxygen species  in the growth environment." [Gramene:pankaj_jaiswal, TO:cooperl, TO:moorel]
+comment: Some plants may have the ability to detoxify reactive intermediates.
 is_a: TO:0000482 ! chemical stress response
 
 [Term]
@@ -12159,7 +12161,7 @@ id: TO:0006001
 name: salt tolerance
 def: "Tolerance to the high salt content in the growth medium." [Gramene:pankaj_jaiswal]
 synonym: "SALTTL (exact)" EXACT []
-is_a: TO:0000429 ! salt sensitivity
+is_a: TO:0000429 ! salt response
 
 [Term]
 id: TO:0006002
