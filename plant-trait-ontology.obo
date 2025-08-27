@@ -1745,7 +1745,7 @@ name: starch gel consistency
 def: "Scored by gel consistency type in mm." [RiceSES:SES]
 synonym: "GelC (related)" RELATED []
 synonym: "GELCON (related)" RELATED []
-is_a: TO:0001166 ! starch quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000212
@@ -3118,11 +3118,11 @@ is_a: TO:0000786 ! reproductive shoot system morphology trait
 [Term]
 id: TO:0000374
 name: starch breakdown viscosity
-def: "A starch quality trait (TO:0001166) which the tendency of gelatinized starch granules to break during cooking, especially at high temperature." [TO:Laurel_Cooper] {comment="DOI:10.1006/jcrs.2001.0374"}
-comment: Breakdown is usually associated with the tendency of gelatinized starch granules to break during holding at high temperature, accompanied with continuous shearing (Han and Hamaker 2001). Breakdown is usually calculated from a resulting viscogram by subtracting trough from peak viscosity. The increase in rice flour breakdown viscosity, although not always significant (P < 0.05), suggests a greater protection of the starch granule integrity. This probably is due to the increased affinity of proteins to interact with starch, as a result of protein denaturation. The resulting formation of protein–starch complexes tends to increase rice flour peak viscosity.
+def: "A starch gelatinization trait (TO:0001167) which is the tendency of gelatinized starch granules to break during cooking, especially at high temperature." [TO:Laurel_Cooper] {comment="DOI:10.1006/jcrs.2001.0374"}
+comment: Breakdown is usually calculated from a resulting viscogram by subtracting hot paste (trough) viscosity from peak viscosity.
 synonym: "BRKVIS (related)" RELATED []
 xref: PMCID:PMC434838
-is_a: TO:0001166 ! starch quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000375
@@ -3139,9 +3139,10 @@ is_a: TO:0002731 ! dehulled grain length to width ratio
 [Term]
 id: TO:0000376
 name: starch consistency viscosity
-def: "A starch quality trait (TO:0001166) which the" []
+def: "A starch gelatinization trait (TO:0001167) which is the balance of gelatinization (granule swelling and disruption) and retrogradation (network formation and water trapping)." [DOI:10.1007/s001220050037, TO:cooperl]
+comment: The starch consistency viscosity (CSV) is the difference between the cool paste viscosity (CPV) and the hot paste viscosity (HPV)
 synonym: "CONVIS (related)" RELATED []
-is_a: TO:0001166 ! starch quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000377
@@ -3162,9 +3163,9 @@ is_a: TO:0001145 ! Ascomycete fungal disease response
 [Term]
 id: TO:0000379
 name: starch cool paste viscosity
-def: "A cooking quality trait (TO:0001069) which is the viscosity of a starch paste after it has been cooked and cooled down." [] {comment="TO:Laurel_Cooper"}
+def: "A starch gelatinization trait (TO:0001167) which is the viscosity of a starch paste after it has been cooked and cooled down." [] {comment="TO:Laurel_Cooper"}
 synonym: "CPVIS (related)" RELATED []
-is_a: TO:0001166 ! starch quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000380
@@ -3402,15 +3403,18 @@ is_obsolete: true
 [Term]
 id: TO:0000408
 name: starch hot paste viscosity
+def: "A starch gelatinization trait (TO:0001167) which is the minimum viscosity that the starch slurry reaches during a holding period at a constant high temperature." [TO:cooperl]
 synonym: "HPVIS (related)" RELATED []
-is_a: TO:0001166 ! starch quality trait
+synonym: "trough viscosity (exact)" EXACT []
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000409
 name: starch peak viscosity trait
-def: "A cooking quality trait (TO:0001069) which is the ability of starch granules to swell before breaking down during heating." [] {comment="TO:Laurel_Cooper"}
+def: "A starch gelatinization trait (TO:0001167) which is maximum viscosity of a starch slurry as starch granules swell and absorb water during heating." [] {comment="TO:Laurel_Cooper"}
+comment: This is the point of maximum viscosity, where starch granules are maximally swollen and have absorbed as much water as possible
 synonym: "PVIS (related)" RELATED []
-is_a: TO:0001166 ! starch quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000410
@@ -3430,11 +3434,11 @@ is_a: TO:0001079 ! caryopsis fruit morphology trait
 [Term]
 id: TO:0000412
 name: starch setback viscosity
-def: "Determined by deducting the peak viscosity from the cool paste viscosity." [Gramene:pankaj_jaiswal37]
+def: "A starch gelatinization trait (TO:0001167) which is the difference between the peak viscosity (TO:0000409) and the cool paste viscosity (TO:0000379)." [Gramene:pankaj_jaiswal37, TO:cooperl]
 synonym: "setback (related)" RELATED []
 synonym: "SETBK (related)" RELATED []
 synonym: "SETBKVIS (related)" RELATED []
-is_a: TO:0001166 ! starch quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000413
