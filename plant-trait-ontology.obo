@@ -791,6 +791,7 @@ def: "Amount of amylopectin present in a plant structure (PO:0009011)." [ISBN:19
 comment: It is a polysaccharide present in starch. Amylopectin is a polymer of alpha(1,4)-linked glucose units, as is amylose (see amylose). Unlike amylose, amylopectin contains branches of 2430 glucose units connected to the main chain by an alpha(1,6) linkage.
 synonym: "AMYPCTCN (related)" RELATED []
 is_a: TO:0006007 ! polysaccharide content
+relationship: part_of TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0000098
@@ -1087,11 +1088,12 @@ created_by: jaiswalp
 
 [Term]
 id: TO:0000134
-name: alkali digestion
-def: "Is an indirect measure of gelatinization temperature. Observed by placing six milled-rice kernels in 10ml 1.7% KOH in a shallow container and arrange them so that they do not touch. Let them stand for 23hrs at 30degC temperature and score for spreading. Measure for Alkali digestion is inversely proportional to the gelatinization temperature, e.g. if alkali digestion is low, the gelatinization temperature is high." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: starch alkali digestion
+def: "A starch gelatinization trait (TO:0001167) which is the treatment of starch with an alkali solution, which alters its physical and chemical properties." [Gramene:pankaj_jaiswal, RiceSES:SES, TO:cooperl]
+comment: Akali digestion is an indirect measure of gelatinization temperature and is inversely proportional to the gelatinization temperature, e.g. if alkali digestion is low, the gelatinization temperature is high.
 synonym: "AlkD (related)" RELATED []
 synonym: "ALKDIG (related)" RELATED []
-is_a: TO:0000462 ! starch gelatinization temperature
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000135
@@ -1611,7 +1613,7 @@ synonym: "Amy (related)" RELATED []
 synonym: "AMYCN (related)" RELATED []
 xref: CHEBI:28102
 is_a: TO:0006007 ! polysaccharide content
-relationship: part_of TO:0001069 ! cooking quality trait
+relationship: part_of TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0000197
@@ -1743,7 +1745,7 @@ name: starch gel consistency
 def: "Scored by gel consistency type in mm." [RiceSES:SES]
 synonym: "GelC (related)" RELATED []
 synonym: "GELCON (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0000212
@@ -3116,11 +3118,11 @@ is_a: TO:0000786 ! reproductive shoot system morphology trait
 [Term]
 id: TO:0000374
 name: starch breakdown viscosity
-def: "A cooking quality trait (TO:0001069) which is the tendency of gelatinized starch granules to break during cooking, especially at high temperature." [TO:Laurel_Cooper] {comment="DOI:10.1006/jcrs.2001.0374"}
+def: "A starch quality trait (TO:0001166) which the tendency of gelatinized starch granules to break during cooking, especially at high temperature." [TO:Laurel_Cooper] {comment="DOI:10.1006/jcrs.2001.0374"}
 comment: Breakdown is usually associated with the tendency of gelatinized starch granules to break during holding at high temperature, accompanied with continuous shearing (Han and Hamaker 2001). Breakdown is usually calculated from a resulting viscogram by subtracting trough from peak viscosity. The increase in rice flour breakdown viscosity, although not always significant (P < 0.05), suggests a greater protection of the starch granule integrity. This probably is due to the increased affinity of proteins to interact with starch, as a result of protein denaturation. The resulting formation of protein–starch complexes tends to increase rice flour peak viscosity.
 synonym: "BRKVIS (related)" RELATED []
 xref: PMCID:PMC434838
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0000375
@@ -3137,8 +3139,9 @@ is_a: TO:0002731 ! dehulled grain length to width ratio
 [Term]
 id: TO:0000376
 name: starch consistency viscosity
+def: "A starch quality trait (TO:0001166) which the" []
 synonym: "CONVIS (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0000377
@@ -3161,7 +3164,7 @@ id: TO:0000379
 name: starch cool paste viscosity
 def: "A cooking quality trait (TO:0001069) which is the viscosity of a starch paste after it has been cooked and cooled down." [] {comment="TO:Laurel_Cooper"}
 synonym: "CPVIS (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0000380
@@ -3400,14 +3403,14 @@ is_obsolete: true
 id: TO:0000408
 name: starch hot paste viscosity
 synonym: "HPVIS (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0000409
 name: starch peak viscosity trait
 def: "A cooking quality trait (TO:0001069) which is the ability of starch granules to swell before breaking down during heating." [] {comment="TO:Laurel_Cooper"}
 synonym: "PVIS (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0000410
@@ -3431,7 +3434,7 @@ def: "Determined by deducting the peak viscosity from the cool paste viscosity."
 synonym: "setback (related)" RELATED []
 synonym: "SETBK (related)" RELATED []
 synonym: "SETBKVIS (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0000413
@@ -3840,9 +3843,10 @@ is_a: TO:0000369 ! vegetative growth time
 [Term]
 id: TO:0000462
 name: starch gelatinization temperature
-def: "Is an indication of gelatinization temperature. Observed by placing six milled-grains/kernels in 10ml 1.7% KOH in a shallow container and arrange them so that they do not touch. Let them stand for 23hrs at 30C temperature and score for spreading. Measure for Alkali digestion is inversely proportional to the gelatinization temperature, e.g. if alkali digestion is low, the gelatinization temperature is high." [Gramene:pankaj_jaiswal, RiceSES:SES]
+def: "A starch quality trait (TO:0001166) which is the temperature at which a starch granule swells and absorbs water." [Gramene:pankaj_jaiswal, RiceSES:SES, TO:cooperl]
+comment: Changes in starch gelatinization with temperature are measured by monitoring the viscosity of a starch slurry during controlled heating, holding, and cooling temperature cycles.
 synonym: "GELTZTMP (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000463
@@ -9915,10 +9919,19 @@ creation_date: 2025-07-28T18:35:12Z
 id: TO:0001166
 name: starch quality trait
 def: "A processing quality trait (TO:0001068) which includes the physical, biochemical and thermal properties of a type of starch." [TO:cooperl]
-comment: The physical, biochemical and thermal properties of a starch determine its functionality and how it behaves in food preparations and industrial applications.
+comment: The physical, biochemical and thermal properties of a starch determine its functionality and how it behaves in food preparations and industrial applications. Starch quality can be measured using a a machine such as a Rapid Visco Analyser (RVA) where the viscosity of a starch slurry is monitored during controlled\nheating, holding, and cooling temperature cycles.
 is_a: TO:0001068 ! processing quality trait
 created_by: https://orcid.org/0000-0002-6379-8932
 creation_date: 2025-08-27T20:12:09Z
+
+[Term]
+id: TO:0001167
+name: starch gelatinization trait
+def: "A starch quality trait (TO:0001166) which is the tendency of a starch granule (GO:0043036) to swell and absorb water." [TO:cooperl, Wikipedia:Starch_gelatinization]
+comment: Starch gelatinization is a process of breaking down of intermolecular bonds of starch molecules in the presence of water and heat or alkali, allowing the hydrogen bonding sites (the hydroxyl hydrogen and oxygen) to engage more water. This irreversibly dissolves the starch granule in water. Gelatinization results in changes in viscosity of a starch slurry.
+is_a: TO:0001166 ! starch quality trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-08-27T21:37:22Z
 
 [Term]
 id: TO:0002600
@@ -10309,10 +10322,10 @@ is_a: TO:0001068 ! processing quality trait
 [Term]
 id: TO:0002647
 name: starch digestibility
-def: "A plant quality trait (TO:0000597) which is the proportion of the starch content of a forage or feed that is digested by an animal." [GrainGenes_trait:Starch_digestibility, Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+def: "A starch quality trait (TO:0001166) which the proportion of the starch content of a forage or feed that is digested by an animal." [GrainGenes_trait:Starch_digestibility, Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 comment: Starch digestibility is usually expressed as a percentage.
 synonym: "STARCHDIG (related)" RELATED []
-is_a: TO:0000597 ! plant quality trait
+is_a: TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0002648
