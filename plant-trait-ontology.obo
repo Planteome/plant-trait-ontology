@@ -3175,7 +3175,7 @@ is_obsolete: true
 [Term]
 id: TO:0000381
 name: cracked grain percentage
-def: "The percentage of cracked dehulled grain with most of the size still intact." [Gramene:pankaj_jaiswal]
+def: "A grain quality trait (TO:0000162) which is the percentage of cracked, dehulled grain with most of the size still intact." [Gramene:pankaj_jaiswal, TO:cooperl]
 synonym: "CRKGRPCENT (related)" RELATED []
 synonym: "fissured grain percentage (related)" RELATED []
 is_a: TO:0000162 ! grain quality trait
@@ -5010,14 +5010,13 @@ relationship: part_of TO:0000162 ! grain quality trait
 [Term]
 id: TO:0000613
 name: groat percentage
-def: "It is defined as the amount of hull-less kernels obtained after de-hulling, expressed as a percentage of the weight of the sample." [DOI:10.1007/s001220051466]
+def: "A grain quality trait (TO:0000162) which is the amount of hull-less kernels obtained after de-hulling, expressed as a percentage of the weight of the sample." [TO:cooperl]
 comment: This trait is most commonly used in determining the milling quality of oats.
 synonym: "caryopsis percentage (related)" RELATED []
 synonym: "groat proportion (related)" RELATED []
 synonym: "GROATPCENT (related)" RELATED []
 synonym: "hull percentage (related)" RELATED []
-is_a: TO:0001068 ! processing quality trait
-is_a: TO:0002728 ! fruit quality trait
+is_a: TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0000614
@@ -5059,14 +5058,11 @@ is_a: TO:0001109 ! grain color trait
 [Term]
 id: TO:0000618
 name: crushed grain percentage
-def: "The percentage of cracked dehulled grain with at least one fourth of the size still intact." [Gramene:pankaj_jaiswal]
-synonym: "cracked dehulled-grain percentage (related)" RELATED []
-synonym: "cracked grain percentage (related)" RELATED []
+def: "A grain quality trait (TO:0000162) which is the percentage of crushed, dehulled grain with at least one fourth of the size still intact." [Gramene:pankaj_jaiswal]
 synonym: "CRUSHDHULGRPCENT (related)" RELATED []
 synonym: "crushed dehulled-grain percentage (related)" RELATED []
 synonym: "CRUSHGRPCENT (related)" RELATED []
 synonym: "percent broken (related)" RELATED []
-synonym: "percentage brokens (related)" RELATED []
 is_a: TO:0000162 ! grain quality trait
 
 [Term]
@@ -5307,8 +5303,9 @@ relationship: inheres_in PO:0009037 {is_inferred="true"} ! lemma
 [Term]
 id: TO:0000651
 name: flour color
+def: "A processing quality trait (TO:0001068) which is the color of flour obtained by milling grains or other plant structures." [TO:cooperl]
 synonym: "FLRCL (related)" RELATED []
-is_a: TO:0000162 ! grain quality trait
+is_a: TO:0001068 ! processing quality trait
 
 [Term]
 id: TO:0000652
@@ -5459,6 +5456,8 @@ is_a: TO:0000392 ! plant reproduction trait
 [Term]
 id: TO:0000672
 name: bran percentage
+def: "A grain quality trait (TO:0000162) which is the porportion of bran in a whole grain." [TO:cooperl]
+comment: Bran is the the nutritious, fiber-rich outer shell of a cereal grain, consisting of the pericarp (seed coat) and the aleurone layer.
 synonym: "BRAPCENT (related)" RELATED []
 synonym: "rice bran percentage (related)" RELATED []
 is_a: TO:0000162 ! grain quality trait
@@ -10380,14 +10379,14 @@ is_a: TO:0000599 ! enzyme activity trait
 [Term]
 id: TO:0002655
 name: starch grain size
-def: "Assay to determine the size of the starch grain size." [Gramene:pankaj_jaiswal]
-is_a: TO:0000162 ! grain quality trait
+def: "A starch quality trait (TO:0001166) which the size of a starch grain (GO:0043036)." [Gramene:pankaj_jaiswal]
+is_a: TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0002656
 name: starch grain shape
-def: "Assay to determine the shape of the starch grain." [Gramene:pankaj_jaiswal]
-is_a: TO:0000162 ! grain quality trait
+def: "Assay to determine the shape of the starch grain.\n\nA starch quality trait (TO:0001166) which the shape of a starch grain (GO:0043036)." [Gramene:pankaj_jaiswal]
+is_a: TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0002657
