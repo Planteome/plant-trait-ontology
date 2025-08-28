@@ -848,7 +848,7 @@ name: deepwater stress
 def: "The sensitivity response shown by the plant growing in a stagnant water for a long period of time (not unlike deepwater presence during flash flooding of the fields)." [Gramene:pankaj_jaiswal]
 synonym: "deep water stress (related)" RELATED []
 synonym: "DWSTR (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_a: TO:0000286 ! submergence response trait
 
 [Term]
 id: TO:0000104
@@ -935,8 +935,9 @@ relationship: inheres_in PO:0009009 {is_inferred="true"} ! plant embryo
 
 [Term]
 id: TO:0000114
-name: flooding related trait
-is_a: TO:0000237 ! water stress response trait
+name: OBSOLETE flooding related trait
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0000115
@@ -1405,10 +1406,10 @@ is_obsolete: true
 
 [Term]
 id: TO:0000170
-name: elongation ability
-def: "Some plants can elongate and grow in areas annually flooded to varying depths. The scale is based on the performance of check varieties. Specify water depth under which the data was recorded." [RiceSES:SES]
+name: shoot elongation under submergence
+def: "A submergence response trait (TO:0000286) which is the ability of a plant to grow taller to survive flooding or submergence." [RiceSES:SES, TO:cooperl]
 synonym: "Elon (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_a: TO:0000286 ! submergence response trait
 
 [Term]
 id: TO:0000171
@@ -2355,12 +2356,12 @@ is_obsolete: true
 
 [Term]
 id: TO:0000286
-name: submergence sensitivity
-def: "Measure of sensitivity of a plant if placed under submergence condition." [IRiceSES:SES]
+name: submergence response trait
+def: "A water stress response trait (TO:0000237) as a result of flooding or submergence in water." [RiceSES:SES, TO:cooperl]
 synonym: "Sub (related)" RELATED []
 synonym: "submergence tolerance (related)" RELATED []
 synonym: "SUBSN (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000287
@@ -2816,7 +2817,7 @@ comment: Less is the tiller angle compared to water surface the least is the cha
 synonym: "KnA (related)" RELATED []
 synonym: "KNEAB (related)" RELATED []
 synonym: "tiller angle (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_a: TO:0000286 ! submergence response trait
 
 [Term]
 id: TO:0000338
@@ -4218,7 +4219,7 @@ id: TO:0000512
 name: plant survival percentage under submergence
 def: "Percent of plants survived under submerged conditions." [Gramene:pankaj_jaiswal]
 synonym: "PTSPCENTSUB (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_a: TO:0000524 ! submergence tolerance
 
 [Term]
 id: TO:0000513
@@ -4255,7 +4256,7 @@ id: TO:0000517
 name: relative shoot elongation under submergence
 def: "Elongation of the shoot under submergence condition against a reference without submergence." [Gramene:pankaj_jaiswal]
 synonym: "RELSHELSUB (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_a: TO:0000170 ! shoot elongation under submergence
 
 [Term]
 id: TO:0000519
@@ -4298,8 +4299,9 @@ is_a: TO:0020095 ! stomatal process related trait
 [Term]
 id: TO:0000524
 name: submergence tolerance
+def: "A submergence response trait (TO:0000286) which is the ability to tolerate flooding or submergence in water." [TO:cooperl]
 synonym: "SUBTL (related)" RELATED []
-is_a: TO:0000286 ! submergence sensitivity
+is_a: TO:0000286 ! submergence response trait
 
 [Term]
 id: TO:0000525
@@ -4326,9 +4328,10 @@ is_a: TO:0020096 ! mineral and ion transport trait
 
 [Term]
 id: TO:0000528
-name: total shoot elongation under submergence
+name: OBSOLETE total shoot elongation under submergence
+def: "OBSOLETE" []
 synonym: "TSHELSUB (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_obsolete: true
 
 [Term]
 id: TO:0000529
