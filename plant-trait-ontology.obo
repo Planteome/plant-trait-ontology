@@ -2316,7 +2316,8 @@ is_a: TO:0000296 ! vegetative vigor
 [Term]
 id: TO:0000281
 name: metabolite content trait
-def: "The trait associated with an assay to determine the affected metabolite's profile." [Gramene:pankaj_jaiswal]
+def: "A biochemical trait (TO:0000277) which is the amount of a metabolite in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
+comment: Plant metabolites are organic compounds produced by plants, categorized broadly into primary and secondary metabolites, each serving distinct roles in plant life. Primary metabolites, which include amino acids, vitamins, carbohydrates, lipids, proteins, and nucleic acids, are essential for growth and development. Secondary metabolites are not directly involved in basic growth but often have important ecological functions. Examples include antibiotics and pigments, terpenoids, glucosinolates, alkaloids, phenolic compounds, and lignin.
 is_a: TO:0000277 ! biochemical trait
 
 [Term]
@@ -4943,7 +4944,7 @@ name: total fat content
 def: "The total fat or lipid content of a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "FATCN (related)" RELATED []
 synonym: "lipid content (related)" RELATED []
-is_a: TO:0000604 ! fat and essential oil content
+is_a: TO:0000604 ! lipid content trait
 
 [Term]
 id: TO:0000603
@@ -4956,8 +4957,10 @@ is_a: TO:0000465 ! mineral and ion content trait
 
 [Term]
 id: TO:0000604
-name: fat and essential oil content
-def: "Measures the fat and essential oil content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+name: lipid content trait
+def: "A metabolite content trait (TO:0000281) which is the amount of lipid in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:cooperl]
+comment: Lipids are triglycerides, esters of three fatty acid units joined to glycerol, a trihydroxy alcohol. A triglyceride is called a fat if it is a solid at 25°C; it is called an oil if it is a liquid at that temperature. Fats have a predominance of saturated fatty acids, and oils are composed largely of unsaturated acids.
+synonym: "fat and oil content (exact)" EXACT []
 is_a: TO:0000281 ! metabolite content trait
 
 [Term]
@@ -8546,7 +8549,7 @@ name: cellulose content
 def: "A carbohydrate content trait (TO:0000291) which is the amount of cellulose (CHEBI:62968) in a plant structure (PO:0009011)." [TO:Laurel_Cooper]
 comment: Refers to crystalline cellulose (CHEBI:62968): A (1→4)-β-D-glucan (cellulose) in crystalline form with a structure consisting of several hundred to over ten thousand D-glucose residues joined by β(1→4) glycosidic linkages.
 xref: TO_GIT:384
-is_a: TO:0000291 ! carbohydrate content
+is_a: TO:0006006 ! monosaccharide content
 created_by: ethan_johnson
 
 [Term]
@@ -9970,6 +9973,13 @@ def: "A shoot system morphology trait (TO:0000077) which is the presence of a st
 is_a: TO:0000077 ! shoot system morphology trait
 created_by: https://orcid.org/0000-0002-6379-8932
 creation_date: 2025-09-02T22:17:04Z
+
+[Term]
+id: TO:0001170
+name: fatty acid content trait
+def: "A metabolite content trait (TO:0000281) which is the amount of one or more fatty acids in a plant structure (PO:0009011) or a plant-derived lipid." [TO:cooperl]
+comment: Fatty acids consist of a straight chain of an even number of carbon atoms, with hydrogen atoms along the length and at one end of the chain and a carboxyl group at the other end. Fatty acids may be saturated (no double bonds), or unsaturated (one or more double bonds). Fatty acids are an important component of lipids.
+is_a: TO:0000281 ! metabolite content trait
 
 [Term]
 id: TO:0002600
@@ -12120,7 +12130,7 @@ synonym: "high linoleic oil content (narrow)" NARROW []
 synonym: "linoleic oil content (exact)" EXACT []
 synonym: "low linoleic oil content (narrow)" NARROW []
 xref: CHEBI:17351
-is_a: TO:0000604 ! fat and essential oil content
+is_a: TO:0001170 ! fatty acid content trait
 
 [Term]
 id: TO:0005002
@@ -12135,7 +12145,7 @@ synonym: "high oleic oil content (narrow)" NARROW []
 synonym: "mid oleic oil content (narrow)" NARROW []
 synonym: "oleic oil content (related)" RELATED []
 xref: CHEBI:16196
-is_a: TO:0000604 ! fat and essential oil content
+is_a: TO:0001170 ! fatty acid content trait
 
 [Term]
 id: TO:0005003
@@ -12149,7 +12159,7 @@ synonym: "octadecanoic acid content (exact)" EXACT []
 synonym: "octadecoic acid content (exact)" EXACT []
 synonym: "stearic oil content (related)" RELATED []
 xref: CHEBI:28842
-is_a: TO:0000604 ! fat and essential oil content
+is_a: TO:0001170 ! fatty acid content trait
 
 [Term]
 id: TO:0005004
@@ -12157,7 +12167,7 @@ name: omega-3 fatty acid content
 def: "The omega-3 fatty acid content in or extracted from a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: Omega-3 fatty acid (CHEBI:25681) is a polyunsaturated fatty acid (CHEBI:26208). There are four subtypes of omega-3 fatty acids, namely, alpha-licanic acid (CHEBI:28771), all-cis-docosa-4,7,10,13,16,19-hexaenoic acid (CHEBI:28125), all-cis-icosa-5,8,11,14,17-pentaenoic acid and alpha-linolenic acid (CHEBI:27432).
 xref: CHEBI:25681
-is_a: TO:0000604 ! fat and essential oil content
+is_a: TO:0001170 ! fatty acid content trait
 
 [Term]
 id: TO:0005005
@@ -12172,7 +12182,7 @@ synonym: "9-cis,12-cis,15-cis-octadecatrienoic acid content (exact)" EXACT []
 synonym: "all-cis-9,12,15-octadecatrienoic acid content (exact)" EXACT []
 synonym: "cis,cis,cis-9,12,15-octadecatrienoic acid content (exact)" EXACT []
 xref: CHEBI:27432
-is_a: TO:0005004 ! omega-3 fatty acid content
+is_a: TO:1000074 ! linolenic acid content
 
 [Term]
 id: TO:0005006
@@ -14576,7 +14586,7 @@ id: TO:1000074
 name: linolenic acid content
 def: "An essential fatty acid (TO:0000604) content which is the amount of a polyunsaturated, 18 carbon long fatty acid, with three double bonds." [CHEBI:25048, TO:Laurel_Cooper]
 comment: There are two forms of linolenic acid, alpha and gamma, depending upon where the double bonds occur.
-is_a: TO:0000604 ! fat and essential oil content
+is_a: TO:0001170 ! fatty acid content trait
 created_by: Laurel_Cooper
 creation_date: 2020-09-16T12:00:00Z
 
@@ -14585,7 +14595,7 @@ id: TO:1000075
 name: palmitic acid content
 def: "A fatty acid content (TO:0000604) which is the amount of a straight-chain, sixteen-carbon, saturated long-chain fatty acid in a plant structure." [CHEBI:15756, TO:Laurel_Cooper]
 synonym: "hexadecanoic acid (exact)" EXACT []
-is_a: TO:0000604 ! fat and essential oil content
+is_a: TO:0001170 ! fatty acid content trait
 created_by: Laurel_Cooper
 creation_date: 2020-09-16T12:00:00Z
 
