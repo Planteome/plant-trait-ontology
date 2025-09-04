@@ -21,6 +21,7 @@ ontology: to
 property_value: http://purl.org/dc/terms/description "An ontology that describes phenotypic traits in plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature plant." xsd:string
 property_value: http://purl.org/dc/terms/license http://creativecommons.org/licenses/by/4.0/
 property_value: http://purl.org/dc/terms/title "Plant Trait Ontology" xsd:string
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/TO_0000005> \"plant_trait_ontology\")\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/TO_0000005> \"TO:0000005\")\n)
 
 [Term]
 id: TO:0000001
@@ -51,11 +52,6 @@ name: reversible male sterility
 def: "Trait of a plant in which the action of the cytotoxic gene used to introduce male sterility is suppressed by the application of a chemical to the plant. Reversion of the sterility allows the RMS parent to be self-fertilized, a step that overcomes the need to remove fertile sib plants prior to making the hybrid cross." [PMID:10645437]
 synonym: "RMS (related)" RELATED []
 is_a: TO:0000111 ! genetically engineered male sterility
-
-[Term]
-id: TO:0000005
-property_value: IAO:0000231 IAO:0000227
-is_obsolete: true
 
 [Term]
 id: TO:0000006
@@ -571,7 +567,7 @@ def: "The anthocyanin content in a plant structure (PO:0009011)." [ISBN:19850673
 comment: Anthocyanin is the red to purple pigments composed of soluble glycosides of anthocyanidins, present in leaves and floral tissue. Usually the pigment is produced under stress conditions. Amounts of anthocyanin produced depend on stored sugar and sunlight. The more stored sugar in the leaf and brighter the autumn days, the more intense red. Anthocyanin production also increases as phosphates move out of the leaves; the lack of phosphates in young leaves can also lead to the production of anthocyanin.
 synonym: "ANTHCN (related)" RELATED []
 is_a: TO:0000290 ! flavonoid content
-is_a: TO:0000494 ! pigment content trait
+is_a: TO:0000494 ! plant pigment content trait
 
 [Term]
 id: TO:0000072
@@ -2405,7 +2401,7 @@ is_a: TO:0000496 ! carotenoid content
 [Term]
 id: TO:0000290
 name: flavonoid content
-def: "A phytochemical compound content trait (TO:0000674) which is the amount of flavonoid (CHEBI:47916) in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+def: "A metabolite content trait (TO:0000281) which is the amount of flavonoid (CHEBI:47916) in a plant structure (PO:0009011)." [CHEBI:47916, Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 comment: Flavonoids are water soluble polyphenolic molecules containing 15 carbon atoms. Flavonoids belong to the polyphenol family and have antioxidant activity.
 xref: CHEBI:47916
 is_a: TO:0000281 ! metabolite content trait
@@ -4103,7 +4099,7 @@ is_a: TO:0000748 ! leaf morphology trait
 
 [Term]
 id: TO:0000494
-name: pigment content trait
+name: plant pigment content trait
 def: "A metabolite content trait (TO:0000281) which is the amount of a plant pigment in a plant strucuture." [TO:cooperl]
 is_a: TO:0000281 ! metabolite content trait
 
@@ -4113,14 +4109,14 @@ name: chlorophyll content
 def: "A pigment content trait (TO:0000494) which is a measure of the chlorophyll a and/or chlorophyll b content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 comment: Chlorophyll is the principal photoreceptor in photosynthesis, the light-driven process in which carbon dioxide is fixed to yield carbohydrates and oxygen. Chlorophyll is a cyclic tetrapyrolle, similar in structure to the heme group of globins (hemoglobin, myoglobin) and cytochromes. Chlorophyll differs from heme in a few major respects, most notably that the central metal ion in chlorophyll is magnesium while that in heme is iron.
 synonym: "CHLCN (related)" RELATED []
-is_a: TO:0000494 ! pigment content trait
+is_a: TO:0000494 ! plant pigment content trait
 
 [Term]
 id: TO:0000496
 name: carotenoid content
 def: "The carotenoid content in a plant structure (PO:0009011). Includes naturally occurring tetra terpenes that are synthesized only in plants." []
 synonym: "CRTCN (related)" RELATED []
-is_a: TO:0000494 ! pigment content trait
+is_a: TO:0000494 ! plant pigment content trait
 
 [Term]
 id: TO:0000497
@@ -4968,7 +4964,7 @@ is_a: TO:0000281 ! metabolite content trait
 [Term]
 id: TO:0000605
 name: hydrogen peroxide content
-def: "An assay to determine the content of hydrogen peroxide or the peroxide reactive ions." [Gramene:pankaj_jaiswal]
+def: "A metabolite content trait (TO:0000281) which is the amount of hydrogen peroxide or the peroxide reactive ion in a plant structure." [Gramene:pankaj_jaiswal]
 synonym: "H2O2 content (related)" RELATED []
 synonym: "H2O2CN (related)" RELATED []
 is_a: TO:0000281 ! metabolite content trait
@@ -5502,7 +5498,7 @@ is_obsolete: true
 [Term]
 id: TO:0000675
 name: ferulic acid content
-def: "A phytochemical compound content trait (TO:0000674) which is the amount of ferulic acid (CHEBI:17620) in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper, Wikipedia:ferulic_acid]
+def: "A metabolite content trait (TO:0000281) which is the amount of ferulic acid (CHEBI:17620) in a plant structure (PO:0009011)." [CHEBI:17620, Gramene:pankaj_jaiswal, TO:Laurel_Cooper, Wikipedia:ferulic_acid]
 comment: Ferulic acid is an antioxidant which neutralizes free radicals (superoxide, nitric oxide and hydroxyl radical) which could cause oxidative damage of cell membranes and DNA. Ferulic acid helps to prevent damage to cells caused by ultraviolet light. It is found in the leaves and seeds of many plants, but especially in cereals such as brown rice, whole wheat and oats.
 synonym: "4-hydroxy-3-methoxycinnamic acid (related)" RELATED []
 synonym: "FERULICACIDCN (related)" RELATED []
@@ -5956,7 +5952,8 @@ is_a: TO:0000728 ! cell cycle trait
 [Term]
 id: TO:0000731
 name: lignin content
-def: "Measures the lignin content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+def: "A metabolite content trait (TO:0000281) which is the amount of lignin in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+comment: Lignin is a class of complex organic polymers that form key structural materials in the support tissues of most plants. Lignin is a collection of highly heterogeneous polymers derived from a handful of precursor lignols. Heterogeneity arises from the diversity and degree of crosslinking between these lignols.
 is_a: TO:0000281 ! metabolite content trait
 
 [Term]
@@ -10566,7 +10563,7 @@ is_a: TO:0000476 ! growth hormone content
 [Term]
 id: TO:0002673
 name: amino acid content
-def: "The amino acid content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+def: "A metabolite content trait (TO:0000281) which is the amino acid content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000281 ! metabolite content trait
 
 [Term]
@@ -13444,7 +13441,7 @@ creation_date: 2011-08-19T01:29:00Z
 [Term]
 id: TO:0020076
 name: phenolic compound content
-def: "Amount of phenolics present in a plant structure (PO:0009011) or product." [T-CAP:Victoria_Blake]
+def: "A metabolite content trait (TO:0000281) which is the amount of phenolics present in a plant structure (PO:0009011)." [T-CAP:Victoria_Blake]
 comment: In barley it is evaluated in ex malt.
 is_a: TO:0000281 ! metabolite content trait
 created_by: jaiswalp
