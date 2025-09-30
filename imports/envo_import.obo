@@ -1,0 +1,1072 @@
+format-version: 1.2
+idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
+ontology: to/imports/envo_import
+
+[Term]
+id: BFO:0000001
+name: entity
+
+[Term]
+id: BFO:0000002
+name: continuant
+def: "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts." []
+is_a: BFO:0000001 ! entity
+disjoint_from: BFO:0000003 ! occurrent
+
+[Term]
+id: BFO:0000003
+name: occurrent
+def: "An entity that has temporal parts and that happens, unfolds or develops through time." []
+is_a: BFO:0000001 ! entity
+
+[Term]
+id: BFO:0000004
+name: independent continuant
+def: "b is an independent continuant = Def. b is a continuant which is such that there is no c and no t such that b s-depends_on c at t. (axiom label in BFO2 Reference: [017-002])" [] {IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/017-002"}
+is_a: BFO:0000002 ! continuant
+disjoint_from: BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: BFO:0000015
+name: process
+def: "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])" [] {IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/083-003"}
+is_a: BFO:0000003 ! occurrent
+
+[Term]
+id: BFO:0000019
+name: quality
+is_a: BFO:0000020 ! specifically dependent continuant
+
+[Term]
+id: BFO:0000020
+name: specifically dependent continuant
+def: "b is a relational specifically dependent continuant = Def. b is a specifically dependent continuant and there are n &gt; 1 independent continuants c1, … cn which are not spatial regions are such that for all 1  i &lt; j  n, ci  and cj share no common parts, are such that for each 1  i  n, b s-depends_on ci at every time t during the course of b’s existence (axiom label in BFO2 Reference: [131-004])" []
+def: "b is a specifically dependent continuant = Def. b is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence. (axiom label in BFO2 Reference: [050-003])" [] {IAO:0010000="http://purl.obolibrary.org/obo/bfo/axiom/050-003"}
+is_a: BFO:0000002 ! continuant
+
+[Term]
+id: BFO:0000030
+name: object
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: BFO:0000040
+name: material entity
+def: "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time." []
+is_a: BFO:0000004 ! independent continuant
+
+[Term]
+id: ENVO:00000191
+name: solid astronomical body part
+def: "A part of an astronomical body which is primarily composed of solid material." [https://en.wikipedia.org/wiki/Landform]
+synonym: "geological feature" RELATED [ADL:FTT]
+synonym: "landform" RELATED []
+synonym: "physiographic feature" RELATED []
+is_a: ENVO:01001784 ! compound astronomical body part
+intersection_of: ENVO:01000813 ! astronomical body part
+intersection_of: RO:0002473 ENVO:01000814 ! solid environmental material
+relationship: RO:0002473 ENVO:01000814 ! solid environmental material
+
+[Term]
+id: ENVO:00010483
+name: environmental material
+def: "A material entity which other material entities in an environmental system are primarily or partially composed of." [http://ontology.buffalo.edu/smith/articles/niches.html, https://dx.doi.org/10.1186/2041-1480-4-43, https://en.wikipedia.org/wiki/Material]
+synonym: "portion of environmental material" EXACT []
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: ENVO:00010504
+name: surface layer
+def: "A layer of some material entity which is adjacent to one or more of its external boundaries and directly interacts with its immediate surroundings." [URL:http\://www.merriam-webster.com/dictionary/surface]
+is_a: ENVO:01001684 ! interface layer
+
+[Term]
+id: ENVO:01000254
+name: environmental system
+def: "A system which has the disposition to environ one or more material entities." [DOI:10.1186/2041-1480-4-43]
+synonym: "environment" EXACT []
+is_a: RO:0002577 ! system
+
+[Term]
+id: ENVO:01000281
+name: layer
+def: "A material entity which 1) is spatially continuous, 2) is composed of material of comparable thickness, composition, and physical properties, and 3) is physically distinct from adjacent portions of environmental material." [https://en.wiktionary.org/wiki/layer]
+is_a: BFO:0000040 ! material entity
+relationship: RO:0000086 PATO:0000689 ! continuous
+relationship: RO:0000086 PATO:0002124 ! laminar
+
+[Term]
+id: ENVO:01000313
+name: anthropogenic environment
+def: "An anthropogenic environment is an environmental system which is the product of human activity." []
+is_a: ENVO:01000254 ! environmental system
+intersection_of: ENVO:01000254 ! environmental system
+intersection_of: RO:0002354 ENVO:01000952 ! anthropisation
+relationship: RO:0002354 ENVO:01000952 ! anthropisation
+
+[Term]
+id: ENVO:01000355
+name: vegetation layer
+def: "A layer which is determined by a form of vegetation." []
+synonym: "forest layer" RELATED []
+synonym: "forest stratum" RELATED []
+synonym: "woodland layer" RELATED []
+synonym: "woodland stratum" RELATED []
+is_a: ENVO:01000281 ! layer
+intersection_of: ENVO:01000281 ! layer
+intersection_of: RO:0002473 NCBITaxon:33090 ! Viridiplantae
+relationship: RO:0002473 NCBITaxon:33090 ! Viridiplantae
+
+[Term]
+id: ENVO:01000637
+name: outer space
+def: "Outer space is a hard vacuum containing a low density of particles, predominantly a plasma of hydrogen and helium as well as electromagnetic radiation, magnetic fields, neutrinos, dust and cosmic rays that exists between celestial bodies." [https://en.wikipedia.org/wiki/Outer_space]
+synonym: "space" BROAD []
+is_a: ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01000799
+name: astronomical body
+def: "An object which is naturally occuring, bound together by gravitational or electromagnetic forces, and surrounded by space." [https://en.wikipedia.org/wiki/Astronomical_object]
+synonym: "celestial body" RELATED []
+is_a: ENVO:01000804 ! astronomical object
+
+[Term]
+id: ENVO:01000804
+name: astronomical object
+def: "An object which is composed of one or more gravitationally bound structures that are associated with a position in space." [https://en.wikipedia.org/wiki/Astronomical_object]
+synonym: "celestial object" RELATED []
+is_a: BFO:0000030 ! object
+relationship: BFO:0000051 ENVO:01000799 ! astronomical body
+relationship: RO:0000086 ENVO:01001164 ! geodiversity
+relationship: RO:0002219 ENVO:01000637 ! outer space
+
+[Term]
+id: ENVO:01000813
+name: astronomical body part
+def: "A material part of an astronomical body." []
+is_a: BFO:0000040 ! material entity
+intersection_of: BFO:0000040 ! material entity
+intersection_of: BFO:0000050 ENVO:01000799 ! astronomical body
+relationship: BFO:0000050 ENVO:01000799 ! astronomical body
+
+[Term]
+id: ENVO:01000814
+name: solid environmental material
+def: "An environmental material which is in a solid state." []
+is_a: ENVO:00010483 ! environmental material
+intersection_of: ENVO:00010483 ! environmental material
+intersection_of: RO:0000086 PATO:0001546 ! quality of a solid
+relationship: RO:0000086 PATO:0001546 ! quality of a solid
+
+[Term]
+id: ENVO:01000951
+name: natural environment
+def: "An environmental system in which minimal to no anthropisation has occurred and non-human agents are the primary determinants of the system's dynamics and composition." [https://en.wikipedia.org/wiki/Anthropization, https://en.wikipedia.org/wiki/Natural_environment]
+is_a: ENVO:01000254 ! environmental system
+
+[Term]
+id: ENVO:01000952
+name: anthropisation
+def: "A process during which a natural environmental system is altered by human action." [https://en.wikipedia.org/wiki/Anthropization]
+synonym: "anthropization" EXACT []
+is_a: ENVO:01001434 ! anthropogenic ecosystem conversion process
+intersection_of: ENVO:01001434 ! anthropogenic ecosystem conversion process
+intersection_of: RO:0002233 ENVO:01000951 ! natural environment
+intersection_of: RO:0002234 ENVO:01000313 ! anthropogenic environment
+relationship: RO:0002233 ENVO:01000951 ! natural environment
+relationship: RO:0002234 ENVO:01000313 ! anthropogenic environment
+
+[Term]
+id: ENVO:01000997
+name: environmental system determined by a quality
+def: "An environmental system which is determined by materials bearing roughly homogeneous qualities." []
+is_a: ENVO:01000254 ! environmental system
+
+[Term]
+id: ENVO:01000998
+name: environmental system determined by a material
+def: "An environmental system within which an environmental material strongly influences the system's composition and properties." []
+is_a: ENVO:01000254 ! environmental system
+intersection_of: ENVO:01000254 ! environmental system
+intersection_of: RO:0002507 ENVO:00010483 ! environmental material
+relationship: RO:0002507 ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01001000
+name: environmental system determined by an organism
+def: "An environmental system which is determined by a living organism." []
+synonym: "host-associated environment" RELATED []
+is_a: ENVO:01000254 ! environmental system
+intersection_of: ENVO:01000254 ! environmental system
+intersection_of: RO:0002507 NCBITaxon:131567 ! cellular organisms
+relationship: RO:0002507 NCBITaxon:131567 ! cellular organisms
+
+[Term]
+id: ENVO:01001001
+name: plant-associated environment
+def: "An environmental system determined by a green plant." []
+synonym: "plant environment" BROAD []
+synonym: "Viridiplantae-associated environment" EXACT []
+is_a: ENVO:01001000 ! environmental system determined by an organism
+intersection_of: ENVO:01000254 ! environmental system
+intersection_of: RO:0002507 NCBITaxon:33090 ! Viridiplantae
+relationship: RO:0002507 NCBITaxon:33090 ! Viridiplantae
+
+[Term]
+id: ENVO:01001002
+name: animal-associated environment
+def: "An environmental system determined by an animal." []
+synonym: "animal environment" BROAD []
+synonym: "Metazoan-associated environment" EXACT []
+is_a: ENVO:01001000 ! environmental system determined by an organism
+intersection_of: ENVO:01000254 ! environmental system
+intersection_of: RO:0002507 NCBITaxon:33208 ! Metazoa
+relationship: RO:0002507 NCBITaxon:33208 ! Metazoa
+
+[Term]
+id: ENVO:01001110
+name: ecosystem
+def: "An environmental system which includes both living and non-living components." [https://en.wikipedia.org/wiki/Ecosystem]
+is_a: ENVO:01000254 ! environmental system
+
+[Term]
+id: ENVO:01001164
+name: geodiversity
+def: "A quality which inheres in a astronomical body or astronomical body part by virtue of the variation in its material composition, participation in geological processes, and the variation in is land- and hydroforms." [https://en.wikipedia.org/wiki/Geodiversity]
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: ENVO:01001170
+name: active ecosystem management process
+def: "A process during which an ecosystem, its parts, or the processes it participates in are modified by human intervention to accomplish an objective." [https://www.iucn.org/theme/protected-areas/about/protected-areas-categories/category-iv-habitatspecies-management-area]
+synonym: "ecosystem management" EXACT []
+synonym: "environmental management" RELATED []
+synonym: "Umweltmaßnahme" RELATED [www.awi.de/internas] {created_by="https://orcid.org/0000-0002-9620-2832"}
+is_a: ENVO:02500026 ! anthropogenic modulatory intervention process
+is_a: ENVO:02500027 ! anthropogenic environmental process
+relationship: RO:0000057 ENVO:01001110 ! ecosystem
+
+[Term]
+id: ENVO:01001241
+name: crop canopy
+def: "A canopy which is composed of the aboveground portion, or crowns, of a community of crop plants." []
+is_a: ENVO:01000813 ! astronomical body part
+is_a: ENVO:01001242 ! canopy
+relationship: BFO:0000050 ENVO:01001244 ! cropland ecosystem
+
+[Term]
+id: ENVO:01001242
+name: canopy
+def: "A vegetation layer which is formed by a collection of individual plant crowns, themselves constituting part of the aboveground portion of a plant community." [https://en.wikipedia.org/wiki/Canopy_%28biology%29]
+is_a: ENVO:01000355 ! vegetation layer
+
+[Term]
+id: ENVO:01001244
+name: cropland ecosystem
+def: "An ecosystem which 1) is determined by communities of annual crops, perennial woody crops, or by actively tilled land, 2) is primarily used for agricultural activity, and 3) contains no village or larger human settlement." [http://dx.doi.org/10.1890/070062]
+is_a: ENVO:01001790 ! terrestrial ecosystem
+is_a: ENVO:01001828 ! anthropised ecosystem
+relationship: RO:0000056 ENVO:01001442 ! agriculture
+
+[Term]
+id: ENVO:01001275
+name: solid layer
+def: "A layer which is primarily composed of some solid material, allowing for non-solid parts such as interstitial pockets of gas or liquid." []
+is_a: ENVO:01000281 ! layer
+intersection_of: ENVO:01000281 ! layer
+intersection_of: RO:0002473 ENVO:01000814 ! solid environmental material
+relationship: RO:0002473 ENVO:01000814 ! solid environmental material
+
+[Term]
+id: ENVO:01001311
+name: solid surface layer
+def: "A surface layer which is composed primarily of solid environmental material." []
+is_a: ENVO:00010504 ! surface layer
+is_a: ENVO:01001275 ! solid layer
+intersection_of: ENVO:00010504 ! surface layer
+intersection_of: RO:0002473 ENVO:01000814 ! solid environmental material
+
+[Term]
+id: ENVO:01001431
+name: land use process
+def: "An anthropogenic environmental process which includes all human activities undertaken in a natural, semi-natural, or anthropised environment." [https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/11493/144275.pdf, https://en.wikipedia.org/wiki/Land_use]
+is_a: ENVO:01001436 ! planned environmental usage process
+
+[Term]
+id: ENVO:01001434
+name: anthropogenic ecosystem conversion process
+def: "A process during which an ecosystem - natural or anthropised - is changed by the actions of humans." []
+is_a: ENVO:02500027 ! anthropogenic environmental process
+
+[Term]
+id: ENVO:01001436
+name: planned environmental usage process
+def: "A planned process during which humans access and obtain resources, benefits, or services from a natural or anthropised ecosystem." []
+is_a: ENVO:02500027 ! anthropogenic environmental process
+is_a: OBI:0000011 ! planned process
+relationship: BFO:0000051 ENVO:01000952 ! anthropisation
+relationship: BFO:0000051 ENVO:01001170 ! active ecosystem management process
+
+[Term]
+id: ENVO:01001442
+name: agriculture
+def: "A land use process during which terrestrial environments are modified such that they can grow crop plants or allow the rearing of animals to provide food, fiber, medicines, or other products used by humans." [https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/11493/144275.pdf, https://en.wikipedia.org/wiki/Agriculture, https://en.wikipedia.org/wiki/Land_use]
+is_a: ENVO:01001431 ! land use process
+
+[Term]
+id: ENVO:01001483
+name: surface of an astronomical body
+def: "A surface layer where the solid or liquid material of an astronomical body comes into contact with an atmosphere or outer space." []
+synonym: "land surface" RELATED []
+is_a: ENVO:00010504 ! surface layer
+is_a: ENVO:01000813 ! astronomical body part
+intersection_of: ENVO:00010504 ! surface layer
+intersection_of: BFO:0000050 ENVO:01000799 ! astronomical body
+
+[Term]
+id: ENVO:01001684
+name: interface layer
+def: "A layer which separates two portions of environmental material which possess 1) differing compositions, 2) a discontinuity of some property, or 3) some derivative of some property in a direction normal to the interface." []
+is_a: ENVO:01000281 ! layer
+
+[Term]
+id: ENVO:01001686
+name: mass of environmental material
+def: "An object which is composed primarily of an environmental material" []
+is_a: BFO:0000030 ! object
+intersection_of: BFO:0000030 ! object
+intersection_of: RO:0002473 ENVO:00010483 ! environmental material
+relationship: RO:0002473 ENVO:00010483 ! environmental material
+
+[Term]
+id: ENVO:01001687
+name: mass of solid material
+def: "An mass of environmental material which is composed primarily of a solid environmental material" []
+is_a: ENVO:01001686 ! mass of environmental material
+intersection_of: ENVO:01001686 ! mass of environmental material
+intersection_of: RO:0002473 ENVO:01000814 ! solid environmental material
+relationship: RO:0002473 ENVO:01000814 ! solid environmental material
+
+[Term]
+id: ENVO:01001691
+name: mass of compounded environmental materials
+def: "An mass of environmental materials which has appreciable quantities of several individual materials, such that the removal of one would convert the mass into a different entity." []
+is_a: ENVO:01001686 ! mass of environmental material
+intersection_of: ENVO:01001686 ! mass of environmental material
+intersection_of: RO:0002473 ENVO:00010483 {minCardinality="2"} ! environmental material
+
+[Term]
+id: ENVO:01001784
+name: compound astronomical body part
+def: "A part of an astronomical body which is composed of a continuous medium bearing liquid, gaseous, and solid material in variable quantities." [https://en.wikipedia.org/wiki/Landform]
+is_a: ENVO:01000813 ! astronomical body part
+
+[Term]
+id: ENVO:01001785
+name: land
+def: "A surface layer of an astronomical body which is primarily composed of solid material and is not covered by oceans or other bodies of water." [https://en.wiktionary.org/wiki/land]
+is_a: ENVO:00000191 ! solid astronomical body part
+is_a: ENVO:01001311 ! solid surface layer
+is_a: ENVO:01001483 ! surface of an astronomical body
+
+[Term]
+id: ENVO:01001790
+name: terrestrial ecosystem
+def: "An ecosystem which primarily occurs on land." []
+is_a: ENVO:01000813 ! astronomical body part
+is_a: ENVO:01000997 ! environmental system determined by a quality
+is_a: ENVO:01001110 ! ecosystem
+intersection_of: ENVO:01001110 ! ecosystem
+intersection_of: RO:0002507 ENVO:01001785 ! land
+relationship: RO:0002507 ENVO:01001785 ! land
+
+[Term]
+id: ENVO:01001795
+name: ecosystem process
+def: "An environmental process either driven by or primarily impacting the parts or emergent properties of an ecosystem." []
+is_a: ENVO:02500000 ! environmental system process
+intersection_of: ENVO:02500000 ! environmental system process
+intersection_of: RO:0002608 ENVO:01001110 ! ecosystem
+relationship: RO:0002608 ENVO:01001110 ! ecosystem
+
+[Term]
+id: ENVO:01001828
+name: anthropised ecosystem
+def: "An ecosystem which is formed as a result of human activity or impact." []
+is_a: ENVO:01000313 ! anthropogenic environment
+is_a: ENVO:01001110 ! ecosystem
+intersection_of: ENVO:01001110 ! ecosystem
+intersection_of: RO:0002354 ENVO:01000952 ! anthropisation
+
+[Term]
+id: ENVO:02500000
+name: environmental system process
+def: "A process in which includes the components of an environmental system as participants." []
+is_a: BFO:0000015 ! process
+
+[Term]
+id: ENVO:02500026
+name: anthropogenic modulatory intervention process
+def: "A process during which humans apply technology to alter the magnitude, duration, rate, or impact of an environmental process." []
+is_a: OBI:0000011 ! planned process
+intersection_of: OBI:0000011 ! planned process
+intersection_of: RO:0002211 ENVO:02500000 ! environmental system process
+intersection_of: RO:0002608 NCBITaxon:9606 ! Homo sapiens
+relationship: RO:0002211 ENVO:02500000 ! environmental system process
+relationship: RO:0002608 NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: ENVO:02500027
+name: anthropogenic environmental process
+def: "An environmental process which is driven by the action of humans." []
+is_a: ENVO:02500000 ! environmental system process
+intersection_of: ENVO:02500000 ! environmental system process
+intersection_of: RO:0002608 NCBITaxon:9606 ! Homo sapiens
+relationship: RO:0002608 NCBITaxon:9606 ! Homo sapiens
+
+[Term]
+id: ENVO:09200002
+name: environmental system process quality
+def: "The quality of a environmental system process." []
+synonym: "quality of environmental system process" EXACT []
+is_a: PATO:0001236 ! process quality
+intersection_of: PATO:0001236 ! process quality
+intersection_of: RO:0000052 ENVO:02500000 ! environmental system process
+relationship: RO:0000052 ENVO:02500000 ! environmental system process
+
+[Term]
+id: ENVO:2100000
+name: anatomical entity environment
+def: "An environment which is determined by an anatomical entity." []
+is_a: ENVO:01000254 ! environmental system
+intersection_of: ENVO:01000254 ! environmental system
+intersection_of: RO:0002509 UBERON:0001062 ! anatomical entity
+relationship: BFO:0000050 ENVO:01001000 ! environmental system determined by an organism
+relationship: RO:0002509 UBERON:0001062 ! anatomical entity
+
+[Term]
+id: GO:0008150
+name: biological_process
+def: "A biological process is the execution of a genetically-encoded biological module or program. It consists of all the steps required to achieve the specific biological objective of the module. A biological process is accomplished by a particular set of molecular functions carried out by specific gene products (or macromolecular complexes), often in a highly regulated manner and in a particular temporal sequence." []
+synonym: "biological process" EXACT []
+synonym: "physiological process" EXACT []
+synonym: "single organism process" RELATED []
+synonym: "single-organism process" RELATED []
+
+[Term]
+id: NCBITaxon:1
+name: root
+synonym: "all" RELATED synonym []
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: NCBITaxon:10239
+name: Viruses
+is_a: OBI:0100026 ! organism
+
+[Term]
+id: NCBITaxon:117570
+name: Teleostomi
+is_a: NCBITaxon:7776 ! Gnathostomata <vertebrates>
+
+[Term]
+id: NCBITaxon:117571
+name: Euteleostomi
+synonym: "bony vertebrates" EXACT []
+is_a: NCBITaxon:117570 ! Teleostomi
+
+[Term]
+id: NCBITaxon:131567
+name: cellular organisms
+synonym: "biota" RELATED synonym []
+is_a: NCBITaxon:1 ! root
+
+[Term]
+id: NCBITaxon:1338369
+name: Dipnotetrapodomorpha
+is_a: NCBITaxon:8287 ! Sarcopterygii
+
+[Term]
+id: NCBITaxon:1437010
+name: Boreoeutheria
+synonym: "Boreotheria" RELATED []
+is_a: NCBITaxon:9347 ! Eutheria
+
+[Term]
+id: NCBITaxon:2
+name: Bacteria
+synonym: "bacteria" RELATED []
+synonym: "Bacteria (ex Cavalier-Smith 1987)" RELATED []
+synonym: "Bacteria Woese et al. 2024" RELATED []
+synonym: "Bacteriobiota" RELATED []
+synonym: "eubacteria" EXACT []
+synonym: "Monera" RELATED []
+synonym: "Procaryotae" RELATED []
+synonym: "Prokaryota" RELATED []
+synonym: "Prokaryotae" RELATED []
+synonym: "prokaryote" RELATED []
+synonym: "prokaryotes" RELATED []
+is_a: NCBITaxon:131567 ! cellular organisms
+is_a: OBI:0100026 ! organism
+
+[Term]
+id: NCBITaxon:207598
+name: Homininae
+synonym: "Homo/Pan/Gorilla group" RELATED []
+is_a: NCBITaxon:9604 ! Hominidae
+
+[Term]
+id: NCBITaxon:2157
+name: Archaea
+is_a: OBI:0100026 ! organism
+
+[Term]
+id: NCBITaxon:2759
+name: Eukaryota
+synonym: "Eucarya" RELATED synonym []
+synonym: "Eucaryotae" RELATED synonym []
+synonym: "eucaryotes" EXACT genbank_common_name []
+synonym: "Eukarya" RELATED synonym []
+synonym: "Eukaryotae" RELATED synonym []
+synonym: "eukaryotes" EXACT common_name []
+synonym: "eukaryotes" RELATED blast_name []
+is_a: NCBITaxon:131567 ! cellular organisms
+is_a: OBI:0100026 ! organism
+
+[Term]
+id: NCBITaxon:314146
+name: Euarchontoglires
+is_a: NCBITaxon:1437010 ! Boreoeutheria
+
+[Term]
+id: NCBITaxon:314293
+name: Simiiformes
+synonym: "Anthropoidea" RELATED []
+is_a: NCBITaxon:376913 ! Haplorrhini
+
+[Term]
+id: NCBITaxon:314295
+name: Hominoidea
+synonym: "ape" EXACT []
+synonym: "apes" EXACT []
+is_a: NCBITaxon:9526 ! Catarrhini
+
+[Term]
+id: NCBITaxon:32523
+name: Tetrapoda
+synonym: "tetrapods" EXACT []
+is_a: NCBITaxon:1338369 ! Dipnotetrapodomorpha
+
+[Term]
+id: NCBITaxon:32524
+name: Amniota
+synonym: "amniotes" EXACT []
+is_a: NCBITaxon:32523 ! Tetrapoda
+
+[Term]
+id: NCBITaxon:32525
+name: Theria <mammals>
+synonym: "Theria" EXACT []
+is_a: NCBITaxon:40674 ! Mammalia
+
+[Term]
+id: NCBITaxon:33090
+name: Viridiplantae
+synonym: "Chlorobionta" RELATED []
+synonym: "Chlorophyta/Embryophyta group" EXACT []
+synonym: "chlorophyte/embryophyte group" EXACT []
+synonym: "Chloroplastida" RELATED []
+synonym: "green plants" EXACT []
+synonym: "green plants" RELATED []
+is_a: NCBITaxon:2759 ! Eukaryota
+
+[Term]
+id: NCBITaxon:33154
+name: Opisthokonta
+synonym: "Fungi/Metazoa group" RELATED synonym []
+synonym: "opisthokonts" RELATED synonym []
+is_a: NCBITaxon:2759 ! Eukaryota
+
+[Term]
+id: NCBITaxon:33208
+name: Metazoa
+synonym: "Animalia" RELATED []
+synonym: "animals" RELATED []
+synonym: "metazoans" EXACT []
+synonym: "multicellular animals" EXACT []
+is_a: NCBITaxon:33154 ! Opisthokonta
+
+[Term]
+id: NCBITaxon:33213
+name: Bilateria
+is_a: NCBITaxon:6072 ! Eumetazoa
+
+[Term]
+id: NCBITaxon:33511
+name: Deuterostomia
+synonym: "deuterostomes" EXACT []
+is_a: NCBITaxon:33213 ! Bilateria
+
+[Term]
+id: NCBITaxon:376913
+name: Haplorrhini
+is_a: NCBITaxon:9443 ! Primates
+
+[Term]
+id: NCBITaxon:40674
+name: Mammalia
+synonym: "mammals" EXACT []
+synonym: "mammals" RELATED []
+is_a: NCBITaxon:32524 ! Amniota
+
+[Term]
+id: NCBITaxon:6072
+name: Eumetazoa
+is_a: NCBITaxon:33208 ! Metazoa
+
+[Term]
+id: NCBITaxon:7711
+name: Chordata
+synonym: "chordates" EXACT []
+synonym: "chordates" RELATED []
+is_a: NCBITaxon:33511 ! Deuterostomia
+
+[Term]
+id: NCBITaxon:7742
+name: Vertebrata <vertebrates>
+synonym: "Vertebrata" EXACT []
+synonym: "vertebrates" EXACT []
+synonym: "vertebrates" RELATED []
+is_a: NCBITaxon:89593 ! Craniata <chordates>
+
+[Term]
+id: NCBITaxon:7776
+name: Gnathostomata <vertebrates>
+synonym: "Gnathostomata" EXACT []
+synonym: "jawed vertebrates" EXACT []
+is_a: NCBITaxon:7742 ! Vertebrata <vertebrates>
+
+[Term]
+id: NCBITaxon:8287
+name: Sarcopterygii
+is_a: NCBITaxon:117571 ! Euteleostomi
+
+[Term]
+id: NCBITaxon:89593
+name: Craniata <chordates>
+synonym: "Craniata" EXACT []
+is_a: NCBITaxon:7711 ! Chordata
+
+[Term]
+id: NCBITaxon:9347
+name: Eutheria
+synonym: "eutherian mammals" EXACT []
+synonym: "placental mammals" EXACT []
+synonym: "Placentalia" RELATED []
+synonym: "placentals" EXACT []
+synonym: "placentals" RELATED []
+is_a: NCBITaxon:32525 ! Theria <mammals>
+
+[Term]
+id: NCBITaxon:9443
+name: Primates
+synonym: "Primata" RELATED []
+synonym: "primate" EXACT []
+synonym: "primates" RELATED []
+is_a: NCBITaxon:314146 ! Euarchontoglires
+
+[Term]
+id: NCBITaxon:9526
+name: Catarrhini
+is_a: NCBITaxon:314293 ! Simiiformes
+
+[Term]
+id: NCBITaxon:9604
+name: Hominidae
+synonym: "great apes" EXACT []
+synonym: "Pongidae" RELATED []
+is_a: NCBITaxon:314295 ! Hominoidea
+
+[Term]
+id: NCBITaxon:9605
+name: Homo
+synonym: "humans" EXACT []
+is_a: NCBITaxon:207598 ! Homininae
+
+[Term]
+id: NCBITaxon:9606
+name: Homo sapiens
+synonym: "human" EXACT []
+is_a: NCBITaxon:9605 ! Homo
+
+[Term]
+id: OBI:0000011
+name: planned process
+def: "A process that realizes a plan which is the concretization of a plan specification." []
+is_a: BFO:0000015 ! process
+
+[Term]
+id: OBI:0100026
+name: organism
+def: "A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs." []
+is_a: BFO:0000040 ! material entity
+union_of: NCBITaxon:10239 ! Viruses
+union_of: NCBITaxon:2 ! Bacteria
+union_of: NCBITaxon:2157 ! Archaea
+union_of: NCBITaxon:2759 ! Eukaryota
+
+[Term]
+id: PATO:0000001
+name: quality
+def: "A dependent entity that inheres in a bearer by virtue of how the bearer is related to other entities" []
+
+[Term]
+id: PATO:0000051
+name: morphology
+def: "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure." []
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0000057
+name: occurrence
+def: "A quality of a single process inhering in a bearer by virtue of the bearer's occurrence." []
+synonym: "incidence" EXACT []
+synonym: "temporal" BROAD []
+is_a: PATO:0002323 ! temporal distribution quality
+
+[Term]
+id: PATO:0000141
+name: structure
+def: "A morphology quality inhering in a bearer by virtue of the bearer's relative position, shape, arrangements and connectivity of an organism's various parts; the pattern underlying its form." []
+synonym: "conformation" BROAD []
+synonym: "relational structural quality" EXACT []
+is_a: PATO:0000051 ! morphology
+
+[Term]
+id: PATO:0000689
+name: continuous
+def: "A quality of a single process inhering in a bearer by virtue of the bearer's being uninterrupted in time, sequence, substance, or extent." []
+synonym: "uninterrupted" EXACT []
+is_a: PATO:0000057 ! occurrence
+
+[Term]
+id: PATO:0001018
+name: physical quality
+def: "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." []
+synonym: "relational physical quality" EXACT []
+is_a: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0001236
+name: process quality
+def: "A quality which inheres in an process." []
+synonym: "quality of a process" EXACT []
+synonym: "quality of occurrent" EXACT []
+synonym: "quality of process" EXACT []
+synonym: "relational quality of occurrent" EXACT []
+is_a: PATO:0000001 ! quality
+disjoint_from: PATO:0001241 ! physical object quality
+
+[Term]
+id: PATO:0001241
+name: physical object quality
+def: "A quality which inheres in a continuant." []
+synonym: "monadic quality of a continuant" EXACT []
+synonym: "monadic quality of an object" NARROW []
+synonym: "monadic quality of continuant" NARROW []
+synonym: "multiply inhering quality of a physical entity" EXACT []
+synonym: "quality of a continuant" EXACT []
+synonym: "quality of a single physical entity" EXACT []
+synonym: "quality of an object" EXACT []
+synonym: "quality of continuant" EXACT []
+is_a: BFO:0000019 ! quality
+is_a: PATO:0000001 ! quality
+
+[Term]
+id: PATO:0001546
+name: quality of a solid
+def: "A physical quality inhering in a bearer by virtue of the bearer's exhibiting the physical characteristics of an entity characterized by particles arranged such that their shape and volume are relatively stable." []
+synonym: "solidity" EXACT []
+is_a: PATO:0002198 ! quality of a substance
+
+[Term]
+id: PATO:0002062
+name: physical quality of a process
+is_a: PATO:0001236 ! process quality
+
+[Term]
+id: PATO:0002124
+name: laminar
+def: "A quality inhering in a bearer by virtue of the bearer's processing the form of a thin plate sheet or layer." []
+is_a: PATO:0000141 ! structure
+
+[Term]
+id: PATO:0002198
+name: quality of a substance
+def: "A quality inhering in a bearer by virtue of its constitution." []
+is_a: PATO:0001018 ! physical quality
+
+[Term]
+id: PATO:0002323
+name: temporal distribution quality
+def: "A temporal distribution pattern of process occurrences within a regulation/reference process." []
+is_a: PATO:0002062 ! physical quality of a process
+
+[Term]
+id: RO:0002577
+name: system
+def: "A material entity consisting of multiple components that are causally integrated." []
+is_a: BFO:0000040 ! material entity
+
+[Term]
+id: UBERON:0001062
+name: anatomical entity
+def: "Biological entity that is either an individual member of a biological species or constitutes the structural organization of an individual member of a biological species." []
+is_a: BFO:0000004 ! independent continuant
+
+[Typedef]
+id: BFO:0000050
+is_transitive: true
+is_a: RO:0002131
+inverse_of: BFO:0000051
+
+[Typedef]
+id: BFO:0000051
+is_transitive: true
+is_a: RO:0002131
+
+[Typedef]
+id: BFO:0000062
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+holds_over_chain: BFO:0000050 BFO:0000062
+is_transitive: true
+is_a: RO:0002086
+inverse_of: BFO:0000063
+
+[Typedef]
+id: BFO:0000063
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+holds_over_chain: BFO:0000050 BFO:0000063
+is_transitive: true
+is_a: RO:0002222
+
+[Typedef]
+id: RO:0000052
+is_functional: true
+is_a: RO:0002314
+inverse_of: RO:0000053
+
+[Typedef]
+id: RO:0000053
+range: BFO:0000020 ! specifically dependent continuant
+is_inverse_functional: true
+
+[Typedef]
+id: RO:0000056
+domain: BFO:0000002 ! continuant
+range: BFO:0000003 ! occurrent
+inverse_of: RO:0000057
+
+[Typedef]
+id: RO:0000057
+domain: BFO:0000003 ! occurrent
+range: BFO:0000002 ! continuant
+holds_over_chain: BFO:0000051 RO:0000057
+
+[Typedef]
+id: RO:0000080
+is_a: RO:0000052
+inverse_of: RO:0000086
+
+[Typedef]
+id: RO:0000086
+range: BFO:0000019 ! quality
+is_a: RO:0000053
+
+[Typedef]
+id: RO:0002086
+is_transitive: true
+is_a: RO:0002222
+
+[Typedef]
+id: RO:0002131
+holds_over_chain: BFO:0000050 BFO:0000050
+holds_over_chain: BFO:0000051 BFO:0000050 {RO:0002582="true"}
+holds_over_chain: BFO:0000051 RO:0002131
+is_symmetric: true
+is_a: RO:0002323
+transitive_over: BFO:0000050
+
+[Typedef]
+id: RO:0002163
+is_a: RO:0002323
+
+[Typedef]
+id: RO:0002211
+domain: BFO:0000015 ! process
+range: BFO:0000015 ! process
+is_transitive: true
+is_a: RO:0002411
+inverse_of: RO:0002334
+
+[Typedef]
+id: RO:0002219
+is_a: RO:0002220
+inverse_of: RO:0002221
+
+[Typedef]
+id: RO:0002220
+domain: BFO:0000004 ! independent continuant
+range: BFO:0000004 ! independent continuant
+is_a: RO:0002163
+
+[Typedef]
+id: RO:0002221
+is_a: RO:0002220
+
+[Typedef]
+id: RO:0002222
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+
+[Typedef]
+id: RO:0002233
+domain: BFO:0000015 ! process
+is_a: RO:0000057
+inverse_of: RO:0002352
+
+[Typedef]
+id: RO:0002234
+is_a: RO:0000057
+inverse_of: RO:0002353
+
+[Typedef]
+id: RO:0002295
+domain: GO:0008150 ! biological_process
+range: UBERON:0001062 ! anatomical entity
+is_a: RO:0002324
+
+[Typedef]
+id: RO:0002297
+is_a: RO:0002234
+is_a: RO:0002295
+inverse_of: RO:0002354
+
+[Typedef]
+id: RO:0002314
+holds_over_chain: RO:0000052 BFO:0000050 {RO:0002582="true"}
+is_a: RO:0002502
+transitive_over: BFO:0000050
+
+[Typedef]
+id: RO:0002334
+domain: BFO:0000015 ! process
+range: BFO:0000015 ! process
+is_transitive: true
+is_a: RO:0002427
+
+[Typedef]
+id: RO:0002352
+is_a: RO:0000056
+is_a: RO:0002328
+
+[Typedef]
+id: RO:0002353
+is_a: RO:0000056
+is_a: RO:0002328
+
+[Typedef]
+id: RO:0002354
+is_a: RO:0002353
+
+[Typedef]
+id: RO:0002404
+is_a: BFO:0000062
+is_a: RO:0002427
+inverse_of: RO:0002411
+
+[Typedef]
+id: RO:0002411
+is_transitive: true
+is_a: BFO:0000063
+is_a: RO:0002418
+
+[Typedef]
+id: RO:0002418
+is_transitive: true
+is_a: RO:0002501
+inverse_of: RO:0002427
+
+[Typedef]
+id: RO:0002427
+is_transitive: true
+is_a: RO:0002501
+
+[Typedef]
+id: RO:0002473
+domain: BFO:0000040 ! material entity
+range: BFO:0000040 ! material entity
+is_a: BFO:0000051
+
+[Typedef]
+id: RO:0002500
+is_a: RO:0002595
+inverse_of: RO:0002608
+
+[Typedef]
+id: RO:0002501
+domain: BFO:0000003 ! occurrent
+range: BFO:0000003 ! occurrent
+is_a: RO:0002410
+
+[Typedef]
+id: RO:0002506
+domain: BFO:0000002 ! continuant
+range: BFO:0000002 ! continuant
+is_a: RO:0002410
+
+[Typedef]
+id: RO:0002507
+domain: RO:0002577 ! system
+range: BFO:0000040 ! material entity
+is_a: BFO:0000050
+is_a: RO:0002509
+is_a: RO:0002559
+inverse_of: RO:0002508
+
+[Typedef]
+id: RO:0002508
+is_a: RO:0002566
+
+[Typedef]
+id: RO:0002509
+domain: RO:0002577 ! system
+range: BFO:0000040 ! material entity
+holds_over_chain: RO:0002507 BFO:0000050 {RO:0002582="true"}
+is_a: RO:0002131
+is_a: RO:0002506
+
+[Typedef]
+id: RO:0002559
+is_a: RO:0002506
+inverse_of: RO:0002566
+
+[Typedef]
+id: RO:0002566
+domain: BFO:0000002 ! continuant
+range: BFO:0000002 ! continuant
+is_a: RO:0002506
+
+[Typedef]
+id: RO:0002595
+domain: BFO:0000040 ! material entity
+range: BFO:0000015 ! process
+is_a: RO:0002410
+
+[Typedef]
+id: RO:0002608
+is_a: RO:0002410
+
