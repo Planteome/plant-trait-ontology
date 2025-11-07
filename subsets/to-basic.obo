@@ -10,7 +10,6 @@ subsetdef: Triticum_aestivum "Terms_used_for_wheat"
 subsetdef: Zea_mays "Terms_used_for_maize_or_corn"
 default-namespace: plant_trait_ontology
 idspace: dc http://purl.org/dc/elements/1.1/ 
-idspace: obo http://www.geneontology.org/formats/oboInOwl#http://purl.obolibrary.org/obo/ 
 idspace: oboInOwl http://www.geneontology.org/formats/oboInOwl# 
 idspace: swrla http://swrl.stanford.edu/ontologies/3.3/swrla.owl# 
 idspace: terms http://purl.org/dc/terms/ 
@@ -18,14 +17,15 @@ ontology: subsets/to-basic
 property_value: terms:description "An ontology that describes phenotypic traits in plants. Each trait is a distinguishable feature, characteristic, quality or phenotypic feature of a developing or mature plant." xsd:string
 property_value: terms:license http://creativecommons.org/licenses/by/4.0/
 property_value: terms:title "Plant Trait Ontology" xsd:string
+owl-axioms: Prefix(owl:=<http://www.w3.org/2002/07/owl#>)\nPrefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)\nPrefix(xml:=<http://www.w3.org/XML/1998/namespace>)\nPrefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)\nPrefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)\n\n\nOntology(\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace>))\nDeclaration(AnnotationProperty(<http://www.geneontology.org/formats/oboInOwl#id>))\n\n\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> <http://purl.obolibrary.org/obo/TO_0000005> \"plant_trait_ontology\")\nAnnotationAssertion(<http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/TO_0000005> \"TO:0000005\")\n)
 
 [Term]
 id: TO:0000001
-name: carbon sensitivity
-def: "Sensitivity to the carbon content in the growth medium. It plays an important role in the synthesis of various inorganic and organic metabolites such as carbohydrates, lipids, amino acids and peptides and plays a role in various metabolic processes." [Gramene:pankaj_jaiswal]
+name: OBSOLETE carbon sensitivity
+def: "OBSOLETE Sensitivity to the carbon content in the growth medium. It plays an important role in the synthesis of various inorganic and organic metabolites such as carbohydrates, lipids, amino acids and peptides and plays a role in various metabolic processes." [Gramene:pankaj_jaiswal]
 synonym: "carbon deficiency (related)" RELATED []
 synonym: "CBSN (related)" RELATED []
-is_a: TO:0000252 ! non-mineral nutrient sensitivity
+is_obsolete: true
 
 [Term]
 id: TO:0000002
@@ -75,12 +75,12 @@ is_a: TO:0000248 ! primary macronutrient sensitivity
 
 [Term]
 id: TO:0000009
-name: genic male sterility-photoperiod sensitive
-def: "Male sterility affected by photoperiod." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: photoperiod sensitive male sterility
+def: "A plant male sterility trait (TO:0000437) which arises as a result of photoperiod." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "PGMS (related)" RELATED []
 synonym: "photoperiod sensitive genic male sterility (related)" RELATED []
 synonym: "PPDSNGMS (related)" RELATED []
-is_a: TO:0000199 ! genic male sterility
+is_a: TO:0000389 ! nuclear mediated male sterility
 
 [Term]
 id: TO:0000010
@@ -100,11 +100,11 @@ is_a: TO:0000248 ! primary macronutrient sensitivity
 
 [Term]
 id: TO:0000012
-name: hydrogen sensitivity
-def: "Sensitivity to the molecular hydrogen or hydrogen ion content in the growth medium. It plays an important role in the synthesis of various inorganic and organic metabolites such as carbohydrates, lipids, amino acids and peptides and plays a role in the energy metabolism, osmolarity,  etc." [Gramene:pankaj_jaiswal]
+name: OBSOLETE hydrogen sensitivity
+def: "OBSOLETE Sensitivity to the molecular hydrogen or hydrogen ion content in the growth medium. It plays an important role in the synthesis of various inorganic and organic metabolites such as carbohydrates, lipids, amino acids and peptides and plays a role in the energy metabolism, osmolarity,  etc." [Gramene:pankaj_jaiswal]
 synonym: "hydrogen ion sensitivity (related)" RELATED []
 synonym: "molecular hydrogen sensitivity (related)" RELATED []
-is_a: TO:0000252 ! non-mineral nutrient sensitivity
+is_obsolete: true
 
 [Term]
 id: TO:0000013
@@ -126,18 +126,17 @@ is_a: TO:0000847 ! panicle inflorescence morphology trait
 
 [Term]
 id: TO:0000015
-name: oxygen sensitivity
-def: "Sensitivity to the molecular oxygen or reactive oxygen ion content in the growth medium. It plays an important role in the synthesis of various inorganic and organic metabolites such as carbohydrates, lipids, aminoacids and peptides and plays a role in the energy metabolism." [Gramene:pankaj_jaiswal]
+name: OBSOLETE oxygen sensitivity
+def: "OBSOLETE Sensitivity to the molecular oxygen or reactive oxygen ion content in the growth medium. It plays an important role in the synthesis of various inorganic and organic metabolites such as carbohydrates, lipids, aminoacids and peptides and plays a role in the energy metabolism." [Gramene:pankaj_jaiswal]
 synonym: "oxygen deficiency (related)" RELATED []
-is_a: TO:0000252 ! non-mineral nutrient sensitivity
-is_a: TO:0002657 ! oxidative stress
+is_obsolete: true
 
 [Term]
 id: TO:0000016
-name: cobalt sensitivity
-def: "Sensitivity to the cobalt content in the growth medium." [Gramene:pankaj_jaiswal]
+name: OBSOLETE cobalt sensitivity
+def: "OBSOLETE Sensitivity to the cobalt content in the growth medium." [Gramene:pankaj_jaiswal]
 synonym: "COSN (related)" RELATED []
-is_a: TO:0000247 ! other nutrient sensitivity
+is_obsolete: true
 
 [Term]
 id: TO:0000017
@@ -155,7 +154,7 @@ name: boron sensitivity
 def: "Sensitivity to the boron content in the growth medium. It plays an important role in cell division." [Gramene:pankaj_jaiswal]
 synonym: "boron deficiency (related)" RELATED []
 synonym: "BOSN (related)" RELATED []
-is_a: TO:0000080 ! micronutrient sensitivity
+is_a: TO:0000080 ! micronutrient response
 
 [Term]
 id: TO:0000019
@@ -167,6 +166,7 @@ is_a: TO:0000207 ! plant height
 [Term]
 id: TO:0000020
 name: black streak dwarf virus resistance
+def: "A viral disease response trait (TO:0000148) which is caused by a black streaked dwarf virus." [NCBITaxon:10990, TO:Laurel_Cooper]
 synonym: "BSDVRS (related)" RELATED []
 is_a: TO:0000148 ! viral disease response trait
 
@@ -175,14 +175,14 @@ id: TO:0000021
 name: copper sensitivity
 def: "Sensitivity to the copper ion content in the growth medium. Plays a role as cofactor in synthesis of some enzymes important in photosynthesis." [Gramene:pankaj_jaiswal]
 synonym: "CUSN (related)" RELATED []
-is_a: TO:0000080 ! micronutrient sensitivity
+is_a: TO:0000080 ! micronutrient response
 
 [Term]
 id: TO:0000022
-name: stink bug resistance
-def: "Causal agent: Oebalus pugnax." [Gramene:pankaj_jaiswal]
+name: stink bug response trait
+def: "A Hemiptera damage response trait (TO:0001164) caused by a stink bug (Oebalus pugnax)." [Gramene:pankaj_jaiswal, NCBITaxon:1328209, TO:Laurel_Cooper]
 synonym: "SBUGRS (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001164 ! Hemiptera damage response trait
 
 [Term]
 id: TO:0000023
@@ -208,7 +208,7 @@ is_a: TO:0002748 ! ligule morphology trait
 id: TO:0000025
 name: molybdenum sensitivity
 def: "Important for nitrate fixation." [Gramene:pankaj_jaiswal]
-is_a: TO:0000080 ! micronutrient sensitivity
+is_a: TO:0000080 ! micronutrient response
 
 [Term]
 id: TO:0000026
@@ -239,7 +239,7 @@ id: TO:0000029
 name: chlorine sensitivity
 def: "Sensitivity to the chlorine content in the growth medium. Chloride helps regulate the correct pH (acid/alkaline) balance. This is a major electrolyte in the living cell besides sodium and potassium. It is available to the cell mainly in the form of NaCl and KCl salts." [Gramene:pankaj_jaiswal]
 synonym: "CHLORSN (related)" RELATED []
-is_a: TO:0000080 ! micronutrient sensitivity
+is_a: TO:0000080 ! micronutrient response
 
 [Term]
 id: TO:0000030
@@ -250,35 +250,40 @@ is_a: TO:0000347 ! weed damage response trait
 
 [Term]
 id: TO:0000031
-name: silicon sensitivity
-is_a: TO:0000247 ! other nutrient sensitivity
+name: silicon transport trait
+def: "A mineral and ion transport trait (TO:0020096) which involves the uptake and movement of silicon." [TO:Laurel_Cooper]
+is_a: TO:0020096 ! mineral and ion transport trait
 
 [Term]
 id: TO:0000032
-name: selenium sensitivity
-is_a: TO:0000247 ! other nutrient sensitivity
+name: OBSOLETE selenium sensitivity
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0000033
-name: iodine sensitivity
-is_a: TO:0000247 ! other nutrient sensitivity
+name: OBSOLETE iodine sensitivity
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0000034
-name: chromium sensitivity
-def: "Sensitivity to the chromium content in the growth medium." [Gramene:pankaj_jaiswal]
+name: OBSOLETE chromium sensitivity
+def: "OBSOLETE Sensitivity to the chromium content in the growth medium." [Gramene:pankaj_jaiswal]
 synonym: "CHRSN (related)" RELATED []
-is_a: TO:0000247 ! other nutrient sensitivity
+is_obsolete: true
 
 [Term]
 id: TO:0000035
 name: incompatibility trait
-is_a: TO:0000392 ! sterility or fertility trait
+def: "A plant reproductive trait (TO:0000392) which is a genetic barrier preventing fertilization within a plant, or between two different plants." [TO:Laurel_Cooper]
+is_a: TO:0000392 ! plant reproduction trait
 is_a: TO:0000398 ! whole plant morphology trait
 
 [Term]
 id: TO:0000036
 name: hybrid incompatibility
+def: "An incompatibility trait (TO:0000035) which is a genetic barrier preventing fertilization in a cross between two different lines." [TO:Laurel_Cooper]
 synonym: "HYBIC (related)" RELATED []
 is_a: TO:0000035 ! incompatibility trait
 
@@ -292,8 +297,9 @@ is_obsolete: true
 
 [Term]
 id: TO:0000038
-name: fluorine sensitivity
-is_a: TO:0000247 ! other nutrient sensitivity
+name: OBSOLETE fluorine sensitivity
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0000039
@@ -323,9 +329,10 @@ is_a: TO:0000734 ! grain length
 
 [Term]
 id: TO:0000042
-name: f1-hybrid incompatibility
+name: OBSOLETE f1-hybrid incompatibility
+def: "OBSOLETE" []
 synonym: "F1HYBIC (related)" RELATED []
-is_a: TO:0000036 ! hybrid incompatibility
+is_obsolete: true
 
 [Term]
 id: TO:0000043
@@ -353,13 +360,15 @@ is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000046
-name: f2-generation sterility
+name: OBSOLETE f2-generation sterility
+def: "OBSOLETE" []
 synonym: "F2GST (related)" RELATED []
-is_a: TO:0000036 ! hybrid incompatibility
+is_obsolete: true
 
 [Term]
 id: TO:0000047
 name: sporophytic incompatibility
+def: "A self-incompatibility trait (TO:0000310) where the genotype of the plant determines pollen incompatibility." [TO:Laurel_Cooper]
 is_a: TO:0000310 ! self-incompatibility
 
 [Term]
@@ -374,6 +383,7 @@ is_a: TO:0001146 ! Basidiomycete fungal disease response
 [Term]
 id: TO:0000049
 name: gametophytic incompatibility
+def: "A self-incompatibility trait (TO:0000310) where the pollen's genotype determines incompatibility." [TO:Laurel_Cooper]
 synonym: "GPHIC (related)" RELATED []
 is_a: TO:0000310 ! self-incompatibility
 
@@ -409,9 +419,9 @@ is_a: TO:0000050 ! inflorescence branching
 
 [Term]
 id: TO:0000053
-name: pollen sterility
-def: "Observed under a microscope at magnification 10x10 after staining with 1% iodine potassium iodide (IKI) solution. Samples for pollen are collected from anthers and fixed in 70% alcohol. Two to three anthers are extracted from each floret and pollen grains are squeezed out into the IKI solution drop. At least three fields are used to count the sterile pollen grains; unstained withered, unstained spherical and partially stained round and fertile, from stained round pollen grains. Percentage sterility is calculated as = (unstained withered+unstained spherical+partially stained) x 100/total number of pollen grains in the field including the fertile." [Gramene:pankaj_jaiswal, RiceSES:SES]
-is_a: TO:0000437 ! male sterility
+name: OBSOLETE pollen sterility
+def: "OBSOLETE" [Gramene:pankaj_jaiswal, RiceSES:SES]
+is_obsolete: true
 
 [Term]
 id: TO:0000054
@@ -444,8 +454,9 @@ is_a: TO:0000361 ! stem morphology trait
 [Term]
 id: TO:0000057
 name: grain moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of the caryopsis fruit (PO:0030104)." [TO:malaporte]
-is_a: TO:0000162 ! grain quality trait
+def: "A fruit moisture content trait (TO:0000686) which is the amount of moisture in a caryopsis fruit (PO:0030104)." [TO:malaporte]
+is_a: TO:0000686 ! fruit moisture content
+relationship: part_of TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0000058
@@ -455,7 +466,7 @@ comment: It is expected that the herbicide application must not affect the agron
 synonym: "herbicide tolerance (related)" RELATED []
 synonym: "weedicide tolerance (related)" RELATED []
 xref: PECO:0007183
-is_a: TO:0002649 ! pesticide sensitivity
+is_a: TO:0002649 ! pesticide response
 
 [Term]
 id: TO:0000059
@@ -490,10 +501,11 @@ is_a: TO:0000599 ! enzyme activity trait
 [Term]
 id: TO:0000063
 name: mimic response
+def: "A plant stress response trait (TO:0000164) which is the result of mutations that naturally form necrotic lesions in the absence of significant stress or damage and without being harmed by pathogens." [TO:Laurel_Cooper]
 synonym: "disease mimic response (related)" RELATED []
 synonym: "lesion mimic (related)" RELATED []
 synonym: "MIRP (related)" RELATED []
-is_a: TO:0000179 ! biotic plant stress trait
+is_a: TO:0000164 ! plant stress response trait
 
 [Term]
 id: TO:0000064
@@ -517,11 +529,11 @@ is_obsolete: true
 
 [Term]
 id: TO:0000067
-name: genic male sterility-thermo sensitive
-def: "Temperature sensitive male sterility, affected by environment." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: temperature sensitive male sterility
+def: "A plant male sterility trait (TO:0000437) which arises as a result of temperature extremes." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "TGMS (related)" RELATED []
 synonym: "thermo sensitive genic male sterility (related)" RELATED []
-is_a: TO:0000199 ! genic male sterility
+is_a: TO:0000389 ! nuclear mediated male sterility
 
 [Term]
 id: TO:0000068
@@ -556,7 +568,7 @@ def: "The anthocyanin content in a plant structure (PO:0009011)." [ISBN:19850673
 comment: Anthocyanin is the red to purple pigments composed of soluble glycosides of anthocyanidins, present in leaves and floral tissue. Usually the pigment is produced under stress conditions. Amounts of anthocyanin produced depend on stored sugar and sunlight. The more stored sugar in the leaf and brighter the autumn days, the more intense red. Anthocyanin production also increases as phosphates move out of the leaves; the lack of phosphates in young leaves can also lead to the production of anthocyanin.
 synonym: "ANTHCN (related)" RELATED []
 is_a: TO:0000290 ! flavonoid content
-is_a: TO:0000494 ! pigment content trait
+is_a: TO:0000494 ! plant pigment content trait
 
 [Term]
 id: TO:0000072
@@ -574,7 +586,7 @@ id: TO:0000073
 name: manganese sensitivity
 def: "Sensitivity to the manganese content in the growth medium. It is important for activation of some enzymes and role in metal ion homeostasis." [Gramene:pankaj_jaiswal]
 synonym: "MNSN (related)" RELATED []
-is_a: TO:0000080 ! micronutrient sensitivity
+is_a: TO:0000080 ! micronutrient response
 
 [Term]
 id: TO:0000074
@@ -588,8 +600,8 @@ is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000075
-name: light sensitivity
-def: "Response shown by the plant in terms of sensitivity to light stress (quality and quantity of light)." [Gramene:pankaj_jaiswal]
+name: light reponse trait
+def: "Response shown by the plant in terms of sensitivity to light stress (quality and quantity of light)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 is_a: TO:0000161 ! radiation response trait
 
 [Term]
@@ -630,10 +642,10 @@ created_by: cooperl
 
 [Term]
 id: TO:0000080
-name: micronutrient sensitivity
-def: "Sensitivity response shown by the plant grown in either the excess or deficient amount of the micronutrient in the growth medium (soil)." [Gramene:pankaj_jaiswal]
+name: micronutrient response
+def: "A plant nutrient response trait (TO:0000480) shown by the plant grown in either the excess or deficient amount of the micronutrient in the growth medium (soil)." [Gramene:pankaj_jaiswal]
 synonym: "micronutrient deficiency (related)" RELATED []
-is_a: TO:0000480 ! nutrient sensitivity
+is_a: TO:0000480 ! plant nutrient response trait
 
 [Term]
 id: TO:0000081
@@ -648,10 +660,10 @@ is_a: TO:0000078 ! root dry weight
 
 [Term]
 id: TO:0000082
-name: zigzag leafhopper resistance
-def: "Causal agent: Recilia dorsalis (Motschulsky)." [Gramene:pankaj_jaiswal]
+name: zigzag leafhopper response trait
+def: "A Hemiptera damage response trait (TO:0001164) caused by a zigzag leafhopper (Recilia dorsalis)." [Gramene:pankaj_jaiswal, NCBITaxon:1582033, TO:Laurel_Cooper]
 synonym: "ZLFHRS (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001164 ! Hemiptera damage response trait
 
 [Term]
 id: TO:0000083
@@ -665,21 +677,21 @@ is_a: TO:0000084 ! root number
 [Term]
 id: TO:0000084
 name: root number
-def: "A root system morphology trait (TO:0000985) which is the number of roots (PO:0009005) in a root system (PO:0025025)." [Gramene:pankaj_jaiswal, PATO:0001555, TO:Laurel_Cooper]
+def: "A whole plant morphology trait (TO:0000398) which is the number of roots (PO:0009005)." [Gramene:pankaj_jaiswal, PATO:0001555, TO:Laurel_Cooper]
 synonym: "RTNB (related)" RELATED []
 synonym: "tnr (related)" RELATED []
 xref: TO_GIT:357
 is_a: TO:0000043 ! root morphology trait
-is_a: TO:0000985 ! root system morphology trait
+is_a: TO:0000398 ! whole plant morphology trait
 
 [Term]
 id: TO:0000085
-name: leaf rolling
-def: "A leaf morphology trait (TO:0000748) which is the rolling of a leaf preceding the leaf drying stage." [Gramene:jcl, Gramene:pankaj_jaiswal, TO:moorel]
+name: leaf rolling response
+def: "A drought stress response trait (TO:0000394) which is the rolling of a leaf preceding the leaf drying stage." [Gramene:jcl, Gramene:pankaj_jaiswal, TO:moorel]
 comment: Leaf rolling is a feature observed in response to stresses like drought, water and temperature.  If you are annotating to this term, please add an additional annotation to vascular leaf morphology (TO:0000419) or non-vascular leaf morphology trait (TO:0000925), depending on the species.
 synonym: "LFRL (related)" RELATED []
 synonym: "wilting (related)" RELATED []
-is_a: TO:0000748 ! leaf morphology trait
+is_a: TO:0000394 ! drought stress response trait
 
 [Term]
 id: TO:0000086
@@ -693,7 +705,7 @@ is_a: TO:0001145 ! Ascomycete fungal disease response
 [Term]
 id: TO:0000087
 name: grain aroma trait
-def: "The aroma of the cooked/uncooked grains." [Gramene:pankaj_jaiswal, RiceSES:SES]
+def: "A grain quality trait (TO:0000162) which is the aroma of the cooked or uncooked grains." [Gramene:pankaj_jaiswal, RiceSES:SES, TO:Laurel_Cooper]
 comment: It is often associated with the accumulation of the aromatic compound 2-acetyl-1-pyrroline.
 synonym: "AROMA (related)" RELATED []
 synonym: "odour (related)" RELATED []
@@ -772,10 +784,10 @@ is_a: TO:0000237 ! water stress response trait
 [Term]
 id: TO:0000096
 name: ratooning ability
-def: "Regeneration of the main stem and tillers after harvesting in a grass plant." [Gramene:jn, Gramene:pankaj_jaiswal]
+def: "A shoot system growth and development trait (TO:0000654) which is the ability of a plant to regenerate after harvesting, allowing a secod harvest." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "RAAB (related)" RELATED []
-is_a: TO:0000250 ! plant vigor trait
 is_a: TO:0000654 ! shoot system growth and development trait
+relationship: part_of TO:0000250 ! plant vigor trait
 
 [Term]
 id: TO:0000097
@@ -784,6 +796,7 @@ def: "Amount of amylopectin present in a plant structure (PO:0009011)." [ISBN:19
 comment: It is a polysaccharide present in starch. Amylopectin is a polymer of alpha(1,4)-linked glucose units, as is amylose (see amylose). Unlike amylose, amylopectin contains branches of 2430 glucose units connected to the main chain by an alpha(1,6) linkage.
 synonym: "AMYPCTCN (related)" RELATED []
 is_a: TO:0006007 ! polysaccharide content
+relationship: part_of TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0000098
@@ -826,11 +839,13 @@ is_a: TO:0000347 ! weed damage response trait
 
 [Term]
 id: TO:0000102
-name: phosphorus sensitivity
-def: "Sensitivity to the phosphorus content in the growth medium. It is important in various biochemical pathways and storage of energy." [RiceSES:SES]
+name: phosphorus response
+def: "Response to the phosphorus content in the growth medium." [RiceSES:SES]
+comment: Phosphorus is important in various biochemical pathways and storage of energy."
 synonym: "PDef (related)" RELATED []
 synonym: "PHOSN (related)" RELATED []
 synonym: "phosphorus deficiency (related)" RELATED []
+synonym: "phosphorus toxicity (related)" RELATED []
 is_a: TO:0000248 ! primary macronutrient sensitivity
 
 [Term]
@@ -839,7 +854,7 @@ name: deepwater stress
 def: "The sensitivity response shown by the plant growing in a stagnant water for a long period of time (not unlike deepwater presence during flash flooding of the fields)." [Gramene:pankaj_jaiswal]
 synonym: "deep water stress (related)" RELATED []
 synonym: "DWSTR (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_a: TO:0000286 ! submergence response trait
 
 [Term]
 id: TO:0000104
@@ -862,10 +877,10 @@ is_a: TO:0000587 ! endosperm quality
 
 [Term]
 id: TO:0000106
-name: male sterility type
-def: "Represents the different types of male sterility found in plants." [Gramene:pankaj_jaiswal]
+name: OBSOLETE male sterility type
+def: "OBSOLETE Represents the different types of male sterility found in plants." [Gramene:pankaj_jaiswal]
 synonym: "MS (related)" RELATED []
-is_a: TO:0000437 ! male sterility
+is_obsolete: true
 
 [Term]
 id: TO:0000107
@@ -893,18 +908,17 @@ is_a: TO:0002653 ! endosperm storage protein content
 
 [Term]
 id: TO:0000110
-name: wild abortive CMS
-def: "Abortion of microspore development at uni-nucleate stage." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: OBSOLETE wild abortive CMS
+def: "OBSOLETE  Abortion of microspore development at uni-nucleate stage." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "CMS-WA (related)" RELATED []
 synonym: "WACMS (related)" RELATED []
-is_a: TO:0000060 ! aborted uni-nucleate stage
-is_a: TO:0000232 ! rice cytoplasmic male sterility
+is_obsolete: true
 
 [Term]
 id: TO:0000111
 name: genetically engineered male sterility
-def: "The sterility induced by transgenes expressing cytotoxic component." [Gramene:pankaj_jaiswal, RiceSES:SES]
-is_a: TO:0000106 ! male sterility type
+def: "A plant male sterility trait (TO:0000437) which is caused by transgenes expressing cytotoxic component." [Gramene:pankaj_jaiswal, RiceSES:SES]
+is_a: TO:0000437 ! plant male sterility
 
 [Term]
 id: TO:0000112
@@ -926,8 +940,9 @@ is_a: TO:1000012 {is_inferred="true"} ! whole plant size
 
 [Term]
 id: TO:0000114
-name: flooding related trait
-is_a: TO:0000237 ! water stress response trait
+name: OBSOLETE flooding related trait
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0000115
@@ -1052,7 +1067,7 @@ name: far red light sensitivity
 def: "Sensitivity to the far red light content in the growth environment." [Gramene:pankaj_jaiswal]
 synonym: "FRLTSN (related)" RELATED []
 synonym: "Pfr light sensitivity (related)" RELATED []
-is_a: TO:0000265 ! light quality sensitivity
+is_a: TO:0000265 ! light quality response
 
 [Term]
 id: TO:0000131
@@ -1080,11 +1095,12 @@ created_by: jaiswalp
 
 [Term]
 id: TO:0000134
-name: alkali digestion
-def: "Is an indirect measure of gelatinization temperature. Observed by placing six milled-rice kernels in 10ml 1.7% KOH in a shallow container and arrange them so that they do not touch. Let them stand for 23hrs at 30degC temperature and score for spreading. Measure for Alkali digestion is inversely proportional to the gelatinization temperature, e.g. if alkali digestion is low, the gelatinization temperature is high." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: starch alkali digestion
+def: "A starch gelatinization trait (TO:0001167) which is the treatment of starch with an alkali solution, which alters its physical and chemical properties." [Gramene:pankaj_jaiswal, RiceSES:SES, TO:Laurel_Cooper]
+comment: Akali digestion is an indirect measure of gelatinization temperature and is inversely proportional to the gelatinization temperature, e.g. if alkali digestion is low, the gelatinization temperature is high.
 synonym: "AlkD (related)" RELATED []
 synonym: "ALKDIG (related)" RELATED []
-is_a: TO:0000462 ! starch gelatinization temperature
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000135
@@ -1223,10 +1239,10 @@ relationship: part_of TO:0000391 ! seed size
 
 [Term]
 id: TO:0000151
-name: rice skipper resistance
-def: "Causal agent: Pelopidas mathias (Fabricius) and Parnara guttata." [Gramene:pankaj_jaiswal]
+name: OBSOLETE rice skipper resistance
+def: "OBSOLETE Causal agent: Pelopidas mathias (Fabricius) and Parnara guttata." [Gramene:pankaj_jaiswal]
 synonym: "SKIPRS (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_obsolete: true
 
 [Term]
 id: TO:0000152
@@ -1256,10 +1272,10 @@ is_a: TO:0000371 ! yield trait
 
 [Term]
 id: TO:0000154
-name: thrips resistance
+name: rice thrips damage response trait
 def: "Causal agent: Stenchaetothrips biformis. monitored at growth stage 2-3." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "THRIPSRS (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001165 ! Thysanoptera damage response trait
 
 [Term]
 id: TO:0000155
@@ -1293,14 +1309,14 @@ name: red light sensitivity
 def: "Sensitivity to the red light content in the growth environment." [Gramene:pankaj_jaiswal]
 synonym: "Pr light sensitivity (related)" RELATED []
 synonym: "RLTSN (related)" RELATED []
-is_a: TO:0000265 ! light quality sensitivity
+is_a: TO:0000265 ! light quality response
 
 [Term]
 id: TO:0000159
 name: blue light sensitivity
 def: "Sensitivity response observed in an environment illuminated with blue light." [Gramene:pankaj_jaiswal]
 synonym: "BLTSN (related)" RELATED []
-is_a: TO:0000265 ! light quality sensitivity
+is_a: TO:0000265 ! light quality response
 
 [Term]
 id: TO:0000160
@@ -1310,7 +1326,7 @@ synonym: "Ultraviolet light sensitivity (related)" RELATED []
 synonym: "Ultraviolet resistance (related)" RELATED []
 synonym: "UV resistance (related)" RELATED []
 synonym: "UVRS (related)" RELATED []
-is_a: TO:0000265 ! light quality sensitivity
+is_a: TO:0000265 ! light quality response
 
 [Term]
 id: TO:0000161
@@ -1339,7 +1355,7 @@ synonym: "IAA response (related)" RELATED []
 synonym: "IAA sensitivity (related)" RELATED []
 synonym: "indole-3-acetic acid response (related)" RELATED []
 synonym: "indole-3-acetic acid sensitivity (related)" RELATED []
-is_a: TO:0000401 ! plant growth hormone sensitivity
+is_a: TO:0000401 ! plant growth hormone response
 
 [Term]
 id: TO:0000164
@@ -1369,14 +1385,14 @@ synonym: "GASN (related)" RELATED []
 synonym: "GB response (related)" RELATED []
 synonym: "gibberellic acid response (related)" RELATED []
 synonym: "Gibberellin response (related)" RELATED []
-is_a: TO:0000401 ! plant growth hormone sensitivity
+is_a: TO:0000401 ! plant growth hormone response
 
 [Term]
 id: TO:0000167
 name: cytokinin sensitivity
 def: "Sensitivity to the cytokinin content in the growth medium or external application." [Gramene:pankaj_jaiswal]
 synonym: "CKSN (related)" RELATED []
-is_a: TO:0000401 ! plant growth hormone sensitivity
+is_a: TO:0000401 ! plant growth hormone response
 
 [Term]
 id: TO:0000168
@@ -1388,19 +1404,18 @@ is_a: TO:0000164 ! plant stress response trait
 
 [Term]
 id: TO:0000169
-name: chinsurah boro CMS
-def: "Abortion of microspore development at trinucleate stage." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: OBSOLETE chinsurah boro CMS
+def: "OBSOLETE Abortion of microspore development at trinucleate stage." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "BOROCMS (related)" RELATED []
 synonym: "CMS-boro (related)" RELATED []
-is_a: TO:0000026 ! aborted tri-nucleate stage
-is_a: TO:0000232 ! rice cytoplasmic male sterility
+is_obsolete: true
 
 [Term]
 id: TO:0000170
-name: elongation ability
-def: "Some plants can elongate and grow in areas annually flooded to varying depths. The scale is based on the performance of check varieties. Specify water depth under which the data was recorded." [RiceSES:SES]
+name: shoot elongation under submergence
+def: "A submergence tolerance trait (TO:0000524) which is the ability of a plant to grow taller to survive flooding or submergence." [RiceSES:SES, TO:Laurel_Cooper]
 synonym: "Elon (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_a: TO:0000524 ! submergence tolerance
 
 [Term]
 id: TO:0000171
@@ -1415,7 +1430,7 @@ id: TO:0000172
 name: jasmonic acid sensitivity
 def: "Sensitivity to the jasmonic acid content in the growth medium or on external application." [Gramene:pankaj_jaiswal]
 synonym: "JASN (related)" RELATED []
-is_a: TO:0000401 ! plant growth hormone sensitivity
+is_a: TO:0000401 ! plant growth hormone response
 
 [Term]
 id: TO:0000173
@@ -1423,7 +1438,7 @@ name: ethylene sensitivity
 def: "Sensitivity to ethylene (C2H2) content in the growth medium or the environment." [Gramene:pankaj_jaiswal]
 synonym: "ETHSN (related)" RELATED []
 synonym: "ethylene response (related)" RELATED []
-is_a: TO:0000401 ! plant growth hormone sensitivity
+is_a: TO:0000401 ! plant growth hormone response
 
 [Term]
 id: TO:0000174
@@ -1443,10 +1458,10 @@ is_a: TO:0000770 ! bacterial blight disease resistance
 
 [Term]
 id: TO:0000176
-name: macronutrient sensitivity
-def: "A nutrient sensitivity (TO:0000480) response shown by the plant grown in either an excess or deficient amount of the macronutrient in the growth medium." [Gramene:pankaj_jaiswal]
+name: macronutrient response
+def: "A plant nutrient response trait (TO:0000480) shown by the plant grown in either an excess or deficient amount of the macronutrient in the growth medium." [Gramene:pankaj_jaiswal]
 synonym: "macronutrient deficiency (related)" RELATED []
-is_a: TO:0000480 ! nutrient sensitivity
+is_a: TO:0000480 ! plant nutrient response trait
 
 [Term]
 id: TO:0000177
@@ -1496,7 +1511,7 @@ id: TO:0000182
 name: insecticide sensitivity
 def: "The tolerance exhibited by a plant or a group of plants (population) towards the applied insecticide." [TO:moorel]
 synonym: "insecticide tolerance (related)" RELATED []
-is_a: TO:0002649 ! pesticide sensitivity
+is_a: TO:0002649 ! pesticide response
 
 [Term]
 id: TO:0000183
@@ -1565,17 +1580,10 @@ relationship: part_of TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000191
-name: rice hispa resistance
-def: "Causal agent: Dicladispa armigera." [Gramene:pankaj_jaiswal]
+name: rice hispa beetle response
+def: "A Coleoptera damage response trait (TO:0001160) which is caused by the rice hispa beetle (Dicladispa armigera)." [Gramene:pankaj_jaiswal, NCBITaxon:111238, TO:Laurel_Cooper]
 synonym: "HISPRS (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
-
-[Term]
-id: TO:0000192
-name: leaf-roller resistance
-def: "Causal agent: Cnaphalocrocis medinalis." [Gramene:pankaj_jaiswal]
-synonym: "LFRRS (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001160 ! Coleoptera damage response trait
 
 [Term]
 id: TO:0000193
@@ -1611,8 +1619,7 @@ synonym: "Amy (related)" RELATED []
 synonym: "AMYCN (related)" RELATED []
 xref: CHEBI:28102
 is_a: TO:0006007 ! polysaccharide content
-relationship: part_of TO:0000489 ! carbohydrate composition related trait
-relationship: part_of TO:0001069 ! cooking quality trait
+relationship: part_of TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0000197
@@ -1628,16 +1635,16 @@ is_a: TO:0002748 ! ligule morphology trait
 [Term]
 id: TO:0000198
 name: rootless
-def: "Absence of roots in the seedling or plant." [Gramene:pankaj_jaiswal]
+def: "A root number trait (TO:0000084) which is the absence of roots in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "RTMIN (related)" RELATED []
-is_a: TO:0000043 ! root morphology trait
-is_a: TO:0000398 ! whole plant morphology trait
+is_a: TO:0000084 ! root number
 
 [Term]
 id: TO:0000199
-name: genic male sterility
+name: OBSOLETE genic male sterility
+def: "OBSOLETE" []
 synonym: "GMS (related)" RELATED []
-is_a: TO:0000106 ! male sterility type
+is_obsolete: true
 
 [Term]
 id: TO:0000200
@@ -1661,7 +1668,7 @@ name: germination ratio
 def: "Ratio of germinated to non-germinated seeds." [Gramene:pankaj_jaiswal]
 synonym: "GERMRO (related)" RELATED []
 is_a: TO:0000250 ! plant vigor trait
-is_a: TO:0000345 ! seed viability
+is_a: TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0000203
@@ -1684,11 +1691,12 @@ is_a: TO:0000175 ! rice bacterial blight disease resistance
 
 [Term]
 id: TO:0000205
-name: white-backed planthopper resistance
-def: "Causal agent: Sagotella furcifera. Symptoms: partial to pronounced yellowing and increasing severity of stunting. Extreme signs are wilting and death of plants. Infested areas in the field may be patchy. (similar to the symptoms of whitebacked planthopper)." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: white-backed planthopper response trait
+def: "A Hemiptera damage response trait (TO:0001164) caused by a white-backed planthopper (Sogatella furcifera)." [Gramene:pankaj_jaiswal, NCBITaxon:113103, RiceSES:SES, TO:Laurel_Cooper]
+comment: Symptoms include partial to pronounced yellowing and increasing severity of stunting. Extreme signs are wilting and death of plants.
 synonym: "WBPH (related)" RELATED []
 synonym: "WBPHRS (related)" RELATED []
-is_a: TO:0000348 ! sogatodes resistance
+is_a: TO:0001164 ! Hemiptera damage response trait
 
 [Term]
 id: TO:0000206
@@ -1747,18 +1755,19 @@ relationship: part_of TO:0000225 ! stamen number
 [Term]
 id: TO:0000211
 name: starch gel consistency
-def: "Scored by gel consistency type in mm." [RiceSES:SES]
+def: "A starch gelatinization trait (TO:0001167) which is the texture, firmness, and flow properties of a starch." [RiceSES:SES, TO:Laurel_Cooper]
 synonym: "GelC (related)" RELATED []
 synonym: "GELCON (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000212
-name: green leafhopper resistance
-def: "Causal agent: Nephotettix spp. (Nephotettix virescens and Nephotettix cincticeps). It is the major vector for transmitting the tungro virus disease. Symptoms: Partial to pronounced yellowing and increasing severity of stunting. Extreme signs are wilting to death of plants. Infected areas in the field may be patchy." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: green leafhopper response trait
+def: "A Hemiptera damage response trait (TO:0001164) caused by a green leafhopper (Nephotettix spp.)." [Gramene:pankaj_jaiswal, NCBITaxon:94399, RiceSES:SES, TO:Laurel_Cooper]
+comment: Green leafhopper is the major vector for transmitting the Tungro virus disease (TO:0000413). Symptoms include partial to pronounced yellowing and increasing severity of stunting. Extreme signs range from wilting to death of plants. Infected areas in the field may be patchy.
 synonym: "GLFHRS (related)" RELATED []
 synonym: "GLH (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001164 ! Hemiptera damage response trait
 
 [Term]
 id: TO:0000213
@@ -1792,11 +1801,11 @@ is_obsolete: true
 
 [Term]
 id: TO:0000217
-name: genic male sterility-thermo-photoperiod sensitive
-def: "Male sterility affected by both temperature and photoperiod." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: OBSOLETE genic male sterility-thermo-photoperiod sensitive
+def: "OBSOLETE  Male sterility affected by both temperature and photoperiod." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "thermo-photoperiod sensitive genic male sterility (related)" RELATED []
 synonym: "TPGMS (related)" RELATED []
-is_a: TO:0000199 ! genic male sterility
+is_obsolete: true
 
 [Term]
 id: TO:0000218
@@ -1804,7 +1813,7 @@ name: pollen abortion type
 def: "Observations are made on staining behavior and number of nuclei in most of the pollen." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "abortion pattern (related)" RELATED []
 synonym: "abortion pattern of male sterile lines (related)" RELATED []
-is_a: TO:0000437 ! male sterility
+is_a: TO:0000437 ! plant male sterility
 
 [Term]
 id: TO:0000219
@@ -1815,11 +1824,12 @@ is_obsolete: true
 
 [Term]
 id: TO:0000220
-name: rice bug resistance
-def: "Causal agent: Leptocorisa oratorius. Monitored at growth stage 7-9, resistance is a measure of damaged grains per panicle." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice bug response trait
+def: "A Hemiptera damage response trait (TO:0001164) caused by a rice bug (Leptocorisa oratorius)." [Gramene:pankaj_jaiswal, NCBITaxon:2724160, RiceSES:SES, TO:Laurel_Cooper]
+comment: Damage is monitored at growth stage 7-9, response is a measure of damaged grains per panicle.
 synonym: "BUGRS (related)" RELATED []
 synonym: "RB (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001164 ! Hemiptera damage response trait
 
 [Term]
 id: TO:0000221
@@ -1861,7 +1871,7 @@ def: "Sensitivity to the iron ion content in the growth medium. It is important 
 synonym: "FESN (related)" RELATED []
 synonym: "FeTox (related)" RELATED []
 synonym: "iron toxicity (related)" RELATED []
-is_a: TO:0000080 ! micronutrient sensitivity
+is_a: TO:0000080 ! micronutrient response
 
 [Term]
 id: TO:0000225
@@ -1907,7 +1917,7 @@ id: TO:0000229
 name: photoperiod sensitivity trait
 def: "Sensitivity response on the plant development and the related growth stages by the duration of light, to which the plant has been exposed." [Gramene:pankaj_jaiswal]
 synonym: "PPDSN (related)" RELATED []
-is_a: TO:0000075 ! light sensitivity
+is_a: TO:0000075 ! light reponse trait
 
 [Term]
 id: TO:0000230
@@ -1929,11 +1939,11 @@ is_a: TO:0000587 ! endosperm quality
 
 [Term]
 id: TO:0000232
-name: rice cytoplasmic male sterility
-def: "Caused by the interaction of cytoplasmic (mitochondrial) and nuclear genomes. The trait shows non-mendelian inheritance or maternal inheritance." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: OBSOLETE rice cytoplasmic male sterility
+def: "OBSOLETE Caused by the interaction of cytoplasmic (mitochondrial) and nuclear genomes. The trait shows non-mendelian inheritance or maternal inheritance." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "CMS (related)" RELATED []
 synonym: "cytoplasmic male sterility (sensu Oryza) (exact)" EXACT []
-is_a: TO:0000580 ! cytoplasmic male sterility
+is_obsolete: true
 
 [Term]
 id: TO:0000233
@@ -1973,10 +1983,10 @@ is_a: TO:0000168 ! abiotic plant stress response trait
 
 [Term]
 id: TO:0000238
-name: growth media composition sensitivity
-def: "A chemical stress sensitivity (TO:0000238) which is the response by the plant to a specific growth medium." [TO:moorel]
+name: OBSOLETE growth media composition response
+def: "OBSOLETE A chemical stress response (TO:0000238) which is the response by a plant to a specific component of the growth medium." [TO:Laurel_Cooper, TO:moorel]
 synonym: "edaphic (related)" RELATED []
-is_a: TO:0000482 ! chemical stress sensitivity
+is_obsolete: true
 
 [Term]
 id: TO:0000239
@@ -2011,7 +2021,7 @@ is_obsolete: true
 [Term]
 id: TO:0000243
 name: in vitro regeneration ability
-def: "Measured as number of calli capable of differentiating into roots and(or) shoots under in vitro tissue culture condition." [Gramene:pankaj_jaiswal]
+def: "A plant vigor trait (TO:0000250) which is the capacity of plant cells, tissues, or organs, when cultured in a controlled, artificial environment, to develop into new, complete plants." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "INVRAB (related)" RELATED []
 is_a: TO:0000250 ! plant vigor trait
 
@@ -2033,23 +2043,24 @@ is_a: TO:0000218 ! pollen abortion type
 
 [Term]
 id: TO:0000246
-name: rice delphacid resistance
-def: "Causal agent: Sogatodes oryzicola (Tagosodes orizicolus). Symptoms: partial to pronounced yellowing and increasing severity of stunting. Extreme signs are wilting and death of plants. Infested areas in the field may be patchy. (similar to the symptoms of whitebacked planthopper)." [Gramene:pankaj_jaiswal, RiceSES:SES]
-comment: The evaluation scales are based on symptoms. Incidence of dead plants could be considered for final evaluation.
+name: rice delphacid response trait
+def: "A Hemiptera damage response trait (TO:0001164) caused by a rice delphacid bug (Tagosodes orizicolus)." [Gramene:pankaj_jaiswal, RiceSES:SES]
+comment: Symptoms include partial to pronounced yellowing and increasing severity of stunting. Extreme signs are wilting and death of plants. Formerly called Sogatodes oryzicola.
 synonym: "DELRS (related)" RELATED []
 synonym: "RDel (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001164 ! Hemiptera damage response trait
 
 [Term]
 id: TO:0000247
-name: other nutrient sensitivity
-is_a: TO:0000480 ! nutrient sensitivity
+name: OBSOLETE other nutrient sensitivity
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0000248
 name: primary macronutrient sensitivity
 def: "A macronutrient sensitivity (TO:0000176) response shown by the plant either grown in an excess or deficient amount of the primary macronutrient in the growth medium." [TO:moorel]
-is_a: TO:0000176 ! macronutrient sensitivity
+is_a: TO:0000176 ! macronutrient response
 
 [Term]
 id: TO:0000249
@@ -2074,26 +2085,27 @@ is_a: TO:0000387 ! plant trait
 id: TO:0000251
 name: secondary macronutrient sensitivity
 def: "A macronutrient sensitivity (TO:0000176) response shown by the plant either grown in an excess or deficient amount of the secondary macronutrient in the growth medium." [TO:moorel]
-is_a: TO:0000176 ! macronutrient sensitivity
+is_a: TO:0000176 ! macronutrient response
 
 [Term]
 id: TO:0000252
-name: non-mineral nutrient sensitivity
-def: "Sensitivity response shown by the plant grown in either the excess or deficient amount of the non-mineral nutrients in the growth medium. These nutrients are found in the air and water." [Gramene:pankaj_jaiswal]
-is_a: TO:0000480 ! nutrient sensitivity
+name: OBSOLETE non-mineral nutrient sensitivity
+def: "OBSOLETE A plant nutrient response trait (TO:0000480) shown by the plant grown in either the excess or deficient amount of the non-mineral nutrients in the growth medium. These nutrients are found in the air and water." [Gramene:pankaj_jaiswal]
+is_obsolete: true
 
 [Term]
 id: TO:0000253
 name: seed dormancy
 synonym: "SDDOR (related)" RELATED []
 is_a: TO:0000653 ! seed growth and development trait
+relationship: part_of TO:0001159 ! grain dormancy
 
 [Term]
 id: TO:0000254
-name: growth media pH sensitivity
-def: "A growth media composition sensitivity (TO:0000238) which is the response of the plant to the pH of the growth media (soil/culture media), whether it be acidic or alkaline." [Gramene:pankaj_jaiswal, TO:moorel]
+name: response to pH
+def: "A chemical stress response trait (TO:0000482) which is the response of the plant to the pH of the growth enviroment." [Gramene:pankaj_jaiswal, TO:moorel]
 synonym: "soil pH stress (related)" RELATED []
-is_a: TO:0000238 ! growth media composition sensitivity
+is_a: TO:0000482 ! chemical stress response
 
 [Term]
 id: TO:0000255
@@ -2177,11 +2189,11 @@ relationship: part_of TO:0000536 ! spikelet floret color
 
 [Term]
 id: TO:0000265
-name: light quality sensitivity
-def: "Response shown by the plant in the presence of  a light quality stress." [Gramene:pankaj_jaiswal]
+name: light quality response
+def: "A light response trait (TO:0000075) which is determined by the light quality." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 comment: Light quality is defined by the wavelength of the light type.
-synonym: "response to light quality (related)" RELATED []
-is_a: TO:0000075 ! light sensitivity
+synonym: "sensitivity to light quality (related)" RELATED []
+is_a: TO:0000075 ! light reponse trait
 
 [Term]
 id: TO:0000266
@@ -2193,7 +2205,6 @@ synonym: "chalkiness of endosperm (related)" RELATED []
 synonym: "Clk (related)" RELATED []
 xref: TO_GIT:133
 is_a: TO:0000575 ! endosperm morphology trait
-relationship: part_of TO:0000489 ! carbohydrate composition related trait
 relationship: part_of TO:0000587 ! endosperm quality
 
 [Term]
@@ -2252,11 +2263,11 @@ is_obsolete: true
 
 [Term]
 id: TO:0000273
-name: armyworm resistance
-def: "Causal agent: Pseudaletia unipuncta, Spodoptera mauritia and Spodoptera praefica. The swarming caterpillars cause severe damage to rice plants in nursery beds." [Gramene:pankaj_jaiswal, http://pne.gsnu.ac.kr/riceipm/spodopte.htm, http://www.ipm.ucdavis.edu/PMG/r682300411.html]
-comment: The worms appear suddenly in masses and move like an army from field to field so that seedbeds or the direct seeded fields look as if grazed by cattles. Generally, a transplanted crop is not severely affected. Damage by armyworms is most serious during periods of stem elongation and grain formation. Larvae defoliate plants, typically by chewing angular pieces off leaves. They may also feed on the panicle near the developing kernels causing these kernels to dry before filling. This feeding causes all or parts of the panicle to  turn white. If the entire panicle is white, the damage may also be due to stem rot or feeding by rats. The  seriousness of armyworm injury depends on the maturity of the plant and the amount of tissue consumed. Significant yield reduction can occur if defoliation is greater than 25% at 2 to 3 weeks before heading. They migrate from field to field and extensive losses are often caused within a week. Their migration is facilitated by the absence of standing water in the field.
+name: armyworm response trait
+def: "A Lepidoptera damage response trait (TO:0001162) which is caused by a true armyworm (Mythimna unipuncta)." [Gramene:pankaj_jaiswal, https://ipm.ucanr.edu/agriculture/rice/armyworms/#gsc.tab=0, NCBITaxon:103831, TO:Laurel_Cooper]
+comment: The swarming caterpillars cause severe damage to rice plants in nursery beds.
 synonym: "AWRRS (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001162 ! Lepidoptera damage response trait
 
 [Term]
 id: TO:0000274
@@ -2321,7 +2332,8 @@ is_a: TO:0000296 ! vegetative vigor
 [Term]
 id: TO:0000281
 name: metabolite content trait
-def: "The trait associated with an assay to determine the affected metabolite's profile." [Gramene:pankaj_jaiswal]
+def: "A biochemical trait (TO:0000277) which is the amount of a metabolite in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+comment: Plant metabolites are organic compounds produced by plants, categorized broadly into primary and secondary metabolites, each serving distinct roles in plant life. Primary metabolites, which include amino acids, vitamins, carbohydrates, lipids, proteins, and nucleic acids, are essential for growth and development. Secondary metabolites are not directly involved in basic growth but often have important ecological functions. Examples include antibiotics and pigments, terpenoids, glucosinolates, alkaloids, phenolic compounds, and lignin.
 is_a: TO:0000277 ! biochemical trait
 
 [Term]
@@ -2357,17 +2369,18 @@ is_a: TO:0000599 ! enzyme activity trait
 
 [Term]
 id: TO:0000285
-name: nodal tillering
-is_a: TO:0000329 ! tillering ability
+name: OBSOLETE nodal tillering
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0000286
-name: submergence sensitivity
-def: "Measure of sensitivity of a plant if placed under submergence condition." [IRiceSES:SES]
+name: submergence response trait
+def: "A water stress response trait (TO:0000237) as a result of flooding or submergence in water." [RiceSES:SES, TO:Laurel_Cooper]
 synonym: "Sub (related)" RELATED []
 synonym: "submergence tolerance (related)" RELATED []
 synonym: "SUBSN (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_a: TO:0000237 ! water stress response trait
 
 [Term]
 id: TO:0000287
@@ -2404,10 +2417,10 @@ is_a: TO:0000496 ! carotenoid content
 [Term]
 id: TO:0000290
 name: flavonoid content
-def: "A phytochemical compound content trait (TO:0000674) which is the amount of flavonoid (CHEBI:47916) in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+def: "A polyphenol content trait (TO:0001172) which is the amount of flavonoid (CHEBI:47916) in a plant structure (PO:0009011)." [CHEBI:47916, Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 comment: Flavonoids are water soluble polyphenolic molecules containing 15 carbon atoms. Flavonoids belong to the polyphenol family and have antioxidant activity.
 xref: CHEBI:47916
-is_a: TO:0000674 ! phytochemical compound content
+is_a: TO:0001172 ! polyphenol compound content
 relationship: part_of TO:0001143 ! antioxidant activity trait
 
 [Term]
@@ -2466,13 +2479,11 @@ is_a: TO:0000250 ! plant vigor trait
 [Term]
 id: TO:0000297
 name: glucosamine content
-def: "An oligosaccharide content (TO:0006003) which is the amount of glucosamine (CHEBI:5417) in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
-comment: It is one of the most abundant natural polysaccharide.
+def: "The amount of glucosamine (CHEBI:5417) in a plant structure (PO:0009011)." [CHEBI:5417, Gramene:pankaj_jaiswal, ISBN:0198506732]
+comment: Glucosamine is an amino sugar and is one of the most abundant natural monosaccharides.
 synonym: "2-amino-2-deoxyglucopyranose content (related)" RELATED []
 synonym: "GLUCNCN (related)" RELATED []
-xref: CHEBI:5417
-xref: ISBN:198506732
-is_a: TO:0006003 ! oligosaccharide content
+is_a: TO:0006006 ! monosaccharide content
 
 [Term]
 id: TO:0000298
@@ -2524,7 +2535,8 @@ is_obsolete: true
 [Term]
 id: TO:0000303
 name: low temperature stress response
-def: "A temperature stress response trait (TO:0000432) which is the response to colder than normal growth conditions." [TO:Laurel_Cooper] {comment="Cold temperature stress varies from chilling to freezing and varies depending upon the species of the plant. Some plants survive low temperatutre by undergoing cold acclimation, while other plants require a period of low temperature (vernalization) in order to flower."}
+def: "A temperature stress response trait (TO:0000432) which is the response to colder than normal growth conditions." [TO:Laurel_Cooper]
+comment: Cold temperature stress varies from chilling to freezing and varies depending upon the species of the plant. Some plants survive low temperatutre by undergoing cold acclimation, while other plants require a period of low temperature (vernalization) in order to flower.
 synonym: "COLDTL (related)" RELATED []
 synonym: "CTol (related)" RELATED []
 is_a: TO:0000432 ! temperature stress response trait
@@ -2569,16 +2581,16 @@ is_a: TO:0006006 ! monosaccharide content
 
 [Term]
 id: TO:0000308
-name: male fertility restoration trait
-def: "Describes the extent of fertile pollen percentage. Also refers to male sterility-measure (extent of sterility)." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: pollen fertility restoration trait
+def: "A pollen fertility trait (TO:0000421) where the formerly male sterile pollen becomes fertile." [Gramene:pankaj_jaiswal, RiceSES:SES, TO:Laurel_Cooper]
 synonym: "male fertility restoration in F1 hybrids (related)" RELATED []
 synonym: "MALERF (related)" RELATED []
-is_a: TO:0000497 ! fertility restoration trait
+is_a: TO:0000421 ! pollen fertility
 
 [Term]
 id: TO:0000310
 name: self-incompatibility
-def: "Self-incompatibility allows plants to recognize and reject pollen from the same plant, thereby reducing inbreeding." [PMID:10066554]
+def: "An incompatibility trait (TO:0000035) which is a genetic barrier preventing self-pollination." [PMID:10066554, TO:Laurel_Cooper]
 comment: In most cases self-incompatibility is controlled by a single genetic locus, recent results show that complex signal transduction pathways and many players are involved in pollen recognition and rejection.
 synonym: "Genetic self-incompatibility (related)" RELATED []
 is_a: TO:0000035 ! incompatibility trait
@@ -2648,10 +2660,10 @@ is_a: TO:0000283 ! biological process trait
 
 [Term]
 id: TO:0000317
-name: cutworm resistance
-def: "Causal agent: Spodoptera litura." [Gramene:pankaj_jaiswal]
+name: cutworm response trait
+def: "A Lepidoptera damage response trait (TO:0001162) which is caused by a cutworm (Spodoptera litura)." [Gramene:pankaj_jaiswal, NCBITaxon:69820, TO:Laurel_Cooper]
 synonym: "CUWRRS (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001162 ! Lepidoptera damage response trait
 
 [Term]
 id: TO:0000318
@@ -2738,27 +2750,27 @@ is_a: TO:0000371 ! yield trait
 id: TO:0000328
 name: sucrose content
 def: "The amount of sucrose present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+comment: Sucrose is a disaccharide consisting of glucose and fructose joined together.
 synonym: "saccharose content (related)" RELATED []
 synonym: "SUCROSECN (related)" RELATED []
 is_a: TO:0006003 ! oligosaccharide content
-is_a: TO:0006007 ! polysaccharide content
 
 [Term]
 id: TO:0000329
-name: tillering ability
-def: "Degree of tillering is affected by variety, spacing of plants in the field, season of planting, and environmental conditions e.g. nitrogen levels." [Gramene:pankaj_jaiswal, ISBN:9712200299]
+name: tiller formation trait
+def: "A shoot system growth and development trait (TO:0000654) which is the formation of a basal axillary shoot system (tiller; PO:0005001)." [ISBN:9712200299, TO:Laurel_Cooper]
+comment: The degree of tillering is affected by variety, spacing of plants in the field, season of planting and environmental conditions e.g. nitrogen levels.
 synonym: "Ti (related)" RELATED []
 synonym: "TIAB (related)" RELATED []
 is_a: TO:0000654 ! shoot system growth and development trait
 
 [Term]
 id: TO:0000330
-name: outcrossing potential
-def: "It is a measure of percent seed set on the out-pollinated primary panicle." [Gramene:pankaj_jaiswal, RiceSES:SES]
-comment: .
+name: OBSOLETE outcrossing potential
+def: "OBSOLETE It is a measure of percent seed set on the out-pollinated primary panicle." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "extent of outcrossing (related)" RELATED []
 synonym: "extent of outcrossing on male sterile lines (related)" RELATED []
-is_a: TO:0000392 ! sterility or fertility trait
+is_obsolete: true
 
 [Term]
 id: TO:0000331
@@ -2777,11 +2789,11 @@ is_a: TO:0000599 ! enzyme activity trait
 
 [Term]
 id: TO:0000332
-name: rice whorl maggot resistance
-def: "Causal agent: Hydrellia philippina. Symptoms: Leaf margin feeding causes conspicuous damage and sometimes stunting of plants." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: OBSOLETE rice whorl maggot response trait
+def: "OBSOLETE" [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "RWM (related)" RELATED []
 synonym: "RWMRS (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_obsolete: true
 
 [Term]
 id: TO:0000333
@@ -2825,7 +2837,7 @@ comment: Less is the tiller angle compared to water surface the least is the cha
 synonym: "KnA (related)" RELATED []
 synonym: "KNEAB (related)" RELATED []
 synonym: "tiller angle (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_a: TO:0000286 ! submergence response trait
 
 [Term]
 id: TO:0000338
@@ -2860,7 +2872,6 @@ id: TO:0000341
 name: OBSOLETE plant genetic trait
 alt_id: TO:0000005
 def: "OBSOLETE. A plant genetic trait is a distinguishable feature or a characteristic or a quality of character or a phenotypic feature of a developing or developed plant species which is genetically linked to a physical or genetic marker" [Gramene:pankaj_jaiswal]
-synonym: "obsolete trait term (related)" RELATED []
 is_obsolete: true
 
 [Term]
@@ -2890,6 +2901,7 @@ is_a: TO:0002616 ! flowering time trait
 [Term]
 id: TO:0000345
 name: seed viability
+def: "A seed quality trait (TO:0000931) which is the the ability of a seed to germinate, grow, and develop into a new plant." [TO:Laurel_Cooper]
 synonym: "SDVIA (related)" RELATED []
 is_a: TO:0000184 ! seed morphology trait
 is_a: TO:0000931 ! seed quality trait
@@ -2897,10 +2909,9 @@ is_a: TO:0000931 ! seed quality trait
 [Term]
 id: TO:0000346
 name: tiller number
-def: "Number of tillers per plant, should represent most plants within a study." [RiceSES:SES]
+def: "A basal axillary shoot system morphology trait (TO:0001168) which is the number of tillers per plant." [RiceSES:SES, TO:Laurel_Cooper]
 synonym: "TINB (related)" RELATED []
-is_a: TO:0000739 ! shoot axis morphology trait
-relationship: part_of TO:0000027 ! culm number
+is_a: TO:0001168 ! basal axillary shoot system morphology trait
 
 [Term]
 id: TO:0000347
@@ -2911,19 +2922,18 @@ is_a: TO:0000179 ! biotic plant stress trait
 
 [Term]
 id: TO:0000348
-name: sogatodes resistance
-def: "Causal agent: Sogatodes orizicola (Muir), Sagotella furcifera and Sogatodes cubanus. Sogatodes orizicola is also a vector for the Rice black streaked dwarf fijivirus and rice hoja blanca  virus (RHBV)." [Gramene:pankaj_jaiswal]
+name: OBSOLETE sogatodes resistance
+def: "OBSOLETE" [Gramene:pankaj_jaiswal]
 synonym: "SAGRS (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_obsolete: true
 
 [Term]
 id: TO:0000350
-name: cms-hl type
-def: "Abortion of microspore development at bi-nucleate stage." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: OBSOLETE cms-hl type
+def: "OBSOLETE  Abortion of microspore development at bi-nucleate stage." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "CMS-HL (related)" RELATED []
 synonym: "HLCMS (related)" RELATED []
-is_a: TO:0000232 ! rice cytoplasmic male sterility
-is_a: TO:0000415 ! aborted bi-nucleate stage
+is_obsolete: true
 
 [Term]
 id: TO:0000351
@@ -2932,7 +2942,7 @@ def: "Sensitivity to the zinc content in the growth medium. It acts as cofactor 
 synonym: "PDef (related)" RELATED []
 synonym: "zinc deficiency (related)" RELATED []
 synonym: "ZNSN (related)" RELATED []
-is_a: TO:0000080 ! micronutrient sensitivity
+is_a: TO:0000080 ! micronutrient response
 
 [Term]
 id: TO:0000352
@@ -2955,20 +2965,20 @@ is_a: TO:0000218 ! pollen abortion type
 
 [Term]
 id: TO:0000354
-name: aluminum sensitivity
-def: "Sensitivity to aluminum content in the growth media." [Gramene:pankaj_jaiswal]
+name: aluminum response trait
+def: "A chemical stress response trait (TO:0000482) to aluminum minerals in the growth environment." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "ALSN (related)" RELATED []
 synonym: "aluminium sensitivity (exact)" EXACT []
 synonym: "aluminum toxicity (related)" RELATED []
-is_a: TO:0000247 ! other nutrient sensitivity
+is_a: TO:0000482 ! chemical stress response
 
 [Term]
 id: TO:0000355
 name: heterosis
-def: "Exceptional vigor of growth etc. in plants or in animal, resulting from cross breeding among inter or intra species." [Gramene:pankaj_jaiswal]
+def: "A plant vigor trait (TO:0000250) which is a biological phenomenon where the offspring of two genetically distinct parents exhibits superior traits compared to its parents." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "HET (related)" RELATED []
 synonym: "heterosis in f1 hybrid (related)" RELATED []
-synonym: "hybrid vigor (related)" RELATED []
+synonym: "hybrid vigor (exact)" EXACT []
 is_a: TO:0000250 ! plant vigor trait
 
 [Term]
@@ -2992,9 +3002,10 @@ created_by: jaiswalp
 
 [Term]
 id: TO:0000358
-name: female sterility
+name: plant female sterility
+def: "A plant sterility trait (TO:0000485) where the plant is unable to produce viable seeds, even with viable pollen present." [TO:Laurel_Cooper]
 synonym: "FEMST (related)" RELATED []
-is_a: TO:0000485 ! sterility related trait
+is_a: TO:0000485 ! plant sterility trait
 
 [Term]
 id: TO:0000359
@@ -3070,7 +3081,7 @@ is_a: TO:0002724 ! leaf sheath color
 
 [Term]
 id: TO:0000368
-name: shoot elongation rate
+name: shoot system elongation rate
 synonym: "elongation of plant height (related)" RELATED []
 synonym: "SHELRATE (related)" RELATED []
 is_a: TO:0000654 ! shoot system growth and development trait
@@ -3126,11 +3137,11 @@ is_a: TO:0000786 ! reproductive shoot system morphology trait
 [Term]
 id: TO:0000374
 name: starch breakdown viscosity
-def: "A cooking quality trait (TO:0001069) which is the tendency of gelatinized starch granules to break during cooking, especially at high temperature." [TO:Laurel_Cooper] {comment="DOI:10.1006/jcrs.2001.0374"}
-comment: Breakdown is usually associated with the tendency of gelatinized starch granules to break during holding at high temperature, accompanied with continuous shearing (Han and Hamaker 2001). Breakdown is usually calculated from a resulting viscogram by subtracting trough from peak viscosity. The increase in rice flour breakdown viscosity, although not always significant (P < 0.05), suggests a greater protection of the starch granule integrity. This probably is due to the increased affinity of proteins to interact with starch, as a result of protein denaturation. The resulting formation of protein–starch complexes tends to increase rice flour peak viscosity.
+def: "A starch gelatinization trait (TO:0001167) which is the tendency of gelatinized starch granules to break during cooking, especially at high temperature." [TO:Laurel_Cooper] {comment="DOI:10.1006/jcrs.2001.0374"}
+comment: Breakdown is usually calculated from a resulting viscogram by subtracting hot paste (trough) viscosity from peak viscosity.
 synonym: "BRKVIS (related)" RELATED []
 xref: PMCID:PMC434838
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000375
@@ -3147,12 +3158,15 @@ is_a: TO:0002731 ! dehulled grain length to width ratio
 [Term]
 id: TO:0000376
 name: starch consistency viscosity
+def: "A starch gelatinization trait (TO:0001167) which is the balance of gelatinization (granule swelling and disruption) and retrogradation (network formation and water trapping)." [DOI:10.1007/s001220050037, TO:Laurel_Cooper]
+comment: The starch consistency viscosity (CSV) is the difference between the cool paste viscosity (CPV) and the hot paste viscosity (HPV)
 synonym: "CONVIS (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000377
 name: cooked grain elongation
+def: "A cooking quality trait (TO:0001069) which is the amount of elongation of a grain with cooking." [TO:Laurel_Cooper]
 synonym: "CKKEL (related)" RELATED []
 synonym: "cooked kernel elongation (related)" RELATED []
 is_a: TO:0001069 ! cooking quality trait
@@ -3169,9 +3183,9 @@ is_a: TO:0001145 ! Ascomycete fungal disease response
 [Term]
 id: TO:0000379
 name: starch cool paste viscosity
-def: "A cooking quality trait (TO:0001069) which is the viscosity of a starch paste after it has been cooked and cooled down." [] {comment="TO:Laurel_Cooper"}
+def: "A starch gelatinization trait (TO:0001167) which is the viscosity of a starch paste after it has been cooked and cooled down." [] {comment="TO:Laurel_Cooper"}
 synonym: "CPVIS (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000380
@@ -3182,7 +3196,7 @@ is_obsolete: true
 [Term]
 id: TO:0000381
 name: cracked grain percentage
-def: "The percentage of cracked dehulled grain with most of the size still intact." [Gramene:pankaj_jaiswal]
+def: "A grain quality trait (TO:0000162) which is the percentage of cracked, dehulled grain with most of the size still intact." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "CRKGRPCENT (related)" RELATED []
 synonym: "fissured grain percentage (related)" RELATED []
 is_a: TO:0000162 ! grain quality trait
@@ -3255,8 +3269,9 @@ is_a: TO:0000327 ! shoot system yield trait
 [Term]
 id: TO:0000389
 name: nuclear mediated male sterility
-def: "Shows mendelian inheritance, caused by genetic modifications or mutations in the nuclear genome." [Gramene:pankaj_jaiswal, RiceSES:SES]
-is_a: TO:0000106 ! male sterility type
+def: "A plant male sterility trait (TO:0000437) which shows mendelian inheritance, caused by genetic modifications or mutations in the nuclear genome." [Gramene:pankaj_jaiswal, RiceSES:SES]
+synonym: "genic male sterility (broad)" BROAD []
+is_a: TO:0000437 ! plant male sterility
 
 [Term]
 id: TO:0000390
@@ -3276,8 +3291,10 @@ is_a: TO:0000184 ! seed morphology trait
 
 [Term]
 id: TO:0000392
-name: sterility or fertility trait
-def: "A plant trait (TO:0000387) which is a measure of either the fertility or sterility, contributed by nonfunctional male and or female plant parts or their incompatible interaction. This also includes traits on seed setting behavior in the fruit (caryopsis) of a grass plant that can be assayed in terms of spikelet sterility or fertility." [Gramene:pankaj_jaiswal]
+name: plant reproduction trait
+def: "A plant trait (TO:0000387) which is a measure of the ability of a plant to reproduce." [Gramene:pankaj_jaiswal, PATO:0001434, TO:Laurel_Cooper]
+comment: Fertility or sterility are determined by either nonviable male and/or female plant structures or their incompatible interaction.
+synonym: "sterility or fertility trait (related)" RELATED []
 is_a: TO:0000387 ! plant trait
 
 [Term]
@@ -3340,11 +3357,11 @@ is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 
 [Term]
 id: TO:0000401
-name: plant growth hormone sensitivity
+name: plant growth hormone response
 def: "A chemical stress sensitivity (TO:0000482) which is the tolerance exhibited by a plant or a group of plants (population) towards the plant growth hormone." [TO:Laurel_Cooper]
 synonym: "growth regulator sensitivity (related)" RELATED []
 synonym: "plant hormone response (related)" RELATED []
-is_a: TO:0000482 ! chemical stress sensitivity
+is_a: TO:0000482 ! chemical stress response
 
 [Term]
 id: TO:0000402
@@ -3362,11 +3379,14 @@ is_a: TO:0000975 ! grain width
 
 [Term]
 id: TO:0000403
-name: leaf-folder resistance
-def: "Causal agent: Cnaphalocrosis medinalis, Marasmia patnalis. Symptoms: larvae consume the leaf tissue except the epidermis, causing typical white streaks. They create a leaf tube during later stages of feeding. Plant is susceptible and resistant check (if available) after every 10-test entries. Replicate the test three times, if seed is available. Determined by percentage of damaged and folded leaves." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice leaf folder response trait
+alt_id: TO:0000192
+def: "A Lepidoptera damage response trait (TO:0001162) which is caused by a rice leaf roller (Cnaphalocrocis medinalis)." [Gramene:pankaj_jaiswal, NCBITaxon:437488, RiceSES:SES, TO:Laurel_Cooper]
+comment: Symptoms: larvae consume the leaf tissue except the epidermis, causing typical white streaks. They create a leaf tube during later stages of feeding.
+synonym: "leaf roller response (related)" RELATED []
 synonym: "LF (related)" RELATED []
 synonym: "LFFRS (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001162 ! Lepidoptera damage response trait
 
 [Term]
 id: TO:0000404
@@ -3376,14 +3396,15 @@ is_a: TO:0000361 ! stem morphology trait
 
 [Term]
 id: TO:0000405
-name: caseworm resistance
-def: "Causal agent: Nymphula depunctalis. Symptoms: Larvae feed on leaf tissue, leaving only the papery upper epidermis." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: caseworm response trait
+def: "A Lepidoptera damage response trait (TO:0001162) which is caused by a caseworm (Parapoynx stagnalis)." [Gramene:pankaj_jaiswal, NCBITaxon:1234058, RiceSES:SES, TO:Laurel_Cooper]
+comment: Symptoms: Larvae feed on leaf tissue, leaving only the papery upper epidermis.\nIn Rice SES it is referred to by the older name Nymphula depunctalis.
 synonym: "CW (related)" RELATED []
 synonym: "CWRS (related)" RELATED []
 synonym: "float worm (related)" RELATED []
 synonym: "hama putih (indonesian) (related)" RELATED []
 synonym: "paddy caseworm (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001162 ! Lepidoptera damage response trait
 
 [Term]
 id: TO:0000406
@@ -3402,15 +3423,18 @@ is_obsolete: true
 [Term]
 id: TO:0000408
 name: starch hot paste viscosity
+def: "A starch gelatinization trait (TO:0001167) which is the minimum viscosity that the starch slurry reaches during a holding period at a constant high temperature." [TO:Laurel_Cooper]
 synonym: "HPVIS (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+synonym: "trough viscosity (exact)" EXACT []
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000409
 name: starch peak viscosity trait
-def: "A cooking quality trait (TO:0001069) which is the ability of starch granules to swell before breaking down during heating." [] {comment="TO:Laurel_Cooper"}
+def: "A starch gelatinization trait (TO:0001167) which is maximum viscosity of a starch slurry as starch granules swell and absorb water during heating." [] {comment="TO:Laurel_Cooper"}
+comment: This is the point of maximum viscosity, where starch granules are maximally swollen and have absorbed as much water as possible
 synonym: "PVIS (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000410
@@ -3430,11 +3454,11 @@ is_a: TO:0001079 ! caryopsis fruit morphology trait
 [Term]
 id: TO:0000412
 name: starch setback viscosity
-def: "Determined by deducting the peak viscosity from the cool paste viscosity." [Gramene:pankaj_jaiswal37]
+def: "A starch gelatinization trait (TO:0001167) which is the difference between the peak viscosity (TO:0000409) and the cool paste viscosity (TO:0000379)." [Gramene:pankaj_jaiswal37, TO:Laurel_Cooper]
 synonym: "setback (related)" RELATED []
 synonym: "SETBK (related)" RELATED []
 synonym: "SETBKVIS (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000413
@@ -3464,9 +3488,9 @@ is_a: TO:0000218 ! pollen abortion type
 [Term]
 id: TO:0000416
 name: embryo sac abortion
-def: "Abortion of the embryo sac leading to female sterility." [Gramene:pankaj_jaiswal]
+def: "A plant female sterility trait (TO:0000358) which is caused by abortion of the embryo sac (PO:0025074)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "EBSABR (related)" RELATED []
-is_a: TO:0000358 ! female sterility
+is_a: TO:0000358 ! plant female sterility
 
 [Term]
 id: TO:0000417
@@ -3496,14 +3520,17 @@ created_by: jaiswalp
 
 [Term]
 id: TO:0000420
-name: fertility related trait
-is_a: TO:0000392 ! sterility or fertility trait
+name: plant fertility trait
+def: "A plant reproductive trait (TO:0000392) which is the quality of being able to produce viable offspring." [TO:Laurel_Cooper]
+is_a: TO:0000392 ! plant reproduction trait
 
 [Term]
 id: TO:0000421
 name: pollen fertility
+def: "A plant fertility trait (TO:0000420) which is the ability of pollen grains to successfully fertilize an ovule, leading to seed production" [TO:Laurel_Cooper]
+synonym: "male fertility (exact)" EXACT []
 synonym: "POFRT (related)" RELATED []
-is_a: TO:0000420 ! fertility related trait
+is_a: TO:0000420 ! plant fertility trait
 
 [Term]
 id: TO:0000422
@@ -3515,26 +3542,28 @@ is_a: TO:0001145 ! Ascomycete fungal disease response
 
 [Term]
 id: TO:0000423
-name: gall midge resistance
-def: "Causal agent: Orseolia oryzae. For the field test to be valid more than 60% of the plants should be affected with not less than 15% silver shoot in the susceptible check. Similarly, 60% of the plants in susceptible check should show silver shoots under green house tests. If any of the test entry in the field evaluation exhibits damage less than 10%, on plant basis, rate it on scale-0, since such a damage could be due to other reasons. Monitor at growth stage 2-5." [RiceSES:SES]
+name: gall midge response trait
+def: "A Diptera damage response trait (TO:0001163) which is caused by a rice gall midge (Orseolia oryzae)." [NCBITaxon:33408, RiceSES:SES, TO:Laurel_Cooper]
 synonym: "GM (related)" RELATED []
 synonym: "GMRS (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001163 ! Diptera damage response trait
 
 [Term]
 id: TO:0000424
-name: brown planthopper resistance
-def: "Causal agent: Nilparvata lugens (also Nilaparvata lugens). Symptoms: partial to pronounced yellowing and increasing severity of stunting. Extreme signs are wilting to death of plants. Infested areas in the field may be patchy." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: brown planthopper response trait
+def: "A Hemiptera damage response trait (TO:0001164) caused by a brown planthopper (Nilaparvata lugens)." [Gramene:pankaj_jaiswal, NCBITaxon:108931, RiceSES:SES, TO:Laurel_Cooper]
+comment: Symptoms include partial to pronounced yellowing and increasing severity of stunting. Extreme signs are wilting to death of plants. Infested areas in the field may be patchy.
 synonym: "BPH (related)" RELATED []
 synonym: "BPHRS (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001164 ! Hemiptera damage response trait
 
 [Term]
 id: TO:0000425
 name: anther culturability
+def: "An in vitro regeneration ability trait (TO:0000243) which is the ability to generate a haploid plantlet from an anther (PO:0009066) in culture." [TO:Laurel_Cooper]
 synonym: "ANTCAB (related)" RELATED []
 synonym: "anther culture response (related)" RELATED []
-is_a: TO:0000250 ! plant vigor trait
+is_a: TO:0000243 ! in vitro regeneration ability
 
 [Term]
 id: TO:0000426
@@ -3559,17 +3588,18 @@ is_a: TO:0000577 ! stem angle
 [Term]
 id: TO:0000428
 name: callus induction
+def: "An in vitro regeneration ability trait (TO:0000243) which is the ability to generate a plant callus (PO:0005052) in culture." [TO:Laurel_Cooper]
 synonym: "CAIND (related)" RELATED []
-is_a: TO:0000250 ! plant vigor trait
+is_a: TO:0000243 ! in vitro regeneration ability
 
 [Term]
 id: TO:0000429
-name: salt sensitivity
+name: salt response
 def: "Plant sensitivity observed in response to different concentrations of salt in the growth medium." [RiceSES:SES]
 synonym: "Sal (related)" RELATED []
 synonym: "saline sensitivity (related)" RELATED []
 synonym: "SALTSN (related)" RELATED []
-is_a: TO:0000480 ! nutrient sensitivity
+is_a: TO:0000482 ! chemical stress response
 
 [Term]
 id: TO:0000430
@@ -3616,13 +3646,16 @@ is_a: TO:0000976 ! ear infructescence morphology trait
 
 [Term]
 id: TO:0000434
-name: root activity
+name: root oxidative activity
+def: "A plant vigor trait (TO:0000250) which is the oxidative power of a root (PO:0009005)." [PMID:12582488, TO:Laurel_Cooper]
+comment: Root oxidative activity is highly correlated with the respiratory activity of roots. Roots with high oxidative activity may compete for carbohydrates during seedling growth, before seedlings are able to photosynthesize.
 synonym: "RTACT (related)" RELATED []
 is_a: TO:0000250 ! plant vigor trait
 
 [Term]
 id: TO:0000435
 name: seed longevity
+def: "A seed viability trait (TO:0000345) which is the length of time a seed stays viable." [TO:Laurel_Cooper]
 synonym: "SDLNG (related)" RELATED []
 is_a: TO:0000345 ! seed viability
 
@@ -3631,16 +3664,17 @@ id: TO:0000436
 name: spikelet sterility
 def: "Determined by counting the filled and unfilled spikelets of the bagged grass inflorescence." [Gramene:pankaj_jaiswal, RiceSES:SES]
 synonym: "SPKST (related)" RELATED []
-is_a: TO:0000485 ! sterility related trait
+is_a: TO:0000485 ! plant sterility trait
 
 [Term]
 id: TO:0000437
-name: male sterility
-def: "In plants, it represents the incompetence of the pollen to fertilize the ovum. Reasons could be non-viable pollen, incompatibility, pollen abortion, toxicity, genetic etc. Usually determined by either the pollen sterility or spikelet fertility (percent seed set)." [Gramene:pankaj_jaiswal]
+name: plant male sterility
+def: "A plant sterility trait (TO:0000485) which is the incompetence of pollen (PO:0025281) to fertilize the plant egg cell (PO:0020094)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "degree of male sterility of male sterile lines (related)" RELATED []
 synonym: "male sterility measure (related)" RELATED []
 synonym: "MALEST (related)" RELATED []
-is_a: TO:0000485 ! sterility related trait
+synonym: "pollen sterility (exact)" EXACT []
+is_a: TO:0000485 ! plant sterility trait
 
 [Term]
 id: TO:0000439
@@ -3658,8 +3692,9 @@ is_a: TO:0002759 ! grain number trait
 
 [Term]
 id: TO:0000441
-name: humidity related trait
-is_a: TO:0000237 ! water stress response trait
+name: OBSOLETE humidity related trait
+def: "OBSOLETE" [TO:Laurel_Cooper]
+is_obsolete: true
 
 [Term]
 id: TO:0000442
@@ -3675,7 +3710,6 @@ def: "An infructescence yield trait (TO:0000936) that is the number of ears (ear
 comment: To be used only for traits from maize.
 synonym: "ear number per plant (related)" RELATED []
 synonym: "EARNB (related)" RELATED []
-synonym: "ears per 10 plants (related)" RELATED []
 synonym: "ears per plant (related)" RELATED []
 synonym: "ENO (related)" RELATED []
 synonym: "ENP (related)" RELATED []
@@ -3687,6 +3721,7 @@ is_a: TO:0000969 ! ear inflorescence morphology trait
 [Term]
 id: TO:0000444
 name: parasitic weed
+def: "A weed damage response trait (TO:0000347) which is caused by a plant which derives nutrients from other plants (their hosts) by attaching to them and penetrating their tissues." [TO:Laurel_Cooper]
 is_a: TO:0000347 ! weed damage response trait
 
 [Term]
@@ -3773,11 +3808,11 @@ is_a: TO:0000371 ! yield trait
 
 [Term]
 id: TO:0000454
-name: stem borer resistance
-def: "Causal agents: Chilo suppressalis (striped), C. polychrysus (dark headed), Rupela albinella (South American white), Scirpophaga incertulas (yellow), S innotata (white), Sesamia inferens (pink), Maliarpha separatella (african whiteheads), Diopsis macrophthalma (stalked-eyed fly), and several other species." [Gramene:pankaj_jaiswal, RiceSES:SES]
+name: rice stem borer response trait
+def: "A Lepidoptera damage response trait (TO:0001162) caused by a rice stem borer (Chilo suppressalis)." [Gramene:pankaj_jaiswal, NCBITaxon:168631, RiceSES:SES, TO:Laurel_Cooper]
 synonym: "CULMBRRS (related)" RELATED []
 synonym: "SB (related)" RELATED []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001162 ! Lepidoptera damage response trait
 
 [Term]
 id: TO:0000455
@@ -3823,9 +3858,10 @@ is_a: TO:0020107 ! plant cell length
 
 [Term]
 id: TO:0000460
-name: light intensity sensitivity
-synonym: "light intensity response (related)" RELATED []
-is_a: TO:0000075 ! light sensitivity
+name: light intensity response
+def: "A light response trait (TO:0000075 ) which is the response to the intensity of light." [TO:Laurel_Cooper]
+synonym: "light intensity sensitivity (related)" RELATED []
+is_a: TO:0000075 ! light reponse trait
 
 [Term]
 id: TO:0000461
@@ -3837,9 +3873,10 @@ is_a: TO:0000369 ! vegetative growth time
 [Term]
 id: TO:0000462
 name: starch gelatinization temperature
-def: "Is an indication of gelatinization temperature. Observed by placing six milled-grains/kernels in 10ml 1.7% KOH in a shallow container and arrange them so that they do not touch. Let them stand for 23hrs at 30C temperature and score for spreading. Measure for Alkali digestion is inversely proportional to the gelatinization temperature, e.g. if alkali digestion is low, the gelatinization temperature is high." [Gramene:pankaj_jaiswal, RiceSES:SES]
+def: "A starch gelatinization trait (TO:0001167) which is the temperature at which a starch granule (GO:0043036) swells and absorbs water." [Gramene:pankaj_jaiswal, RiceSES:SES, TO:Laurel_Cooper]
+comment: Changes in starch gelatinization with temperature are measured by monitoring the viscosity of a starch slurry during controlled heating, holding, and cooling temperature cycles.
 synonym: "GELTZTMP (related)" RELATED []
-is_a: TO:0001069 ! cooking quality trait
+is_a: TO:0001167 ! starch gelatinization trait
 
 [Term]
 id: TO:0000463
@@ -3853,9 +3890,10 @@ is_a: TO:0002616 ! flowering time trait
 
 [Term]
 id: TO:0000464
-name: albino plantlet differentiation frequency
+name: albino plantlet frequency
+def: "An in vitro regeneration ability (TO:0000243) trait which is the frequency of the development of albino plantlets." [TO:Laurel_Cooper]
 synonym: "ALBPTLDFQ (related)" RELATED []
-is_a: TO:0000250 ! plant vigor trait
+is_a: TO:0000243 ! in vitro regeneration ability
 
 [Term]
 id: TO:0000465
@@ -3972,25 +4010,25 @@ id: TO:0000479
 name: acid sensitivity
 def: "Plant sensitivity to an acidic (pH<7) growth media." [Gramene:pankaj_jaiswal, TO:moorel]
 synonym: "ADSN (related)" RELATED []
-is_a: TO:0000254 ! growth media pH sensitivity
+is_a: TO:0000254 ! response to pH
 
 [Term]
 id: TO:0000480
-name: nutrient sensitivity
-def: "A growth media composition sensitivity (TO:0000238) which is the plant's response to an excess or deficient amount of the macro or micronutrient in the growth medium (soil/culture media)." [Gramene:pankaj_jaiswal, TO:moorel]
+name: plant nutrient response trait
+def: "A biochemical response trait (TO:0000277) which is the plant's response to an excess or deficient amount of the nutrients in the growth environment." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper, TO:moorel]
 synonym: "nutrient deficiency (related)" RELATED []
-is_a: TO:0000238 ! growth media composition sensitivity
+is_a: TO:0000277 ! biochemical trait
 
 [Term]
 id: TO:0000481
 name: alkali sensitivity
 def: "Plant sensitivity to an alkali (pH>7) growth media." [Gramene:pankaj_jaiswal, TO:moorel]
 synonym: "ALKSN (related)" RELATED []
-is_a: TO:0000254 ! growth media pH sensitivity
+is_a: TO:0000254 ! response to pH
 
 [Term]
 id: TO:0000482
-name: chemical stress sensitivity
+name: chemical stress response
 def: "An abiotic plant stress response trait (TO:0000168) which is the response of a plant structure (PO:0009011) to chemical stress." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 is_a: TO:0000168 ! abiotic plant stress response trait
 
@@ -4015,8 +4053,9 @@ is_a: TO:0000184 ! seed morphology trait
 
 [Term]
 id: TO:0000485
-name: sterility related trait
-is_a: TO:0000392 ! sterility or fertility trait
+name: plant sterility trait
+def: "A plant reproductive trait (TO:0000392) which is the quality of not being able to produce viable offspring." [TO:Laurel_Cooper]
+is_a: TO:0000392 ! plant reproduction trait
 
 [Term]
 id: TO:0000486
@@ -4046,8 +4085,9 @@ is_obsolete: true
 
 [Term]
 id: TO:0000489
-name: carbohydrate composition related trait
-is_a: TO:0000281 ! metabolite content trait
+name: OBSOLETE carbohydrate composition related trait
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0000490
@@ -4059,7 +4099,6 @@ is_a: TO:0000598 ! protein content
 id: TO:0000491
 name: OBSOLETE fat and essential oil composition related trait
 def: "OBSOLETE" []
-is_a: TO:0000488 ! OBSOLETE seed composition quality trait
 is_obsolete: true
 
 [Term]
@@ -4080,7 +4119,8 @@ is_a: TO:0000748 ! leaf morphology trait
 
 [Term]
 id: TO:0000494
-name: pigment content trait
+name: plant pigment content trait
+def: "A metabolite content trait (TO:0000281) which is the amount of a plant pigment in a plant strucuture." [TO:Laurel_Cooper]
 is_a: TO:0000281 ! metabolite content trait
 
 [Term]
@@ -4089,29 +4129,28 @@ name: chlorophyll content
 def: "A pigment content trait (TO:0000494) which is a measure of the chlorophyll a and/or chlorophyll b content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 comment: Chlorophyll is the principal photoreceptor in photosynthesis, the light-driven process in which carbon dioxide is fixed to yield carbohydrates and oxygen. Chlorophyll is a cyclic tetrapyrolle, similar in structure to the heme group of globins (hemoglobin, myoglobin) and cytochromes. Chlorophyll differs from heme in a few major respects, most notably that the central metal ion in chlorophyll is magnesium while that in heme is iron.
 synonym: "CHLCN (related)" RELATED []
-is_a: TO:0000494 ! pigment content trait
-is_a: TO:0000674 ! phytochemical compound content
+is_a: TO:0000494 ! plant pigment content trait
 
 [Term]
 id: TO:0000496
 name: carotenoid content
 def: "The carotenoid content in a plant structure (PO:0009011). Includes naturally occurring tetra terpenes that are synthesized only in plants." []
 synonym: "CRTCN (related)" RELATED []
-is_a: TO:0000494 ! pigment content trait
-is_a: TO:0000674 ! phytochemical compound content
+is_a: TO:0000494 ! plant pigment content trait
 
 [Term]
 id: TO:0000497
-name: fertility restoration trait
+name: OBSOLETE fertility restoration trait
+def: "OBSOLETE" []
 synonym: "RF (related)" RELATED []
-is_a: TO:0000420 ! fertility related trait
+is_obsolete: true
 
 [Term]
 id: TO:0000498
-name: female fertility restoration trait
-def: "Describes the extent of female fertility restoration in terms of percent seed set." [Gramene:pankaj_jaiswal]
+name: OBSOLETE female fertility restoration trait
+def: "OBSOLETE Describes the extent of female fertility restoration in terms of percent seed set." [Gramene:pankaj_jaiswal]
 synonym: "FEMRF (related)" RELATED []
-is_a: TO:0000497 ! fertility restoration trait
+is_obsolete: true
 
 [Term]
 id: TO:0000499
@@ -4132,18 +4171,18 @@ is_a: TO:0000803 ! inflorescence weight
 
 [Term]
 id: TO:0000502
-name: potassium chlorate resistance
+name: potassium chlorate response
 def: "Resistance to the KClO3 salt content in the growth medium." [Gramene:pankaj_jaiswal]
 synonym: "KClO3 resistance (related)" RELATED []
 synonym: "KCLO3RS (related)" RELATED []
-is_a: TO:0000429 ! salt sensitivity
+is_a: TO:0002649 ! pesticide response
 
 [Term]
 id: TO:0000503
 name: leaf rolling time
 def: "A leaf rolling trait (TO:0000085) which is the measure of  time taken by the leaf to roll completely under drought or water stress." [Gramene:pankaj_jaiswal, TO:moorel]
 synonym: "LFRLTM (related)" RELATED []
-is_a: TO:0000085 ! leaf rolling
+is_a: TO:0000085 ! leaf rolling response
 
 [Term]
 id: TO:0000504
@@ -4194,7 +4233,7 @@ is_a: TO:0000043 ! root morphology trait
 [Term]
 id: TO:0000511
 name: phosphorus uptake
-def: "The total phosphorus ion uptake measured a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+def: "A mineral and ion transport trait (TO:0020096) which involves phosphorus ion uptake in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "PHOUP (related)" RELATED []
 is_a: TO:0020096 ! mineral and ion transport trait
 
@@ -4203,7 +4242,7 @@ id: TO:0000512
 name: plant survival percentage under submergence
 def: "Percent of plants survived under submerged conditions." [Gramene:pankaj_jaiswal]
 synonym: "PTSPCENTSUB (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_a: TO:0000524 ! submergence tolerance
 
 [Term]
 id: TO:0000513
@@ -4215,14 +4254,14 @@ is_a: TO:0000609 ! potassium content
 [Term]
 id: TO:0000514
 name: potassium uptake
-def: "The total potassium ion uptake measured a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+def: "A mineral and ion transport trait (TO:0020096) which involves potassium ion uptake in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "KUP (related)" RELATED []
 is_a: TO:0020096 ! mineral and ion transport trait
 
 [Term]
 id: TO:0000515
 name: relative growth rate
-def: "A vigor trait (TO:0000250) that is the increase in aboveground biomass in a defined period of time." [Gramene:pankaj_jaiswal, ISBN:9780044453734, TO:Laurel_Cooper]
+def: "A plant vigor trait (TO:0000250) that is the increase in aboveground biomass in a defined period of time." [Gramene:pankaj_jaiswal, ISBN:9780044453734, TO:Laurel_Cooper]
 comment: Relative growth rate may be calculated in various ways, usually as a rate of growth compared to the amount of starting biomass.  In some cases, it may be expressed as a percentage.
 synonym: "RELGRATE (related)" RELATED []
 xref: TO_GIT:418
@@ -4240,7 +4279,7 @@ id: TO:0000517
 name: relative shoot elongation under submergence
 def: "Elongation of the shoot under submergence condition against a reference without submergence." [Gramene:pankaj_jaiswal]
 synonym: "RELSHELSUB (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_a: TO:0000170 ! shoot elongation under submergence
 
 [Term]
 id: TO:0000519
@@ -4283,8 +4322,9 @@ is_a: TO:0020095 ! stomatal process related trait
 [Term]
 id: TO:0000524
 name: submergence tolerance
+def: "A submergence response trait (TO:0000286) which is the ability to tolerate flooding or submergence in water." [TO:Laurel_Cooper]
 synonym: "SUBTL (related)" RELATED []
-is_a: TO:0000286 ! submergence sensitivity
+is_a: TO:0000286 ! submergence response trait
 
 [Term]
 id: TO:0000525
@@ -4305,15 +4345,16 @@ is_a: TO:0000608 ! sodium content
 [Term]
 id: TO:0000527
 name: sodium uptake
-def: "The total sodium ion uptake measured a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+def: "A mineral and ion transport trait (TO:0020096) which involves sodium ion uptake in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "NAUP (related)" RELATED []
 is_a: TO:0020096 ! mineral and ion transport trait
 
 [Term]
 id: TO:0000528
-name: total shoot elongation under submergence
+name: OBSOLETE total shoot elongation under submergence
+def: "OBSOLETE" []
 synonym: "TSHELSUB (related)" RELATED []
-is_a: TO:0000114 ! flooding related trait
+is_obsolete: true
 
 [Term]
 id: TO:0000529
@@ -4458,7 +4499,7 @@ is_a: TO:0000776 ! peduncle morphology trait
 
 [Term]
 id: TO:0000547
-name: primary branch number
+name: primary inflorescence branch number
 def: "A primary branch of inflorescence (TO:0000052) trait which is the number of primary branches present in the inflorescence (PO:0009049)." [Gramene:pankaj_jaiswal, PO:0009049, TO:moorel]
 synonym: "NPB (related)" RELATED []
 synonym: "number of primary rachis branches (related)" RELATED []
@@ -4549,13 +4590,13 @@ relationship: part_of TO:0000352 ! plant dry weight
 
 [Term]
 id: TO:0000557
-name: secondary branch number
+name: secondary  inflorescence branch number
 def: "A secondary branching of inflorescence (TO:0000142) trait which is the number of secondary branches in an inflorescence (PO:0009049)." [Gramene:pankaj_jaiswal, PO:0009049, TO:moorel]
 synonym: "number of third order inflorescence axes (exact)" EXACT []
 synonym: "SBRNB (related)" RELATED []
 synonym: "secondary branches per panicle (related)" RELATED []
 is_a: TO:0000142 ! secondary branching of inflorescence
-is_a: TO:0000547 ! primary branch number
+is_a: TO:0000547 ! primary inflorescence branch number
 
 [Term]
 id: TO:0000558
@@ -4639,14 +4680,14 @@ is_a: TO:0000843 ! portion of plant tissue morphology trait
 [Term]
 id: TO:0000567
 name: tiller angle
+def: "A basal axillary shoot system morphology trait (TO:0001168) which is the angle of a tiller." [TO:Laurel_Cooper]
 synonym: "TIAG (related)" RELATED []
-is_a: TO:0000077 ! shoot system morphology trait
-is_a: TO:0000739 ! shoot axis morphology trait
+is_a: TO:0001168 ! basal axillary shoot system morphology trait
 
 [Term]
 id: TO:0000568
 name: shoot axis weight
-def: "Weight of the shoot without inflorescence." [Gramene:pankaj_jaiswal37]
+def: "A shoot axis morphology trait (TO:0000739) which is the weight of a shoot axis." [Gramene:pankaj_jaiswal37, TO:Laurel_Cooper]
 synonym: "SHWT (related)" RELATED []
 synonym: "total shoot weight (related)" RELATED []
 is_a: TO:0000739 ! shoot axis morphology trait
@@ -4654,17 +4695,19 @@ relationship: part_of TO:0000327 ! shoot system yield trait
 
 [Term]
 id: TO:0000569
-name: white-backed planthopper egg mortality
+name: OBSOLETE white-backed planthopper egg mortality
+def: "OBSOLETE" []
 synonym: "WBPH egg mortality (related)" RELATED []
 synonym: "WBPHOVI (related)" RELATED []
-is_a: TO:0000205 ! white-backed planthopper resistance
+is_obsolete: true
 
 [Term]
 id: TO:0000570
-name: watery lesion percentage
+name: OBSOLETE watery lesion percentage
+def: "OBSOLETE" [TO:Laurel_Cooper]
 synonym: "percentage of watery lesion (related)" RELATED []
 synonym: "WLPCENT (related)" RELATED []
-is_a: TO:0000315 ! bacterial disease response
+is_obsolete: true
 
 [Term]
 id: TO:0000571
@@ -4757,7 +4800,8 @@ is_a: TO:0000078 ! root dry weight
 [Term]
 id: TO:0000580
 name: cytoplasmic male sterility
-is_a: TO:0000106 ! male sterility type
+def: "A plant male sterility trait (TO:0000437) which is caused by genes located in the maternal mitochondrial genome, leading to non-functional pollen." [TO:Laurel_Cooper]
+is_a: TO:0000437 ! plant male sterility
 
 [Term]
 id: TO:0000581
@@ -4924,11 +4968,11 @@ is_a: TO:0000160 ! UV light sensitivity
 
 [Term]
 id: TO:0000602
-name: total fat content
-def: "The total fat or lipid content of a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+name: OBSOLETE total fat content
+def: "OBSOLETE The total fat or lipid content of a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 synonym: "FATCN (related)" RELATED []
 synonym: "lipid content (related)" RELATED []
-is_a: TO:0000604 ! fat and essential oil content
+is_obsolete: true
 
 [Term]
 id: TO:0000603
@@ -4941,23 +4985,27 @@ is_a: TO:0000465 ! mineral and ion content trait
 
 [Term]
 id: TO:0000604
-name: fat and essential oil content
-def: "Measures the fat and essential oil content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+name: lipid content trait
+def: "A metabolite content trait (TO:0000281) which is the amount of lipid in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+comment: Lipids are triglycerides, esters of three fatty acid units joined to glycerol, a trihydroxy alcohol. A triglyceride is called a fat if it is a solid at 25°C; it is called an oil if it is a liquid at that temperature. Fats have a predominance of saturated fatty acids, and oils are composed largely of unsaturated acids.
+synonym: "fat and oil content (exact)" EXACT []
+synonym: "fat content (narrrow)" NARROW []
+synonym: "oil content (narrow)" NARROW []
 is_a: TO:0000281 ! metabolite content trait
 
 [Term]
 id: TO:0000605
 name: hydrogen peroxide content
-def: "An assay to determine the content of hydrogen peroxide or the peroxide reactive ions." [Gramene:pankaj_jaiswal]
+def: "A metabolite content trait (TO:0000281) which is the amount of hydrogen peroxide or the peroxide reactive ion in a plant structure." [Gramene:pankaj_jaiswal]
 synonym: "H2O2 content (related)" RELATED []
 synonym: "H2O2CN (related)" RELATED []
 is_a: TO:0000281 ! metabolite content trait
-is_a: TO:0002657 ! oxidative stress
+is_a: TO:0002657 ! oxidative stress response
 
 [Term]
 id: TO:0000606
 name: diastatic power
-def: "An assay to determine the joint action of alpha-amylase, beta-amylase and any other carbohydrate-degrading enzymes." [GR_REF:8025]
+def: "An assay to determine the joint action of alpha-amylase, beta-amylase and any other carbohydrate-degrading enzymes." [DOI:10.1007/s001220051466]
 synonym: "DIASPWR (related)" RELATED []
 is_a: TO:0000599 ! enzyme activity trait
 
@@ -4982,7 +5030,7 @@ is_a: TO:0000465 ! mineral and ion content trait
 [Term]
 id: TO:0000610
 name: soluble to total protein ratio
-def: "The ratio of soluble protein to total protein content is a measure of the degree of proteolysis." [GR_REF:8025]
+def: "The ratio of soluble protein to total protein content is a measure of the degree of proteolysis." [DOI:10.1007/s001220051466]
 comment: As seen in degree of modification of grain to malt in barley.
 synonym: "Soluble protein to total protein content ratio (related)" RELATED []
 synonym: "STPROTRO (related)" RELATED []
@@ -4991,7 +5039,7 @@ is_a: TO:0000598 ! protein content
 [Term]
 id: TO:0000611
 name: malt-extract percentage
-def: "It is a measure of the sugars and nitrogenous compounds available for yeast nutrition." [GR_REF:8025]
+def: "It is a measure of the sugars and nitrogenous compounds available for yeast nutrition." [DOI:10.1007/s001220051466]
 synonym: "malt-extract percent (related)" RELATED []
 synonym: "MALTEXTPCENT (related)" RELATED []
 is_a: TO:0001070 ! brewing quality trait
@@ -4999,8 +5047,7 @@ is_a: TO:0001070 ! brewing quality trait
 [Term]
 id: TO:0000612
 name: grain density
-def: "A caryopsis fruit morphology trait (TO:0001079) which is a measure of the density or weight per unit of volume of a grain at a standardized moisture level." [GR_REF:8025, TO:Laurel_Cooper]
-synonym: "SDDN (related)" RELATED []
+def: "A caryopsis fruit morphology trait (TO:0001079) which is a measure of the density or weight per unit of volume of a grain at a standardized moisture level." [DOI:10.1007/s001220051466, TO:Laurel_Cooper]
 synonym: "test weight (related)" RELATED []
 xref: TO_GIT:262
 is_a: TO:0001079 ! caryopsis fruit morphology trait
@@ -5009,14 +5056,13 @@ relationship: part_of TO:0000162 ! grain quality trait
 [Term]
 id: TO:0000613
 name: groat percentage
-def: "It is defined as the amount of hull-less kernels obtained after de-hulling, expressed as a percentage of the weight of the sample." [GR_REF:8025]
-comment: This trait is most commonly used in determining the milling quality of Oat.
+def: "A grain quality trait (TO:0000162) which is the amount of hull-less kernels obtained after de-hulling, expressed as a percentage of the weight of the sample." [TO:Laurel_Cooper]
+comment: This trait is most commonly used in determining the milling quality of oats.
 synonym: "caryopsis percentage (related)" RELATED []
 synonym: "groat proportion (related)" RELATED []
 synonym: "GROATPCENT (related)" RELATED []
 synonym: "hull percentage (related)" RELATED []
-is_a: TO:0001068 ! processing quality trait
-is_a: TO:0002728 ! fruit quality trait
+is_a: TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0000614
@@ -5033,7 +5079,7 @@ def: "Response with respect to application of abscisic acid." [Gramene:pankaj_ja
 synonym: "ABA response (related)" RELATED []
 synonym: "ABASN (related)" RELATED []
 synonym: "abscisic acid response (related)" RELATED []
-is_a: TO:0000401 ! plant growth hormone sensitivity
+is_a: TO:0000401 ! plant growth hormone response
 
 [Term]
 id: TO:0000616
@@ -5058,14 +5104,11 @@ is_a: TO:0001109 ! grain color trait
 [Term]
 id: TO:0000618
 name: crushed grain percentage
-def: "The percentage of cracked dehulled grain with at least one fourth of the size still intact." [Gramene:pankaj_jaiswal]
-synonym: "cracked dehulled-grain percentage (related)" RELATED []
-synonym: "cracked grain percentage (related)" RELATED []
+def: "A grain quality trait (TO:0000162) which is the percentage of crushed, dehulled grain with at least one fourth of the size still intact." [Gramene:pankaj_jaiswal]
 synonym: "CRUSHDHULGRPCENT (related)" RELATED []
 synonym: "crushed dehulled-grain percentage (related)" RELATED []
 synonym: "CRUSHGRPCENT (related)" RELATED []
 synonym: "percent broken (related)" RELATED []
-synonym: "percentage brokens (related)" RELATED []
 is_a: TO:0000162 ! grain quality trait
 
 [Term]
@@ -5085,7 +5128,7 @@ is_a: TO:0000947 ! whole plant growth and development trait
 [Term]
 id: TO:0000621
 name: inflorescence development trait
-def: "Traits associated with observing effects on the development of the inflorescence and its parts." [Gramene:pankaj_jaiswal]
+def: "A shoot system growth and development trait (TO:0000654) which is the development of an inflorescence (PO:0009049) ." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 is_a: TO:0000283 ! biological process trait
 is_a: TO:0000654 ! shoot system growth and development trait
 
@@ -5127,9 +5170,10 @@ is_a: TO:0000800 ! inflorescence density
 
 [Term]
 id: TO:0000626
-name: relative phosphorus distribution between shoot and root
+name: OBSOLETE relative phosphorus distribution between shoot and root
+def: "OBSOLETE" [TO:Laurel_Cooper]
 synonym: "RELPHOCONCSHRT (related)" RELATED []
-is_a: TO:0001024 ! phosphorus content
+is_obsolete: true
 
 [Term]
 id: TO:0000627
@@ -5164,21 +5208,24 @@ is_a: TO:0000641 ! inflorescence primary branch length
 
 [Term]
 id: TO:0000631
-name: green plantlet differentiation frequency
+name: green plantlet frequency
+def: "An in vitro regeneration ability (TO:0000243) trait which is the frequency of the development of green plantlets." [TO:Laurel_Cooper]
 synonym: "GRNPTLDFQ (related)" RELATED []
 is_a: TO:0000243 ! in vitro regeneration ability
 
 [Term]
 id: TO:0000632
-name: green plantlet yield frequency
+name: OBSOLETE green plantlet yield frequency
+def: "OBSOLETE" []
 synonym: "GRNPTLYLDFQ (related)" RELATED []
-is_a: TO:0000243 ! in vitro regeneration ability
+is_obsolete: true
 
 [Term]
 id: TO:0000633
-name: relative total dry weight
+name: OBSOLETE relative total dry weight
+def: "OBSOLETE" [TO:Laurel_Cooper]
 synonym: "RELTDWT (related)" RELATED []
-is_a: TO:0000352 ! plant dry weight
+is_obsolete: true
 
 [Term]
 id: TO:0000634
@@ -5191,15 +5238,17 @@ is_a: TO:0000953 ! stem number
 [Term]
 id: TO:0000635
 name: popping expansion volume
+def: "A cooking quality trait (TO:0001069) which is the amount of expansion of a kernel with popping." [TO:Laurel_Cooper]
 synonym: "popcorn volume (related)" RELATED []
 synonym: "POPEXPVOL (related)" RELATED []
 is_a: TO:0001069 ! cooking quality trait
 
 [Term]
 id: TO:0000636
-name: relative shoot dry weight
+name: OBSOLETE relative shoot dry weight
+def: "OBSOLETE" [TO:Laurel_Cooper]
 synonym: "RELSHDWT (related)" RELATED []
-is_a: TO:0000552 ! shoot dry weight
+is_obsolete: true
 
 [Term]
 id: TO:0000638
@@ -5210,18 +5259,18 @@ is_a: TO:0000804 ! inflorescence width
 
 [Term]
 id: TO:0000639
-name: seed fertility
+name: OBSOLETE seed fertility
+def: "OBSOLETE" []
 synonym: "percent seed fertility (related)" RELATED []
 synonym: "SDFRT (related)" RELATED []
-is_a: TO:0000420 ! fertility related trait
-relationship: part_of TO:0000931 ! seed quality trait
+is_obsolete: true
 
 [Term]
 id: TO:0000640
-name: total root number
-def: "Total sum of number of roots in a plant derived per experiment." [Gramene:pankaj_jaiswal]
+name: OBSOLETE total root number
+def: "OBSOLETE  Total sum of number of roots in a plant derived per experiment." [Gramene:pankaj_jaiswal]
 synonym: "TRTNB (related)" RELATED []
-is_a: TO:0000084 ! root number
+is_obsolete: true
 
 [Term]
 id: TO:0000641
@@ -5267,9 +5316,10 @@ created_by: jaiswalp
 
 [Term]
 id: TO:0000646
-name: cauline axillary branch number
+name: OBSOLETE cauline axillary branch number
+def: "OBSOLETE" []
 synonym: "CAUAXIBRNB (related)" RELATED []
-is_a: TO:0002639 ! shoot branching
+is_obsolete: true
 
 [Term]
 id: TO:0000647
@@ -5308,8 +5358,9 @@ is_a: TO:1000023 {is_inferred="true"} ! lemma morphology trait
 [Term]
 id: TO:0000651
 name: flour color
+def: "A processing quality trait (TO:0001068) which is the color of flour obtained by milling grains or other plant structures." [TO:Laurel_Cooper]
 synonym: "FLRCL (related)" RELATED []
-is_a: TO:0000162 ! grain quality trait
+is_a: TO:0001068 ! processing quality trait
 
 [Term]
 id: TO:0000652
@@ -5373,13 +5424,15 @@ is_a: TO:0000933 ! plant phenological trait
 [Term]
 id: TO:0000660
 name: axillary bud dormancy
+def: "A shoot system growth and development trait (TO:0000654) where an axillary bud (PO:0004709) remains in a state of quiescence or dormancy (GO:0022611)." [TO:Laurel_Cooper]
 is_a: TO:0000654 ! shoot system growth and development trait
 
 [Term]
 id: TO:0000661
 name: tiller bud dormancy
+def: "An axillary bud dormancy (TO:0000660) trait which affects the growth of a tiller (basal axillary shoot system (PO:0005001))." [TO:Laurel_Cooper]
 is_a: TO:0000660 ! axillary bud dormancy
-relationship: part_of TO:0000329 ! tillering ability
+relationship: part_of TO:0000329 ! tiller formation trait
 
 [Term]
 id: TO:0000662
@@ -5414,6 +5467,7 @@ is_a: TO:0000587 ! endosperm quality
 [Term]
 id: TO:0000666
 name: brown rice yield
+def: "A grain yield trait (TO:0000396) which is the amount of dehulled whole grain." [TO:Laurel_Cooper]
 synonym: "BRWRYLD (related)" RELATED []
 is_a: TO:0000449 ! grain yield per plant
 
@@ -5430,7 +5484,7 @@ replaced_by: TO:0001070
 id: TO:0000668
 name: mycotoxin content
 def: "Measuring amount of toxins found in the host plant after the infection by a fungal pathogen. The toxin is produced by the pathogen." [Gramene:pankaj_jaiswal]
-is_a: TO:0000281 ! metabolite content trait
+is_a: TO:0000439 ! fungal disease response
 
 [Term]
 id: TO:0000669
@@ -5449,15 +5503,18 @@ is_a: TO:0002736 ! flower number trait
 
 [Term]
 id: TO:0000671
-name: pre-flowering flower abortion
+name: flower abortion
+def: "A plant reproductive trait (TO:0000392) in which a flower fails to complete develpment and dies." [TO:Laurel_Cooper]
 synonym: "frequency of pre-flowering floret abortion (related)" RELATED []
-synonym: "pre-flowering floret abortion (related)" RELATED []
+synonym: "pre-flowering floret abortion (related)" NARROW []
 synonym: "PREFLFLRABR (related)" RELATED []
-is_a: TO:0000622 ! flower development trait
+is_a: TO:0000392 ! plant reproduction trait
 
 [Term]
 id: TO:0000672
 name: bran percentage
+def: "A grain quality trait (TO:0000162) which is the porportion of bran in a whole grain." [TO:Laurel_Cooper]
+comment: Bran is the the nutritious, fiber-rich outer shell of a cereal grain, consisting of the pericarp (seed coat) and the aleurone layer.
 synonym: "BRAPCENT (related)" RELATED []
 synonym: "rice bran percentage (related)" RELATED []
 is_a: TO:0000162 ! grain quality trait
@@ -5472,18 +5529,18 @@ is_a: TO:0000663 ! wheat fusarium head blight response
 
 [Term]
 id: TO:0000674
-name: phytochemical compound content
-def: "They are non-nutritive plant chemicals that have protective or disease preventive properties." [Gramene:pankaj_jaiswal]
-is_a: TO:0000281 ! metabolite content trait
+name: OBSOLETE phytochemical compound content
+def: "OBSOLETE They are non-nutritive plant chemicals that have protective or disease preventive properties." [Gramene:pankaj_jaiswal]
+is_obsolete: true
 
 [Term]
 id: TO:0000675
 name: ferulic acid content
-def: "A phytochemical compound content trait (TO:0000674) which is the amount of ferulic acid (CHEBI:17620) in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper, Wikipedia:ferulic_acid]
+def: "A metabolite content trait (TO:0000281) which is the amount of ferulic acid (CHEBI:17620) in a plant structure (PO:0009011)." [CHEBI:17620, Gramene:pankaj_jaiswal, TO:Laurel_Cooper, Wikipedia:ferulic_acid]
 comment: Ferulic acid is an antioxidant which neutralizes free radicals (superoxide, nitric oxide and hydroxyl radical) which could cause oxidative damage of cell membranes and DNA. Ferulic acid helps to prevent damage to cells caused by ultraviolet light. It is found in the leaves and seeds of many plants, but especially in cereals such as brown rice, whole wheat and oats.
 synonym: "4-hydroxy-3-methoxycinnamic acid (related)" RELATED []
 synonym: "FERULICACIDCN (related)" RELATED []
-is_a: TO:0000674 ! phytochemical compound content
+is_a: TO:0020076 ! phenolic compound content
 relationship: part_of TO:0001143 ! antioxidant activity trait
 
 [Term]
@@ -5580,11 +5637,13 @@ is_a: TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0000686
-name: juiciness
-def: "An assay for a juicy appetizingness." [Gramene:pankaj_jaiswal]
+name: fruit moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in a fruit (PO:0009001)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 synonym: "JUICE (related)" RELATED []
+synonym: "juiciness (related)" RELATED []
 synonym: "succulence (related)" RELATED []
-is_a: TO:0002728 ! fruit quality trait
+is_a: TO:0000228 ! moisture content trait
+relationship: part_of TO:0002728 ! fruit quality trait
 
 [Term]
 id: TO:0000687
@@ -5610,9 +5669,10 @@ is_a: TO:0000936 ! infructescence yield trait
 [Term]
 id: TO:0000689
 name: grain tenderness
+def: "A grain quality trait (TO:0000162) which is the degree of softness of the texture of a grain." [TO:Laurel_Cooper]
 synonym: "GRTENDER (related)" RELATED []
 synonym: "kernel tenderness (related)" RELATED []
-is_a: TO:0000685 ! fruit tenderness
+is_a: TO:0000162 ! grain quality trait
 
 [Term]
 id: TO:0000690
@@ -5625,7 +5685,7 @@ is_a: TO:0001136 ! grain protein content
 [Term]
 id: TO:0000691
 name: maize northern leaf blight disease response
-def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Exserohilum turcicum (Setosphaeria turcica)." [Gramene:pankaj_jaiswal, NCBITaxon:93612, TO:Laurel_Cooper]
+def: "An Ascomycete fungal disease response trait (TO:0001145) in Zea mays (NCBITaxon:4577) caused by Exserohilum turcicum (Setosphaeria turcica)." [Gramene:pankaj_jaiswal, NCBITaxon:93612, TO:Laurel_Cooper]
 synonym: "NCLB response (exact)" EXACT []
 synonym: "northern corn leaf blight response (exact)" EXACT []
 is_a: TO:0001145 ! Ascomycete fungal disease response
@@ -5779,11 +5839,9 @@ is_a: TO:0000748 ! leaf morphology trait
 [Term]
 id: TO:0000710
 name: globulin protein content
-def: "Assay to detrmine the amount of globulin proteins." [Gramene:pankaj_jaiswal]
-comment: Globulin proteins also called globular proteins, or spheroproteins are one of the main protein classes. These have a globelike protein structure that is more or less soluble in aqueous solutions. The two major sub classes are alpha and beta globulins.
-is_a: TO:0000325 ! soluble protein content
-is_a: TO:0000575 ! endosperm morphology trait
-is_a: TO:0000587 ! endosperm quality
+def: "A seed protein content (TO:0000490) trait which is the amount of globulin proteins in a seed." [Gramene:pankaj_jaiswal, TO:cooperl]
+comment: Globulin proteins area class of globular proteins, and are one of the main protein classes. They have a higher molecular weight than albumins, and are insoluble in pure water but dissolve in dilute salt solutions. {xref="Wikipedia:Globulin"}
+is_a: TO:0000490 ! seed protein content
 
 [Term]
 id: TO:0000711
@@ -5938,13 +5996,15 @@ is_a: TO:0000728 ! cell cycle trait
 [Term]
 id: TO:0000731
 name: lignin content
-def: "Measures the lignin content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+def: "A metabolite content trait (TO:0000281) which is the amount of lignin in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+comment: Lignin is a class of complex organic polymers that form key structural materials in the support tissues of most plants. Lignin is a collection of highly heterogeneous polymers derived from a handful of precursor lignols. Heterogeneity arises from the diversity and degree of crosslinking between these lignols.
 is_a: TO:0000281 ! metabolite content trait
 
 [Term]
 id: TO:0000732
-name: lignin monomer content
-is_a: TO:0000731 ! lignin content
+name: OBSOLETE lignin monomer content
+def: "OBSOLETE" [TO:Laurel_Cooper]
+is_obsolete: true
 
 [Term]
 id: TO:0000733
@@ -6073,13 +6133,13 @@ creation_date: 2012-04-19T10:51:20Z
 
 [Term]
 id: TO:0000745
-name: subterranean shoot axis tuber appearance
-def: "A subterranean shoot axis tuber morphology trait (TO:0000742) which is the appearance of a subterranean shoot axis tuber (PO:0004547)." [PO:0004547, TO:Laurel_Cooper]
+name: OBSOLETE subterranean shoot axis tuber appearance
+def: "OBSOLETE A subterranean shoot axis tuber morphology trait (TO:0000742) which is the appearance of a subterranean shoot axis tuber (PO:0004547)." [PO:0004547, TO:Laurel_Cooper]
 comment: A 1-9 scale is used to score the overall appearance of the tuber, with 1 the lowest score (very poor) and 9 the highest (excellent).
 subset: Solanaceae_spp
 synonym: "tuber appearance (broad)" BROAD []
 xref: TO_GIT:56
-is_a: TO:0000742 ! subterranean shoot axis tuber morphology trait
+is_obsolete: true
 created_by: moorel
 creation_date: 2012-04-19T10:54:11Z
 
@@ -6816,7 +6876,7 @@ def: "A tassel branch morphology trait (TO:0000785) which is the number of tasse
 comment: Refer to number PATO:0001056.
 xref: PATO:0001056
 xref: TO_GIT:89
-is_a: TO:0000547 ! primary branch number
+is_a: TO:0000547 ! primary inflorescence branch number
 is_a: TO:0000785 ! tassel branch morphology trait
 created_by: moorel
 creation_date: 2012-06-26T12:40:53Z
@@ -8560,10 +8620,10 @@ created_by: ethan_johnson
 [Term]
 id: TO:0000993
 name: cellulose content
-def: "A carbohydrate content trait (TO:0000291) which is the amount of cellulose (CHEBI:62968) in a plant structure (PO:0009011)." [TO:Laurel_Cooper]
+def: "A polysaccharide content trait (TO:0006007) which is the amount of cellulose (CHEBI:62968) in a plant structure (PO:0009011)." [TO:Laurel_Cooper]
 comment: Refers to crystalline cellulose (CHEBI:62968): A (1→4)-β-D-glucan (cellulose) in crystalline form with a structure consisting of several hundred to over ten thousand D-glucose residues joined by β(1→4) glycosidic linkages.
 xref: TO_GIT:384
-is_a: TO:0020068 ! beta-glucan content
+is_a: TO:0006007 ! polysaccharide content
 created_by: ethan_johnson
 
 [Term]
@@ -8650,16 +8710,14 @@ id: TO:0001004
 name: basal tiller number
 def: "Number of basal tillers per plant, should represent most plants within a study." [Gramene:pankaj_jaiswal]
 synonym: "basal axillary shoot number (related)" RELATED []
-is_a: TO:0000077 ! shoot system morphology trait
 is_a: TO:0000346 ! tiller number
 
 [Term]
 id: TO:0001005
-name: basal tiller length
+name: basal tiller height
 def: "The height of the tallest basal tiller (basal axillary shoot) of a plant." [Gramene:pankaj_jaiswal]
 synonym: "basal tiller height (related)" RELATED []
-is_a: TO:0000077 ! shoot system morphology trait
-is_a: TO:0000576 ! stem length
+is_a: TO:0001168 ! basal axillary shoot system morphology trait
 
 [Term]
 id: TO:0001006
@@ -8769,7 +8827,7 @@ is_a: TO:0000327 ! shoot system yield trait
 id: TO:0001021
 name: days to inflorescence exsertion
 def: "Number of days required for the emergence of inflorescence to become visible on the plant." [Gramene:pankaj_jaiswal]
-comment: Often in grasses it emerges from the flag leaf whcih is the top most leaft on the shoot.
+comment: Often in grasses it emerges from the flag leaf which is the top most leaf on the shoot.
 synonym: "days to inflorescence emergence (related)" RELATED []
 is_a: TO:0002616 ! flowering time trait
 
@@ -9894,6 +9952,139 @@ xref: TO_GIT:467
 is_a: TO:0000148 ! viral disease response trait
 
 [Term]
+id: TO:0001157
+name: seed moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in a seed (PO:0009010)." [TO:Laurel_Cooper]
+is_a: TO:0000228 ! moisture content trait
+relationship: part_of TO:0000931 ! seed quality trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-07-07T20:33:29Z
+
+[Term]
+id: TO:0001158
+name: shoot axis length
+def: "A shoot axis morphology trait (TO:0000739) which is the length in a shoot axis (PO:0025029)." [TO:Laurel_Cooper]
+is_a: TO:0000739 ! shoot axis morphology trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-07-08T18:39:43Z
+
+[Term]
+id: TO:0001159
+name: grain dormancy
+def: "A fruit growth and development trait (TO:0000929) where a grain (caryopsis fruit; PO:0030104) remains in a state of quiescence or dormancy (GO:0022611)." [TO:Laurel_Cooper]
+is_a: TO:0000929 ! fruit growth and development trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-07-14T21:14:16Z
+
+[Term]
+id: TO:0001160
+name: Coleoptera damage response trait
+def: "An insect damage response trait (TO:0000261) which is caused by insects of the order Coleoptera (beetles, weevils, etc)." [NCBITaxon:7041, TO:Laurel_Cooper]
+is_a: TO:0000261 ! insect damage response trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-07-28T18:02:34Z
+
+[Term]
+id: TO:0001161
+name: Hymenoptera damage response trait
+def: "An insect damage response trait (TO:0000261) which is caused by insects of the order Hymenoptera (wasps, bees, ants and sawflies)." [NCBITaxon:7399, TO:Laurel_Cooper]
+is_a: TO:0000261 ! insect damage response trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-07-28T18:08:37Z
+
+[Term]
+id: TO:0001162
+name: Lepidoptera damage response trait
+def: "An insect damage response trait (TO:0000261) which is caused by insects of the order Lepidoptera (butterflies and moths, etc)." [NCBITaxon:7088, TO:Laurel_Cooper]
+is_a: TO:0000261 ! insect damage response trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-07-28T18:11:20Z
+
+[Term]
+id: TO:0001163
+name: Diptera damage response trait
+def: "An insect damage response trait (TO:0000261) which is caused by insects of the order Diptera (flies, midges, etc)." [NCBITaxon:7147, TO:Laurel_Cooper]
+is_a: TO:0000261 ! insect damage response trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-07-28T18:17:20Z
+
+[Term]
+id: TO:0001164
+name: Hemiptera damage response trait
+def: "An insect damage response trait (TO:0000261) which is caused by insects of the order Hemiptera (true bugs)." [NCBITaxon:7524, TO:Laurel_Cooper]
+is_a: TO:0000261 ! insect damage response trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-07-28T18:20:40Z
+
+[Term]
+id: TO:0001165
+name: Thysanoptera damage response trait
+def: "An insect damage response trait (TO:0000261) which is caused by insects of the order Thysanoptera (thrips)." [NCBITaxon:30262, TO:Laurel_Cooper]
+is_a: TO:0000261 ! insect damage response trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-07-28T18:35:12Z
+
+[Term]
+id: TO:0001166
+name: starch quality trait
+def: "A processing quality trait (TO:0001068) which includes the physical, biochemical and thermal properties of a type of starch." [TO:Laurel_Cooper]
+comment: The physical, biochemical and thermal properties of a starch determine its functionality and how it behaves in food preparations and industrial applications. Starch quality can be measured using a a machine such as a Rapid Visco Analyser (RVA) where the viscosity of a starch slurry is monitored during controlled\nheating, holding, and cooling temperature cycles.
+is_a: TO:0001068 ! processing quality trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-08-27T20:12:09Z
+
+[Term]
+id: TO:0001167
+name: starch gelatinization trait
+def: "A starch quality trait (TO:0001166) which is the tendency of a starch granule (GO:0043036) to swell and absorb water." [TO:Laurel_Cooper, Wikipedia:Starch_gelatinization]
+comment: Starch gelatinization is a process of breaking down of intermolecular bonds of starch molecules in the presence of water and heat or alkali, allowing the hydrogen bonding sites (the hydroxyl hydrogen and oxygen) to engage more water. This irreversibly dissolves the starch granule in water. Gelatinization results in changes in viscosity of a starch slurry.
+is_a: TO:0001166 ! starch quality trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-08-27T21:37:22Z
+
+[Term]
+id: TO:0001168
+name: basal axillary shoot system morphology trait
+def: "A shoot system morphology trait (TO:0000077) which is a quality of a basal axillary shoot system (tiller; PO:0005001)." [TO:Laurel_Cooper]
+synonym: "tiller trait (exact)" EXACT []
+is_a: TO:0000077 ! shoot system morphology trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-08-28T21:15:38Z
+
+[Term]
+id: TO:0001169
+name: stomatal complex presence trait
+def: "A shoot system morphology trait (TO:0000077) which is the presence of a stomatal complex (PO:0002000 )." [TO:Laurel_Cooper]
+is_a: TO:0000077 ! shoot system morphology trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-09-02T22:17:04Z
+
+[Term]
+id: TO:0001170
+name: fatty acid content trait
+def: "A metabolite content trait (TO:0000281) which is the amount of one or more fatty acids in a plant structure (PO:0009011) or a plant-derived lipid." [TO:Laurel_Cooper]
+comment: Fatty acids consist of a straight chain of an even number of carbon atoms, with hydrogen atoms along the length and at one end of the chain and a carboxyl group at the other end. Fatty acids may be saturated (no double bonds), or unsaturated (one or more double bonds). Fatty acids are an important component of lipids.
+is_a: TO:0000281 ! metabolite content trait
+
+[Term]
+id: TO:0001171
+name: seedling hypocotyl weight
+def: "A seedling hypocotyl morphology trait (TO:0000769) which is the weight of a seedling hypocotyl (PO:0025291)." [TO:Laurel_Cooper]
+xref: TO_GIT:507
+is_a: TO:0000769 ! seedling hypocotyl morphology trait
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-09-08T18:11:58Z
+
+[Term]
+id: TO:0001172
+name: polyphenol compound content
+def: "A phenolic compound content ( TO:0020076) which involves polyphenols." []
+comment: Polyphenols are characterized by their chemical structure, which consists of multiple phenol rings (C6H6O) linked together. Polyphenols include flavonoids phenolic acids (e.g., caffeic acid, ferulic acid), stilbenes (e.g., resveratrol) and lignans.
+is_a: TO:0020076 ! phenolic compound content
+created_by: https://orcid.org/0000-0002-6379-8932
+creation_date: 2025-09-15T22:44:44Z
+
+[Term]
 id: TO:0002600
 name: floral organ size
 def: "A floral organ morphology trait (TO:0000862) which is the size of a floral organ (PO:0025395)." [Gramene:pankaj_jaiswal, PO:0025395, TO:moorel]
@@ -10188,14 +10379,13 @@ is_a: TO:0002729 ! fruit senescing quality trait
 [Term]
 id: TO:0002633
 name: fruit ripening trait
-def: "A fruit growth and development trait (TO:0000929) that is the extent of fruit ripening (GO:0009835)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+def: "A biological process trait (TO:0000283) that is the process of fruit ripening (GO:0009835)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 comment: Fruit ripening (GO:0009835) is an aging process that has as participant a fruit. Ripening causes changes in one or more characteristics of a fruit (color, aroma, flavor, texture, hardness, cell wall structure) and may make it more attractive to animals and aid in seed dispersal.
 synonym: "fruit ripening (related)" RELATED []
 xref: GO:0009835
 xref: TO_GIT:256
 is_a: TO:0000283 ! biological process trait
-is_a: TO:0000929 ! fruit growth and development trait
-is_a: TO:0002728 ! fruit quality trait
+relationship: part_of TO:0000929 ! fruit growth and development trait
 
 [Term]
 id: TO:0002634
@@ -10241,8 +10431,8 @@ is_a: TO:0006016 ! meristem tissue development trait
 
 [Term]
 id: TO:0002639
-name: shoot branching
-def: "A shoot axis morphology trait (TO:0000739) which is the amount or pattern of branches arising from the shoot axis (PO:0025029)." [TO:Laurel_Cooper]
+name: shoot axis branching
+def: "A shoot axis morphology trait (TO:0000739) which is the number of, or pattern of, branches arising from a shoot axis (PO:0025029)." [TO:Laurel_Cooper]
 is_a: TO:0000739 ! shoot axis morphology trait
 
 [Term]
@@ -10299,10 +10489,10 @@ is_a: TO:0001068 ! processing quality trait
 [Term]
 id: TO:0002647
 name: starch digestibility
-def: "A plant quality trait (TO:0000597) which is the proportion of the starch content of a forage or feed that is digested by an animal." [GrainGenes_trait:Starch_digestibility, Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+def: "A starch quality trait (TO:0001166) which the proportion of the starch content of a forage or feed that is digested by an animal." [GrainGenes_trait:Starch_digestibility, Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 comment: Starch digestibility is usually expressed as a percentage.
 synonym: "STARCHDIG (related)" RELATED []
-is_a: TO:0000597 ! plant quality trait
+is_a: TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0002648
@@ -10313,9 +10503,9 @@ is_a: TO:0000931 ! seed quality trait
 
 [Term]
 id: TO:0002649
-name: pesticide sensitivity
+name: pesticide response
 def: "A chemical stress sensitivity (TO:0000482) which is the tolerance exhibited by a plant or a group of plants (population) towards the applied pesticide." [TO:Laurel_Cooper]
-is_a: TO:0000482 ! chemical stress sensitivity
+is_a: TO:0000482 ! chemical stress response
 
 [Term]
 id: TO:0002650
@@ -10323,7 +10513,7 @@ name: phototropism response trait
 def: "The directional growth of a whole plant (PO:0000003) or plant structure (PO:0009011) in response to light." [Gramene:pankaj_jaiswal, PMID:15598797]
 synonym: "coleoptile curvature (narrow)" NARROW []
 synonym: "coleoptile phototropism (narrow)" NARROW []
-is_a: TO:0000075 ! light sensitivity
+is_a: TO:0000075 ! light reponse trait
 
 [Term]
 id: TO:0002651
@@ -10355,22 +10545,21 @@ is_a: TO:0000599 ! enzyme activity trait
 [Term]
 id: TO:0002655
 name: starch grain size
-def: "Assay to determine the size of the starch grain size." [Gramene:pankaj_jaiswal]
-is_a: TO:0000162 ! grain quality trait
-is_a: TO:0002625 ! fruit size
+def: "A starch quality trait (TO:0001166) which the size of a starch grain (GO:0043036)." [Gramene:pankaj_jaiswal]
+is_a: TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0002656
 name: starch grain shape
-def: "Assay to determine the shape of the starch grain." [Gramene:pankaj_jaiswal]
-is_a: TO:0000162 ! grain quality trait
-is_a: TO:0002628 ! fruit shape
+def: "Assay to determine the shape of the starch grain.\n\nA starch quality trait (TO:0001166) which the shape of a starch grain (GO:0043036)." [Gramene:pankaj_jaiswal]
+is_a: TO:0001166 ! starch quality trait
 
 [Term]
 id: TO:0002657
-name: oxidative stress
-def: "A chemical stress sensitivity (TO:0000482) which is the production of reactive oxygen and the plants ability to readily detoxify the reactive intermediates." [Gramene:pankaj_jaiswal, TO:moorel]
-is_a: TO:0000482 ! chemical stress sensitivity
+name: oxidative stress response
+def: "A chemical stress response trait (TO:0000482) reactive oxygen species  in the growth environment." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper, TO:moorel]
+comment: Some plants may have the ability to detoxify reactive intermediates.
+is_a: TO:0000482 ! chemical stress response
 
 [Term]
 id: TO:0002658
@@ -10408,7 +10597,7 @@ def: "A leaf rolling trait (TO:0000085) which is the tolerance for leaf rolling 
 synonym: "Cold-induced wilting tolerance (broad)" BROAD []
 synonym: "LFRLTL (exact)" EXACT []
 synonym: "wilting tolerance (narrow)" NARROW []
-is_a: TO:0000085 ! leaf rolling
+is_a: TO:0000085 ! leaf rolling response
 
 [Term]
 id: TO:0002663
@@ -10463,10 +10652,10 @@ is_a: TO:0000476 ! growth hormone content
 
 [Term]
 id: TO:0002669
-name: diterpenoid phytoalexin content
-def: "Measures the diterpenoid phytoalexin content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
-comment: Diterpenoid phytoalexins are polycyclic diterpenes involved in pathogen response.
-is_a: TO:0000290 ! flavonoid content
+name: phytoalexin content
+def: "A metabolite content trait (TO:0000281) which is phytoalexin content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+comment: Phytoalexins are antimicrobial compounds that plants produce on demand at sites of pathogen infection or stress to defend themselves. These substances vary in chemical structure, with examples including isoflavonoids in legumes like soybean, diterpenoids in rice, and sesquiterpenes in pepper plants.
+is_a: TO:0000281 ! metabolite content trait
 
 [Term]
 id: TO:0002670
@@ -10474,15 +10663,15 @@ name: momilactone A content
 def: "Measures the momilactone A content in a plant structure (PO:0009011)." [PMID:16569039]
 comment: Momilactone A is a instance of diterpenoid phytoalexin.
 synonym: "phytoalexin momilactone A content (related)" RELATED []
-is_a: TO:0002669 ! diterpenoid phytoalexin content
+is_a: TO:0002669 ! phytoalexin content
 
 [Term]
 id: TO:0002671
 name: momilactone B content
-def: "Measures the momilactone B content in a plant structure (PO:0009011)." [PMID:16569039, TO:Laurel_Cooper]
+def: "Measures the momilactone B content in a plant structure (PO:0009011)." [PMID:16569039]
 comment: Momilactone B is a instance of diterpenoid phytoalexin.
 synonym: "phytoalexin momilactone B content (related)" RELATED []
-is_a: TO:0002669 ! diterpenoid phytoalexin content
+is_a: TO:0002669 ! phytoalexin content
 
 [Term]
 id: TO:0002672
@@ -10496,7 +10685,7 @@ is_a: TO:0000476 ! growth hormone content
 [Term]
 id: TO:0002673
 name: amino acid content
-def: "The amino acid content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+def: "A metabolite content trait (TO:0000281) which is the amino acid content in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000281 ! metabolite content trait
 
 [Term]
@@ -10528,7 +10717,7 @@ name: brassinosteroid sensitivity
 def: "Response with respect to application of Brassinosteroid." [Gramene:pankaj_jaiswal]
 comment: Brassinosteroids (BR) are a group of steroidal plant hormones.
 synonym: "BRSN (related)" RELATED []
-is_a: TO:0000401 ! plant growth hormone sensitivity
+is_a: TO:0000401 ! plant growth hormone response
 
 [Term]
 id: TO:0002678
@@ -10546,9 +10735,10 @@ is_a: TO:0000582 ! inflorescence number
 [Term]
 id: TO:0002680
 name: albumin content
-def: "Assay to determine the amount of albumin protein." [Gramene:pankaj_jaiswal]
+def: "A seed protein content (TO:0000490) trait which is the amount of albumin protein in a seed." [Gramene:pankaj_jaiswal]
+comment: Albumin proteins area class of globular proteins which are soluble in pure water.
 synonym: "albumen content (related)" RELATED []
-is_a: TO:0000325 ! soluble protein content
+is_a: TO:0000490 ! seed protein content
 
 [Term]
 id: TO:0002681
@@ -11229,6 +11419,7 @@ is_a: TO:0002748 ! ligule morphology trait
 [Term]
 id: TO:0002767
 name: rhizome formation
+def: "A shoot system growth and development trait (TO:0000654) which is the formation of a rhizome (PO:0004542)." []
 synonym: "RHZFORM (related)" RELATED []
 is_a: TO:0000654 ! shoot system growth and development trait
 
@@ -11513,35 +11704,35 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003035
 name: stem moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of a stem (PO:0009047)." [TO:malaporte]
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in a stem (PO:0009047)." [TO:malaporte]
 is_a: TO:0000228 ! moisture content trait
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003036
 name: root moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of a root (PO:0009005)." [TO:malaporte]
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in a root (PO:0009005)." [TO:malaporte]
 is_a: TO:0000228 ! moisture content trait
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003037
-name: plant moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of the whole plant (PO:0000003)." [TO:malaporte]
+name: whole plant moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in the whole plant (PO:0000003)." [TO:malaporte]
 is_a: TO:0000228 ! moisture content trait
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003038
-name: shoot moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of the shoot system (PO:0009006)." [TO:malaporte]
+name: shoot system moisture content
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in the shoot system (PO:0009006)." [TO:malaporte]
 is_a: TO:0000228 ! moisture content trait
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003039
 name: infructescence moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of a infructescence (PO:0006342)." [TO:malaporte]
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in a infructescence (PO:0006342)." [TO:malaporte]
 synonym: "bunch moisture content (narrow)" NARROW []
 is_a: TO:0000228 ! moisture content trait
 created_by: http://orcid.org/0000-0002-8461-9745
@@ -11549,23 +11740,23 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003040
 name: pepo fruit moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of a pepo fruit (PO:0030111)." [TO:malaporte]
+def: "A fruit moisture content trait (TO:0000686) which is the amount of moisture in a pepo fruit (PO:0030111)." [TO:malaporte]
 synonym: "banana finger moisture content (exact)" EXACT []
-is_a: TO:0000228 ! moisture content trait
+is_a: TO:0000686 ! fruit moisture content
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003041
 name: second order infructescence moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of a second order infructescence (PO:0025241)." [TO:malaporte]
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in a second order infructescence (PO:0025241)." [TO:malaporte]
 synonym: "banana hand moisture content (exact)" EXACT []
-is_a: TO:0000228 ! moisture content trait
+is_a: TO:0003039 ! infructescence moisture content
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003042
 name: tuberous root tuber moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of a tuberous root tuber (PO:0025476)." [TO:malaporte]
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in a tuberous root tuber (PO:0025476)." [TO:malaporte]
 synonym: "storage root moisture content (exact)" EXACT []
 is_a: TO:0000228 ! moisture content trait
 created_by: http://orcid.org/0000-0002-8461-9745
@@ -11573,7 +11764,7 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003043
 name: subterranean shoot axis tuber moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
 synonym: "tuber moisture content (exact)" EXACT []
 is_a: TO:0000228 ! moisture content trait
 created_by: http://orcid.org/0000-0002-8461-9745
@@ -11581,36 +11772,36 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003044
 name: legume fruit moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of a legume fruit (PO:0030100)." [TO:malaporte]
+def: "A fruit moisture content trait (TO:0000686) which is the amount of moisture in a legume fruit (PO:0030100)." [TO:malaporte]
 synonym: "pod moisture content (exact)" EXACT []
-is_a: TO:0000228 ! moisture content trait
+is_a: TO:0000686 ! fruit moisture content
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003045
 name: panicle moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of a panicle inflorescence (PO:0030123)." [TO:malaporte]
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in a panicle inflorescence (PO:0030123)." [TO:malaporte]
 is_a: TO:0000228 ! moisture content trait
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003046
 name: ear moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of a ear infructescence (PO:0025597)." [TO:malaporte]
-is_a: TO:0000228 ! moisture content trait
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in a ear infructescence (PO:0025597)." [TO:malaporte]
+is_a: TO:0003039 ! infructescence moisture content
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003047
 name: cob moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of a ear infructescence axis (PO:0025623)." [TO:malaporte]
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in an ear infructescence axis (PO:0025623)." [TO:malaporte]
 is_a: TO:0000228 ! moisture content trait
 created_by: http://orcid.org/0000-0002-8461-9745
 
 [Term]
 id: TO:0003048
 name: spike moisture content
-def: "A moisture content trait (TO:0000228) which is the amount of moisture of a spike inflorescence (PO:0030117)." [TO:malaporte]
+def: "A moisture content trait (TO:0000228) which is the amount of moisture in a spike inflorescence (PO:0030117)." [TO:malaporte]
 is_a: TO:0000228 ! moisture content trait
 created_by: http://orcid.org/0000-0002-8461-9745
 
@@ -11669,7 +11860,7 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003055
 name: subterranean shoot axis tuber potassium content
-def: "A moisture content trait (TO:0000228) which is the amount of potassium cation (CHEBI:29103) in a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
+def: "A potassium content trait (TO:0000609) which is the amount of potassium cation (CHEBI:29103) in a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
 synonym: "tuber potassium content (exact)" EXACT []
 xref: CHEBI:29103
 is_a: TO:0000609 ! potassium content
@@ -11771,7 +11962,7 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003067
 name: subterranean shoot axis tuber nitrogen content
-def: "A moisture content trait (TO:0000228) which is the amount of nitrogen (CHEBI:51143) in a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
+def: "A nitrogen content trait (TO:0020093) which is the amount of nitrogen (CHEBI:51143) in a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
 synonym: "tuber nitrogen content (exact)" EXACT []
 xref: CHEBI:51143
 is_a: TO:0020093 ! nitrogen content
@@ -11881,7 +12072,7 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003081
 name: subterranean shoot axis tuber phosphorus content
-def: "A moisture content trait (TO:0000228) which is the amount of phosphorus cation (CHEBI:33467) in a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
+def: "A phosphorus content trait (TO:0001024) which is the amount of phosphorus cation (CHEBI:33467) in a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
 synonym: "tuber phosphorus content (exact)" EXACT []
 xref: CHEBI:33467
 is_a: TO:0001024 ! phosphorus content
@@ -11999,7 +12190,7 @@ created_by: http://orcid.org/0000-0002-8461-9745
 [Term]
 id: TO:0003095
 name: subterranean shoot axis tuber carbon content
-def: "A moisture content trait (TO:0000228) which is the amount of carbon (CHEBI:27594) in a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
+def: "A carbon content trait (TO:0000466) which is the amount of carbon (CHEBI:27594) in a subterranean shoot axis tuber (PO:0004547)." [TO:malaporte]
 synonym: "tuber carbon content (exact)" EXACT []
 xref: CHEBI:27594
 is_a: TO:0000466 ! carbon content
@@ -12077,7 +12268,7 @@ synonym: "high linoleic oil content (narrow)" NARROW []
 synonym: "linoleic oil content (exact)" EXACT []
 synonym: "low linoleic oil content (narrow)" NARROW []
 xref: CHEBI:17351
-is_a: TO:0000604 ! fat and essential oil content
+is_a: TO:0001170 ! fatty acid content trait
 
 [Term]
 id: TO:0005002
@@ -12092,7 +12283,7 @@ synonym: "high oleic oil content (narrow)" NARROW []
 synonym: "mid oleic oil content (narrow)" NARROW []
 synonym: "oleic oil content (related)" RELATED []
 xref: CHEBI:16196
-is_a: TO:0000604 ! fat and essential oil content
+is_a: TO:0001170 ! fatty acid content trait
 
 [Term]
 id: TO:0005003
@@ -12106,15 +12297,15 @@ synonym: "octadecanoic acid content (exact)" EXACT []
 synonym: "octadecoic acid content (exact)" EXACT []
 synonym: "stearic oil content (related)" RELATED []
 xref: CHEBI:28842
-is_a: TO:0000604 ! fat and essential oil content
+is_a: TO:0001170 ! fatty acid content trait
 
 [Term]
 id: TO:0005004
-name: omega-3 fatty acid content
-def: "The omega-3 fatty acid content in or extracted from a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
+name: OBSOLETE omega-3 fatty acid content
+def: "OBSOLETE The omega-3 fatty acid content in or extracted from a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 comment: Omega-3 fatty acid (CHEBI:25681) is a polyunsaturated fatty acid (CHEBI:26208). There are four subtypes of omega-3 fatty acids, namely, alpha-licanic acid (CHEBI:28771), all-cis-docosa-4,7,10,13,16,19-hexaenoic acid (CHEBI:28125), all-cis-icosa-5,8,11,14,17-pentaenoic acid and alpha-linolenic acid (CHEBI:27432).
 xref: CHEBI:25681
-is_a: TO:0000604 ! fat and essential oil content
+is_obsolete: true
 
 [Term]
 id: TO:0005005
@@ -12129,7 +12320,7 @@ synonym: "9-cis,12-cis,15-cis-octadecatrienoic acid content (exact)" EXACT []
 synonym: "all-cis-9,12,15-octadecatrienoic acid content (exact)" EXACT []
 synonym: "cis,cis,cis-9,12,15-octadecatrienoic acid content (exact)" EXACT []
 xref: CHEBI:27432
-is_a: TO:0005004 ! omega-3 fatty acid content
+is_a: TO:1000074 ! linolenic acid content
 
 [Term]
 id: TO:0005006
@@ -12162,23 +12353,23 @@ is_a: TO:0000058 ! herbicide sensitivity
 
 [Term]
 id: TO:0005009
-name: European corn borer resistance
-def: "Causal agent: Ostrinia nubialis." [Gramene:pankaj_jaiswal]
+name: European corn borer response trait
+def: "A Lepidoptera damage response trait (TO:0001162) which is caused by a European corn borer (Ostrinia nubilalis)." [Gramene:pankaj_jaiswal, NCBITaxon:29057, TO:Laurel_Cooper]
 synonym: "ECB resistance (exact)" EXACT []
-is_a: TO:0000261 ! insect damage response trait
+is_a: TO:0001162 ! Lepidoptera damage response trait
 
 [Term]
 id: TO:0005010
-name: rootworm resistance
-def: "Causal agent: Diabrotica spp." [Gramene:pankaj_jaiswal]
-is_a: TO:0000261 ! insect damage response trait
+name: rootworm beetle response
+def: "A Coleoptera damage response trait (TO:0001160) which is caused by a rootworm beetle (Diabrotica spp.)." [Gramene:pankaj_jaiswal, NCBITaxon:50385, TO:Laurel_Cooper]
+is_a: TO:0001160 ! Coleoptera damage response trait
 
 [Term]
 id: TO:0006001
 name: salt tolerance
 def: "Tolerance to the high salt content in the growth medium." [Gramene:pankaj_jaiswal]
 synonym: "SALTTL (exact)" EXACT []
-is_a: TO:0000429 ! salt sensitivity
+is_a: TO:0000429 ! salt response
 
 [Term]
 id: TO:0006002
@@ -12192,7 +12383,6 @@ name: oligosaccharide content
 def: "Amount of oligosaccharides present in the plant or its parts." [Gramene:pankaj_jaiswal]
 comment: Oligosaccharide is a carbohydrate polymer that on hydrolysis yields a small number of monosaccharide molecules.
 is_a: TO:0000291 ! carbohydrate content
-is_a: TO:0000489 ! carbohydrate composition related trait
 
 [Term]
 id: TO:0006004
@@ -12211,14 +12401,12 @@ id: TO:0006006
 name: monosaccharide content
 def: "Amount of monosaccharide present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000291 ! carbohydrate content
-is_a: TO:0000489 ! carbohydrate composition related trait
 
 [Term]
 id: TO:0006007
 name: polysaccharide content
 def: "Amount of polysaccharide present in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal]
 is_a: TO:0000291 ! carbohydrate content
-is_a: TO:0000489 ! carbohydrate composition related trait
 
 [Term]
 id: TO:0006008
@@ -12662,10 +12850,9 @@ creation_date: 2010-10-25T05:37:25Z
 
 [Term]
 id: TO:0006067
-name: aphid resistance
-def: "Resistance displayed by the plant to the aphid infestation." [Gramene:pankaj_jaiswal]
-comment: Aphids are members of the insect order Homoptera, family Aphididae.
-is_a: TO:0000261 ! insect damage response trait
+name: aphid response trait
+def: "A Hemiptera damage response trait (TO:0001164) caused by insects of the Aphididae family." [Gramene:pankaj_jaiswal, NCBITaxon:27482, TO:Laurel_Cooper]
+is_a: TO:0001164 ! Hemiptera damage response trait
 created_by: jaiswalp
 creation_date: 2010-10-25T05:38:56Z
 
@@ -12824,46 +13011,51 @@ creation_date: 2011-12-09T01:54:09Z
 [Term]
 id: TO:0012004
 name: quantum yield
-def: "The efficiency of light energy conversion into chemical energy by plants." [TO:Laurel_Cooper, Wikipedia:quantum_yield]
+def: "A chlorophyll fluorescence trait (TO:0012006) which is the efficiency of light energy conversion into chemical energy by plants." [TO:Laurel_Cooper, Wikipedia:quantum_yield]
 synonym: "QY (related)" RELATED []
-is_a: TO:0012006 ! fluorescence related trait
+is_a: TO:0012006 ! chlorophyll fluorescence trait
 created_by: jaiswalp
 creation_date: 2011-12-09T02:09:21Z
 
 [Term]
 id: TO:0012005
-name: chlorophyll fluorescence induction kinetics
+name: OBSOLETE chlorophyll fluorescence induction kinetics
+def: "OBSOLETE" []
 synonym: "OJIP (related)" RELATED []
-is_a: TO:0012006 ! fluorescence related trait
+is_obsolete: true
 created_by: jaiswalp
 creation_date: 2011-12-09T02:09:52Z
 
 [Term]
 id: TO:0012006
-name: fluorescence related trait
+name: chlorophyll fluorescence trait
+def: "A biological process trait (TO:0000283) which is the release of excess energy through the emission of red light by chlorophyll molecules." [TO:Laurel_Cooper]
 is_a: TO:0000283 ! biological process trait
 created_by: jaiswalp
 creation_date: 2011-12-09T02:12:03Z
 
 [Term]
 id: TO:0012007
-name: quantum yield determined by the light curve
-is_a: TO:0012004 ! quantum yield
+name: OBSOLETE quantum yield determined by the light curve
+def: "OBSOLETE" []
+is_obsolete: true
 created_by: jaiswalp
 creation_date: 2011-12-09T02:13:21Z
 
 [Term]
 id: TO:0012008
-name: quantum yield at a given wavelength
-is_a: TO:0012004 ! quantum yield
+name: OBSOLETE quantum yield at a given wavelength
+def: "OBSOLETE" []
+is_obsolete: true
 created_by: jaiswalp
 creation_date: 2011-12-09T02:16:09Z
 
 [Term]
 id: TO:0012009
-name: continuous fluorescence yield
+name: OBSOLETE continuous fluorescence yield
+def: "OBSOLETE" []
 synonym: "F<sub>T</sub> (related)" RELATED []
-is_a: TO:0012006 ! fluorescence related trait
+is_obsolete: true
 created_by: jaiswalp
 creation_date: 2011-12-09T02:18:08Z
 
@@ -12926,9 +13118,10 @@ is_a: TO:0000608 ! sodium content
 
 [Term]
 id: TO:0020005
-name: sorghum stem borer resistance
-def: "Causative agent: Chilo partellus. Infections causes the appearance of small elongated holes in young whorl leaves, tunelling of earheads results in breakage or chaffy earheads affecting grain development." [GCP:053, Gramene:cwt6]
-is_a: TO:0000454 ! stem borer resistance
+name: sorghum stem borer response trait
+def: "A Lepidoptera damage response trait (TO:0001162) caused by a sorghum stem borer (Chilo partellus)." [Gramene:cwt6, NCBITaxon:236792, TO:Laurel_Cooper]
+comment: Infections causes the appearance of small elongated holes in young whorl leaves, tunelling of earheads results in breakage or chaffy earheads affecting grain development.
+is_a: TO:0001162 ! Lepidoptera damage response trait
 
 [Term]
 id: TO:0020006
@@ -12938,9 +13131,10 @@ is_obsolete: true
 
 [Term]
 id: TO:0020007
-name: sorghum shoot fly resistance
-def: "Causative agent: Atherigona soccata. Larval feeding results in central leaf wilting and drying causing the typical deadheart symptom." [GCP:051, Gramene:cwt6]
-is_a: TO:0000261 ! insect damage response trait
+name: sorghum shoot fly response trait
+def: "A Diptera damage response trait (TO:0001163) which is caused by a sorghum shoot fly (Atherigona soccata)." [Gramene:cwt6, NCBITaxon:305598, TO:Laurel_Cooper]
+comment: Larval feeding results in central leaf wilting and drying, causing the typical deadheart symptom.
+is_a: TO:0001163 ! Diptera damage response trait
 
 [Term]
 id: TO:0020008
@@ -12990,7 +13184,7 @@ is_obsolete: true
 [Term]
 id: TO:0020015
 name: sorghum leaf blight disease response
-def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Exserohilum turcicum (Setosphaeria turcica)." [NCBITaxon:93612, TO:Laurel_Cooper]
+def: "An Ascomycete fungal disease response trait (TO:0001145) in Sorghum bicolor (NCBITaxon:4558) caused by Exserohilum turcicum (Setosphaeria turcica)." [NCBITaxon:93612, TO:Laurel_Cooper]
 xref: TO_GIT:69
 is_a: TO:0001145 ! Ascomycete fungal disease response
 
@@ -13014,64 +13208,72 @@ is_a: TO:0000904 ! seed coat pattern
 
 [Term]
 id: TO:0020018
-name: tertiary shoot branch number
-is_a: TO:0002639 ! shoot branching
+name: tertiary shoot axis branch number
+def: "A shoot axis branching trait (TO:0002639) which is the number of, or pattern of, branches arising from a tertiary shoot axis (branch; PO:0025073)." [TO:Laurel_Cooper]
+is_a: TO:0002639 ! shoot axis branching
 
 [Term]
 id: TO:0020019
-name: secondary shoot branch number
-is_a: TO:0002639 ! shoot branching
+name: secondary shoot axis branch number
+def: "A shoot axis branching trait (TO:0002639) which is the number of, or pattern of, branches arising from a secondary shoot axis (branch; PO:0025073)." [TO:Laurel_Cooper]
+is_a: TO:0002639 ! shoot axis branching
 
 [Term]
 id: TO:0020020
-name: primary shoot branch number
-is_a: TO:0002639 ! shoot branching
+name: stem branch number
+def: "A shoot axis branching trait (TO:0002639) which is the number of or pattern of branches arising from a stem (PO:0009047)." []
+synonym: "primary shoot axis branch number (exact)" EXACT []
+is_a: TO:0000361 ! stem morphology trait
+is_a: TO:0002639 ! shoot axis branching
 
 [Term]
 id: TO:0020021
-name: basal axillary tertiary branch number
-is_a: TO:0020018 ! tertiary shoot branch number
-is_a: TO:0020024 ! basal axillary branch number
+name: OBSOLETE basal axillary tertiary branch number
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0020022
-name: basal axillary secondary branch number
-is_a: TO:0020019 ! secondary shoot branch number
-is_a: TO:0020024 ! basal axillary branch number
+name: OBSOLETE basal axillary secondary branch number
+def: "OBSOLETE" []
+is_a: TO:0020024 ! OBSOLETE basal axillary branch number
+is_obsolete: true
 
 [Term]
 id: TO:0020023
-name: basal axillary primary branch number
-is_a: TO:0020020 ! primary shoot branch number
-is_a: TO:0020024 ! basal axillary branch number
+name: OBSOLETE basal axillary primary branch number
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0020024
-name: basal axillary branch number
-is_a: TO:0002639 ! shoot branching
+name: OBSOLETE basal axillary branch number
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0020025
-name: apical axillary tertiary branch number
-is_a: TO:0020018 ! tertiary shoot branch number
-is_a: TO:0020028 ! apical axillary branch number
+name: OBSOLETE apical axillary tertiary branch number
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0020026
-name: apical axillary secondary branch number
-is_a: TO:0020019 ! secondary shoot branch number
-is_a: TO:0020028 ! apical axillary branch number
+name: OBSOLETE apical axillary secondary branch number
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0020027
-name: apical axillary primary branch number
-is_a: TO:0020020 ! primary shoot branch number
-is_a: TO:0020028 ! apical axillary branch number
+name: OBSOLETE apical axillary primary branch number
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0020028
-name: apical axillary branch number
-is_a: TO:0002639 ! shoot branching
+name: OBSOLETE apical axillary branch number
+def: "OBSOLETE" []
+is_obsolete: true
 
 [Term]
 id: TO:0020029
@@ -13175,7 +13377,7 @@ creation_date: 2011-08-19T12:19:00Z
 [Term]
 id: TO:0020053
 name: wheat spot blotch disease response
-def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Cochliobolus sativus (Bipolaris sorokiniana)." [NCBITaxon:45130, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
+def: "An Ascomycete fungal disease response trait (TO:0001145) in leaves (PO:0009025) caused by Cochliobolus sativus (Bipolaris sorokiniana)." [NCBITaxon:45130, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
 comment: Symptoms include, elongated to oval shaped dark brown lesions. Centers often lighten to dark brown or tan surrounded by an irregular dark brown ring.
 synonym: "Helminthosporium leaf blotch (related)" RELATED []
 is_a: TO:0001145 ! Ascomycete fungal disease response
@@ -13236,8 +13438,8 @@ creation_date: 2011-08-19T12:33:03Z
 [Term]
 id: TO:0020059
 name: wheat common root rot response
-def: "An Ascomycete fungal disease response trait (TO:0001145) caused by Cochliobolus sativus (Bipolaris sorokiniana)." [NCBITaxon:45130, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
-comment: Symptoms: browning of the root, crown and basal culm tissues.  Plants may lodge. White spikes can appear.
+def: "An Ascomycete fungal disease response trait (TO:0001145) in roots (PO:0009005) caused by Cochliobolus sativus (Bipolaris sorokiniana)." [NCBITaxon:45130, T-CAP:Victoria_Blake, TO:Laurel_Cooper]
+comment: Symptoms: browning of the root, crown and basal culm tissues. Plants may lodge. White spikes can appear.
 is_a: TO:0001145 ! Ascomycete fungal disease response
 created_by: jaiswalp
 creation_date: 2011-08-19T12:36:24Z
@@ -13323,7 +13525,7 @@ id: TO:0020068
 name: beta-glucan content
 def: "Amount of beta-glucan present in a plant structure (PO:0009011) or product (e.g. malt)." [T-CAP:Victoria_Blake]
 comment: Beta-Glucans are polysaccharides of D-glucose linked by beta-glycosidic bonds that vary by molecular mass, solubility, viscosity and 3D configuration.
-is_a: TO:0006007 ! polysaccharide content
+is_a: TO:0000291 ! carbohydrate content
 created_by: jaiswalp
 creation_date: 2011-08-19T01:03:01Z
 
@@ -13392,7 +13594,7 @@ creation_date: 2011-08-19T01:29:00Z
 [Term]
 id: TO:0020076
 name: phenolic compound content
-def: "Amount of phenolics present in a plant structure (PO:0009011) or product." [T-CAP:Victoria_Blake]
+def: "A metabolite content trait (TO:0000281) which is the amount of phenolics present in a plant structure (PO:0009011)." [T-CAP:Victoria_Blake]
 comment: In barley it is evaluated in ex malt.
 is_a: TO:0000281 ! metabolite content trait
 created_by: jaiswalp
@@ -13420,7 +13622,7 @@ creation_date: 2011-08-19T02:49:07Z
 [Term]
 id: TO:0020079
 name: beta-cryptoxanthin content
-def: "A xanthophyll content (TO:0000301) which is the amount of beta-cryptoxanthin (CHEBI:10362) in a plant structure (PO:0009011)." []
+def: "A xanthophyll content (TO:0000301) which is the amount of beta-cryptoxanthin (CHEBI:10362) in a plant structure (PO:0009011)." [TO:Laurel_Cooper]
 xref: CHEBI:10362
 is_a: TO:0000301 ! xanthophyll content
 created_by: jaiswalp
@@ -13507,13 +13709,13 @@ creation_date: 2011-08-19T03:44:21Z
 
 [Term]
 id: TO:0020088
-name: total water soluble content
+name: OBSOLETE total water soluble content
 alt_id: TO:0002711
-def: "A metabolite content trait (TO:0000281) which is the concentration of water soluble components in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+def: "OBSOLETE  A metabolite content trait (TO:0000281) which is the concentration of water soluble components in a plant structure (PO:0009011)." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
 comment: This trait is usually highly correlated with total soluble sugar content (TO:0000340). Often determined in fresh tissue using a refractive index.
 synonym: "total dissolved solids content (related)" RELATED []
 xref: TO_GIT:100
-is_a: TO:0000281 ! metabolite content trait
+is_obsolete: true
 created_by: jaiswalp
 creation_date: 2011-08-19T03:47:00Z
 
@@ -13582,7 +13784,7 @@ creation_date: 2011-08-19T04:06:44Z
 [Term]
 id: TO:0020096
 name: mineral and ion transport trait
-def: "Trait associated with directed movement of minerals and ions into, out of, within or between cells." [TO:contributors]
+def: "A biological process trait (TO:0000283) which is associated with directed movement of minerals and ions." [TO:contributors, TO:Laurel_Cooper]
 is_a: TO:0000283 ! biological process trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:08:23Z
@@ -13606,7 +13808,7 @@ creation_date: 2011-08-19T04:11:32Z
 [Term]
 id: TO:0020099
 name: nitrate transport
-def: "Trait associated with directed movement of nitrate into, out of, within or between cells." [TO:contributors]
+def: "A mineral and ion transport trait (TO:0020096) which involves the directed movement of nitrate." [TO:contributors, TO:Laurel_Cooper]
 is_a: TO:0020096 ! mineral and ion transport trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:13:47Z
@@ -13614,7 +13816,7 @@ creation_date: 2011-08-19T04:13:47Z
 [Term]
 id: TO:0020100
 name: nitrate uptake
-def: "The total nitrate ion uptake measured a plant structure (PO:0009011)." [TO:contributors]
+def: "A mineral and ion transport trait (TO:0020096) which involves nitrate ion uptake in a plant structure (PO:0009011)." [TO:contributors, TO:Laurel_Cooper]
 is_a: TO:0020096 ! mineral and ion transport trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:13:47Z
@@ -13622,8 +13824,8 @@ creation_date: 2011-08-19T04:13:47Z
 [Term]
 id: TO:0020101
 name: starch mobilization
-def: "Trait associated with directed movement of starch." [TO:contributors]
-is_a: TO:0020096 ! mineral and ion transport trait
+def: "A biological process trait (TO:0000283) associated with the process of breaking down stored starch into usable sugars." [TO:Laurel_Cooper]
+is_a: TO:0000283 ! biological process trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:13:47Z
 
@@ -13650,16 +13852,16 @@ creation_date: 2011-08-19T04:18:45Z
 id: TO:0020104
 name: adventitious rootless
 def: "Absence of adventitious roots in the plant." [TO:contributors]
-is_a: TO:0000084 ! root number
+is_a: TO:0001006 ! adventitious root number
 created_by: jaiswalp
 creation_date: 2011-08-19T04:19:49Z
 
 [Term]
 id: TO:0020105
-name: CW-cytoplasmic male sterility
-def: "A trait to measure the CW type of cytoplasmic male sterility in plants." [TO:contributors]
+name: OBSOLETE CW-cytoplasmic male sterility
+def: "OBSOLETE A trait to measure the CW type of cytoplasmic male sterility in plants." [TO:contributors]
 comment: Often measured by abnormal pollen germination.
-is_a: TO:0000580 ! cytoplasmic male sterility
+is_obsolete: true
 created_by: jaiswalp
 creation_date: 2011-08-19T04:21:39Z
 
@@ -13735,26 +13937,26 @@ creation_date: 2011-08-19T04:35:33Z
 
 [Term]
 id: TO:0020115
-name: chlorophyll fluorescence quenching
-def: "The process to maintain the balance between dissipation and utilization of light energy to minimize generation of oxidizing molecules." [TO:contributors]
-is_a: TO:0012006 ! fluorescence related trait
+name: OBSOLETE chlorophyll fluorescence quenching
+def: "OBSOLETE The process to maintain the balance between dissipation and utilization of light energy to minimize generation of oxidizing molecules." [TO:contributors]
+is_obsolete: true
 created_by: jaiswalp
 creation_date: 2011-08-19T04:36:34Z
 
 [Term]
 id: TO:0020116
 name: photochemical quenching
-def: "The process to maintain the balance between dissipation and utilization of light energy to minimize generation of oxidizing molecules under light conditions." [Gramene:pankaj_jaiswal, TO:contributors]
-is_a: TO:0012006 ! fluorescence related trait
+def: "A chlorophyll fluorescence trait (TO:0012006) which is a process where absorbed light energy is used for photochemistry within photosystem II (PSII) instead of being dissipated as heat." [Gramene:pankaj_jaiswal, TO:Laurel_Cooper]
+is_a: TO:0012006 ! chlorophyll fluorescence trait
 created_by: jaiswalp
 creation_date: 2011-08-19T04:37:43Z
 
 [Term]
 id: TO:0020117
-name: non photochemical quenching
-def: "The process to maintain the balance between dissipation and utilization of light energy to minimize generation of oxidizing molecules under no light conditions." [Gramene:pankaj_jaiswal, TO:contributors]
+name: OBSOLETE non photochemical quenching
+def: "OBSOLETE The process to maintain the balance between dissipation and utilization of light energy to minimize generation of oxidizing molecules under no light conditions." [Gramene:pankaj_jaiswal, TO:contributors]
 synonym: "NPQ (related)" RELATED []
-is_a: TO:0012006 ! fluorescence related trait
+is_obsolete: true
 created_by: jaiswalp
 creation_date: 2011-08-19T04:37:43Z
 
@@ -14510,7 +14712,7 @@ id: TO:1000074
 name: linolenic acid content
 def: "An essential fatty acid (TO:0000604) content which is the amount of a polyunsaturated, 18 carbon long fatty acid, with three double bonds." [CHEBI:25048, TO:Laurel_Cooper]
 comment: There are two forms of linolenic acid, alpha and gamma, depending upon where the double bonds occur.
-is_a: TO:0000604 ! fat and essential oil content
+is_a: TO:0001170 ! fatty acid content trait
 created_by: Laurel_Cooper
 creation_date: 2020-09-16T12:00:00Z
 
@@ -14519,7 +14721,7 @@ id: TO:1000075
 name: palmitic acid content
 def: "A fatty acid content (TO:0000604) which is the amount of a straight-chain, sixteen-carbon, saturated long-chain fatty acid in a plant structure." [CHEBI:15756, TO:Laurel_Cooper]
 synonym: "hexadecanoic acid (exact)" EXACT []
-is_a: TO:0000604 ! fat and essential oil content
+is_a: TO:0001170 ! fatty acid content trait
 created_by: Laurel_Cooper
 creation_date: 2020-09-16T12:00:00Z
 
