@@ -318,7 +318,7 @@ disjoint_from: GO:0051179 ! localization
 [Term]
 id: GO:0008194
 name: UDP-glycosyltransferase activity
-def: "Catalysis of the transfer of a glycosyl group from a UDP-sugar to a small hydrophobic molecule." [InterPro:IPR004224, PMID:11846783]
+def: "Catalysis of the transfer of a glycosyl group from a UDP-sugar to a small hydrophobic molecule." [PMID:11846783]
 is_a: GO:0016757 ! glycosyltransferase activity
 
 [Term]
@@ -768,7 +768,7 @@ is_a: GO:0016757 ! glycosyltransferase activity
 [Term]
 id: GO:0016772
 name: transferase activity, transferring phosphorus-containing groups
-def: "Catalysis of the transfer of a phosphorus-containing group from one compound (donor) to another (acceptor)." [GOC:jl, ISBN:0198506732]
+def: "Catalysis of the transfer of a phosphorus-containing group from one compound (donor) to another (acceptor)." [EC:2.7.-.-]
 is_a: GO:0016740 ! transferase activity
 
 [Term]
@@ -806,16 +806,6 @@ synonym: "glycosidase activity" EXACT []
 synonym: "glycosylase" NARROW []
 synonym: "N-glycosylase" NARROW []
 is_a: GO:0016787 ! hydrolase activity
-
-[Term]
-id: GO:0019220
-name: regulation of phosphate metabolic process
-def: "Any process that modulates the frequency, rate or extent of the chemical reactions and pathways involving phosphates." [GOC:go_curators]
-synonym: "regulation of phosphate metabolism" EXACT []
-is_a: GO:0051174 ! regulation of phosphorus metabolic process
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: RO:0002211 GO:0006796 ! phosphate-containing compound metabolic process
-relationship: RO:0002211 GO:0006796 ! phosphate-containing compound metabolic process
 
 [Term]
 id: GO:0019222
@@ -1014,7 +1004,7 @@ is_a: GO:0046527 ! glucosyltransferase activity
 id: GO:0035303
 name: regulation of dephosphorylation
 def: "Any process that modulates the frequency, rate or extent of removal of phosphate groups from a molecule." [GOC:bf]
-is_a: GO:0019220 ! regulation of phosphate metabolic process
+is_a: GO:0051174 ! regulation of phosphorus metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002211 GO:0016311 ! dephosphorylation
 relationship: RO:0002211 GO:0016311 ! dephosphorylation
@@ -1291,7 +1281,6 @@ synonym: "up regulation of phosphate metabolic process" EXACT []
 synonym: "up-regulation of phosphate metabolic process" EXACT []
 synonym: "upregulation of phosphate metabolic process" EXACT []
 is_a: GO:0010562 ! positive regulation of phosphorus metabolic process
-is_a: GO:0019220 ! regulation of phosphate metabolic process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002213 GO:0006796 ! phosphate-containing compound metabolic process
 relationship: RO:0002213 GO:0006796 ! phosphate-containing compound metabolic process
@@ -1331,8 +1320,9 @@ relationship: RO:0002211 GO:0006970 ! response to osmotic stress
 id: GO:0048018
 name: receptor ligand activity
 def: "The activity of a gene product that interacts with a receptor to effect a change in the activity of the receptor. Ligands may be produced by the same cell that expresses the receptor. Ligands may also be expressed at the plasma membrane of an adjacent cell (e.g. Notch ligands) or be secreted and diffuse extracellularly from their point of origin to the receiving cell (e.g. interleukins)." [GOC:kv, GOC:molecular_function_refactoring, GOC:pdt]
-synonym: "receptor agonist activity" BROAD [GOC:molecular_function_refactoring]
-synonym: "signaling molecule" EXACT []
+synonym: "agonist" BROAD []
+synonym: "receptor agonist activity" RELATED [GOC:molecular_function_refactoring]
+synonym: "signaling molecule" BROAD []
 synonym: "signaling receptor ligand activity" EXACT []
 is_a: GO:0005102 ! signaling receptor binding
 is_a: GO:0030546 ! signaling receptor activator activity
@@ -1751,22 +1741,6 @@ intersection_of: RO:0002213 GO:0016787 ! hydrolase activity
 relationship: RO:0002213 GO:0016787 ! hydrolase activity
 
 [Term]
-id: GO:0051347
-name: positive regulation of transferase activity
-def: "Any process that activates or increases the frequency, rate or extent of transferase activity, the catalysis of the transfer of a group, e.g. a methyl group, glycosyl group, acyl group, phosphorus-containing, or other groups, from a donor compound to an acceptor." [GOC:ai]
-synonym: "activation of transferase activity" NARROW []
-synonym: "stimulation of transferase activity" NARROW []
-synonym: "transferase activator" EXACT []
-synonym: "up regulation of transferase activity" EXACT []
-synonym: "up-regulation of transferase activity" EXACT []
-synonym: "upregulation of transferase activity" EXACT []
-is_a: GO:0043085 ! positive regulation of catalytic activity
-is_a: GO:0051338 ! regulation of transferase activity
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: RO:0002213 GO:0016740 ! transferase activity
-relationship: RO:0002213 GO:0016740 ! transferase activity
-
-[Term]
 id: GO:0051445
 name: regulation of meiotic cell cycle
 def: "Any process that modulates the rate or extent of progression through the meiotic cell cycle." [GOC:ai, GOC:dph, GOC:tb]
@@ -2080,19 +2054,6 @@ intersection_of: RO:0002211 GO:0005102 ! signaling receptor binding
 relationship: RO:0002211 GO:0005102 ! signaling receptor binding
 
 [Term]
-id: GO:1900122
-name: positive regulation of receptor binding
-def: "Any process that activates or increases the frequency, rate or extent of a protein or other molecule binding to a receptor." [GOC:signaling, GOC:TermGenie]
-synonym: "activation of receptor binding" NARROW [GOC:TermGenie]
-synonym: "up regulation of receptor binding" EXACT [GOC:TermGenie]
-synonym: "upregulation of receptor binding" EXACT [GOC:TermGenie]
-is_a: GO:0032092 ! positive regulation of protein binding
-is_a: GO:1900120 ! regulation of receptor binding
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: RO:0002213 GO:0005102 ! signaling receptor binding
-relationship: RO:0002213 GO:0005102 ! signaling receptor binding
-
-[Term]
 id: GO:1900376
 name: regulation of secondary metabolite biosynthetic process
 def: "Any process that modulates the frequency, rate or extent of secondary metabolite biosynthetic process." [GOC:di, GOC:TermGenie]
@@ -2222,17 +2183,6 @@ is_a: GO:2000241 ! regulation of reproductive process
 intersection_of: GO:0065007 ! biological regulation
 intersection_of: RO:0002213 GO:0022414 ! reproductive process
 relationship: RO:0002213 GO:0022414 ! reproductive process
-
-[Term]
-id: GO:2000273
-name: positive regulation of signaling receptor activity
-def: "Any process that activates or increases the frequency, rate or extent of signaling receptor activity." [GOC:obol]
-synonym: "positive regulation of signalling receptor activity" EXACT []
-is_a: GO:0010469 ! regulation of signaling receptor activity
-is_a: GO:0044093 ! positive regulation of molecular function
-intersection_of: GO:0065007 ! biological regulation
-intersection_of: RO:0002213 GO:0038023 ! signaling receptor activity
-relationship: RO:0002213 GO:0038023 ! signaling receptor activity
 
 [Term]
 id: GO:2000280
