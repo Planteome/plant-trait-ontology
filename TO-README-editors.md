@@ -27,21 +27,9 @@ to.obo is the release version
 
 ## ID Ranges
 
-TODO - these are not set up
-
-These are stored in the file
-
- * [to-idranges.owl](to-idranges.owl)
+See: https://github.com/Planteome/plant-trait-ontology/wiki/TO-Numberspaces
 
 ** ONLY USE IDs WITHIN YOUR RANGE!! **
-
-## Setting ID ranges in Protege
-
-Please see the guide on obofoundry.org
- 
-## Git Quick Guide
-
-TODO add instructions here
 
 ## Release Manager notes
 
